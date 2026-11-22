@@ -1,0 +1,21 @@
+{
+  "schema": "FCV588_P24_SECURITY_HARDENED_FULL_STAGE_NODE_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "summary": {
+    "tests": "589",
+    "pass": "589",
+    "fail": "0",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "4458.9697"
+  },
+  "testFiles": 97,
+  "failureNames": [],
+  "moduleSHA256": "cf56fbf1c78395fd8df8cb5a67d0d39b907fa464fa7187bf0203925c29b81d18",
+  "testSHA256": "ec6ebf908acee166f861c8a52d2b44362a318b356979ad12ec217d586b681445",
+  "fixtureSHA256": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d",
+  "parentRuntime50SHAStable": true,
+  "logSHA256": "647b1e5d03629421911168d41a0289ae09181ed82f10b59ea32e57bc6da2f10e"
+}

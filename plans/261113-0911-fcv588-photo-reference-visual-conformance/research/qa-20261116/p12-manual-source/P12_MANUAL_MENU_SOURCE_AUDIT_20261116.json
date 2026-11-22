@@ -1,0 +1,355 @@
+{
+  "receipt_id": "P12_MANUAL_MENU_SOURCE_AUDIT_20261116",
+  "audit_date": "2026-11-16",
+  "scope": "Read-only source audit of local FCV-588 PDFs for exact English UI/menu/status phrases, page provenance, language coverage, and firmware/version limits.",
+  "classification_legend": {
+    "DIRECT_SOURCE": "Exact menu/category/value/key/status phrase or behavior is directly supported by the cited local PDF.",
+    "EXTRAPOLATION": "Training/UI value is derived, narrowed, reformatted, or otherwise not an exact PDF oracle.",
+    "SOURCE_GAP": "The provided PDFs do not establish the claimed exact value, phrase, installed-version fact, or firmware-specific applicability."
+  },
+  "sources": [
+    {
+      "id": "OME2025",
+      "path": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf",
+      "sha256": "3003e23b9d1eda509ceb968130249fe02aa279c2efb3cf900dde54ab9d709cd3",
+      "bytes": 19384609,
+      "pdf_pages": 88,
+      "pdf_metadata_title": "OME23890E_FCV628_588",
+      "printed_title_or_edition": "Pub. No. OME-23890-E; APR. 2015; AUG. 06, 2025",
+      "language": "English",
+      "notes": "Primary operator/manual oracle. The 2025 edition describes product behavior and menu structure, but does not identify the software version installed in the photographed 2016 unit."
+    },
+    {
+      "id": "GUIDE_MLG",
+      "path": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Guide_Multilingual.pdf",
+      "sha256": "46336e6562c7491a5406c06ed015bf5f3177143c90c4ddba3e8f6f4cedda77b4",
+      "bytes": 13723882,
+      "pdf_pages": 26,
+      "pdf_metadata_title": "FCV628_588_MLG-page1_outline.ai",
+      "language": "Multilingual",
+      "text_layer_note": "PyMuPDF extracted only 25 text characters across all 26 pages, so visual checks were used for representative pages.",
+      "visual_checks": [
+        {
+          "pdf_page": 1,
+          "printed_page": null,
+          "observed": "English Operator's Guide page for Model FCV-628/FCV-588"
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": null,
+          "observed": "Simplified Chinese Operator's Guide page for FCV-628/FCV-588"
+        }
+      ],
+      "notes": "OME2025 PDF p7 printed vi states the Operator's Guide is available in 13 languages and each language has two pages; 26 pages is consistent with that statement."
+    },
+    {
+      "id": "SOFTWARE_HISTORY",
+      "path": "sources/manuals/FCV-588/FURUNO_FCV588_FCV628_Software_History.pdf",
+      "sha256": "aa0d7b9e703d26d533a88cbaedff6a1d2e90ac3dbec923ca78d45fa2953dbbe4",
+      "bytes": 58225,
+      "pdf_pages": 1,
+      "printed_title_or_edition": "FCV588/628 Software History",
+      "language": "English",
+      "notes": "Single-page history mentions September 2016 v2.01 and v1.05 initial release; it is not an installed-version receipt for the photographed unit."
+    }
+  ],
+  "ui_status_matrix": [
+    {
+      "id": "main_menu_categories",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Sounder", "Display", "Alarm", "Data", "System"],
+      "source": {"document": "OME2025", "pdf_page": 15, "printed_page": "7", "section": "1.8 Menu Operating Procedure"},
+      "note": "Manual explicitly states there are five main menus."
+    },
+    {
+      "id": "menu_keys_and_commit_cancel",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["MENU/ESC", "ENTER"],
+      "source": {"document": "OME2025", "pdf_page": 15, "printed_page": "7", "section": "1.8 Menu Operating Procedure"},
+      "note": "ENTER saves; MENU/ESC escapes without changing a setting and closes/backs out of the menu."
+    },
+    {
+      "id": "display_mode_and_header_labels",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Low frequency mode (50 k)", "Dual frequency mode", "High frequency mode (200 k)", "Low frequency zoom mode", "High frequency zoom mode", "Nav data mode 1", "Nav data mode 2", "BL-LF", "BZ-LF", "MZ-LF", "BL-HF", "BZ-HF", "MZ-HF", "LF/HF"],
+      "source": {"document": "OME2025", "pdf_pages": [10, 11], "printed_pages": ["2", "3"], "section": "1.4 Display Mode"},
+      "note": "Manual defines BL=Bottom lock, BZ=Bottom zoom, MZ=Marker zoom, LF/HF frequency abbreviations."
+    },
+    {
+      "id": "range_mode_status",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Auto", "Manual", "AUTO_R", "MAN_R"],
+      "source": {"document": "OME2025", "pdf_page": 13, "printed_page": "5", "section": "1.5 How to Select a Range"},
+      "note": "The PDF text oracle uses MAN_R. A MAN.R punctuation form seen in a photo is separate photo evidence, not this PDF phrase oracle."
+    },
+    {
+      "id": "gain_mode_status",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Fishing", "Cruising", "Off", "G:AF", "G:AC", "G:X.X"],
+      "values": {"auto_offset": "-5 to +5", "manual_gain": "0.0 to 10"},
+      "source": {"document": "OME2025", "pdf_page": 14, "printed_page": "6", "section": "1.6 How to Adjust the Gain"}
+    },
+    {
+      "id": "picture_advance",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Pic. Advance", "x4", "x2", "x1", "1/2", "1/4", "1/8", "1/16", "Stop"],
+      "source": {"document": "OME2025", "pdf_pages": [16, 59], "printed_pages": ["8", "AP-1"], "sections": ["1.10 Picture Advance Speed", "APPX. 1 MENU TREE"]},
+      "note": "Stop stops picture advancement; current speed is shown at the top-right."
+    },
+    {
+      "id": "interference",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Interference", "Auto", "High", "Medium", "Low", "Off"],
+      "source": {"document": "OME2025", "pdf_pages": [17, 59], "printed_pages": ["9", "AP-1"], "section": "1.11 / APPX. 1"}
+    },
+    {
+      "id": "clutter",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Clutter"],
+      "values": "0% to 100% in intervals of ten",
+      "source": {"document": "OME2025", "pdf_page": 17, "printed_page": "9", "section": "1.12 How to Reduce Low Level Noise"}
+    },
+    {
+      "id": "color_erase",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Color Erase"],
+      "values": "0 to 50% in intervals of one percent",
+      "source": {"document": "OME2025", "pdf_page": 18, "printed_page": "10", "section": "1.13 How to Erase Weak Echoes"}
+    },
+    {
+      "id": "zoom_mode",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Zoom Mode", "Bottom Lock", "Bottom Zoom", "Marker Zoom"],
+      "source": {"document": "OME2025", "pdf_pages": [11, 30, 59], "printed_pages": ["3", "22", "AP-1"], "section": "1.4.3 / 1.22 / APPX. 1"},
+      "note": "Default zoom mode is bottom lock."
+    },
+    {
+      "id": "a_scope",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["A-Scope", "Off", "Normal", "Peak"],
+      "source": {"document": "OME2025", "pdf_pages": [18, 59], "printed_pages": ["10", "AP-1"], "section": "1.14 / APPX. 1"}
+    },
+    {
+      "id": "display_menu_visual_options",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": {
+        "Depth Size": ["Off", "Large", "Medium", "Small"],
+        "Zoom Marker": ["Off", "On"],
+        "Temp Graph": ["Off", "Narrow", "Wide"],
+        "Battery": ["Off", "On"],
+        "Color Bar": ["Off", "On"],
+        "Palette": ["White", "Blue", "Black", "Mono", "Night"],
+        "Colors": ["8", "16", "64"],
+        "Header Info": ["Off", "On"]
+      },
+      "source": {"document": "OME2025", "pdf_pages": [31, 32, 59], "printed_pages": ["23", "24", "AP-1"], "section": "1.22 / APPX. 1"}
+    },
+    {
+      "id": "battery_header_behavior",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Battery"],
+      "source": {"document": "OME2025", "pdf_page": 32, "printed_page": "24", "section": "1.22 Display menu"},
+      "note": "When battery voltage indication is displayed, it replaces the picture advance speed indication."
+    },
+    {
+      "id": "nav_data_defaults",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": {
+        "NAV1": ["SPEED (STW)", "WIND"],
+        "NAV2": ["DEPTH", "TEMPERATURE", "TRIP METER", "ODOMETER"]
+      },
+      "source": {"document": "OME2025", "pdf_page": 12, "printed_page": "4", "section": "1.4.4 Nav data display"},
+      "note": "Manual says between two and four items can be displayed; non-depth data require appropriate sensors."
+    },
+    {
+      "id": "data_box_options",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Off", "Speed(SOG)", "Speed(STW)", "Depth", "Range", "Bearing", "Position", "Wind", "Heading", "Course", "Barom Press", "Temp", "Time to Go", "Trip Meter", "Odometer", "XTE", "Switching Cycle"],
+      "switching_cycle_values": ["2s", "4s", "6s", "8s", "10s", "15s", "20s", "30s"],
+      "source": {"document": "OME2025", "pdf_page": 60, "printed_page": "AP-2", "section": "APPX. 1 MENU TREE"}
+    },
+    {
+      "id": "data_source_selectors",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": {
+        "Bearing": ["True", "Mag"],
+        "Wind Spd/Dir": ["True", "Apparent"],
+        "Trip Source": ["Own", "NMEA"],
+        "Temp Source": ["Own", "NMEA"],
+        "Speed Source": ["Own", "NMEA"]
+      },
+      "source": {"document": "OME2025", "pdf_pages": [33, 60], "printed_pages": ["25", "AP-2"], "section": "1.22 Data menu / APPX. 1"}
+    },
+    {
+      "id": "func_key_choices",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Pic. Advance", "Shift", "Interference", "Clutter", "Color Erase", "White Line", "White Marker", "WPT List", "Bottom Zone", "TVG", "Fish Symbols"],
+      "source": {"document": "OME2025", "pdf_pages": [26, 60], "printed_pages": ["18", "AP-2"], "section": "1.19 FUNC Key / APPX. 1"}
+    },
+    {
+      "id": "language_menu_pdf_oracle",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Language", "English", "OTHERS"],
+      "source": {"document": "OME2025", "pdf_pages": [34, 60], "printed_pages": ["26", "AP-2"], "section": "2.4 Language Menu / APPX. 1"},
+      "note": "Section 2.4 says the system language is available in English and European/Asian languages; Appendix abbreviates this as Language (English, OTHERS). No provided PDF enumerates a Vietnamese firmware menu phrase."
+    },
+    {
+      "id": "operator_guide_language_set",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Greek", "Polish", "Danish", "Swedish", "Norwegian", "Finnish", "Simplified Chinese"],
+      "source": {"document": "OME2025", "pdf_page": 7, "printed_page": "vi", "section": "FOREWORD - Operator's Guide"},
+      "corroboration": {"document": "GUIDE_MLG", "pdf_pages": 26, "visual_checked_pages": [1, 25]},
+      "note": "OME states 13 languages, two pages each. Vietnamese is not in the listed set."
+    },
+    {
+      "id": "tankenmaru_nmea_interlock",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Tankenmaru System", "On", "NMEA"],
+      "source": {"document": "OME2025", "pdf_page": 57, "printed_page": "49", "section": "4.10 Adjustments after Installation"},
+      "note": "Manual states the NMEA port is disabled when Tankenmaru is active."
+    },
+    {
+      "id": "demo_status",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Demonstrate", "Off", "On", "DEMO"],
+      "source": {"document": "OME2025", "pdf_page": 36, "printed_page": "28", "section": "2.8 Demo Menu"},
+      "note": "DEMO appears at the bottom-right when demonstration mode is active."
+    },
+    {
+      "id": "diagnostic_version_fields",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["Diagnostic Test", "XX.XX=version no.", "Starter", "Booter", "Main"],
+      "program_numbers": {
+        "FCV-588": ["0252430-XX.XX", "0252431-XX.XX", "0252432-XX.XX"]
+      },
+      "source": {"document": "OME2025", "pdf_page": 40, "printed_page": "32", "section": "3.7 Diagnostics"},
+      "note": "The manual shows placeholders, not the actual installed version."
+    },
+    {
+      "id": "software_history_record",
+      "classification": "DIRECT_SOURCE",
+      "exact_english": ["September 2016: v2.01", "v1.05 Initial release version"],
+      "changes_at_v2_01": ["8 and 16 color options added to Colors selections", "White Marker settings changed", "Echo menu added in System menu for research and development use only"],
+      "source": {"document": "SOFTWARE_HISTORY", "pdf_page": 1, "printed_page": null}
+    },
+    {
+      "id": "white_line_boolean_choice_in_current_training_atlas",
+      "classification": "EXTRAPOLATION",
+      "training_value": ["Off", "On"],
+      "source_conflict": {
+        "document": "OME2025",
+        "pdf_pages": [30, 59],
+        "printed_pages": ["22", "AP-1"],
+        "manual_behavior": "White Line uses a width value; APPX. 1 gives 0-50% with 0% default, and section 1.22 also mentions Edge."
+      },
+      "note": "An Off/On enum is not an exact PDF oracle."
+    },
+    {
+      "id": "white_marker_named_choices_in_current_training_atlas",
+      "classification": "SOURCE_GAP",
+      "training_value": ["Off", "White", "Gray"],
+      "source": {"document": "OME2025", "pdf_page": 30, "printed_page": "22", "section": "1.22 Sounder menu"},
+      "note": "Manual behavior is selecting an echo color from the color bar or Off; no exact Off/White/Gray enum is given. Software History also says White Marker settings changed in v2.01."
+    },
+    {
+      "id": "bottom_zone_named_choices_in_current_training_atlas",
+      "classification": "SOURCE_GAP",
+      "training_value": ["Narrow", "Standard", "Wide"],
+      "source": {"document": "OME2025", "pdf_page": 31, "printed_page": "23", "section": "1.22 Sounder menu"},
+      "note": "Manual presents Above/Below border adjustment for a bottom-zone setting window; it does not provide Narrow/Standard/Wide values."
+    },
+    {
+      "id": "depth_size_current_subset",
+      "classification": "EXTRAPOLATION",
+      "training_value": ["Small", "Medium", "Large"],
+      "source": {"document": "OME2025", "pdf_pages": [31, 59], "printed_pages": ["23", "AP-1"]},
+      "note": "Source choice set also includes Off, so the current three-value list is incomplete as an exact oracle."
+    },
+    {
+      "id": "navigation_data_off_basic_expanded_enum",
+      "classification": "SOURCE_GAP",
+      "training_value": ["Off", "Basic", "Expanded"],
+      "source": {"document": "OME2025", "pdf_pages": [12, 32, 33, 60], "printed_pages": ["4", "24", "25", "AP-2"]},
+      "note": "Provided PDFs describe Nav Data1/Nav Data2 layouts and Data Box1/Data Box2 contents; they do not establish an Off/Basic/Expanded enum."
+    },
+    {
+      "id": "system_zoom_range_discrete_training_choices",
+      "classification": "EXTRAPOLATION",
+      "training_value": ["5", "10", "20", "40"],
+      "source": {"document": "OME2025", "pdf_pages": [34, 60], "printed_pages": ["26", "AP-2"], "section": "2.2 Range Menu / APPX. 1"},
+      "note": "Manual gives Zoom Range as an adjustable range and APPX. 1 lists 7-4000 ft, default 15 ft; the four discrete training values are not exact source values."
+    },
+    {
+      "id": "system_bl_range_training_choices",
+      "classification": "SOURCE_GAP",
+      "training_value": ["5", "8"],
+      "source": {"document": "OME2025", "pdf_pages": [34, 60], "printed_pages": ["26", "AP-2"], "section": "2.2 Range Menu / APPX. 1"},
+      "note": "APPX. 1 gives BLRange 7-30 ft, default 15 ft. The exact 5/8 training enum is not established by these PDFs."
+    },
+    {
+      "id": "system_language_english_only_training_choice",
+      "classification": "EXTRAPOLATION",
+      "training_value": ["English"],
+      "source": {"document": "OME2025", "pdf_pages": [34, 60], "printed_pages": ["26", "AP-2"]},
+      "note": "A rights/source hold may intentionally narrow training UI to English, but source says other European/Asian languages exist."
+    },
+    {
+      "id": "nmea_off_only_training_choice",
+      "classification": "SOURCE_GAP",
+      "training_value": ["Off"],
+      "source": {"document": "OME2025", "pdf_pages": [57, 60], "printed_pages": ["49", "AP-2"], "section": "4.10 NMEA / APPX. 1"},
+      "note": "Manual exposes NMEA0183 versions, port direction, output, WAAS and TLL settings; a single Off-only NMEA firmware choice is not established."
+    },
+    {
+      "id": "vietnamese_firmware_phrase_oracle",
+      "classification": "SOURCE_GAP",
+      "search_result": {
+        "OME2025_text_hits": {"Viet Nam": 0, "Vietnam": 0, "Vietnamese": 0},
+        "GUIDE_MLG_text_hits": {"Viet Nam": 0, "Vietnam": 0, "Vietnamese": 0},
+        "SOFTWARE_HISTORY_text_hits": {"Viet Nam": 0, "Vietnam": 0, "Vietnamese": 0}
+      },
+      "evidence": [
+        "OME2025 PDF p7 printed vi lists 13 Operator's Guide languages and excludes Vietnamese.",
+        "GUIDE_MLG has 26 pages, matching 13 languages x two pages; visual checks confirmed English at PDF p1 and Simplified Chinese at PDF p25.",
+        "OME2025 PDF p34 printed 26 uses generic English/European/Asian wording; PDF p60 AP-2 uses Language (English, OTHERS)."
+      ],
+      "note": "The 2016 giaoDien.jpg Vietnamese menu is a separate photo oracle. It must not be promoted to an exact PDF-backed firmware vocabulary set."
+    },
+    {
+      "id": "installed_software_version",
+      "classification": "SOURCE_GAP",
+      "evidence": [
+        "OME2025 diagnostics shows XX.XX placeholders, not a captured device result.",
+        "SOFTWARE_HISTORY records v2.01 in September 2016 and v1.05 initial release only.",
+        "A photo date or folder provenance does not identify the installed software version."
+      ],
+      "note": "Installed FCV-588 software/firmware version remains UNKNOWN."
+    },
+    {
+      "id": "manual_photo_firmware_identity",
+      "classification": "SOURCE_GAP",
+      "evidence": [
+        "OME-23890-E cover is revised AUG. 06, 2025.",
+        "Software history contains a September 2016 v2.01 entry.",
+        "The photographed Vietnamese UI is from separate 2016 photo evidence."
+      ],
+      "note": "Do not conflate 2025 manual menu/value coverage with the exact firmware state represented by the 2016 photo."
+    }
+  ],
+  "firmware_limits": {
+    "installed_version": "UNKNOWN",
+    "photo_firmware_version": "UNKNOWN",
+    "manual_edition": "OME-23890-E revised AUG. 06, 2025",
+    "known_history_entries": ["v1.05 initial release", "v2.01 September 2016"],
+    "colors_version_note": "Software History says v2.01 added 8 and 16 to Colors selections; OME2025 APPX. 1 lists 8, 16, 64. This does not prove which set the photographed unit had.",
+    "vietnamese_pdf_phrase_oracle": false,
+    "vietnamese_photo_evidence_separate": true
+  },
+  "audit_conclusion": {
+    "manual_menu_source": "VERIFIED",
+    "vietnamese_firmware_phrase_oracle": "SOURCE_GAP",
+    "installed_software_version": "SOURCE_GAP",
+    "firmware_specific_menu_exactness": "HOLD",
+    "release_effect": "No basis in these PDFs to lift the existing firmware/version or Vietnamese-locale HOLD."
+  }
+}

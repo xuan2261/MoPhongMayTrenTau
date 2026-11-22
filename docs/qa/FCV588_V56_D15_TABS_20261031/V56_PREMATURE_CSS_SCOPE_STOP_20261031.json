@@ -1,0 +1,21 @@
+{
+  "timeUtc": "2026-10-31T03:41:59.8995920Z",
+  "status": "STOP_EARLY_CANONICAL_CSS_APPEND_BEFORE_STAGE_GREEN",
+  "event": "Relative apply_patch web/styles.css targeted canonical while intended staging",
+  "canonicalPath": "C:\\Work\\MoPhongMayTrenTau\\web\\styles.css",
+  "originalPreimageSHA256": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee",
+  "canonicalAfterSHA256": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef",
+  "stageCSSStillOriginalSHA256": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee",
+  "exactOriginalBytePrefixInCanonical": true,
+  "onlyAppendedTailBytes": 2936,
+  "canonicalIndexUnchangedSHA256": "87b5528aeaf6bd1f6d819c975f85aafd41fbdf76e8cb3e0bad2a7211f7fa446a",
+  "canonicalAppUnchangedSHA256": "ecaed0cd25b57e43e2910d15e2d5a802ec238258c0dce9c4dc6ecf86cb4b5dd0",
+  "failedStageFocusedLogSHA256": "afeb5b56f314718169164d36821f10a9ecb410d7102fae1d38da80e9c4e43044",
+  "observedStageFocused": "19/20_PASS_1_FAIL_CSS_STAGING_NOT_APPLIED",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "diskD": "NOT_ACCESSED",
+  "backup": "NOT_ATTEMPTED",
+  "nextAction": "SCOPED_GO_REQUIRED: diagnose and transfer exact CSS tail to stage; rerun staged tests; canonical guard before further code writes"
+}

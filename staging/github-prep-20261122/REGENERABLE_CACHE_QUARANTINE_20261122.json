@@ -1,0 +1,195 @@
+{
+  "schema": "RegenerableCacheQuarantineV1",
+  "date": "2026-11-22",
+  "status": "REGENERABLE_CACHE_DELETED_AFTER_QA",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "quarantineRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\github-prep-20261122\\_cleanup-quarantine-20261122",
+  "fileCount": 19742.0,
+  "bytes": 443290683.0,
+  "canonicalPreSha": {
+    "docs/qa/FCV588_P36_LIVE_BOTTOM_ZOOM_20261122/FCV588_P36_LIVE_BOTTOM_ZOOM_FINAL_REPORT_20261122.md": "384C26E2CE1CC6C31A9692D3A2ACF1958AC7003BE070A323E49AB47D2FE0877C",
+    "test/research-inventory.test.mjs": "EAACE56F6D86D3C00FA64C108A83B92DF4E1691970671CDE5BFA66FDF223F30A",
+    "web/app.mjs": "D388265149748F682D7E50DD2F44A81B7676745243AB026F090F00FC06EB12C7",
+    "src/core/session.mjs": "39783A274572AF83EE382AD2D0CAEA94ECD968CF98377C3B9300F179FABDAA44",
+    "staging/github-prep-20261122/P13_P14_P15_STAGE_SNAPSHOTS_20261122.zip": "E9237CE81139F9E4CBC52CCE5C9292F5411135BA86215ABEF5A43BC7584C4FA1"
+  },
+  "packageLockSha": {
+    "staging/fcv588-native-accessibility-p31-20261121/package-lock.json": "FA20097B5C41C19319FE813BACBBF3190630E25D1EF5E240B99CE6E2D45CD810",
+    "staging/fcv588-electron-installer-p30-20261121/package-lock.json": "D4C155EE5F1E6DBB489466B8C8702BB597BA9408EADA7E8726616DB783A810E5",
+    "staging/fcv588-electron-poc-20261121/package-lock.json": "E311D900F73CCF99F5E2D1A6CB5C23CB1F0F48F7D1101E7AC2948CA3A416A109"
+  },
+  "items": [
+    {
+      "bytes": 110554749,
+      "fileCount": 8315,
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/node_modules",
+      "regeneration": "npm ci in parent from preserved package-lock.json",
+      "kind": "npm_dependency_tree"
+    },
+    {
+      "bytes": 108498557,
+      "fileCount": 8313,
+      "relativePath": "staging/fcv588-native-accessibility-p31-20261121/node_modules",
+      "regeneration": "npm ci in parent from preserved package-lock.json",
+      "kind": "npm_dependency_tree"
+    },
+    {
+      "bytes": 43755253,
+      "fileCount": 1564,
+      "relativePath": "staging/fcv588-electron-poc-20261121/node_modules",
+      "regeneration": "npm ci in parent from preserved package-lock.json",
+      "kind": "npm_dependency_tree"
+    },
+    {
+      "bytes": 8623106,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/native-smoke-profile-v2",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623126,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-a11y-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623170,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-a11y-visible-v2-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623182,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-default-visible-v6-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623154,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-keyboard-v3-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623154,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-keyboard-v4-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623082,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-native-v3",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8632796,
+      "fileCount": 84,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-p29-p30-p29-upgrade-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8659687,
+      "fileCount": 77,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/profile-window-direct-v5-20261121",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623134,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P31_NATIVE_A11Y_20261121/profile-native-power-blur-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623134,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P31_NATIVE_A11Y_20261121/profile-native-tab-visual-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623134,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P31_NATIVE_A11Y_20261121/profile-native-uia-invoke-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623130,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P31_NATIVE_A11Y_20261121/profile-offline-firewall-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8623126,
+      "fileCount": 72,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P31_NATIVE_A11Y_20261121/profile-p31-default-uia-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8624638,
+      "fileCount": 77,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P32_RELEASE_READINESS_20261121/benchmark-profile-P30",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8624638,
+      "fileCount": 77,
+      "relativePath": "docs/qa/FCV588_ELECTRON_P32_RELEASE_READINESS_20261121/benchmark-profile-P31",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8274208,
+      "fileCount": 62,
+      "relativePath": "docs/qa/FCV588_ELECTRON_POC_20261121/profile-e2e-v1",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8274208,
+      "fileCount": 62,
+      "relativePath": "docs/qa/FCV588_ELECTRON_POC_20261121/profile-e2e-v2",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8631291,
+      "fileCount": 81,
+      "relativePath": "docs/qa/FCV588_ELECTRON_POC_20261121/profile-e2e-v3",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8631293,
+      "fileCount": 81,
+      "relativePath": "docs/qa/FCV588_ELECTRON_POC_20261121/profile-e2e-v4",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    },
+    {
+      "bytes": 8651733,
+      "fileCount": 85,
+      "relativePath": "docs/qa/FCV588_ELECTRON_POC_20261121/profile-e2e-v5",
+      "regeneration": "rerun corresponding QA harness (not a unique receipt)",
+      "kind": "isolated_chromium_test_profile"
+    }
+  ],
+  "qaNode": "618/618 PASS",
+  "qaPython": "13/13 PASS",
+  "qaElectron": "BUNDLE_ALLOWLIST_PASS",
+  "rollbackLimitation": "npm ci from retained lock files recreates dependencies; QA test profiles are ephemeral. Original cache bytes intentionally not retained."
+}

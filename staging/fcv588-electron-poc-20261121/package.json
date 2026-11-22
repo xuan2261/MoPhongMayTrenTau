@@ -1,0 +1,17 @@
+{
+  "name": "fcv588-synthetic-electron-poc",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Windows-only offline synthetic classroom POC; not OEM validated",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "bundle:offline": "node desktop/build-bundle.mjs",
+    "package:win": "npm run bundle:offline && electron-packager bundle FCV588-Synthetic-POC --electron-version=45.4.1 --platform=win32 --arch=x64 --out=dist --overwrite --asar"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "45.4.1",
+    "playwright-core": "^1.65.1"
+  }
+}

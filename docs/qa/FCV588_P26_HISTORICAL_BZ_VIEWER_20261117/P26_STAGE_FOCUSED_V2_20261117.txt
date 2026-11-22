@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: P26 D15 BZ viewer exists outside the live LCD and uses explicit archive contract
+ok 1 - P26 D15 BZ viewer exists outside the live LCD and uses explicit archive contract
+  ---
+  duration_ms: 1.749
+  type: 'test'
+  ...
+# Subtest: P26 two explicit sidecar contracts reconstruct distinct BZ synthetic pixels for identical replay envelope
+ok 2 - P26 two explicit sidecar contracts reconstruct distinct BZ synthetic pixels for identical replay envelope
+  ---
+  duration_ms: 109.6073
+  type: 'test'
+  ...
+# Subtest: P26 synthetic BZ generation deterministic; no external frame pixels accepted
+ok 3 - P26 synthetic BZ generation deterministic; no external frame pixels accepted
+  ---
+  duration_ms: 41.8052
+  type: 'test'
+  ...
+# Subtest: P26 saved BZ preference while active mode LF is NOT a historical BZ screen
+ok 4 - P26 saved BZ preference while active mode LF is NOT a historical BZ screen
+  ---
+  duration_ms: 4.2808
+  type: 'test'
+  ...
+# Subtest: P26 original frozen pre-P23 profile22 is not BZ; do not invent archived pixels
+ok 5 - P26 original frozen pre-P23 profile22 is not BZ; do not invent archived pixels
+  ---
+  duration_ms: 3.9707
+  type: 'test'
+  ...
+# Subtest: P26 invalid or mismatched sidecar never reaches renderer
+ok 6 - P26 invalid or mismatched sidecar never reaches renderer
+  ---
+  duration_ms: 3.2828
+  type: 'test'
+  ...
+# Subtest: P26 viewer retains P25 byte and event caps, no archive image payload schema
+ok 7 - P26 viewer retains P25 byte and event caps, no archive image payload schema
+  ---
+  duration_ms: 6.3253
+  type: 'test'
+  ...
+# Subtest: P26 app integrates isolated D15 canvas without altering live LCD route
+ok 8 - P26 app integrates isolated D15 canvas without altering live LCD route
+  ---
+  duration_ms: 1.3813
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 342.8818

@@ -1,0 +1,339 @@
+{
+  "cameraCalibration": "SOURCE_GAP",
+  "candidateLCDROIs": {
+    "dual.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          76,
+          380
+        ],
+        [
+          449,
+          376
+        ],
+        [
+          448,
+          920
+        ],
+        [
+          66,
+          923
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "independentP07PhotoSpaceSplit": {
+        "class": "PHOTO_SPACE_ONLY_WITH_UNCALIBRATED_PERSPECTIVE",
+        "dividerX": 256,
+        "fraction": 0.4738,
+        "leftX": 75,
+        "relationship": "approximately half",
+        "rightX": 457
+      },
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "photoAreaPx2": 205152.0
+    },
+    "giaoDien.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          103,
+          425
+        ],
+        [
+          438,
+          422
+        ],
+        [
+          432,
+          908
+        ],
+        [
+          95,
+          901
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "photoAreaPx2": 161630.0
+    },
+    "hf.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          94,
+          375
+        ],
+        [
+          499,
+          374
+        ],
+        [
+          497,
+          973
+        ],
+        [
+          77,
+          972
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "photoAreaPx2": 246675.0
+    },
+    "lf.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          106,
+          351
+        ],
+        [
+          483,
+          349
+        ],
+        [
+          488,
+          907
+        ],
+        [
+          92,
+          905
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "photoAreaPx2": 214894.0
+    },
+    "nav1.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          66,
+          426
+        ],
+        [
+          439,
+          424
+        ],
+        [
+          445,
+          963
+        ],
+        [
+          62,
+          964
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "independentP07PhotoSpaceSplit": {
+        "class": "PHOTO_SPACE_ONLY_WITH_UNCALIBRATED_PERSPECTIVE",
+        "dividerX": 334,
+        "fraction": 0.7205,
+        "leftX": 53,
+        "relationship": "left data approximately two-thirds",
+        "rightX": 443
+      },
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "photoAreaPx2": 203554.5
+    },
+    "nav2.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          97,
+          363
+        ],
+        [
+          433,
+          362
+        ],
+        [
+          434,
+          847
+        ],
+        [
+          94,
+          849
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "independentP07PhotoSpaceSplit": {
+        "class": "PHOTO_SPACE_ONLY_WITH_UNCALIBRATED_PERSPECTIVE",
+        "dividerX": 327,
+        "fraction": 0.6794,
+        "leftX": 96,
+        "relationship": "left data approximately two-thirds",
+        "rightX": 436
+      },
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "photoAreaPx2": 164097.5
+    },
+    "zoom.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          56,
+          287
+        ],
+        [
+          466,
+          284
+        ],
+        [
+          464,
+          876
+        ],
+        [
+          51,
+          877
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "independentP07PhotoSpaceSplit": {
+        "class": "PHOTO_SPACE_ONLY_WITH_UNCALIBRATED_PERSPECTIVE",
+        "dividerX": 253,
+        "fraction": 0.4745,
+        "leftX": 58,
+        "relationship": "approximately half",
+        "rightX": 469
+      },
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "photoAreaPx2": 243189.5
+    },
+    "zoom2.jpg": {
+      "candidateQuadTL_TR_BR_BL_px": [
+        [
+          85,
+          383
+        ],
+        [
+          479,
+          380
+        ],
+        [
+          489,
+          968
+        ],
+        [
+          76,
+          970
+        ]
+      ],
+      "coordinateClass": "HUMAN_VISUAL_ESTIMATE_ONLY_UNCALIBRATED",
+      "edgeAmbiguityPx": 20,
+      "independentP07PhotoSpaceSplit": {
+        "class": "PHOTO_SPACE_ONLY_WITH_UNCALIBRATED_PERSPECTIVE",
+        "dividerX": 277,
+        "fraction": 0.4929,
+        "leftX": 68,
+        "relationship": "approximately half",
+        "rightX": 492
+      },
+      "notValidated": [
+        "not repeatably picked by two independent raters",
+        "inner active LCD content plane versus glass/bezel boundary unknown",
+        "no lens-distortion/intrinsic or coplanar scale calibration",
+        "no controlled-frame photography or robust corner residuals"
+      ],
+      "originalImagePixels": [
+        590,
+        1280
+      ],
+      "originalSHA256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "photoAreaPx2": 237057.5
+    }
+  },
+  "createdAt": "2026-11-16T10:39:02.042900+07:00",
+  "decision": "CANDIDATE_ONLY_NOT_CALIBRATED_NO_RUNTIME_APPLY",
+  "holds": [
+    "No OEM mm/detents/font/RGB/timing claim",
+    "No percentile OEM fidelity claim",
+    "No copy into runtime/distribution",
+    "No CSS or LCD runtime geometry edit from hypotheses"
+  ],
+  "lcdHomography": "MATHEMATICALLY_POSSIBLE_FROM_FOUR_APPROVED_COPLANAR_CORNERS_BUT_NOT_YET_VALIDATED",
+  "operations": {
+    "browserLaunched": false,
+    "originalPhotosEdited": false,
+    "photoDerivativeWritten": false,
+    "runtimeEdited": false
+  },
+  "p07FinalIntegritySHA256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+  "physicalSizeInference": "PROHIBITED_FROM_UNCALIBRATED_PHOTOS",
+  "registeredCorners": 0,
+  "rights": "REFERENCE_ONLY; no copied photo pixels or derivatives written",
+  "schema": "fcv588-p08-photo-roi-hypotheses-v1",
+  "source": "Eight immutable 2016 local photographs; direct visual inspection, P07 photo-space landmarks",
+  "uncalibratedCandidates": 8
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "FCV588_P23_CANONICAL_FULL_NODE_POSTAPPLY_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "summary": {
+    "tests": "582",
+    "pass": "582",
+    "fail": "0",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "5428.7494"
+  },
+  "failed": [],
+  "logSHA256": "2da549de9dbdd97dab5788ce1140ad3f1255c637d6f39d01653cbb53c2577fa2",
+  "sourceSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "060feab89b38e13a3832af694f22752d26457b9d810400c4d887908fbe122253",
+    "web/app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "09d1269de69a1b6beb251720d9cd53625cbfe753a5604b827143cdb42c4889e9",
+    "test/fcv588-p23-bottom-zoom-manual.test.mjs": "8c3b91c6914fded1788682800a55631f7627148d8b7c4b214e3e3e1c11be4f29"
+  }
+}

@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: first MODE detent opens selection without immediate effective mode switch
+ok 1 - first MODE detent opens selection without immediate effective mode switch
+  ---
+  duration_ms: 7.6442
+  type: 'test'
+  ...
+# Subtest: UI clock expires MODE independently of paused world and is replay-deterministic
+ok 2 - UI clock expires MODE independently of paused world and is replay-deterministic
+  ---
+  duration_ms: 8.4981
+  type: 'test'
+  ...
+# Subtest: public reducer revision rejects replay envelopes bound to F0 semantics
+ok 3 - public reducer revision rejects replay envelopes bound to F0 semantics
+  ---
+  duration_ms: 1.9575
+  type: 'test'
+  ...
+# Subtest: brilliance key cycles levels and an independent UI timeout commits the preview
+ok 4 - brilliance key cycles levels and an independent UI timeout commits the preview
+  ---
+  duration_ms: 2.4897
+  type: 'test'
+  ...
+# Subtest: POWER hold boundary is greater than 3000ms and F0 remains isolated
+ok 5 - POWER hold boundary is greater than 3000ms and F0 remains isolated
+  ---
+  duration_ms: 2.2952
+  type: 'test'
+  ...
+# Subtest: POWER hold shows a replayable countdown and cancelled input does not shut down
+ok 6 - POWER hold shows a replayable countdown and cancelled input does not shut down
+  ---
+  duration_ms: 3.6526
+  type: 'test'
+  ...
+# Subtest: RANGE repeated press in manual mode stages next preset until ENTER
+ok 7 - RANGE repeated press in manual mode stages next preset until ENTER
+  ---
+  duration_ms: 2.8591
+  type: 'test'
+  ...
+# Subtest: GAIN Auto Offset is bounded independently from manual gain
+ok 8 - GAIN Auto Offset is bounded independently from manual gain
+  ---
+  duration_ms: 1.7808
+  type: 'test'
+  ...
+# Subtest: free VRM is disabled in NAV after MODE selection commits
+ok 9 - free VRM is disabled in NAV after MODE selection commits
+  ---
+  duration_ms: 1.5562
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 10 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.8264
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 11 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.3842
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 12 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.4132
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 13 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 3.0953
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 14 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 3.9074
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 15 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 1.9205
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 16 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.7796
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 17 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.572
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 18 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.3621
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 19 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.7134
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 20 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.4889
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 21 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.5349
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 173.9889

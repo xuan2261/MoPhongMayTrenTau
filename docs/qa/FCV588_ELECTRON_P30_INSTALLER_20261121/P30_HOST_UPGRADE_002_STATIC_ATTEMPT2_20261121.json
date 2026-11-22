@@ -1,0 +1,15 @@
+{
+  "schema": "P30_HOST_002_STATIC_GATE_V1",
+  "status": "PASS",
+  "releaseApproval": "HOLD",
+  "artifacts": {
+    "installerSHA256": "f08bbebe0f209a5fe3df54c66b46fef55704ee181297aac41100eecf8b85aa24",
+    "executableSHA256": "68642add1d89bdaed2ee8bd07b9dd255a048db74b06286076c96729ab9bb4aaa",
+    "asarSHA256": "a0ca9797ccbfcce6821ad5255970359f112a3a533b64c5bfcf77b26cf5574e59"
+  },
+  "filesExact": 58,
+  "changedLeaves": [
+    "package.json"
+  ],
+  "fusesPass": 9
+}

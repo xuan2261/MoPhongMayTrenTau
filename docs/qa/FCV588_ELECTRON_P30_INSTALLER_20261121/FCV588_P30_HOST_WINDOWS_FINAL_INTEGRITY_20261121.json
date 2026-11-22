@@ -1,0 +1,82 @@
+{
+  "schema": "FCV588_P30_HOST_WINDOWS_FINAL_INTEGRITY_V1",
+  "status": "P30_HOST_INSTALL_LIFECYCLE_BOUNDED_PASS",
+  "host": "REAL_WINDOWS_NOT_VM",
+  "selectedInstalledVersion": "0.0.1",
+  "installedExeSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+  "installedASARSHA256": "dbed2ac3ac0a1a4d5620c29cdf474d95e4dbd33b7040746dc3474010b00fccb0",
+  "syntheticSettingsSHA256": "1a01885c751731670d802ce929db3c72f210abbf0112042648f9983b1c92b4ce",
+  "installUpgradeUninstallReinstall": "PASS",
+  "readbacksBeforeAfter": "4_OF_4_PASS",
+  "nativeProcess": "VERIFIED",
+  "nativeUIAControls": "PARTIAL",
+  "processScopedFirewallOffline": "PASS",
+  "strictPhysicalAirgap": false,
+  "signing": "NOT_SIGNED",
+  "releaseApproval": "HOLD",
+  "phase6": "OPEN",
+  "hardwareValidated": false,
+  "receipts": {
+    "first": {
+      "name": "P30_HOST_INSTALL_V2_ATTEMPT1_20261121.json",
+      "sha256": "6e5dcbea7d11d6c8360450b873127c6e06f77b99ddd767e25f7db205b45c34a0"
+    },
+    "seed": {
+      "name": "P30_HOST_DEFAULT_PROFILE_SEED_ATTEMPT1_20261121.json",
+      "sha256": "700d50d2115c7e0bf4823612b55b7ce87c6a7902e6313c941a39f8c194ad59f4"
+    },
+    "before": {
+      "name": "P30_HOST_PROFILE_VERIFY_before-upgrade_20261121.json",
+      "sha256": "c45344f48370ba933fa550d8bea3d78a719f63788b0043b6f5be30ad1d1c781a"
+    },
+    "afterUpgrade": {
+      "name": "P30_HOST_PROFILE_VERIFY_after-upgrade_20261121.json",
+      "sha256": "e67ac767ba2e220cc4cbc1cade238577980f5ae832873ba264f0f2e9c777240a"
+    },
+    "afterUninstall": {
+      "name": "P30_HOST_PROFILE_VERIFY_after-uninstall_20261121.json",
+      "sha256": "58a6a73d609a6a38e561c2280dc31851dec488f44256085b9cab2a1a310815ce"
+    },
+    "afterReinstall": {
+      "name": "P30_HOST_PROFILE_VERIFY_after-reinstall_20261121.json",
+      "sha256": "aeabb4dd5ea26e67034bc8856f20acafbe102c1d9440e9e617bfbaa0c1e6bdb9"
+    },
+    "upgrade": {
+      "name": "P30_HOST_INSTALL_UPGRADE_TO_002_ATTEMPT1_20261121.json",
+      "sha256": "bb9ae1a3f5312444f49440944e3b3585f1d01395e4d9afbde6ffc5d33588354f"
+    },
+    "upgradeStatic": {
+      "name": "P30_HOST_UPGRADE_002_STATIC_ATTEMPT2_20261121.json",
+      "sha256": "9749e3fa4e439d56c278ad0a77282bc8ed7273a957e9217a6c9ea31e515f6f1f"
+    },
+    "uninstall": {
+      "name": "P30_HOST_UNINSTALL_002_ATTEMPT1_20261121.json",
+      "sha256": "97bb272437f2c2901bee2e940f1cd2eba2475869bc34be1d11c688ad1510fc11"
+    },
+    "reinstall": {
+      "name": "P30_HOST_REINSTALL_V2_001_ATTEMPT1_20261121.json",
+      "sha256": "646faec0c7b896401a00cf6e3470df28ad6d36b9108c3609635667a3ed68db6f"
+    },
+    "native": {
+      "name": "P30_HOST_INSTALLED_NATIVE_V1_20261121.json",
+      "sha256": "1b48153cb45e1510c58e9894f579a12414f181423e970fba57b29c5ad68f5b46"
+    },
+    "uia": {
+      "name": "P30_HOST_NATIVE_UIA_002_ATTEMPT1_20261121.json",
+      "sha256": "76e7d7206ab494897da46976f4ec0c33bcdd0d2ec1c5d7a02c7ee81f4fd59ca0"
+    },
+    "offline": {
+      "name": "P30_HOST_OUTBOUND_BLOCK_NATIVE_ATTEMPT1_20261121.json",
+      "sha256": "648f41d0b5835400131a7488ee947a10d067b13717142724b325c104e85462be"
+    }
+  },
+  "shaParents": {
+    "P28Final": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28Post": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29Final": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29Post": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30Final": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30Post": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5"
+  },
+  "reportSHA256": "d98c8803f4894254d3bb9cbad0faaa7020a018830bfae6ea7a09cc5f13f2a91f"
+}

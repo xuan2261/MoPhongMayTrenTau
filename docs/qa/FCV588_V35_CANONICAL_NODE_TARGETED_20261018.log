@@ -1,0 +1,232 @@
+TAP version 13
+# Subtest: V34: D04 Language source/rights disabled reason is visible before the device
+ok 1 - V34: D04 Language source/rights disabled reason is visible before the device
+  ---
+  duration_ms: 2.6158
+  type: 'test'
+  ...
+# Subtest: V34: procedural disabled item cannot expose raw state codes
+ok 2 - V34: procedural disabled item cannot expose raw state codes
+  ---
+  duration_ms: 0.4412
+  type: 'test'
+  ...
+# Subtest: V34: NAV2 and NAV1 always disclose current MODE when Header Info is Off
+ok 3 - V34: NAV2 and NAV1 always disclose current MODE when Header Info is Off
+  ---
+  duration_ms: 0.784
+  type: 'test'
+  ...
+# Subtest: V34: unknown active MODE fails closed without synthetic sonar claim
+ok 4 - V34: unknown active MODE fails closed without synthetic sonar claim
+  ---
+  duration_ms: 0.267
+  type: 'test'
+  ...
+# Subtest: V34: accessible selection projects concise discrete row/choice text
+ok 5 - V34: accessible selection projects concise discrete row/choice text
+  ---
+  duration_ms: 1.7477
+  type: 'test'
+  ...
+# Subtest: V34: a dedicated off-device live selection replaces all-LCD aria-live
+ok 6 - V34: a dedicated off-device live selection replaces all-LCD aria-live
+  ---
+  duration_ms: 10.262
+  type: 'test'
+  ...
+# Subtest: V34 presentation: source-backed [DEMO] moves to device LCD bottom-right, not the header
+ok 7 - V34 presentation: source-backed [DEMO] moves to device LCD bottom-right, not the header
+  ---
+  duration_ms: 10.474
+  type: 'test'
+  ...
+# Subtest: V34 presentation: instructor guidance and safety remain outside the instrument
+ok 8 - V34 presentation: instructor guidance and safety remain outside the instrument
+  ---
+  duration_ms: 1.5483
+  type: 'test'
+  ...
+# Subtest: V34 presentation: source tagged synthetic values lose only the visible teaching suffix
+ok 9 - V34 presentation: source tagged synthetic values lose only the visible teaching suffix
+  ---
+  duration_ms: 0.6245
+  type: 'test'
+  ...
+# Subtest: V34 presentation: normal range shows Auto without Vietnamese text; teacher copy stays available
+ok 10 - V34 presentation: normal range shows Auto without Vietnamese text; teacher copy stays available
+  ---
+  duration_ms: 0.7828
+  type: 'test'
+  ...
+# Subtest: V34 presentation: disabled menu options keep canonical guards, not painted [HOLD]
+ok 11 - V34 presentation: disabled menu options keep canonical guards, not painted [HOLD]
+  ---
+  duration_ms: 1.3268
+  type: 'test'
+  ...
+# Subtest: V34 presentation: all new LCD help is routed to instructor metadata
+ok 12 - V34 presentation: all new LCD help is routed to instructor metadata
+  ---
+  duration_ms: 2.7432
+  type: 'test'
+  ...
+# Subtest: V34 presentation: NAV metadata reflects typed fresh, stale and disconnected states
+ok 13 - V34 presentation: NAV metadata reflects typed fresh, stale and disconnected states
+  ---
+  duration_ms: 2.0625
+  type: 'test'
+  ...
+# Subtest: V34 presentation: Tankenmaru details are explicit instructor-only provenance
+ok 14 - V34 presentation: Tankenmaru details are explicit instructor-only provenance
+  ---
+  duration_ms: 0.3736
+  type: 'test'
+  ...
+# Subtest: V34 presentation: raw source failure codes do not leak to the instructor
+ok 15 - V34 presentation: raw source failure codes do not leak to the instructor
+  ---
+  duration_ms: 0.6581
+  type: 'test'
+  ...
+# Subtest: V34 presentation: synthetic TIME TO GO is external teaching estimate, not operator ETA
+ok 16 - V34 presentation: synthetic TIME TO GO is external teaching estimate, not operator ETA
+  ---
+  duration_ms: 1.0853
+  type: 'test'
+  ...
+# Subtest: V34 presentation: early LCD-test return clears the separate DEMO painter
+ok 17 - V34 presentation: early LCD-test return clears the separate DEMO painter
+  ---
+  duration_ms: 3.1311
+  type: 'test'
+  ...
+# Subtest: V34 presentation: mobile guides bookend hardware without covering its LCD
+ok 18 - V34 presentation: mobile guides bookend hardware without covering its LCD
+  ---
+  duration_ms: 2.0686
+  type: 'test'
+  ...
+# Subtest: V34 presentation: root README/plan and protected bytes are not authored by UI branch
+ok 19 - V34 presentation: root README/plan and protected bytes are not authored by UI branch
+  ---
+  duration_ms: 3.0257
+  type: 'test'
+  ...
+# Subtest: source cue: off, booting and malformed modes cannot suggest active NAV
+ok 20 - source cue: off, booting and malformed modes cannot suggest active NAV
+  ---
+  duration_ms: 2.1338
+  type: 'test'
+  ...
+# Subtest: C11: typed fresh Own source, stale boundary and negative-age sample
+ok 21 - C11: typed fresh Own source, stale boundary and negative-age sample
+  ---
+  duration_ms: 0.7702
+  type: 'test'
+  ...
+# Subtest: C11: revoked, missing, invalid typed position fail closed
+ok 22 - C11: revoked, missing, invalid typed position fail closed
+  ---
+  duration_ms: 0.4629
+  type: 'test'
+  ...
+# Subtest: C11/D14: selected unavailable NMEA cannot be projected as Own
+ok 23 - C11/D14: selected unavailable NMEA cannot be projected as Own
+  ---
+  duration_ms: 0.536
+  type: 'test'
+  ...
+# Subtest: D09: virtual option On and revoke change only external provenance
+ok 24 - D09: virtual option On and revoke change only external provenance
+  ---
+  duration_ms: 0.5323
+  type: 'test'
+  ...
+# Subtest: source-unverified menu path: warning is external, verified rows do not inherit it
+ok 25 - source-unverified menu path: warning is external, verified rows do not inherit it
+  ---
+  duration_ms: 1.0847
+  type: 'test'
+  ...
+# Subtest: D11: diagnostic display has instructor-only, not hardware wording
+ok 26 - D11: diagnostic display has instructor-only, not hardware wording
+  ---
+  duration_ms: 0.2338
+  type: 'test'
+  ...
+# Subtest: keyboard focus boundary: teacher keyboard cannot steer physical controls
+ok 27 - keyboard focus boundary: teacher keyboard cannot steer physical controls
+  ---
+  duration_ms: 0.7602
+  type: 'test'
+  ...
+# Subtest: external notes and accessibility: data provenance cannot become LCD artwork
+ok 28 - external notes and accessibility: data provenance cannot become LCD artwork
+  ---
+  duration_ms: 12.7795
+  type: 'test'
+  ...
+# Subtest: V35: three deterministic D15 rows and no physical transport claims
+ok 29 - V35: three deterministic D15 rows and no physical transport claims
+  ---
+  duration_ms: 3.6435
+  type: 'test'
+  ...
+# Subtest: V35 C11/D14: typed Own waypoint and fresh sample are classroom-only
+ok 30 - V35 C11/D14: typed Own waypoint and fresh sample are classroom-only
+  ---
+  duration_ms: 0.4963
+  type: 'test'
+  ...
+# Subtest: V35 C11/D14: stale, future, revoked and invalid positions never look current
+ok 31 - V35 C11/D14: stale, future, revoked and invalid positions never look current
+  ---
+  duration_ms: 0.6187
+  type: 'test'
+  ...
+# Subtest: V35 C11: absent and invalid destinations cannot fabricate a route
+ok 32 - V35 C11: absent and invalid destinations cannot fabricate a route
+  ---
+  duration_ms: 0.716
+  type: 'test'
+  ...
+# Subtest: V35 D14: NMEA selected with no receiver masks Own source provenance
+ok 33 - V35 D14: NMEA selected with no receiver masks Own source provenance
+  ---
+  duration_ms: 0.4084
+  type: 'test'
+  ...
+# Subtest: V35 D09: virtual option is not installed hardware, even when declared
+ok 34 - V35 D09: virtual option is not installed hardware, even when declared
+  ---
+  duration_ms: 0.4051
+  type: 'test'
+  ...
+# Subtest: V35: power-off fails closed for NAV and receiver even with cached samples
+ok 35 - V35: power-off fails closed for NAV and receiver even with cached samples
+  ---
+  duration_ms: 0.3497
+  type: 'test'
+  ...
+# Subtest: V35: actual deterministic teacher fixture event and replay keep readback stable
+ok 36 - V35: actual deterministic teacher fixture event and replay keep readback stable
+  ---
+  duration_ms: 13.064
+  type: 'test'
+  ...
+# Subtest: V35: matrix owns no device I/O and stays entirely outside the face
+ok 37 - V35: matrix owns no device I/O and stays entirely outside the face
+  ---
+  duration_ms: 13.5552
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 191.7346

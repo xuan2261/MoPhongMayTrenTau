@@ -1,0 +1,7 @@
+# FULL-WORKSPACE MODE (user-selected 2026-11-22).
+# All surviving physical files, synthetic QA evidence and self-contained
+# historical snapshots are in scope for the later GitHub upload.
+# No active root ignore rules. The former NTFS junction-only aliases are
+# archived as metadata in HISTORICAL_STAGES_DEDUP_20261122.zip.
+# Remaining nested .gitignore files may still filter stage-local logs.
+# Never push without reviewing secrets, external-license material and Git LFS.

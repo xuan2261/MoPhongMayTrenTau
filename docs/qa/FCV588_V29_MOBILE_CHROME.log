@@ -1,0 +1,15 @@
+{
+  "status": "PASS_OBSERVED_PHONE_VIEWPORTS",
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "viewport": "390x844",
+      "status": "PASS",
+      "error": null
+    }
+  ]
+}

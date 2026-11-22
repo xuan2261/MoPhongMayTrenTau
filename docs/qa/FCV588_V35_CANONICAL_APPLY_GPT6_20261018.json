@@ -1,0 +1,37 @@
+{
+  "collectedAtUtc": "2026-10-18T04:20:30.1266023Z",
+  "scope": "CANONICAL_FCV588_V35_D15_PURE_PRESENTATION_ONLY",
+  "status": "V35_4_FILES_APPLIED_37_RUNTIME_SHA_MATCH",
+  "supervision": "GPT6_USER_APPROVED",
+  "baseline": "V34_GREEN_SOURCE_INTEGRITY",
+  "stagingPatchSha256": "66a98472daeee684479670da40e04f075c3af2dbc6421c63d8c76ace17d9d832",
+  "changedFiles": [
+    {
+      "file": "web/app.mjs",
+      "sha256": "770a56f36a6ac9f5ac4cb25e8543a31c7a78d6f74f726fa5e020a69f3d1ab0c4",
+      "bytes": 55168
+    },
+    {
+      "file": "web/index.html",
+      "sha256": "d819c426cc8ec189ec41b40aa1ea103444df3e10d0a9e757925366d7787297b0",
+      "bytes": 15769
+    },
+    {
+      "file": "web/styles.css",
+      "sha256": "61123c75f2bde9b3dfc5ee749fcdd196d9d22d6b72742ac1b9bda77398ffe17c",
+      "bytes": 28492
+    },
+    {
+      "file": "web/fcv588-training-source-matrix.mjs",
+      "sha256": "360caec812db54ea082ae8c7d21a836c6fe2ba135a00204ef1ed4a8d0ba9b3e7",
+      "bytes": 6728
+    }
+  ],
+  "runtimeShaMatches": 37,
+  "untouchedCoreModules": 23,
+  "priorV31FailureLogSha": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "postIntegrationQA": "PENDING",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "gitCommitted": false
+}

@@ -1,0 +1,12 @@
+{
+  "timeUtc": "2026-10-22T05:25:32.3130473Z",
+  "status": "QA_HARNESS_CSP_WAIT_PREDICATE_BLOCKED_NOT_PRODUCT_DEFECT",
+  "originalV3RunnerSHA256": "ab5144724f72013e6cee26088ebcb09f0f513919a2ea22a6f4258a794ef9046d",
+  "originalFailureLogSHA256": "7d6e1e6e8fcb9b87acd66961e7678dd8843322fc56ebbe3f4b45c2de9d3f267b",
+  "errorClass": "Playwright wait_for_function string eval prohibited by browser CSP script-src self",
+  "changedScope": "Only replace two wait_for_function predicates with Playwright built-in locator state and text filters",
+  "noProductCodeEdit": true,
+  "newV4Runner": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V53_A11Y_DYNAMIC_V4_20261022\\v53_browser_ax_dom_bounded_qa_v4.py",
+  "newV4RunnerSHA256": "9b003b8018d3870aea4588d571196befda781a16345c5a07e06c41c2528c76c3",
+  "noScreenReaderOrRealOsBlurClaim": true
+}

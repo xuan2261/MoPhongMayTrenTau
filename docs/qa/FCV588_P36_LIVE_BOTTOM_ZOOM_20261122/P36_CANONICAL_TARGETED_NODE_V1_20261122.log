@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies
+ok 1 - P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies
+  ---
+  duration_ms: 6.4565
+  type: 'test'
+  ...
+# Subtest: P23 Marker Zoom remains VRM-centered; BL remains bottom-edge
+ok 2 - P23 Marker Zoom remains VRM-centered; BL remains bottom-edge
+  ---
+  duration_ms: 1.2523
+  type: 'test'
+  ...
+# Subtest: P23 historic P04 display projection remains centered by default
+ok 3 - P23 historic P04 display projection remains centered by default
+  ---
+  duration_ms: 0.5647
+  type: 'test'
+  ...
+# Subtest: P28 all 12 full profile21/22 LF/DUAL/HF pairs replay but do not invent historical BZ pixels
+ok 4 - P28 all 12 full profile21/22 LF/DUAL/HF pairs replay but do not invent historical BZ pixels
+  ---
+  duration_ms: 158.4076
+  type: 'test'
+  ...
+# Subtest: P28 LF-ZOOM and HF-ZOOM use channel 50/200 and P04/P23 only change left synthetic BZ pane
+ok 5 - P28 LF-ZOOM and HF-ZOOM use channel 50/200 and P04/P23 only change left synthetic BZ pane
+  ---
+  duration_ms: 360.0265
+  type: 'test'
+  ...
+# Subtest: P28 POWER OFF, saved preference without active zoom, and wrong zoom setting fail closed
+ok 6 - P28 POWER OFF, saved preference without active zoom, and wrong zoom setting fail closed
+  ---
+  duration_ms: 27.6697
+  type: 'test'
+  ...
+# Subtest: P28 manual qualitative layouts preserve left/right channel ownership but claim no OEM pixels
+ok 7 - P28 manual qualitative layouts preserve left/right channel ownership but claim no OEM pixels
+  ---
+  duration_ms: 4.9584
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 726.1663

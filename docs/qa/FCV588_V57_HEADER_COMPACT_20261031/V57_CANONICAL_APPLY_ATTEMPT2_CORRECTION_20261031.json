@@ -1,0 +1,19 @@
+{
+  "timestampUtc": "2026-10-31T04:39:57.0865160Z",
+  "status": "V57_CANONICAL_SAFETY_COPY_CORRECTION_SHA_MATCH",
+  "changedFiles": [
+    "web/lcd-instructor-meta.mjs",
+    "test/fcv588-v57-header-compact.test.mjs"
+  ],
+  "canonicalPreimageSHA256": {
+    "web/lcd-instructor-meta.mjs": "f95e53b879ae5e30df74755547725db102694e4a0cf830fe88487785d5792e75",
+    "test/fcv588-v57-header-compact.test.mjs": "cf472ff1f527f8c1e16377cbb01f322b140a0688b9538712e4efcfed1d24e178"
+  },
+  "canonicalPostimageSHA256": {
+    "web/lcd-instructor-meta.mjs": "55347c1f70df83907296b599b4e4bbc59df411d17c0f36d3655a7272a89b3ebb",
+    "test/fcv588-v57-header-compact.test.mjs": "b5f6f6472cb4525526db5e50fdb8a5f1ba591279a2c90bb366f63a6a385f2fd6"
+  },
+  "reason": "Preserve legacy source-cue explicit no-real-transducer contract in a shorter student-facing phrase.",
+  "previousFullNodeAttempt": "518_PASS_2_FAIL_PRESERVED",
+  "noAssertionsWeakened": true
+}

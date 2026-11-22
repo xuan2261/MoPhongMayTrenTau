@@ -1,0 +1,113 @@
+{
+  "createdAt": "2026-11-16T10:43:28.984007+07:00",
+  "evidence": {
+    "independentPhotoAudit": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-independent-photo/P08_INDEPENDENT_ROI_AUDIT_20261116.json",
+      "sha256": "e35441fe7de4723aad5d891311022a3935244aa21282e02dc0736d19682400a6"
+    },
+    "parentP07": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "sha256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726"
+    },
+    "parentP07Post": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "22fc21b744ebedbd5ac4a5998411c3e01f665697fa7fbb2a3726998909775ea6"
+    },
+    "primaryROICandidate": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-roi/P08_LCD_ROI_UNCALIBRATED_CANDIDATES_20261116.json",
+      "sha256": "b1ec545fb9ad19b4086baa1c303a2b7a7ada81a6991a28a83e75b64b9255cd3b"
+    },
+    "sourceAtlas": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/2026-11-14-photo-mode-atlas.md",
+      "sha256": "eb005af84b63e09450f2009dec809ab5e6098262f7645e7cd09f9ab75e1ef6c4"
+    },
+    "twoRaterCrosscheck": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-roi/P08_ROI_INTER_RATER_CROSSCHECK_20261116.json",
+      "sha256": "c6c075f55a18ec23ddeaadcfd5b3fe43949e0ca2d52da8c40c8a3345d62314d8"
+    },
+    "windowsReadiness": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-a11y-readiness/P08_NATIVE_A11Y_READINESS_20261116.json",
+      "sha256": "e50f405cdbc2507afe58ba4fdf2bdd3e1676cfaeb4016710214918e56c8e720c"
+    }
+  },
+  "findings": {
+    "betweenRaterCornerComparisons": 32,
+    "calibratedROIsAccepted": 0,
+    "forcedColors": "NOT_RUN",
+    "independentPhotoReview": "GO_NORMALIZED_LCD_PLANE_ONLY",
+    "maximumBetweenRaterDifferencePx": 34.93,
+    "originalPhotosRehashed": "8/8",
+    "osWindowBlur": "NOT_RUN",
+    "photosWithOver20PxDifference": 5,
+    "runtime": "39/39_UNCHANGED",
+    "screenReaderNVDA": "NOT_DISCOVERED_INSTALL_NOT_AUTHORIZED",
+    "screenReaderNarrator": "EXISTS_NATIVE_SPEECH_NOT_RUN",
+    "testPort4207": "CLOSED",
+    "userServer4173": "HTTP200_UNTOUCHED",
+    "visualROICandidates": "8/8_UNCALIBRATED"
+  },
+  "holds": {
+    "F1Phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "fidelityPercent": null,
+    "fullP07": "OPEN",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "preciseROICalibration": "HOLD",
+    "releaseApproval": "HOLD",
+    "rights": "HOLD"
+  },
+  "limitations": [
+    "The two ROI estimates are not the same boundary/oracle: 5 photos exceed the primary +/-20px hypothesis. Neither is licensed to set OEM CSS coordinates.",
+    "Homography from approximate four corners may support qualitative intra-LCD layout comparison only; it cannot prove 480x640 OEM pixel, physical mm, lens correction, control geometry, RGB or fonts.",
+    "No native Narrator/NVDA spoken-output, real OS blur/refocus or forced colors was exercised; no user Windows accessibility settings were changed.",
+    "Original OEM photos remain REFERENCE_ONLY and no source photo derivative or redistribution asset was created."
+  ],
+  "operations": {
+    "browserStarted": false,
+    "originalPhotosEdited": false,
+    "photoDerivativesSaved": false,
+    "priorEvidenceOverwritten": false,
+    "runtimeEdited": false,
+    "screenReaderStarted": false,
+    "systemSettingsModified": false,
+    "userServerRestarted": false
+  },
+  "originalPhotoSHA256": {
+    "dual.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b"
+    },
+    "giaoDien.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c"
+    },
+    "hf.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9"
+    },
+    "lf.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef"
+    },
+    "nav1.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e"
+    },
+    "nav2.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6"
+    },
+    "zoom.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52"
+    },
+    "zoom2.jpg": {
+      "rights": "REFERENCE_ONLY",
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99"
+    }
+  },
+  "schema": "fcv588-p08-roi-readiness-final-integrity-v1",
+  "scope": "QA_ONLY_F1_PUBLIC_REFERENCE_V2_NO_RUNTIME_CHANGE",
+  "status": "P08_BOUNDED_IMAGE_SPACE_ROI_CANDIDATES_AND_A11Y_READINESS_PASS_PRECISION_AND_NATIVE_QA_HOLD"
+}

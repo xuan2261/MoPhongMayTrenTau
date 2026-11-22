@@ -1,0 +1,1285 @@
+{
+  "collectedAtUtc": "2026-10-18T04:28:32.510819+00:00",
+  "scope": "V35_CANONICAL_D15_C11_D09_D14_SOURCE_BOUND",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": [
+        {
+          "name": "source_matrix_outside_face",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "matrix_is_not_oem_menu",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "source_status_labels_are_human_readable",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_c11_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d09_ungranted",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d14_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "booted_without_nav_data",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_own_fresh",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_destination_yet",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "mark_wpt_exists",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "data.destination_present",
+          "passed": true,
+          "observed": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "data.destination_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_waypoint_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoked_position_not_route",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_grant_still_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "system.tankenmaru_present",
+          "passed": true,
+          "observed": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "system.tankenmaru_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_on_suppresses_nmea",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_rf_claim",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoking_option_fails_closed",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_horizontal_overflow",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "all_requests_local",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4201/",
+            "http://127.0.0.1:4201/web/styles.css",
+            "http://127.0.0.1:4201/web/app.mjs",
+            "http://127.0.0.1:4201/src/core/scenario.mjs",
+            "http://127.0.0.1:4201/src/core/session.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4201/src/core/lessons.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4201/web/hold-input.mjs",
+            "http://127.0.0.1:4201/web/pad-repeat.mjs",
+            "http://127.0.0.1:4201/web/rotary-input.mjs",
+            "http://127.0.0.1:4201/web/key-feedback.mjs",
+            "http://127.0.0.1:4201/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4201/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4201/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4201/src/core/protocol.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4201/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "all_loaded_bytes_match",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "no_console_or_network_errors",
+          "passed": true,
+          "observed": []
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1366x768-initial.png",
+          "sha256": "bb77d1be93792217e2d4aabfa9380376a1e0a35f6a53f47307561322b0fe8b85"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1366x768-fresh-no-destination.png",
+          "sha256": "b76bfd4fe3536ffd660e826aa3f1dfb40b5b724c4ae5bd017a4eb7effbd86bed"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1366x768-active-waypoint.png",
+          "sha256": "a8157bcc9fcb02d686b702af4bbdeb2a222bfd739a877f0a87de1cd3143fbfc9"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1366x768-tankenmaru-on.png",
+          "sha256": "798bf212e4a7fbf1ce8830e2f509f4a19d8c86e1238a94288fed2f1a0f6067c4"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1366x768-option-revoked.png",
+          "sha256": "42fb9f4d778fd4c05bd17f078abe3094dd6bf22e3cb1398ef1a2f9b26efcde53"
+        }
+      ],
+      "verifiedBrowserResponses": 35,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/fcv588-training-source-matrix.mjs",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "result": "PASS"
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": [
+        {
+          "name": "source_matrix_outside_face",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "matrix_is_not_oem_menu",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "source_status_labels_are_human_readable",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_c11_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d09_ungranted",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d14_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "booted_without_nav_data",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_own_fresh",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_destination_yet",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "mark_wpt_exists",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "data.destination_present",
+          "passed": true,
+          "observed": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "data.destination_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_waypoint_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoked_position_not_route",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_grant_still_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "system.tankenmaru_present",
+          "passed": true,
+          "observed": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "system.tankenmaru_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_on_suppresses_nmea",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_rf_claim",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoking_option_fails_closed",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_horizontal_overflow",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "all_requests_local",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4201/",
+            "http://127.0.0.1:4201/web/styles.css",
+            "http://127.0.0.1:4201/web/app.mjs",
+            "http://127.0.0.1:4201/src/core/scenario.mjs",
+            "http://127.0.0.1:4201/src/core/session.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4201/src/core/lessons.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4201/web/hold-input.mjs",
+            "http://127.0.0.1:4201/web/pad-repeat.mjs",
+            "http://127.0.0.1:4201/web/rotary-input.mjs",
+            "http://127.0.0.1:4201/web/key-feedback.mjs",
+            "http://127.0.0.1:4201/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4201/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4201/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4201/src/core/protocol.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4201/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "all_loaded_bytes_match",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "no_console_or_network_errors",
+          "passed": true,
+          "observed": []
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1920x1080-initial.png",
+          "sha256": "bb77d1be93792217e2d4aabfa9380376a1e0a35f6a53f47307561322b0fe8b85"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1920x1080-fresh-no-destination.png",
+          "sha256": "5ca7968f054e578205dc188b9e0ad6e9000d71c4537b2de497a420bacce2795f"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1920x1080-active-waypoint.png",
+          "sha256": "a8157bcc9fcb02d686b702af4bbdeb2a222bfd739a877f0a87de1cd3143fbfc9"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1920x1080-tankenmaru-on.png",
+          "sha256": "798bf212e4a7fbf1ce8830e2f509f4a19d8c86e1238a94288fed2f1a0f6067c4"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-1920x1080-option-revoked.png",
+          "sha256": "bae8992619fb3a32e5b26614a663ad8ebb35750c4f7622e72a53b1707c3e438b"
+        }
+      ],
+      "verifiedBrowserResponses": 35,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/fcv588-training-source-matrix.mjs",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "result": "PASS"
+    },
+    {
+      "viewport": "360x800",
+      "checks": [
+        {
+          "name": "source_matrix_outside_face",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "matrix_is_not_oem_menu",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "source_status_labels_are_human_readable",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_c11_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d09_ungranted",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d14_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "booted_without_nav_data",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_own_fresh",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_destination_yet",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "mark_wpt_exists",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "data.destination_present",
+          "passed": true,
+          "observed": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "data.destination_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_waypoint_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoked_position_not_route",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_grant_still_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "system.tankenmaru_present",
+          "passed": true,
+          "observed": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "system.tankenmaru_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_on_suppresses_nmea",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_rf_claim",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoking_option_fails_closed",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_horizontal_overflow",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "all_requests_local",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4201/",
+            "http://127.0.0.1:4201/web/styles.css",
+            "http://127.0.0.1:4201/web/app.mjs",
+            "http://127.0.0.1:4201/src/core/scenario.mjs",
+            "http://127.0.0.1:4201/src/core/session.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4201/src/core/lessons.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4201/web/hold-input.mjs",
+            "http://127.0.0.1:4201/web/pad-repeat.mjs",
+            "http://127.0.0.1:4201/web/rotary-input.mjs",
+            "http://127.0.0.1:4201/web/key-feedback.mjs",
+            "http://127.0.0.1:4201/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4201/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4201/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4201/src/core/protocol.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4201/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "all_loaded_bytes_match",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "no_console_or_network_errors",
+          "passed": true,
+          "observed": []
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-360x800-initial.png",
+          "sha256": "78eb79b0d0512002c8f11b145bac715e6d94549a6f8c4a7a69d59202a1c0a3c1"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-360x800-fresh-no-destination.png",
+          "sha256": "bf51e8990827f619f861d33fdf656a5ed00e61e5d3b343bdeca8ea87263d0177"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-360x800-active-waypoint.png",
+          "sha256": "22c637a593b91dad216ed6c761d1e4e272f45d82218f04baed791e7e39cb663a"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-360x800-tankenmaru-on.png",
+          "sha256": "2e25ffb6c2233eea9c0024e88471990b887d3f80adb199d3a658009c53e9b1f4"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-360x800-option-revoked.png",
+          "sha256": "1539b64df2e1f61a7d2a9ac227b3882ad7e0aa3c6fe73e8907df178168a7f067"
+        }
+      ],
+      "verifiedBrowserResponses": 35,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/fcv588-training-source-matrix.mjs",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "result": "PASS"
+    },
+    {
+      "viewport": "390x844",
+      "checks": [
+        {
+          "name": "source_matrix_outside_face",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "matrix_is_not_oem_menu",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "source_status_labels_are_human_readable",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_c11_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d09_ungranted",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d14_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "booted_without_nav_data",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_own_fresh",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_destination_yet",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "mark_wpt_exists",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "data.destination_present",
+          "passed": true,
+          "observed": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "data.destination_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_waypoint_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoked_position_not_route",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_grant_still_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "system.tankenmaru_present",
+          "passed": true,
+          "observed": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "system.tankenmaru_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_on_suppresses_nmea",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_rf_claim",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoking_option_fails_closed",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_horizontal_overflow",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "all_requests_local",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4201/",
+            "http://127.0.0.1:4201/web/styles.css",
+            "http://127.0.0.1:4201/web/app.mjs",
+            "http://127.0.0.1:4201/src/core/scenario.mjs",
+            "http://127.0.0.1:4201/src/core/session.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4201/src/core/lessons.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4201/web/hold-input.mjs",
+            "http://127.0.0.1:4201/web/pad-repeat.mjs",
+            "http://127.0.0.1:4201/web/rotary-input.mjs",
+            "http://127.0.0.1:4201/web/key-feedback.mjs",
+            "http://127.0.0.1:4201/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4201/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4201/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4201/src/core/protocol.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4201/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "all_loaded_bytes_match",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "no_console_or_network_errors",
+          "passed": true,
+          "observed": []
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-390x844-initial.png",
+          "sha256": "4b4d68075b31fa7b57e84342d89c4aa5527007ab37caeec8cadf4b103800f1eb"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-390x844-fresh-no-destination.png",
+          "sha256": "adf8bc6586158fda9c566b9b15285943b003a6c71a9251c206595451e538df84"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-390x844-active-waypoint.png",
+          "sha256": "79b77f0b0521f43f33af34a5b23166940c70e12961de9c60ea6a18be764285c2"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-390x844-tankenmaru-on.png",
+          "sha256": "0ce5f362eb98214e506dd384ba25b25f05ddbb977b3b578c0c5df224088c1b5b"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-390x844-option-revoked.png",
+          "sha256": "6621688333d5cfd8340126d0cf1dcbc6ee1d23ea864ba3b68ff8c35e202e7633"
+        }
+      ],
+      "verifiedBrowserResponses": 35,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/fcv588-training-source-matrix.mjs",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "result": "PASS"
+    },
+    {
+      "viewport": "320x720",
+      "checks": [
+        {
+          "name": "source_matrix_outside_face",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "matrix_is_not_oem_menu",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "source_status_labels_are_human_readable",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_c11_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d09_ungranted",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "initial_d14_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "booted_without_nav_data",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_own_fresh",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_destination_yet",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "mark_wpt_exists",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "data.destination_present",
+          "passed": true,
+          "observed": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "data.destination_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "typed_waypoint_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoked_position_not_route",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_grant_still_off",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "system.tankenmaru_present",
+          "passed": true,
+          "observed": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "system.tankenmaru_selected",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "virtual_on_suppresses_nmea",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_rf_claim",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "revoking_option_fails_closed",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "no_horizontal_overflow",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "all_requests_local",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4201/",
+            "http://127.0.0.1:4201/web/styles.css",
+            "http://127.0.0.1:4201/web/app.mjs",
+            "http://127.0.0.1:4201/src/core/scenario.mjs",
+            "http://127.0.0.1:4201/src/core/session.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4201/src/core/lessons.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4201/web/hold-input.mjs",
+            "http://127.0.0.1:4201/web/pad-repeat.mjs",
+            "http://127.0.0.1:4201/web/rotary-input.mjs",
+            "http://127.0.0.1:4201/web/key-feedback.mjs",
+            "http://127.0.0.1:4201/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4201/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4201/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4201/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4201/src/core/protocol.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4201/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4201/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "all_loaded_bytes_match",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "no_console_or_network_errors",
+          "passed": true,
+          "observed": []
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-320x720-initial.png",
+          "sha256": "7269855a006757ec1f8b1248d2d9f5ccedb94c86dea0eeef0b0cac1b11ae7a57"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-320x720-fresh-no-destination.png",
+          "sha256": "9e3fc92f5af9e0c4151add135212c52eac6d7b4edd9d559017e276da83756a43"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-320x720-active-waypoint.png",
+          "sha256": "3539bfbf154b87b649f12cf482717fad3b0d1eaa1c81fa87f6a5aadaa263822d"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-320x720-tankenmaru-on.png",
+          "sha256": "096c915d544e977032bf27418891e1ac0176aa5549cb186ea952e8918c2eeddc"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v35-canonical-20261018-320x720-option-revoked.png",
+          "sha256": "c2fbd931eb4740822ab1367ec956416c9e729ac9f55d8e490957a2d29e636016"
+        }
+      ],
+      "verifiedBrowserResponses": 35,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/fcv588-training-source-matrix.mjs",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "runtimeIntegrated": true,
+  "chromeVersion": "155.0.8059.80",
+  "servedRuntimeFiles": 37,
+  "sourceManifestSha256": "affca86cc9a5ff4927cd8e19384a75a7d21735c63cae19f5b5e20ef2b903636b",
+  "browserHarnessSha256": "950649c5980aff9d063d0e222f3ce5608c68939ba02172a2d51e966df1787b3d",
+  "sourceStable": true,
+  "status": "CANONICAL_V35_SOURCE_MATRIX_BROWSER_PASS"
+}

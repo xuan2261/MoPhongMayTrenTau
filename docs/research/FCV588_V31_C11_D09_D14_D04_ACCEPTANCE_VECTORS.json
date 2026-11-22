@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "id": "FCV588-PROFILE20-INDEPENDENT-FEATURE-ORACLES",
+  "createdDate": "2026-10-17",
+  "purpose": "Source-scoped, machine-readable future acceptance vectors, not executable Phase2 Verify, not OEM signoff.",
+  "authority": {
+    "activePlan": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+    "featureRegister": "docs/research/FCV588_FULL_FUNCTION_INVENTORY_2026-10-13.md",
+    "traceMatrix": "docs/evidence/fcv588-public-trace-matrix.json",
+    "currentImplementation": "docs/evidence/fcv588-public-implementation-status.json",
+    "sources": "docs/research/FCV588_PUBLIC_MEDIA_EVIDENCE_2026-10-13.md",
+    "manufacturerProduct": "https://www.furuno.com/en/products/fishfinder/fcv-588/index.html",
+    "manufacturerSupport": "https://www.furunousa.com/en/support/FCV588",
+    "manualRevision": "OME-23890-E (Aug 2025)",
+    "nonInterchangeableModels": "FCV-588 only; do not import FCV-38/600/800/1900 UI or glossary"
+  },
+  "profileRevision": "F1-public-reference-20",
+  "allCurrentClaims": "HOLD",
+  "currentPhase2Verify": "STOP_V31_QA_01",
+  "executionPolicy": "FUTURE_TEST_VECTORS_ONLY; all cases NOT_EXECUTED. Do not edit/run affected Verify while Kongming gate remains unresolved.",
+  "fields": [
+    {
+      "featureId": "C11",
+      "expectedImplementation": "MENU_ONLY_PARTIAL",
+      "sourceIds": [
+        "PUB-FCV-001"
+      ],
+      "manualSections": [
+        "§1.21",
+        "§1.22 Data",
+        "§1.4.4"
+      ],
+      "owners": [
+        "src/devices/fcv588/navigation.mjs",
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/display-widgets.mjs"
+      ],
+      "coveredByExisting": [
+        "test/fcv588-public-nav-box-config.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "sourceLimit": "Source-graded training Data/NAV box subset only; OEM field placement/revision and actual receiver behavior unverified.",
+      "currentReleaseDecision": "HOLD",
+      "vectors": [
+        {
+          "caseId": "C11-01",
+          "title": "NAV1/NAV2 four-box selection cancel/commit",
+          "expectedInvariant": "Four semantic boxes, ability to return without commit, replay unchanged by cancellation",
+          "qualification": "Existing tests touch this; full V31 rerun blocked",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "C11-02",
+          "title": "Source switch Own→NMEA when receiver absent",
+          "expectedInvariant": "Keep selected NMEA but show NO DATA; never borrow Own sample; stored choice survives valid power cycle",
+          "qualification": "Requires V31 source-bound end-to-end evidence",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "C11-03",
+          "title": "Stale/invalid position and negative STW/SOG",
+          "expectedInvariant": "Fail closed to NO DATA; do not fabricate bearing, pressure or cross-track error",
+          "qualification": "Some synthetic negative tests exist; exact LCD presentation unverified",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "C11-04",
+          "title": "NAV RANGE and TIME TO GO",
+          "expectedInvariant": "Only selected synthetic waypoint+fresh typed ownship+valid positive speed may show an explicitly SIM EST estimate",
+          "qualification": "Must not present as manufacturer ETA or ship navigation",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "C11-05",
+          "title": "Bearing Mag/True, wind Apparent/True and missing field sources",
+          "expectedInvariant": "Label choices without converting absent directional values into readings",
+          "qualification": "Independent field-specific oracle/fixtures not available",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "C11-06",
+          "title": "NAV editing during POWER/reset and profile19→20 settings import",
+          "expectedInvariant": "No stale pending draft may commit; no replay silently migrates; committed settings only importer remains narrow",
+          "qualification": "Requires allowed integrated Verify after STOP lifted",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        }
+      ]
+    },
+    {
+      "featureId": "D09",
+      "expectedImplementation": "MENU_ONLY_PARTIAL",
+      "sourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "manualSections": [
+        "§2.9",
+        "§4.10"
+      ],
+      "owners": [
+        "src/devices/fcv588/tankenmaru-status.mjs",
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/model.mjs"
+      ],
+      "coveredByExisting": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs",
+        "test/fcv588-public-v31-transactions.test.mjs"
+      ],
+      "sourceLimit": "Only an instructor-declared virtual optional fixture; no installed option, radio link, real partner panel or OEM menu editor.",
+      "currentReleaseDecision": "HOLD",
+      "vectors": [
+        {
+          "caseId": "D09-01",
+          "title": "Unknown hardware baseline",
+          "expectedInvariant": "Optional menu edit must be disabled with explicit external source reason; no fabricated entitlement",
+          "qualification": "Current default option not declared",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D09-02",
+          "title": "Declare virtual option then On/Off",
+          "expectedInvariant": "Only explicit instructor fixture permits stage/commit; Off remains available; simulated-only and no RF",
+          "qualification": "Exact OEM On menu range remains SOURCE_GAP",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D09-03",
+          "title": "Tankenmaru On vs NMEA exclusion",
+          "expectedInvariant": "Hide mutually exclusive NMEA setup/status in both System and Installation, recover on Off",
+          "qualification": "Already implemented as synthetic availability; further release review HOLD",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D09-04",
+          "title": "Revoke/regrant during pending option draft incl POWER-suspended",
+          "expectedInvariant": "Cancel draft and owner even when row identity is unchanged; regrant cannot resurrect uncommitted value",
+          "qualification": "V31 scoped tests exist, full Verify blocked",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D09-05",
+          "title": "Teacher reset and startup persistence",
+          "expectedInvariant": "Saved On preference does not automatically imply grant; reset does not rewrite startup bytes on non-setting keys",
+          "qualification": "V31 scoped browser evidence; more POWER/tick cases pending",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D09-06",
+          "title": "Virtual details default values",
+          "expectedInvariant": "Off/Yes/4 are manual-default training reference only, must not imply editable transport; NEVER transmit RF",
+          "qualification": "Hardware and rights acceptance HOLD",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        }
+      ]
+    },
+    {
+      "featureId": "D14",
+      "expectedImplementation": "MENU_ONLY_PARTIAL",
+      "sourceIds": [
+        "PUB-FCV-001"
+      ],
+      "manualSections": [
+        "§4.9 IEC 61162-1",
+        "§4.10"
+      ],
+      "owners": [
+        "src/devices/fcv588/receiver-status.mjs",
+        "src/devices/fcv588/navigation.mjs",
+        "src/devices/fcv588/menu-atlas.mjs"
+      ],
+      "coveredByExisting": [
+        "test/fcv588-public-receiver-status.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "sourceLimit": "Offline, receive-status training projection only; physical NMEA electrical, serial, UDP or vessel I/O prohibited.",
+      "currentReleaseDecision": "HOLD",
+      "vectors": [
+        {
+          "caseId": "D14-01",
+          "title": "Baseline receiver absent, NMEA Off",
+          "expectedInvariant": "Show missing synthetic source; transport NONE, no physical receiver connection",
+          "qualification": "Existing synthetic-only domain tests, not OEM acceptance",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D14-02",
+          "title": "Fresh signed-hemisphere coordinates",
+          "expectedInvariant": "Accept only tagged SYNTHETIC_FIXTURE coordinates with finite latitude/longitude in bounds; position N/S/E/W consistent",
+          "qualification": "No real NMEA frames accepted",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D14-03",
+          "title": "Stale, future-tick or out-of-range input",
+          "expectedInvariant": "Fail closed to NO DATA/STale; no stale own source status or speed leakage",
+          "qualification": "Status and actual LCD should agree",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D14-04",
+          "title": "Own vs NMEA selected data",
+          "expectedInvariant": "Unconnected NMEA selection does not fall back to synthetic Own temperature/trip/speed",
+          "qualification": "External interface stays disabled regardless menu visibility",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D14-05",
+          "title": "Tankenmaru and optional fixture status",
+          "expectedInvariant": "Tankenmaru On suppresses NMEA path; Off restores, invalid edits and POWER wrapping cannot resurrect NMEA drafts",
+          "qualification": "Cross-profile tests and source visual oracle needed",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D14-06",
+          "title": "No real I/O and replay isolation",
+          "expectedInvariant": "No WebSerial, WebUSB, UDP/serial or physical device reader; deterministic replay observation only",
+          "qualification": "No live bridge install or hardware connection",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        }
+      ]
+    },
+    {
+      "featureId": "D04",
+      "expectedImplementation": "NOT_IMPLEMENTED",
+      "sourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "manualSections": [
+        "§2.4",
+        "§4.10"
+      ],
+      "owners": [
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/settings.mjs"
+      ],
+      "coveredByExisting": [],
+      "sourceLimit": "Only English labels are authorized in the current public-reference build; real language bundle/reboot/firmware-specific paths unverified and rights restricted.",
+      "currentReleaseDecision": "HOLD",
+      "vectors": [
+        {
+          "caseId": "D04-01",
+          "title": "Language menu in System and Installation",
+          "expectedInvariant": "Show documented Language entry, but keep disabled with source/rights rationale externally until required evidence",
+          "qualification": "Cannot claim implement or support alternate languages",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D04-02",
+          "title": "Unsupported locale selection or direct invalid setting injection",
+          "expectedInvariant": "Reject arbitrary locale and any fake language migration; preserve known English state and storage",
+          "qualification": "Do not invent a dictionary or new version",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D04-03",
+          "title": "Future rights-cleared language package",
+          "expectedInvariant": "Before coding: exact FCV-588 revision/locales, rights grant for language resources, behavior of reboot/reset and per-menu oracle",
+          "qualification": "Unavailable: SOURCE_GAP + RIGHTS_HOLD",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        },
+        {
+          "caseId": "D04-04",
+          "title": "Public multi-language operator guide existence vs runtime strings",
+          "expectedInvariant": "Multilingual guides do not prove installed firmware language selection options nor permission to reproduce their text",
+          "qualification": "Research-only, not a usable interface fixture",
+          "execution": "NOT_EXECUTED",
+          "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
+        }
+      ]
+    }
+  ],
+  "mandatoryGlobalInvariants": [
+    "No actual ship I/O, radio, NMEA transmit, GPS reading or connected sensor is introduced.",
+    "No synthetic observation can masquerade as data from real equipment.",
+    "No unverified firmware or transducer option is granted by default.",
+    "Cancellation, invalid order, POWER wrappers, replay and profile compatibility must remain deterministic.",
+    "Keep canonical storage bytes and settings schema18 invariant unless an independently reviewed behavior change explicitly versions them.",
+    "Do not treat old V30/31 PASS numbers as a new acceptance receipt or promote any of the 65 claims."
+  ]
+}

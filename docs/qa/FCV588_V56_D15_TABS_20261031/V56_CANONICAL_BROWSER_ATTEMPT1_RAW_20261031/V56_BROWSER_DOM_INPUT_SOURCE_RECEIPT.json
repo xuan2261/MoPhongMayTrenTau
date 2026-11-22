@@ -1,0 +1,1085 @@
+{
+  "scope": "CHROME_REAL_DOM_POINTER_KEYBOARD_NOT_HARDWARE_OR_SCREENREADER",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "origin": "http://127.0.0.1:4173",
+  "viewports": [
+    {
+      "viewport": [
+        1912,
+        970
+      ],
+      "checks": {
+        "baseline": {
+          "viewport": [
+            1912,
+            970
+          ],
+          "documentScrollWidth": 1912,
+          "documentScrollHeight": 1201,
+          "d15Height": 780,
+          "d15Width": 310,
+          "faceHeight": 787.96875,
+          "tabCount": 5,
+          "panelCount": 5,
+          "selected": [
+            "d15-tab-session"
+          ],
+          "visiblePanels": [
+            "d15-panel-session"
+          ],
+          "inactiveFocusables": [],
+          "live": [
+            {
+              "id": "operator-guidance-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            },
+            {
+              "id": "source-matrix-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            }
+          ],
+          "tabSizes": [
+            {
+              "id": "d15-tab-session",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-help",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-fixtures",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-lessons",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-sources",
+              "width": 182,
+              "height": 44
+            }
+          ],
+          "legacyIds": [
+            {
+              "id": "btn-pause",
+              "count": 1
+            },
+            {
+              "id": "btn-step",
+              "count": 1
+            },
+            {
+              "id": "btn-reset",
+              "count": 1
+            },
+            {
+              "id": "btn-replay",
+              "count": 1
+            },
+            {
+              "id": "gain-minus",
+              "count": 1
+            },
+            {
+              "id": "gain-plus",
+              "count": 1
+            },
+            {
+              "id": "mode-minus",
+              "count": 1
+            },
+            {
+              "id": "mode-plus",
+              "count": 1
+            },
+            {
+              "id": "btn-nav-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-mount-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-tankenmaru-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-battery-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-error-fixture",
+              "count": 1
+            },
+            {
+              "id": "lesson-picker",
+              "count": 1
+            },
+            {
+              "id": "btn-start-lesson",
+              "count": 1
+            },
+            {
+              "id": "btn-score",
+              "count": 1
+            },
+            {
+              "id": "instructor-source-matrix",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-c11-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d09-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d14-title",
+              "count": 1
+            },
+            {
+              "id": "validation-status",
+              "count": 1
+            }
+          ]
+        },
+        "tabLabels": [
+          "Phiên",
+          "Trợ giúp",
+          "Tình huống",
+          "Bài học",
+          "Nguồn & QA"
+        ],
+        "initialSelected": "d15-tab-session",
+        "stepBefore": "0001",
+        "stepAfter": "0002",
+        "fixturePressedBefore": "false",
+        "fixturePressedAfter": "true"
+      },
+      "loadedBodies": [
+        {
+          "path": "/web/index.html",
+          "bytes": 18267,
+          "sha256": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243"
+        },
+        {
+          "path": "/web/styles.css",
+          "bytes": 32066,
+          "sha256": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+        },
+        {
+          "path": "/web/app.mjs",
+          "bytes": 56698,
+          "sha256": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7"
+        },
+        {
+          "path": "/src/core/scenario.mjs",
+          "bytes": 9012,
+          "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+        },
+        {
+          "path": "/src/core/session.mjs",
+          "bytes": 8784,
+          "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+        },
+        {
+          "path": "/src/devices/fcv588/adapter.mjs",
+          "bytes": 1417,
+          "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+        },
+        {
+          "path": "/src/devices/fcv588/echo-projection.mjs",
+          "bytes": 13198,
+          "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+        },
+        {
+          "path": "/src/devices/fcv588/model.mjs",
+          "bytes": 50464,
+          "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+        },
+        {
+          "path": "/src/devices/fcv588/receiver-status.mjs",
+          "bytes": 2590,
+          "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+        },
+        {
+          "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+          "bytes": 921,
+          "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+        },
+        {
+          "path": "/src/devices/fcv588/menu-atlas.mjs",
+          "bytes": 12576,
+          "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+        },
+        {
+          "path": "/src/devices/fcv588/display-layout.mjs",
+          "bytes": 1265,
+          "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+        },
+        {
+          "path": "/src/devices/fcv588/navigation.mjs",
+          "bytes": 10938,
+          "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+        },
+        {
+          "path": "/src/devices/fcv588/calibration.mjs",
+          "bytes": 2346,
+          "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+        },
+        {
+          "path": "/src/devices/fcv588/display-widgets.mjs",
+          "bytes": 3138,
+          "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+        },
+        {
+          "path": "/src/devices/fcv588/training-faults.mjs",
+          "bytes": 569,
+          "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+        },
+        {
+          "path": "/src/devices/fcv588/settings.mjs",
+          "bytes": 4272,
+          "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+        },
+        {
+          "path": "/src/devices/fcv588/units.mjs",
+          "bytes": 3408,
+          "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+        },
+        {
+          "path": "/src/core/lessons.mjs",
+          "bytes": 14853,
+          "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+        },
+        {
+          "path": "/src/devices/fcv588/display-palette.mjs",
+          "bytes": 2794,
+          "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+        },
+        {
+          "path": "/web/hold-input.mjs",
+          "bytes": 4425,
+          "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+        },
+        {
+          "path": "/web/pad-repeat.mjs",
+          "bytes": 4007,
+          "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+        },
+        {
+          "path": "/web/rotary-input.mjs",
+          "bytes": 3054,
+          "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+        },
+        {
+          "path": "/web/key-feedback.mjs",
+          "bytes": 1301,
+          "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+        },
+        {
+          "path": "/web/keyboard-shortcuts.mjs",
+          "bytes": 845,
+          "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+        },
+        {
+          "path": "/web/instructor-tabs.mjs",
+          "bytes": 3457,
+          "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+        },
+        {
+          "path": "/web/lcd-presentation.mjs",
+          "bytes": 6952,
+          "sha256": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2"
+        },
+        {
+          "path": "/web/lcd-config-presentation.mjs",
+          "bytes": 6718,
+          "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+        },
+        {
+          "path": "/web/lcd-control-presentation.mjs",
+          "bytes": 4116,
+          "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+        },
+        {
+          "path": "/web/lcd-instructor-meta.mjs",
+          "bytes": 14775,
+          "sha256": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+        },
+        {
+          "path": "/web/fcv588-training-source-matrix.mjs",
+          "bytes": 7634,
+          "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+        },
+        {
+          "path": "/src/core/protocol.mjs",
+          "bytes": 7420,
+          "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+        },
+        {
+          "path": "/src/devices/fcv588/capabilities.mjs",
+          "bytes": 2122,
+          "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+        },
+        {
+          "path": "/src/devices/fcv588/profile-version.mjs",
+          "bytes": 299,
+          "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+        },
+        {
+          "path": "/src/devices/fcv588/alarms.mjs",
+          "bytes": 2639,
+          "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+        },
+        {
+          "path": "/web/favicon.svg",
+          "bytes": 261,
+          "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+        }
+      ],
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V56_D15_TABS_20261031\\V56_CANONICAL_BROWSER_ATTEMPT1_RAW_20261031\\V56_1912x970.png",
+        "sha256": "2875090676b4c9388c55a3ff796df579acf8080ad7b2f7c2970f47e1429edf6e"
+      },
+      "status": "PASS",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "checks": {
+        "baseline": {
+          "viewport": [
+            1366,
+            768
+          ],
+          "documentScrollWidth": 1366,
+          "documentScrollHeight": 1195,
+          "d15Height": 744,
+          "d15Width": 310,
+          "faceHeight": 787.96875,
+          "tabCount": 5,
+          "panelCount": 5,
+          "selected": [
+            "d15-tab-session"
+          ],
+          "visiblePanels": [
+            "d15-panel-session"
+          ],
+          "inactiveFocusables": [],
+          "live": [
+            {
+              "id": "operator-guidance-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            },
+            {
+              "id": "source-matrix-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            }
+          ],
+          "tabSizes": [
+            {
+              "id": "d15-tab-session",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-help",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-fixtures",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-lessons",
+              "width": 88,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-sources",
+              "width": 182,
+              "height": 44
+            }
+          ],
+          "legacyIds": [
+            {
+              "id": "btn-pause",
+              "count": 1
+            },
+            {
+              "id": "btn-step",
+              "count": 1
+            },
+            {
+              "id": "btn-reset",
+              "count": 1
+            },
+            {
+              "id": "btn-replay",
+              "count": 1
+            },
+            {
+              "id": "gain-minus",
+              "count": 1
+            },
+            {
+              "id": "gain-plus",
+              "count": 1
+            },
+            {
+              "id": "mode-minus",
+              "count": 1
+            },
+            {
+              "id": "mode-plus",
+              "count": 1
+            },
+            {
+              "id": "btn-nav-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-mount-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-tankenmaru-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-battery-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-error-fixture",
+              "count": 1
+            },
+            {
+              "id": "lesson-picker",
+              "count": 1
+            },
+            {
+              "id": "btn-start-lesson",
+              "count": 1
+            },
+            {
+              "id": "btn-score",
+              "count": 1
+            },
+            {
+              "id": "instructor-source-matrix",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-c11-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d09-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d14-title",
+              "count": 1
+            },
+            {
+              "id": "validation-status",
+              "count": 1
+            }
+          ]
+        },
+        "tabLabels": [
+          "Phiên",
+          "Trợ giúp",
+          "Tình huống",
+          "Bài học",
+          "Nguồn & QA"
+        ],
+        "initialSelected": "d15-tab-session",
+        "stepBefore": "0000",
+        "stepAfter": "0001",
+        "fixturePressedBefore": "false",
+        "fixturePressedAfter": "true"
+      },
+      "loadedBodies": [
+        {
+          "path": "/web/index.html",
+          "bytes": 18267,
+          "sha256": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243"
+        },
+        {
+          "path": "/web/styles.css",
+          "bytes": 32066,
+          "sha256": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+        },
+        {
+          "path": "/web/app.mjs",
+          "bytes": 56698,
+          "sha256": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7"
+        },
+        {
+          "path": "/src/core/scenario.mjs",
+          "bytes": 9012,
+          "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+        },
+        {
+          "path": "/src/core/session.mjs",
+          "bytes": 8784,
+          "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+        },
+        {
+          "path": "/src/devices/fcv588/adapter.mjs",
+          "bytes": 1417,
+          "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+        },
+        {
+          "path": "/src/devices/fcv588/echo-projection.mjs",
+          "bytes": 13198,
+          "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+        },
+        {
+          "path": "/src/devices/fcv588/navigation.mjs",
+          "bytes": 10938,
+          "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+        },
+        {
+          "path": "/src/devices/fcv588/display-layout.mjs",
+          "bytes": 1265,
+          "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+        },
+        {
+          "path": "/src/devices/fcv588/settings.mjs",
+          "bytes": 4272,
+          "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+        },
+        {
+          "path": "/src/devices/fcv588/display-widgets.mjs",
+          "bytes": 3138,
+          "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+        },
+        {
+          "path": "/src/devices/fcv588/calibration.mjs",
+          "bytes": 2346,
+          "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+        },
+        {
+          "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+          "bytes": 921,
+          "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+        },
+        {
+          "path": "/src/devices/fcv588/training-faults.mjs",
+          "bytes": 569,
+          "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+        },
+        {
+          "path": "/src/core/lessons.mjs",
+          "bytes": 14853,
+          "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+        },
+        {
+          "path": "/src/devices/fcv588/units.mjs",
+          "bytes": 3408,
+          "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+        },
+        {
+          "path": "/src/devices/fcv588/receiver-status.mjs",
+          "bytes": 2590,
+          "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+        },
+        {
+          "path": "/src/devices/fcv588/model.mjs",
+          "bytes": 50464,
+          "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+        },
+        {
+          "path": "/src/devices/fcv588/menu-atlas.mjs",
+          "bytes": 12576,
+          "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+        },
+        {
+          "path": "/src/devices/fcv588/display-palette.mjs",
+          "bytes": 2794,
+          "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+        },
+        {
+          "path": "/web/hold-input.mjs",
+          "bytes": 4425,
+          "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+        },
+        {
+          "path": "/web/pad-repeat.mjs",
+          "bytes": 4007,
+          "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+        },
+        {
+          "path": "/web/rotary-input.mjs",
+          "bytes": 3054,
+          "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+        },
+        {
+          "path": "/web/key-feedback.mjs",
+          "bytes": 1301,
+          "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+        },
+        {
+          "path": "/web/keyboard-shortcuts.mjs",
+          "bytes": 845,
+          "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+        },
+        {
+          "path": "/web/instructor-tabs.mjs",
+          "bytes": 3457,
+          "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+        },
+        {
+          "path": "/web/lcd-presentation.mjs",
+          "bytes": 6952,
+          "sha256": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2"
+        },
+        {
+          "path": "/web/lcd-config-presentation.mjs",
+          "bytes": 6718,
+          "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+        },
+        {
+          "path": "/web/lcd-control-presentation.mjs",
+          "bytes": 4116,
+          "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+        },
+        {
+          "path": "/web/lcd-instructor-meta.mjs",
+          "bytes": 14775,
+          "sha256": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+        },
+        {
+          "path": "/web/fcv588-training-source-matrix.mjs",
+          "bytes": 7634,
+          "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+        },
+        {
+          "path": "/src/core/protocol.mjs",
+          "bytes": 7420,
+          "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+        },
+        {
+          "path": "/src/devices/fcv588/capabilities.mjs",
+          "bytes": 2122,
+          "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+        },
+        {
+          "path": "/src/devices/fcv588/profile-version.mjs",
+          "bytes": 299,
+          "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+        },
+        {
+          "path": "/src/devices/fcv588/alarms.mjs",
+          "bytes": 2639,
+          "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+        },
+        {
+          "path": "/web/favicon.svg",
+          "bytes": 261,
+          "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+        }
+      ],
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V56_D15_TABS_20261031\\V56_CANONICAL_BROWSER_ATTEMPT1_RAW_20261031\\V56_1366x768.png",
+        "sha256": "e09fefc62a168f741b40267b6f2117763fb4b48151d409a93b874e395f50403f"
+      },
+      "status": "PASS",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "checks": {
+        "baseline": {
+          "viewport": [
+            375,
+            812
+          ],
+          "documentScrollWidth": 375,
+          "documentScrollHeight": 2388,
+          "d15Height": 690,
+          "d15Width": 357,
+          "faceHeight": 1134.171875,
+          "tabCount": 5,
+          "panelCount": 5,
+          "selected": [
+            "d15-tab-session"
+          ],
+          "visiblePanels": [
+            "d15-panel-session"
+          ],
+          "inactiveFocusables": [],
+          "live": [
+            {
+              "id": "operator-guidance-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            },
+            {
+              "id": "source-matrix-announcement",
+              "exists": true,
+              "hiddenAncestor": false,
+              "outsideFace": true
+            }
+          ],
+          "tabSizes": [
+            {
+              "id": "d15-tab-session",
+              "width": 159.5,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-help",
+              "width": 159.5,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-fixtures",
+              "width": 159.5,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-lessons",
+              "width": 159.5,
+              "height": 44
+            },
+            {
+              "id": "d15-tab-sources",
+              "width": 325,
+              "height": 44
+            }
+          ],
+          "legacyIds": [
+            {
+              "id": "btn-pause",
+              "count": 1
+            },
+            {
+              "id": "btn-step",
+              "count": 1
+            },
+            {
+              "id": "btn-reset",
+              "count": 1
+            },
+            {
+              "id": "btn-replay",
+              "count": 1
+            },
+            {
+              "id": "gain-minus",
+              "count": 1
+            },
+            {
+              "id": "gain-plus",
+              "count": 1
+            },
+            {
+              "id": "mode-minus",
+              "count": 1
+            },
+            {
+              "id": "mode-plus",
+              "count": 1
+            },
+            {
+              "id": "btn-nav-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-mount-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-tankenmaru-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-battery-fixture",
+              "count": 1
+            },
+            {
+              "id": "btn-error-fixture",
+              "count": 1
+            },
+            {
+              "id": "lesson-picker",
+              "count": 1
+            },
+            {
+              "id": "btn-start-lesson",
+              "count": 1
+            },
+            {
+              "id": "btn-score",
+              "count": 1
+            },
+            {
+              "id": "instructor-source-matrix",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-c11-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d09-title",
+              "count": 1
+            },
+            {
+              "id": "source-matrix-d14-title",
+              "count": 1
+            },
+            {
+              "id": "validation-status",
+              "count": 1
+            }
+          ]
+        },
+        "tabLabels": [
+          "Phiên",
+          "Trợ giúp",
+          "Tình huống",
+          "Bài học",
+          "Nguồn & QA"
+        ],
+        "initialSelected": "d15-tab-session",
+        "stepBefore": "0000",
+        "stepAfter": "0001",
+        "fixturePressedBefore": "false",
+        "fixturePressedAfter": "true"
+      },
+      "loadedBodies": [
+        {
+          "path": "/web/index.html",
+          "bytes": 18267,
+          "sha256": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243"
+        },
+        {
+          "path": "/web/styles.css",
+          "bytes": 32066,
+          "sha256": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+        },
+        {
+          "path": "/web/app.mjs",
+          "bytes": 56698,
+          "sha256": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7"
+        },
+        {
+          "path": "/src/core/scenario.mjs",
+          "bytes": 9012,
+          "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+        },
+        {
+          "path": "/src/core/session.mjs",
+          "bytes": 8784,
+          "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+        },
+        {
+          "path": "/src/devices/fcv588/adapter.mjs",
+          "bytes": 1417,
+          "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+        },
+        {
+          "path": "/src/devices/fcv588/echo-projection.mjs",
+          "bytes": 13198,
+          "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+        },
+        {
+          "path": "/src/devices/fcv588/calibration.mjs",
+          "bytes": 2346,
+          "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+        },
+        {
+          "path": "/src/devices/fcv588/navigation.mjs",
+          "bytes": 10938,
+          "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+        },
+        {
+          "path": "/src/devices/fcv588/display-widgets.mjs",
+          "bytes": 3138,
+          "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+        },
+        {
+          "path": "/src/devices/fcv588/display-layout.mjs",
+          "bytes": 1265,
+          "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+        },
+        {
+          "path": "/src/devices/fcv588/model.mjs",
+          "bytes": 50464,
+          "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+        },
+        {
+          "path": "/src/devices/fcv588/receiver-status.mjs",
+          "bytes": 2590,
+          "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+        },
+        {
+          "path": "/src/devices/fcv588/menu-atlas.mjs",
+          "bytes": 12576,
+          "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+        },
+        {
+          "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+          "bytes": 921,
+          "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+        },
+        {
+          "path": "/src/devices/fcv588/training-faults.mjs",
+          "bytes": 569,
+          "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+        },
+        {
+          "path": "/src/devices/fcv588/units.mjs",
+          "bytes": 3408,
+          "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+        },
+        {
+          "path": "/src/devices/fcv588/settings.mjs",
+          "bytes": 4272,
+          "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+        },
+        {
+          "path": "/src/devices/fcv588/display-palette.mjs",
+          "bytes": 2794,
+          "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+        },
+        {
+          "path": "/src/core/lessons.mjs",
+          "bytes": 14853,
+          "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+        },
+        {
+          "path": "/web/hold-input.mjs",
+          "bytes": 4425,
+          "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+        },
+        {
+          "path": "/web/pad-repeat.mjs",
+          "bytes": 4007,
+          "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+        },
+        {
+          "path": "/web/rotary-input.mjs",
+          "bytes": 3054,
+          "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+        },
+        {
+          "path": "/web/key-feedback.mjs",
+          "bytes": 1301,
+          "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+        },
+        {
+          "path": "/web/keyboard-shortcuts.mjs",
+          "bytes": 845,
+          "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+        },
+        {
+          "path": "/web/instructor-tabs.mjs",
+          "bytes": 3457,
+          "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+        },
+        {
+          "path": "/web/lcd-presentation.mjs",
+          "bytes": 6952,
+          "sha256": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2"
+        },
+        {
+          "path": "/web/lcd-config-presentation.mjs",
+          "bytes": 6718,
+          "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+        },
+        {
+          "path": "/web/lcd-control-presentation.mjs",
+          "bytes": 4116,
+          "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+        },
+        {
+          "path": "/web/lcd-instructor-meta.mjs",
+          "bytes": 14775,
+          "sha256": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+        },
+        {
+          "path": "/src/core/protocol.mjs",
+          "bytes": 7420,
+          "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+        },
+        {
+          "path": "/web/fcv588-training-source-matrix.mjs",
+          "bytes": 7634,
+          "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+        },
+        {
+          "path": "/src/devices/fcv588/capabilities.mjs",
+          "bytes": 2122,
+          "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+        },
+        {
+          "path": "/src/devices/fcv588/profile-version.mjs",
+          "bytes": 299,
+          "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+        },
+        {
+          "path": "/src/devices/fcv588/alarms.mjs",
+          "bytes": 2639,
+          "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+        },
+        {
+          "path": "/web/favicon.svg",
+          "bytes": 261,
+          "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+        }
+      ],
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V56_D15_TABS_20261031\\V56_CANONICAL_BROWSER_ATTEMPT1_RAW_20261031\\V56_375x812.png",
+        "sha256": "1a20347f293eeb039f566f6b449e336017d3fed259b743f047f56f60605ab3c0"
+      },
+      "status": "PASS",
+      "pageErrors": []
+    }
+  ],
+  "errors": [],
+  "noJavascript": {
+    "tablistHidden": true,
+    "panels": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "fixtures": true,
+    "lessons": true
+  }
+}

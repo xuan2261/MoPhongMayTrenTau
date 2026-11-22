@@ -1,0 +1,29 @@
+{
+  "schema": "FCV588_P23_VERSIONED_DISPLAY_STAGE_FOCUSED_GREEN_V1",
+  "sourceValidRedSHA256": "ac89eef4b93333c2cc5b86ffc4cc50b75cfe1b70e63bd616657de4c1f5aa154d",
+  "oldMinimalStageGreenLegacyFailSHA256": "1ab9916dca8491b2a2e7544c829995eb265d3005709a42028e73d948ef3dd413",
+  "stageFilesSHA256": {
+    "src\\devices\\fcv588\\echo-projection.mjs": "060feab89b38e13a3832af694f22752d26457b9d810400c4d887908fbe122253",
+    "web\\app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "test\\fcv588-p23-bottom-zoom-manual.test.mjs": "8c3b91c6914fded1788682800a55631f7627148d8b7c4b214e3e3e1c11be4f29"
+  },
+  "tests": {
+    "test/fcv588-p23-bottom-zoom-manual.test.mjs": {
+      "exitCode": 0,
+      "summaryTail": "TAP version 13\n# Subtest: P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\nok 1 - P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\n  ---\n  duration_ms: 11.7062\n  type: 'test'\n  ...\n# Subtest: P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\nok 2 - P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\n  ---\n  duration_ms: 2.614\n  type: 'test'\n  ...\n# Subtest: P23 historic P04 display projection remains centered by default\nok 3 - P23 historic P04 display projection remains centered by default\n  ---\n  duration_ms: 1.1972\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 241.564\n"
+    },
+    "test/fcv588-photo-modes.test.mjs": {
+      "exitCode": 0,
+      "summaryTail": "lute\n  ---\n  duration_ms: 3.2016\n  type: 'test'\n  ...\n# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band\nok 2 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band\n  ---\n  duration_ms: 5.0785\n  type: 'test'\n  ...\n# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract\nok 3 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract\n  ---\n  duration_ms: 2.0869\n  type: 'test'\n  ...\n# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios\nok 4 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios\n  ---\n  duration_ms: 0.7511\n  type: 'test'\n  ...\n# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy\nok 5 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy\n  ---\n  duration_ms: 1.1544\n  type: 'test'\n  ...\n# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend\nok 6 - P04 web renderer consumes presentation plans and removes the invented zoom legend\n  ---\n  duration_ms: 33.8077\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 230.8903\n"
+    },
+    "test/fcv588-p04-bottom-provenance.test.mjs": {
+      "exitCode": 1,
+      "summaryTail": "v.preventDefault();\n      action();\n    });\n    // One quantized runtime timer: display modal time is logged independently from\n    // a teacher-paused synthetic world. No Date.now-driven reducer mutation.\n    let worldIntervalMs = 0;\n    setInterval(() => {\n      if ([\"mode\", \"brill\", \"power-hold\"].includes(session.deviceState.overlay?.kind)) {\n        send({kind: \"ui-tick\", elapsedMs: 250});\n      }\n      if (!paused) {\n        worldIntervalMs += 250;\n        if (worldIntervalMs >= 1000) {\n          worldIntervalMs = 0;\n          send({kind: \"tick\", steps: 1});\n        }\n      }\n    }, 250);\n    const storageStatus = restoreSettingsOnReload();\n    if (storageStatus) $(\"validation-status\").textContent = storageStatus;\n    // D15 is a separate instructor UI. Moving its existing DOM nodes once never\n    // enters session events/replay and never alters the OEM-lookalike face.\n    bindInstructorTabs(document.querySelector(\".training-panel\"));\n    render();\n    \n  operator: 'match'\n  stack: |-\n    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p23-bz-lower-20261117/test/fcv588-p04-bottom-provenance.test.mjs:224:10)\n    async Test.run (node:internal/test_runner/test:1054:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 7\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 394.0043\n"
+    }
+  },
+  "canonicalUnchanged": true,
+  "historicalP04ProjectionDefault": "P04_HISTORIC",
+  "activeWebDisplayOptIn": "P23_LOWER_BOTTOM",
+  "manualLowerPart": "OME-23890-E §1.4.3 PDF p12",
+  "fraction3over4": "CLASSROOM_NOT_OEM"
+}

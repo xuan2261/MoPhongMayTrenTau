@@ -1,0 +1,22 @@
+{
+  "schema": "FCV588_P21_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "createdAt": "2026-11-17T03:59:04.4321328Z",
+  "status": "P21_POSTRECEIPT_PASS_AUTOMATED_FOCUS_CANCEL_ONLY_HUMAN_NOT_ACCEPTED",
+  "method": "SEPARATE_POWERSHELL_SHA_DATA_AND_PORT_READBACK_NOT_HUMAN_OPERATOR_ACCEPTANCE",
+  "p21FinalSHA256": "d28130041496e487f76048e3145f7fb97f475ed9b56d5787aa462ade976fa876",
+  "p21ReportSHA256": "48aaa0d363c3d40ce4f5a503b31ca6547e019f4610c66d5fcfb2f596bce11b60",
+  "p21V1HarnessErrorReceiptSHA256": "ea1acef0997534ae09800ee207a1567e69b9e196007b210a48f88afe137a36db",
+  "p21V2SuccessfulReceiptSHA256": "a301ff2bce366504916cffee15814fb418e94dcd2dfb0d7059fe3b51621e44d6",
+  "p21EvidenceAndRunnerSHA": "4/4",
+  "canonicalRuntimeSHA": "50/50",
+  "OEMReferenceOnlySHA": "8/8",
+  "win32ForegroundControl": "VERIFIED",
+  "browserFocusLoss": "VERIFIED",
+  "powerDownCancelKeyup": "0-1-2-2 VERIFIED RAW_CDP_INPUT",
+  "physicalHumanInput": "NOT_RUN",
+  "sourceValidDefect": "NONE_IDENTIFIED",
+  "qaPort4221AndDebug9231": "CLOSED",
+  "protectedUserServer": "127.0.0.1:4173 PID1204",
+  "qaProfile": "CLEANED",
+  "releaseApproval": "HOLD"
+}

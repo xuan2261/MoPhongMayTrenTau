@@ -1,0 +1,85 @@
+{
+  "timestampUtc": "2026-11-14T02:55:11.380740+00:00",
+  "status": "P02_ZOOM_SUPPLEMENT_6_CASES_PASS_DESKTOP_ONLY",
+  "parentFinalSHA256": "15ff0baab0b8bbe213c52857b630341a426305a7cf64eae9c07d1ac55f447d53",
+  "parentPostreceiptSHA256": "ce4a103a52940d41f453e0a67c5cc2f7ef43a3ce16ee149461140b5bb68bd405",
+  "failedFirstZoomBrowserReceiptSHA256": "f4cd636dedf216ea48b2c65d3a005ea44e84caaa81bd41e826f21d2269b42060",
+  "failedFirstStatus": "FAILED_6_HEADER_WHITESPACE_DOM_ASSERTIONS",
+  "failureTriage": "Browser rendered innerText normalizes CSS white-space; original test required literal 3-space text. Retry used semantics-preserving whitespace-aware assertion, did not change product source.",
+  "zoomBrowserReceiptSHA256": "8c0bb3d8fb5fe1cc50a84433d6141535c0d623e33d020f4260c45b726d8e4f89",
+  "zoomBrowserSourceManifestSHA256": "f58b2bf1f4eec900b311f6be6bec3fb03498c09cfccf460a91e0faa129a5c491",
+  "matrix": [
+    {
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "status": "PASS"
+    },
+    {
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "status": "PASS"
+    },
+    {
+      "mode": "HF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "status": "PASS"
+    },
+    {
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "status": "PASS"
+    },
+    {
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "status": "PASS"
+    },
+    {
+      "mode": "LF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-LF-ZOOM-Bottom-Lock.png",
+      "bytes": 294044,
+      "sha256": "44e200f1e2734cc4f2b9b509d233842909481bf0f95d4fdec5bbc6d7b9a14068"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-HF-ZOOM-Bottom-Lock.png",
+      "bytes": 293973,
+      "sha256": "b2465fd0262a43bbe1b77c38ef1a3fe4e21581aa30d0622ffe25a1341f844387"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-LF-ZOOM-Bottom-Zoom.png",
+      "bytes": 294919,
+      "sha256": "700dba45bf2d6eb9e0923d1c4ee0fdf88d33a2faeb392086f91d24c2a25268be"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-HF-ZOOM-Bottom-Zoom.png",
+      "bytes": 295009,
+      "sha256": "f3e02292ee5133a4ae9d56d5cf5af08ffb06c7310fa0ddff970da186c8939ef9"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-LF-ZOOM-Marker-Zoom.png",
+      "bytes": 293513,
+      "sha256": "bbc0823cc45ac20f81ae99141143c01eec15dc2e1eed2ffaf356e92b071e172d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom-attempt2\\fcv588-canonical-zoom-attempt2-20261114T095224+0700-84af05b8-HF-ZOOM-Marker-Zoom.png",
+      "bytes": 292952,
+      "sha256": "f1a3a13aab71c1d64a3da89c886a28746c6b94b4d228476ee23bdc996adb1719"
+    }
+  ],
+  "viewport": "1366x768_ONLY",
+  "screenshotsVerified": "6/6_MATCH",
+  "loadedBodiesVerified": "34/34_PER_CASE",
+  "fullThreeViewportZoomMatrix": "NOT_RUN",
+  "referencePhotoComparison": "QUALITATIVE_ONLY_NOT_OEM_CERTIFIED",
+  "hardwareValidated": false,
+  "rightsClearance": false,
+  "featureClaims": "65/65_HOLD",
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,157 @@
+{
+  "activation": {
+    "ChromeOwnedHwnd": 58722582,
+    "activated": true,
+    "beforeKeyDownForeground": {
+      "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "hwnd": 58722582,
+      "pid": 6408,
+      "processName": "chrome.exe",
+      "threadId": 11804,
+      "title": "MoPhongMayTrenTau | FCV-588 Public Reference - Google Chrome",
+      "valid": true
+    }
+  },
+  "afterNativeBlur": {
+    "activeId": "key-power",
+    "eventCount": 21,
+    "hasFocus": true,
+    "osEvents": [],
+    "powerPressing": true,
+    "screen": "POWER OFF",
+    "status": "POWER OFF"
+  },
+  "afterNativeForegroundTransfer": {
+    "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "hwnd": 58722582,
+    "pid": 6408,
+    "processName": "chrome.exe",
+    "threadId": 11804,
+    "title": "MoPhongMayTrenTau | FCV-588 Public Reference - Google Chrome",
+    "valid": true
+  },
+  "beforePowerDown": {
+    "activeId": "key-power",
+    "eventCount": 17,
+    "hasFocus": true,
+    "osEvents": [
+      {
+        "documentHasFocus": true,
+        "eventCount": "017",
+        "isTrusted": true,
+        "powerPressing": false,
+        "timestampMs": 17638.199999809265,
+        "type": "focus"
+      }
+    ],
+    "powerPressing": false,
+    "screen": "POWER OFF",
+    "status": "POWER OFF"
+  },
+  "chromeCandidates": [
+    {
+      "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "hwnd": 58722582,
+      "pid": 6408,
+      "processName": "chrome.exe",
+      "threadId": 11804,
+      "title": "MoPhongMayTrenTau | FCV-588 Public Reference - Google Chrome",
+      "valid": true
+    }
+  ],
+  "chromeWindows": [
+    {
+      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "hwnd": 5769834,
+      "pid": 25584,
+      "processName": "chrome.exe",
+      "threadId": 13636,
+      "title": "Tiếp tục kiểm thử P07 - Helium",
+      "valid": true
+    },
+    {
+      "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "hwnd": 110889644,
+      "pid": 6408,
+      "processName": "chrome.exe",
+      "threadId": 11804,
+      "title": "Translate this page?",
+      "valid": true
+    },
+    {
+      "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "hwnd": 58722582,
+      "pid": 6408,
+      "processName": "chrome.exe",
+      "threadId": 11804,
+      "title": "MoPhongMayTrenTau | FCV-588 Public Reference - Google Chrome",
+      "valid": true
+    }
+  ],
+  "cleanup": {
+    "ownedPortClosed": true,
+    "restoredForeground": {
+      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "hwnd": 8653244,
+      "pid": 18532,
+      "processName": "jeikcode-desktop.exe",
+      "threadId": 27928,
+      "title": "JeikCode Desktop",
+      "valid": true
+    },
+    "userPort4173Alive": true
+  },
+  "createdAt": "2026-11-16T15:58:30.888261+07:00",
+  "disallowFabricatedEvent": true,
+  "failure": "RuntimeError('Win32 foreground did not transfer to owned witness')",
+  "failureStage": "true Win32 foreground transfer to test-owned witness",
+  "nativeHighContrast": "NOT_RUN",
+  "nativeNVDA": "NOT_RUN",
+  "nativeNarratorSpokenOutput": "NOT_RUN",
+  "ownedTestPort": 4211,
+  "parentP10FinalSHA256": "414c0151053bec55271032170e0fba2139fd1627e5fee7524cdf6c1bcf490655",
+  "parentP10Unchanged": true,
+  "physicalHardwarePOWERKey": "NOT_USED_BROWSER_KEYBOARD_AUTOMATION",
+  "powerHeld": {
+    "activeId": "key-power",
+    "eventCount": 18,
+    "hasFocus": true,
+    "osEvents": [],
+    "powerPressing": true,
+    "screen": "POWER OFF",
+    "status": "POWER OFF"
+  },
+  "powerHeldForeground": {
+    "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "hwnd": 58722582,
+    "pid": 6408,
+    "processName": "chrome.exe",
+    "threadId": 11804,
+    "title": "MoPhongMayTrenTau | FCV-588 Public Reference - Google Chrome",
+    "valid": true
+  },
+  "previousForeground": {
+    "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "hwnd": 8653244,
+    "pid": 18532,
+    "processName": "jeikcode-desktop.exe",
+    "threadId": 27928,
+    "title": "JeikCode Desktop",
+    "valid": true
+  },
+  "runtime39Unchanged": true,
+  "runtimeFrozenSHA256Count": 39,
+  "schema": "fcv588-p11-real-win32-foreground-power-blur-v2",
+  "scope": "WIN32_NATIVE_WINDOW_FOREGROUND_AND_BROWSER_IS_TRUSTED_BLUR_FOR_KEYBOARD_SPACE_POWER_HOLD",
+  "scriptSHA256": "021eafc8cb641080e086b7211960b4a4c810c0d6627932290b660316dfb28185",
+  "status": "FAILED_OR_BLOCKED_NO_NATIVE_ACCEPTANCE",
+  "witnessHwnd": {
+    "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "hwnd": 32115924,
+    "pid": 19044,
+    "processName": "python.exe",
+    "threadId": 28704,
+    "title": "FCV588-P11-REAL-FOCUS-WITNESS",
+    "valid": true
+  }
+}

@@ -1,0 +1,158 @@
+TAP version 13
+# Subtest: P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+ok 1 - P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+  ---
+  duration_ms: 14.711
+  type: 'test'
+  ...
+# Subtest: P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+ok 2 - P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+  ---
+  duration_ms: 4.1071
+  type: 'test'
+  ...
+# Subtest: P04 two-column authored historical seabed is flattened from per-column source depth
+ok 3 - P04 two-column authored historical seabed is flattened from per-column source depth
+  ---
+  duration_ms: 1.6507
+  type: 'test'
+  ...
+# Subtest: P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+ok 4 - P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+  ---
+  duration_ms: 12.5723
+  type: 'test'
+  ...
+# Subtest: P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+ok 5 - P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+  ---
+  duration_ms: 40.3496
+  type: 'test'
+  ...
+# Subtest: P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+ok 6 - P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+  ---
+  duration_ms: 9.1286
+  type: 'test'
+  ...
+# Subtest: P04 companion provenance stays outside observation, replay and profile21 contracts
+ok 7 - P04 companion provenance stays outside observation, replay and profile21 contracts
+  ---
+  duration_ms: 6.5896
+  type: 'test'
+  ...
+# Subtest: P03 raster must be display-only, deterministic, bounded and leave source untouched
+ok 8 - P03 raster must be display-only, deterministic, bounded and leave source untouched
+  ---
+  duration_ms: 41.5969
+  type: 'test'
+  ...
+# Subtest: P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+ok 9 - P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+  ---
+  duration_ms: 36.3095
+  type: 'test'
+  ...
+# Subtest: P03 seabed has contiguous strong core and graded tail below each typed bottom column
+ok 10 - P03 seabed has contiguous strong core and graded tail below each typed bottom column
+  ---
+  duration_ms: 4.7214
+  type: 'test'
+  ...
+# Subtest: P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+ok 11 - P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+  ---
+  duration_ms: 20.4531
+  type: 'test'
+  ...
+# Subtest: P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+ok 12 - P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+  ---
+  duration_ms: 4.7556
+  type: 'test'
+  ...
+# Subtest: P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+ok 13 - P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+  ---
+  duration_ms: 20.5678
+  type: 'test'
+  ...
+# Subtest: P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+ok 14 - P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+  ---
+  duration_ms: 38.8333
+  type: 'test'
+  ...
+# Subtest: P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+ok 15 - P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+  ---
+  duration_ms: 106.223
+  type: 'test'
+  ...
+# Subtest: P03 live canvas uses the owned view-only raster, preserving screen annotation path
+ok 16 - P03 live canvas uses the owned view-only raster, preserving screen annotation path
+  ---
+  duration_ms: 12.472
+  type: 'test'
+  ...
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 17 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 2.9625
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+not ok 18 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+  ---
+  duration_ms: 4.4161
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\test\\fcv588-photo-modes.test.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: 'each historical bottom core must land in the same lower band'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p04-bottom-provenance-20261116/test/fcv588-photo-modes.test.mjs:70:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+ok 19 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+  ---
+  duration_ms: 1.2267
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 20 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.6337
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 21 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 1.0567
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 22 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 11.5392
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 21
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 427.8502

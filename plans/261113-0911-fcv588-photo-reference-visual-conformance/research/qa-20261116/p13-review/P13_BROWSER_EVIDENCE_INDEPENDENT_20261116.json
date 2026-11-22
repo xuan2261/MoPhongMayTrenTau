@@ -1,0 +1,259 @@
+{
+  "schema": "fcv588-p13-browser-evidence-independent-review-v1",
+  "createdAt": "2026-11-16T17:17:56.9295708+07:00",
+  "scope": "Read-only independent rehash and consistency review of the existing P13 real-Chrome staging evidence. No browser or tests were run by this reviewer and no runtime/stage/canonical source was modified.",
+  "verdict": "PASS_BROWSER_EVIDENCE_INDEPENDENT__NO_GO_CANONICAL_APPLY_REPLAY19_21_GATES_UNCHANGED",
+  "operations": {
+    "browserRun": false,
+    "testsRun": false,
+    "runtimeEdited": false,
+    "stageEdited": false,
+    "canonicalEdited": false,
+    "portsStartedStoppedOrKilled": false,
+    "existingEvidenceModified": false,
+    "newFilesWritten": [
+      "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-review/P13_BROWSER_EVIDENCE_INDEPENDENT_20261116.json"
+    ]
+  },
+  "browserReceipt": {
+    "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGING_REAL_CHROME_MENU_AP1_20261116.json",
+    "expectedSha256": "b6e9adfabcd7ed3d8104270df166346c5f2d50ce8101e87070a6a49097f38b08",
+    "actualSha256": "b6e9adfabcd7ed3d8104270df166346c5f2d50ce8101e87070a6a49097f38b08",
+    "shaMatch": true,
+    "reportedStatus": "PASS_BOUNDED_CHROME_AP1_ORDER_AND_ACTUAL_SOURCE_BYTES_NATIVE_REPLAY_HOLD",
+    "browserRunner": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/p13_staging_menu_browser_20261116.py",
+      "sha256": "c57d30660ccf01599ac38c8b094c513d6e453e0026de8a08bd750f5684f92101",
+      "staticReview": {
+        "pageErrorCapture": "page.on('pageerror') appends to receipt consoleErrors",
+        "requestFailureCapture": "page.on('requestfailed') appends to requestFailures",
+        "externalRequestCapture": "browser requests not beginning http://127.0.0.1:4213/ append to externalRequests",
+        "loadedBodyRule": "all 36 expected HTTP response bodies per viewport must be HTTP 200 and SHA-match the staged runtime file",
+        "forbiddenRoutePreflight": [
+          "/sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+          "/docs/qa/FCV588_P12_MENU_SOURCE_20261116/",
+          "/_p13_stage_20261116/sources/manuals/MANIFEST.json"
+        ],
+        "forbiddenRouteRequiredResult": "403_OR_404",
+        "note": "The receipt field is named consoleErrors, but the runner populates it from the Playwright pageerror event. The runner does not separately record browser console.error messages; this review makes no claim about an unrecorded console-message channel."
+      }
+    }
+  },
+  "viewportsAndMenu": {
+    "stateCount": 2,
+    "viewportsExact": [
+      [375, 812],
+      [1366, 768]
+    ],
+    "horizontalOverflow": [
+      false,
+      false
+    ],
+    "sounderOrderExpectedAndObservedBothViewports": [
+      "sounder.pictureAdvance",
+      "sounder.zoomMode",
+      "sounder.shift",
+      "sounder.interference",
+      "sounder.colorErase",
+      "sounder.clutter",
+      "sounder.whiteLine",
+      "sounder.whiteMarker",
+      "sounder.tvg",
+      "sounder.smoothing",
+      "sounder.bottomZone",
+      "sounder.txPower",
+      "sounder.txRate"
+    ],
+    "orderLengthEachViewport": 13,
+    "stageSourceCrossCheck": {
+      "path": "_p13_stage_20261116/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "groupSounderLines": "72-88",
+      "status": "EXACT_AP1_ORDER"
+    },
+    "manualOrderSource": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-manual-source/P12_MANUAL_SOUND_ORDER_SUPPLEMENT_20261116.md",
+      "sha256": "be84cf98525de66f4005550cf7c6bd381bf916b45c32d5e079c62a69c442b812"
+    },
+    "operatorSelectionTraceBothViewports": [
+      {"ordinal": 0, "selectedId": "sounder.pictureAdvance"},
+      {"ordinal": 1, "selectedId": "sounder.zoomMode", "label": "▶ Zoom Mode"},
+      {"ordinal": 2, "selectedId": "sounder.shift", "label": "▶ Shift"},
+      {"ordinal": 5, "selectedId": "sounder.clutter", "label": "▶ Clutter"},
+      {"ordinal": 7, "selectedId": "sounder.whiteMarker", "label": "▶ White Marker"}
+    ],
+    "selectionTraceInternalConsistency": "PASS_EACH_SELECTED_ID_EQUALS_13_ROW_ORDER_AT_RECORDED_ORDINAL",
+    "whiteMarkerEditorTrainingValuesBothViewports": ["Off", "White", "Gray"],
+    "whiteMarkerEnumInterpretation": "TRAINING_ONLY_FIRMWARE_UNKNOWN"
+  },
+  "screenshots": {
+    "count": 8,
+    "aggregateSha256Definition": "SHA256 of sorted rows: path + NUL + byteCount + NUL + sha256 + newline",
+    "aggregateSha256": "c15ff7ced23bc19297af6fd1835e83226b3d23cc688abec0cc8eca9d3009a267",
+    "allReceiptByteCountsMatchActualFiles": true,
+    "allReceiptSha256MatchActualFiles": true,
+    "allPngDimensionsMatchRecordedViewport": true,
+    "files": [
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_00_AP1_FIRST.png",
+        "bytes": 56803,
+        "sha256": "4958186034e7cbbf67d44e14f8ee767aa1b2ee73d517eb7503906330d98e80be",
+        "width": 375,
+        "height": 812
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_02_shift.png",
+        "bytes": 56917,
+        "sha256": "64eb9010290d557bb8bfcfaf6cf83e58ea8d05275019979c1f7a8361e6cafd26",
+        "width": 375,
+        "height": 812
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_07_whiteMarker.png",
+        "bytes": 57003,
+        "sha256": "b966714a3d9a46a6a9e531467cbae37ce671ac10d73e90399c42185b22cfb345",
+        "width": 375,
+        "height": 812
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_07_WhiteMarker_Editing.png",
+        "bytes": 58887,
+        "sha256": "d7144898c659daeae6b938161883f862bcc4d473ce9e701bbd47e19d81e3d881",
+        "width": 375,
+        "height": 812
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_00_AP1_FIRST.png",
+        "bytes": 284114,
+        "sha256": "868250860ee2dc09df4781d241e87238944574489d5896401fdf8425b98e367b",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_02_shift.png",
+        "bytes": 284545,
+        "sha256": "db6d83f2f42655a4a31956c3b91279d440f5ce80c29e69bb0750be1651b2c15b",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_07_whiteMarker.png",
+        "bytes": 286594,
+        "sha256": "40bc6c14975f12d67cd264e33f334cd90f045e300423c1144b0f1951c5ed6113",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_07_WhiteMarker_Editing.png",
+        "bytes": 288847,
+        "sha256": "6882428855615d782c607784da0da3862b6038c4e90fb35625ec672dbb7e8155",
+        "width": 1366,
+        "height": 768
+      }
+    ]
+  },
+  "loadedBodySHA256Review": {
+    "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116",
+    "listedEntries": 72,
+    "entriesPerViewport": 36,
+    "uniquePaths": 36,
+    "viewportMapsIdentical": true,
+    "missingStageFiles": 0,
+    "pathsOutsideStageRoot": 0,
+    "shaMismatchesAgainstActualStageFiles": 0,
+    "verified": "72_OF_72_LISTED_HASHES_MATCH_ACTUAL_STAGE_FILE_BYTES",
+    "unique36MapAggregateSha256Definition": "SHA256 of sorted rows: path + NUL + sha256 + newline",
+    "unique36MapAggregateSha256": "380fb969d513be12f4b8a0b49f51057d456891669a141662e535ff72034aafe9",
+    "listed72AggregateSha256Definition": "SHA256 of viewportIndex + NUL + path + NUL + sha256 + newline for each sorted viewport map",
+    "listed72AggregateSha256": "a1e381491e2823e3557e73a1bd2b3e743f31afb50570f9dd5e1ed0fc1a9199e6",
+    "expectedStageMenuBodySha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca"
+  },
+  "recordedBrowserErrorChannels": {
+    "pageErrorsViaConsoleErrorsField": 0,
+    "requestFailures": 0,
+    "externalRequests": 0,
+    "expectedLoadedBodyHttpStatusRule": "36_OF_36_PER_VIEWPORT_REQUIRED_HTTP_200_BY_RUNNER",
+    "verdict": "PASS_NO_RECORDED_PAGEERROR_REQUESTFAILURE_OR_EXTERNAL_BROWSER_REQUEST"
+  },
+  "portsAndProcess": {
+    "testPort4213": {
+      "listening": false,
+      "status": "CLOSED"
+    },
+    "userPort4173": {
+      "localAddress": "127.0.0.1",
+      "localPort": 4173,
+      "owningProcess": 1204,
+      "processName": "node",
+      "executablePath": "C:\\nvm4w\\nodejs\\node.exe",
+      "commandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" tools/server.mjs",
+      "status": "PRESERVED_LOOPBACK_PID1204"
+    }
+  },
+  "canonicalAndStageRuntimeFreeze": {
+    "p07Manifest": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "sha256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+      "runtimeRows": 39
+    },
+    "canonicalRuntime": {
+      "currentMatchesP07": "39_OF_39",
+      "mismatches": 0,
+      "menuAtlasSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "canonicalApplyDetected": false
+    },
+    "stageRuntime": {
+      "p07MatchingRows": 38,
+      "onlyDifference": {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca"
+      },
+      "unexpectedDifferences": 0
+    },
+    "p12FinalIntegrity": {
+      "path": "docs/qa/FCV588_P12_MENU_SOURCE_20261116/FCV588_P12_MENU_SOURCE_FINAL_INTEGRITY_20261116.json",
+      "sha256": "5afe2663a1d0d3dff6e213fc537fad3b7dfe5817d7aa776ee4a769e580780855"
+    }
+  },
+  "replay19And21Gates": {
+    "profile19ArchivedReplay": {
+      "fixtureReplayCanonicalAndStageSha256": "adb919e666598127b2f76e284a0ba4dea4506ae15eac11535574ac562297bf4c",
+      "fixtureSettingsCanonicalAndStageSha256": "f14235c481a35c5e2af2118729dcfd51c3eb2039bdec739047ba9e5b7e00f111",
+      "compatibilityTestPath": "test/fcv588-public-v31-compatibility.test.mjs",
+      "compatibilityTestSha256": "822c8242eedccc360e4c6eeff868ef6400642fa0cf827d815dc59951e77a03df",
+      "crossSessionNegativeTestPath": "test/fcv588-v39-cross-session-negative.test.mjs",
+      "crossSessionNegativeTestSha256": "b7f3c81ab44c8d27e72f5f2ea975f36dbadbc11776a9df2f7acf7aac2369dbcd",
+      "contract": "Archived profile19 replay is rejected; explicit settings migration must not become replay migration.",
+      "status": "UNCHANGED_REPLAY_REJECTION_GATE"
+    },
+    "profile21CurrentReplay": {
+      "semanticDriftReceiptPath": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json",
+      "semanticDriftReceiptSha256": "479909adb7475c8d9b02dd195b6abb1943593a78f575c2857b6585a1d4336f8c",
+      "gateReviewPath": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-review/P13_GATE_REVIEW_20261116.json",
+      "gateReviewSha256": "c1a99846aff873ccfa28db81670f5904f966426b957e87e4542cece8fb4ae1d4",
+      "gateDecision": "NO_GO_PROFILE21_SEMANTIC_BREACH",
+      "browserReceiptReplayState": "NOT_VERIFIED_APPLY_HOLD",
+      "status": "UNCHANGED_NO_GO"
+    },
+    "sharedReplayRuntime": {
+      "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "canonicalStageHashesEqual": true
+    },
+    "canonicalApply": "NO_GO"
+  },
+  "finalDecision": {
+    "browserEvidence": "GO_AS_BOUNDED_STAGING_EVIDENCE",
+    "ap1MenuOrderAtTwoViewports": "VERIFIED",
+    "screenshots": "8_OF_8_SHA_AND_DIMENSION_VERIFIED",
+    "loadedBodies": "72_OF_72_SHA_VERIFIED_AGAINST_ACTUAL_STAGE_FILES",
+    "recordedPageNetworkExternalErrors": "NONE",
+    "testPort4213": "CLOSED",
+    "userPort4173": "PRESERVED_PID1204",
+    "canonicalRuntime39": "UNCHANGED",
+    "replay19Gate": "UNCHANGED_REJECTION",
+    "replay21Gate": "NO_GO_UNCHANGED",
+    "canonicalApply": "NO_GO",
+    "release": "HOLD"
+  }
+}

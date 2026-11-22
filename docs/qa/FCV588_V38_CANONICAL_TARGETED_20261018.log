@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: V38 C11 name editor cancels without commit, then explicit save survives replay
+ok 1 - V38 C11 name editor cancels without commit, then explicit save survives replay
+  ---
+  duration_ms: 24.4588
+  type: 'test'
+  ...
+# Subtest: V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+ok 2 - V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+  ---
+  duration_ms: 15.0347
+  type: 'test'
+  ...
+# Subtest: V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+ok 3 - V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+  ---
+  duration_ms: 7.3839
+  type: 'test'
+  ...
+# Subtest: V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+ok 4 - V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+  ---
+  duration_ms: 7.8207
+  type: 'test'
+  ...
+# Subtest: V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+ok 5 - V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+  ---
+  duration_ms: 11.1362
+  type: 'test'
+  ...
+# Subtest: V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+ok 6 - V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+  ---
+  duration_ms: 6.3849
+  type: 'test'
+  ...
+# Subtest: V38 protocol rejects out-of-order power edges without corrupting replay
+ok 7 - V38 protocol rejects out-of-order power edges without corrupting replay
+  ---
+  duration_ms: 3.5299
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 211.0132

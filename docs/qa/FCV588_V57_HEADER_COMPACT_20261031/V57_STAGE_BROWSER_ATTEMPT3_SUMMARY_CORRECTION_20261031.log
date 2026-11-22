@@ -1,0 +1,8 @@
+STAGE_BROWSER=4/4_PASS
+desktop: workbenchY 319.8->143.0 saved=176.8px; documentHeight 1199->1023
+tablet: workbenchY 325.6->127.0 saved=198.6px; documentHeight 2028->1829
+mobile: workbenchY 352.6->160.1 saved=192.5px; documentHeight 2388->2195
+small-mobile: 320x812 no-horizontal-overflow
+NO_JS_FALLBACK=PASS
+D15_TABS=5/5_INTERACTIVE
+BROWSER_ERRORS=0

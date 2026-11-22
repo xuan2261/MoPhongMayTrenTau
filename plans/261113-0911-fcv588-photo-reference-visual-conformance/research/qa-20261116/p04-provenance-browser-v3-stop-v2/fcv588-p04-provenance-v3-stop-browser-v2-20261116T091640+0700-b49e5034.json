@@ -1,0 +1,546 @@
+{
+  "schema": "fcv588-p04-bottom-provenance-v3-stop-browser-v2",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "port": 4197,
+  "scope": "isolated synthetic Bottom Lock provenance + Stop/Bottom Zone smoke; no canonical apply",
+  "sourceManifestBefore": {
+    "files": 38,
+    "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040"
+  },
+  "photoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "lf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "hf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "dual.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "BL-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "geometryProof": {
+        "name": "BL-LF-Blue",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 218.84375,
+          "right": 596.140625,
+          "top": 278.921875,
+          "bottom": 782.953125,
+          "width": 377.296875,
+          "height": 504.03125
+        },
+        "depthRect": {
+          "left": 233.84375,
+          "right": 325.765625,
+          "top": 718.953125,
+          "bottom": 768.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BL-LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "bottomLockFlatProof": {
+        "sample": {
+          "x0": 105,
+          "x1": 180,
+          "y0": 460,
+          "height": 640,
+          "width": 480
+        },
+        "strongestRow": 639,
+        "strongPixels": 76,
+        "sampleWidth": 76,
+        "coverage": 1,
+        "inLowerBand": true,
+        "topRows": [
+          {
+            "y": 639,
+            "strong": 76
+          },
+          {
+            "y": 638,
+            "strong": 76
+          },
+          {
+            "y": 637,
+            "strong": 76
+          },
+          {
+            "y": 636,
+            "strong": 76
+          },
+          {
+            "y": 635,
+            "strong": 76
+          }
+        ]
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-1366x768-BL-LF-Blue.png",
+        "bytes": 303102,
+        "sha256": "abe892f8247cdcc07a2398a3d50add469298edd4dd6fbefcba1bfc364ed211da"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "BL-HF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "header": "AUTO_R   G:AF   BL-HF   x1"
+      },
+      "geometryProof": {
+        "name": "BL-HF-Blue",
+        "mode": "HF-ZOOM",
+        "lcdRect": {
+          "left": 218.84375,
+          "right": 596.140625,
+          "top": 278.921875,
+          "bottom": 782.953125,
+          "width": 377.296875,
+          "height": 504.03125
+        },
+        "depthRect": {
+          "left": 233.84375,
+          "right": 325.765625,
+          "top": 718.953125,
+          "bottom": 768.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BL-HF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "bottomLockFlatProof": {
+        "sample": {
+          "x0": 105,
+          "x1": 180,
+          "y0": 460,
+          "height": 640,
+          "width": 480
+        },
+        "strongestRow": 639,
+        "strongPixels": 76,
+        "sampleWidth": 76,
+        "coverage": 1,
+        "inLowerBand": true,
+        "topRows": [
+          {
+            "y": 639,
+            "strong": 76
+          },
+          {
+            "y": 638,
+            "strong": 76
+          },
+          {
+            "y": 637,
+            "strong": 76
+          },
+          {
+            "y": 636,
+            "strong": 76
+          },
+          {
+            "y": 635,
+            "strong": 76
+          }
+        ]
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-1366x768-BL-HF-Blue.png",
+        "bytes": 299307,
+        "sha256": "dc9827b0456efb06d253fd8e4b54b6ebfa8c6c961a0a429ff0239c2f8940c8db"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "BZ-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Zoom",
+        "header": "AUTO_R   G:AF   BZ-LF   x1"
+      },
+      "geometryProof": {
+        "name": "BZ-LF-Blue",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 218.84375,
+          "right": 596.140625,
+          "top": 278.921875,
+          "bottom": 782.953125,
+          "width": 377.296875,
+          "height": 504.03125
+        },
+        "depthRect": {
+          "left": 233.84375,
+          "right": 325.765625,
+          "top": 718.953125,
+          "bottom": 768.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BZ-LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-1366x768-BZ-LF-Blue.png",
+        "bytes": 309645,
+        "sha256": "89952ed4cb15aef1dc5e9753641eef4208174d5130c28c36934ae276c02cdd9a"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "MZ-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Marker Zoom",
+        "header": "AUTO_R   G:AF   MZ-LF   x1"
+      },
+      "geometryProof": {
+        "name": "MZ-LF-Blue",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 218.84375,
+          "right": 596.140625,
+          "top": 278.921875,
+          "bottom": 782.953125,
+          "width": 377.296875,
+          "height": 504.03125
+        },
+        "depthRect": {
+          "left": 233.84375,
+          "right": 325.765625,
+          "top": 718.953125,
+          "bottom": 768.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   MZ-LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-1366x768-MZ-LF-Blue.png",
+        "bytes": 303720,
+        "sha256": "6cf7025879e3bce0d31a1b885436a75a7b56b893b2f63bdeb87f4fb7e6c12452"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "STOP-BL-LF-Blue-BZ-Standard",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "bottomZone": "Narrow",
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "geometryProof": {
+        "name": "STOP-BL-LF-Blue-BZ-Standard",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 218.84375,
+          "right": 596.140625,
+          "top": 278.921875,
+          "bottom": 782.953125,
+          "width": 377.296875,
+          "height": 504.03125
+        },
+        "depthRect": {
+          "left": 233.84375,
+          "right": 325.765625,
+          "top": 718.953125,
+          "bottom": 768.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BL-LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "stopBottomZoneProof": {
+        "tickBefore": 4,
+        "tickAfter": 14,
+        "headerBefore": "AUTO_R G:AF BL-LF STOP",
+        "headerAfter": "AUTO_R G:AF BL-LF STOP",
+        "bottomZoneNarrowWitnessSha256": "b72ad7ad1f185cf3c5301c76952c861f03699a657fdd2ad97a24cc5b2292e946",
+        "bottomZoneStandardWitnessSha256": "c20f398930c9eb2493c50d7c81d1f6feded5d919cd6651013d288b96ccdc079b",
+        "bottomZoneWitnessChanged": true,
+        "canvasBeforeSha256": "c20f398930c9eb2493c50d7c81d1f6feded5d919cd6651013d288b96ccdc079b",
+        "canvasAfterSha256": "c20f398930c9eb2493c50d7c81d1f6feded5d919cd6651013d288b96ccdc079b",
+        "canvasStable": true,
+        "changedPixelCount": 0,
+        "changedPixelBoundingBox": null,
+        "backingBefore": {
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-STOP-BZ-backing-before.png",
+          "sha256": "7cd38fdc515e8dbaaf4e89bdd25c0d9b2b9b902c23fdbab5dc57276d3e26c7e5"
+        },
+        "backingAfter": {
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-STOP-BZ-backing-after.png",
+          "sha256": "7cd38fdc515e8dbaaf4e89bdd25c0d9b2b9b902c23fdbab5dc57276d3e26c7e5"
+        },
+        "bottomZone": "Standard",
+        "pictureAdvance": "Stop"
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-1366x768-STOP-BL-LF-Blue-BZ-Standard.png",
+        "bytes": 303194,
+        "sha256": "d2fe5a5081ac9a1899ce2bcb313363fe9f215bfed14ba261a1768a03e107ce2e"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "BL-LF-Blue-MOBILE-MENU-D15",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "geometryProof": {
+        "name": "BL-LF-Blue-MOBILE-MENU-D15",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 25,
+          "right": 335,
+          "top": -555.125,
+          "bottom": -140.984375,
+          "width": 310,
+          "height": 414.140625
+        },
+        "depthRect": {
+          "left": 40,
+          "right": 96.28125,
+          "top": -182.984375,
+          "bottom": -154.984375,
+          "width": 56.28125,
+          "height": 28
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BL-LF   x1",
+        "scrollWidth": 360,
+        "viewportWidth": 375
+      },
+      "bottomLockFlatProof": {
+        "sample": {
+          "x0": 105,
+          "x1": 180,
+          "y0": 460,
+          "height": 640,
+          "width": 480
+        },
+        "strongestRow": 639,
+        "strongPixels": 76,
+        "sampleWidth": 76,
+        "coverage": 1,
+        "inLowerBand": true,
+        "topRows": [
+          {
+            "y": 639,
+            "strong": 76
+          },
+          {
+            "y": 638,
+            "strong": 76
+          },
+          {
+            "y": 637,
+            "strong": 76
+          },
+          {
+            "y": 636,
+            "strong": 76
+          },
+          {
+            "y": 635,
+            "strong": 76
+          }
+        ]
+      },
+      "mobileMenuD15Proof": {
+        "d15Tabs": 5,
+        "d15OutsideLcd": true,
+        "operatorEventsBefore": "046",
+        "operatorEventsAfter": "046",
+        "menuLayout": "main-menu",
+        "menuCategories": 5,
+        "menuFooter": "▲/▼/◀/▶ ENTER MENU/ESC",
+        "viewport": {
+          "w": 375,
+          "sw": 360
+        }
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091640+0700-b49e5034-375x812-BL-LF-Blue-MOBILE-MENU-D15.png",
+        "bytes": 61194,
+        "sha256": "6c175d2072a2dcc75119c07fa765ff7c7aa79246f5fe3c246bc81ee3cdf65528"
+      },
+      "loadedBodyCount": 36,
+      "loadedBodyAggregateSha256": "9a930dca03835a43d42c3d8122231bab1271c1f9d3b9f89f3148be76ea12e7e2",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    }
+  ],
+  "objectiveFailures": [],
+  "overallStatus": "PASS",
+  "serverCleanup": "PASS",
+  "server": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\tools\\server.mjs",
+    "sha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+    "node": "C:\\nvm4w\\nodejs\\node.exe",
+    "pid": 26536
+  },
+  "browser": {
+    "version": "157.0.8103.78",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "sourceManifestAfter": {
+    "files": 38,
+    "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040"
+  },
+  "sourceTreeStable": true,
+  "finishedAt": "2026-11-16T09:17:41.651508+07:00"
+}

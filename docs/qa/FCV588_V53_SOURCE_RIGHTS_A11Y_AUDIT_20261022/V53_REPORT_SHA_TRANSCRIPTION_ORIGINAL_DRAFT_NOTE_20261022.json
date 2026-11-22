@@ -1,0 +1,12 @@
+{
+  "atUtc": "2026-10-22T05:38:05.4500337Z",
+  "status": "UNSEALED_DRAFT_MANUAL_SHA_TRANSCRIPTION_CORRECTION",
+  "draftFile": "V53_PARTIAL_SOURCE_RIGHTS_A11Y_REPORT_20261022.md",
+  "draftSha256": "70dad63323e58cff1756912b65d02bc8740a2ad81408938be94d1e890160f758",
+  "erroneousDraftLine": "- Parent V52 FINAL SHA 4650306d6c088fc19eaa09b66922faaf29712015ae9b66922faaf29712015ae9a2f8fdf5795d2e780107f (verify true parent file; exact authoritative hash recorded in integrity JSON).",
+  "authoritativeReport": "V53_PARTIAL_SOURCE_RIGHTS_A11Y_REPORT_V2_20261022.md",
+  "correctedReportSha256": "7b56fc5a7eee45c8b0c3db7b37d44b28eede77a8b4599851e877b34f09f2230a",
+  "verifiedParentV52FinalSHA256": "4650306d6c088fc19eaa09b66922faaf29712015ae9a2f8fdf5795d2e780107f",
+  "originalDraftPreserved": true,
+  "runtimeFilesModified": false
+}

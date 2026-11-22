@@ -1,0 +1,35 @@
+{
+  "suite": "V51_C_ONLY_LOCALHOST_HTTP_NEGATIVES",
+  "executedAtUtc": "2026-10-22T02:39:06.5353114Z",
+  "requests": [
+    {
+      "path": "/docs/qa/FCV588_V50_FINAL_INTEGRITY_20261019.json",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "path": "/sources/manuals/MANIFEST.json",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "path": "/VietMoPhongChoTatCaCacMay.md",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "path": "/web/nonpublic.pdf",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "path": "POST /",
+      "status": 405,
+      "denied": true
+    }
+  ],
+  "deniedCount": 5,
+  "expectedDenied": 5,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "P30_HOST_NSIS_FIRST_INSTALL_V1",
+  "installHost": "REAL_WINDOWS_USER",
+  "setupSHA256": "a09c0dbdf33231ee005beb8960c9ef243ec45415c6f8d1a11514394c4c04c982",
+  "exitCode": 0,
+  "startPID": 27696,
+  "registryBeforeCount": 0,
+  "registryAfterCount": 1,
+  "afterEntries": [
+    {
+      "DisplayName": "FCV588 Synthetic Training POC UNRELEASED 0.0.1",
+      "DisplayVersion": "0.0.1",
+      "InstallLocation": null,
+      "UninstallString": "\"C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser",
+      "QuietUninstallString": "\"C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser /S",
+      "PSPath": "Microsoft.PowerShell.Core\\Registry::HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\6edb0732-6c19-58a6-a4a5-896b67563531"
+    }
+  ],
+  "timestampUTC": "2026-11-21T08:51:55.0894029Z",
+  "releaseApproval": "HOLD"
+}

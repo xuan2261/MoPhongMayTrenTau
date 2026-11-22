@@ -1,0 +1,30 @@
+{
+  "schema": "FCV588_P26_STAGE_PYTHON_V2",
+  "status": "PASS",
+  "exitCode": 0,
+  "summary": [
+    "Ran 13 tests in 0.090s",
+    "OK"
+  ],
+  "sourceSHA256": {
+    "web/app.mjs": "8d8f44142a9352139e7d4f700920a7495e68bfd3c07d42c5cbaffec2a05f69af",
+    "web/index.html": "d71c7fd4ac9f5a297f4148594e25724b449e13903a4db3695f86d900f3fc7d6a",
+    "web/styles.css": "1718b38028a7c9d70dd8b67b8b3792c79ef0770acabbb7c72789da61a7de6ac6",
+    "web/fcv588-archive-bz-viewer.mjs": "ca9809fbcf0b8bcbc6b694261d7ba913f8a9121492fe44aa780358685f0c1147",
+    "test/fcv588-p26-archive-bz-viewer.test.mjs": "ebd16c212b07941bf284d03abec5a9c19a0714ad5076c63486efe7528aee0424"
+  },
+  "command": [
+    "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "test",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "logSHA256": "09af688d172377d26700874329a7ab8491869f6f41a96e2f780d75720f29c2b2",
+  "supersedesInitialStageQA": true,
+  "modeGateSourceValidRedPreserved": true
+}

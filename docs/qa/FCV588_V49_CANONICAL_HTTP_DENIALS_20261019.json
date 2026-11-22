@@ -1,0 +1,50 @@
+{
+  "timestampUtc": "2026-10-19T11:46:15.804768+00:00",
+  "status": "PASS_V49_CANONICAL_HTTP_DENIALS_4_OF_4",
+  "port": 4238,
+  "host": "127.0.0.1",
+  "scope": "CANONICAL_TRAINING_HTTP_SECURITY_ONLY",
+  "negativeRoutes": [
+    {
+      "name": "qa_receipt_denied",
+      "method": "GET",
+      "relativeUri": "docs/qa/FCV588_V49_CANONICAL_APPLY_20261019.json",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "denied": true
+    },
+    {
+      "name": "manufacturer_archive_denied",
+      "method": "GET",
+      "relativeUri": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "denied": true
+    },
+    {
+      "name": "traversal_denied",
+      "method": "GET",
+      "relativeUri": "web/%2e%2e%2fdocs%2fqa%2fFCV588_V49_CANONICAL_APPLY_20261019.json",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "denied": true
+    },
+    {
+      "name": "write_method_denied",
+      "method": "POST",
+      "relativeUri": "",
+      "expectedStatus": 405,
+      "actualStatus": 405,
+      "denied": true
+    }
+  ],
+  "phase6": "OPEN",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "rootStatus": 200,
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
+  "nosniff": "nosniff",
+  "deniedCount": 4,
+  "ownedServerExitCode": 1,
+  "qaPortClosed": true
+}

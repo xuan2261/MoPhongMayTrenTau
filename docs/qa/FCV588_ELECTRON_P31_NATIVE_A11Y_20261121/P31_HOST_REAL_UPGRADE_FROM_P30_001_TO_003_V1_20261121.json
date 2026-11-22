@@ -1,0 +1,14 @@
+{
+  "schema": "P31_REAL_WINDOWS_NSIS_A11Y_UPGRADE_V1",
+  "status": "PASS",
+  "host": "REAL_WINDOWS_USER",
+  "fromVersion": "0.0.1",
+  "toVersion": "0.0.3",
+  "installerExitCode": 0,
+  "installerSHA256": "31c4fe13e1a378ecf95029a446bc32aa798e48f00f29913dfcfa3358de22153b",
+  "installedExeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "installedASARSHA256": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+  "defaultUserDataExists": true,
+  "registrySameGuid": true,
+  "releaseApproval": "HOLD"
+}

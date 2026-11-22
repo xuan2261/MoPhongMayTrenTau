@@ -1,0 +1,55 @@
+{
+  "observedUtc": "2026-10-18T05:49:50.1321204Z",
+  "status": "V36_POSTDOCUMENT_SOURCE_IMAGE_AND_DOCUMENT_SHA_MATCH",
+  "scope": "FCV588_F1_PUBLIC_REFERENCE_V36",
+  "sourceHashes": 37,
+  "imageShaMatches": 121,
+  "documentHashes": 8,
+  "nodePostdocPassed": 451,
+  "canonicalChromePass": 639,
+  "externalScreenReaderSpeech": "NOT_VERIFIED",
+  "realHardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "files": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "bytes": 32109,
+      "sha256": "a1bac3d2643b6a616c427a83f2ae12a1a1f4481eb1ffa6b7e9b6b67c19f4511f"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "bytes": 13084,
+      "sha256": "a64e6ff7ee0b6e458cf1b2e6b18457f1354095540749c9bd6e1bdf3bded2a949"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v36-integrated-d15-accessibility.md",
+      "bytes": 8217,
+      "sha256": "9ed7b5184a0c7d9ab0a010677c35e749e693281bda762db76a03affa67b6485f"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v36-gpt6-a11y-integration-go.md",
+      "bytes": 4449,
+      "sha256": "cbeba0959b8e70761bad572553b9b86271c5df25eca77a34efa7a98d0597d4fc"
+    },
+    {
+      "path": "staging/fcv588-v36-instructor-accessibility/README.md",
+      "bytes": 2838,
+      "sha256": "f571c00a093eb8ba2e2c0d81657e5d9337f351b8714a25b5b11096202431435d"
+    },
+    {
+      "path": "staging/fcv588-v36-instructor-accessibility/evidence/V36_UX_A11Y_BRIEF_20261018.md",
+      "bytes": 5448,
+      "sha256": "d2e262492be81e26306dcc7bb03ee88804cc106e8fa2e71bbaef33dae5bd46bf"
+    },
+    {
+      "path": "docs/qa/FCV588_V36_FINAL_INTEGRITY_20261018.json",
+      "bytes": 5887,
+      "sha256": "d7d7c3eba806317d6690f2d4cb91cc15eed6c705b16ab1519ed4621f168ebafe"
+    },
+    {
+      "path": "docs/qa/FCV588_V36_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "bytes": 107999,
+      "sha256": "3fa2cb3a49190ac18c2527d2f5d016d67a36f4d8706ec10350248e0388d58106"
+    }
+  ]
+}

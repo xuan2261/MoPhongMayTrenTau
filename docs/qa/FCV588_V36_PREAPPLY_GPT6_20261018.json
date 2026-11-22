@@ -1,0 +1,44 @@
+{
+  "collectedAtUtc": "2026-10-18T05:36:37.905113+00:00",
+  "scope": "FCV588_V36_INSTRUCTOR_A11Y_PREAPPLY",
+  "status": "V36_FOUR_WEB_FILES_READY_FOR_GPT6_SUPERVISED_INTEGRATION",
+  "supervision": "USER_APPROVED_GPT6_SELF_REVIEW",
+  "baselineCanonicalRuntimeCount": 37,
+  "v36StagedRuntimeCount": 37,
+  "changedWebFiles": [
+    "web/index.html",
+    "web/styles.css",
+    "web/app.mjs",
+    "web/fcv588-training-source-matrix.mjs"
+  ],
+  "v36NodePass": 46,
+  "v36ChromeAssertionsPass": 189,
+  "chromeViewports": [
+    "1440x900",
+    "768x1024",
+    "375x812",
+    "320x720",
+    "390x844",
+    "1366x768",
+    "1920x1080"
+  ],
+  "afterScreenshotsShaMatches": 21,
+  "baselineScreenshotsShaMatches": 4,
+  "servedSourceCount": 37,
+  "negativeRoutes": 4,
+  "patchSha256": "d9f68cd6dbfeb3cd86bc33b3fbd0894245a4c3da8e827639c856c5ceeb68e9d3",
+  "evidenceSha256": {
+    "baseline": "f3e850d674ead0bef4a9ab1cde0da643985c4969a7156a3cd059a56b08807d99",
+    "node": "1ccf85dcf77d46b6b2ae769a3254362ef84a5756b95b72658ba548b28a43c314",
+    "chrome": "7158b9ceb72af77d8dea80c8c7a0295bc492dd827580a1b186f437f2d8022100",
+    "served": "c641c70bdb07126417572f2400c3a1638892f75ae63a008b3d80a643b760cff3",
+    "dryCheck": "41db4ed1251421ba9eef142b35c6b48abb765de184670d3206f30b748a5071a5",
+    "patch": "d9f68cd6dbfeb3cd86bc33b3fbd0894245a4c3da8e827639c856c5ceeb68e9d3",
+    "manifest": "ebe66d06d6384afc34572150d9d04b769ef81e753a59f8401982c1e6b61aee06",
+    "brief": "d2e262492be81e26306dcc7bb03ee88804cc106e8fa2e71bbaef33dae5bd46bf"
+  },
+  "runtimeIntegrated": false,
+  "hardwareValidated": false,
+  "screenReaderSpokenOutput": "NOT_VERIFIED",
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "evaluatedAt": "2026-10-13",
+  "scope": "Explicitly account for every requested device/variant, not falsely certify all manuals acquired",
+  "allowedArchiveStatus": [
+    "ARCHIVED_VERIFIED",
+    "RIGHTS_OR_ACCESS_HOLD",
+    "IDENTITY_HOLD",
+    "VERSION_HOLD",
+    "SOURCE_UNAVAILABLE"
+  ],
+  "coverageState": "ACCOUNTED_WITH_HOLDS",
+  "allRequestedManualsDownloaded": false,
+  "sourceManifest": "sources/manuals/MANIFEST.json",
+  "validationReceipt": "sources/manuals/VERIFICATION_RECEIPT.json",
+  "devices": [
+    {
+      "id": "fcv588",
+      "label": "FURUNO FCV-588",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "VERSION_HOLD",
+      "manifestIds": ["FCV588_OME23890E_2025", "FCV588_SOFTWARE_HISTORY", "FCV588_OPERATORS_GUIDE_MULTILINGUAL", "FCV588_BROCHURE_FURUNO_USA"],
+      "sourceTier": "manufacturer",
+      "rights": "RESTRICTED_REFERENCE_ONLY; permission review needed for AI processing/reproduction/public distribution",
+      "openGap": "Actual student-unit Starter/Booter/Main firmware, transducer, Tankenmaru not supplied"
+    },
+    {
+      "id": "far2127",
+      "label": "FURUNO FAR-2127",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "VERSION_HOLD",
+      "manifestIds": ["FAR2127_OME35190U5_2024", "FAR2127_OPERATORS_GUIDE"],
+      "sourceTier": "manufacturer",
+      "rights": "RESTRICTED_REFERENCE_ONLY; redistribution not cleared",
+      "openGap": "RCU-014 versus RCU-015 controller and actual firmware unknown"
+    },
+    {
+      "id": "mdc2060",
+      "label": "KODEN MDC-2060",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "VERSION_HOLD",
+      "manifestIds": ["MDC2060_REV14", "MDC2060_REV15", "MDC2060_QUICK_REF"],
+      "sourceTier": "manufacturer",
+      "rights": "HOLD_AI_PROCESSING_AND_REDISTRIBUTION; KODEN publisher terms require explicit authorization",
+      "openGap": "Do not choose Rev14 or Rev15 as the classroom source until unit software/controller is confirmed"
+    },
+    {
+      "id": "ais-r5-supreme",
+      "label": "AIS R5 SUPREME candidate",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "IDENTITY_HOLD",
+      "manifestIds": ["AIS_R5_SUPREME_OFFICIAL_DOC_PACKAGE"],
+      "sourceTier": "manufacturer",
+      "rights": "RESTRICTED_REFERENCE_ONLY; verify distribution/AI reuse terms",
+      "openGap": "The classroom AIS R5 may be SOLID, not SUPREME"
+    },
+    {
+      "id": "ais-r5-solid",
+      "label": "AIS R5 SOLID candidate",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "IDENTITY_HOLD",
+      "manifestIds": ["AIS_R5_SOLID_OFFICIAL_DOC_PACKAGE"],
+      "sourceTier": "manufacturer",
+      "rights": "RESTRICTED_REFERENCE_ONLY; verify distribution/AI reuse terms",
+      "openGap": "The classroom AIS R5 may be SUPREME, not SOLID"
+    },
+    {
+      "id": "ns4000-v2",
+      "label": "Navi-Sailor 4000 v2.00.009 historical reference",
+      "archiveStatus": "ARCHIVED_VERIFIED",
+      "targetVersionStatus": "VERSION_HOLD",
+      "manifestIds": ["NS4000_V2_00_009"],
+      "sourceTier": "third_party_mirror",
+      "rights": "RESTRICTED_REFERENCE_ONLY; publisher permission unknown",
+      "openGap": "Actual classroom NS4000 version unknown; v2 cannot be assumed to represent 3.x"
+    },
+    {
+      "id": "ns4000-v3",
+      "label": "Navi-Sailor 4000 v3.02.350 user manual",
+      "archiveStatus": "RIGHTS_OR_ACCESS_HOLD",
+      "targetVersionStatus": "VERSION_HOLD",
+      "manifestIds": [],
+      "sourceTier": "third_party_viewer_only",
+      "knownViewer": "https://www.scribd.com/document/959959511/NS4000-v-3-02-350-UM-SEP2025",
+      "rights": "RESTRICTED_PROPRIETARY; no verified direct authorized PDF retrieval",
+      "openGap": "Find licensed PDF through publisher/distributor only after device version is confirmed"
+    },
+    {
+      "id": "koden-j2000",
+      "label": "KODEN J2000 (claimed, unverified)",
+      "archiveStatus": "IDENTITY_HOLD",
+      "targetVersionStatus": "IDENTITY_HOLD",
+      "manifestIds": [],
+      "sourceTier": "none",
+      "rights": "NO_SOURCE_IDENTIFIED",
+      "openGap": "Need photo of manufacturer plate/exact code; never replace with another model's manual"
+    }
+  ]
+}

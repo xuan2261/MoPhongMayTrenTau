@@ -1,0 +1,52 @@
+{
+  "timestampUTC": "2026-10-19T03:07:16.134308+00:00",
+  "status": "V43_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_V43_FINAL_INTEGRITY_20261019.json",
+  "finalReceiptSHA": "13e713bf6397561a0d42219462fd7c0c5bfb02d0e2aff16b0b8280ca50e8336e",
+  "originalFinalIntegrityRunLogSHA": "6c48c4847363fe00c968dfed1e87c1ff5af693d30252e0e1233a25b9dbc82c0a",
+  "canonicalAndStageRuntimeSourceSHA": 37,
+  "historicalV42StageRuntimeSourceSHA": 37,
+  "approvedCanonicalFileSHA": 11,
+  "documentSHA": 4,
+  "untouchedHistoricalV42DocumentSHA": 6,
+  "sourceCodeChangedComparedWithV42": [
+    "src/core/lessons.mjs",
+    "src/devices/fcv588/model.mjs",
+    "src/devices/fcv588/profile-version.mjs",
+    "web/app.mjs"
+  ],
+  "newV43ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": 175,
+  "historicalOriginalPythonFixturesSHA": 16,
+  "stagingNode": 484,
+  "canonicalNode": 484,
+  "canonicalPostdocumentNode": 484,
+  "canonicalTargetedNode": 66,
+  "pythonTests": 13,
+  "chromeAssertionsAcrossBothRuns": 204,
+  "loadedBrowserResponseSHACombined": 490,
+  "httpNegativeRoutesDenied": 4,
+  "ownedQaPortsClosed": {
+    "4225": true,
+    "4226": true
+  },
+  "historicalV42FinalReceiptSHA": "fc7b2559cf16eed934a173b246c363ecdc5686f0413be90eae8f61bf99dd57d9",
+  "historicalV42PostreceiptSHA": "0d659c3dab920d6e8f6964e14522f1d23f0d80dfc4fcc215df6c9ecef70b5adc",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "firmwareInstalled": "UNKNOWN",
+  "oemRights": "HOLD",
+  "nativeDesktopExactViewports": "NOT_RUN",
+  "narratorNvdaSpokenOutput": "NOT_RUN",
+  "genuineOsWindowBlur": "NOT_RUN"
+}

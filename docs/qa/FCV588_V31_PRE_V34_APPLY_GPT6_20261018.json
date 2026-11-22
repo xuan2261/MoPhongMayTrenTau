@@ -1,0 +1,337 @@
+{
+  "atUtc": "2026-10-17T23:59:56.9668349Z",
+  "phase2Supervisor": "USER_APPROVED_GPT6_SELF_REVIEW",
+  "preApplyStatus": "V31_TARGET_NODE_PY_CHROME_GATES_GREEN",
+  "originalRuntimeFiles": 35,
+  "originalRuntimeManifestSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+  "originalFailedVerifySha256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "targetVerifyPass": 53,
+  "targetVerifyLogSha256": "9a200f8e6ad4d79a5d0eb9b2b0ecc4d536188510588dd4e5906f61991f31e1bb",
+  "nodePass": 405,
+  "nodeLogSha256": "34c50198ad22f6ea7e642b48288e8aeb4e89d267d4d9c0f396a0e16a20e8ebf0",
+  "pythonPass": 13,
+  "pythonLogSha256": "5e8b3aa3483adc014edceff16b6004af69a18636685f8fbadd2cb711fa44fe53",
+  "browserRunnersPass": 7,
+  "browserReceiptSha256": "0e0a1350cbcc5aca917c13b160f35102d34dfbf68486c0f4af57d3febc160622",
+  "browserScreenshots": [
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_alarm_disabled.png",
+      "sha256": "78ef67c5663bc1ae5ed1711171764126f40cb4a978fd79f74487c43e59908db3"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_alarm_threshold_draft.png",
+      "sha256": "fd539ddb3d8ef472c8cd992265740a33ecfa3d03de064fe6e08a17f3da8dd6a2"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_calibration_draft.png",
+      "sha256": "285fa02d64a64e944b2cc325e1a72ab6111eed8c653be4f201bbc17ad457b7bd"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_func_assignment.png",
+      "sha256": "17665bb92156a08516e1920e941deba0edc3329011c7d9eb5cf3799b4b100148"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_nav_box_draft.png",
+      "sha256": "90f7f4e99ed878df787829cf26cb9b3cae76b5c1ce81ac7e6ab53d44067b8fe7"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1366x768_units_draft.png",
+      "sha256": "f6ac3e072d8deeef13ac6d05f2d59d9e1ed4df166ee190e93a0e82c350f25fc4"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_alarm_disabled.png",
+      "sha256": "56ab18e82ee9232a7cae824e85e5624b7b04807c24197bee05fcb830c81989f9"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_alarm_threshold_draft.png",
+      "sha256": "a7c7566c8100b2c4cb4a63a5cf21a252b477622e960cecd17bdeb86de6997334"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_calibration_draft.png",
+      "sha256": "0f4f2a0b9dff29f0c33d185d70a00e62e1820a294261b17821f6b967b97d835d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_func_assignment.png",
+      "sha256": "874cde8f1dd073fc6b57ce29a8bbaa81272d3fc2ead81959174223d56c2fdb04"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_nav_box_draft.png",
+      "sha256": "7538ad52c6149ea21724f4dcd2589579642daef7f09de87170064abed4fd621f"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_1920x1080_units_draft.png",
+      "sha256": "b4a78f2d99417d10bbaf14f890ab8334aa5e81b2c3f17c9f32961a7efe1aa668"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_alarm_disabled.png",
+      "sha256": "44c6e6b205d2fb54e7811aa4c4dde3719db666605ddf8845a3d66854e3c6870d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_alarm_threshold_draft.png",
+      "sha256": "a931e9fb9f6f9901e01ff059607fc640c657cef6d0484b528950ce87d8d20d05"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_calibration_draft.png",
+      "sha256": "fdeb3e1f78adabb66496c9b2ff382512559bf897e3dedc87d41b3823c460866b"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_func_assignment.png",
+      "sha256": "e0368a223148c0910c069560eb998777e7c9f66f45a6f1b41f30bc8ef4a5d16f"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_nav_box_draft.png",
+      "sha256": "f0556f6f75b592cdc048ee6bac9b6f48e80e4c17e75302142fddf6a783e771e6"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_360x800_units_draft.png",
+      "sha256": "a08cb729d41be546c0f11db2d0088d5bde82cf893b040a68bfe1df335d16ce99"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_alarm_disabled.png",
+      "sha256": "dfa0f86104ba37adea83d6b46d1f719ec9e90efffc9d1fd173f76baed301cc62"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_alarm_threshold_draft.png",
+      "sha256": "ed46c9a225a9ba6631aa29020263e4818691555013ed908ffd688539cb595950"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_calibration_draft.png",
+      "sha256": "6aa41acd3f4427c3700ec8d11a2886b304427983a213b20258dde4e6cd085dd4"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_func_assignment.png",
+      "sha256": "e0fa7cf533a808f7a71df00794d40632ccfe13e29048709755267f4cbec6fb8d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_nav_box_draft.png",
+      "sha256": "36fd57b169c1b709b9f2700194f84c613e41a52a8f38f1d94177a4c70a06ebfe"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_config_v30_green_390x844_units_draft.png",
+      "sha256": "a6640464f62109f3e0cb8bf4fa0e822b7305eb120d41798ad1eb61ab97f899e1"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1366x768_clutter_100.png",
+      "sha256": "283ca1c7e69e9a0f1e8058fd2fbfef2b410fe5f9ac4b0b4c54de8e5c9cd39b46"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1366x768_color_erase_50.png",
+      "sha256": "f5a8f69007b77a632aebfd133d9220367fee658a20526550d43d37619ef707c8"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1366x768_white_line_on_draft.png",
+      "sha256": "cfef3479e6fa1c78064359ee9ea417f0ebbf8df5c91d8ad4f6928c8126cfaee5"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1920x1080_clutter_100.png",
+      "sha256": "cb510d810897ba947e3c28dcddae8b9a7ea345b95361b43997520c4bd85fcd6d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1920x1080_color_erase_50.png",
+      "sha256": "e25bc56b580f552890e99a9014b18e7a525452ee10fca25be1cc6770b705194b"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_1920x1080_white_line_on_draft.png",
+      "sha256": "f1d64b7a5c5af05ccda61f24cbf7aedcf5aa32ad11dcaa136a7ef22c7b2a7857"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_360x800_clutter_100.png",
+      "sha256": "66724d60d96ceec5e6a875cd6a724fa9a0fc6813ff8bde0ceb237d41567579c0"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_360x800_color_erase_50.png",
+      "sha256": "16465f34ded22a273094970c8c7ca37f9e483f0128ac56a075808529e58e7645"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_360x800_white_line_on_draft.png",
+      "sha256": "b974e0f318b9a086ad8ebc1eadc03b26ec99cfe7f97f772a335fd20e536da46e"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_390x844_clutter_100.png",
+      "sha256": "5c7391d7fe9a17b11946a306b7426a11980139cc35d9b19bd3e8c17514d07b66"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_390x844_color_erase_50.png",
+      "sha256": "4e35029afcaa22660e123c965ee9026f3a1beff9b9df26e54a11360ba5c8c140"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_func_v30_green_390x844_white_line_on_draft.png",
+      "sha256": "94be04c02b28a367224f9e8550a60ce59e55c65dd06d66df230ad670f6e86cfc"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_1366x768_lcd_test_blue.png",
+      "sha256": "8ed7f1ef3ed09282b03b7f9dd085fea7cc14de601750e76f5248ff3c44700a62"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_1366x768_sounder.png",
+      "sha256": "096265519115823c7e249c6f17ae4af0eae9697ebca89210f7e6430d29623f48"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_1920x1080_lcd_test_blue.png",
+      "sha256": "e8b243ce82ee9290ac46d94172365d58cd547a49ff46af29711ce092d1aeff14"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_1920x1080_sounder.png",
+      "sha256": "3d6544f5c56ce6f97b4da515056160245d3ff1433b3933c8c7314461249d1874"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_360x800_lcd_test_blue.png",
+      "sha256": "04327a90aec156ab4c86fbd51cc6d08c0a9bf833d93fca1387424793754e0fbf"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_360x800_sounder.png",
+      "sha256": "84511774492308911e963edbf010354151f2935ca5f791be15f67b5bd2d1ffc4"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_390x844_lcd_test_blue.png",
+      "sha256": "3b3a3ca95a3ab9fcf277f592e2ab2ece0287e946d8468eaacd18ee65bb28c027"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_lcd_v30_green_390x844_sounder.png",
+      "sha256": "a7aab586d584d2bc3a1f1b5fb6512c6d02adaa81720e68c00aac46aaada1e6e8"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_panel_v26_green.png",
+      "sha256": "4c4ef4ce503a0b7afe68feacaa1b49159e27921fa062a7f82eb46ffac0a1b5e2"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1366x768_palette_white.png",
+      "sha256": "58998a6a8cd520bb6f39f55b31ecd28d4636af53ccbd47c8147994815da2bc5c"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1366x768.png",
+      "sha256": "e337faf6647e560fb4a261a6a5bca98bd34020a6381f769593771d91eeb31559"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1920x1080_nav2_configured.png",
+      "sha256": "ec744cea4d627da3825827f51e7547f4648438ad6e5e2c45aee69c04be0622ea"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1920x1080_palette_white.png",
+      "sha256": "d530bd045e36d1dea0f1525635de097520af8fb9fac8517ffc51999461424a43"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1920x1080_tankenmaru_details.png",
+      "sha256": "d74b549740e42b4496c7d5de5a658494560d92b235dfc5154e5402515d7a427d"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_1920x1080.png",
+      "sha256": "69a0f5e181ca57e91179456c2821a467b3b10cd0a621b5670cb9641a843443e7"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_mobile_360x800.png",
+      "sha256": "3a480acd76b088c077d1f14820c197d79e471ade02a3c552253cb6846bdca2e3"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_mobile_390x844_palette_white.png",
+      "sha256": "c490029705a9808eada296ff00f89002918de4ad9b019c4f301403c0604fe619"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_public_v30_mobile_390x844.png",
+      "sha256": "a10977c2e593bc87656ce270bca42c1af336f4c53ff30a8ed36e84bf50772468"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_1366x768_dual_bottom.png",
+      "sha256": "7201bcde2bda3811883283039f45d6bb48d4b00c2452f5f3fa427ead516d4a0f"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_1366x768_single_white.png",
+      "sha256": "c757141cb1c9fa0f273686aa53669217bba1b757165a5cef6ca6af8ad2c8ea7c"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_1920x1080_dual_bottom.png",
+      "sha256": "92551ffbc0aa18f312aafa505d032b0f4835c384e0c4dbcda684996afb23f97b"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_1920x1080_single_white.png",
+      "sha256": "ed5e3cf00164c5a6485c837e925314c73a7b1798f753d44e38f4fc69a6242c64"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_360x800_dual_bottom.png",
+      "sha256": "ad8834e1c93651ec57b5581b55d7bfe08360631882363fdaed301ba6fbd26528"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_360x800_single_white.png",
+      "sha256": "a4e2f6bac692dea5116b78a6aa597cb31098d3f6aa2890bceebbddc5f7e6dd63"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_390x844_dual_bottom.png",
+      "sha256": "918ad6a10bf9b36da48640a72b8e6920dbaa08c7d4a15094b5766e292070fc14"
+    },
+    {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v31-gpt6-regression-contract-20261018\\docs\\qa\\screenshots\\fcv588_reference_v28_final_390x844_single_white.png",
+      "sha256": "12d16e5bfadde79b161ed13a17e660b973ba0f5c0f796a54aa1e18fcd200613e"
+    }
+  ],
+  "candidatePatch": "evidence/STAGING_V34_OPERATOR_UI_A11Y_HOLD.patch",
+  "candidatePatchSha256": "4dae7cb57b72a49a933810c5fca5b02203c4e169d3044b5392d218bfedf36d79",
+  "candidateFiles": [
+    {
+      "path": "web/app.mjs",
+      "isNew": false,
+      "originalSha256": "91a0a09857821374d21f2fe5df0dc28a10c598516f8fb49337139e47f08fc673",
+      "stagedSha256": "f20fd7c531a9721f47a751f59ce1f73bc24cb5ba61398630d404497f9ed35ab7",
+      "oldBytes": 52828,
+      "stagedBytes": 54240
+    },
+    {
+      "path": "web/index.html",
+      "isNew": false,
+      "originalSha256": "92bacc5ad24e2e6050b50c76af072a8fda001c91633194149ab3b2c82a9f2136",
+      "stagedSha256": "df8ec762c031e1667c601325677f9994bd797138284983981493dc1e6df588d6",
+      "oldBytes": 12606,
+      "stagedBytes": 14156
+    },
+    {
+      "path": "web/styles.css",
+      "isNew": false,
+      "originalSha256": "ff864dd4f99ab8f7177c49e4561f726c788d1c5845e57c6d5d5f44f6fd1c565c",
+      "stagedSha256": "af26d504e6b76b77523f828dad5c1a719574d7c0e9fe95a0ca71fa3d2f2e3b94",
+      "oldBytes": 24404,
+      "stagedBytes": 27578
+    },
+    {
+      "path": "web/lcd-presentation.mjs",
+      "isNew": false,
+      "originalSha256": "bf6d0c64ba99fdf71415d49f79bd5897d90d2d79523f21d041b8159aabfb6681",
+      "stagedSha256": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+      "oldBytes": 7049,
+      "stagedBytes": 6952
+    },
+    {
+      "path": "web/lcd-config-presentation.mjs",
+      "isNew": false,
+      "originalSha256": "e0d80f1b0d5495ec3d50a8c93d772964653c432afd0f2ecee54b4351f58aefa2",
+      "stagedSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "oldBytes": 6904,
+      "stagedBytes": 6718
+    },
+    {
+      "path": "web/lcd-control-presentation.mjs",
+      "isNew": false,
+      "originalSha256": "a743494bf5828757879380faa8afcd0908fc62da60e94aa87745502859b8c8e6",
+      "stagedSha256": "0881d0567d7921a98085a7914ebc2628e9b2f6d2c23d9a5894e7f97f3bba808f",
+      "oldBytes": 4144,
+      "stagedBytes": 4123
+    },
+    {
+      "path": "web/lcd-instructor-meta.mjs",
+      "isNew": true,
+      "originalSha256": null,
+      "stagedSha256": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+      "oldBytes": 0,
+      "stagedBytes": 13464
+    },
+    {
+      "path": "web/keyboard-shortcuts.mjs",
+      "isNew": false,
+      "originalSha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856",
+      "stagedSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "oldBytes": 720,
+      "stagedBytes": 845
+    }
+  ],
+  "runtimeIntegrated": false,
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false
+}

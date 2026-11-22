@@ -1,0 +1,486 @@
+{
+  "schema": "FCV588_P21_STANDALONE_CHROME_WIN32_FOCUS_V2",
+  "createdAt": "2026-11-17T03:55:25.648538+00:00",
+  "scope": "DIRECT_CHROME_SPAWNED_INDEPENDENT_OF_PLAYWRIGHT_CONTROL_WITH_CDP_DIAGNOSTICS_NOT_HUMAN_PHYSICAL_KEY",
+  "status": "PASS_NATIVE_WIN32_BLUR_POWER_CANCEL_CDP_INPUT_NOT_HUMAN",
+  "port": 4221,
+  "debugPort": 9231,
+  "stages": {
+    "chromeControlSetForegroundError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+    "chromeControlForeground": {
+      "hwnd": 406259954,
+      "pid": 29888,
+      "title": "FCV588-P21-NATIVE-CHROME-FOCUS-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": true
+    },
+    "witnessControlSetForegroundError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+    "witnessControlForeground": {
+      "hwnd": 5769834,
+      "pid": 25584,
+      "title": "Tiếp tục kiểm chứng P16 - Helium",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "foreground": true
+    },
+    "chromePowerSetForegroundError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+    "chromePowerForeground": {
+      "hwnd": 406259954,
+      "pid": 29888,
+      "title": "FCV588-P21-NATIVE-CHROME-FOCUS-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": true
+    },
+    "witnessPowerSetForegroundError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+    "witnessPowerForeground": {
+      "hwnd": 5769834,
+      "pid": 25584,
+      "title": "Tiếp tục kiểm chứng P16 - Helium",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "foreground": true
+    }
+  },
+  "errors": [],
+  "p20FinalSHA256": "32e27b4e7f0d2b961ce35b0b176abe78385f663790563dd75f7a1ccdc7bc2759",
+  "p20PostSHA256": "0fd9e5ffba3d941c23962810b3c75ffdee20a4068776779152cba09b8d461171",
+  "originalForeground": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "cdpEndpointLocalhostOnly": true,
+  "pageReady": true,
+  "pageProbeInitial": {
+    "url": "about:blank",
+    "title": "",
+    "readyState": "complete",
+    "bodyCount": 0,
+    "power": false,
+    "training": false,
+    "head": "<html><head></head><body></body></html>"
+  },
+  "pageProbeFinal": {
+    "url": "http://127.0.0.1:4221/",
+    "title": "MoPhongMayTrenTau | FCV-588 Public Reference",
+    "readyState": "interactive",
+    "bodyCount": 1,
+    "power": true,
+    "training": true,
+    "head": "<html lang=\"vi\"><head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"color-scheme\" content=\"dark\">\n  <title>MoPhongMayTrenTau | FCV-588 Public Reference</title>\n  <link rel=\"ic"
+  },
+  "targetCandidates": [
+    {
+      "hwnd": 406259954,
+      "pid": 29888,
+      "title": "FCV588-P21-NATIVE-CHROME-FOCUS-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": false
+    }
+  ],
+  "targetWin32": {
+    "hwnd": 406259954,
+    "pid": 29888,
+    "title": "FCV588-P21-NATIVE-CHROME-FOCUS-20261117 - Google Chrome",
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "foreground": false
+  },
+  "controlBefore": {
+    "fg": {
+      "hwnd": 406259954,
+      "pid": 29888,
+      "title": "FCV588-P21-NATIVE-CHROME-FOCUS-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": true
+    },
+    "browser": {
+      "hasFocus": true,
+      "visibility": "visible",
+      "activeElement": "",
+      "powerPressing": false,
+      "eventCount": 0,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "stamp": 16814.60000014305,
+          "isTrusted": true,
+          "documentHasFocus": false
+        },
+        {
+          "type": "focus",
+          "stamp": 16834.10000014305,
+          "isTrusted": true,
+          "documentHasFocus": true
+        },
+        {
+          "type": "visibilitychange",
+          "stamp": 16836.200000047684,
+          "visibility": "visible"
+        }
+      ]
+    }
+  },
+  "controlAfter": {
+    "fg": {
+      "hwnd": 5769834,
+      "pid": 25584,
+      "title": "Tiếp tục kiểm chứng P16 - Helium",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "foreground": true
+    },
+    "browser": {
+      "hasFocus": false,
+      "visibility": "hidden",
+      "activeElement": "",
+      "powerPressing": false,
+      "eventCount": 0,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "stamp": 16814.60000014305,
+          "isTrusted": true,
+          "documentHasFocus": false
+        },
+        {
+          "type": "focus",
+          "stamp": 16834.10000014305,
+          "isTrusted": true,
+          "documentHasFocus": true
+        },
+        {
+          "type": "visibilitychange",
+          "stamp": 16836.200000047684,
+          "visibility": "visible"
+        },
+        {
+          "type": "blur",
+          "stamp": 33724.800000190735,
+          "isTrusted": true,
+          "documentHasFocus": false
+        },
+        {
+          "type": "visibilitychange",
+          "stamp": 33760.40000009537,
+          "visibility": "hidden"
+        }
+      ]
+    }
+  },
+  "controlWin32ForegroundMoved": true,
+  "controlBrowserBlurObserved": true,
+  "powerBefore": {
+    "hasFocus": false,
+    "visibility": "hidden",
+    "activeElement": "key-power",
+    "powerPressing": false,
+    "eventCount": 0,
+    "status": "POWER OFF",
+    "events": [
+      {
+        "type": "blur",
+        "stamp": 16814.60000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 16834.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 16836.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 33724.800000190735,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 33760.40000009537,
+        "visibility": "hidden"
+      },
+      {
+        "type": "focus",
+        "stamp": 34054,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "blur",
+        "stamp": 44558,
+        "isTrusted": true,
+        "documentHasFocus": false
+      }
+    ]
+  },
+  "powerDown": {
+    "hasFocus": true,
+    "visibility": "visible",
+    "activeElement": "key-power",
+    "powerPressing": true,
+    "eventCount": 1,
+    "status": "POWER OFF",
+    "events": [
+      {
+        "type": "blur",
+        "stamp": 16814.60000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 16834.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 16836.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 33724.800000190735,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 33760.40000009537,
+        "visibility": "hidden"
+      },
+      {
+        "type": "focus",
+        "stamp": 34054,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "blur",
+        "stamp": 44558,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.200000047684,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.40000009537,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 44591.200000047684,
+        "visibility": "visible"
+      }
+    ]
+  },
+  "powerAfterSwitch": {
+    "hasFocus": false,
+    "visibility": "hidden",
+    "activeElement": "key-power",
+    "powerPressing": false,
+    "eventCount": 2,
+    "status": "POWER OFF",
+    "events": [
+      {
+        "type": "blur",
+        "stamp": 16814.60000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 16834.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 16836.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 33724.800000190735,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 33760.40000009537,
+        "visibility": "hidden"
+      },
+      {
+        "type": "focus",
+        "stamp": 34054,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "blur",
+        "stamp": 44558,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.200000047684,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.40000009537,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 44591.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 54057.200000047684,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "blur",
+        "stamp": 54059.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 54078.200000047684,
+        "visibility": "hidden"
+      }
+    ]
+  },
+  "powerWindowBlur": true,
+  "powerCancelOnce": true,
+  "powerAfterKeyup": {
+    "hasFocus": true,
+    "visibility": "hidden",
+    "activeElement": "key-power",
+    "powerPressing": false,
+    "eventCount": 2,
+    "status": "POWER OFF",
+    "events": [
+      {
+        "type": "blur",
+        "stamp": 16814.60000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 16834.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 16836.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 33724.800000190735,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 33760.40000009537,
+        "visibility": "hidden"
+      },
+      {
+        "type": "focus",
+        "stamp": 34054,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "blur",
+        "stamp": 44558,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.200000047684,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "focus",
+        "stamp": 44587.40000009537,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 44591.200000047684,
+        "visibility": "visible"
+      },
+      {
+        "type": "blur",
+        "stamp": 54057.200000047684,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "blur",
+        "stamp": 54059.10000014305,
+        "isTrusted": true,
+        "documentHasFocus": false
+      },
+      {
+        "type": "visibilitychange",
+        "stamp": 54078.200000047684,
+        "visibility": "hidden"
+      },
+      {
+        "type": "focus",
+        "stamp": 54342,
+        "isTrusted": true,
+        "documentHasFocus": true
+      },
+      {
+        "type": "focus",
+        "stamp": 54342,
+        "isTrusted": true,
+        "documentHasFocus": true
+      }
+    ]
+  },
+  "originalForegroundRestored": true,
+  "foregroundAfterCleanup": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "qaWebClosed": true,
+  "debugPortClosed": true,
+  "protected4173Listening": true,
+  "sourcePostimageMatched": 50,
+  "p20FinalUnchanged": true,
+  "profileRemoved": true
+}

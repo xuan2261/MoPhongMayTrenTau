@@ -1,0 +1,30 @@
+{
+  "schema": "fcv588-p04-provenance-independent-postreceipt-v1",
+  "timestampUtc": "2026-11-16T02:26:14.013533+00:00",
+  "status": "PASS_BOUNDED_P04_PROVENANCE_SOFTWARE_INTEGRITY_ONLY",
+  "finalIntegrityPath": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P04_PROVENANCE_20261116\\FCV588_P04_PROVENANCE_FINAL_INTEGRITY_20261116.json",
+  "finalIntegritySHA256": "94d9bf997408d8fb51140b723319ea59faefb8122f66233839ad5a8f39b243d2",
+  "verificationReceiptSHA256": "9bec1c2a165b6df4561bd9686ab9423cdffb870d6afb41e2f9400058f12fc256",
+  "independentlyRereadRuntime": 39,
+  "stageCanonicalRuntimeMatch": true,
+  "independentlyRereadExact8": true,
+  "independentlyRereadHistoricalSeals": 6,
+  "stageChromeCases": 6,
+  "canonicalChromeCases": 6,
+  "stopBottomZoneStageStable": true,
+  "stopBottomZoneCanonicalStable": true,
+  "canonicalNode": 563,
+  "canonicalPython": 13,
+  "jpg8ReferenceOnly": true,
+  "holds": {
+    "phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD"
+  },
+  "phase6F1": "OPEN",
+  "featureClaims": "65/65 HOLD",
+  "firmwareRightsHardwareRelease": "HOLD"
+}

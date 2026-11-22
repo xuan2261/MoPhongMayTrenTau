@@ -1,0 +1,6 @@
+
+> fcv588-synthetic-electron-poc@0.0.1 package:win
+> electron-packager . FCV588-Synthetic-POC --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true --ignore=^/dist --ignore=^/qa --ignore=^/node_modules/.cache
+
+Packaging app for platform win32 x64 using electron v45.4.1
+Wrote new app to: dist\FCV588-Synthetic-POC-win32-x64

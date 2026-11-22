@@ -1,0 +1,91 @@
+{
+  "schema": "P14_LIVE_USER_SERVER_READ_ONLY_PROBE_V1",
+  "server": "127.0.0.1:4173",
+  "status": "PASS",
+  "servedSource": [
+    {
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "localSHA256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "localSHA256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "localSHA256": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "path": "/src/devices/fcv588/navigation-profile21.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "579fda7b401a6ecbda81a7bdd58b4057c5c7ba41fbdec03ff4ee9f5af1c8c37f",
+      "localSHA256": "579fda7b401a6ecbda81a7bdd58b4057c5c7ba41fbdec03ff4ee9f5af1c8c37f",
+      "match": true
+    },
+    {
+      "path": "/src/devices/fcv588/replay-compat.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "9e9887c9a6b4adad90864f8de82144edaf20146063fc6204dac912120eed11d6",
+      "localSHA256": "9e9887c9a6b4adad90864f8de82144edaf20146063fc6204dac912120eed11d6",
+      "match": true
+    },
+    {
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "localSHA256": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "httpSHA256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "localSHA256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    }
+  ],
+  "referenceOnlyAccess": [
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/dual.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/hf.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/lf.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/nav1.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/nav2.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/zoom.jpg",
+      "status": 404
+    },
+    {
+      "path": "/sources/FCV588_GiaoDienThucTeMay2016/zoom2.jpg",
+      "status": 404
+    }
+  ],
+  "canonicalModified": false
+}

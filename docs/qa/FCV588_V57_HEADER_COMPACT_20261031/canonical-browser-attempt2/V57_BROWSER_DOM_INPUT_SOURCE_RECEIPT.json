@@ -1,0 +1,85 @@
+{
+  "scope": "V57_CHROME_HEADER_D15_DOM_POINTER_KEYBOARD_SOURCE_SHA_NOT_HARDWARE_OR_SPOKEN",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "origin": "http://127.0.0.1:4173",
+  "viewports": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError()",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError()",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError()",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        320,
+        812
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError()",
+      "pageErrors": []
+    }
+  ],
+  "errors": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "error": "AssertionError()"
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "error": "AssertionError()"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "error": "AssertionError()"
+    },
+    {
+      "viewport": [
+        320,
+        812
+      ],
+      "error": "AssertionError()"
+    }
+  ],
+  "noJavascript": {
+    "tablistHidden": true,
+    "panels": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "fixtures": true,
+    "lessons": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-11-14T09:57:32.1589289+07:00",
+  "purpose": "User preview of canonical FCV-588 P02",
+  "pid": 1204,
+  "url": "http://127.0.0.1:4173/",
+  "statusCode": 200,
+  "boundPort": 1204,
+  "serverSHA256": "CB24F7A1835F4DB264220285546A88810088D1A354208F594886684DFA17A19C"
+}

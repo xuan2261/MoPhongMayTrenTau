@@ -1,0 +1,428 @@
+{
+  "cornerComparisons": 32,
+  "decision": "DO_NOT_AVERAGE_OR_APPLY_ROI_TO_RUNTIME_OR_FIDELITY_SCORE",
+  "holds": {
+    "featureClaims": "65/65 HOLD",
+    "fullP07": "OPEN",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "phase6": "OPEN",
+    "releaseApproval": "HOLD",
+    "roiCalibration": "HOLD",
+    "sourcePhotoRights": "REFERENCE_ONLY"
+  },
+  "independentReceiptSha256": "e35441fe7de4723aad5d891311022a3935244aa21282e02dc0736d19682400a6",
+  "maxBetweenRaterCornerDistancePx": 34.93,
+  "nextOracle": "Agreed exact inner content-vs-aperture boundary definition, second repeatable blinded annotation, camera calibration/reference target if quantitative/physical claims are desired",
+  "operations": {
+    "derivedImagesWritten": false,
+    "originalPhotosEdited": false,
+    "sourceRuntimeEdited": false
+  },
+  "perPhoto": {
+    "dual.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        9.85,
+        10.82,
+        14.32,
+        5.1
+      ],
+      "independentClaimedUncertaintyPx": 10,
+      "independentCorners": [
+        [
+          80,
+          389
+        ],
+        [
+          458,
+          370
+        ],
+        [
+          451,
+          934
+        ],
+        [
+          71,
+          922
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 14.32,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          76,
+          380
+        ],
+        [
+          449,
+          376
+        ],
+        [
+          448,
+          920
+        ],
+        [
+          66,
+          923
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": true
+    },
+    "giaoDien.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        5.39,
+        14.56,
+        26.0,
+        5.66
+      ],
+      "independentClaimedUncertaintyPx": 10,
+      "independentCorners": [
+        [
+          98,
+          423
+        ],
+        [
+          424,
+          418
+        ],
+        [
+          422,
+          884
+        ],
+        [
+          99,
+          897
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 26.0,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          103,
+          425
+        ],
+        [
+          438,
+          422
+        ],
+        [
+          432,
+          908
+        ],
+        [
+          95,
+          901
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": false
+    },
+    "hf.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        8.06,
+        11.31,
+        21.19,
+        24.52
+      ],
+      "independentClaimedUncertaintyPx": 8,
+      "independentCorners": [
+        [
+          93,
+          383
+        ],
+        [
+          491,
+          366
+        ],
+        [
+          490,
+          953
+        ],
+        [
+          82,
+          948
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 24.52,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          94,
+          375
+        ],
+        [
+          499,
+          374
+        ],
+        [
+          497,
+          973
+        ],
+        [
+          77,
+          972
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": false
+    },
+    "lf.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        18.03,
+        17.89,
+        15.26,
+        3.16
+      ],
+      "independentClaimedUncertaintyPx": 14,
+      "independentCorners": [
+        [
+          89,
+          357
+        ],
+        [
+          467,
+          341
+        ],
+        [
+          480,
+          920
+        ],
+        [
+          95,
+          904
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 18.03,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          106,
+          351
+        ],
+        [
+          483,
+          349
+        ],
+        [
+          488,
+          907
+        ],
+        [
+          92,
+          905
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": true
+    },
+    "nav1.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        5.83,
+        15.81,
+        6.32,
+        27.66
+      ],
+      "independentClaimedUncertaintyPx": 15,
+      "independentCorners": [
+        [
+          69,
+          431
+        ],
+        [
+          444,
+          409
+        ],
+        [
+          439,
+          961
+        ],
+        [
+          68,
+          937
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 27.66,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          66,
+          426
+        ],
+        [
+          439,
+          424
+        ],
+        [
+          445,
+          963
+        ],
+        [
+          62,
+          964
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": false
+    },
+    "nav2.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        6.71,
+        15.23,
+        25.06,
+        23.77
+      ],
+      "independentClaimedUncertaintyPx": 9,
+      "independentCorners": [
+        [
+          94,
+          369
+        ],
+        [
+          439,
+          348
+        ],
+        [
+          422,
+          825
+        ],
+        [
+          100,
+          826
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 25.06,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          97,
+          363
+        ],
+        [
+          433,
+          362
+        ],
+        [
+          434,
+          847
+        ],
+        [
+          94,
+          849
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": false
+    },
+    "zoom.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        8.54,
+        15.65,
+        8.25,
+        5.0
+      ],
+      "independentClaimedUncertaintyPx": 12,
+      "independentCorners": [
+        [
+          59,
+          295
+        ],
+        [
+          473,
+          270
+        ],
+        [
+          456,
+          878
+        ],
+        [
+          56,
+          877
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 15.65,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          56,
+          287
+        ],
+        [
+          466,
+          284
+        ],
+        [
+          464,
+          876
+        ],
+        [
+          51,
+          877
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": true
+    },
+    "zoom2.jpg": {
+      "cornerEuclideanDifferencesPx": [
+        7.0,
+        19.8,
+        34.93,
+        11.4
+      ],
+      "independentClaimedUncertaintyPx": 15,
+      "independentCorners": [
+        [
+          85,
+          390
+        ],
+        [
+          493,
+          366
+        ],
+        [
+          475,
+          936
+        ],
+        [
+          87,
+          973
+        ]
+      ],
+      "interpretation": "Independent picks may refer to different visible glass/active-display/aperture edges; these are not calibrated residuals.",
+      "maxDifferencePx": 34.93,
+      "primaryClaimedEdgeAmbiguityPx": 20,
+      "primaryCorners": [
+        [
+          85,
+          383
+        ],
+        [
+          479,
+          380
+        ],
+        [
+          489,
+          968
+        ],
+        [
+          76,
+          970
+        ]
+      ],
+      "withinPrimaryAmbiguityAllCorners": false
+    }
+  },
+  "photoCount": 8,
+  "photosExceedingPrimary20pxEstimate": [
+    "giaoDien.jpg",
+    "hf.jpg",
+    "nav1.jpg",
+    "nav2.jpg",
+    "zoom2.jpg"
+  ],
+  "primaryReceiptSha256": "b1ec545fb9ad19b4086baa1c303a2b7a7ada81a6991a28a83e75b64b9255cd3b",
+  "result": "PASS_DISCREPANCY_DETECTED_HOLD_PRECISE_ROI",
+  "schema": "fcv588-p08-two-rater-corner-crosscheck-v1",
+  "scope": "TWO_UNCALIBRATED_IMAGE_SPACE_ESTIMATES_ONLY"
+}

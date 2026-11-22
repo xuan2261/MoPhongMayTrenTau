@@ -1,0 +1,363 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "viewports": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "metrics": {
+        "title": "MoPhongMayTrenTau | FCV-588 Public Reference",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 1199,
+          "clientWidth": 1440
+        },
+        "masthead": {
+          "x": 36,
+          "y": 0,
+          "width": 1368,
+          "height": 90,
+          "bottom": 90,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 36,
+          "y": 23.5,
+          "width": 292.890625,
+          "height": 42,
+          "bottom": 65.5,
+          "display": "flex"
+        },
+        "stateChip": {
+          "x": 1026.890625,
+          "y": 28,
+          "width": 377.109375,
+          "height": 33,
+          "bottom": 61,
+          "display": "block"
+        },
+        "banner": {
+          "x": 36,
+          "y": 104,
+          "width": 1368,
+          "height": 33,
+          "bottom": 137,
+          "display": "block"
+        },
+        "heading": {
+          "x": 36,
+          "y": 165,
+          "width": 1368,
+          "height": 128.796875,
+          "bottom": 293.796875,
+          "display": "flex"
+        },
+        "eyebrow": {
+          "x": 36,
+          "y": 165,
+          "width": 557.015625,
+          "height": 15,
+          "bottom": 180,
+          "display": "block"
+        },
+        "h1": {
+          "x": 36,
+          "y": 189,
+          "width": 557.015625,
+          "height": 58,
+          "bottom": 247,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 36,
+          "y": 260,
+          "width": 557.015625,
+          "height": 20.796875,
+          "bottom": 280.796875,
+          "display": "block"
+        },
+        "liveChip": {
+          "x": 1229.5625,
+          "y": 256.796875,
+          "width": 174.4375,
+          "height": 37,
+          "bottom": 293.796875,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 36,
+          "y": 319.796875,
+          "width": 1368,
+          "height": 787.96875,
+          "bottom": 1107.765625,
+          "display": "grid"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "deviceFrame": {
+          "x": 212.5,
+          "y": 319.796875,
+          "width": 680,
+          "height": 787.96875,
+          "bottom": 1107.765625,
+          "display": "block"
+        },
+        "d15": null,
+        "headerText": "≈\nMoPhongMayTrenTau\nMARITIME INSTRUMENT TRAINING LAB\nF1 · PUBLIC REFERENCE · CHƯA XÁC NHẬN PHẦN CỨNG",
+        "bannerText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "heroText": "THỰC HÀNH TƯƠNG TÁC · MÁY ĐO SÂU\n\nFCV-588 Training Console\n\nBố cục và nút thao tác dựng độc lập từ manual; chưa đạt chuẩn hình ảnh/hành vi giống máy thật.\n\nMÔI TRƯỜNG GIẢ LẬP",
+        "sourceCueText": "\n          \n          \n        "
+      },
+      "pageErrors": [],
+      "screenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\baseline-desktop-1440x900.png"
+    },
+    {
+      "name": "tablet",
+      "status": 200,
+      "metrics": {
+        "title": "MoPhongMayTrenTau | FCV-588 Public Reference",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "document": {
+          "scrollWidth": 768,
+          "scrollHeight": 2028,
+          "clientWidth": 768
+        },
+        "masthead": {
+          "x": 36,
+          "y": 0,
+          "width": 696,
+          "height": 90,
+          "bottom": 90,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 36,
+          "y": 23.5,
+          "width": 292.890625,
+          "height": 42,
+          "bottom": 65.5,
+          "display": "flex"
+        },
+        "stateChip": {
+          "x": 354.890625,
+          "y": 28,
+          "width": 377.109375,
+          "height": 33,
+          "bottom": 61,
+          "display": "block"
+        },
+        "banner": {
+          "x": 36,
+          "y": 104,
+          "width": 696,
+          "height": 33,
+          "bottom": 137,
+          "display": "block"
+        },
+        "heading": {
+          "x": 36,
+          "y": 165,
+          "width": 696,
+          "height": 134.59375,
+          "bottom": 299.59375,
+          "display": "flex"
+        },
+        "eyebrow": {
+          "x": 36,
+          "y": 165,
+          "width": 491.5625,
+          "height": 15,
+          "bottom": 180,
+          "display": "block"
+        },
+        "h1": {
+          "x": 36,
+          "y": 189,
+          "width": 491.5625,
+          "height": 43,
+          "bottom": 232,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 36,
+          "y": 245,
+          "width": 491.5625,
+          "height": 41.59375,
+          "bottom": 286.59375,
+          "display": "block"
+        },
+        "liveChip": {
+          "x": 557.5625,
+          "y": 262.59375,
+          "width": 174.4375,
+          "height": 37,
+          "bottom": 299.59375,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 36,
+          "y": 325.59375,
+          "width": 696,
+          "height": 1592.96875,
+          "bottom": 1918.5625,
+          "display": "grid"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "deviceFrame": {
+          "x": 44,
+          "y": 325.59375,
+          "width": 680,
+          "height": 787.96875,
+          "bottom": 1113.5625,
+          "display": "block"
+        },
+        "d15": null,
+        "headerText": "≈\nMoPhongMayTrenTau\nMARITIME INSTRUMENT TRAINING LAB\nF1 · PUBLIC REFERENCE · CHƯA XÁC NHẬN PHẦN CỨNG",
+        "bannerText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "heroText": "THỰC HÀNH TƯƠNG TÁC · MÁY ĐO SÂU\n\nFCV-588 Training Console\n\nBố cục và nút thao tác dựng độc lập từ manual; chưa đạt chuẩn hình ảnh/hành vi giống máy thật.\n\nMÔI TRƯỜNG GIẢ LẬP",
+        "sourceCueText": "\n          \n          \n        "
+      },
+      "pageErrors": [],
+      "screenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\baseline-tablet-768x1024.png"
+    },
+    {
+      "name": "mobile",
+      "status": 200,
+      "metrics": {
+        "title": "MoPhongMayTrenTau | FCV-588 Public Reference",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "document": {
+          "scrollWidth": 375,
+          "scrollHeight": 2388,
+          "clientWidth": 375
+        },
+        "masthead": {
+          "x": 9,
+          "y": 0,
+          "width": 357,
+          "height": 70,
+          "bottom": 70,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 9,
+          "y": 13.5,
+          "width": 292.890625,
+          "height": 42,
+          "bottom": 55.5,
+          "display": "flex"
+        },
+        "stateChip": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "banner": {
+          "x": 9,
+          "y": 84,
+          "width": 357,
+          "height": 46,
+          "bottom": 130,
+          "display": "block"
+        },
+        "heading": {
+          "x": 18,
+          "y": 152,
+          "width": 339,
+          "height": 178.59375,
+          "bottom": 330.59375,
+          "display": "block"
+        },
+        "eyebrow": {
+          "x": 18,
+          "y": 152,
+          "width": 339,
+          "height": 15,
+          "bottom": 167,
+          "display": "block"
+        },
+        "h1": {
+          "x": 18,
+          "y": 176,
+          "width": 339,
+          "height": 43,
+          "bottom": 219,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 18,
+          "y": 232,
+          "width": 339,
+          "height": 41.59375,
+          "bottom": 273.59375,
+          "display": "block"
+        },
+        "liveChip": {
+          "x": 18,
+          "y": 293.59375,
+          "width": 174.4375,
+          "height": 37,
+          "bottom": 330.59375,
+          "display": "inline-block"
+        },
+        "workbench": {
+          "x": 9,
+          "y": 352.59375,
+          "width": 357,
+          "height": 1924.171875,
+          "bottom": 2276.765625,
+          "display": "grid"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "deviceFrame": {
+          "x": 9,
+          "y": 427.59375,
+          "width": 357,
+          "height": 1134.171875,
+          "bottom": 1561.765625,
+          "display": "block"
+        },
+        "d15": null,
+        "headerText": "≈\nMoPhongMayTrenTau\nMARITIME INSTRUMENT TRAINING LAB",
+        "bannerText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "heroText": "THỰC HÀNH TƯƠNG TÁC · MÁY ĐO SÂU\n\nFCV-588 Training Console\n\nBố cục và nút thao tác dựng độc lập từ manual; chưa đạt chuẩn hình ảnh/hành vi giống máy thật.\n\nMÔI TRƯỜNG GIẢ LẬP",
+        "sourceCueText": "\n          \n          \n        "
+      },
+      "pageErrors": [],
+      "screenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\baseline-mobile-375x812.png"
+    }
+  ],
+  "browserErrors": []
+}

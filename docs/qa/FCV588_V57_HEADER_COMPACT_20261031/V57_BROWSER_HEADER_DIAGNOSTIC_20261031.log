@@ -1,0 +1,90 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "noticeCount": 1,
+    "noticeText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+    "noticeRole": "note",
+    "noticeInsideMasthead": true,
+    "brand": "≈\nMoPhongMayTrenTau",
+    "h1": "FCV-588 Training Console",
+    "subtitle": "Mô phỏng độc lập từ manual công khai.",
+    "noStateChip": true,
+    "noLiveChip": true,
+    "noEyebrow": false,
+    "noBrandTagline": true,
+    "workbenchTop": 143,
+    "d15Height": 780,
+    "docHeight": 1023,
+    "tabCount": 5,
+    "docWidth": 1440
+  },
+  {
+    "viewport": [
+      768,
+      1024
+    ],
+    "noticeCount": 1,
+    "noticeText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+    "noticeRole": "note",
+    "noticeInsideMasthead": true,
+    "brand": "≈\nMoPhongMayTrenTau",
+    "h1": "FCV-588 Training Console",
+    "subtitle": "Mô phỏng độc lập từ manual công khai.",
+    "noStateChip": true,
+    "noLiveChip": true,
+    "noEyebrow": false,
+    "noBrandTagline": true,
+    "workbenchTop": 127,
+    "d15Height": 780,
+    "docHeight": 1829,
+    "tabCount": 5,
+    "docWidth": 768
+  },
+  {
+    "viewport": [
+      375,
+      812
+    ],
+    "noticeCount": 1,
+    "noticeText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+    "noticeRole": "note",
+    "noticeInsideMasthead": true,
+    "brand": "≈\nMoPhongMayTrenTau",
+    "h1": "FCV-588 Training Console",
+    "subtitle": "Mô phỏng độc lập từ manual công khai.",
+    "noStateChip": true,
+    "noLiveChip": true,
+    "noEyebrow": false,
+    "noBrandTagline": true,
+    "workbenchTop": 160.09375,
+    "d15Height": 690,
+    "docHeight": 2195,
+    "tabCount": 5,
+    "docWidth": 375
+  },
+  {
+    "viewport": [
+      320,
+      812
+    ],
+    "noticeCount": 1,
+    "noticeText": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+    "noticeRole": "note",
+    "noticeInsideMasthead": true,
+    "brand": "≈\nMoPhongMayTrenTau",
+    "h1": "FCV-588 Training Console",
+    "subtitle": "Mô phỏng độc lập từ manual công khai.",
+    "noStateChip": true,
+    "noLiveChip": true,
+    "noEyebrow": false,
+    "noBrandTagline": true,
+    "workbenchTop": 171.34375,
+    "d15Height": 690,
+    "docHeight": 2165,
+    "tabCount": 5,
+    "docWidth": 320
+  }
+]

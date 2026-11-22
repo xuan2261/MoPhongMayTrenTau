@@ -1,0 +1,22 @@
+{
+  "schema": "P15_APPLY_INTENT_V1",
+  "status": "READY_GUARDED",
+  "preimageBackupSHA256": "f73e84c94b73943bc26a4d18778f06de05684f183e1f209111610bf415d03e01",
+  "stageSealSHA256": "7afd374b89f0ddce597ba9917dfca7d2af532932a205868cc410267f727326e3",
+  "independentReviewSHA256": "f1b45077098086d562086dde316e7cf36e38239ceffa6cdc9f3c7388e45ad0db",
+  "independentVisualReviewSHA256": "9f93a54f447181348bcdd93f82374203da8e2ae626c1a5c78afa45fbe11b7d08",
+  "paths": [
+    {
+      "path": "web/styles.css",
+      "operation": "modify",
+      "canonicalPreimageSHA256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "stageSHA256": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb"
+    },
+    {
+      "path": "test/fcv588-p15-uniform-lcd-css.test.mjs",
+      "operation": "create",
+      "canonicalPreimageSHA256": null,
+      "stageSHA256": "2a750cb43e2ffd965eb1266046b45aad30da692312db1e172faa0acd73d162b0"
+    }
+  ]
+}

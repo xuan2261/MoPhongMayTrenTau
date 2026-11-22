@@ -1,0 +1,46 @@
+{
+  "atUtc": "2026-10-19T07:11:19.425685+00:00",
+  "status": "V45_POSTRECEIPT_SHA_READBACK_PASS_OS_BLUR_NOT_RUN_PHASE6_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_V45_FINAL_INTEGRITY_20261019.json",
+  "finalReceiptSHA": "ac7bacb04eff3baaf9455bb9ff97d89bb5fa79ad4c331264b8acb9b970a48861",
+  "originalFinalIntegrityLogSHA": "807d1b5c8e7f5519ae33f675b464e0e2db5c86eb2bb5301cec2904cd0d3deee0",
+  "runtimeSourceSHA": 37,
+  "runtimeChanged": 0,
+  "profileRevision": "F1-public-reference-21",
+  "parentV44FinalSHA": "bd5e4230d01c90856d8fe9773d46569802bcf0a888901099a583e4155d63a471",
+  "parentV44PostSHA": "8684a6d9d2821b61d354f51bfcdc3dbccbfffd7434e392d26b0976d75eab028f",
+  "documentsSHA": 5,
+  "newV45ScreenshotsSHA": 16,
+  "historicalScreenshotsSHA": 223,
+  "originalPythonTrainingFixturesSHA": 16,
+  "stagingNode": 491,
+  "canonicalNode": 491,
+  "postdocumentNode": 491,
+  "pythonTests": 13,
+  "stagingChromeAssertions": 96,
+  "canonicalChromeAssertions": 96,
+  "stagingLoadedBrowserBodySHA": 140,
+  "canonicalLoadedBrowserBodySHA": 140,
+  "httpNegativeRoutesDenied": 4,
+  "ownedQaPortsClosed": {
+    "4229": true,
+    "4230": true
+  },
+  "genuineOSWindowBlur": "NOT_RUN",
+  "narratorNvdaSpeech": "NOT_RUN",
+  "nativeCoSDesktopExactViewports": "NOT_RUN",
+  "installedFirmware": "UNKNOWN",
+  "oemRights": "HOLD",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

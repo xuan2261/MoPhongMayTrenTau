@@ -1,0 +1,183 @@
+{
+  "status": "CHROME_AX_DOM_BOUNDED_PASS_NOT_SPEECH",
+  "timestampUtc": "2026-10-22T05:19:21.536947+00:00",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "v52FinalSha256": "4650306d6c088fc19eaa09b66922faaf29712015ae9a2f8fdf5795d2e780107f",
+  "v52PostSha256": "410966989a000ac7553f2085b13474dd6d5ac686a35df516f824a03a4ebb4608",
+  "runtimeSha": "37_OF_37_MATCH_PRE",
+  "scope": "HEADLESS_CHROME_ACCESSIBILITY_TREE_DOM_ONLY",
+  "chromeVersion": "155.0.8059.86",
+  "staticDom": {
+    "lang": "vi",
+    "liveRole": "status",
+    "livePolite": true,
+    "liveAtomic": true,
+    "guidanceRole": "group",
+    "guidanceIsLive": false,
+    "outsideLcd": true,
+    "notice": true
+  },
+  "initialAxFiltered": [
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "MENU/ESC",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad lên",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad trái",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad phải",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad xuống",
+      "ignored": false
+    }
+  ],
+  "afterBrillAxFiltered": [
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "status",
+      "name": "",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "MENU/ESC",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad lên",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad trái",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad phải",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "TrackPad xuống",
+      "ignored": false
+    }
+  ],
+  "brillMutationObservation": {
+    "liveWrites": 0,
+    "liveUnique": [],
+    "visualHelpWrites": 0,
+    "visualHelpUnique": 0,
+    "titleWrites": 0,
+    "title": "Trạng thái mô phỏng",
+    "announcement": "",
+    "help": "Hướng dẫn và nguồn dữ liệu hiển thị tại đây, không đặt trong LCD.",
+    "viewport": [
+      1366,
+      768
+    ],
+    "dpr": 1
+  },
+  "focusTab": "pad-up",
+  "focusShiftTab": "key-menu",
+  "http200Localhost": 35,
+  "browserErrors": [],
+  "image": {
+    "name": "V53_CHROME_AX_BRILL_D15_1366x768_20261022.png",
+    "bytes": 299735,
+    "sha256": "6ab46b075de26798edd91d82c9dfe71c14fefaeadb3252c9509e78fa3c1a39c9"
+  },
+  "actualNarratorNvdaUtterance": "NOT_RUN",
+  "genuineOsWindowBlurDuringPowerHold": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD"
+}

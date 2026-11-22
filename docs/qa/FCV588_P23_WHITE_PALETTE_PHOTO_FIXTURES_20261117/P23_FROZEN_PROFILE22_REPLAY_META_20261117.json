@@ -1,0 +1,12 @@
+{
+  "schema": "FCV588_P23_PRECHANGE_PROFILE22_REPLAY_FIXTURE_V1",
+  "purpose": "Immutable visual-replay migration preimage; no OEM image/firmware",
+  "profileRevision": "F1-public-reference-22",
+  "profileHash": "f0-fnv1a32-83ab0d53",
+  "sessionHash": "f0-fnv1a32-a429fc78",
+  "events": 9,
+  "envelopeFingerprint": "f0-fnv1a32-e4b18ddb",
+  "envelopeSHA256": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d",
+  "bytes": 1856,
+  "selectedMenuIndex": 5
+}

@@ -1,0 +1,123 @@
+{
+  "collectedAtUtc": "2026-10-16T01:51:46.809598+00:00",
+  "scope": "DOCUMENT_READBACK_AND_SOURCE_STABILITY_ONLY_NO_PRODUCT_TEST_RERUN",
+  "status": "DOCUMENTS_RECORDED_RUNTIME_UNCHANGED_QA_GATE_REMAINS_OPEN",
+  "runtimeManifestSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+  "runtimeFiles": 35,
+  "receiptsHarnessesAndScreenshotsUnchanged": true,
+  "canonicalPhases": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-01-start.md",
+      "criteria": 10,
+      "checked": 10,
+      "namedTasks": 5,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-02-physical-panel-and-controls.md",
+      "criteria": 7,
+      "checked": 2,
+      "namedTasks": 3,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-03-menu-atlas-and-configuration.md",
+      "criteria": 7,
+      "checked": 0,
+      "namedTasks": 3,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-04-sonar-views-and-advanced.md",
+      "criteria": 7,
+      "checked": 0,
+      "namedTasks": 3,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-05-alarms-nav-demo-diagnostics.md",
+      "criteria": 7,
+      "checked": 0,
+      "namedTasks": 3,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "criteria": 7,
+      "checked": 0,
+      "namedTasks": 3,
+      "originalCriteriaAndStatesUnchanged": true
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-07-shared-world-and-future-devices.md",
+      "criteria": 5,
+      "checked": 2,
+      "namedTasks": 2,
+      "originalCriteriaAndStatesUnchanged": true
+    }
+  ],
+  "documents": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-failure-counsel-packet.md",
+      "sha256": "67204bc2ba57e71845b1c3a2ad3d7f7caf7b439d1c6e94c2fb42d6670d72cef0"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-independent-review.md",
+      "sha256": "1d51423e0e65295a62d96f1b7d672b965b0af8105fe802f95cf0b6b3885057a1"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-checklist-review.md",
+      "sha256": "90ce544a079f818374c1a0b2550e6615e4af4d77773d9c628ac941ee396a4285"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/continuation-2026-10-16-v31-transactions-controls.md",
+      "sha256": "6a3f30dbf4fbc1d5d0c739c1bd6e348d893766a3bded372ca84bc3cdce35f020"
+    },
+    {
+      "path": "README.md",
+      "sha256": "be90efd2f3435e30ee0eb6ad193eb29c24674460c08caa40fc29e4488b546b4d"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "cddf9eb34e0bc411a7756e529f766d3e85d2ae1b87a0ae8af20a9654aaebc372"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-evidence-ledger.json",
+      "sha256": "ece7e8f78f09b5f074d19e995ebd0bddb9237b44d368d42b0b689acfdebe1a98"
+    },
+    {
+      "path": "docs/reports/FCV588_PUBLIC_REFERENCE_ACCEPTANCE.md",
+      "sha256": "dfa79c4d8dd6c6ee586ff0d5366d48b4599ce7c2201d2292de4565eadedec44b"
+    },
+    {
+      "path": "docs/qa/FCV588_PUBLIC_BROWSER_SMOKE.md",
+      "sha256": "cd197282155ed745c39044bcd1266bce704748d2c6aa9d52ae2d143de04bfd3a"
+    },
+    {
+      "path": "docs/qa/FCV588_V31_FINDING_DISPOSITION.json",
+      "sha256": "76f3b2b746f4c9c8ceda4e9f8870108527583e8a7e245f415b1ba8b7514b65b4"
+    }
+  ],
+  "newReportLinks": [
+    {
+      "from": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-checklist-review.md",
+      "link": "./continuation-2026-10-16-v31-transactions-controls.md",
+      "exists": true
+    },
+    {
+      "from": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-checklist-review.md",
+      "link": "./v31-failure-counsel-packet.md",
+      "exists": true
+    },
+    {
+      "from": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-checklist-review.md",
+      "link": "../../../docs/qa/FCV588_V31_EVIDENCE_SUMMARY.json",
+      "exists": true
+    }
+  ],
+  "knownFailingTest": "test/fcv588-public-control-presentation.test.mjs:31-35",
+  "testCorrectionApplied": false,
+  "fullRegression": "NOT_EXECUTED_ON_V31",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

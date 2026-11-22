@@ -1,0 +1,169 @@
+{
+  "schema": "fcv588-p10-independent-evidence-review-worker1-v1",
+  "createdAt": "2026-11-16T13:45:54.4210977+07:00",
+  "reviewerId": "worker-1",
+  "scope": "READ_ONLY_REVIEW_OF_P09_FINAL_P10_NATIVE_A11Y_BLUR_AND_EMULATED_FORCED_COLORS_EVIDENCE",
+  "verdict": "PASS_EVIDENCE_INTEGRITY_SOFTWARE_AND_MATHEMATICAL_EVIDENCE_ONLY_NATIVE_BLUR_AND_SPOKEN_OUTPUT_NOT_VERIFIED",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "bindings": {
+    "p07FinalAuthority": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "sha256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+      "decision": "P07_BOUNDED_SOFTWARE_QA_PASS_WITH_SOURCE_GAPS_FULL_PHASE7_AND_F1_PHASE6_OPEN"
+    },
+    "p09Final": {
+      "path": "docs/qa/FCV588_P09_ROI_BOUNDARY_20261116/FCV588_P09_ROI_BOUNDARY_FINAL_INTEGRITY_20261116.json",
+      "sha256": "759f146c349c2ad348fc5b98e21fbc79d1d857623253811f0a01d3b9408995b9",
+      "decision": "P09_RESTRICTED_TWO_APERTURE_ROI_QA_PASS_ACTIVE_LCD_AND_SIX_PRECISE_ROIS_HOLD"
+    },
+    "p09IndependentPost": {
+      "path": "docs/qa/FCV588_P09_ROI_BOUNDARY_20261116/FCV588_P09_ROI_BOUNDARY_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "cc3888a17c34271ba9163b86cfe4427442a1e6b5a847e4ac714661565657a26e"
+    },
+    "p10NarratorFeasibility": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-narrator-feasibility/P10_NARRATOR_FEASIBILITY_20261116.json",
+      "sha256": "6313be94b65c4c3d658ce92b566592511acf69707205d445f7c68c82b86e3544",
+      "decision": "BLOCKED_RELIABLE_AUTOMATIC_NARRATOR_TRANSCRIPT_WITHOUT_INTERACTIVE_AUDIO_SESSION"
+    },
+    "p10NativeBlurInitial": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_RECEIPT_20261116.json",
+      "sha256": "61252852a5ec83870264f48a64d41b01c56e07b111f2cbfdfa8f32e11c14c114",
+      "status": "FAILED_OR_BLOCKED",
+      "exactFailure": "AssertionError('Chrome remained document-focused')"
+    },
+    "p10NativeBlurV2": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_V2_RECEIPT_20261116.json",
+      "sha256": "ce6963391c930130a817eeffe8f6f83c33ccc429020c4825ae0963f0d5826687",
+      "status": "FAILED_OR_BLOCKED",
+      "exactFailure": "AssertionError('foreground HWND unchanged')"
+    },
+    "p10ForcedColorsEmulated": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-forced-colors/P10_CHROME_EMULATED_FORCED_COLORS_20261116.json",
+      "sha256": "410ef2b20c936b5e292cd2d15c69ad322badb05904044e7cb96796ab2a08e97d",
+      "status": "PASS_EMULATED_FORCED_COLORS_BOUNDED_DOM_CHECKS",
+      "scope": "CHROME_FORCED_COLORS_MEDIA_EMULATION_NOT_NATIVE_WINDOWS_HIGH_CONTRAST"
+    },
+    "p10ForcedColorsScreenshot": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-forced-colors/P10_CHROME_EMULATED_FORCED_COLORS_1366x768_20261116.png",
+      "sha256": "a1e86d366f71c82f84f07b3c7de2de51fde5eb54570ee4adcc25efa83282a991",
+      "bytes": 59776
+    }
+  },
+  "runtimeIntegrity": {
+    "authority": "P07 canonicalRuntimeSHA256",
+    "expectedCount": 39,
+    "freshMatchedCount": 39,
+    "mismatchCount": 0,
+    "status": "PASS_39_OF_39_EXACT_SHA_MATCH",
+    "note": "Fresh file-by-file canonical SHA256 comparison was performed against P07 final authority; no source/runtime mismatch was found."
+  },
+  "p09Review": {
+    "finalHashMatchesExpected": true,
+    "mathematicalHomographyChecks": {
+      "baseNumericalChecks": 16,
+      "cornerPerturbations": 256,
+      "interpretation": "PASS only for bounded numerical stability of the restricted image-space homography evidence. It is not camera calibration, OEM pixel truth, physical geometry or rights evidence."
+    },
+    "restrictedPhotoFinding": "Only dual.jpg and zoom.jpg retain restricted rounded-aperture in-memory normalization status; active LCD ROI remains HOLD 8/8 and six precise class-B ROIs remain HOLD."
+  },
+  "nativeBlurReview": {
+    "nativeOsBlurPass": false,
+    "initialReceipt": {
+      "status": "FAILED_OR_BLOCKED",
+      "failureStage": "real keyboard held and helper Win32 foreground steal",
+      "exactFailure": "AssertionError('Chrome remained document-focused')"
+    },
+    "v2Receipt": {
+      "status": "FAILED_OR_BLOCKED",
+      "failureStage": "real keyboard held and helper Win32 foreground steal",
+      "beforeHwnd": 5769834,
+      "duringHwnd": 5769834,
+      "beforeTitle": "Tiếp tục kiểm thử P07 - Helium",
+      "duringTitle": "Tiếp tục kiểm thử P07 - Helium",
+      "documentFocusBeforeOrDuring": true,
+      "exactFailure": "AssertionError('foreground HWND unchanged')"
+    },
+    "foregroundInterpretation": "The recorded Win32 foreground HWND and title remained the existing Helium window before and during the attempted focus steal. Therefore the dedicated test Chrome was not proven to become the native Win32 foreground window and no genuine native OS window blur was demonstrated.",
+    "eventProvenanceConflict": {
+      "receiptField": "real Win32 foreground change, browser window native Event.isTrusted",
+      "reviewFinding": "CONTRADICTED_BY_V2_DIAGNOSTICS_FOR_FOREGROUND_CHANGE",
+      "reason": "beforeHwnd equals duringHwnd and both titles are Helium; Event.isTrusted/document.hasFocus cannot substitute for an actual Win32 foreground-window transition."
+    },
+    "requiredStatus": "NOT_VERIFIED_FAILED_OR_BLOCKED",
+    "mustNotBePromotedTo": "PASS_GENUINE_WIN32_BLUR_CANCELS_POWER_HOLD"
+  },
+  "forcedColorsReview": {
+    "receiptHashMatches": true,
+    "screenshotHashAndByteSizeMatchReceipt": true,
+    "visualScreenshotInspected": true,
+    "softwareEmulationPass": true,
+    "forcedColorsMediaMatch": true,
+    "focusedControl": "key-power",
+    "focusOutline": "solid 3px",
+    "d15TabsWithNames": 5,
+    "horizontalOverflow": false,
+    "nativeWindowsHighContrastOrForcedColors": "NOT_RUN",
+    "realOsWindowBlur": "NOT_VERIFIED",
+    "interpretation": "This is a valid bounded Chrome media-emulation/software rendering result only. It is not evidence that Windows High Contrast/forced-colors was actually enabled at OS level."
+  },
+  "spokenOutputReview": {
+    "narratorProcessRunningAtReview": false,
+    "narratorRunningStateRegistry": 0,
+    "narratorActualSpeech": "BLOCKED_NOT_CAPTURED",
+    "reliableNarratorTranscript": "BLOCKED",
+    "nvdaProcessRunning": false,
+    "nvdaStandardExecutablePathsFound": 0,
+    "nvdaCommandFound": false,
+    "nvdaUninstallRegistryMatch": false,
+    "nvdaStatus": "MISSING_NOT_DISCOVERABLE_IN_BOUNDED_STANDARD_CHECKS",
+    "semanticBoundary": "DOM/UIA/ARIA readiness is software evidence only and must not be represented as actual Narrator/NVDA spoken output."
+  },
+  "portAndProcessReview": {
+    "port4173": {
+      "listenCount": 1,
+      "localAddress": "127.0.0.1",
+      "pid": 1204,
+      "process": "node.exe",
+      "executable": "C:\\nvm4w\\nodejs\\node.exe",
+      "commandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" tools/server.mjs",
+      "status": "LISTENING_UNTOUCHED"
+    },
+    "port4208": {
+      "listenCount": 0,
+      "status": "CLOSED"
+    }
+  },
+  "claimClassification": {
+    "softwareAndMathematicalEvidence": {
+      "runtime39AgainstP07": "VERIFIED_PASS",
+      "p09RestrictedHomographyNumerics": "VERIFIED_BOUNDED_PASS",
+      "chromeForcedColorsEmulation": "VERIFIED_BOUNDED_PASS"
+    },
+    "actualNativeEvidence": {
+      "windowsForegroundBlur": "NOT_VERIFIED_FAILED_OR_BLOCKED",
+      "narratorSpeech": "BLOCKED_NOT_RUN",
+      "nvdaSpeech": "BLOCKED_NVDA_MISSING",
+      "nativeWindowsHighContrastForcedColors": "NOT_VERIFIED_NOT_RUN"
+    },
+    "prohibitedUpgrade": "No P10 evidence supports full native accessibility PASS, genuine Windows blur PASS, Narrator/NVDA speech PASS, or native Windows forced-colors PASS."
+  },
+  "blockingFindings": [
+    "Native OS window blur remains unverified because the Win32 foreground window did not change from Helium during V2.",
+    "Narrator actual spoken output/transcript remains blocked and was not captured.",
+    "NVDA is not discoverable on standard paths, command lookup or uninstall registry checks.",
+    "Windows native High Contrast/forced-colors was not run; only Chrome media emulation passed."
+  ],
+  "reviewRecommendation": "ACCEPT the P10 packet only as integrity-preserved software/mathematical/emulated evidence with explicit native gaps. RETAIN the two native blur receipts as FAIL/BLOCKED evidence, keep Narrator/NVDA/native forced-colors NOT_VERIFIED, and do not claim full P10 native accessibility completion.",
+  "operations": {
+    "sourceEdited": false,
+    "runtimeEdited": false,
+    "canonicalEdited": false,
+    "browserLaunched": false,
+    "desktopFocusChanged": false,
+    "windowsSettingsChanged": false,
+    "port4173Changed": false,
+    "port4208Changed": false,
+    "oldEvidenceModified": false,
+    "receiptWriteOnce": true
+  }
+}

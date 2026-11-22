@@ -1,0 +1,1735 @@
+{
+  "schemaVersion": 1,
+  "profileClass": "PUBLIC_REFERENCE",
+  "hardwareValidated": false,
+  "firmwareInstalled": null,
+  "claimCeiling": "PUBLIC_REFERENCE_CONFORMANT",
+  "sourceResearchDocument": "docs/research/FCV588_FEATURE_REGISTER_DRAFT.json",
+  "sourcePolicy": "Existing independently-authored curated research notes only; no newly extracted OEM media.",
+  "rows": [
+    {
+      "featureId": "A01",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "Sản phẩm, §1.1 tr.1"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A02",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.1 tr.1"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A03",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.2 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A04",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.3 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A05",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4 tr.2–4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A06",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.1 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A07",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.2 tr.3"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A08",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.3 tr.3–4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A09",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.4 tr.4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A10",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.5 tr.5, §2.2 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A11",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.6 tr.5–6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A12",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.7 tr.6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A13",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.8 tr.7, §1.22 tr.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A14",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.9 tr.7–8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A15",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.10 tr.8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A16",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.19 tr.18–19, §2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "A17",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B01",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.4, §1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B02",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.11 tr.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B03",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.12 tr.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B04",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.13 tr.10"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B05",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.14 tr.10"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B06",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder tr.22–23"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B07",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder, software history"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B08",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder tr.22–23"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B09",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B10",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B11",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B12",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B13",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder, §2.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B14",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.17 tr.14"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B15",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.15 tr.11–12"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B16",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.16 tr.13–14"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B17",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.15–1.17, §2.7"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B18",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Display tr.23–24"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B19",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Display, software history"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "B20",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.10, §1.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C01",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C02",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C03",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C04",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C05",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C06",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C07",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C08",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.20 tr.18–21"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C09",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.20 tr.19–21"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C10",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.4.4, §1.21 tr.20–22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C11",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.22 Data tr.24–25"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C12",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.21–1.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "C13",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.22 Data / §2.6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D01",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.1 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_FW_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D02",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.2 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D03",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D04",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.4 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D05",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.5 tr.27"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D06",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.6 tr.27–28"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D07",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.7 tr.28, sản phẩm"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D08",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.8 tr.28"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D09",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.9 tr.29"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_OPT",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D10",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.2–3.3"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D11",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.7, §3.8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D12",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D13",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§1–3 / cần máy thật"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_CORE_FW",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D14",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "Menu System/NMEA, phần giao tiếp"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "authorityTier": "MANUFACTURER_MANUAL",
+      "evidenceMode": "CURATED_MANUAL_NOTES",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "profileIds": [
+        "FCV588_PUBLIC_DEMO_UNKNOWN_FW"
+      ],
+      "guardExpression": "DRAFT_DATA",
+      "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "unknowns": [
+        "installed firmware and hardware options unknown",
+        "exact operator interaction and visible result require public-source check"
+      ],
+      "implementationStatus": "OPEN",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED"
+    },
+    {
+      "featureId": "D15",
+      "scope": "INSTRUCTOR_PLATFORM",
+      "domain": "system_diagnostics",
+      "manualRefs": [],
+      "publicSourceIds": [],
+      "authorityTier": "INTERNAL_TRAINING",
+      "evidenceMode": "INDEPENDENT_PLATFORM_TEST",
+      "rightsDecision": "ORIGINAL_PLATFORM_CODE",
+      "profileIds": [],
+      "guardExpression": "TEACHER_ONLY",
+      "sourceStatus": "PLATFORM_ONLY",
+      "unknowns": [],
+      "implementationStatus": "SIMULATED_APPROXIMATION",
+      "courseReviewStatus": "NOT_REVIEWED",
+      "claimDecision": "HOLD_UNTIL_IMPLEMENTED_AND_REVIEWED",
+      "platformQaStatus": "SIMULATED_ONLY"
+    }
+  ],
+  "additionalMenuCoverage": [
+    {
+      "menuArea": "APPENDIX_1_MENU_TREE",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "INSTALLATION_4_9_IEC",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "INSTALLATION_4_10_SETUP",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "SYSTEM_TANKENMARU_NMEA_BRANCH",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    }
+  ]
+}

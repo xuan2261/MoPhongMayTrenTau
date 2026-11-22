@@ -1,0 +1,34 @@
+{
+  "timestampUtc": "2026-10-31T04:38:01.4085301Z",
+  "status": "V57_CANONICAL_GUARDED_HEADER_COMPACT_APPLY_SHA_MATCH",
+  "v56ParentSealSHA256": "96e95ddf1dc54f327e25320e55a182f30daff4155f23a30bf8b711bd2998cde3",
+  "v56RuntimePinsVerified": 38,
+  "canonicalPreimageSHA256": {
+    "web/index.html": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243",
+    "web/styles.css": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef",
+    "web/lcd-instructor-meta.mjs": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+  },
+  "stagedSourceSHA256": {
+    "web/index.html": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b",
+    "web/styles.css": "6e59612e6883bcf6d5f288e683502d4b7cde3ddabb7572c160e444933a4a807f",
+    "web/lcd-instructor-meta.mjs": "f95e53b879ae5e30df74755547725db102694e4a0cf830fe88487785d5792e75"
+  },
+  "canonicalPostimageSHA256": {
+    "web/index.html": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b",
+    "web/styles.css": "6e59612e6883bcf6d5f288e683502d4b7cde3ddabb7572c160e444933a4a807f",
+    "web/lcd-instructor-meta.mjs": "f95e53b879ae5e30df74755547725db102694e4a0cf830fe88487785d5792e75"
+  },
+  "newTest": "test/fcv588-v57-header-compact.test.mjs",
+  "newTestSHA256": "cf472ff1f527f8c1e16377cbb01f322b140a0688b9538712e4efcfed1d24e178",
+  "changedExistingFiles": [
+    "web/index.html",
+    "web/styles.css",
+    "web/lcd-instructor-meta.mjs"
+  ],
+  "newTestFiles": [
+    "test/fcv588-v57-header-compact.test.mjs"
+  ],
+  "noChangesToDeviceReducerSonarReplayFirmware": true,
+  "noBackup": true,
+  "diskD": "NOT_ACCESSED"
+}

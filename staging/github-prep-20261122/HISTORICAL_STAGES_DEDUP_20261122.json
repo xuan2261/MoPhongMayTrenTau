@@ -1,0 +1,14 @@
+{
+  "schema": "FCV588HistoricalContentStoreV1",
+  "archive": "HISTORICAL_STAGES_DEDUP_20261122.zip",
+  "archiveSHA256": "1f9979b58f8282aa39385b8027b3e013f81a2dda733d499c2456d38dd522b94a",
+  "archiveBytes": 253397889,
+  "manifestSHA256": "51344f216b27196f30b213db5dfb1fc689b91e1adfbd051f9287f014c7cdf7da",
+  "fileCount": 19502,
+  "stageRoots": 40,
+  "junctions": 24,
+  "uniqueBlobs": 2950,
+  "originalBytes": 1657539303,
+  "uniqueBytes": 284783986,
+  "status": "LOOSE_HISTORICAL_STAGES_RETIRED_AFTER_QA"
+}

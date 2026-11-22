@@ -1,0 +1,17 @@
+{
+  "schema": "FCV588_P30_PROFILE_COMPAT_V1",
+  "status": "PASS",
+  "profile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P30_INSTALLER_20261121\\profile-p29-p30-p29-upgrade-v1",
+  "source": "P29",
+  "middle": "P30_NATIVE",
+  "end": "P29",
+  "steps": [
+    "P29_SEEDED_EXACT_SETTINGS",
+    "P30_NATIVE_PROCESS_ALIVE_SAME_QA_PROFILE",
+    "P29_REOPEN_EXACT_SETTINGS_AFTER_P30"
+  ],
+  "releaseApproval": "HOLD",
+  "installerExecuted": false,
+  "p30NativePid": 21576,
+  "settingsSHA256": "1a01885c751731670d802ce929db3c72f210abbf0112042648f9983b1c92b4ce"
+}

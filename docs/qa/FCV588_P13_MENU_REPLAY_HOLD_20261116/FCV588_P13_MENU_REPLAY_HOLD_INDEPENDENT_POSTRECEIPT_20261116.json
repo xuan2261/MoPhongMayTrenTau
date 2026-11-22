@@ -1,0 +1,17 @@
+{
+  "applyDecision": "NO_GO_PROFILE21_HISTORICAL_SEMANTIC_DRIFT",
+  "createdAt": "2026-11-16T17:19:48.352359+07:00",
+  "finalPath": "docs/qa/FCV588_P13_MENU_REPLAY_HOLD_20261116/FCV588_P13_MENU_REPLAY_HOLD_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "5677a5db225e96e1412df4ea2776232081b050c3685b41b68bb2af89466b84db",
+  "freshReadback": {
+    "boundEvidence": 13,
+    "canonicalRuntime": "39/39",
+    "liveSourceBodyRehash": "72/72",
+    "originalReferencePhotos": "8/8",
+    "screenshots": 8,
+    "server4173": "HTTP200 PID1204"
+  },
+  "note": "Independent gate and browser reviewers, plus fresh local byte readback. This is not a profile21 compatibility PASS, no deploy or OEM certification.",
+  "schema": "fcv588-p13-menu-order-replay-guard-independent-postreceipt-v1",
+  "status": "PASS_INDEPENDENT_EVIDENCE_AND_LOCAL_READBACK_CANONICAL_APPLY_NO_GO"
+}

@@ -1,0 +1,6 @@
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for @electron/packager@17.1.2.
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in: C:\Users\Z10PAD8C_Xuan2261\AppData\Local\npm-cache\_logs\2026-11-21T07_55_02_946Z-debug-0.log

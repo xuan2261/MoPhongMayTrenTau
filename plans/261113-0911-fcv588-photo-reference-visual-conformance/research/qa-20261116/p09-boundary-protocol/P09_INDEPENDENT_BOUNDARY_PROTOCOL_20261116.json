@@ -1,0 +1,235 @@
+{
+  "schema": "fcv588-p09-independent-photo-boundary-protocol-v1",
+  "createdAt": "2026-11-16T10:56:12.7485820+07:00",
+  "reviewerId": "worker-1",
+  "scope": "RESTRICTED_READ_ONLY_PHOTO_SPACE_BOUNDARY_ANNOTATION_PROTOCOL",
+  "decision": "GO_PROTOCOL_AND_TWO_APERTURE_QUADS_HOLD_ACTIVE_CONTENT_AND_OTHER_SIX_PRECISE_ROIS",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "priorEvidence": {
+    "p08Independent": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-independent-photo/P08_INDEPENDENT_ROI_AUDIT_20261116.json",
+      "sha256": "e35441fe7de4723aad5d891311022a3935244aa21282e02dc0736d19682400a6"
+    },
+    "p08PrimaryCandidates": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-roi/P08_LCD_ROI_UNCALIBRATED_CANDIDATES_20261116.json",
+      "sha256": "b1ec545fb9ad19b4086baa1c303a2b7a7ada81a6991a28a83e75b64b9255cd3b"
+    },
+    "p08InterRaterCrosscheck": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-roi/P08_ROI_INTER_RATER_CROSSCHECK_20261116.json",
+      "sha256": "c6c075f55a18ec23ddeaadcfd5b3fe43949e0ca2d52da8c40c8a3345d62314d8",
+      "result": "PASS_DISCREPANCY_DETECTED_HOLD_PRECISE_ROI"
+    },
+    "notBlind": true,
+    "note": "Reviewer had seen and produced P08 evidence; P09 is a definition-and-repeatability audit, not a blinded re-pick."
+  },
+  "boundaryClasses": {
+    "A_ACTIVE_DISPLAY_INNER_CONTENT": {
+      "definition": "the true rectangular active pixel/content boundary of the LCD plane, excluding bezel/aperture/glass fringe",
+      "cornerMeaning": "physical/raster rectangle corners, not virtual tangent intersections",
+      "finding": "HOLD_ALL_8",
+      "reason": "the true raster rectangle extends behind or is clipped by the rounded visible aperture; the photographs provide no consistent inactive-margin witness separating raster edge from glass/aperture at all four corners. Bright/blue fringe, moire and displayed content create competing transitions. Four true active-content corners are therefore not directly observable.",
+      "newPointsIssued": false
+    },
+    "B_ROUNDED_INNER_APERTURE_VIRTUAL_QUAD": {
+      "definition": "the visible rounded inner aperture boundary; because physical corners are rounded, each reported virtual corner is the intersection of robust straight-line fits to the central non-rounded portions of adjacent aperture edges",
+      "cornerMeaning": "analytical virtual tangent intersection, not a physical curved-corner pixel and not the hidden LCD panel corner",
+      "allowedUse": "restricted image-space normalization/homography of the visible LCD aperture only",
+      "forbiddenUse": [
+        "physical millimetre inference",
+        "OEM framebuffer or native pixel conformity",
+        "bezel/key/knob geometry calibration",
+        "OEM RGB/font/glyph/detent conformity",
+        "runtime CSS constants",
+        "saved/served photo derivatives"
+      ]
+    }
+  },
+  "protocol": {
+    "sourceIdentity": "rehash each original JPEG before annotation",
+    "visualInspection": "directly re-inspect all eight originals with local image viewer",
+    "edgeSelection": "for class B, use only central straight edge runs and exclude rounded-corner zones; do not trace every pixel",
+    "repeatabilityProbe": "repeat local edge-normal picks with Scharr and Sobel gradients and even/odd scan sampling; robustly fit each of four lines and intersect them",
+    "acceptNewNumericClassBPointsOnlyIf": [
+      "all four central straight aperture runs are visible and not materially occluded",
+      "maximum pairwise corner spread across the four repeat fits is <= 3 px",
+      "maximum local straight-line fit residual is <= 8 px",
+      "new virtual corners remain within the prior P08 primary declared 20 px edge ambiguity at every corner",
+      "direct visual review does not indicate the fitted line is an internal header/content/divider transition"
+    ],
+    "uncertaintyPolicy": "reported uncertainty must cover both repeat-fit spread and prior P08 class-selection disagreement; it is not a statistical confidence interval",
+    "imageDerivativesWritten": false
+  },
+  "photos": [
+    {
+      "name": "giaoDien.jpg",
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 0.34,
+        "maxLocalFitResidualPx": 3.84,
+        "maxDistanceFromP08PrimaryPx": 22.0,
+        "perspectiveAnglesDeg": {"top":-1.46,"bottom":1.88,"leftTilt":-1.33,"rightTilt":-0.70},
+        "ambiguity": "bottom/right aperture-versus-content selection exceeds prior 20 px ambiguity; menu/depth content creates a competing lower transition",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    },
+    {
+      "name": "lf.jpg",
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 1.35,
+        "maxLocalFitResidualPx": 6.53,
+        "maxDistanceFromP08PrimaryPx": 21.0,
+        "perspectiveAnglesDeg": {"top":-3.09,"bottom":2.18,"leftTilt":0.43,"rightTilt":1.50},
+        "ambiguity": "top-right boundary class remains just outside the prior 20 px ambiguity; strong sonar/header transitions compete with aperture edge",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    },
+    {
+      "name": "hf.jpg",
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 0.93,
+        "maxLocalFitResidualPx": 3.75,
+        "maxDistanceFromP08PrimaryPx": 24.3,
+        "perspectiveAnglesDeg": {"top":-2.51,"bottom":0.67,"leftTilt":-1.28,"rightTilt":0.01},
+        "ambiguity": "lower blue/purple fringe makes active-content-versus-aperture bottom selection differ by >20 px",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    },
+    {
+      "name": "dual.jpg",
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 1.47,
+        "maxLocalFitResidualPx": 3.42,
+        "maxDistanceFromP08PrimaryPx": 14.3,
+        "perspectiveAnglesDeg": {"top":-3.19,"bottom":1.76,"leftTilt":-0.95,"rightTilt":-0.72},
+        "status": "ACCEPT_RESTRICTED_CLASS_B_VIRTUAL_QUAD",
+        "cornersPxTL_TR_BR_BL": [[80,390],[458,369],[451,934],[71,922]],
+        "uncertaintyPx": 16,
+        "confidence": "MEDIUM",
+        "use": "in-memory aperture-plane normalization only"
+      }
+    },
+    {
+      "name": "zoom.jpg",
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 1.80,
+        "maxLocalFitResidualPx": 5.69,
+        "maxDistanceFromP08PrimaryPx": 16.6,
+        "perspectiveAnglesDeg": {"top":-3.51,"bottom":0.29,"leftTilt":-0.22,"rightTilt":-2.11},
+        "status": "ACCEPT_RESTRICTED_CLASS_B_VIRTUAL_QUAD",
+        "cornersPxTL_TR_BR_BL": [[59,296],[475,270],[452,878],[57,876]],
+        "uncertaintyPx": 18,
+        "confidence": "MEDIUM",
+        "use": "in-memory aperture-plane normalization only"
+      }
+    },
+    {
+      "name": "zoom2.jpg",
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 1.75,
+        "maxLocalFitResidualPx": 6.87,
+        "maxDistanceFromP08PrimaryPx": 36.2,
+        "perspectiveAnglesDeg": {"top":-3.60,"bottom":-5.71,"leftTilt":0.47,"rightTilt":-2.02},
+        "ambiguity": "largest class-selection discrepancy in set, especially bottom-right; rounded aperture/bright bottom/fringe do not support a precise class-B annotation",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    },
+    {
+      "name": "nav1.jpg",
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 2.45,
+        "maxLocalFitResidualPx": 7.61,
+        "maxDistanceFromP08PrimaryPx": 30.6,
+        "perspectiveAnglesDeg": {"top":-3.44,"bottom":4.43,"leftTilt":-0.13,"rightTilt":-0.62},
+        "ambiguity": "bottom-left and right sonar-strip transitions create aperture-versus-content disagreement >20 px",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    },
+    {
+      "name": "nav2.jpg",
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "imageSizePx": [590,1280],
+      "classA": {"fourCornersDefinable": false,"repeatable": false,"status": "HOLD_TRUE_ACTIVE_CONTENT_CORNERS_NOT_VISIBLE"},
+      "classB": {
+        "fourVirtualCornersDefinable": true,
+        "repeatFitMaxSpreadPx": 0.54,
+        "maxLocalFitResidualPx": 3.31,
+        "maxDistanceFromP08PrimaryPx": 26.1,
+        "perspectiveAnglesDeg": {"top":-3.78,"bottom":-0.16,"leftTilt":0.68,"rightTilt":-2.42},
+        "ambiguity": "bottom blue/fringe boundary differs materially from the P08 aperture hypothesis despite very stable local edge fitting, demonstrating semantic rather than numerical ambiguity",
+        "status": "HOLD_PRECISE_CLASS_B_POINTS",
+        "newPoints": null
+      }
+    }
+  ],
+  "acceptanceRecommendation": {
+    "protocol": "GO",
+    "activeDisplayInnerContentFourCornerCalibration": "HOLD_ALL_8",
+    "roundedInnerApertureVirtualQuad": {
+      "dual.jpg": "GO_RESTRICTED",
+      "zoom.jpg": "GO_RESTRICTED",
+      "giaoDien.jpg": "HOLD",
+      "lf.jpg": "HOLD",
+      "hf.jpg": "HOLD",
+      "zoom2.jpg": "HOLD",
+      "nav1.jpg": "HOLD",
+      "nav2.jpg": "HOLD"
+    },
+    "homography": "only dual.jpg and zoom.jpg have P09-accepted class-B virtual quads for restricted in-memory image-space normalization; all stronger or other-image homography claims remain HOLD",
+    "p08Effect": "P08 coordinates remain preserved as hypotheses/evidence. P09 narrows acceptance by separating boundary classes; it does not rewrite or invalidate prior immutable reports."
+  },
+  "rightsAndClaims": {
+    "sourcePhotos": "REFERENCE_ONLY",
+    "rightsOwner": "UNKNOWN",
+    "derivativeRedistribution": "HOLD",
+    "servedRuntimeUse": "DENIED_UNTIL_CLEARANCE",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "release": "HOLD",
+    "oemFidelityPercentClaim": null,
+    "physicalMmInference": "PROHIBITED"
+  },
+  "operations": {
+    "sourceEdited": false,
+    "runtimeEdited": false,
+    "canonicalEdited": false,
+    "originalPhotosEdited": false,
+    "imageDerivativesWritten": false,
+    "browserLaunched": false,
+    "server4173Changed": false,
+    "networkUsed": false,
+    "writesOutsideReportFolder": false,
+    "reportWriteOnce": true
+  }
+}

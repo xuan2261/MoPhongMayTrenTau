@@ -1,0 +1,329 @@
+{
+  "atUtc": "2026-10-19T04:04:51.562491+00:00",
+  "status": "V44_CANONICAL_TEST_ONLY_MIXED_BRILL_PAD_QA_RECONCILED_PHASE6_HOLD",
+  "scope": "V44_FCV588_PUBLIC_REFERENCE_BRILL_PAD_TEST_ONLY",
+  "supervisor": "USER_AUTHORIZED_GPT6_SELF_REVIEW_NOT_INDEPENDENT_OEM",
+  "parentV43FinalSHA": "13e713bf6397561a0d42219462fd7c0c5bfb02d0e2aff16b0b8280ca50e8336e",
+  "parentV43PostreceiptSHA": "7abfc97db2816e24a41cc3980e66b08340e407f6954e3ff032cc260ae9e03d14",
+  "stagingBaselineSHA": "3fbf7cbc7ca78faf679a0c3c35ab70bc2eb725f7893103cff737dd4aba4b8c4b",
+  "stagingManifestSHA": "953e2c3761ce1ad383b1a3a08fd4c27c77a9f6921918194fdf22c93c20b9fa4e",
+  "stagingGPT6GOsha": "89f6d830c4036e93a9c9c997b18fd7ce8987df7e4f56b9dee6737a55241eae8f",
+  "stagingManifestValidatorStopSHA": "b407f13f122b0d60cd61bb5885c1cd724faf072e06dc3ff88b1328fefa33a63d",
+  "canonicalApplyReceiptSHA": "b1d9e6a596cbf90e3471eeb2ba655b9520654de9cfc9bd3f2e6665e85534fbe1",
+  "runtimeSourceSHA": 37,
+  "runtimeSourceChanged": 0,
+  "runtimeSourceHashes": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+    "src/devices/fcv588/menu-atlas.mjs": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+  },
+  "profileRevision": "F1-public-reference-21",
+  "addedCanonicalTestSHA": "a52825b11fc8ae0b5b03ac54dd1ccacf6133c1d7cf2d3595491c2194531dc335",
+  "addedCanonicalAtlasSHA": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2",
+  "canonicalNewFiles": [
+    {
+      "expectedSHA": "a52825b11fc8ae0b5b03ac54dd1ccacf6133c1d7cf2d3595491c2194531dc335",
+      "actualSHA": "a52825b11fc8ae0b5b03ac54dd1ccacf6133c1d7cf2d3595491c2194531dc335",
+      "path": "test/fcv588-v44-brill-pad-contract.test.mjs"
+    },
+    {
+      "expectedSHA": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2",
+      "actualSHA": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2",
+      "path": "docs/research/FCV588_V44_BRILL_PAD_SOURCE_ATLAS_20261019.md"
+    }
+  ],
+  "stageFocusedNode": 7,
+  "stageMutationFailed": 6,
+  "stageRestoredGreenNode": 7,
+  "stageFullNode": 491,
+  "canonicalTargetedNode": 13,
+  "canonicalFullNode": 491,
+  "canonicalPostdocumentNode": 491,
+  "stagePython": 13,
+  "canonicalPython": 13,
+  "stageBrowserAssertions": 114,
+  "stageBrowserResponseSHA": 210,
+  "canonicalBrowserAssertions": 114,
+  "canonicalBrowserResponseSHA": 210,
+  "stageBrowser": {
+    "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_STAGE_BRILL_PAD_CHROME_20261019.json",
+    "sha256": "0424aae2ff13ca0a1bc57e819d388b56711627a1d8d566e13639767c562c8490",
+    "assertions": 114,
+    "actualBrowserResponseSHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-320x720-power-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-320x720-mixed-preview-7.png",
+        "sha256": "65d0be8c539004b7be7c661e26b87ded8e447e0d038765c1a9bc2cabada21013"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-375x812-power-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-375x812-mixed-preview-7.png",
+        "sha256": "e371f799c974a9231d2b3cd7881267463167d23b241892d434fad78bd0b85df6"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-768x1024-power-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-768x1024-mixed-preview-7.png",
+        "sha256": "e7acf89cd50a98cdd71d9dd870076ec7c791d4eef70bfba7dafb012f9c18f71a"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1366x768-power-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1366x768-mixed-preview-7.png",
+        "sha256": "681f13bd0256f7dc90622baf313e7bf3631c02af0bb8004a3bd9d652b10f7ae7"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1440x900-power-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1440x900-mixed-preview-7.png",
+        "sha256": "fa85aa1f492123ac9651ed9a682878332aa8658962afbc6ab05ee7993676e2e1"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1920x1080-power-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-stage-brill-pad-1920x1080-mixed-preview-7.png",
+        "sha256": "c528cf3ff710c3cdb562f94c76a8f3f6e33a37634ca1d325f1379da6a7094205"
+      }
+    ]
+  },
+  "canonicalBrowser": {
+    "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_CANONICAL_BRILL_PAD_CHROME_20261019.json",
+    "sha256": "491a7c1a438eaf7b2af2e4c3c8f931f81f16f12aa3bf3a75a35a27ba31c23bc0",
+    "assertions": 114,
+    "actualBrowserResponseSHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-320x720-power-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-320x720-mixed-preview-7.png",
+        "sha256": "65d0be8c539004b7be7c661e26b87ded8e447e0d038765c1a9bc2cabada21013"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-375x812-power-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-375x812-mixed-preview-7.png",
+        "sha256": "e371f799c974a9231d2b3cd7881267463167d23b241892d434fad78bd0b85df6"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-768x1024-power-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-768x1024-mixed-preview-7.png",
+        "sha256": "e7acf89cd50a98cdd71d9dd870076ec7c791d4eef70bfba7dafb012f9c18f71a"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1366x768-power-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1366x768-mixed-preview-7.png",
+        "sha256": "681f13bd0256f7dc90622baf313e7bf3631c02af0bb8004a3bd9d652b10f7ae7"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1440x900-power-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1440x900-mixed-preview-7.png",
+        "sha256": "fa85aa1f492123ac9651ed9a682878332aa8658962afbc6ab05ee7993676e2e1"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1920x1080-power-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v44-brill-pad-transition/evidence/screenshots/v44-canonical-brill-pad-1920x1080-mixed-preview-7.png",
+        "sha256": "c528cf3ff710c3cdb562f94c76a8f3f6e33a37634ca1d325f1379da6a7094205"
+      }
+    ]
+  },
+  "newV44ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": {
+    "V43": 24,
+    "V41": 24,
+    "V40": 24,
+    "V36_V38": 127
+  },
+  "historicalScreenshotsTotalSHA": 199,
+  "pythonFixtureScreenshotsSHA": 16,
+  "nodeLogs": {
+    "stageBaseline": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_FOCUSED_BASELINE_20261019.log",
+      "sha256": "efd933fb5fd1daa47348b47fb282b99d5e98af2a6763fbf67b114507b504ce58",
+      "total": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "stageMutationRed": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_INTENTIONAL_PAD_TIMER_MUTANT_RED_20261019.log",
+      "sha256": "f49f5a34c8c5b33720e4b25bddf45840bcc7038840d8e5aac0f3328adb7fb91d",
+      "total": 7,
+      "passed": 1,
+      "failed": 6
+    },
+    "stageRestoredGreen": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_FOCUSED_RESTORED_GREEN_20261019.log",
+      "sha256": "0ffd5c1016c337984e35919d4f3941b59e925356bc013d48fc3b337cc8cdebc0",
+      "total": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "stageFull": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_STAGE_FULL_NODE_20261019.log",
+      "sha256": "1d32a2c1e8f7f8bf8c969ad57c908aa1e055c2a44f424c55519f91bf3b8da3f8",
+      "total": 491,
+      "passed": 491,
+      "failed": 0
+    },
+    "canonicalTargeted": {
+      "path": "docs/qa/FCV588_V44_CANONICAL_TARGETED_NODE_20261019.log",
+      "sha256": "06126a047737e6e72cc0335dfff8f4d5c3e2ec8c0c71f2a904800ef4092fce3b",
+      "total": 13,
+      "passed": 13,
+      "failed": 0
+    },
+    "canonicalFull": {
+      "path": "docs/qa/FCV588_V44_CANONICAL_FULL_NODE_20261019.log",
+      "sha256": "b9a2871ddbe3b90730ed0df58cb8c91ca00bfe272655149918775054f55986c5",
+      "total": 491,
+      "passed": 491,
+      "failed": 0
+    },
+    "canonicalPostdocument": {
+      "path": "docs/qa/FCV588_V44_POSTDOCUMENT_FULL_NODE_20261019.log",
+      "sha256": "2a7bbe7b530bac3aaa2933b6e5282d5c8f4209585e1d43abccf4bfe05ff8e5c6",
+      "total": 491,
+      "passed": 491,
+      "failed": 0
+    }
+  },
+  "pythonLogs": {
+    "stage": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_STAGE_PYTHON_20261019.log",
+      "sha256": "f3b537c2ad31b144ab57a2488750c9ac70e7725ee1a72508b78aa7992cb1fc05",
+      "passed": 13
+    },
+    "canonical": {
+      "path": "docs/qa/FCV588_V44_CANONICAL_PYTHON_20261019.log",
+      "sha256": "840b05a4b3db06c86e9788023772b87bad51a9dbf0eaabf9864bdebe56b697c2",
+      "passed": 13
+    }
+  },
+  "browserLogsSHA": {
+    "stage": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_STAGE_CHROME_RUN_20261019.log",
+      "sha256": "64b3527b4122bb196e41d177937c121976fad6bfa23e842b6173a7cc2d6d1750"
+    },
+    "canonical": {
+      "path": "staging/fcv588-v44-brill-pad-transition/evidence/V44_CANONICAL_CHROME_RUN_20261019.log",
+      "sha256": "37a2fcef9f94480f9a390782bdfe93491c00c407afbef0776c853fd82431996f"
+    }
+  },
+  "documentHashes": [
+    {
+      "path": "docs/research/FCV588_V44_BRILL_PAD_SOURCE_ATLAS_20261019.md",
+      "sha256": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2"
+    },
+    {
+      "path": "docs/qa/FCV588_V44_DESKTOP_MANUAL_PARTIAL_20261019.md",
+      "sha256": "aa52375c53f8dd6884d6409709256b4859135f61e7620191f5f2de01e00aa5bf"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-19-v44-integrated-brill-pad-qa.md",
+      "sha256": "b607982e8412ae78f1eca79cd35095f479c554eee2a79d279f1fd92608f4f7a2"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "174d86752b44855dff66c1c7c27c56328a3fca807e9cd9540311fe9775ebc519"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "2083a5d050f1bdb393d87474392ca1ff72065904bce9c8285feb41d6fb439e93"
+    }
+  ],
+  "httpReceiptSHA": "58ddf078592ab3793881379f16083eb88e6b24989e76e8b788be6070c37c0590",
+  "httpDenials": 4,
+  "actualCoSDesktopViewport": "1912x970",
+  "actualCoSDesktopManual": "PARTIAL_REAL_CLICKS_SOURCE_DIRECTION_GAP",
+  "actualCoSDesktopNetworkAllResponsesSHA": "NOT_RUN",
+  "actualCoSDesktopScreenshotFileSHA": "NOT_SAVED",
+  "ownedQaPortsClosed": {
+    "4227": true,
+    "4228": true
+  },
+  "mixedTrackPadShortBrillDirectionOEM": "SOURCE_GAP",
+  "brillUpDownOEM": "SOURCE_GAP",
+  "nativeExactDesktopViewports": "NOT_RUN",
+  "narratorNvdaSpokenOutput": "NOT_RUN",
+  "genuineOsWindowBlur": "NOT_RUN",
+  "firmwareInstalled": "UNKNOWN",
+  "oemRights": "HOLD",
+  "oemPixelEquivalent": "NOT_MEASURED",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "gitCommitted": false
+}

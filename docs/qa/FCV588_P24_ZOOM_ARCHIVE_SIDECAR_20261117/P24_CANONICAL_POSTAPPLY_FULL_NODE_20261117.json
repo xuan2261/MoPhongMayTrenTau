@@ -1,0 +1,24 @@
+{
+  "schema": "FCV588_P24_CANONICAL_POSTAPPLY_FULL_NODE_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "summary": {
+    "tests": "589",
+    "pass": "589",
+    "fail": "0",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "6497.2135"
+  },
+  "testFiles": 97,
+  "failures": [],
+  "logSHA256": "a0d89525a6c19c1b7d3f2761701e65a59b4a0d029dc750ab6e265cd5922f641e",
+  "newFilesSHA256": {
+    "src/devices/fcv588/archive-compat.mjs": "cf56fbf1c78395fd8df8cb5a67d0d39b907fa464fa7187bf0203925c29b81d18",
+    "test/fcv588-p24-zoom-archive.test.mjs": "ec6ebf908acee166f861c8a52d2b44362a318b356979ad12ec217d586b681445",
+    "test/fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d"
+  },
+  "originalRuntime50Unchanged": true,
+  "originalOEM8Unchanged": true
+}

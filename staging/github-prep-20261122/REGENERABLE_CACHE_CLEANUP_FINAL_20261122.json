@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED_GENERATED_CACHE_REMOVED",
+  "folderCount": 24,
+  "fileCount": 19742.0,
+  "logicalBytes": 443290683.0,
+  "manifestSHA256": "B4988DEC422B5A6245B51C28E1BC9F306D663E61107E0789460977A4FDDD1013",
+  "node": "618/618 PASS",
+  "python": "13/13 PASS",
+  "electron": "BUNDLE_ALLOWLIST_PASS",
+  "note": "Only Electron node_modules and 21 isolated QA profiles deleted; no source or historical builds."
+}

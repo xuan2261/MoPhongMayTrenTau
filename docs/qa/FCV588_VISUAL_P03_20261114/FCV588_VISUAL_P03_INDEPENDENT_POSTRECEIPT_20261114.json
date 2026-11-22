@@ -1,0 +1,35 @@
+{
+  "schema": "fcv588-visual-p03-independent-postreceipt-v1",
+  "timestampUtc": "2026-11-14T03:41:18.438367+00:00",
+  "status": "P03_INDEPENDENT_POSTRECEIPT_PASS_RIGHTS_HARDWARE_RELEASE_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_VISUAL_P03_20261114/FCV588_VISUAL_P03_FINAL_INTEGRITY_20261114.json",
+  "finalReceiptSHA256": "1132a7d8eae167a9afa60e5271bfec282b53b848054f3637cb973467fcd67c6d",
+  "finalIntegrityScriptSHA256": "faef5aff4ff881c2b42e4f486ed9fde4cb9f2d1105cfb9ea34aebce172f6261e",
+  "procedureSHA256": "86140468ddfac74aa9664b77565778442425ee96eb51a5fd7243b52f215fb480",
+  "recheckedRuntime": "39/39_STAGE_CANONICAL_MATCH",
+  "recheckedCanonicalTests": {
+    "node": "535/535_PASS",
+    "python": "13/13_PASS"
+  },
+  "recheckedBrowserReceipts": {
+    "stage": "0ad1664795693a4d5d8977b68adc1b81906e4d6d893439172710f870a06798bf",
+    "canonical": "61aac8d09e48e5aa948b9622b44e2516e848d2604928a423c7b7bbfa3f6dbcae"
+  },
+  "recheckedBrowserCases": "9/9_STAGE_AND_9/9_CANONICAL_PASS",
+  "recheckedScreenshots": "18/18_MATCH",
+  "recheckedBrowserDirectoryArtifacts": 32,
+  "recheckedPhotoReferences": "8/8_MATCH_REFERENCE_ONLY_AND_HTTP_DENIED",
+  "parentP02FinalSHA256": "15ff0baab0b8bbe213c52857b630341a426305a7cf64eae9c07d1ac55f447d53",
+  "parentP02PostreceiptSHA256": "ce4a103a52940d41f453e0a67c5cc2f7ef43a3ce16ee149461140b5bb68bd405",
+  "guardedBackupSHA256": "13091e895bd670a54a5ca7d04d36c56f76f3311fa8b9971ac7a43ba731092bba",
+  "guardedApplySHA256": "80244905d3090a6c7891ec7b4de7f3d6583835ba3df9f8983ac063776543912f",
+  "coreSceneReplayChanged": false,
+  "rightsClearance": false,
+  "hardwareValidated": false,
+  "firmwareInstalled": "UNKNOWN",
+  "featureClaims": "65/65_HOLD",
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "oemConformity": "NOT_CLAIMED",
+  "notes": "Independent filesystem re-read after final seal; no runtime writes and no promotion of rights/hardware/OEM/release claims."
+}

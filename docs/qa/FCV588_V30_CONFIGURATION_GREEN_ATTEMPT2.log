@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "error": null,
+  "receipt": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_CONFIGURATION_V30_GREEN_ATTEMPT2_RECEIPT.json",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": 61,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": 61,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "360x800",
+      "checks": 61,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "390x844",
+      "checks": 61,
+      "failed": [],
+      "executionError": null
+    }
+  ]
+}

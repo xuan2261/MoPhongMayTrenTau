@@ -1,0 +1,10 @@
+{
+  "schema": "FCV588_P26_SOURCE_VALID_RED_V1",
+  "status": "EXPECTED_SOURCE_VALID_RED",
+  "exitCode": 1,
+  "testSHA256": "f84a53673d8dbcbc55e103562027aa3d97aa704d8d4ec6f7915a6cb347b6e50b",
+  "logSHA256": "fc62616cc6d3a9317debb7e54e86426143abcc45f5e73b59ebca25a82e75a6ad",
+  "failure": "ERR_MODULE_NOT_FOUND: viewer module absent in P25 canonical",
+  "parentP25FinalSHA256": "3fdac61ebd16a1728e47d0a4382eb15f07597d98f5e161e3084cb4cbab541dff",
+  "canonicalTouched": false
+}

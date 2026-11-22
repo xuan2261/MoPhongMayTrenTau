@@ -1,0 +1,43 @@
+{
+  "schema": "FCV588_P30_NATIVE_KEYBOARD_V1",
+  "status": "FAILED",
+  "forcedAccessibility": true,
+  "controls": {
+    "POWER": {
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "type": "ControlType.Button",
+      "focusable": true,
+      "offscreen": false
+    },
+    "MODE": {
+      "name": "MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "type": "ControlType.Button",
+      "focusable": true,
+      "offscreen": false
+    },
+    "GAIN": {
+      "name": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "type": "ControlType.Button",
+      "focusable": true,
+      "offscreen": false
+    }
+  },
+  "checks": [
+    "BUTTON_GAIN_VISIBLE_AND_FOCUSABLE",
+    "BUTTON_MODE_VISIBLE_AND_FOCUSABLE",
+    "BUTTON_POWER_VISIBLE_AND_FOCUSABLE",
+    "GAIN_FOCUSED",
+    "TAB_GAIN_TO_MODE",
+    "TAB_MODE_TO_POWER",
+    "POWER_NATIVE_INVOKE_SENT"
+  ],
+  "errors": [
+    "System.Management.Automation.RuntimeException: GAIN_ARROW_NAME_DID_NOT_CHANGE"
+  ],
+  "focusLossContract": "NOT_YET_VERIFIED",
+  "releaseApproval": "HOLD",
+  "windowName": "MoPhongMayTrenTau | FCV-588 Public Reference",
+  "windowPID": 13820,
+  "descendantCount": 90,
+  "gainNameAfterArrow": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay."
+}

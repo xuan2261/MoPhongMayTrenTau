@@ -1,0 +1,96 @@
+{
+  "checks": {
+    "historicalP10AndP11Failures": "ALL_PRESERVED",
+    "nativeHighContrast": "NOT_RUN",
+    "nativeNarratorNvdaSpeech": "NOT_RUN_BLOCKED",
+    "originalReferencePhotos": "8/8",
+    "powerHoldCancelOnWindowBlur": "NOT_VERIFIED",
+    "powerSpaceKeyDown": "VERIFIED_IN_CHROME_ON_V3_AND_V4",
+    "realPhysicalHardwarePowerButton": "NOT_USED",
+    "runtimeP07Manifest": "39/39",
+    "testPorts4207_4208_4209_4211_4212_9225": "CLOSED",
+    "userServer4173": "HTTP200_LOOPBACK",
+    "win32ChromeForegroundBeforePower": "VERIFIED_ON_V3_AND_V4",
+    "win32SwitchToOwnedWitness": "VERIFIED_ON_V3_AND_V4",
+    "windowBlurAfterWin32Switch": "NOT_OBSERVED_ON_V3_AND_V4"
+  },
+  "createdAt": "2026-11-16T16:11:42.960585+07:00",
+  "evidence": {
+    "independentBaseline": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-baseline/P11_INDEPENDENT_BASELINE_20261116.json",
+      "sha256": "2474185023238fa8f707896f75783a0c11d2e8b1f92f0e36761f59f98e0a00d6"
+    },
+    "independentMethod": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-method/P11_WIN32_FOREGROUND_BLUR_METHOD_20261116.json",
+      "sha256": "b9d3586df5bbb1459ee68a478ce70652cd1a99e618edb5bc14c73161f4ef73b9"
+    },
+    "independentP11Review": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-review/P11_INDEPENDENT_REVIEW_20261116.json",
+      "sha256": "33df2e66e63ee173a5fca9293da7f2d26e0ed7a96a8ae6280c857b5291658667"
+    },
+    "nativeV1Failure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_20261116.json",
+      "sha256": "278ce6ea6ee9cbb08019b06d7c298a7e274502ec92a57934feada2acbf676f68"
+    },
+    "nativeV2Failure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V2_20261116.json",
+      "sha256": "6da4ac654775d18f4baff20a76c4dd6bedfee8ed67924c1d3c0a6d08e7f59c2c"
+    },
+    "nativeV3Failure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V3_20261116.json",
+      "sha256": "11e6cebec18c12ff63b34eee1644d30a6bdbeebe53034b2b0204d2073e0f2669"
+    },
+    "nativeV4Failure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V4_20261116.json",
+      "sha256": "908948ccc7dc5d48b5c4025dfc79571cb3e238ac49ddf09a120febcbde3832d2"
+    },
+    "parentP10Final": {
+      "path": "docs/qa/FCV588_P10_A11Y_BOUNDARIES_20261116/FCV588_P10_A11Y_BOUNDARIES_FINAL_INTEGRITY_20261116.json",
+      "sha256": "414c0151053bec55271032170e0fba2139fd1627e5fee7524cdf6c1bcf490655"
+    },
+    "parentP10Post": {
+      "path": "docs/qa/FCV588_P10_A11Y_BOUNDARIES_20261116/FCV588_P10_A11Y_BOUNDARIES_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "df2cb60996da7f3f557642f329d794198aea9a85ac8fe5084429bee1931c12dc"
+    }
+  },
+  "failureInterpretation": [
+    "V1 Chrome HWND identified but Windows refused foreground; V2 desktop activation succeeded but witness did not foreground.",
+    "V3 Playwright-controlled Chrome and V4 standalone Chrome with Win32 keyboard injection each obtained true native Chrome foreground, then native witness foreground, yet page reported hasFocus true and no trusted blur; POWER remained pressing.",
+    "These results do not establish whether this is browser/remote desktop/automation focus handling or a product bug. No synthetic blur injection used to force acceptance.",
+    "Application bindHoldControl has an existing blur cancellation listener and synthetic unit tests; full native acceptance requires an actual trusted browser blur event with a deterministic cancel observation."
+  ],
+  "holds": {
+    "F1Phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "fullP07": "OPEN",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "narratorSpeech": "BLOCKED_NOT_RUN",
+    "nativePowerBlur": "NOT_VERIFIED",
+    "oemRights": "HOLD",
+    "releaseApproval": "HOLD"
+  },
+  "limitations": {
+    "noHumanPhysicalKeyboardOrRealInstrument": true,
+    "noNativeBlurPass": true,
+    "noPhotoCalibrationOrOEMPercentage": true,
+    "noSpeechCapture": true
+  },
+  "operations": {
+    "historicalFailReceiptsOverwritten": false,
+    "originalOEMPhotoEdited": false,
+    "ownedChromeAndServersCleaned": true,
+    "productSourceEdited": false,
+    "runtimeDeploymentOrRelease": false,
+    "userPort4173Restarted": false,
+    "windowsSettingsChanged": false
+  },
+  "schema": "fcv588-p11-native-focus-boundaries-final-integrity-v1",
+  "scope": "F1_PUBLIC_REFERENCE_V2_SYNTHETIC_OFFLINE_WINDOWS_RESTRICTED_QA_NO_PRODUCT_EDIT",
+  "status": "P11_WIN32_FOREGROUND_TRANSFER_PROVEN_BROWSER_BLUR_NOT_VERIFIED_RELEASE_HOLD",
+  "userOwnedServer": {
+    "address": "127.0.0.1",
+    "pid": 1204,
+    "port": 4173
+  }
+}

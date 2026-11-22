@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+ok 1 - P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+  ---
+  duration_ms: 14.8808
+  type: 'test'
+  ...
+# Subtest: P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+ok 2 - P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+  ---
+  duration_ms: 2.9797
+  type: 'test'
+  ...
+# Subtest: P04 two-column authored historical seabed is flattened from per-column source depth
+ok 3 - P04 two-column authored historical seabed is flattened from per-column source depth
+  ---
+  duration_ms: 1.6325
+  type: 'test'
+  ...
+# Subtest: P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+ok 4 - P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+  ---
+  duration_ms: 12.3942
+  type: 'test'
+  ...
+# Subtest: P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+ok 5 - P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+  ---
+  duration_ms: 42.1067
+  type: 'test'
+  ...
+# Subtest: P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+ok 6 - P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+  ---
+  duration_ms: 9.4213
+  type: 'test'
+  ...
+# Subtest: P03 raster must be display-only, deterministic, bounded and leave source untouched
+ok 7 - P03 raster must be display-only, deterministic, bounded and leave source untouched
+  ---
+  duration_ms: 38.9494
+  type: 'test'
+  ...
+# Subtest: P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+ok 8 - P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+  ---
+  duration_ms: 34.8469
+  type: 'test'
+  ...
+# Subtest: P03 seabed has contiguous strong core and graded tail below each typed bottom column
+ok 9 - P03 seabed has contiguous strong core and graded tail below each typed bottom column
+  ---
+  duration_ms: 4.5465
+  type: 'test'
+  ...
+# Subtest: P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+ok 10 - P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+  ---
+  duration_ms: 20.7022
+  type: 'test'
+  ...
+# Subtest: P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+ok 11 - P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+  ---
+  duration_ms: 4.7056
+  type: 'test'
+  ...
+# Subtest: P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+ok 12 - P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+  ---
+  duration_ms: 21.4089
+  type: 'test'
+  ...
+# Subtest: P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+ok 13 - P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+  ---
+  duration_ms: 39.5693
+  type: 'test'
+  ...
+# Subtest: P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+ok 14 - P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+  ---
+  duration_ms: 103.696
+  type: 'test'
+  ...
+# Subtest: P03 live canvas uses the owned view-only raster, preserving screen annotation path
+ok 15 - P03 live canvas uses the owned view-only raster, preserving screen annotation path
+  ---
+  duration_ms: 12.0104
+  type: 'test'
+  ...
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 16 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 3.1256
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+ok 17 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+  ---
+  duration_ms: 4.7126
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+ok 18 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+  ---
+  duration_ms: 1.171
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 19 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.6291
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 20 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 1.1124
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 21 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 10.5321
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 417.9707

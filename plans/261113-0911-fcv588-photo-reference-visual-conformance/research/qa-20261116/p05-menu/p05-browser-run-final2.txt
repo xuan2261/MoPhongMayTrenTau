@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "port": 4192,
+  "objectiveFailures": [],
+  "receipt": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\browser\\fcv588-p05-menu-browser-20261116T070410+0700-16f3e05f.json",
+  "receiptSha256": "65bf0eb4d0d396618e360223195189e010f9aefb19537c11e8d365a92e4cae04",
+  "manifest": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\browser\\fcv588-p05-menu-browser-20261116T070410+0700-16f3e05f-sha256.txt",
+  "manifestSha256": "ae3ff5a37a5ae70063a3a1db597fa421c22d98438a890ffa874806b2faf6b538",
+  "photoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "lf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "hf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "dual.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      }
+    ]
+  },
+  "cleanup": "PASS",
+  "cases": [
+    {
+      "name": "1366x768-Blue",
+      "status": "PASS",
+      "loadedBodyCount": 35,
+      "loadedBodyMatches": 35,
+      "screenshotSha256": "7763dbf702bb325d8169327ccb2d08b0aca24c5f94f4cd8827ca5773ed251850",
+      "geometryProof": {
+        "layout": "main-menu",
+        "lcd": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "overlay": {
+          "left": 227.75,
+          "right": 581.125,
+          "top": 324.109375,
+          "bottom": 680.109375,
+          "width": 353.375,
+          "height": 356
+        },
+        "categories": {
+          "left": 229.75,
+          "right": 317.09375,
+          "top": 350.109375,
+          "bottom": 654.515625,
+          "width": 87.34375,
+          "height": 304.40625
+        },
+        "content": {
+          "left": 317.09375,
+          "right": 579.125,
+          "top": 350.109375,
+          "bottom": 654.515625,
+          "width": 262.03125,
+          "height": 304.40625
+        },
+        "selected": {
+          "left": 322.09375,
+          "right": 559.125,
+          "top": 534.109375,
+          "bottom": 554.109375,
+          "width": 237.03125,
+          "height": 20
+        },
+        "categoryCount": 5,
+        "footerHidden": false,
+        "footerText": "\u25b2/\u25bc/\u25c0/\u25b6   ENTER   MENU/ESC",
+        "selectedDisplay": "grid",
+        "selectedGrid": "187.438px 39.5938px",
+        "labelText": "\u25b6 Palette",
+        "valueText": ": Blue",
+        "rowOverflow": false,
+        "contentOverflowX": false,
+        "uncoveredBottomFraction": 0.21463444973100723,
+        "overlayInsideLcd": true,
+        "sidebarBeforeContent": true,
+        "viewportWidth": 1366,
+        "documentScrollWidth": 1351
+      },
+      "interactionProof": {
+        "staged": "1/2",
+        "canceledRow": "\u25b6 Pic. Advance\n: 1x",
+        "committedRow": "\u25b6 Pic. Advance\n: 1/2",
+        "keyboardRight": "Display",
+        "keyboardLeft": "Sounder",
+        "keyboardEscapeClosed": true
+      }
+    },
+    {
+      "name": "1366x768-White",
+      "status": "PASS",
+      "loadedBodyCount": 35,
+      "loadedBodyMatches": 35,
+      "screenshotSha256": "60468a722b4f3b18a9c1048d82240d8879c5c429904e9437971539d4db7f59d6",
+      "geometryProof": {
+        "layout": "main-menu",
+        "lcd": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "overlay": {
+          "left": 227.75,
+          "right": 581.125,
+          "top": 324.109375,
+          "bottom": 680.109375,
+          "width": 353.375,
+          "height": 356
+        },
+        "categories": {
+          "left": 229.75,
+          "right": 317.09375,
+          "top": 350.109375,
+          "bottom": 654.515625,
+          "width": 87.34375,
+          "height": 304.40625
+        },
+        "content": {
+          "left": 317.09375,
+          "right": 579.125,
+          "top": 350.109375,
+          "bottom": 654.515625,
+          "width": 262.03125,
+          "height": 304.40625
+        },
+        "selected": {
+          "left": 322.09375,
+          "right": 559.125,
+          "top": 534.109375,
+          "bottom": 554.109375,
+          "width": 237.03125,
+          "height": 20
+        },
+        "categoryCount": 5,
+        "footerHidden": false,
+        "footerText": "\u25b2/\u25bc/\u25c0/\u25b6   ENTER   MENU/ESC",
+        "selectedDisplay": "grid",
+        "selectedGrid": "180.844px 46.1875px",
+        "labelText": "\u25b6 Palette",
+        "valueText": ": White",
+        "rowOverflow": false,
+        "contentOverflowX": false,
+        "uncoveredBottomFraction": 0.21463444973100723,
+        "overlayInsideLcd": true,
+        "sidebarBeforeContent": true,
+        "viewportWidth": 1366,
+        "documentScrollWidth": 1351
+      },
+      "interactionProof": null
+    },
+    {
+      "name": "375x812-Blue",
+      "status": "PASS",
+      "loadedBodyCount": 35,
+      "loadedBodyMatches": 35,
+      "screenshotSha256": "ada1cdfed91f06e22aa666c5f5c85a907396d92de262f99892cd6ae997e226e9",
+      "geometryProof": {
+        "layout": "main-menu",
+        "lcd": {
+          "left": 25,
+          "right": 335,
+          "top": -56.828125,
+          "bottom": 357.3125,
+          "width": 310,
+          "height": 414.140625
+        },
+        "overlay": {
+          "left": 35.03125,
+          "right": 324.9375,
+          "top": -24.40625,
+          "bottom": 268,
+          "width": 289.90625,
+          "height": 292.40625
+        },
+        "categories": {
+          "left": 37.03125,
+          "right": 108.5,
+          "top": 0.59375,
+          "bottom": 242.40625,
+          "width": 71.46875,
+          "height": 241.8125
+        },
+        "content": {
+          "left": 108.5,
+          "right": 322.9375,
+          "top": 0.59375,
+          "bottom": 242.40625,
+          "width": 214.4375,
+          "height": 241.8125
+        },
+        "selected": {
+          "left": 113.5,
+          "right": 302.9375,
+          "top": 171.09375,
+          "bottom": 189.59375,
+          "width": 189.4375,
+          "height": 18.5
+        },
+        "categoryCount": 5,
+        "footerHidden": false,
+        "footerText": "\u25b2/\u25bc/\u25c0/\u25b6   ENTER   MENU/ESC",
+        "selectedDisplay": "grid",
+        "selectedGrid": "141.438px 38px",
+        "labelText": "\u25b6 Palette",
+        "valueText": ": Blue",
+        "rowOverflow": false,
+        "contentOverflowX": false,
+        "uncoveredBottomFraction": 0.21565742312771174,
+        "overlayInsideLcd": true,
+        "sidebarBeforeContent": true,
+        "viewportWidth": 375,
+        "documentScrollWidth": 360
+      },
+      "interactionProof": null
+    }
+  ]
+}

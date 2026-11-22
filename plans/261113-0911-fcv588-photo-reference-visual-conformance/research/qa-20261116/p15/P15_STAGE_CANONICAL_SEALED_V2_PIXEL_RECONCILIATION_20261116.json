@@ -1,0 +1,484 @@
+{
+  "schema": "P15_REAL_CHROME_PNG_BYTE_PIXEL_RECONCILIATION_V1",
+  "status": "PASS_DECODED_PIXELS; BYTE_HASH_MISMATCH_PRESERVED",
+  "stageBrowserSHA256": "f1e7f1d3a80743c4037cf1bf66085527d436be23ea9b3b49fcb0169217d86441",
+  "canonicalBrowserSHA256": "c457bcad0816b3033f0569e3a55d59c53ee1c9b27631a2979d183604a9988c03",
+  "modeAndZoomCount": 24,
+  "menuCount": 2,
+  "decodedPixelEqualCount": 26,
+  "pngByteEqualCount": 26,
+  "pngByteDifferentCount": 0,
+  "source": "Actual independently captured Playwright/Chrome PNG images; per-file SHA pinned and compared, no image generation, no OEM image pixels",
+  "interpretation": "Fresh sealed V2 captures checked against all original stage PNG SHA and decoded RGBA pixel arrays; any raw encoding differences are separately counted, with no OEM pixel equivalence implied.",
+  "rows": [
+    {
+      "label": "MODE_NAV1",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV1_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV1_375x812_20261116.png",
+      "stageSha256": "9cf923c56f7fd5ddcc35e0d598419921ff28df38391e115e0acd02a3a4ed851e",
+      "canonicalSha256": "9cf923c56f7fd5ddcc35e0d598419921ff28df38391e115e0acd02a3a4ed851e",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1135
+      ]
+    },
+    {
+      "label": "MODE_LF_ZOOM",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_ZOOM_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_375x812_20261116.png",
+      "stageSha256": "a718991e284551f86491f4f1da4a749633b158773a52bc8aeb4e2341120262a7",
+      "canonicalSha256": "a718991e284551f86491f4f1da4a749633b158773a52bc8aeb4e2341120262a7",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1136
+      ]
+    },
+    {
+      "label": "MODE_LF",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_375x812_20261116.png",
+      "stageSha256": "840e045b21617ca0747109e6f2cce86466429ae88639e3d15cff3c4ea97b3f55",
+      "canonicalSha256": "840e045b21617ca0747109e6f2cce86466429ae88639e3d15cff3c4ea97b3f55",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1136
+      ]
+    },
+    {
+      "label": "MODE_DUAL",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_DUAL_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_DUAL_375x812_20261116.png",
+      "stageSha256": "202954db313dd3eaf327e8c469d677aebe8d0dcda95a049bdf14cf2f87edd81c",
+      "canonicalSha256": "202954db313dd3eaf327e8c469d677aebe8d0dcda95a049bdf14cf2f87edd81c",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1136
+      ]
+    },
+    {
+      "label": "MODE_HF",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_375x812_20261116.png",
+      "stageSha256": "a27b8476449b8e7a181cfb5d0bcfda647b7edb0bfbb8b62dafd8f683de3fb95e",
+      "canonicalSha256": "a27b8476449b8e7a181cfb5d0bcfda647b7edb0bfbb8b62dafd8f683de3fb95e",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1136
+      ]
+    },
+    {
+      "label": "MODE_HF_ZOOM",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_ZOOM_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_375x812_20261116.png",
+      "stageSha256": "e01161eb47af0204c1ef1be141088d49d71972116dc646eb6ded2e71a58161ac",
+      "canonicalSha256": "e01161eb47af0204c1ef1be141088d49d71972116dc646eb6ded2e71a58161ac",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1136
+      ]
+    },
+    {
+      "label": "MODE_NAV2",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV2_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV2_375x812_20261116.png",
+      "stageSha256": "a40cc1f77d0e0dd2f01160007c1edcf865cec8f3eeaf0d22b5d0d2624d95b55b",
+      "canonicalSha256": "a40cc1f77d0e0dd2f01160007c1edcf865cec8f3eeaf0d22b5d0d2624d95b55b",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        357,
+        1135
+      ]
+    },
+    {
+      "label": "MODE_NAV1",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV1_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV1_1366x768_20261116.png",
+      "stageSha256": "7dee61b668aa79e777d3555aca8c22eee31cbc4557ac361f8c4e569126130ced",
+      "canonicalSha256": "7dee61b668aa79e777d3555aca8c22eee31cbc4557ac361f8c4e569126130ced",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_LF_ZOOM",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_ZOOM_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1366x768_20261116.png",
+      "stageSha256": "12249875751b4d3c8a41f1db28249db7d62f3c9f04c4b4af17d362cfc3bc9c7d",
+      "canonicalSha256": "12249875751b4d3c8a41f1db28249db7d62f3c9f04c4b4af17d362cfc3bc9c7d",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_LF",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_1366x768_20261116.png",
+      "stageSha256": "8f8a67588c1ca1e7ff0662d563502dafdd4177ac13368a0f2fe1844861664781",
+      "canonicalSha256": "8f8a67588c1ca1e7ff0662d563502dafdd4177ac13368a0f2fe1844861664781",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_DUAL",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_DUAL_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_DUAL_1366x768_20261116.png",
+      "stageSha256": "fac9cf0b8d5bfba55f5f30d66f555c5f47f453f7dd9b0d2ca0a582c0718bf138",
+      "canonicalSha256": "fac9cf0b8d5bfba55f5f30d66f555c5f47f453f7dd9b0d2ca0a582c0718bf138",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_HF",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_1366x768_20261116.png",
+      "stageSha256": "9713d35e1ba092fc92ea5098aac9b7326cec36dd558a94018868b04cbf24537c",
+      "canonicalSha256": "9713d35e1ba092fc92ea5098aac9b7326cec36dd558a94018868b04cbf24537c",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_HF_ZOOM",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_ZOOM_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1366x768_20261116.png",
+      "stageSha256": "32087d146d6743e0b2b077d67c57d957ea6211335687aaccb5b1bdc293f2ff66",
+      "canonicalSha256": "32087d146d6743e0b2b077d67c57d957ea6211335687aaccb5b1bdc293f2ff66",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_NAV2",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV2_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV2_1366x768_20261116.png",
+      "stageSha256": "7b966628eac0f60b7b1d44fb0dc98c25cf05ddff49abb144b74d4cbed83f301b",
+      "canonicalSha256": "7b966628eac0f60b7b1d44fb0dc98c25cf05ddff49abb144b74d4cbed83f301b",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_NAV1",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV1_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV1_1920x1080_20261116.png",
+      "stageSha256": "a5e80e3a817a7d73dc550bd93b27baa14babad2ff3bf994bbfe39f5af51fd245",
+      "canonicalSha256": "a5e80e3a817a7d73dc550bd93b27baa14babad2ff3bf994bbfe39f5af51fd245",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_LF_ZOOM",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_ZOOM_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1920x1080_20261116.png",
+      "stageSha256": "7c948246abb69d0563fd692acdf284adb381c6b23d80c74b9e75ac656b703db8",
+      "canonicalSha256": "7c948246abb69d0563fd692acdf284adb381c6b23d80c74b9e75ac656b703db8",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_LF",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_LF_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_LF_1920x1080_20261116.png",
+      "stageSha256": "afdd751717557f92ade5c4af256da56e2ab09ae2f1098838d124dffe5fddc029",
+      "canonicalSha256": "afdd751717557f92ade5c4af256da56e2ab09ae2f1098838d124dffe5fddc029",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_DUAL",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_DUAL_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_DUAL_1920x1080_20261116.png",
+      "stageSha256": "846a69b2c50ed687ab18cb0315009ee4102df1de05046d2a566ad4b6e6b1c978",
+      "canonicalSha256": "846a69b2c50ed687ab18cb0315009ee4102df1de05046d2a566ad4b6e6b1c978",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_HF",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_1920x1080_20261116.png",
+      "stageSha256": "aed3b27d8781fc8ce7864f1eede96ab59e6f29b63e894fe46fd596d44c4c32d5",
+      "canonicalSha256": "aed3b27d8781fc8ce7864f1eede96ab59e6f29b63e894fe46fd596d44c4c32d5",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_HF_ZOOM",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_HF_ZOOM_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1920x1080_20261116.png",
+      "stageSha256": "22db42bae320cac60a95818331f19387a03f11a6c5a185e19b4f9d343e75d008",
+      "canonicalSha256": "22db42bae320cac60a95818331f19387a03f11a6c5a185e19b4f9d343e75d008",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "MODE_NAV2",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "stageFile": "P15_STAGE_MODE_NAV2_1920x1080_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_MODE_NAV2_1920x1080_20261116.png",
+      "stageSha256": "26ca9e5fa3facc08dbf455b286e5167391918c67aa114b82ac09921101d46a57",
+      "canonicalSha256": "26ca9e5fa3facc08dbf455b286e5167391918c67aa114b82ac09921101d46a57",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "ZOOM_BOTTOM_LOCK",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_ZOOM_BOTTOM_LOCK_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_ZOOM_BOTTOM_LOCK_1366x768_20261116.png",
+      "stageSha256": "149d30891eb26c6b6339836b6c4454896144246305ff906ad3eb9666f1f571e6",
+      "canonicalSha256": "149d30891eb26c6b6339836b6c4454896144246305ff906ad3eb9666f1f571e6",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "ZOOM_BOTTOM_ZOOM",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_ZOOM_BOTTOM_ZOOM_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_ZOOM_BOTTOM_ZOOM_1366x768_20261116.png",
+      "stageSha256": "923cae90ffe48cd5f6769e5ac9e72a3c2536051313631fe422e97f66292c434e",
+      "canonicalSha256": "923cae90ffe48cd5f6769e5ac9e72a3c2536051313631fe422e97f66292c434e",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "ZOOM_MARKER_ZOOM",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_ZOOM_MARKER_ZOOM_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_SEALV2_ZOOM_MARKER_ZOOM_1366x768_20261116.png",
+      "stageSha256": "80b9678fba94fc5945f0ab12e87c80dfaed68d6ab2635ac3935da8705d9b0d41",
+      "canonicalSha256": "80b9678fba94fc5945f0ab12e87c80dfaed68d6ab2635ac3935da8705d9b0d41",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        681,
+        789
+      ]
+    },
+    {
+      "label": "Sounder Menu",
+      "viewport": [
+        375,
+        812
+      ],
+      "stageFile": "P15_STAGE_CHROME_MENU_375x812_20261116.png",
+      "canonicalFile": "P15_CANONICAL_CHROME_MENU_375x812_20261116.png",
+      "stageSha256": "dc27989d0262a922214c26c40ac4badd40475e732619a2a77d740998e27f10a6",
+      "canonicalSha256": "dc27989d0262a922214c26c40ac4badd40475e732619a2a77d740998e27f10a6",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        375,
+        2416
+      ]
+    },
+    {
+      "label": "Sounder Menu",
+      "viewport": [
+        1366,
+        768
+      ],
+      "stageFile": "P15_STAGE_CHROME_MENU_1366x768_20261116.png",
+      "canonicalFile": "P15_CANONICAL_CHROME_MENU_1366x768_20261116.png",
+      "stageSha256": "e4e81e8d6e917e9942ebc884c77688dfb000bd07f7eb005eef0b0729b292a5ce",
+      "canonicalSha256": "e4e81e8d6e917e9942ebc884c77688dfb000bd07f7eb005eef0b0729b292a5ce",
+      "byteIdentical": true,
+      "decodedPixelIdentical": true,
+      "changedPixelBounds": null,
+      "decodedDimensions": [
+        1366,
+        1121
+      ]
+    }
+  ],
+  "limitations": "Pixel equality is simulator stage vs canonical only, not OEM photo equivalence or physical certification."
+}

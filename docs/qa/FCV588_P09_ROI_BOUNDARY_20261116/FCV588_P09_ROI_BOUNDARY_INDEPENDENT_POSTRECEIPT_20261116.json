@@ -1,0 +1,21 @@
+{
+  "boundary": "Local independently re-read evidence; this is not a third human reviewer, calibration or release GO.",
+  "createdAt": "2026-11-16T10:59:56.312746+07:00",
+  "finalPath": "docs/qa/FCV588_P09_ROI_BOUNDARY_20261116/FCV588_P09_ROI_BOUNDARY_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "759f146c349c2ad348fc5b98e21fbc79d1d857623253811f0a01d3b9408995b9",
+  "freshRehash": {
+    "activeContentROIsAccepted": 0,
+    "evidenceFiles": 6,
+    "originalPhotos": "8/8",
+    "port4207": "CLOSED",
+    "restrictedAcceptedApertureQuads": 2,
+    "runtime": "39/39",
+    "server4173": "HTTP200"
+  },
+  "reviewers": {
+    "geometry": "worker-7",
+    "sourcePhotoBoundary": "worker-1"
+  },
+  "schema": "fcv588-p09-roi-boundary-independent-postreceipt-v1",
+  "status": "PASS_BOUNDED_READBACK_PRECISE_ACTIVE_LCD_HOLD"
+}

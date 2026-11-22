@@ -1,0 +1,403 @@
+{
+  "timestampUtc": "2026-10-19T03:04:42.883377+00:00",
+  "status": "V43_CANONICAL_REFLECTED_OEM_BRILL_STAGE_AND_BROWSER_VERIFIED_PHASE6_HOLD",
+  "scope": "F1_PUBLIC_REFERENCE_SOFTWARE_ONLY_BRILL_BEHAVIOR_CORRECTION",
+  "supervisor": "USER_AUTHORIZED_GPT6_SELF_REVIEW_NOT_INDEPENDENT_OEM",
+  "previousV42FinalSHA": "fc7b2559cf16eed934a173b246c363ecdc5686f0413be90eae8f61bf99dd57d9",
+  "previousV42PostreceiptSHA": "0d659c3dab920d6e8f6964e14522f1d23f0d80dfc4fcc215df6c9ecef70b5adc",
+  "sourceAuthority": "FURUNO OME-23890-E_Section_1.3_PUBLIC_REFERENCE",
+  "stageBaselineSHA": "da1937af6036cd6d225b15e859343530e4e138e2f7bb3f580eaacf21aa91442b",
+  "originalMalformedStageManifestSHA": "56a867debdf3196e5d5d1fd7c99753ac7f6a7043142422f0ef339e56cf7e8965",
+  "validStageManifestSHA": "a3b2ab6420bce6c026025861888f2cebb03ab8435e293f49f385916359906d19",
+  "GPT6CanonicalGOsha": "952f57f56146ee5f38b079331d62ab7b74bb072ad121f64217a2d17360f8a964",
+  "canonicalApplyReceiptSHA": "fc57b5563294c68ac3aea835e31fe13231ab825124a45eb193577d4162be3674",
+  "sourceHashes": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+    "src/devices/fcv588/menu-atlas.mjs": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+  },
+  "runtimeSourceCount": 37,
+  "runtimeSourceChanged": [
+    "src/core/lessons.mjs",
+    "src/devices/fcv588/model.mjs",
+    "src/devices/fcv588/profile-version.mjs",
+    "web/app.mjs"
+  ],
+  "runtimeSourceUnchanged": 33,
+  "canonicalApprovedFileSHA": [
+    {
+      "path": "src/core/lessons.mjs",
+      "stageSHA": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "canonicalPreimageSHA": "207f14a9ebb17d1fe565ececa29c5cb3756bcca9b98236ec83f6aac51e6f603c"
+    },
+    {
+      "path": "src/devices/fcv588/model.mjs",
+      "stageSHA": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "canonicalPreimageSHA": "723b3981b508c54b391e16e7f0a8c220faddc57b5d9d1c5bdf4cece9ad4690de"
+    },
+    {
+      "path": "src/devices/fcv588/profile-version.mjs",
+      "stageSHA": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "canonicalPreimageSHA": "bed6c0af1297adb681071165ee6d8283b13959aa0ce53c343fc67efb839a9e72"
+    },
+    {
+      "path": "web/app.mjs",
+      "stageSHA": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673",
+      "canonicalPreimageSHA": "a77f165f77fb3a0e898df489bccf1c6f559adbcc15bbc0da1df12b4fda53adb1"
+    },
+    {
+      "path": "docs/evidence/device-register.json",
+      "stageSHA": "1422b47350b062967eafb2d06e4d1c609bae99915e9720fafbdfb2673800f157",
+      "canonicalPreimageSHA": "d8d4c09c47c310beffeb992b4373ed8f590dbfc8fb0c2263a1a7228564e144c5"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "stageSHA": "4deb62b6364ceee234df1f2260c5be1472596461f6c84683844ec6ea991d0c97",
+      "canonicalPreimageSHA": "75490ed8d0d1e0946d1f58b0107db3ddd94133af769fbf9be6e4c0c216c99292"
+    },
+    {
+      "path": "test/fcv588-public-basic.test.mjs",
+      "stageSHA": "aaffb217a20493d162dff92acf1fdb7cb259a7269630fcf1c340b43786c6cc1d",
+      "canonicalPreimageSHA": "034ca2299f340b99db305df592046fadc39c13a945542b3cc6321b9940a669db"
+    },
+    {
+      "path": "test/fcv588-public-course.test.mjs",
+      "stageSHA": "8c69f203d4744ab2ae401c4d70903d737f1544e6f3e24ee25389341da4e5b776",
+      "canonicalPreimageSHA": "fb53ec4993ce888e952e6e7af3b36bfb19d78c6a85854e15af52914ed15752ba"
+    },
+    {
+      "path": "test/fcv588-public-persistence.test.mjs",
+      "stageSHA": "306e5b20d1b788488183ecf8157dbfeebc0111b8aaab78c481eec186cd0d934b",
+      "canonicalPreimageSHA": "188441e4cea9e56506f6a2140ee5c197270ddaeb128b7ed2dd2e7aa155a7bc5e"
+    },
+    {
+      "path": "test/fcv588-public-v31-compatibility.test.mjs",
+      "stageSHA": "822c8242eedccc360e4c6eeff868ef6400642fa0cf827d815dc59951e77a03df",
+      "canonicalPreimageSHA": "bf15de301a5731abfa9f174d7029636d2c43d5831bc8225f79c0c1ad89f72414"
+    },
+    {
+      "path": "test/fcv588-v43-oem-brill-triangle.test.mjs",
+      "stageSHA": "8aef8285f5fd39f316eb6bd7ae16ee34e1e87ff3981116617f120e21ad24faa6",
+      "canonicalPreimageSHA": null
+    }
+  ],
+  "stageValidRedFailed": 6,
+  "stageTargetedNodePassed": 66,
+  "stageFullNodePassed": 484,
+  "stagePythonPassed": 13,
+  "canonicalTargetedNodePassed": 66,
+  "canonicalFullNodePassed": 484,
+  "canonicalPostdocumentNodePassed": 484,
+  "canonicalPythonPassed": 13,
+  "stageTap": [
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_OEM_BRILL_VALID_RED_20261019.log",
+      "sha256": "6d4bd973b00a1d2df721fa649c3a7262f0157885d62ea4500f83d17fe17b39aa",
+      "tests": 6,
+      "pass": 0,
+      "fail": 6
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_TARGETED_GREEN_20261019.log",
+      "sha256": "919911acd8bf235cc20253dd5629a90c7a43ba32450e9be655f19be271ad1eac",
+      "tests": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_FULL_NODE_20261019.log",
+      "sha256": "267a8191bbcfca1c093de09b5650c8b037ac8adcdfb3d4caa56c4b7074327083",
+      "tests": 484,
+      "pass": 482,
+      "fail": 2
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_FULL_NODE_AFTER_METADATA_20261019.log",
+      "sha256": "fb27f5bbf0c94b758447748522c7eae876f3703ae25662ac43fcac2a1f92eddf",
+      "tests": 484,
+      "pass": 484,
+      "fail": 0
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_POST_APP_FULL_NODE_20261019.log",
+      "sha256": "949e98c18b033ec5d7e1ab200f3b4a00ad080d6dd843d5fdb6c577565b9da224",
+      "tests": 484,
+      "pass": 484,
+      "fail": 0
+    }
+  ],
+  "stageOtherLogHashes": [
+    {
+      "path": "evidence/V43_STAGE_BRILL_BROWSER_LOG_20261019.log",
+      "sha256": "628f66b9c78d238376b5bfdea19953bc4af9ae30c5612a7d2a75d4dc4d5a9751"
+    },
+    {
+      "path": "evidence/V43_OEM_BRILL_INITIAL_RED_20261019.log",
+      "sha256": "652aa71e180fb33603e237a7b79085cf6c8929bdb167336bf57cdab0b5883f5c"
+    },
+    {
+      "path": "evidence/V43_STAGE_PYTHON_20261019.log",
+      "sha256": "cb0a9416e805978d3379e6f3926ed3d9be46e13979678c7627e74d8b188b3a4b"
+    },
+    {
+      "path": "evidence/V43_STAGE_POST_APP_PYTHON_20261019.log",
+      "sha256": "8dc0b204083dbff27bcf2358ff8d04362f64add3418cadace5ce142558a4060c"
+    }
+  ],
+  "stagePython": {
+    "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_POST_APP_PYTHON_20261019.log",
+    "sha256": "8dc0b204083dbff27bcf2358ff8d04362f64add3418cadace5ce142558a4060c",
+    "passed": 13
+  },
+  "canonicalTap": [
+    {
+      "path": "docs/qa/FCV588_V43_CANONICAL_TARGETED_NODE_20261019.log",
+      "sha256": "1681a5183cf78c619a967992edd8915fd600168c72ba15674d9e43efd93c5d03",
+      "tests": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V43_CANONICAL_FULL_NODE_20261019.log",
+      "sha256": "fb7ca6119f23aed5b2c29a97fd68f37a9c06865ebd84a840b0534f0eb85d004f",
+      "tests": 484,
+      "pass": 484,
+      "fail": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V43_POSTDOCUMENT_FULL_NODE_20261019.log",
+      "sha256": "9e8d5ff509952514fca9dea52139b8578adf4532603802051fa334fab4146964",
+      "tests": 484,
+      "pass": 484,
+      "fail": 0
+    }
+  ],
+  "canonicalPython": {
+    "path": "docs/qa/FCV588_V43_CANONICAL_PYTHON_20261019.log",
+    "sha256": "840b05a4b3db06c86e9788023772b87bad51a9dbf0eaabf9864bdebe56b697c2",
+    "passed": 13
+  },
+  "stageChrome": {
+    "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_BRILL_CHROME_20261019.json",
+    "sha256": "e163fce6c89bbf1b6877c75884c5b3869a62438d5d4127ed2d9d22ef77a9f7e3",
+    "assertions": 102,
+    "browserLoadedBodySHA": 245,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-320x720-power-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-320x720-preview-8.png",
+        "sha256": "59f9ad9cfe1ae811ccde1d9f19601ac0c8fa01033840dfb31b7f28310bd40ff6"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-375x812-power-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-375x812-preview-8.png",
+        "sha256": "b0f730da6d8eaf534f269d74616911e139455dd7837f3cb9e380a004b097e634"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-768x1024-power-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-768x1024-preview-8.png",
+        "sha256": "6c090a4a49582d27f8e725e3dc4704a0a40ee27b41051550691352bcb047c1d3"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1366x768-power-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1366x768-preview-8.png",
+        "sha256": "040fc75fc29c0596abc35d7e739f06d6be0ffad9aa5b55e1a9dbf23c1c1135ca"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1440x900-power-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1440x900-preview-8.png",
+        "sha256": "cf7ee7d184dd90b363d2aa19a97bcbd460bc095065f0d002feb8ca46f507c561"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1920x1080-power-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-stage-brill-1920x1080-preview-8.png",
+        "sha256": "871ecc5bc544e6874ebd4d3dd8fd3daa366f29ff1f03b2b2680da2972a7028c2"
+      }
+    ],
+    "migrationPassed": true
+  },
+  "canonicalChrome": {
+    "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_CANONICAL_BRILL_CHROME_20261019.json",
+    "sha256": "bc40fca348f551ae1aa557b40ab566144c491ac55a2dcf8c5f64260b523df865",
+    "assertions": 102,
+    "browserLoadedBodySHA": 245,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-320x720-power-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-320x720-preview-8.png",
+        "sha256": "c852c4ae90a7b17574463ba0eaf3c056f34eb89bf0c7495ba86795921443af55"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-375x812-power-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-375x812-preview-8.png",
+        "sha256": "b0f730da6d8eaf534f269d74616911e139455dd7837f3cb9e380a004b097e634"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-768x1024-power-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-768x1024-preview-8.png",
+        "sha256": "6c090a4a49582d27f8e725e3dc4704a0a40ee27b41051550691352bcb047c1d3"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1366x768-power-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1366x768-preview-8.png",
+        "sha256": "51d08c26af48ecf0887cf510b50dce9d8dfafe49891b3ea2947a5d2a9214ace5"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1440x900-power-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1440x900-preview-8.png",
+        "sha256": "cf7ee7d184dd90b363d2aa19a97bcbd460bc095065f0d002feb8ca46f507c561"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1920x1080-power-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v43-oem-brill-cycle/evidence/screenshots/v43-canonical-brill-1920x1080-preview-8.png",
+        "sha256": "871ecc5bc544e6874ebd4d3dd8fd3daa366f29ff1f03b2b2680da2972a7028c2"
+      }
+    ],
+    "migrationPassed": true
+  },
+  "stageChromeAssertions": 102,
+  "canonicalChromeAssertions": 102,
+  "stageBrowserLoadedSHA": 245,
+  "canonicalBrowserLoadedSHA": 245,
+  "newV43ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": {
+    "V41": 24,
+    "V40": 24,
+    "V36_V38": 127
+  },
+  "historicalScreenshotsTotalSHA": 175,
+  "historicalPythonOriginalTrainingFixturesSHA": 16,
+  "documentHashes": [
+    {
+      "path": "docs/research/FCV588_V43_OEM_BRILL_SOURCE_ATLAS_20261019.md",
+      "sha256": "0dd12278634d20a16715b29042d317afe0efc7e1612ed0924bf7908e81c143c2"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-19-v43-integrated-brill-cycle.md",
+      "sha256": "5e5de8d0b0452d394c509b14f19a12b3be13b7dddf3d486ff7f31289d00becd2"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "457c0f58be454b25a7ffb39460fd6638c4d3b4ed625e767b5b467ccec64db950"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "464ab9212270c0d4fc328e769ab3d76a6ccf8cb0f2afa5f9d46e0bfdd8bbfdd3"
+    }
+  ],
+  "untouchedHistoricalV42DocumentSHA": 6,
+  "stageDecisionNotesSHA": [
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_BRILL_RED_GPT6_STAGE_GO_20261019.md",
+      "sha256": "7962c36866baef717a5a25e022d8b80fc99453670aff18d97110ddbd8c946d47"
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_STAGE_METADATA_STOP_GPT6_GO_20261019.md",
+      "sha256": "d58a4a541ffa43ed712bef5d6f180fd6e5295880f9e32633bee42255ac992c74"
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_CANONICAL_PREFLIGHT_BAD_MANIFEST_STOP_20261019.md",
+      "sha256": "f3fd6cad4066df80cd1b56ecd47b913bf72c58297b77977fb5f021356fee7894"
+    },
+    {
+      "path": "staging/fcv588-v43-oem-brill-cycle/evidence/V43_PROFILE21_TEACHER_NOTICE_GPT6_GO_20261019.md",
+      "sha256": "32f37bcd5a99404209b0a6d75d05e64405b674d4064a37798b26ff06faf01178"
+    }
+  ],
+  "httpSecurityDenials": 4,
+  "httpReceiptSHA": "d233e3e94b466d55efbbeb8165a60106fc59ef75140a95410ae4261a1d2de660",
+  "ownedQAportsClosed": {
+    "4225": true,
+    "4226": true
+  },
+  "actualCoSDesktopV43NativeQA": "NOT_RUN",
+  "nativeDesktop1366And1920": "NOT_RUN",
+  "narratorNvdaSpeech": "NOT_RUN",
+  "realOsWindowBlur": "NOT_RUN",
+  "installedFirmware": "UNKNOWN",
+  "oemMediaRights": "HOLD",
+  "oemPixelEquivalent": "NOT_MEASURED",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "gitCommitted": false
+}

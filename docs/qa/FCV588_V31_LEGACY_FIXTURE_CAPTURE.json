@@ -1,0 +1,17 @@
+{
+  "observedAtUtc": "2026-10-16T01:14:20.713Z",
+  "scope": "NEW_COMPATIBILITY_FIXTURE_CAPTURE_ON_HASH_MATCHED_V30_NOT_HISTORICAL_QA_RERUN",
+  "profile": "F1-public-reference-19",
+  "legacyReplayVerified": true,
+  "files": [
+    {
+      "path": "test/fixtures/fcv588-v30-profile19-replay.json",
+      "sha256": "adb919e666598127b2f76e284a0ba4dea4506ae15eac11535574ac562297bf4c"
+    },
+    {
+      "path": "test/fixtures/fcv588-v30-profile19-settings.json",
+      "sha256": "f14235c481a35c5e2af2118729dcfd51c3eb2039bdec739047ba9e5b7e00f111"
+    }
+  ],
+  "runtimeSha256": "99097efbccc12d8538a041643f22b22d268dadb3e24d9ec9acbc6f718d4c1117"
+}

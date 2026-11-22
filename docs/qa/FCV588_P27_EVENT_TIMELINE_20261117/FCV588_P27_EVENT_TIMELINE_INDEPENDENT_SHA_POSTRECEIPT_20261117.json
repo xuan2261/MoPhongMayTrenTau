@@ -1,0 +1,28 @@
+{
+  "schema": "FCV588_P27_EVENT_TIMELINE_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "createdUTC": "2026-11-17T12:54:49.4665945+00:00",
+  "status": "P27_INDEPENDENT_SHA_READBACK_PASS",
+  "method": "PowerShell Get-FileHash SHA256, fresh readback separate from Python final writer",
+  "finalIntegritySHA256": "97232cffc3ad6906beb08022c9c49bc39b6776fe7623bda193ec23605ab5ce3a",
+  "finalReportSHA256": "9f206deb115e66e9407791e6bb1f325bd7919cc94225782d753cb177c4e88a00",
+  "dryrunSHA256": "2d1d9c4e10cdd676aa533228020cac8bfa607a212cb21db6b78c69e8866346d6",
+  "guardedApplySHA256": "d596db1de6a8c77292898f97e75c3d3df48601605ec5bbddf989337fb4284265",
+  "preimageBackupSHA256": "e130b81c764dab6728050613da456d12c2e3241e82cc604d85c64cc86454ffa7",
+  "runtimeSHA256Count": 54,
+  "appliedStageCanonicalMatchCount": 6,
+  "OEMReferenceOnlySHA256Count": 8,
+  "pythonNodeFocusedReceiptHashCount": 6,
+  "actualChromeHTTPBodySHA256Count": 104,
+  "browserScreenshotSHA256Count": 4,
+  "P26FinalSHA256": "ecf30f5545c626c6d95a6f3797ae577ad48e66af8ae7ca8f3c27a9ba118d5d5a",
+  "P26IndependentPostSHA256": "3797f82bb079e6c89cc4c3523a093e187458c5c6037d4c4e78700b9fabbd5ef6",
+  "userServer4173PID": 1204,
+  "qaPortsClosed": [
+    4228,
+    4229
+  ],
+  "phase6": "OPEN",
+  "claims": "65/65 HOLD",
+  "firmware": "UNKNOWN",
+  "releaseApproval": "HOLD"
+}

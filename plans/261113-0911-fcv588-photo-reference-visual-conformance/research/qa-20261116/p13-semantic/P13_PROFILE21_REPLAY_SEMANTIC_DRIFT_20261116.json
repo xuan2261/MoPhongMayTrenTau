@@ -1,0 +1,30 @@
+{
+  "schema": "fcv588-p13-profile21-replay-semantic-drift-v1",
+  "createdAt": "2026-11-16T10:07:48.508Z",
+  "status": "VERIFIED_PROFILE21_SELECTION_ONLY_REPLAY_SILENT_SEMANTIC_DRIFT_APPLY_BLOCKER",
+  "currentMenuSourceSHA256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+  "candidateMenuSourceSHA256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+  "profileRevisionOld": "F1-public-reference-21",
+  "profileRevisionCandidate": "F1-public-reference-21",
+  "sampleOriginalSourceEntryId": "sounder.whiteMarker",
+  "sampleStagingSourceEntryId": "sounder.clutter",
+  "identicalOperatorEventCount": 9,
+  "selectionItemIndex": 5,
+  "originalSessionHash": "f0-fnv1a32-b7e35e70",
+  "stagingSessionHash": "f0-fnv1a32-b7e35e70",
+  "sameFinalStateHashEvenThoughSelectedMenuItemDiffers": true,
+  "historicalReplayAcceptedUnderChangedCode": true,
+  "historicalReplayInterpretedItem": "sounder.clutter",
+  "editingCommittedReplayRejection": {
+    "name": "Error",
+    "message": "replay final state hash mismatch / reducer drift"
+  },
+  "expectedConstraint": "Existing profile21 event log/replay semantics must remain intact",
+  "decision": "NO_GO_SAME_PROFILE_REVISION_MENU_REORDER",
+  "nextRequired": "Explicit new semantic menu-order revision and supported backward-compatible profile21 replay path (or equivalent source-valid version binding); do not merely patch numeric-index tests and claim compatibility",
+  "scopeLimits": [
+    "No device/runtime/source edits",
+    "No external OEM firmware claims",
+    "Source-valid new menu order remains staged only, not applied"
+  ]
+}

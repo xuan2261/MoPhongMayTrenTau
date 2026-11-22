@@ -1,0 +1,1230 @@
+{
+  "collectedAtUtc": "2026-10-15T23:28:53.588354+00:00",
+  "scope": "LOCAL_SOURCE_AND_HISTORICAL_RECEIPT_RECONCILIATION_NOT_A_NEW_CHROME_RUN",
+  "historicalBlockedCommand": "NOT_EXECUTED_UNCHANGED",
+  "receipts": [
+    {
+      "path": "docs/qa/FCV588_FUNC_V29_RED_RECEIPT.json",
+      "sha256": "365b2dc12a2e4125768b7bf88f062760dccb981a3d2be16be98c585a27ab73d3",
+      "status": "FAIL",
+      "runtimeSha256": "79eb71132e233571b3f45454f55095c73292343ce7134405f38d4caa5ba65ab3",
+      "chromeVersion": "155.0.8059.41",
+      "currentFileDigestMatch": false,
+      "recordedHarness": {
+        "fcv588_func_visual_regression.py": "bc4ca5baeb98e76701041dbeee9405e02ca024a446f646b02436d7518d6e5a9f",
+        "fcv588_chrome_viewport_acceptance.py": "c2fc4b842d65d947b84a7c17ad9fc707887ea0e7921db4bc856e9176cd86dd70"
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "status": "FAIL",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "bea6142e1c666dcde51eef0d427421608393d853f449fdddf7c1c29e166fd953",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "status": "FAIL",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "e89aefd9fdf3ba9b37bb604e7e74d5a2cadff4e5f45f3c4ea2d2f26d9976dcd8",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "360x800",
+          "status": "FAIL",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "5f36ee174b77b17fb0119b9e8c619f0b147af31db0a364d8f32b739bc3a4ee27",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "status": "FAIL",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "7b234088c7504b0adfe9561f6ac106b3f12d45b7f6cb784a766755896bfb6287",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "docs/qa/FCV588_FUNC_V29_GREEN_RECEIPT.json",
+      "sha256": "22361652c63d99baea2c260c4d32046453fd731c7898300148bb8cd51bcfaf70",
+      "status": "PASS",
+      "runtimeSha256": "b9c769e9023cd3746dd5303f3e15796464e06ad6405f0e388bef0cea1e4a0590",
+      "chromeVersion": "155.0.8059.41",
+      "currentFileDigestMatch": true,
+      "recordedHarness": {
+        "fcv588_func_visual_regression.py": "bc4ca5baeb98e76701041dbeee9405e02ca024a446f646b02436d7518d6e5a9f",
+        "fcv588_chrome_viewport_acceptance.py": "c2fc4b842d65d947b84a7c17ad9fc707887ea0e7921db4bc856e9176cd86dd70"
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "91b9e73baab4bc94981b3c664d0b457a9bce0db3c3d1f16a7a176d81f3c303ed",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "e576417f9b0cbd17bd8ce571235b40322c22777f632863034e52f4db306b19d1",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "360x800",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "2d46e2acd55432f3ee5dbc990b30ae8aa67bf1bc2ffa16235e716a74d56c03bf",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "8b07a35acfaa7294fed02c7a8a53e393c2958243ac35785c1b3c87f92e21cb91",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "docs/qa/FCV588_LCD_V29_GREEN_RECEIPT.json",
+      "sha256": "05b7499b57dad3997947500373d0347f709c976679f5ecb7f3e0ef3addc8f6cd",
+      "status": "PASS",
+      "runtimeSha256": "b9c769e9023cd3746dd5303f3e15796464e06ad6405f0e388bef0cea1e4a0590",
+      "chromeVersion": null,
+      "currentFileDigestMatch": true,
+      "recordedHarness": {
+        "fcv588_lcd_visual_regression.py": "6d000896bc61064e48a8481d7d4fa6df551bf0925d706a139c73092bca3884ff",
+        "fcv588_chrome_viewport_acceptance.py": "3ff82b0116255b8ec3cf1dd46500e91c49e514fd376a0b3fbbe56ea4fadea29d"
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "c363b40c8545d9ea451465b374d6f2ec47b4ec7cba39688ba42da4b798ad8567",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "e7be2338bd1eaa200eb3774205e70039fe04d7b37284c014ef91d6247386dc44",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "360x800",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "8dd3b975fc06b165dabb10c2b182efac31df2a37833eda1a1d6f4e702f6d3bb8",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 62,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "4294dd126c46a230004602d5979004ce67369b745ef168090024224e4c4fd21f",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_VIEWPORT_V29_RECEIPT.json",
+      "sha256": "865eed2d0d9971b12c46f580be5bb7c1e4507720c123ba9c1245f5d6a58617e5",
+      "status": "PASS_OBSERVED_VIEWPORTS",
+      "runtimeSha256": "b9c769e9023cd3746dd5303f3e15796464e06ad6405f0e388bef0cea1e4a0590",
+      "chromeVersion": null,
+      "currentFileDigestMatch": true,
+      "recordedHarness": {
+        "status": "PASS_UNCHANGED",
+        "sourceDigestsSha256": {
+          "desktopRunner": "3ff82b0116255b8ec3cf1dd46500e91c49e514fd376a0b3fbbe56ea4fadea29d"
+        },
+        "sourcePaths": {
+          "desktopRunner": "tools/fcv588_chrome_viewport_acceptance.py"
+        }
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 63,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "6fa3a24bff2939dbcfef1f26a633fdef916db9f1f9251f8a700a149162137ab3",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 63,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "e318220141bf5feef0bf7fdb03eb6c763ffc9213f1986c474e6f4183babc369f",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_MOBILE_V29_RECEIPT.json",
+      "sha256": "e08267c875f46f39ed0311bd72b2b60d976c97134c7bb942d665be35d7cff088",
+      "status": "PASS_OBSERVED_PHONE_VIEWPORTS",
+      "runtimeSha256": "b9c769e9023cd3746dd5303f3e15796464e06ad6405f0e388bef0cea1e4a0590",
+      "chromeVersion": null,
+      "currentFileDigestMatch": true,
+      "recordedHarness": {
+        "status": "PASS_UNCHANGED",
+        "sourceDigestsSha256": {
+          "mobileRunner": "4239c92817fb5e89faa65d23d52e9f33b75899c51b2e21523e3f4240ab2fbfa7",
+          "sharedChromeVerifier": "3ff82b0116255b8ec3cf1dd46500e91c49e514fd376a0b3fbbe56ea4fadea29d"
+        },
+        "sourcePaths": {
+          "mobileRunner": "tools/fcv588_mobile_viewport_acceptance.py",
+          "sharedChromeVerifier": "tools/fcv588_chrome_viewport_acceptance.py"
+        }
+      },
+      "contexts": [
+        {
+          "viewport": "360x800",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 31,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "be092130480d1f9e9aa9a81937c3ef85121c30a8854d71be15d504ab606ef215",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "status": "PASS",
+          "bodyIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 31,
+            "verifiedUniquePaths": 31,
+            "browserLoadedResponsesSha256": "33d15e57e05a82febc72867f895eb308634ac907aa3b718d278f601a40fd9f71",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "ninePreviouslyPendingScreenshots": [
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1366x768.png",
+      "sha256": "8904f40155b9f75cebbc52711c4cd860fbfc58c488b85119a1d8eddf4f50f9c7",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1366x768_palette_white.png",
+      "sha256": "4c06050e1c0799fca256f3122a6560b9795717f4d8cab5d85a787fbda2204b3b",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1920x1080.png",
+      "sha256": "2a0d8242a6073280a71fbd2ca6a36c08d580e05b23a8aad4c3daade147306be8",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1920x1080_nav2_configured.png",
+      "sha256": "01f695c84c4eeee85140b14bc22b27c13beeb2980ac3226279fc27824fcea5e9",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1920x1080_tankenmaru_details.png",
+      "sha256": "f209a48dc8f1a0a53251c1a2cd4c399d80ca8aa6ad7a158cff5338d87fdf76cc",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_1920x1080_palette_white.png",
+      "sha256": "072be2e24ebfbb0c99a56b1ebe858196b5094189252521006de4c0bb3803a94c",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_mobile_360x800.png",
+      "sha256": "455e0052e58e46e3ad0976d8f800a0b726112979071fccaae733f70436267dde",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_mobile_390x844.png",
+      "sha256": "a10977c2e593bc87656ce270bca42c1af336f4c53ff30a8ed36e84bf50772468",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_public_v29_mobile_390x844_palette_white.png",
+      "sha256": "e964edcae59cd3cf07e5dbb9a3576c440f01d33d6f541a9bcc6586ec76c27259",
+      "review": "OPENED_IN_THIS_CONTINUATION_NATIVE_VISION"
+    }
+  ],
+  "visualReviewNotes": [
+    "All nine original full-suite images opened; LCD dark/light, NAV changes and separated instructor layout observed.",
+    "Desktop lesson controls appear wider than their inner lesson panel; new V30 geometry probe required, not a V29 gate retroactively passed."
+  ],
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "beforeArchive": {
+    "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v30-selected-source-before.zip",
+    "sha256": "f881155859f851be42dcb4e58afa9a49388f9856571097c1db2edf39148588e8"
+  },
+  "canonicalChecklistSnapshot": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-01-start.md",
+      "sourceSha256": "3bbefdd6f43ede84303d45e1a343673b8e6da3646ccb28bba1c8639b7273dbf3",
+      "tasks": [
+        {
+          "line": 57,
+          "text": "### Task 1.0 — Repair known plan-text regression without weakening fidelity checks"
+        },
+        {
+          "line": 65,
+          "text": "### Task 1.1 — Source provenance, rights and extensible evidence ledger"
+        },
+        {
+          "line": 73,
+          "text": "### Task 1.2 — 64+1 public source/claim trace matrix"
+        },
+        {
+          "line": 81,
+          "text": "### Task 1.3 — Synthetic Demo and transducer-guard profiles"
+        },
+        {
+          "line": 89,
+          "text": "### Task 1.4 — Claims, original assets and visible student disclaimer"
+        }
+      ],
+      "entries": [
+        {
+          "line": 49,
+          "checked": true,
+          "text": "Existing 11-source ledger is preserved and extensible; each entry has authorityTier, evidenceMode, access, rights, source branch and no false audited-video timestamp."
+        },
+        {
+          "line": 50,
+          "checked": true,
+          "text": "Public trace matrix covers 64 operator features plus D15 instructor separately without editing operatorFidelityStatus/targetHardwareEvidenceIds."
+        },
+        {
+          "line": 51,
+          "checked": true,
+          "text": "Default FCV588_PUBLIC_DEMO_UNKNOWN_FW profile has Demo On, no attached equipment, unknown firmware, safe virtual Type; alternate generic600/generic1kW/525STID-PWD are separate test fixtures, not simultaneously present."
+        },
+        {
+          "line": 52,
+          "checked": true,
+          "text": "New rights policy distinguishes authorized reading/retention/AI processing/reproduction/redistribution; marks unverified processing permission as project safety HOLD, not a verbatim publisher AI ban."
+        },
+        {
+          "line": 53,
+          "checked": true,
+          "text": "Student UI visibly states PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY; server cannot expose sources/manuals, transcripts or teacher-only private files."
+        },
+        {
+          "line": 99,
+          "checked": true,
+          "text": "Task 1.0 baseline text-only regression documented and GREEN."
+        },
+        {
+          "line": 100,
+          "checked": true,
+          "text": "Task 1.1 existing source ledger extended and rigorously graded."
+        },
+        {
+          "line": 101,
+          "checked": true,
+          "text": "Task 1.2 public trace created with 64 operator rows + D15 separate."
+        },
+        {
+          "line": 102,
+          "checked": true,
+          "text": "Task 1.3 profile and distinct virtual transducer conditions valid."
+        },
+        {
+          "line": 103,
+          "checked": true,
+          "text": "Task 1.4 visible banner and source rights guard tested."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-02-physical-panel-and-controls.md",
+      "sourceSha256": "d1868f14c494f630fa7a8d6fe21b41bae18e5093f6a2dacd342e3e9c88da4967",
+      "tasks": [
+        {
+          "line": 49,
+          "text": "### Task 2.1 — Panel geometry and input fidelity"
+        },
+        {
+          "line": 57,
+          "text": "### Task 2.2 — Replayable UI clock and MODE selection"
+        },
+        {
+          "line": 65,
+          "text": "### Task 2.3 — POWER, BRILL, RANGE, GAIN and VRM edge cases"
+        }
+      ],
+      "entries": [
+        {
+          "line": 42,
+          "checked": true,
+          "text": "Original panel artwork from independently drawn geometry, separate ENTER, TrackPad, POWER/BRILL and two rotary knobs, 480x640 logical LCD; instructor assists stay distinct."
+        },
+        {
+          "line": 43,
+          "checked": false,
+          "text": "Explicit recorded UI time permits ~6-second MODE/BRILL timeout even when teacher pauses synthetic world; replay and profile versions updated consistently."
+        },
+        {
+          "line": 44,
+          "checked": false,
+          "text": "Power/startup/hold-off behavior, MENU/ESC, RANGE, GAIN+offset and VRM obey manual-supported transitions; FUNC 650ms remains visibly provisional if no better evidence."
+        },
+        {
+          "line": 45,
+          "checked": false,
+          "text": "F0 tests asserting known-wrong immediate MODE semantics are migrated with source citation and before/after rationale, not disabled."
+        },
+        {
+          "line": 75,
+          "checked": true,
+          "text": "Task 2.1 independently drawn/accessible panel and input replay."
+        },
+        {
+          "line": 76,
+          "checked": false,
+          "text": "Task 2.2 MODE selection and UI clock independently recorded/replayed."
+        },
+        {
+          "line": 77,
+          "checked": false,
+          "text": "Task 2.3 power/BRILL/Range/Gain/VRM reference paths and negative states."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-03-menu-atlas-and-configuration.md",
+      "sourceSha256": "eeaa5e766b6855990d92d3ef5314dbfca240dae4a1d3ccca184d44e5387bde7e",
+      "tasks": [
+        {
+          "line": 48,
+          "text": "### Task 3.1 — Versioned FCV menu atlas and reachability"
+        },
+        {
+          "line": 56,
+          "text": "### Task 3.2 — Settings transaction, units and power persistence"
+        },
+        {
+          "line": 64,
+          "text": "### Task 3.3 — System, transducer and IEC installation-specific gates"
+        }
+      ],
+      "entries": [
+        {
+          "line": 41,
+          "checked": false,
+          "text": "Versioned five-menu Sounder/Display/Alarm/Data/System atlas covers all source-documented Appendix1 nodes or marks gaps explicitly."
+        },
+        {
+          "line": 42,
+          "checked": false,
+          "text": "Menu interaction has cursor, stage, commit/ESC, nested path and persistence only when documented."
+        },
+        {
+          "line": 43,
+          "checked": false,
+          "text": "Installation-only setup and normal System paths are separate; Tankenmaru On disallows NMEA config/port in simulated status."
+        },
+        {
+          "line": 44,
+          "checked": false,
+          "text": "Synthetic receive/missing/stale NMEA data (IEC 61162-1) never means actual input/output, ship network or navigating aid."
+        },
+        {
+          "line": 74,
+          "checked": false,
+          "text": "Five-menu atlas complete for claimed public revision, with explicit unsupported branches."
+        },
+        {
+          "line": 75,
+          "checked": false,
+          "text": "Stage/commit/ESC/persistence and units tested."
+        },
+        {
+          "line": 76,
+          "checked": false,
+          "text": "§4.10 installation and Tankenmaru/NMEA mutually exclusive guarded states tested."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-04-sonar-views-and-advanced.md",
+      "sourceSha256": "0a948b09f72493926c84cd460e7404ab65e6e28395a56f7e9e81c803f2ce8967",
+      "tasks": [
+        {
+          "line": 47,
+          "text": "### Task 4.1 — Stable raw sonar ports and deterministic scenario fixtures"
+        },
+        {
+          "line": 55,
+          "text": "### Task 4.2 — LF/HF/DUAL/Zoom layouts, processing and Picture Advance"
+        },
+        {
+          "line": 63,
+          "text": "### Task 4.3 — ACCU-FISH, Bottom Discrimination and RezBoost guarded states"
+        }
+      ],
+      "entries": [
+        {
+          "line": 40,
+          "checked": false,
+          "text": "LF/HF/DUAL and BL/BZ/MZ zoom mode display/header/scale transitions match published descriptions while sensor content remains synthetic."
+        },
+        {
+          "line": 41,
+          "checked": false,
+          "text": "Picture Advance all 8 steps, Stop and processing controls operate only in documented contexts; world and session time remain independent."
+        },
+        {
+          "line": 42,
+          "checked": false,
+          "text": "ACCU-FISH/RezBoost/BDS never enabled merely by Demo mode or generic 600W power rating; guard named transducer + operating parameters."
+        },
+        {
+          "line": 43,
+          "checked": false,
+          "text": "Original Canvas/SVG graphics are independent art; no manufacturer screenshot, video frame or proprietary acoustic algorithm shipped."
+        },
+        {
+          "line": 73,
+          "checked": false,
+          "text": "Raw world/sensor invariant proven over projection changes."
+        },
+        {
+          "line": 74,
+          "checked": false,
+          "text": "All claimed display modes and eight Picture Advance states tested."
+        },
+        {
+          "line": 75,
+          "checked": false,
+          "text": "Advanced options validated per named virtual transducer, depth/speed/installation and firmware source guard."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-05-alarms-nav-demo-diagnostics.md",
+      "sourceSha256": "cad248016b180f0247bcb5a2798186fd5efb6ced469bc3b3ddd191e16872ee67",
+      "tasks": [
+        {
+          "line": 49,
+          "text": "### Task 5.1 — Alarm conjunction, causes, acknowledge and simultaneous profiles"
+        },
+        {
+          "line": 57,
+          "text": "### Task 5.2 — Synthetic NAV, data boxes and waypoint CRUD"
+        },
+        {
+          "line": 65,
+          "text": "### Task 5.3 — System Demo, diagnostics and safe restore"
+        }
+      ],
+      "entries": [
+        {
+          "line": 42,
+          "checked": false,
+          "text": "ALARM1-5 conditions have documented within-profile AND, cross-profile independent activation, mute vs cause-clear and persistent threshold settings."
+        },
+        {
+          "line": 43,
+          "checked": false,
+          "text": "NAV1/NAV2/waypoints support missing or stale synthetic data, valid/invalid inputs and reversible modal workflows."
+        },
+        {
+          "line": 44,
+          "checked": false,
+          "text": "System Demo is distinct from teacher-generated scenario; all controls operative while capability guards still apply."
+        },
+        {
+          "line": 45,
+          "checked": false,
+          "text": "Diagnostics, LCD test and restore are clearly SIMULATED_ONLY without real software version, real ship data or hardware I/O."
+        },
+        {
+          "line": 75,
+          "checked": false,
+          "text": "Alarm profiles reproduce AND cause logic, acknowledge and clear."
+        },
+        {
+          "line": 76,
+          "checked": false,
+          "text": "NAV/waypoint operations and missing/stale data tested."
+        },
+        {
+          "line": 77,
+          "checked": false,
+          "text": "Demo/Diagnostics/Restore fully synthetic and safe."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sourceSha256": "22ce1793a2f7e974d98af1402d71a945a7bd34dd5b2265444b25ddde4cb66db4",
+      "tasks": [
+        {
+          "line": 49,
+          "text": "### Task 6.1 — Full trace, rights and source/claim audit"
+        },
+        {
+          "line": 57,
+          "text": "### Task 6.2 — Static UI/security and actual browser operation"
+        },
+        {
+          "line": 65,
+          "text": "### Task 6.3 — Replayable course lessons and conditional acceptance"
+        }
+      ],
+      "entries": [
+        {
+          "line": 42,
+          "checked": false,
+          "text": "All publicly claimed FCV behaviors have source/document section or actually audited video timestamps and per-profile success/cancel/negative tests; 64 FCV and D15 distinct."
+        },
+        {
+          "line": 43,
+          "checked": false,
+          "text": "Public banner exact: PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY; no restricted source/media in runtime or packaging."
+        },
+        {
+          "line": 44,
+          "checked": false,
+          "text": "Real Windows browser smoke checks page load, controls, keyboard, hold, focus and responsive layout with console/network captured AFTER attach and reload."
+        },
+        {
+          "line": 45,
+          "checked": false,
+          "text": "Completed individual training lessons can receive PUBLIC_REFERENCE_CONFORMANT only after source/rights/replay/browser/reviewer evidence. Overall hardware equivalence remains HOLD."
+        },
+        {
+          "line": 75,
+          "checked": false,
+          "text": "64 FCV + D15 source/claim audit and independent rights review."
+        },
+        {
+          "line": 76,
+          "checked": false,
+          "text": "Node static coverage and real browser smoke with attach-before-reload diagnostics."
+        },
+        {
+          "line": 77,
+          "checked": false,
+          "text": "Reviewed conditional lessons and honest report; unknowns visible, hardware HOLD."
+        }
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-07-shared-world-and-future-devices.md",
+      "sourceSha256": "edd535128da39b76f6cb25e0b3f06dbb109fb918384cb9bccbf5576514809264",
+      "tasks": [
+        {
+          "line": 44,
+          "text": "### Task 7.1 — Second-device inert subscriber and replay isolation"
+        },
+        {
+          "line": 52,
+          "text": "### Task 7.2 — Future-variant HOLD and safe hardware-upgrade documentation"
+        }
+      ],
+      "entries": [
+        {
+          "line": 38,
+          "checked": true,
+          "text": "One world clock, named deterministic sensor streams and isolated device-specific state are proven by repeatable tests."
+        },
+        {
+          "line": 39,
+          "checked": false,
+          "text": "Replay rejects mismatched active device set/profile/version while preserving previous FCV-only historical fixtures via explicit format migration."
+        },
+        {
+          "line": 40,
+          "checked": false,
+          "text": "AIS R5 SUPREME vs SOLID, FAR-2127 controller, MDC-2060 revision, NS4000 version and J2000 identity remain independent holds until confirmed."
+        },
+        {
+          "line": 62,
+          "checked": true,
+          "text": "FCV raw world/sensor/replay invariant under second inert device."
+        },
+        {
+          "line": 63,
+          "checked": false,
+          "text": "Strict unknown model/firmware variants stay HOLD; explicit upgrade route documented."
+        }
+      ]
+    }
+  ]
+}

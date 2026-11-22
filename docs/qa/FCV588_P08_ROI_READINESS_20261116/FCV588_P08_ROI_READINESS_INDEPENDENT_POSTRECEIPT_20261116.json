@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-11-16T10:43:29.724854+07:00",
+  "finalPath": "docs/qa/FCV588_P08_ROI_READINESS_20261116/FCV588_P08_ROI_READINESS_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "3d1a05419617807b3f3ef24042725bf414d53257d5e7157155ca0a6b787bf16a",
+  "freshRehash": {
+    "boundEvidence": 7,
+    "referencePhotos": "8/8",
+    "runtime": "39/39",
+    "server4173": "HTTP200",
+    "testPort4207": "CLOSED"
+  },
+  "independentSourcePhotoReviewer": "worker-1",
+  "nativeReadinessReviewer": "worker-7",
+  "note": "Postreceipt is a distinct local readback, not another independent human review; ROI calibration/native audio still HOLD.",
+  "schema": "fcv588-p08-roi-readiness-postreceipt-v1",
+  "status": "PASS_INDEPENDENT_READBACK_WITH_PRECISION_HOLD"
+}

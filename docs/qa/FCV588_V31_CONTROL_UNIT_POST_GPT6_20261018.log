@@ -1,0 +1,328 @@
+TAP version 13
+# Subtest: range-bank projects only the existing semantic operator fields and never mutates state
+ok 1 - range-bank projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 14.1133
+  type: 'test'
+  ...
+# Subtest: units projects only the existing semantic operator fields and never mutates state
+ok 2 - units projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 6.0679
+  type: 'test'
+  ...
+# Subtest: calibration projects only the existing semantic operator fields and never mutates state
+ok 3 - calibration projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.7995
+  type: 'test'
+  ...
+# Subtest: nav-boxes projects only the existing semantic operator fields and never mutates state
+ok 4 - nav-boxes projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 2.4966
+  type: 'test'
+  ...
+# Subtest: fish-alarm projects only the existing semantic operator fields and never mutates state
+ok 5 - fish-alarm projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 3.6666
+  type: 'test'
+  ...
+# Subtest: fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+ok 6 - fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 3.0045
+  type: 'test'
+  ...
+# Subtest: installation projects only the existing semantic operator fields and never mutates state
+ok 7 - installation projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.0719
+  type: 'test'
+  ...
+# Subtest: func-program projects only the existing semantic operator fields and never mutates state
+ok 8 - func-program projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 1.7712
+  type: 'test'
+  ...
+# Subtest: Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 9 - Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 61.0959
+  type: 'test'
+  ...
+# Subtest: Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 10 - Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 36.6147
+  type: 'test'
+  ...
+# Subtest: Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 11 - Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 35.3689
+  type: 'test'
+  ...
+# Subtest: NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 12 - NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 33.706
+  type: 'test'
+  ...
+# Subtest: ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 13 - ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 33.8928
+  type: 'test'
+  ...
+# Subtest: all bounded numeric configuration windows keep edge and middle drafts visible in original order
+ok 14 - all bounded numeric configuration windows keep edge and middle drafts visible in original order
+  ---
+  duration_ms: 8.8857
+  type: 'test'
+  ...
+# Subtest: Range Bank uses selected depth units consistently without reinterpreting stored meters
+ok 15 - Range Bank uses selected depth units consistently without reinterpreting stored meters
+  ---
+  duration_ms: 1.305
+  type: 'test'
+  ...
+# Subtest: alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+ok 16 - alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+  ---
+  duration_ms: 6.6731
+  type: 'test'
+  ...
+# Subtest: Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+ok 17 - Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+  ---
+  duration_ms: 3.5163
+  type: 'test'
+  ...
+# Subtest: FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+ok 18 - FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+  ---
+  duration_ms: 1.6264
+  type: 'test'
+  ...
+# Subtest: configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+ok 19 - configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+  ---
+  duration_ms: 2.0975
+  type: 'test'
+  ...
+# Subtest: runtime configuration renderer consumes semantic projections using safe inert DOM
+ok 20 - runtime configuration renderer consumes semantic projections using safe inert DOM
+  ---
+  duration_ms: 16.1563
+  type: 'test'
+  ...
+# Subtest: review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+ok 21 - review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+  ---
+  duration_ms: 25.4765
+  type: 'test'
+  ...
+# Subtest: review A: pending Off cannot suppress a committed On alarm or its current cause
+ok 22 - review A: pending Off cannot suppress a committed On alarm or its current cause
+  ---
+  duration_ms: 3.5912
+  type: 'test'
+  ...
+# Subtest: shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+ok 23 - shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+  ---
+  duration_ms: 3.1893
+  type: 'test'
+  ...
+# Subtest: Range shows current and pending mode/preset without persisting a phantom control value
+ok 24 - Range shows current and pending mode/preset without persisting a phantom control value
+  ---
+  duration_ms: 11.9432
+  type: 'test'
+  ...
+# Subtest: Range formatting reads existing configured meters and current depth unit without changing storage
+ok 25 - Range formatting reads existing configured meters and current depth unit without changing storage
+  ---
+  duration_ms: 2.4639
+  type: 'test'
+  ...
+# Subtest: Gain exposes the pending mode and offset, while committed control values remain separate
+ok 26 - Gain exposes the pending mode and offset, while committed control values remain separate
+  ---
+  duration_ms: 3.8783
+  type: 'test'
+  ...
+# Subtest: BRILL selected level and existing idle timer are projected without a second clock
+ok 27 - BRILL selected level and existing idle timer are projected without a second clock
+  ---
+  duration_ms: 2.8701
+  type: 'test'
+  ...
+# Subtest: MODE displays all existing rotary positions and never advertises ENTER as commit
+ok 28 - MODE displays all existing rotary positions and never advertises ENTER as commit
+  ---
+  duration_ms: 2.419
+  type: 'test'
+  ...
+# Subtest: basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+ok 29 - basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+  ---
+  duration_ms: 1.2203
+  type: 'test'
+  ...
+# Subtest: basic control renderer uses original inert DOM and has no independent state transitions
+ok 30 - basic control renderer uses original inert DOM and has no independent state transitions
+  ---
+  duration_ms: 10.0073
+  type: 'test'
+  ...
+# Subtest: FUNC projects every Clutter value through a bounded ordered window with one selected value
+ok 31 - FUNC projects every Clutter value through a bounded ordered window with one selected value
+  ---
+  duration_ms: 119.9468
+  type: 'test'
+  ...
+# Subtest: main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+ok 32 - main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+  ---
+  duration_ms: 11.535
+  type: 'test'
+  ...
+# Subtest: FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+ok 33 - FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+  ---
+  duration_ms: 56.3869
+  type: 'test'
+  ...
+# Subtest: FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+ok 34 - FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+  ---
+  duration_ms: 1.35
+  type: 'test'
+  ...
+# Subtest: renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+ok 35 - renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+  ---
+  duration_ms: 8.6618
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels visible draft and regrant cannot revive it
+ok 36 - V30-B menu: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 76.286
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 37 - V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 39.0685
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 38 - V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 11.0352
+  type: 'test'
+  ...
+# Subtest: menu: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 39 - menu: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 8.1983
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels visible draft and regrant cannot revive it
+ok 40 - V30-B installation: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 38.0498
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 41 - V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 37.8168
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 42 - V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 11.0808
+  type: 'test'
+  ...
+# Subtest: installation: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 43 - installation: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 8.093
+  type: 'test'
+  ...
+# Subtest: unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+ok 44 - unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+  ---
+  duration_ms: 4.712
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.accuFish draft even without a row-list change
+ok 45 - P1 live capability loss cancels display.accuFish draft even without a row-list change
+  ---
+  duration_ms: 6.9272
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.rezBoost draft even without a row-list change
+ok 46 - P1 live capability loss cancels display.rezBoost draft even without a row-list change
+  ---
+  duration_ms: 6.471
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+ok 47 - P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+  ---
+  duration_ms: 6.8158
+  type: 'test'
+  ...
+# Subtest: live BDS capability loss reconciles a draft suspended by POWER without altering its countdown
+ok 48 - live BDS capability loss reconciles a draft suspended by POWER without altering its countdown
+  ---
+  duration_ms: 34.2236
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM1 enable and threshold notices identify the actual edited field
+ok 49 - V30-E ALARM1 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 6.2905
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM2 enable and threshold notices identify the actual edited field
+ok 50 - V30-E ALARM2 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.6648
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM3 enable and threshold notices identify the actual edited field
+ok 51 - V30-E ALARM3 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.3387
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM4 enable and threshold notices identify the actual edited field
+ok 52 - V30-E ALARM4 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.7034
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM5 enable and threshold notices identify the actual edited field
+ok 53 - V30-E ALARM5 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 6.0841
+  type: 'test'
+  ...
+1..53
+# tests 53
+# suites 0
+# pass 53
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 494.749

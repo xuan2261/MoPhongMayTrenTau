@@ -1,0 +1,28 @@
+node:assert:150
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: packaged bytes must equal allowlisted source: package.json
++ actual - expected
+
++ '01adad39e8a10fc7af23282f4a79d673cf0bd2ff4a5bfd6393ee27995c0e748a'
+- 'a8ed9fa7f3d31f9fc1c9c1f8880efd5e1bc1acc75cf132f9af58a1acb843b517'
+
+    at Object.<anonymous> (C:\Work\MoPhongMayTrenTau\staging\fcv588-electron-poc-20261121\desktop\audit-package.cjs:46:9)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '01adad39e8a10fc7af23282f4a79d673cf0bd2ff4a5bfd6393ee27995c0e748a',
+  expected: 'a8ed9fa7f3d31f9fc1c9c1f8880efd5e1bc1acc75cf132f9af58a1acb843b517',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.0

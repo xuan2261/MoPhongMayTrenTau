@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: student console explicitly displays the three-part public-reference disclaimer
+ok 1 - student console explicitly displays the three-part public-reference disclaimer
+  ---
+  duration_ms: 1.5714
+  type: 'test'
+  ...
+# Subtest: no active profile or source asset asserts certified hardware or redistribution rights
+ok 2 - no active profile or source asset asserts certified hardware or redistribution rights
+  ---
+  duration_ms: 6.116
+  type: 'test'
+  ...
+# Subtest: public lesson decisions require authoritative source, verified implementation and browser evidence
+ok 3 - public lesson decisions require authoritative source, verified implementation and browser evidence
+  ---
+  duration_ms: 0.9972
+  type: 'test'
+  ...
+# Subtest: public trace accounts for 64 FCV operator features and separate teacher D15
+ok 4 - public trace accounts for 64 FCV operator features and separate teacher D15
+  ---
+  duration_ms: 3.611
+  type: 'test'
+  ...
+# Subtest: public feature claims never overwrite real-device approval and resolve evidence
+ok 5 - public feature claims never overwrite real-device approval and resolve evidence
+  ---
+  duration_ms: 0.8862
+  type: 'test'
+  ...
+# Subtest: no untested operator behavior is promoted to public-reference conformance
+ok 6 - no untested operator behavior is promoted to public-reference conformance
+  ---
+  duration_ms: 0.3403
+  type: 'test'
+  ...
+# Subtest: V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+ok 7 - V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+  ---
+  duration_ms: 3.8804
+  type: 'test'
+  ...
+# Subtest: V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+ok 8 - V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+  ---
+  duration_ms: 1.2146
+  type: 'test'
+  ...
+# Subtest: V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+ok 9 - V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+  ---
+  duration_ms: 1.5261
+  type: 'test'
+  ...
+# Subtest: V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+ok 10 - V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+  ---
+  duration_ms: 1.2347
+  type: 'test'
+  ...
+# Subtest: V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+ok 11 - V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+  ---
+  duration_ms: 16.5061
+  type: 'test'
+  ...
+# Subtest: V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+ok 12 - V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+  ---
+  duration_ms: 2.7888
+  type: 'test'
+  ...
+# Subtest: V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+ok 13 - V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+  ---
+  duration_ms: 11.0913
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+ok 14 - V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+  ---
+  duration_ms: 2.7485
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+ok 15 - V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+  ---
+  duration_ms: 1.1794
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+ok 16 - V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+  ---
+  duration_ms: 0.8218
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 201.2568

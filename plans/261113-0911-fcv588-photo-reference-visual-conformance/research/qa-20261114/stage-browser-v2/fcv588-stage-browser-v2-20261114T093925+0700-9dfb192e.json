@@ -1,0 +1,3940 @@
+{
+  "schema": "fcv588-stage-browser-v2-qa-v1",
+  "createdAt": "2026-11-14T09:39:25.471648+07:00",
+  "scope": "STAGING_V2_READ_ONLY_SOURCE_RUNTIME_WRITE_ONCE_QA_OUTPUT",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-visual-20261114",
+  "outputDir": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 4178,
+    "url": "http://127.0.0.1:4178/",
+    "kind": "test-owned restricted Python ThreadingHTTPServer"
+  },
+  "browser": {
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "headless": false,
+    "version": "157.0.8103.78"
+  },
+  "overallStatus": "PASS",
+  "objectiveFailures": [],
+  "httpPhotoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "lf.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/lf.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/lf.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "hf.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/hf.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/hf.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "dual.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/dual.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/dual.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "zoom.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/zoom.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "zoom2.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/zoom2.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "nav1.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/nav1.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "nav2.jpg",
+        "path": "/sources/FCV588_GiaoDienThucTeMay2016/nav2.jpg",
+        "url": "http://127.0.0.1:4178/sources/FCV588_GiaoDienThucTeMay2016/nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      }
+    ]
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "states": {
+        "LF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "007",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "265.188px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 231.390625,
+                "top": 723.953125,
+                "right": 323.3125,
+                "bottom": 773.953125,
+                "width": 91.921875,
+                "height": 50
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-LF.png",
+            "bytes": 289435,
+            "sha256": "e1a04810c8f3ef685b7f841b20dc78a8e4c96e89575d2b97a151cb458975f894"
+          }
+        },
+        "MENU": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "008",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": false,
+              "title": "Sounder",
+              "layout": "main-menu"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "265.188px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 231.390625,
+                "top": 723.953125,
+                "right": 323.3125,
+                "bottom": 773.953125,
+                "width": 91.921875,
+                "height": 50
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-MENU.png",
+            "bytes": 301246,
+            "sha256": "8078564961ffac6a4a7873a20a1428900e507862dcb98131493469dc5e1b83c7"
+          }
+        },
+        "DUAL": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "DUAL",
+            "screenTop": "AUTO_R   G:AF   LF/HF   x1",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "034",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "DUAL",
+              "display": "flex",
+              "left": "11px",
+              "right": "265.188px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 231.390625,
+                "top": 723.953125,
+                "right": 323.3125,
+                "bottom": 773.953125,
+                "width": 91.921875,
+                "height": 50
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF/HF   x1",
+            "headerActual": "AUTO_R   G:AF   LF/HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-DUAL.png",
+            "bytes": 292512,
+            "sha256": "ab8f349bb570080dfa6f73f18e03c5ec71ee8ead690cc024fb8a2b134cc10f76"
+          }
+        },
+        "HF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "HF",
+            "screenTop": "AUTO_R   G:AF   HF   x1",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "059",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "HF",
+              "display": "flex",
+              "left": "11px",
+              "right": "265.188px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 231.390625,
+                "top": 723.953125,
+                "right": 323.3125,
+                "bottom": 773.953125,
+                "width": 91.921875,
+                "height": 50
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   HF   x1",
+            "headerActual": "AUTO_R   G:AF   HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-HF.png",
+            "bytes": 290590,
+            "sha256": "c9bd3bdd91ea43ae48f450f00b7dc1221454600e5d4772368c6f38fb8f716ab5"
+          }
+        },
+        "NAV2": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "NAV2",
+            "screenTop": "",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "085",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-NAV2.png",
+            "bytes": 295073,
+            "sha256": "84bc5b870eb9b506f6773a5164bee1b33acc8ec3137ddc1afaa69ad811dcdb5d"
+          }
+        },
+        "NAV1": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1366,
+              "height": 768,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1351,
+              "height": 1081
+            },
+            "mode": "NAV1",
+            "screenTop": "",
+            "depth": "52.5",
+            "depthUnit": "m",
+            "tickCount": "0005",
+            "eventCount": "110",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "267.188px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 231.390625,
+                "top": 697.953125,
+                "right": 321.3125,
+                "bottom": 773.953125,
+                "width": 89.921875,
+                "height": 76
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 216.390625,
+                "top": 285.5,
+                "right": 592.5,
+                "bottom": 787.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 168,
+                "top": 201.390625,
+                "right": 848,
+                "bottom": 989.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "267.188px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 231.390625,
+                "top": 697.953125,
+                "right": 321.3125,
+                "bottom": 773.953125,
+                "width": 89.921875,
+                "height": 76
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-NAV1.png",
+            "bytes": 294004,
+            "sha256": "f18ed5c38b7448b334cd154ada21f2b6fd994cddcb64a28bdebf08496f691de2"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "label": "LF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-LF.png",
+          "bytes": 289435,
+          "sha256": "e1a04810c8f3ef685b7f841b20dc78a8e4c96e89575d2b97a151cb458975f894"
+        },
+        {
+          "label": "MENU",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-MENU.png",
+          "bytes": 301246,
+          "sha256": "8078564961ffac6a4a7873a20a1428900e507862dcb98131493469dc5e1b83c7"
+        },
+        {
+          "label": "DUAL",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-DUAL.png",
+          "bytes": 292512,
+          "sha256": "ab8f349bb570080dfa6f73f18e03c5ec71ee8ead690cc024fb8a2b134cc10f76"
+        },
+        {
+          "label": "HF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-HF.png",
+          "bytes": 290590,
+          "sha256": "c9bd3bdd91ea43ae48f450f00b7dc1221454600e5d4772368c6f38fb8f716ab5"
+        },
+        {
+          "label": "NAV2",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-NAV2.png",
+          "bytes": 295073,
+          "sha256": "84bc5b870eb9b506f6773a5164bee1b33acc8ec3137ddc1afaa69ad811dcdb5d"
+        },
+        {
+          "label": "NAV1",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1366x768-NAV1.png",
+          "bytes": 294004,
+          "sha256": "f18ed5c38b7448b334cd154ada21f2b6fd994cddcb64a28bdebf08496f691de2"
+        }
+      ],
+      "loadedBodies": [
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "path": "src/core/lessons.mjs",
+          "status": 200,
+          "bytes": 14853,
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "exactSourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "path": "src/core/protocol.mjs",
+          "status": 200,
+          "bytes": 7420,
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "exactSourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "path": "src/core/scenario.mjs",
+          "status": 200,
+          "bytes": 9012,
+          "bodySha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "exactSourceSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "path": "src/core/session.mjs",
+          "status": 200,
+          "bytes": 8784,
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "exactSourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "path": "src/devices/fcv588/adapter.mjs",
+          "status": 200,
+          "bytes": 1417,
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "exactSourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "path": "src/devices/fcv588/alarms.mjs",
+          "status": 200,
+          "bytes": 2639,
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "exactSourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "path": "src/devices/fcv588/calibration.mjs",
+          "status": 200,
+          "bytes": 2346,
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "exactSourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "status": 200,
+          "bytes": 2122,
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "exactSourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "status": 200,
+          "bytes": 1265,
+          "bodySha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "exactSourceSha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "status": 200,
+          "bytes": 2794,
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "exactSourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "status": 200,
+          "bytes": 3138,
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "exactSourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "status": 200,
+          "bytes": 13198,
+          "bodySha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "exactSourceSha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "status": 200,
+          "bytes": 12576,
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "exactSourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "path": "src/devices/fcv588/model.mjs",
+          "status": 200,
+          "bytes": 50464,
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "exactSourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "path": "src/devices/fcv588/navigation.mjs",
+          "status": 200,
+          "bytes": 10938,
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "exactSourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "status": 200,
+          "bytes": 299,
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "exactSourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "status": 200,
+          "bytes": 2590,
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "exactSourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "path": "src/devices/fcv588/settings.mjs",
+          "status": 200,
+          "bytes": 4272,
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "exactSourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200,
+          "bytes": 921,
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "exactSourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "status": 200,
+          "bytes": 569,
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "exactSourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "path": "src/devices/fcv588/units.mjs",
+          "status": 200,
+          "bytes": 3408,
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "exactSourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "path": "web/app.mjs",
+          "status": 200,
+          "bytes": 56227,
+          "bodySha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "exactSourceSha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "status": 200,
+          "bytes": 7634,
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "exactSourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "path": "web/hold-input.mjs",
+          "status": 200,
+          "bytes": 4425,
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "exactSourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "path": "web/instructor-tabs.mjs",
+          "status": 200,
+          "bytes": 3457,
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "exactSourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "path": "web/key-feedback.mjs",
+          "status": 200,
+          "bytes": 1301,
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "exactSourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "path": "web/keyboard-shortcuts.mjs",
+          "status": 200,
+          "bytes": 845,
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "exactSourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "path": "web/lcd-config-presentation.mjs",
+          "status": 200,
+          "bytes": 6718,
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "exactSourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "path": "web/lcd-control-presentation.mjs",
+          "status": 200,
+          "bytes": 4116,
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "exactSourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "path": "web/lcd-instructor-meta.mjs",
+          "status": 200,
+          "bytes": 14708,
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "exactSourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "path": "web/lcd-presentation.mjs",
+          "status": 200,
+          "bytes": 10659,
+          "bodySha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "exactSourceSha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "path": "web/pad-repeat.mjs",
+          "status": 200,
+          "bytes": 4007,
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "exactSourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "path": "web/rotary-input.mjs",
+          "status": 200,
+          "bytes": 3054,
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "exactSourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "path": "web/styles.css",
+          "status": 200,
+          "bytes": 32102,
+          "bodySha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "exactSourceSha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "matchesExactSource": true
+        }
+      ],
+      "loadedBodiesAllMatchedExactSource": true,
+      "loadedBodiesAggregateSha256": "7d3578b71bf1e87d761c63e46b8dcbcdbb81507d2fd3e36a771a030fff6a1a89",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "networkResponses": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/favicon.svg",
+          "status": 200
+        }
+      ],
+      "bodyReadErrors": [],
+      "badHttpResponses": [],
+      "objectiveFailures": [],
+      "failure": null,
+      "initialState": {
+        "href": "http://127.0.0.1:4178/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1351,
+          "height": 1021
+        },
+        "mode": "LF",
+        "screenTop": "POWER OFF",
+        "depth": "--.-",
+        "depthUnit": "m",
+        "tickCount": "0000",
+        "eventCount": "000",
+        "statusLine": "POWER OFF",
+        "paused": false,
+        "overlay": {
+          "hidden": true,
+          "title": "",
+          "layout": "dialog"
+        },
+        "sourceCue": {
+          "hidden": true,
+          "title": "",
+          "detail": ""
+        },
+        "depthIndicator": {
+          "hidden": true,
+          "dataView": "LF",
+          "display": "none",
+          "left": "11px",
+          "right": "auto",
+          "maxWidth": "none",
+          "rect": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "geometry": {
+          "lcd": {
+            "left": 216.390625,
+            "top": 225.109375,
+            "right": 592.5,
+            "bottom": 727.5625,
+            "width": 376.109375,
+            "height": 502.453125
+          },
+          "deviceFrame": {
+            "left": 168,
+            "top": 141,
+            "right": 848,
+            "bottom": 928.96875,
+            "width": 680,
+            "height": 787.96875
+          }
+        },
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "localStorageKeys": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "states": {
+        "LF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 469,
+              "width": 360,
+              "height": 2258
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "006",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "234.719px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 40,
+                "top": 255.015625,
+                "right": 96.28125,
+                "bottom": 283.015625,
+                "width": 56.28125,
+                "height": 28
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -117.125,
+                "right": 335,
+                "bottom": 297.015625,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -151.125,
+                "right": 351,
+                "bottom": 963.015625,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-LF.png",
+            "bytes": 48433,
+            "sha256": "da3c86c74c7b38f56aefc48c9608e5f25249ce0192e4517dcb76d21210485a78"
+          }
+        },
+        "MENU": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 538,
+              "width": 360,
+              "height": 2396
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "007",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": false,
+              "title": "Sounder",
+              "layout": "main-menu"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "234.719px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 40,
+                "top": 255.3125,
+                "right": 96.28125,
+                "bottom": 283.3125,
+                "width": 56.28125,
+                "height": 28
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -116.828125,
+                "right": 335,
+                "bottom": 297.3125,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -150.828125,
+                "right": 351,
+                "bottom": 963.3125,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-MENU.png",
+            "bytes": 53815,
+            "sha256": "ffd27151dc91b0f16a17dfb3ea931554ba268ccdd9b6a7bed77113037416be35"
+          }
+        },
+        "DUAL": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 620,
+              "width": 360,
+              "height": 2258
+            },
+            "mode": "DUAL",
+            "screenTop": "AUTO_R   G:AF   LF/HF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "033",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "DUAL",
+              "display": "flex",
+              "left": "11px",
+              "right": "234.719px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 40,
+                "top": 104.015625,
+                "right": 96.28125,
+                "bottom": 132.015625,
+                "width": 56.28125,
+                "height": 28
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -268.125,
+                "right": 335,
+                "bottom": 146.015625,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -302.125,
+                "right": 351,
+                "bottom": 812.015625,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF/HF   x1",
+            "headerActual": "AUTO_R   G:AF   LF/HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-DUAL.png",
+            "bytes": 57093,
+            "sha256": "ed5763ffb56e94d126919ff27861c9bb69ea33300acae75d5f6e67a9989c0228"
+          }
+        },
+        "HF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 620,
+              "width": 360,
+              "height": 2258
+            },
+            "mode": "HF",
+            "screenTop": "AUTO_R   G:AF   HF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "058",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "HF",
+              "display": "flex",
+              "left": "11px",
+              "right": "234.719px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 40,
+                "top": 104.015625,
+                "right": 96.28125,
+                "bottom": 132.015625,
+                "width": 56.28125,
+                "height": 28
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -268.125,
+                "right": 335,
+                "bottom": 146.015625,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -302.125,
+                "right": 351,
+                "bottom": 812.015625,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   HF   x1",
+            "headerActual": "AUTO_R   G:AF   HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-HF.png",
+            "bytes": 57181,
+            "sha256": "4859695a96c1bc97991bbd562780a88e40068ff728ce45a5ea0e778cc152c845"
+          }
+        },
+        "NAV2": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 637,
+              "width": 360,
+              "height": 2275
+            },
+            "mode": "NAV2",
+            "screenTop": "",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "084",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -267.734375,
+                "right": 335,
+                "bottom": 146.40625,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -301.734375,
+                "right": 351,
+                "bottom": 812.40625,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-NAV2.png",
+            "bytes": 56645,
+            "sha256": "f6b95f9375f978b4041906a6df6242046c45cb35f03f5120a6eb6d26d3153611"
+          }
+        },
+        "NAV1": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 375,
+              "height": 812,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 637,
+              "width": 360,
+              "height": 2275
+            },
+            "mode": "NAV1",
+            "screenTop": "",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "109",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "236.719px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 40,
+                "top": 78.40625,
+                "right": 94.28125,
+                "bottom": 132.40625,
+                "width": 54.28125,
+                "height": 54
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 25,
+                "top": -267.734375,
+                "right": 335,
+                "bottom": 146.40625,
+                "width": 310,
+                "height": 414.140625
+              },
+              "deviceFrame": {
+                "left": 9,
+                "top": -301.734375,
+                "right": 351,
+                "bottom": 812.40625,
+                "width": 342,
+                "height": 1114.140625
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "236.719px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 40,
+                "top": 78.40625,
+                "right": 94.28125,
+                "bottom": 132.40625,
+                "width": 54.28125,
+                "height": 54
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-NAV1.png",
+            "bytes": 57529,
+            "sha256": "7e547082ca93b7b1cb4e4385e31b4dcb7dad06fbe3da00b4e38be68cd73cd696"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "label": "LF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-LF.png",
+          "bytes": 48433,
+          "sha256": "da3c86c74c7b38f56aefc48c9608e5f25249ce0192e4517dcb76d21210485a78"
+        },
+        {
+          "label": "MENU",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-MENU.png",
+          "bytes": 53815,
+          "sha256": "ffd27151dc91b0f16a17dfb3ea931554ba268ccdd9b6a7bed77113037416be35"
+        },
+        {
+          "label": "DUAL",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-DUAL.png",
+          "bytes": 57093,
+          "sha256": "ed5763ffb56e94d126919ff27861c9bb69ea33300acae75d5f6e67a9989c0228"
+        },
+        {
+          "label": "HF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-HF.png",
+          "bytes": 57181,
+          "sha256": "4859695a96c1bc97991bbd562780a88e40068ff728ce45a5ea0e778cc152c845"
+        },
+        {
+          "label": "NAV2",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-NAV2.png",
+          "bytes": 56645,
+          "sha256": "f6b95f9375f978b4041906a6df6242046c45cb35f03f5120a6eb6d26d3153611"
+        },
+        {
+          "label": "NAV1",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-375x812-NAV1.png",
+          "bytes": 57529,
+          "sha256": "7e547082ca93b7b1cb4e4385e31b4dcb7dad06fbe3da00b4e38be68cd73cd696"
+        }
+      ],
+      "loadedBodies": [
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "path": "src/core/lessons.mjs",
+          "status": 200,
+          "bytes": 14853,
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "exactSourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "path": "src/core/protocol.mjs",
+          "status": 200,
+          "bytes": 7420,
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "exactSourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "path": "src/core/scenario.mjs",
+          "status": 200,
+          "bytes": 9012,
+          "bodySha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "exactSourceSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "path": "src/core/session.mjs",
+          "status": 200,
+          "bytes": 8784,
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "exactSourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "path": "src/devices/fcv588/adapter.mjs",
+          "status": 200,
+          "bytes": 1417,
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "exactSourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "path": "src/devices/fcv588/alarms.mjs",
+          "status": 200,
+          "bytes": 2639,
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "exactSourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "path": "src/devices/fcv588/calibration.mjs",
+          "status": 200,
+          "bytes": 2346,
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "exactSourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "status": 200,
+          "bytes": 2122,
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "exactSourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "status": 200,
+          "bytes": 1265,
+          "bodySha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "exactSourceSha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "status": 200,
+          "bytes": 2794,
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "exactSourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "status": 200,
+          "bytes": 3138,
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "exactSourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "status": 200,
+          "bytes": 13198,
+          "bodySha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "exactSourceSha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "status": 200,
+          "bytes": 12576,
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "exactSourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "path": "src/devices/fcv588/model.mjs",
+          "status": 200,
+          "bytes": 50464,
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "exactSourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "path": "src/devices/fcv588/navigation.mjs",
+          "status": 200,
+          "bytes": 10938,
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "exactSourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "status": 200,
+          "bytes": 299,
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "exactSourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "status": 200,
+          "bytes": 2590,
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "exactSourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "path": "src/devices/fcv588/settings.mjs",
+          "status": 200,
+          "bytes": 4272,
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "exactSourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200,
+          "bytes": 921,
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "exactSourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "status": 200,
+          "bytes": 569,
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "exactSourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "path": "src/devices/fcv588/units.mjs",
+          "status": 200,
+          "bytes": 3408,
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "exactSourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "path": "web/app.mjs",
+          "status": 200,
+          "bytes": 56227,
+          "bodySha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "exactSourceSha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "status": 200,
+          "bytes": 7634,
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "exactSourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "path": "web/hold-input.mjs",
+          "status": 200,
+          "bytes": 4425,
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "exactSourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "path": "web/instructor-tabs.mjs",
+          "status": 200,
+          "bytes": 3457,
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "exactSourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "path": "web/key-feedback.mjs",
+          "status": 200,
+          "bytes": 1301,
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "exactSourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "path": "web/keyboard-shortcuts.mjs",
+          "status": 200,
+          "bytes": 845,
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "exactSourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "path": "web/lcd-config-presentation.mjs",
+          "status": 200,
+          "bytes": 6718,
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "exactSourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "path": "web/lcd-control-presentation.mjs",
+          "status": 200,
+          "bytes": 4116,
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "exactSourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "path": "web/lcd-instructor-meta.mjs",
+          "status": 200,
+          "bytes": 14708,
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "exactSourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "path": "web/lcd-presentation.mjs",
+          "status": 200,
+          "bytes": 10659,
+          "bodySha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "exactSourceSha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "path": "web/pad-repeat.mjs",
+          "status": 200,
+          "bytes": 4007,
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "exactSourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "path": "web/rotary-input.mjs",
+          "status": 200,
+          "bytes": 3054,
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "exactSourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "path": "web/styles.css",
+          "status": 200,
+          "bytes": 32102,
+          "bodySha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "exactSourceSha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "matchesExactSource": true
+        }
+      ],
+      "loadedBodiesAllMatchedExactSource": true,
+      "loadedBodiesAggregateSha256": "7d3578b71bf1e87d761c63e46b8dcbcdbb81507d2fd3e36a771a030fff6a1a89",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "networkResponses": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/favicon.svg",
+          "status": 200
+        }
+      ],
+      "bodyReadErrors": [],
+      "badHttpResponses": [],
+      "objectiveFailures": [],
+      "failure": null,
+      "initialState": {
+        "href": "http://127.0.0.1:4178/",
+        "viewport": {
+          "width": 375,
+          "height": 812,
+          "dpr": 1
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 2175
+        },
+        "mode": "LF",
+        "screenTop": "POWER OFF",
+        "depth": "--.-",
+        "depthUnit": "m",
+        "tickCount": "0000",
+        "eventCount": "000",
+        "statusLine": "POWER OFF",
+        "paused": false,
+        "overlay": {
+          "hidden": true,
+          "title": "",
+          "layout": "dialog"
+        },
+        "sourceCue": {
+          "hidden": true,
+          "title": "",
+          "detail": ""
+        },
+        "depthIndicator": {
+          "hidden": true,
+          "dataView": "LF",
+          "display": "none",
+          "left": "11px",
+          "right": "auto",
+          "maxWidth": "none",
+          "rect": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "geometry": {
+          "lcd": {
+            "left": 25,
+            "top": 269.09375,
+            "right": 335,
+            "bottom": 683.234375,
+            "width": 310,
+            "height": 414.140625
+          },
+          "deviceFrame": {
+            "left": 9,
+            "top": 235.09375,
+            "right": 351,
+            "bottom": 1349.234375,
+            "width": 342,
+            "height": 1114.140625
+          }
+        },
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "localStorageKeys": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": "PASS",
+      "states": {
+        "LF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "006",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "263.734px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 508.390625,
+                "top": 724.953125,
+                "right": 601.765625,
+                "bottom": 775.953125,
+                "width": 93.375,
+                "height": 51
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-LF.png",
+            "bytes": 446888,
+            "sha256": "4726e51f5c4629244010345ed671061afd8e01a2efc14390b10176d31fd5962a"
+          }
+        },
+        "MENU": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "LF",
+            "screenTop": "AUTO_R   G:AF   LF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "007",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": false,
+              "title": "Sounder",
+              "layout": "main-menu"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "LF",
+              "display": "flex",
+              "left": "11px",
+              "right": "263.734px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 508.390625,
+                "top": 724.953125,
+                "right": 601.765625,
+                "bottom": 775.953125,
+                "width": 93.375,
+                "height": 51
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF   x1",
+            "headerActual": "AUTO_R   G:AF   LF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: LF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-MENU.png",
+            "bytes": 458524,
+            "sha256": "01105bfdef19d2e1a98cf104375ce60a9eb441a8dca7231ddbc59a003fccb544"
+          }
+        },
+        "DUAL": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "DUAL",
+            "screenTop": "AUTO_R   G:AF   LF/HF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "033",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "DUAL",
+              "display": "flex",
+              "left": "11px",
+              "right": "263.734px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 508.390625,
+                "top": 724.953125,
+                "right": 601.765625,
+                "bottom": 775.953125,
+                "width": 93.375,
+                "height": 51
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   LF/HF   x1",
+            "headerActual": "AUTO_R   G:AF   LF/HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: DUAL",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-DUAL.png",
+            "bytes": 451191,
+            "sha256": "18d3162b4e648251a0af85f14c76a46aa004ddc414c526a5892a5b70d74841ca"
+          }
+        },
+        "HF": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "HF",
+            "screenTop": "AUTO_R   G:AF   HF   x1",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "058",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "HF",
+              "display": "flex",
+              "left": "11px",
+              "right": "263.734px",
+              "maxWidth": "none",
+              "rect": {
+                "left": 508.390625,
+                "top": 724.953125,
+                "right": 601.765625,
+                "bottom": 775.953125,
+                "width": 93.375,
+                "height": 51
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "AUTO_R   G:AF   HF   x1",
+            "headerActual": "AUTO_R   G:AF   HF   x1",
+            "navDepthIndicator": null,
+            "sourceCue": {
+              "hidden": false,
+              "title": "MODE hiện tại: HF",
+              "detail": "Hồi âm mô phỏng. Không kết nối đầu dò."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-HF.png",
+            "bytes": 448431,
+            "sha256": "a63d8daf98f264f5b0912f0d3106453d63ec893870789c9eea6fbd89156e6c99"
+          }
+        },
+        "NAV2": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "NAV2",
+            "screenTop": "",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "084",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": true,
+              "dataView": "NAV2",
+              "display": "none",
+              "left": "11px",
+              "right": "auto",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV2",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-NAV2.png",
+            "bytes": 451586,
+            "sha256": "159ac036d6d06a14213f42bb5a524907edd3e126f0730fc442f8f371d4b5f808"
+          }
+        },
+        "NAV1": {
+          "status": "PASS",
+          "state": {
+            "href": "http://127.0.0.1:4178/",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "dpr": 1
+            },
+            "scroll": {
+              "x": 0,
+              "y": 0,
+              "width": 1905,
+              "height": 1083
+            },
+            "mode": "NAV1",
+            "screenTop": "",
+            "depth": "52.0",
+            "depthUnit": "m",
+            "tickCount": "0004",
+            "eventCount": "109",
+            "statusLine": "RUN · DEMO DATA",
+            "paused": true,
+            "overlay": {
+              "hidden": true,
+              "title": "MODE",
+              "layout": "dialog"
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "depthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "265.734px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 508.390625,
+                "top": 698.953125,
+                "right": 599.765625,
+                "bottom": 775.953125,
+                "width": 91.375,
+                "height": 77
+              }
+            },
+            "geometry": {
+              "lcd": {
+                "left": 493.390625,
+                "top": 287.5,
+                "right": 869.5,
+                "bottom": 789.953125,
+                "width": 376.109375,
+                "height": 502.453125
+              },
+              "deviceFrame": {
+                "left": 445,
+                "top": 203.390625,
+                "right": 1125,
+                "bottom": 991.359375,
+                "width": 680,
+                "height": 787.96875
+              }
+            },
+            "canvas": {
+              "width": 480,
+              "height": 640
+            },
+            "localStorageKeys": []
+          },
+          "proof": {
+            "status": "PASS",
+            "headerExpected": "",
+            "headerActual": "",
+            "navDepthIndicator": {
+              "hidden": false,
+              "dataView": "NAV1",
+              "display": "block",
+              "left": "11px",
+              "right": "265.734px",
+              "maxWidth": "62%",
+              "rect": {
+                "left": 508.390625,
+                "top": 698.953125,
+                "right": 599.765625,
+                "bottom": 775.953125,
+                "width": 91.375,
+                "height": 77
+              }
+            },
+            "sourceCue": {
+              "hidden": false,
+              "title": "C11 · Nguồn NAV · MODE NAV1",
+              "detail": "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu. NMEA vật lý: không kết nối."
+            },
+            "failures": []
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-NAV1.png",
+            "bytes": 451392,
+            "sha256": "d607d00f34c23db4126ab57a99474aeec5fe42948e876f53f1ec95e23dd5a0eb"
+          }
+        }
+      },
+      "screenshots": [
+        {
+          "label": "LF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-LF.png",
+          "bytes": 446888,
+          "sha256": "4726e51f5c4629244010345ed671061afd8e01a2efc14390b10176d31fd5962a"
+        },
+        {
+          "label": "MENU",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-MENU.png",
+          "bytes": 458524,
+          "sha256": "01105bfdef19d2e1a98cf104375ce60a9eb441a8dca7231ddbc59a003fccb544"
+        },
+        {
+          "label": "DUAL",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-DUAL.png",
+          "bytes": 451191,
+          "sha256": "18d3162b4e648251a0af85f14c76a46aa004ddc414c526a5892a5b70d74841ca"
+        },
+        {
+          "label": "HF",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-HF.png",
+          "bytes": 448431,
+          "sha256": "a63d8daf98f264f5b0912f0d3106453d63ec893870789c9eea6fbd89156e6c99"
+        },
+        {
+          "label": "NAV2",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-NAV2.png",
+          "bytes": 451586,
+          "sha256": "159ac036d6d06a14213f42bb5a524907edd3e126f0730fc442f8f371d4b5f808"
+        },
+        {
+          "label": "NAV1",
+          "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e-1920x1080-NAV1.png",
+          "bytes": 451392,
+          "sha256": "d607d00f34c23db4126ab57a99474aeec5fe42948e876f53f1ec95e23dd5a0eb"
+        }
+      ],
+      "loadedBodies": [
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "path": "src/core/lessons.mjs",
+          "status": 200,
+          "bytes": 14853,
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "exactSourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "path": "src/core/protocol.mjs",
+          "status": 200,
+          "bytes": 7420,
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "exactSourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "path": "src/core/scenario.mjs",
+          "status": 200,
+          "bytes": 9012,
+          "bodySha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "exactSourceSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "path": "src/core/session.mjs",
+          "status": 200,
+          "bytes": 8784,
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "exactSourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "path": "src/devices/fcv588/adapter.mjs",
+          "status": 200,
+          "bytes": 1417,
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "exactSourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "path": "src/devices/fcv588/alarms.mjs",
+          "status": 200,
+          "bytes": 2639,
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "exactSourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "path": "src/devices/fcv588/calibration.mjs",
+          "status": 200,
+          "bytes": 2346,
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "exactSourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "status": 200,
+          "bytes": 2122,
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "exactSourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "status": 200,
+          "bytes": 1265,
+          "bodySha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "exactSourceSha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "status": 200,
+          "bytes": 2794,
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "exactSourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "status": 200,
+          "bytes": 3138,
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "exactSourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "status": 200,
+          "bytes": 13198,
+          "bodySha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "exactSourceSha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "status": 200,
+          "bytes": 12576,
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "exactSourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "path": "src/devices/fcv588/model.mjs",
+          "status": 200,
+          "bytes": 50464,
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "exactSourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "path": "src/devices/fcv588/navigation.mjs",
+          "status": 200,
+          "bytes": 10938,
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "exactSourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "status": 200,
+          "bytes": 299,
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "exactSourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "status": 200,
+          "bytes": 2590,
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "exactSourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "path": "src/devices/fcv588/settings.mjs",
+          "status": 200,
+          "bytes": 4272,
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "exactSourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200,
+          "bytes": 921,
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "exactSourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "status": 200,
+          "bytes": 569,
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "exactSourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "path": "src/devices/fcv588/units.mjs",
+          "status": 200,
+          "bytes": 3408,
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "exactSourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "path": "web/app.mjs",
+          "status": 200,
+          "bytes": 56227,
+          "bodySha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "exactSourceSha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "status": 200,
+          "bytes": 7634,
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "exactSourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "path": "web/hold-input.mjs",
+          "status": 200,
+          "bytes": 4425,
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "exactSourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "path": "web/instructor-tabs.mjs",
+          "status": 200,
+          "bytes": 3457,
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "exactSourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "path": "web/key-feedback.mjs",
+          "status": 200,
+          "bytes": 1301,
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "exactSourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "path": "web/keyboard-shortcuts.mjs",
+          "status": 200,
+          "bytes": 845,
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "exactSourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "path": "web/lcd-config-presentation.mjs",
+          "status": 200,
+          "bytes": 6718,
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "exactSourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "path": "web/lcd-control-presentation.mjs",
+          "status": 200,
+          "bytes": 4116,
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "exactSourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "path": "web/lcd-instructor-meta.mjs",
+          "status": 200,
+          "bytes": 14708,
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "exactSourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "path": "web/lcd-presentation.mjs",
+          "status": 200,
+          "bytes": 10659,
+          "bodySha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "exactSourceSha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "path": "web/pad-repeat.mjs",
+          "status": 200,
+          "bytes": 4007,
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "exactSourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "path": "web/rotary-input.mjs",
+          "status": 200,
+          "bytes": 3054,
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "exactSourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matchesExactSource": true
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "path": "web/styles.css",
+          "status": 200,
+          "bytes": 32102,
+          "bodySha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "exactSourceSha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4",
+          "matchesExactSource": true
+        }
+      ],
+      "loadedBodiesAllMatchedExactSource": true,
+      "loadedBodiesAggregateSha256": "7d3578b71bf1e87d761c63e46b8dcbcdbb81507d2fd3e36a771a030fff6a1a89",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "networkResponses": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/app.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/scenario.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/adapter.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/session.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/menu-atlas.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/echo-projection.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-layout.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-widgets.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/calibration.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/receiver-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/navigation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/model.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/training-faults.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/settings.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/lessons.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/units.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/display-palette.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/hold-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/pad-repeat.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/key-feedback.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/rotary-input.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/keyboard-shortcuts.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/instructor-tabs.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-config-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-control-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-presentation.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/fcv588-training-source-matrix.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/lcd-instructor-meta.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/core/protocol.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/alarms.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/capabilities.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/src/devices/fcv588/profile-version.mjs",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4178/web/favicon.svg",
+          "status": 200
+        }
+      ],
+      "bodyReadErrors": [],
+      "badHttpResponses": [],
+      "objectiveFailures": [],
+      "failure": null,
+      "initialState": {
+        "href": "http://127.0.0.1:4178/",
+        "viewport": {
+          "width": 1920,
+          "height": 1080,
+          "dpr": 1
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "mode": "LF",
+        "screenTop": "POWER OFF",
+        "depth": "--.-",
+        "depthUnit": "m",
+        "tickCount": "0000",
+        "eventCount": "000",
+        "statusLine": "POWER OFF",
+        "paused": false,
+        "overlay": {
+          "hidden": true,
+          "title": "",
+          "layout": "dialog"
+        },
+        "sourceCue": {
+          "hidden": true,
+          "title": "",
+          "detail": ""
+        },
+        "depthIndicator": {
+          "hidden": true,
+          "dataView": "LF",
+          "display": "none",
+          "left": "11px",
+          "right": "auto",
+          "maxWidth": "none",
+          "rect": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "geometry": {
+          "lcd": {
+            "left": 500.890625,
+            "top": 227.109375,
+            "right": 877,
+            "bottom": 729.5625,
+            "width": 376.109375,
+            "height": 502.453125
+          },
+          "deviceFrame": {
+            "left": 452.5,
+            "top": 143,
+            "right": 1132.5,
+            "bottom": 930.96875,
+            "width": 680,
+            "height": 787.96875
+          }
+        },
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "localStorageKeys": []
+      }
+    }
+  ],
+  "sourceManifestBefore": {
+    "files": 36,
+    "sha256": "f58b2bf1f4eec900b311f6be6bec3fb03498c09cfccf460a91e0faa129a5c491",
+    "entries": [
+      {
+        "path": "web/app.mjs",
+        "bytes": 56227,
+        "sha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19"
+      },
+      {
+        "path": "web/fcv588-training-source-matrix.mjs",
+        "bytes": 7634,
+        "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "bytes": 4425,
+        "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+      },
+      {
+        "path": "web/instructor-tabs.mjs",
+        "bytes": 3457,
+        "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "bytes": 1301,
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "bytes": 845,
+        "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+      },
+      {
+        "path": "web/lcd-config-presentation.mjs",
+        "bytes": 6718,
+        "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+      },
+      {
+        "path": "web/lcd-control-presentation.mjs",
+        "bytes": 4116,
+        "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+      },
+      {
+        "path": "web/lcd-instructor-meta.mjs",
+        "bytes": 14708,
+        "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd"
+      },
+      {
+        "path": "web/lcd-presentation.mjs",
+        "bytes": 10659,
+        "sha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "bytes": 4007,
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "bytes": 3054,
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "bytes": 32102,
+        "sha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4"
+      },
+      {
+        "path": "src/core/device-runtime.mjs",
+        "bytes": 8142,
+        "sha256": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "bytes": 14853,
+        "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "bytes": 7420,
+        "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "bytes": 9012,
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "bytes": 8784,
+        "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "bytes": 1417,
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "bytes": 2639,
+        "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "bytes": 2346,
+        "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "bytes": 2122,
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "bytes": 2573,
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "bytes": 1265,
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "bytes": 2794,
+        "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "bytes": 3138,
+        "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "bytes": 13198,
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "bytes": 12576,
+        "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "bytes": 50464,
+        "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "bytes": 10938,
+        "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "bytes": 299,
+        "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "bytes": 2590,
+        "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "bytes": 4272,
+        "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "bytes": 921,
+        "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "bytes": 569,
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "bytes": 3408,
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      }
+    ]
+  },
+  "sourceManifestAfter": {
+    "files": 36,
+    "sha256": "f58b2bf1f4eec900b311f6be6bec3fb03498c09cfccf460a91e0faa129a5c491",
+    "entries": [
+      {
+        "path": "web/app.mjs",
+        "bytes": 56227,
+        "sha256": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19"
+      },
+      {
+        "path": "web/fcv588-training-source-matrix.mjs",
+        "bytes": 7634,
+        "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "bytes": 4425,
+        "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+      },
+      {
+        "path": "web/instructor-tabs.mjs",
+        "bytes": 3457,
+        "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "bytes": 1301,
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "bytes": 845,
+        "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+      },
+      {
+        "path": "web/lcd-config-presentation.mjs",
+        "bytes": 6718,
+        "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+      },
+      {
+        "path": "web/lcd-control-presentation.mjs",
+        "bytes": 4116,
+        "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+      },
+      {
+        "path": "web/lcd-instructor-meta.mjs",
+        "bytes": 14708,
+        "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd"
+      },
+      {
+        "path": "web/lcd-presentation.mjs",
+        "bytes": 10659,
+        "sha256": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "bytes": 4007,
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "bytes": 3054,
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "bytes": 32102,
+        "sha256": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4"
+      },
+      {
+        "path": "src/core/device-runtime.mjs",
+        "bytes": 8142,
+        "sha256": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "bytes": 14853,
+        "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "bytes": 7420,
+        "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "bytes": 9012,
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "bytes": 8784,
+        "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "bytes": 1417,
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "bytes": 2639,
+        "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "bytes": 2346,
+        "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "bytes": 2122,
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "bytes": 2573,
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "bytes": 1265,
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "bytes": 2794,
+        "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "bytes": 3138,
+        "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "bytes": 13198,
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "bytes": 12576,
+        "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "bytes": 50464,
+        "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "bytes": 10938,
+        "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "bytes": 299,
+        "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "bytes": 2590,
+        "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "bytes": 4272,
+        "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "bytes": 921,
+        "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "bytes": 569,
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "bytes": 3408,
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      }
+    ]
+  },
+  "sourceTreeStable": true,
+  "fatalError": null,
+  "finishedAt": "2026-11-14T09:40:55.652271+07:00"
+}

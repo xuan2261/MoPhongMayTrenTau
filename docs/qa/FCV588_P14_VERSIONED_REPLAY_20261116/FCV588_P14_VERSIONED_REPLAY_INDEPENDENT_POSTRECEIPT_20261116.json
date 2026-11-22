@@ -1,0 +1,182 @@
+{
+  "schema": "FCV588_P14_INDEPENDENT_POSTRECEIPT_V1",
+  "reviewDate": "2026-11-16",
+  "independentReviewer": "worker-21",
+  "mode": "READ_ONLY_INDEPENDENT_POST_APPLY_AUDIT",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "decision": "PASS",
+  "canonicalPostApply": "PASS",
+  "releaseApproval": "HOLD",
+  "blockers": [],
+  "finalIntegrity": {
+    "path": "docs/qa/FCV588_P14_VERSIONED_REPLAY_20261116/FCV588_P14_VERSIONED_REPLAY_FINAL_INTEGRITY_20261116.json",
+    "sha256": "195d0737b602196bddb5971964500dabab41d19eaee08b5b620e97f26089e99e",
+    "schema": "FCV588_P14_FINAL_INTEGRITY_V1",
+    "status": "CANONICAL_APPLIED_NODE_PYTHON_CHROME_PASS_INDEPENDENT_POSTRECEIPT_PENDING",
+    "canonicalApply": "APPLIED_GUARDED"
+  },
+  "verifiedEvidenceSHA256": {
+    "independentPreapplyGo": "45ae1cc5418e416ce868ee415eb4fec501f535e9fcaf71e8064df60a1b8937ad",
+    "guardedApplyReceipt": "82b93e74b055491a3d02dc081ce13fb78f40a1d42fdcfb0b5e1d95d196dd0159",
+    "preimageBackupZip": "b2b2c8ecdd55f7dc96506ef988506420274d0f1b9ea4e7fde788ff029eb5b747",
+    "preimageAllowlist": "bb44084018ba8bd092edac97122a0bfb3d5d7b0204fd22a3288a6247d6433f6b",
+    "stageRuntime50": "29890c775bac1ba8785dd87b8adfb7d67be9fdfdbcb973cff67fe77ed0c76dff",
+    "stageNode577": "72bfeefc7647d4823850c7acc53d0e88003c96379f8aef0f091fa8c8cb429350",
+    "stagePython13": "2f5a3f61ac2a5874edaedbf6516269de18c251e44faa5ff4124d8bdaa45579a0",
+    "stageChrome": "895420e2de501648719729807700fa75ecaddc9f1cb01af736091311875f95d0",
+    "canonicalNode577": "25c8403864c6b2ada94dfd53deabeb9ffe82382bad547ae9161bb5b2dc1f1e16",
+    "canonicalPython13": "93e80c9b1f98c2fe9518fa2167302cea29b2c29e95dee65db227ebad199c8034",
+    "canonicalChrome": "4265bb1ea3393064e95465366d020e2e1901ae153b891b1fca003a574fb378ac",
+    "postapplyReport": "6557202909e62471e3980d0a01bcd6b71f2a149d011aff8c23436b0449237a42"
+  },
+  "runtimeVerification": {
+    "runtimeCount": 50,
+    "canonicalVsFinalIntegrity": "50/50 EXACT_SHA256",
+    "canonicalVsStage": "50/50 EXACT_BYTES",
+    "canonicalVsRuntime50Seal": "50/50 EXACT_SHA256",
+    "scopeTreeComparison": {
+      "roots": [
+        "src",
+        "web",
+        "test",
+        "docs/evidence"
+      ],
+      "canonicalOnlyFiles": 0,
+      "stageOnlyFiles": 0,
+      "hashDifferences": 0
+    }
+  },
+  "applyVerification": {
+    "allowlistedPaths": 38,
+    "modifiedPaths": 17,
+    "createdPaths": 21,
+    "canonicalVsStageVsAllowlistVsApplyReceipt": "38/38 EXACT_SHA256",
+    "backupZipEntries": 18,
+    "backupPreimageEntries": 17,
+    "backupManifestPresent": true,
+    "backupManifestByteEqualsAllowlist": true,
+    "allModifiedPreimageSHA256Match": true,
+    "unexpectedApplyPathMismatch": false
+  },
+  "historicalProfile21ReplayVerification": {
+    "profileRevision": "F1-public-reference-21",
+    "profileHash": "f0-fnv1a32-f2d5289b",
+    "fixtures": {
+      "P14_LEGACY_PROFILE21_SELECTION_ENVELOPE_20261116.json": {
+        "sha256": "d795b05494618c2e4482598b1e98a65e63bb9aa67e367bf266782e66d1a803dd",
+        "events": 9,
+        "replayedSessionHash": "f0-fnv1a32-b7e35e70",
+        "semantic": "sounder.whiteMarker"
+      },
+      "P14_LEGACY_PROFILE21_EDITING_ENVELOPE_20261116.json": {
+        "sha256": "07553d5bb42e0830e5938f9b1879fbed74a621634f3c5b194e2ce38ae18412dd",
+        "events": 10,
+        "replayedSessionHash": "f0-fnv1a32-138abeb4",
+        "semantic": "edit sounder.whiteMarker"
+      },
+      "P14_LEGACY_PROFILE21_NAV1_ENVELOPE_20261116.json": {
+        "sha256": "a6086514bd01985178c006213e255d7d50afe4696266994a4ad0c73a5e87346b",
+        "events": 13,
+        "replayedSessionHash": "f0-fnv1a32-3e46462e",
+        "semantic": "NAV1"
+      },
+      "P14_LEGACY_PROFILE21_NAV2_ENVELOPE_20261116.json": {
+        "sha256": "da97774bb74ace7d55687eccabf30fc792cac9d5ffdb6290a7d14bae6ce34798",
+        "events": 14,
+        "replayedSessionHash": "f0-fnv1a32-37f4868c",
+        "semantic": "NAV2 with historical waypoint"
+      },
+      "P14_LEGACY_PROFILE21_DATA_SOURCE_ENVELOPE_20261116.json": {
+        "sha256": "c35fff983ab301b7efd6db771cdf6e8b92e1dda551930b81174d05ac4ee6953c",
+        "events": 17,
+        "replayedSessionHash": "f0-fnv1a32-ecc515d3",
+        "semantic": "data.tripSource edit"
+      },
+      "P14_LEGACY_PROFILE21_NMEA_COMMITTED_ENVELOPE_20261116.json": {
+        "sha256": "b7d844b666e9309822decdc3b92eb8b86e333403a544816cbf937fd95560fc7a",
+        "events": 19,
+        "replayedSessionHash": "f0-fnv1a32-ef61e8e1",
+        "semantic": "tripSource NMEA committed"
+      }
+    },
+    "allFixtureByteSHA256MatchFinalIntegrity": true,
+    "allReplayedSessionHashesEqualEnvelopeFinalSessionHash": true
+  },
+  "currentProfile22Verification": {
+    "profileRevision": "F1-public-reference-22",
+    "sounderAP1Order": [
+      "sounder.pictureAdvance",
+      "sounder.zoomMode",
+      "sounder.shift",
+      "sounder.interference",
+      "sounder.colorErase",
+      "sounder.clutter",
+      "sounder.whiteLine",
+      "sounder.whiteMarker",
+      "sounder.tvg",
+      "sounder.smoothing",
+      "sounder.bottomZone",
+      "sounder.txPower",
+      "sounder.txRate"
+    ],
+    "exact13Rows": true
+  },
+  "postapplyQaVerification": {
+    "node": "577/577 PASS",
+    "python": "13/13 OK",
+    "chrome": {
+      "checks": "10/10 PASS",
+      "sourceBodies": "164/164 SHA MATCH",
+      "perViewportSourceBodies": [82, 82],
+      "pageErrors": 0,
+      "receiptErrors": 0,
+      "oemReferenceJpeg404": "8/8",
+      "ownedTestServerExited": true,
+      "canonicalScreenshotsByteMatchStage": true
+    }
+  },
+  "oemReferenceOnlyVerification": {
+    "count": 8,
+    "sha256": {
+      "hf.jpg": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "nav2.jpg": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "dual.jpg": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "zoom2.jpg": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "lf.jpg": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "nav1.jpg": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "zoom.jpg": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "giaoDien.jpg": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c"
+    },
+    "allExact": true
+  },
+  "evidenceBoundaryVerification": {
+    "profileClass": "PUBLIC_REFERENCE",
+    "profileRevision": "F1-public-reference-22",
+    "implementationStatus": "F1_PUBLIC_REFERENCE_PARTIAL",
+    "hardwareValidated": false,
+    "firmwareInstalled": null,
+    "rightsClearance": false,
+    "assetLicenseClearance": false,
+    "releaseApproval": "HOLD",
+    "realHardwareEquivalence": "OUT_OF_SCOPE_HOLD",
+    "oemCertified": false
+  },
+  "containmentVerification": {
+    "protectedUserServer": {
+      "localAddress": "127.0.0.1",
+      "localPort": 4173,
+      "owningProcess": 1204
+    },
+    "portsChecked": [4173, 4214, 4215],
+    "unexpectedCheckedPortListeners": 0,
+    "nodeListeningPorts": [4173],
+    "finalQaDirectoryPrePostreceiptUnexpectedFiles": 0
+  },
+  "priorReceiptVerification": {
+    "P12_INDEPENDENT_REVIEW_20261116.json": "26bbcef289bf1b3663ac7a79766b87ff6431684632f07414aca4537d3bd29c6d",
+    "P13_SEMANTIC_REBASELINE_AUDIT_20261116.md": "fbc3b8d9769613ab2d09d5cb73081788a1b0846f0e1c9002a0dc4cd527c8f0a8",
+    "P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json": "479909adb7475c8d9b02dd195b6abb1943593a78f575c2857b6585a1d4336f8c",
+    "P13_GATE_REVIEW_20261116.json": "c1a99846aff873ccfa28db81670f5904f966426b957e87e4542cece8fb4ae1d4"
+  },
+  "factualConclusion": "Canonical P14 post-apply bytes match the independently approved stage and guarded apply evidence. Historical profile21 replay preserves all six pinned session hashes and reviewed semantics; current profile22 exposes the exact AP-1 13-row Sounder order. No apply-scope drift, preimage mismatch, OEM-reference drift, evidence-boundary promotion, unexpected P14 test-port listener, or prior P12/P13 receipt drift was found. Release remains HOLD."
+}

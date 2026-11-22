@@ -1,0 +1,106 @@
+{
+  "schema": "fcv588-p04-extended-near-bottom-fish-only-red-v1",
+  "date": "2026-11-16",
+  "scope": "P04 isolated staging negative fixture only; no canonical apply; no commit",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p04qa-20261116",
+  "qaRoot": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-extended",
+  "status": "RED_REPRODUCED_MEDIUM_NOT_FIXED_HOLD_FUTURE_GENERALIZATION",
+  "sealedP04": {
+    "finalSha256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+    "independentPostSha256": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90"
+  },
+  "allowlist": {
+    "runtime": [],
+    "tests": [
+      "test/fcv588-photo-modes.test.mjs"
+    ],
+    "qa": [
+      "p04-near-bottom-fish-only-red-v1.txt",
+      "P04_NEAR_BOTTOM_FISH_ONLY_RED_RECEIPT_20261116.json"
+    ]
+  },
+  "testDelta": {
+    "path": "test/fcv588-photo-modes.test.mjs",
+    "canonicalPreimageSha256": "85f201ba3697b6ae408f0bf64c6fcbdf81aed44553f3dfa47862eb4ca4fe2f7c",
+    "stagePostimageSha256": "c44ec9799026b8ecfbe576bd8a45867eae8befcca2580ec19c471bc70eb80ccf",
+    "fixture": "typed bottom 50 m; 10-column fish-only band at rows 48/49; no seabed core/tail",
+    "expectation": "Bottom Lock must leave fish-only band near absolute 45-50 m window position, not remap to bottom edge"
+  },
+  "red": {
+    "command": "C:\\nvm4w\\nodejs\\node.exe --test test\\fcv588-photo-modes.test.mjs",
+    "exitCode": 1,
+    "tests": 7,
+    "pass": 6,
+    "fail": 1,
+    "failure": "fish-only band must remain near its absolute BL-window position, got 80,80,80,80,80,80,80,80,80,80",
+    "logPath": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-extended/p04-near-bottom-fish-only-red-v1.txt",
+    "logSha256": "e336be0e97bfd856df008728eed711e2a593c619aaa4132783bbf3ca3ddbbf51"
+  },
+  "rootCause": {
+    "function": "bottomLockColumnAnchors(frame,bottomDepthM,windowDepthM)",
+    "evidence": "Current anchor selection sees display pixels plus one global typed bottomDepthM; makeEchoFrame/projectFcvEcho provides no typed per-column seabed provenance. A broad coherent fish-only band within the search window is observationally indistinguishable from a candidate bottom core to this function.",
+    "safeGreenAvailable": false,
+    "decision": "No heuristic runtime patch. Future generalization remains HOLD until typed per-column seabed/source provenance or independently justified discriminator exists."
+  },
+  "protectedCanonicalEquivalence": [
+    {
+      "path": "src/devices/fcv588/echo-projection.mjs",
+      "canonicalSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+      "stageSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+      "match": true
+    },
+    {
+      "path": "src/core/scenario.mjs",
+      "canonicalSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "stageSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "match": true
+    },
+    {
+      "path": "src/core/session.mjs",
+      "canonicalSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "stageSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/model.mjs",
+      "canonicalSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "stageSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "match": true
+    },
+    {
+      "path": "web/fcv588-echo-rasterizer.mjs",
+      "canonicalSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+      "stageSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+      "match": true
+    },
+    {
+      "path": "web/app.mjs",
+      "canonicalSha256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+      "stageSha256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+      "match": true
+    },
+    {
+      "path": "web/styles.css",
+      "canonicalSha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+      "stageSha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+      "match": true
+    }
+  ],
+  "overlap": {
+    "p05p06RuntimeOverlap": [],
+    "runtimePatchApplied": false
+  },
+  "notYetVerified": [
+    "full Node suite after RED fixture",
+    "Python suite",
+    "expanded Chrome matrix on port 4191"
+  ],
+  "hold": {
+    "rightsClearance": false,
+    "hardwareValidated": false,
+    "firmware": "UNKNOWN",
+    "featureClaims": "65/65_HOLD",
+    "releaseApproval": "HOLD",
+    "oemConformity": "NOT_CLAIMED"
+  }
+}

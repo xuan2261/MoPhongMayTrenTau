@@ -1,0 +1,588 @@
+{
+  "schema": "fcv588-p12-photo-lcd-lexicon-v1",
+  "createdAt": "2026-11-16T16:24:52.8575444+07:00",
+  "reviewerId": "worker-20",
+  "scope": "REFERENCE_ONLY_DIRECT_VIEW_IMAGE_LITERAL_TRANSCRIPTION",
+  "decision": "PASS_BOUNDED_LITERAL_LEXICON_ONE_PHOTO_HAS_LEGIBLE_MENU_OPTIONS_FIRMWARE_AND_LOCALE_CONFORMANCE_HOLD",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "sourceSet": {
+    "path": "sources/FCV588_GiaoDienThucTeMay2016",
+    "projectCollectionLabel": "2016",
+    "captureDateVerification": "UNVERIFIED_FOLDER_OR_USER_LABEL_ONLY",
+    "installedFirmwareVersion": "UNKNOWN",
+    "vietnameseLocaleConformance": "HOLD_SINGLE_PHOTO_AND_NAV_LABELS_ONLY",
+    "rights": "REFERENCE_ONLY",
+    "rightsOwner": "UNKNOWN",
+    "licenseOrGrant": "NOT_PROVIDED",
+    "derivativeRedistribution": "HOLD",
+    "servedRuntimeUse": "DENIED_UNTIL_CLEARANCE",
+    "imageSizePx": [590, 1280],
+    "originatingSourcePage": null,
+    "originatingSourcePageStatus": "NOT_RECORDED_IN_PROJECT",
+    "sourcePageNote": "Each reviewed source is a standalone JPEG, so there is no intrinsic page number. No originating web/public page for these eight JPEGs is recorded in the checked P07/P08/P09 evidence; this receipt does not invent one."
+  },
+  "method": {
+    "directInspection": "Chat On Steroids Core view_image on each original JPEG",
+    "ocrUsed": false,
+    "derivativeImageCreated": false,
+    "browserOrDesktopFocusOperationUsed": false,
+    "roiCoordinateSystem": "approximate full-photo pixels [x0,y0,x1,y1], origin top-left, image 590x1280",
+    "roiMeaning": "rough text/readability localization only; not calibrated active-display or aperture geometry",
+    "transcriptionRule": "Only text confidently legible in the original full-frame photo is transcribed. Ambiguous fish-number callouts and uncertain glyphs are described without guessed text."
+  },
+  "crossChecks": [
+    {
+      "phase": "P07",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-photo-a11y/P07_VISUAL_REFERENCE_A11Y_ASSESSMENT_20261116.md",
+      "sha256": "455dc75a18b96ffc27a070b9315ac27889c5a69aaba206f9eecb4dd4bae464c5",
+      "use": "8-photo identity/readability and source-gap context"
+    },
+    {
+      "phase": "P07",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-photo-a11y/P07_VISUAL_REFERENCE_A11Y_RECEIPT_20261116.json",
+      "sha256": "e7ffaf820926d0999f7b7359b9781c4fd1a002673e07f2f374ad24ff08a2d819",
+      "use": "sealed P07 photo/a11y receipt"
+    },
+    {
+      "phase": "P08",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-roi/P08_LCD_ROI_UNCALIBRATED_CANDIDATES_20261116.json",
+      "sha256": "b1ec545fb9ad19b4086baa1c303a2b7a7ada81a6991a28a83e75b64b9255cd3b",
+      "use": "photo SHA/image size and rough uncalibrated LCD bounds only"
+    },
+    {
+      "phase": "P08",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-independent-photo/P08_INDEPENDENT_ROI_AUDIT_20261116.json",
+      "sha256": "e35441fe7de4723aad5d891311022a3935244aa21282e02dc0736d19682400a6",
+      "use": "independent photo-space boundary audit"
+    },
+    {
+      "phase": "P09",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p09-prime/P09_ROI_ACCEPTANCE_CONTRACT_20261116.md",
+      "sha256": "4222eab91f57a60cd3c15bffaa5dd2cf70d4a1a50d862b2e959c5c3f910ee211",
+      "use": "boundary classes and restriction against treating photo pixels/locale as OEM truth"
+    },
+    {
+      "phase": "P09",
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p09-boundary-protocol/P09_INDEPENDENT_BOUNDARY_PROTOCOL_20261116.json",
+      "sha256": "81999e194f564f83cb7d6c15603e93efc29d8029288d104706292e60cba5b088",
+      "use": "class-A HOLD all 8; restricted class-B aperture quads only dual.jpg and zoom.jpg"
+    }
+  ],
+  "restrictions": {
+    "activeDisplayClassA": "HOLD_ALL_8",
+    "roundedApertureClassB": {
+      "dual.jpg": "GO_RESTRICTED_IN_MEMORY_ONLY",
+      "zoom.jpg": "GO_RESTRICTED_IN_MEMORY_ONLY",
+      "giaoDien.jpg": "HOLD",
+      "lf.jpg": "HOLD",
+      "hf.jpg": "HOLD",
+      "zoom2.jpg": "HOLD",
+      "nav1.jpg": "HOLD",
+      "nav2.jpg": "HOLD"
+    },
+    "physicalMmInference": "PROHIBITED",
+    "exactOemFontRgbGlyphPixelClaim": "HOLD",
+    "menuLocaleOracleBeyondObservedStrings": "HOLD",
+    "firmwareSpecificClaim": "HOLD"
+  },
+  "photos": [
+    {
+      "name": "giaoDien.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[103,425],[438,422],[432,908],[95,901]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [266, 322, 385, 356],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "brand",
+          "roiPx": [103, 409, 190, 438],
+          "confidence": "HIGH",
+          "text": ["FURUNO"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [103, 438, 426, 469],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "HF", "13.5V"]
+        },
+        {
+          "kind": "menu_title",
+          "roiPx": [198, 470, 423, 500],
+          "confidence": "HIGH",
+          "text": ["Đo sâu"]
+        },
+        {
+          "kind": "menu_categories",
+          "roiPx": [106, 495, 204, 594],
+          "confidence": "HIGH",
+          "text": ["Đo sâu", "Màn hình", "Báo động", "Dữ liệu", "Hệ thống"]
+        },
+        {
+          "kind": "menu_option_rows",
+          "roiPx": [203, 497, 421, 729],
+          "confidence": "HIGH",
+          "text": [
+            "Kéo Hình : x4",
+            "K. Phóng đại : Bám Đáy",
+            "Di chuyển : 2m",
+            "Nhiễu cạn : Tự Động",
+            "Xóa màu : 0%",
+            "Nhiễu tạp : 60%",
+            "Đường trắng : Biên",
+            "Dấu Trắng",
+            "TVG : Tr. Bình",
+            "Làm nhẵn : Tắt",
+            "Khu vực Đáy",
+            "C.suất Phát : Tự Động",
+            "Tỉ lệ Phát : 10"
+          ]
+        },
+        {
+          "kind": "menu_footer_help",
+          "roiPx": [208, 735, 421, 808],
+          "confidence": "HIGH",
+          "text": ["▲/▼/◄/► : Chọn lựa", "[ENTER] : Nhập vào", "[MENU] : Quay lại"]
+        },
+        {
+          "kind": "background_depth_readout",
+          "roiPx": [90, 779, 330, 901],
+          "confidence": "HIGH",
+          "text": ["19.3 m"]
+        },
+        {
+          "kind": "physical_button",
+          "roiPx": [507, 390, 589, 451],
+          "confidence": "HIGH",
+          "text": ["MENU/ESC"]
+        }
+      ],
+      "menuVisible": true,
+      "actualMenuOptionTextLegible": true,
+      "menuLocaleFinding": "Vietnamese strings are directly observed in this one photo, but exact installed firmware/version and full Vietnamese phrase-set conformance remain unverified."
+    },
+    {
+      "name": "lf.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/lf.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[106,351],[483,349],[488,907],[92,905]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [286, 255, 423, 287],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [103, 374, 480, 408],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "LF", "13.6V"]
+        },
+        {
+          "kind": "depth_scale",
+          "roiPx": [423, 403, 484, 836],
+          "confidence": "HIGH",
+          "text": ["2.0", "5", "10", "15", "20"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [89, 757, 358, 880],
+          "confidence": "HIGH",
+          "text": ["19.4 m"]
+        }
+      ],
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false
+    },
+    {
+      "name": "hf.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/hf.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[94,375],[499,374],[497,973],[77,972]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [279, 274, 425, 306],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [88, 400, 488, 434],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "HF", "13.7V"]
+        },
+        {
+          "kind": "depth_scale",
+          "roiPx": [434, 431, 492, 891],
+          "confidence": "HIGH",
+          "text": ["2.0", "5", "10", "15", "20"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [80, 818, 365, 950],
+          "confidence": "HIGH",
+          "text": ["19.7 m"]
+        }
+      ],
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false
+    },
+    {
+      "name": "dual.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/dual.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[76,380],[449,376],[448,920],[66,923]],
+      "p09RestrictedClassBQuadTL_TR_BR_BL_px": [[80,390],[458,369],[451,934],[71,922]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [257, 281, 386, 312],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [77, 403, 444, 437],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "LF/HF", "13.7V"]
+        },
+        {
+          "kind": "pane_topology",
+          "roiPx": [74, 435, 449, 900],
+          "confidence": "HIGH",
+          "text": ["LF pane left", "HF pane right", "vertical divider visible"]
+        },
+        {
+          "kind": "depth_scale",
+          "roiPx": [211, 439, 445, 850],
+          "confidence": "HIGH",
+          "text": ["2.0", "5", "10", "15", "20"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [72, 796, 339, 897],
+          "confidence": "HIGH",
+          "text": ["20.0 m"]
+        },
+        {
+          "kind": "physical_button",
+          "roiPx": [526, 345, 589, 409],
+          "confidence": "HIGH",
+          "text": ["MENU/ESC"]
+        }
+      ],
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false
+    },
+    {
+      "name": "zoom.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/zoom.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[56,287],[466,284],[464,876],[51,877]],
+      "p09RestrictedClassBQuadTL_TR_BR_BL_px": [[59,296],[475,270],[452,878],[57,876]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [246, 219, 386, 249],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [59, 312, 458, 345],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "BL-LF", "13.7V"]
+        },
+        {
+          "kind": "pane_topology",
+          "roiPx": [55, 344, 463, 856],
+          "confidence": "HIGH",
+          "text": ["bottom-lock zoom pane left", "normal LF sonar pane right", "vertical divider visible"]
+        },
+        {
+          "kind": "left_relative_scale",
+          "roiPx": [212, 345, 251, 843],
+          "confidence": "HIGH",
+          "text": ["5", "4", "3", "2", "1", "0"]
+        },
+        {
+          "kind": "right_depth_scale",
+          "roiPx": [407, 345, 462, 806],
+          "confidence": "HIGH",
+          "text": ["2.0", "5", "10", "15", "20"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [56, 730, 341, 851],
+          "confidence": "HIGH",
+          "text": ["19.8 m"]
+        }
+      ],
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false
+    },
+    {
+      "name": "zoom2.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/zoom2.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[85,383],[479,380],[489,968],[76,970]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [272, 279, 411, 310],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [84, 404, 481, 438],
+          "confidence": "HIGH",
+          "text": ["MAN.R", "G: 10", "BL-HF", "13.5V"]
+        },
+        {
+          "kind": "pane_topology",
+          "roiPx": [80, 438, 487, 947],
+          "confidence": "HIGH",
+          "text": ["bottom-lock zoom pane left", "normal HF sonar pane right", "vertical divider visible"]
+        },
+        {
+          "kind": "left_relative_scale",
+          "roiPx": [244, 438, 279, 932],
+          "confidence": "HIGH",
+          "text": ["5", "4", "3", "2", "1", "0"]
+        },
+        {
+          "kind": "right_depth_scale",
+          "roiPx": [427, 438, 484, 889],
+          "confidence": "HIGH",
+          "text": ["2.0", "5", "10", "15", "20"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [78, 818, 361, 943],
+          "confidence": "HIGH",
+          "text": ["19.7 m"]
+        },
+        {
+          "kind": "fish_icon_numeric_callouts",
+          "roiPx": [84, 700, 438, 840],
+          "confidence": "LOW_FOR_INDIVIDUAL_DIGITS",
+          "text": [],
+          "note": "Several red numeric callouts adjacent to fish symbols are visibly present, but individual digits are not transcribed because full-frame inspection does not support uniformly high confidence."
+        }
+      ],
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false
+    },
+    {
+      "name": "nav1.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/nav1.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[66,426],[439,424],[445,963],[62,964]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [240, 333, 371, 363],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "brand",
+          "roiPx": [69, 420, 168, 446],
+          "confidence": "HIGH",
+          "text": ["FURUNO"]
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [69, 449, 132, 475],
+          "confidence": "HIGH",
+          "text": ["Vị trí"]
+        },
+        {
+          "kind": "nav_position_value",
+          "roiPx": [88, 477, 323, 670],
+          "confidence": "HIGH_FOR_MISSING_STATE",
+          "text": ["dash placeholders"],
+          "note": "No coordinates are inferred from the missing-value placeholders."
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [68, 689, 145, 718],
+          "confidence": "HIGH",
+          "text": ["Độ sâu"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [91, 756, 311, 921],
+          "confidence": "HIGH",
+          "text": ["19.9 m"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [325, 439, 421, 472],
+          "confidence": "HIGH",
+          "text": ["13.7V"]
+        },
+        {
+          "kind": "right_sonar_scale",
+          "roiPx": [387, 475, 442, 887],
+          "confidence": "HIGH",
+          "text": ["5", "10", "15", "20"]
+        },
+        {
+          "kind": "physical_button",
+          "roiPx": [504, 384, 589, 446],
+          "confidence": "HIGH",
+          "text": ["MENU/ESC"]
+        }
+      ],
+      "paneTopology": "left data region approximately two-thirds; right sonar strip approximately one-third",
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false,
+      "localeFinding": "Vietnamese NAV field labels are directly observed, but they do not establish a complete Vietnamese firmware translation."
+    },
+    {
+      "name": "nav2.jpg",
+      "sourcePath": "sources/FCV588_GiaoDienThucTeMay2016/nav2.jpg",
+      "actualSourcePage": "N/A_STANDALONE_JPEG",
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "imageSizePx": [590, 1280],
+      "p08RoughLcdQuadTL_TR_BR_BL_px": [[97,363],[433,362],[434,847],[94,849]],
+      "regions": [
+        {
+          "kind": "case_sticker",
+          "roiPx": [250, 275, 385, 304],
+          "confidence": "HIGH",
+          "text": ["MÁY ĐO SÂU DÒ CÁ"]
+        },
+        {
+          "kind": "brand",
+          "roiPx": [94, 354, 184, 382],
+          "confidence": "HIGH",
+          "text": ["FURUNO"]
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [96, 385, 214, 414],
+          "confidence": "HIGH",
+          "text": ["Tốc độ (STW)"]
+        },
+        {
+          "kind": "nav_value",
+          "roiPx": [143, 411, 287, 490],
+          "confidence": "HIGH",
+          "text": ["0.0 kn"]
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [96, 495, 214, 523],
+          "confidence": "HIGH",
+          "text": ["Tốc độ (SOG)"]
+        },
+        {
+          "kind": "nav_value",
+          "roiPx": [117, 526, 289, 598],
+          "confidence": "HIGH_FOR_MISSING_STATE",
+          "text": ["dash placeholder", "kn"],
+          "note": "Exact dash count is intentionally not transcribed."
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [96, 606, 156, 635],
+          "confidence": "HIGH",
+          "text": ["Vị trí"]
+        },
+        {
+          "kind": "nav_position_value",
+          "roiPx": [110, 631, 325, 704],
+          "confidence": "HIGH_FOR_MISSING_STATE",
+          "text": ["dash placeholders"]
+        },
+        {
+          "kind": "nav_field_title",
+          "roiPx": [96, 710, 166, 740],
+          "confidence": "HIGH",
+          "text": ["Độ sâu"]
+        },
+        {
+          "kind": "depth_readout",
+          "roiPx": [128, 741, 312, 827],
+          "confidence": "HIGH",
+          "text": ["19.7 m"]
+        },
+        {
+          "kind": "lcd_header_status",
+          "roiPx": [327, 374, 419, 406],
+          "confidence": "HIGH",
+          "text": ["13.5V"]
+        },
+        {
+          "kind": "right_sonar_scale",
+          "roiPx": [381, 411, 432, 792],
+          "confidence": "HIGH",
+          "text": ["5", "10", "15", "20"]
+        },
+        {
+          "kind": "physical_button",
+          "roiPx": [497, 324, 585, 390],
+          "confidence": "HIGH",
+          "text": ["MENU/ESC"]
+        }
+      ],
+      "paneTopology": "left data region approximately two-thirds; right sonar strip approximately one-third",
+      "menuVisible": false,
+      "actualMenuOptionTextLegible": false,
+      "localeFinding": "Vietnamese NAV field labels plus STW/SOG abbreviations are directly observed; firmware version and complete locale translation remain unverified."
+    }
+  ],
+  "menuLegibilitySummary": {
+    "photosWithActualLegibleMenuOptionText": ["giaoDien.jpg"],
+    "photosWithoutVisibleMenu": ["lf.jpg", "hf.jpg", "dual.jpg", "zoom.jpg", "zoom2.jpg", "nav1.jpg", "nav2.jpg"],
+    "navVietnameseLabelsButNotMenu": ["nav1.jpg", "nav2.jpg"],
+    "physicalMenuEscLabelClearlyVisible": ["giaoDien.jpg", "dual.jpg", "nav1.jpg", "nav2.jpg"],
+    "physicalMenuEscPartiallyVisibleOrCropped": ["lf.jpg", "hf.jpg", "zoom.jpg", "zoom2.jpg"]
+  },
+  "provenanceConclusion": {
+    "whatIsVerified": "The exact eight local JPEG bytes, their SHA-256 hashes, literal text listed above, and the photographed screen/pane relationships at the time of capture.",
+    "whatIsNotVerified": [
+      "capture year from independent metadata/source page",
+      "installed firmware version",
+      "complete Vietnamese locale/translation set",
+      "native LCD framebuffer pixels, exact font/RGB/glyph metrics",
+      "physical dimensions or calibrated perspective from these JPEGs",
+      "redistribution rights for the photographs or derivatives"
+    ]
+  },
+  "operations": {
+    "originalPhotosEdited": false,
+    "photoDerivativeWritten": false,
+    "runtimeEdited": false,
+    "testsEdited": false,
+    "browserLaunched": false,
+    "desktopFocusOperation": false,
+    "server4173Touched": false,
+    "networkUsed": false,
+    "writesOutsideP12PhotoLexicon": false,
+    "reportWriteOnce": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "FCV588_P25_SOURCE_VALID_UI_RED_V1",
+  "status": "EXPECTED_SOURCE_VALID_RED",
+  "exitCode": 1,
+  "testSHA256": "95363c9b5902246985b66b67e3d61dd4f40c48df67b53b4b1243a5d6260a7b1c",
+  "logSHA256": "e09c4db86266456b08e8bdd21712e51e9963f3a8a6ceda069d3e1fa94c43ff92",
+  "reason": "P24 HTML has no offline envelope/sidecar import controls",
+  "firstAttempt": "Windows subprocess default cp1252 decoded Node UTF8 poorly, no receipt generated; corrected explicit UTF-8 decoding",
+  "canonicalSourceTouched": false
+}

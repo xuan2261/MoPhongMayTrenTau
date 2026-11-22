@@ -1,0 +1,71 @@
+{
+  "atUtc": "2026-10-18T00:02:36.6677153Z",
+  "status": "V34_CANONICAL_WEB_EXACT_SHA_MATCH",
+  "scope": "V31_TO_V34_PRESENTATION_ONLY",
+  "approval": "GPT6_USER_APPROVED_SUPERVISION",
+  "patchSha256": "4dae7cb57b72a49a933810c5fca5b02203c4e169d3044b5392d218bfedf36d79",
+  "files": [
+    {
+      "path": "web/app.mjs",
+      "sha256": "f20fd7c531a9721f47a751f59ce1f73bc24cb5ba61398630d404497f9ed35ab7",
+      "preEolSha256": "6b7f8ae0d178f1da591494372029d60f416e14f9cbe0dfb2c7ad921f16143d05",
+      "preEolBytes": 55454,
+      "bytes": 54240
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "df8ec762c031e1667c601325677f9994bd797138284983981493dc1e6df588d6",
+      "preEolSha256": "a0119d5b97c9b4ae3a9059e096e4fe52bdcb9907574a069a39c19a1ab130c01a",
+      "preEolBytes": 14340,
+      "bytes": 14156
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "af26d504e6b76b77523f828dad5c1a719574d7c0e9fe95a0ca71fa3d2f2e3b94",
+      "preEolSha256": "99659e004f54209779400af6baacef649db2792be3bf0f45d0a0ef48d4f5bf7c",
+      "preEolBytes": 27909,
+      "bytes": 27578
+    },
+    {
+      "path": "web/lcd-presentation.mjs",
+      "sha256": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+      "preEolSha256": "e9e291b5f6494e71d654c60484c19f042991212bd85d682d9812d7711c4832c9",
+      "preEolBytes": 7092,
+      "bytes": 6952
+    },
+    {
+      "path": "web/lcd-config-presentation.mjs",
+      "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "preEolSha256": "f2bbdd52d61c3b13cf9014fbdb9c04794efdcc54c08a109782c3d9d48a793f33",
+      "preEolBytes": 6848,
+      "bytes": 6718
+    },
+    {
+      "path": "web/lcd-control-presentation.mjs",
+      "sha256": "0881d0567d7921a98085a7914ebc2628e9b2f6d2c23d9a5894e7f97f3bba808f",
+      "preEolSha256": "96e99ab4449fcf1bfd17fd991023680df3b76256c5bfb533034276d3f27bb9a7",
+      "preEolBytes": 4190,
+      "bytes": 4123
+    },
+    {
+      "path": "web/lcd-instructor-meta.mjs",
+      "sha256": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+      "preEolSha256": "9186c6d51edf6bbd0125ea9e98f24701553f0e1d97320726638e8365b7034382",
+      "preEolBytes": 13696,
+      "bytes": 13464
+    },
+    {
+      "path": "web/keyboard-shortcuts.mjs",
+      "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "preEolSha256": "99b80cf74a44c32a841131b68a4351d689063c44ce47b415a0887a1a46278b92",
+      "preEolBytes": 864,
+      "bytes": 845
+    }
+  ],
+  "srcUnchanged": 23,
+  "originalFailureLogSha256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "postIntegrationTests": "PENDING",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "gitCommitted": false
+}

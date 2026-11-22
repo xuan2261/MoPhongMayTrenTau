@@ -1,0 +1,256 @@
+{
+  "schema": "fcv588-p04-provenance-v2-independent-final-review-v1",
+  "createdAt": "2026-11-16T09:02:39.708794+07:00",
+  "reviewer": "worker-13",
+  "decision": "NO-GO",
+  "scope": "READ_ONLY_INDEPENDENT_REVIEW_P04_BL_SAFE_SYNTHETIC_DISPLAY_TRAINING_V2",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "bindings": {
+    "sourceStageReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V2_STAGE_RECEIPT_20261116.json",
+      "sha256": "55cc91d9d872def97bbb353f266b68365410aa71d193c116fe21dc47351bb206"
+    },
+    "compatibilityReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V2_COMPAT_PROBE_RESULT_20261116.json",
+      "sha256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6"
+    },
+    "chromeReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser\\fcv588-p04-provenance-browser-20261116T085916+0700-d6a31330.json",
+      "sha256": "5b1b69e19182fea08c5fd990d197395f4a729fe99228119aa569e36d832c8df7"
+    },
+    "chromeEvents": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser\\fcv588-p04-provenance-browser-20261116T085916+0700-d6a31330-events.json",
+      "sha256": "6fa7e551837d8506bb6aee672d2d70835d5a6356b6d92fe4b0c4e5ad69493a03"
+    },
+    "canonicalP05P06Final": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P05_P06_20261116\\FCV588_VISUAL_P05_P06_FINAL_INTEGRITY_20261116.json",
+      "sha256": "ecdfb0bc680f35a6935bb11a4bbadd1f95e3441069b7074a0b68ab22506b4ee4"
+    },
+    "canonicalP05P06IndependentPost": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P05_P06_20261116\\FCV588_VISUAL_P05_P06_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "9befe64829bf9c79fb7e0505fe1db83a5edf676ce1f4c22a7073ca3cd7a6160e"
+    }
+  },
+  "frozenSource": {
+    "exactCanonicalDiffStatus": "EXACT_7_PATHS_4_RUNTIME_3_TESTS",
+    "paths": [
+      {
+        "path": "src/core/scenario.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+        "stageSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+        "stageSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b"
+      },
+      {
+        "path": "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+        "kind": "NEW",
+        "canonicalSha256": null,
+        "stageSha256": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212"
+      },
+      {
+        "path": "test/fcv588-p04-bottom-provenance.test.mjs",
+        "kind": "NEW",
+        "canonicalSha256": null,
+        "stageSha256": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd"
+      },
+      {
+        "path": "test/fcv588-photo-modes.test.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "85f201ba3697b6ae408f0bf64c6fcbdf81aed44553f3dfa47862eb4ca4fe2f7c",
+        "stageSha256": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955"
+      },
+      {
+        "path": "web/app.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+        "stageSha256": "3992d070278c4f8bc86a0e0d156dd674a5f9c4bf5a2ebf8d488e3debe32fcaa4"
+      },
+      {
+        "path": "web/fcv588-echo-rasterizer.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+        "stageSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699"
+      }
+    ],
+    "sourceSha256": {
+      "src/core/scenario.mjs": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "test/fcv588-p04-bottom-provenance-v2.test.mjs": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212",
+      "test/fcv588-p04-bottom-provenance.test.mjs": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd",
+      "test/fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955",
+      "web/app.mjs": "3992d070278c4f8bc86a0e0d156dd674a5f9c4bf5a2ebf8d488e3debe32fcaa4",
+      "web/fcv588-echo-rasterizer.mjs": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699"
+    },
+    "sourceReceiptMatchesExpected": true,
+    "compatibilityMatchesExpected": true
+  },
+  "sourceReview": {
+    "crossScenarioBinding": "PASS_INDEPENDENT_PROBE: foreign scenario provenance with authoritative source identity fails closed; own provenance remains eligible",
+    "worldConsistency": "PASS_INDEPENDENT_PROBE: producer rejects worldState.bottomDepthM inconsistent with bottomDepthAt(scenario,simTick)",
+    "tick231RawDisplayMapping": "PASS_INDEPENDENT_PROBE: TRAINING_SCENARIO 160x301 raw to 120-row BL gives 160/160 lower-band strong columns",
+    "blRaster": "PASS_CODE_REVIEW_AND_TARGETED: Bottom Lock bypasses legacy coherentBottom decorative inference",
+    "bzMz": "PASS_RETAINED_BYTE_EQUIVALENCE: BZ efe712c15b072f07da63487ad630ef8d5bf060ebc04db0491b925c07623132e3; MZ 3959bbf444817583042348fe3f26275c342e47c18bc3babedadb3c2394597f2a",
+    "replayProfileObservation": "PASS: compatibility receipt preserves observation keys/raw channels and protected session/protocol/profile/model files",
+    "stopFrameSnapshot": "PASS_INDEPENDENT_PROBE: frozen pixels,startDepthM,bottomDepthM preserved while sourceTick advances",
+    "stopRenderedOverlay": "FAIL_HIGH: web/app.mjs drawOverlays passes current observation o.bottomDepthM instead of frozen frame.bottomDepthM; default Standard bottomZone therefore changes/disappears while stopped pixels remain frozen",
+    "stopOverlayProbe": {
+      "fromTick": 231,
+      "toTick": 241,
+      "frozenStartDepthM": 38.425751760434835,
+      "frozenBottomDepthM": 43.425751760434835,
+      "currentObservationBottomDepthM": 46.508297394017724,
+      "zoneUsingFrozenBottom": {
+        "widthM": 10,
+        "topFraction": 0,
+        "bottomFraction": 1,
+        "sourceClass": "SYNTHETIC_DISPLAY_ONLY"
+      },
+      "zoneUsingCurrentObservation": null,
+      "impact": "visible bottom-zone artwork can disappear/change during Picture Advance Stop despite frozen frame pixels/metadata"
+    }
+  },
+  "testsAndEvidence": {
+    "receiptTargeted": {
+      "tests": 26,
+      "pass": 26,
+      "fail": 0,
+      "sha256": "6a2facb861df3d9ce04db057f01bf646dbd5cd9d9250dda5c45cfa7d482b72cf"
+    },
+    "independentTargetedRerun": {
+      "tests": 26,
+      "pass": 26,
+      "fail": 0
+    },
+    "fullNode": {
+      "tests": 562,
+      "pass": 562,
+      "fail": 0,
+      "sha256": "92fe59681b789a19a8a10cda29482aed05ab96b04c9627007990ab574005b94f"
+    },
+    "python": {
+      "tests": 13,
+      "status": "OK",
+      "sha256": "1cabacd48f283eec588cf0f838f54b12ac865d6475820313c2bd3e1adc8f17e8"
+    },
+    "v2Red": {
+      "tests": 3,
+      "fail": 3,
+      "sha256": "ec49167de10f0f19773b5907fefe6b5aba81da22eee5356a091eb8c1c8769603"
+    }
+  },
+  "chromeReview": {
+    "status": "PASS",
+    "port": 4197,
+    "caseCount": 5,
+    "caseStatuses": [
+      {
+        "name": "BL-LF-Blue",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "status": "PASS",
+        "loadedBodyCount": 36,
+        "loadedBodyAggregateSha256": "6ac956c1fceae4598ffe38be43ade600630386b05e16c0dc1c42017cf4701b1a",
+        "screenshotSha256": "abe892f8247cdcc07a2398a3d50add469298edd4dd6fbefcba1bfc364ed211da"
+      },
+      {
+        "name": "BL-HF-Blue",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "status": "PASS",
+        "loadedBodyCount": 36,
+        "loadedBodyAggregateSha256": "6ac956c1fceae4598ffe38be43ade600630386b05e16c0dc1c42017cf4701b1a",
+        "screenshotSha256": "dc9827b0456efb06d253fd8e4b54b6ebfa8c6c961a0a429ff0239c2f8940c8db"
+      },
+      {
+        "name": "BZ-LF-Blue",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "status": "PASS",
+        "loadedBodyCount": 36,
+        "loadedBodyAggregateSha256": "6ac956c1fceae4598ffe38be43ade600630386b05e16c0dc1c42017cf4701b1a",
+        "screenshotSha256": "5a0af8ec803a7d5ae0753c63a5a32c9483e92c580c8791a76c5f5a43f65c3785"
+      },
+      {
+        "name": "MZ-LF-Blue",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "status": "PASS",
+        "loadedBodyCount": 36,
+        "loadedBodyAggregateSha256": "6ac956c1fceae4598ffe38be43ade600630386b05e16c0dc1c42017cf4701b1a",
+        "screenshotSha256": "460dc9b9fed480d48c8adf7fce529d5c28cf6de11fdf4bff93f420b8992214c8"
+      },
+      {
+        "name": "BL-LF-Blue-MOBILE-MENU-D15",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "status": "PASS",
+        "loadedBodyCount": 36,
+        "loadedBodyAggregateSha256": "6ac956c1fceae4598ffe38be43ade600630386b05e16c0dc1c42017cf4701b1a",
+        "screenshotSha256": "6c175d2072a2dcc75119c07fa765ff7c7aa79246f5fe3c246bc81ee3cdf65528"
+      }
+    ],
+    "sourceManifestBefore": {
+      "files": 38,
+      "sha256": "4a560bdd5ed4d35b73b9e237293dd068377e9c6799cbfaeabd8b0b2fb6b08673"
+    },
+    "sourceManifestAfter": {
+      "files": 38,
+      "sha256": "4a560bdd5ed4d35b73b9e237293dd068377e9c6799cbfaeabd8b0b2fb6b08673"
+    },
+    "currentSourceManifestMatchesChrome": true,
+    "loadedBodyRowsReviewed": 180,
+    "loadedBodyShaMismatchCount": 0,
+    "screenshotMismatchCount": 0,
+    "photo404Count": 8,
+    "objectiveFailures": [],
+    "serverCleanup": "PASS",
+    "blFlatCoverage": "3 BL cases coverage=1.0, lower-band true",
+    "mobileD15": "5 tabs, outside LCD, operator event count unchanged",
+    "coverageGap": "Chrome v2 has no Picture Advance Stop case, so it does not exercise the remaining overlay drift blocker"
+  },
+  "blockingFindings": [
+    {
+      "severity": "HIGH",
+      "id": "STOP_OVERLAY_USES_CURRENT_BOTTOM",
+      "finding": "Picture Advance Stop freezes the frame snapshot in advanceFcvPictureHistory, but renderScreen still passes current observation bottom depth into drawSourceGradedOverlays for the frozen zoom frame. Because bottomZone defaults to Standard, overlay geometry can change while the stopped picture is frozen.",
+      "locations": [
+        "web/app.mjs:196-213",
+        "web/app.mjs:500-513",
+        "src/devices/fcv588/echo-projection.mjs:131-137"
+      ],
+      "requiredForGo": "Render source-graded overlays from frame-consistent frozen bottom metadata (or otherwise prove Stop intentionally excludes these overlays), add RED->GREEN coverage at render/presentation boundary, rerun targeted/full and Chrome/independent review."
+    }
+  ],
+  "nonBlockerHolds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemPercentClaim": null
+  },
+  "operations": {
+    "runtimeEditedByReviewer": false,
+    "canonicalAppliedByReviewer": false,
+    "browserStartedByReviewer": false,
+    "serverStartedOrKilledByReviewer": false,
+    "port4173Operation": "NONE",
+    "reviewReceiptWriteOnce": true
+  }
+}

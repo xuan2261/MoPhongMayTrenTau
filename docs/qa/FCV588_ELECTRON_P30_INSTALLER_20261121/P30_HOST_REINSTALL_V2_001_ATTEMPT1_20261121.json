@@ -1,0 +1,11 @@
+{
+  "schema": "P30_HOST_REAL_NSIS_REINSTALL_V1",
+  "status": "PASS",
+  "installerExitCode": 0,
+  "registryDisplayVersion": "0.0.1",
+  "installedEXESHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+  "installedASARSHA256": "dbed2ac3ac0a1a4d5620c29cdf474d95e4dbd33b7040746dc3474010b00fccb0",
+  "defaultUserDataPreserved": true,
+  "shortcutExists": true,
+  "releaseApproval": "HOLD"
+}

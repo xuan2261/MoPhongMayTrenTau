@@ -1,0 +1,13 @@
+{
+  "schema": "FCV588_P30_NATIVE_PROCESS_SMOKE_V1",
+  "status": "PASS",
+  "pid": 26380,
+  "mainProcessAliveAfter5s": true,
+  "qaUserDataCreated": true,
+  "executableSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+  "stderr": null,
+  "uiRendered": "NOT_YET_VERIFIED",
+  "installerExecuted": false,
+  "airgappedVM": false,
+  "releaseApproval": "HOLD"
+}

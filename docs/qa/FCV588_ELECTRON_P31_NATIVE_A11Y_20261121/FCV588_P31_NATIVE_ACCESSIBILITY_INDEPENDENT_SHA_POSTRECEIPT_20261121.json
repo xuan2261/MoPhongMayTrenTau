@@ -1,0 +1,20 @@
+{
+  "schema": "FCV588_P31_NATIVE_A11Y_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "status": "PASS",
+  "reportSHA256": "995bb1dc307f3b45e850bd9f72aa26168f2fe2fcaaa8d6722f3de674b3425ffe",
+  "finalSHA256": "27dc44249a425f01b6848f58467a88fc02fd90aaa0aa3ec4ad7cc61e8eb60a36",
+  "P28P29P30Parents": 6,
+  "receiptsChecked": 12,
+  "runtimeFilesSHAExact": 54,
+  "oemReferenceJPEGExact": 8,
+  "installedVersion": "0.0.3",
+  "installedExeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "installedAsarSHA256": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+  "installedSignature": "NotSigned",
+  "fcv588ProcessCount": 0,
+  "qaFirewallRuleCount": 0,
+  "server4173PID": 1204,
+  "releaseApproval": "HOLD",
+  "realNarratorSpeechVerified": false,
+  "strictAirgap": false
+}

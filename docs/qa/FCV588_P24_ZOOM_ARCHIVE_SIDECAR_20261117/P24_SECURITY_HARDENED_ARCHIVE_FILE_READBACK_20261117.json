@@ -1,0 +1,12 @@
+{
+  "schema": "FCV588_P24_SECURITY_HARDENED_READBACK_V1",
+  "status": "PASS_TWO_ARCHIVED_PAIRS_HARDENED_API",
+  "oldState": "f0-fnv1a32-a429fc78",
+  "newState": "f0-fnv1a32-1ed9e57e",
+  "oldContract": "P04_HISTORIC",
+  "newContract": "P23_LOWER_BOTTOM",
+  "currentBZStartDepthM": 42.5,
+  "sourceClass": "SYNTHETIC_ONLY_NOT_OEM",
+  "archiveUI": "NOT_IMPLEMENTED",
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "FCV588_P29_ELECTRON_PACKAGED_E2E_V1",
+  "attempt": 2,
+  "status": "FAILED",
+  "exeSHA256": "40d554e62de4dec79458a5e8ad73b7c2e709641b576f1ec35056cada6a887bc3",
+  "isolatedProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_POC_20261121\\profile-e2e-v2",
+  "launchOrigin": "app://fcv588/",
+  "cases": [
+    "settings-source-encoded-valid",
+    "packaged-electron",
+    "own-secure-origin",
+    "simulator-lf-initial"
+  ],
+  "screenshots": {},
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: all-module-assets-local\n    at check (C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-electron-poc-20261121\\desktop\\e2e-packaged.cjs:34:10)\n    at main (C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-electron-poc-20261121\\desktop\\e2e-packaged.cjs:79:2)\n    at async C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-electron-poc-20261121\\desktop\\e2e-packaged.cjs:197:6"
+  ],
+  "syntheticOnly": true,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "externalBrowserUsed": false,
+  "userServer4173HTTPRequests": 0,
+  "externalNetworkDisabledByHostPolicies": true,
+  "airgappedVMInstallValidated": false,
+  "localResourceObservation": {
+    "sources": [],
+    "storageOrigin": "app://fcv588",
+    "nodeExpose": "undefined",
+    "processExpose": "undefined",
+    "audioApi": "function"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "mophongmaytrentau-f0",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline training-only maritime instrument simulation foundation",
+  "scripts": {
+    "start": "node tools/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check src/core/session.mjs && node --check src/core/scenario.mjs && node --check src/devices/fcv588/model.mjs && node --check web/hold-input.mjs && node --check web/app.mjs && npm test"
+  },
+  "engines": {"node": ">=22"}
+}

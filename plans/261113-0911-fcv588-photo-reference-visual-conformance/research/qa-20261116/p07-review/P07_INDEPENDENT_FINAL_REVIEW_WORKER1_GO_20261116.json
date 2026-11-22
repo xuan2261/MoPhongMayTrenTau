@@ -1,0 +1,164 @@
+{
+  "schema": "fcv588-p07-independent-final-review-worker1-v1",
+  "createdAt": "2026-11-16T09:46:02.0375256+07:00",
+  "reviewerId": "worker-1",
+  "decision": "GO",
+  "decisionScope": "BOUNDED_P07_CANONICAL_SOFTWARE_BROWSER_SECURITY_REPLAY_AND_REFERENCE_QA_ONLY",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "bindings": {
+    "browserReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-browser/fcv588-p07-browser-20261116T093801+0700-31a0b649.json",
+      "sha256": "16a7c5261b3e50a03055059e21cd54c4512c5e5acc839548f585a386e73733d7"
+    },
+    "browserEvents": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-browser/fcv588-p07-browser-20261116T093801+0700-31a0b649-events.json",
+      "sha256": "92db485af26779237e25017f746a49334617df26c98d29cbeb66c9c7df42fdbf"
+    },
+    "securityReplayReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-security-replay/P07_SECURITY_REPLAY_QA_RECEIPT_20261116.json",
+      "sha256": "4d617bc24e6749a0dc29e8c455751f4c5c925f9a15e02f5b678647005721a632"
+    },
+    "photoA11yReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-photo-a11y/P07_VISUAL_REFERENCE_A11Y_RECEIPT_20261116.json",
+      "sha256": "e7ffaf820926d0999f7b7359b9781c4fd1a002673e07f2f374ad24ff08a2d819",
+      "decision": "PASS_WITH_SOURCE_GAPS"
+    },
+    "pureMatrixReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-pure-layout/P07_PURE_DISPLAY_MATRIX_RECEIPT_20261116.json",
+      "sha256": "fcda83a950c44f74e94082eca26ad7c784c47e9af705c20922801a45682fc9bf"
+    },
+    "p04FinalSeal": {
+      "path": "docs/qa/FCV588_P04_PROVENANCE_20261116/FCV588_P04_PROVENANCE_FINAL_INTEGRITY_20261116.json",
+      "sha256": "94d9bf997408d8fb51140b723319ea59faefb8122f66233839ad5a8f39b243d2"
+    },
+    "p04IndependentPostSeal": {
+      "path": "docs/qa/FCV588_P04_PROVENANCE_20261116/FCV588_P04_PROVENANCE_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "132facb60daba96a7e7c0cfa38b3e8d8b414e3b852a98e79b14b390620303a9d"
+    }
+  },
+  "independentRehash": {
+    "screenshots": {
+      "expected": 39,
+      "actualPngFiles": 39,
+      "hashAndByteSizeMatches": 39,
+      "missing": [],
+      "extra": [],
+      "totalBytes": 10388621,
+      "aggregateSha256OverNameShaBytes": "35c5dda13a58fd341eabd5e007d0d145385519cadef797fb20668b3c6562e98d"
+    },
+    "loadedBodies": {
+      "viewports": ["375x812", "1366x768", "1920x1080"],
+      "rowsPerViewport": 36,
+      "uniquePathsPerViewport": 36,
+      "totalRows": 108,
+      "bodyReceiptSourceCanonicalMatches": 108,
+      "mismatches": 0,
+      "pathSetsEqualAcrossViewports": true,
+      "perViewportStoredAggregateSha256": "00436fbf14977125c338f527610e3f5c853a6cb9025edec1830b5a8e5ddccd0c",
+      "rehashAggregateSha256": "becb380fa8c2955f253b997e42820a1883178122f59b0650465c35ec859c3f51",
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "requestFailures": 0,
+      "externalRequests": 0,
+      "bodyErrors": 0
+    },
+    "canonicalRuntimeManifest": {
+      "count": 39,
+      "sha256UsingP07BrowserManifestAlgorithm": "f8e436396874b49c47f39b37a7d51a62f372e57d20cd6b8b30a11de713ee3786",
+      "matchesBrowserBefore": true,
+      "matchesBrowserAfter": true,
+      "matchesP04SealedRuntimeRows": "39/39"
+    },
+    "photoHttpDeny": {
+      "browserReceipt": "8/8 HTTP404 PASS",
+      "securityReplay": "GET_AND_HEAD_COVERAGE_FOR_ALL_8_NAMES_PASS",
+      "securityNegativeTests": "47/47 PASS"
+    },
+    "pureMatrix": {
+      "modeCount": 7,
+      "zoomCount": 3,
+      "caseCount": 63,
+      "checks": 447,
+      "failures": 0,
+      "trackedSourceFreshHashMatches": "5/5",
+      "sourceStable": true
+    },
+    "securityReplay": {
+      "status": "PASS",
+      "runtimeBefore": "39/39",
+      "runtimeAfter": "39/39",
+      "runtimeAggregateSha256": "103f62006ed5afb24982947ba8df4743a529c941ccce9cd0d54cd4bcaafc98a9",
+      "profileRevision": "F1-public-reference-21",
+      "eventCount": 6,
+      "sessionHash": "f0-fnv1a32-157a1578",
+      "repeatSessionHash": "f0-fnv1a32-157a1578",
+      "replayHash": "f0-fnv1a32-157a1578",
+      "wrongProfileRejected": true
+    }
+  },
+  "browserCoverage": {
+    "status": "PASS_BOUNDED",
+    "viewportCount": 3,
+    "statesPerViewport": 13,
+    "totalStates": 39,
+    "displayStatesPerViewport": [
+      "LF",
+      "LF-ZOOM-BL",
+      "LF-ZOOM-BZ",
+      "LF-ZOOM-MZ",
+      "NAV1",
+      "NAV2",
+      "HF-ZOOM-BL",
+      "HF-ZOOM-BZ",
+      "HF-ZOOM-MZ",
+      "HF",
+      "DUAL"
+    ],
+    "menuWorkflowPerViewport": [
+      "Picture Advance stage/cancel/commit 1x -> 1/2",
+      "Battery Off -> On replaces picture-rate header slot",
+      "BRILL 9 -> 8",
+      "five-category main-menu geometry and no horizontal overflow"
+    ],
+    "d15WorkflowPerViewport": [
+      "five tabs traversed by ArrowRight in canonical order",
+      "exactly one selected tabpanel",
+      "1366/1920 device-focus dim opacity 0.72 and focus-within restore 1.0",
+      "375 device-focus control intentionally not applicable because CSS-hidden"
+    ],
+    "dualGeometry": "depth readout intersects 50% divider in all three viewports"
+  },
+  "coverageLimits": [
+    "P07 browser is a bounded 13-state-per-viewport suite, not an exhaustive Cartesian operator-control test",
+    "RANGE, MARK, FUNC, GAIN and power-cycle/hold are not exhaustively exercised by this P07 browser receipt",
+    "STOP is not a P07 browser state; its backing-canvas/history proof is inherited from the independently sealed P04 evidence",
+    "Pure matrix 63 cases / 447 checks is a logical 480x640 projector matrix repeated under viewport labels; it is not a substitute for real Chrome/CSS coverage",
+    "375x812 screenshots are viewport captures after scrolling the device or D15 target into view; independent visual spot-check of DUAL confirms the whole hardware frame is not simultaneously visible, so these PNGs must not be used as whole-device/native-frame or physical-ROI conformance proof",
+    "P07 browser validates horizontal overflow and bounded LCD/canvas geometry but does not establish calibrated camera ROI/homography, physical millimetres, OEM RGB/glyph/detent fidelity or full vertical whole-page visibility",
+    "Narrator/NVDA spoken output, OS window blur/refocus and forced-colors assistive review remain NOT_RUN per the bound photo/a11y receipt"
+  ],
+  "blockingFindings": [],
+  "fullP07OpenItems": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "narrator": "NOT_RUN",
+    "nvda": "NOT_RUN",
+    "osBlurRefocus": "NOT_RUN",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemVisualPercentClaim": null
+  },
+  "reviewConclusion": "GO only for the bounded P07 canonical software/browser/security/replay/reference evidence packet. No evidence-integrity blocker was found. This receipt does not close full P07, certify whole-device mobile framing, certify assistive-technology speech, or authorize hardware/firmware/OEM/rights/release claims.",
+  "operations": {
+    "sourceEdited": false,
+    "canonicalEdited": false,
+    "browserLaunched": false,
+    "serverLaunched": false,
+    "networkUsed": false,
+    "port4173Operation": "NONE",
+    "oldEvidenceModified": false,
+    "receiptWriteOnce": true
+  }
+}

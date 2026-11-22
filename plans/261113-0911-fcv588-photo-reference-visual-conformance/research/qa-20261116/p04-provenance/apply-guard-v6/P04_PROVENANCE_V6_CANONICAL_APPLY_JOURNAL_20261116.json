@@ -1,0 +1,58 @@
+{
+  "status": "PLANNED_COPY_JOURNAL_PRE_MUTATION_NOT_COMPLETION_PROOF",
+  "timestampUtc": "2026-11-16T02:21:45.657820+00:00",
+  "backupSHA256": "1b917047e7391d6ef60fa964f9e8c8bde945da789ab5a594b2008ad528137d85",
+  "intentSHA256": "840277aaff12c373e2669c70e7a5f4750cdbff75410881ea85393fcd32c1ab14",
+  "operations": [
+    {
+      "ordinal": 1,
+      "path": "src/core/scenario.mjs",
+      "preimageSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "expectedPostimageSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a"
+    },
+    {
+      "ordinal": 2,
+      "path": "src/devices/fcv588/echo-projection.mjs",
+      "preimageSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+      "expectedPostimageSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b"
+    },
+    {
+      "ordinal": 3,
+      "path": "web/app.mjs",
+      "preimageSha256": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+      "expectedPostimageSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee"
+    },
+    {
+      "ordinal": 4,
+      "path": "web/fcv588-echo-rasterizer.mjs",
+      "preimageSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+      "expectedPostimageSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699"
+    },
+    {
+      "ordinal": 5,
+      "path": "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+      "preimageSha256": null,
+      "expectedPostimageSha256": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212"
+    },
+    {
+      "ordinal": 6,
+      "path": "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+      "preimageSha256": null,
+      "expectedPostimageSha256": "69b33a2f4646e97535ecd33e5a182e3318cbf757d0baddfef0a4c5e7a440bfa1"
+    },
+    {
+      "ordinal": 7,
+      "path": "test/fcv588-p04-bottom-provenance.test.mjs",
+      "preimageSha256": null,
+      "expectedPostimageSha256": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd"
+    },
+    {
+      "ordinal": 8,
+      "path": "test/fcv588-photo-modes.test.mjs",
+      "preimageSha256": "85f201ba3697b6ae408f0bf64c6fcbdf81aed44553f3dfa47862eb4ca4fe2f7c",
+      "expectedPostimageSha256": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955"
+    }
+  ],
+  "operationCount": 8,
+  "failurePolicy": "FAIL_CLOSED_KEEP_ZIP_INTENT_JOURNAL_NO_AUTORETRY"
+}

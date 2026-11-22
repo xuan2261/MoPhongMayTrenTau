@@ -1,0 +1,175 @@
+TAP version 13
+# Subtest: P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+not ok 1 - P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+  ---
+  duration_ms: 19.3321
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\test\\fcv588-p04-bottom-provenance-v2.test.mjs:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    foreign scenario provenance must fail closed even when tick/model/current bottom match
+    + actual - expected
+    
+    + '976bb8c13e4656b3fab399700d2c38e2f706fcc6f99e5a6f9e2154494b28c9cb'
+    - '3cb1a8f815cb7039a434575855a7f378b1f3d0b91d3c7d513a6456cc7439abd6'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '3cb1a8f815cb7039a434575855a7f378b1f3d0b91d3c7d513a6456cc7439abd6'
+  actual: '976bb8c13e4656b3fab399700d2c38e2f706fcc6f99e5a6f9e2154494b28c9cb'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p04-bottom-provenance-20261116/test/fcv588-p04-bottom-provenance-v2.test.mjs:55:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+not ok 2 - P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+  ---
+  duration_ms: 40.4497
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\test\\fcv588-p04-bottom-provenance-v2.test.mjs:63:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    all authored historical bottom columns must reach the BL lower band; missed 41
+    + actual - expected
+    
+    + [
+    +   8,
+    +   9,
+    +   10,
+    +   11,
+    +   12,
+    +   13,
+    +   24,
+    +   32,
+    +   33,
+    +   37,
+    +   42,
+    +   43,
+    +   46,
+    +   51,
+    +   52,
+    +   56,
+    +   75,
+    +   79,
+    +   80,
+    +   81,
+    +   86,
+    +   89,
+    +   90,
+    +   91,
+    +   97,
+    +   102,
+    +   103,
+    +   104,
+    +   105,
+    +   106,
+    +   122,
+    +   128,
+    +   129,
+    +   130,
+    +   136,
+    +   140,
+    +   141,
+    +   146,
+    +   150,
+    +   151,
+    +   152
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 8
+    1: 9
+    2: 10
+    3: 11
+    4: 12
+    5: 13
+    6: 24
+    7: 32
+    8: 33
+    9: 37
+    10: 42
+    11: 43
+    12: 46
+    13: 51
+    14: 52
+    15: 56
+    16: 75
+    17: 79
+    18: 80
+    19: 81
+    20: 86
+    21: 89
+    22: 90
+    23: 91
+    24: 97
+    25: 102
+    26: 103
+    27: 104
+    28: 105
+    29: 106
+    30: 122
+    31: 128
+    32: 129
+    33: 130
+    34: 136
+    35: 140
+    36: 141
+    37: 146
+    38: 150
+    39: 151
+    40: 152
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p04-bottom-provenance-20261116/test/fcv588-p04-bottom-provenance-v2.test.mjs:80:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+not ok 3 - P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+  ---
+  duration_ms: 45.8443
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\test\\fcv588-p04-bottom-provenance-v2.test.mjs:84:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    frozen pixels must keep the depth window that produced them
+    + actual - expected
+    
+    + 41.508297394017724
+    - 38.425751760434835
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 38.425751760434835
+  actual: 41.508297394017724
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p04-bottom-provenance-20261116/test/fcv588-p04-bottom-provenance-v2.test.mjs:106:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 0
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 247.7017

@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+ok 1 - TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+  ---
+  duration_ms: 3.9739
+  type: 'test'
+  ...
+# Subtest: TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+ok 2 - TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+  ---
+  duration_ms: 1.0141
+  type: 'test'
+  ...
+# Subtest: TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+ok 3 - TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+  ---
+  duration_ms: 2.0292
+  type: 'test'
+  ...
+# Subtest: TrackPad reset/dispose never strand timers or leak repeated events
+ok 4 - TrackPad reset/dispose never strand timers or leak repeated events
+  ---
+  duration_ms: 0.6325
+  type: 'test'
+  ...
+# Subtest: touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+ok 5 - touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+  ---
+  duration_ms: 5.5358
+  type: 'test'
+  ...
+# Subtest: rotary capture cancel, blur and pointer identity never rotate an inactive knob
+ok 6 - rotary capture cancel, blur and pointer identity never rotate an inactive knob
+  ---
+  duration_ms: 1.4691
+  type: 'test'
+  ...
+# Subtest: GAIN short tap retains push semantics; a dragged knob must not accidentally push
+ok 7 - GAIN short tap retains push semantics; a dragged knob must not accidentally push
+  ---
+  duration_ms: 2.2259
+  type: 'test'
+  ...
+# Subtest: GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+ok 8 - GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+  ---
+  duration_ms: 0.8052
+  type: 'test'
+  ...
+# Subtest: rotary capture rejection and disposal fail closed
+ok 9 - rotary capture rejection and disposal fail closed
+  ---
+  duration_ms: 0.6347
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 10 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 6.0424
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 11 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 2.9343
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 12 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.9959
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 13 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.7447
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 14 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.5061
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 15 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 1.0345
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 16 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.6819
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 17 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.8013
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 218.3433

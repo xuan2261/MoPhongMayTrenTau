@@ -1,0 +1,4245 @@
+{
+  "collectedAtUtc": "2026-10-18T05:39:45.526108+00:00",
+  "scope": "FCV588_CANONICAL_V36_D15_A11Y_SOURCE_BOUND",
+  "viewports": [
+    {
+      "viewport": "1440x900",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1118,
+              "right": 1380,
+              "width": 262
+            },
+            "viewportWidth": 1440,
+            "scrollWidth": 1440,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1118,
+              "right": 1380,
+              "width": 262
+            },
+            "viewportWidth": 1440,
+            "scrollWidth": 1440,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1440x900-initial.png",
+          "sha256": "493459d94ffb640a3d58b793509859003e35d0fe738a8e9a2ddc76a4c3eb9ffd"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1440x900-fresh-source.png",
+          "sha256": "cafca9882dc2adfc832d44cf9b5a50719ee1a25ce5acf758ed5b4514f43a890a"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1440x900-text-zoom-200.png",
+          "sha256": "1d0d1ec0db0a0db03f7f135be2a7cbda74a8e7d995ac1b16feca2f7636f7e54d"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1118,
+          "right": 1380,
+          "width": 262
+        },
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1118,
+          "right": 1380,
+          "width": 262
+        },
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "768x1024",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 60,
+              "right": 708,
+              "width": 648
+            },
+            "viewportWidth": 768,
+            "scrollWidth": 768,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 60,
+              "right": 708,
+              "width": 648
+            },
+            "viewportWidth": 768,
+            "scrollWidth": 768,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-768x1024-initial.png",
+          "sha256": "4e07cb8aa5a50f7207775e6a2888f5c78b23db158ce338ca76d6ac0a98d90c4c"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-768x1024-fresh-source.png",
+          "sha256": "bf52bcb22763abf8adbbd2ddbf9d0ddd06cc374ec3b405a17965628ca526ca00"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-768x1024-text-zoom-200.png",
+          "sha256": "fb1cedaefb0ee12a3181464c8fb78d23131e4ca7fd704caf72a1ccd44fed2a4f"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 60,
+          "right": 708,
+          "width": 648
+        },
+        "viewportWidth": 768,
+        "scrollWidth": 768,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 60,
+          "right": 708,
+          "width": 648
+        },
+        "viewportWidth": 768,
+        "scrollWidth": 768,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "375x812",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 351,
+              "width": 327
+            },
+            "viewportWidth": 375,
+            "scrollWidth": 375,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 351,
+              "width": 327
+            },
+            "viewportWidth": 375,
+            "scrollWidth": 375,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-375x812-initial.png",
+          "sha256": "20fe1d35208b3692819e53bdadb30d6c0d6db97eadfbad99f34c8a604c764cc5"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-375x812-fresh-source.png",
+          "sha256": "5500a81a8639ed8e7301d4ab6b9d4f23873ae2ce55d53cbe7eebf312bfe79f96"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-375x812-text-zoom-200.png",
+          "sha256": "703e642f8319e69c8f0c95f40e756240be704269e4485b0f52d073ccdfc344d8"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 351,
+          "width": 327
+        },
+        "viewportWidth": 375,
+        "scrollWidth": 375,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 351,
+          "width": 327
+        },
+        "viewportWidth": 375,
+        "scrollWidth": 375,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "320x720",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 296,
+              "width": 272
+            },
+            "viewportWidth": 320,
+            "scrollWidth": 320,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 296,
+              "width": 272
+            },
+            "viewportWidth": 320,
+            "scrollWidth": 320,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-320x720-initial.png",
+          "sha256": "ac724979a0e400351a34792bf09246e3f069033f09a56012717732349fd2f6de"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-320x720-fresh-source.png",
+          "sha256": "da75995b3e5dfe42a01dc26c50febb5c1c48a1fbd607a89de63036fab2a9b928"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-320x720-text-zoom-200.png",
+          "sha256": "4606d57369020f4b6cce3595ea18a5bf195ed46f5b6471fc9507f6bcd9bcc43a"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "390x844",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 366,
+              "width": 342
+            },
+            "viewportWidth": 390,
+            "scrollWidth": 390,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 24,
+              "right": 366,
+              "width": 342
+            },
+            "viewportWidth": 390,
+            "scrollWidth": 390,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-390x844-initial.png",
+          "sha256": "435c2d1f388b7091db49738c1082d52eaabb5e2d2a3f7587f7ae576f0ef5314a"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-390x844-fresh-source.png",
+          "sha256": "58debb2e363588b3ce23be0e147d0c926c26daa1652afa44436634a003fb8753"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-390x844-text-zoom-200.png",
+          "sha256": "8fe92daed23b80fb3948b27ec4e6944f0ab47b0a80a992e7d7e9af805013d0b7"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "1366x768",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1044,
+              "right": 1306,
+              "width": 262
+            },
+            "viewportWidth": 1366,
+            "scrollWidth": 1366,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1044,
+              "right": 1306,
+              "width": 262
+            },
+            "viewportWidth": 1366,
+            "scrollWidth": 1366,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1366x768-initial.png",
+          "sha256": "32b584446ed7989eabd2ed701aa491b4a420ddc7bdfdc4a3c052af6c5dec7156"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1366x768-fresh-source.png",
+          "sha256": "30960edbd73c3c772d56ee30df1a5d22d3d380e338bd57f67c025be479ba5184"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1366x768-text-zoom-200.png",
+          "sha256": "f161500c2355ff52a71dab8d84480bf60859c43aa773f1e6b285a82da33c1e9e"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1044,
+          "right": 1306,
+          "width": 262
+        },
+        "viewportWidth": 1366,
+        "scrollWidth": 1366,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1044,
+          "right": 1306,
+          "width": 262
+        },
+        "viewportWidth": 1366,
+        "scrollWidth": 1366,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": [
+        {
+          "name": "V36_D15_EXTERNAL_ONLY",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_THREE_NAMED_ARTICLES",
+          "passed": true,
+          "observed": [
+            "C11 · NAV / Waypoint",
+            "D09 · Tankenmaru",
+            "D14 · Nguồn dữ liệu nhận"
+          ]
+        },
+        {
+          "name": "V36_MATRIX_HAS_NO_FAKE_CONTROLS",
+          "passed": true,
+          "observed": 0
+        },
+        {
+          "name": "V36_LIVE_STATUS_ATOMIC_AND_POLITE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FIRST_RENDER_DOES_NOT_ANNOUNCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_ALL_COPY_AT_LEAST_13PX",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_SECTION_HEADING_AT_LEAST_16PX",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TEXT_CONTRAST_AT_LEAST_4_5",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 16,
+              "lineHeightPx": 23.2,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 14,
+              "lineHeightPx": 21,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 13,
+              "lineHeightPx": 20.15,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 14,
+              "lineHeightPx": 22.4,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 13,
+              "lineHeightPx": 20.8,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_NO_MATRIX_OR_PAGE_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 16,
+                "lineHeightPx": 23.2,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 14,
+                "lineHeightPx": 21,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 13,
+                "lineHeightPx": 20.15,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 14,
+                "lineHeightPx": 22.4,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 13,
+                "lineHeightPx": 20.8,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1423,
+              "right": 1685,
+              "width": 262
+            },
+            "viewportWidth": 1920,
+            "scrollWidth": 1920,
+            "rootFontPx": 16,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_C11",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D09",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_ARIA_ARTICLE_D14",
+          "passed": true,
+          "observed": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status"
+        },
+        {
+          "name": "V36_BOOT_HAS_DISCRETE_SOURCE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_FRESH_NAV_STATE_ANNOUNCED",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TICKS_DO_NOT_REPEAT_LIVE_ANNOUNCEMENT",
+          "passed": true,
+          "observed": {
+            "observedEdits": 2,
+            "before": 2
+          }
+        },
+        {
+          "name": "V36_INSTRUCTOR_KEYBOARD_CANNOT_DISPATCH_FCV_KEYS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_TAB_ORDER_NEXT_INSTRUCTOR_BUTTON",
+          "passed": true,
+          "observed": "btn-mount-fixture"
+        },
+        {
+          "name": "V36_VISIBLE_KEYBOARD_FOCUS",
+          "passed": true,
+          "observed": {
+            "width": 3,
+            "style": "solid"
+          }
+        },
+        {
+          "name": "V36_FOCUS_KEPT_AFTER_SOURCE_TRANSITION",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_D15_COPY_SCALES_WITH_ROOT_TEXT_SIZE_200PCT",
+          "passed": true,
+          "observed": {
+            "#instructor-source-matrix-title": {
+              "fontPx": 32,
+              "lineHeightPx": 46.4,
+              "contrast": 8.55,
+              "color": "rgb(157, 203, 211)",
+              "background": "rgb(16, 41, 55)"
+            },
+            "#instructor-source-matrix-description": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 8.4,
+              "color": "rgb(179, 196, 207)",
+              "background": "rgb(16, 41, 55)"
+            },
+            ".source-matrix-item h4": {
+              "fontPx": 28,
+              "lineHeightPx": 42,
+              "contrast": 12.09,
+              "color": "rgb(188, 226, 237)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-state": {
+              "fontPx": 26,
+              "lineHeightPx": 40.3,
+              "contrast": 12.1,
+              "color": "rgb(244, 217, 156)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item p:not(.source-matrix-details)": {
+              "fontPx": 28,
+              "lineHeightPx": 44.8,
+              "contrast": 13.73,
+              "color": "rgb(219, 236, 243)",
+              "background": "rgb(12, 32, 45)"
+            },
+            ".source-matrix-item .source-matrix-details": {
+              "fontPx": 26,
+              "lineHeightPx": 41.6,
+              "contrast": 10.32,
+              "color": "rgb(181, 208, 218)",
+              "background": "rgb(12, 32, 45)"
+            }
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_NO_MATRIX_OVERFLOW",
+          "passed": true,
+          "observed": {
+            "texts": {
+              "#instructor-source-matrix-title": {
+                "fontPx": 32,
+                "lineHeightPx": 46.4,
+                "contrast": 8.55,
+                "color": "rgb(157, 203, 211)",
+                "background": "rgb(16, 41, 55)"
+              },
+              "#instructor-source-matrix-description": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 8.4,
+                "color": "rgb(179, 196, 207)",
+                "background": "rgb(16, 41, 55)"
+              },
+              ".source-matrix-item h4": {
+                "fontPx": 28,
+                "lineHeightPx": 42,
+                "contrast": 12.09,
+                "color": "rgb(188, 226, 237)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-state": {
+                "fontPx": 26,
+                "lineHeightPx": 40.3,
+                "contrast": 12.1,
+                "color": "rgb(244, 217, 156)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item p:not(.source-matrix-details)": {
+                "fontPx": 28,
+                "lineHeightPx": 44.8,
+                "contrast": 13.73,
+                "color": "rgb(219, 236, 243)",
+                "background": "rgb(12, 32, 45)"
+              },
+              ".source-matrix-item .source-matrix-details": {
+                "fontPx": 26,
+                "lineHeightPx": 41.6,
+                "contrast": 10.32,
+                "color": "rgb(181, 208, 218)",
+                "background": "rgb(12, 32, 45)"
+              }
+            },
+            "area": {
+              "left": 1423,
+              "right": 1685,
+              "width": 262
+            },
+            "viewportWidth": 1920,
+            "scrollWidth": 1920,
+            "rootFontPx": 32,
+            "matrixOverflow": false,
+            "cardOverflow": false,
+            "documentOverflow": false,
+            "headings": [
+              "C11 · NAV / Waypoint",
+              "D09 · Tankenmaru",
+              "D14 · Nguồn dữ liệu nhận"
+            ],
+            "articlesNamed": true,
+            "matrixFocusable": 0,
+            "offFace": true,
+            "offFaceLive": true
+          }
+        },
+        {
+          "name": "V36_TEXT_ZOOM_DOES_NOT_MOVE_FOCUS",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_REENABLE_NAV_NOTIFICATION_ONCE",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_SOURCE_MATRIX_NEVER_BECOMES_LCD_TEXT",
+          "passed": true,
+          "observed": null
+        },
+        {
+          "name": "V36_NO_PAGE_ERRORS",
+          "passed": true,
+          "observed": []
+        },
+        {
+          "name": "V36_NO_FOREIGN_REQUESTS",
+          "passed": true,
+          "observed": [
+            "http://127.0.0.1:4213/",
+            "http://127.0.0.1:4213/web/styles.css",
+            "http://127.0.0.1:4213/web/app.mjs",
+            "http://127.0.0.1:4213/src/core/scenario.mjs",
+            "http://127.0.0.1:4213/src/core/session.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4213/src/core/lessons.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4213/web/hold-input.mjs",
+            "http://127.0.0.1:4213/web/pad-repeat.mjs",
+            "http://127.0.0.1:4213/web/rotary-input.mjs",
+            "http://127.0.0.1:4213/web/key-feedback.mjs",
+            "http://127.0.0.1:4213/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4213/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4213/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4213/web/fcv588-training-source-matrix.mjs",
+            "http://127.0.0.1:4213/src/core/protocol.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4213/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4213/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "V36_ALL_BROWSER_RESPONSE_BYTES_PINNED",
+          "passed": true,
+          "observed": {
+            "requested": 35,
+            "loaded": 35,
+            "errors": []
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1920x1080-initial.png",
+          "sha256": "1b76e121908565951c83dd01f58075eb907d8142002290eafc742eb3295ab9a7"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1920x1080-fresh-source.png",
+          "sha256": "5a028b3aeccb31a8cc82c0be267956a02a8dc73489492e924c172f3e565dc172"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v36-canonical-20261018-1920x1080-text-zoom-200.png",
+          "sha256": "5065e2f6b31534a9ed81db7109e5b891785361d80a48b472857e0bbeba9a9b8d"
+        }
+      ],
+      "initial": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 16,
+            "lineHeightPx": 23.2,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 14,
+            "lineHeightPx": 21,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 13,
+            "lineHeightPx": 20.15,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 14,
+            "lineHeightPx": 22.4,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 13,
+            "lineHeightPx": 20.8,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1423,
+          "right": 1685,
+          "width": 262
+        },
+        "viewportWidth": 1920,
+        "scrollWidth": 1920,
+        "rootFontPx": 16,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "zoom200": {
+        "texts": {
+          "#instructor-source-matrix-title": {
+            "fontPx": 32,
+            "lineHeightPx": 46.4,
+            "contrast": 8.55,
+            "color": "rgb(157, 203, 211)",
+            "background": "rgb(16, 41, 55)"
+          },
+          "#instructor-source-matrix-description": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 8.4,
+            "color": "rgb(179, 196, 207)",
+            "background": "rgb(16, 41, 55)"
+          },
+          ".source-matrix-item h4": {
+            "fontPx": 28,
+            "lineHeightPx": 42,
+            "contrast": 12.09,
+            "color": "rgb(188, 226, 237)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-state": {
+            "fontPx": 26,
+            "lineHeightPx": 40.3,
+            "contrast": 12.1,
+            "color": "rgb(244, 217, 156)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item p:not(.source-matrix-details)": {
+            "fontPx": 28,
+            "lineHeightPx": 44.8,
+            "contrast": 13.73,
+            "color": "rgb(219, 236, 243)",
+            "background": "rgb(12, 32, 45)"
+          },
+          ".source-matrix-item .source-matrix-details": {
+            "fontPx": 26,
+            "lineHeightPx": 41.6,
+            "contrast": 10.32,
+            "color": "rgb(181, 208, 218)",
+            "background": "rgb(12, 32, 45)"
+          }
+        },
+        "area": {
+          "left": 1423,
+          "right": 1685,
+          "width": 262
+        },
+        "viewportWidth": 1920,
+        "scrollWidth": 1920,
+        "rootFontPx": 32,
+        "matrixOverflow": false,
+        "cardOverflow": false,
+        "documentOverflow": false,
+        "headings": [
+          "C11 · NAV / Waypoint",
+          "D09 · Tankenmaru",
+          "D14 · Nguồn dữ liệu nhận"
+        ],
+        "articlesNamed": true,
+        "matrixFocusable": 0,
+        "offFace": true,
+        "offFaceLive": true
+      },
+      "accessibilitySnapshot": "- region \"Đối chiếu nguồn C11 · D09 · D14\":\n  - heading \"Đối chiếu nguồn C11 · D09 · D14\" [level=3]\n  - paragraph: Bảng giảng viên D15, chỉ đọc. Các trạng thái và waypoint là dữ liệu giả lập; không phải menu FCV-588 hay kết nối tàu.\n  - article \"C11 · NAV / Waypoint\":\n    - heading \"C11 · NAV / Waypoint\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: LCD chưa bật, không có dữ liệu điều hướng hiện hành.\n    - paragraph: \"Waypoint: 0/20 (bài tập) · Tuổi mẫu: không xác định. Không có GPS tàu; TIME TO GO tính thử không phải ETA OEM.\"\n  - article \"D09 · Tankenmaru\":\n    - heading \"D09 · Tankenmaru\" [level=4]\n    - text: Không có tùy chọn ảo\n    - paragraph: Không khai báo tùy chọn ảo; không có quyền phần cứng.\n    - paragraph: Chưa kích hoạt truyền nhận tùy chọn. Không phát RF, không có màn hình Tankenmaru ngoài.\n  - article \"D14 · Nguồn dữ liệu nhận\":\n    - heading \"D14 · Nguồn dữ liệu nhận\" [level=4]\n    - text: Thiết bị mô phỏng đang tắt\n    - paragraph: Màn hình tắt; đầu thu thực chưa từng kết nối.\n    - paragraph: \"Speed: Own — Không có mẫu Own hợp lệ · Temp: Own — Không có mẫu Own hợp lệ · Trip: Own — Không có mẫu Own hợp lệ · NMEA vật lý: OFF; Transport: NONE. Không có dữ liệu GPS/NMEA tàu.\"\n  - status",
+      "verifiedBrowserResponses": 35,
+      "consoleErrors": [],
+      "status": "PASS"
+    }
+  ],
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "realScreenReaderSpeech": "NOT_VERIFIED",
+  "chromeVersion": "155.0.8059.80",
+  "sourceFileCount": 37,
+  "sourceManifest": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "207f14a9ebb17d1fe565ececa29c5cb3756bcca9b98236ec83f6aac51e6f603c",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+    "src/devices/fcv588/menu-atlas.mjs": "83928dbe14a446cab48f4652e27ef20ad8afb45e0bd31760975aa72b71380b5a",
+    "src/devices/fcv588/model.mjs": "723b3981b508c54b391e16e7f0a8c220faddc57b5d9d1c5bdf4cece9ad4690de",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "bed6c0af1297adb681071165ee6d8283b13959aa0ce53c343fc67efb839a9e72",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "a77f165f77fb3a0e898df489bccf1c6f559adbcc15bbc0da1df12b4fda53adb1",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "7ec574436566e10e32064455dc3e8b0e53d1449723d53781d1b6e2f22e97340d",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "0881d0567d7921a98085a7914ebc2628e9b2f6d2c23d9a5894e7f97f3bba808f",
+    "web/lcd-instructor-meta.mjs": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+  },
+  "runnerSha256": "7acd6750b6c7487bfe8c14546801f97aa8d06fec36b9b6ee1428a942ccb7c319",
+  "result": "CANONICAL_V36_D15_A11Y_BROWSER_PASS"
+}

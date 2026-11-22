@@ -1,0 +1,40 @@
+{
+  "schema": "fcv588-visual-p04-bounded-independent-postreceipt-v1",
+  "timestampUtc": "2026-11-14T04:16:20.982249+00:00",
+  "status": "P04_BOUNDED_INDEPENDENT_POSTRECEIPT_PASS_RIGHTS_HARDWARE_RELEASE_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_VISUAL_P04_20261114/FCV588_VISUAL_P04_FINAL_INTEGRITY_20261114.json",
+  "finalReceiptSHA256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+  "finalIntegrityScriptSHA256": "3d7e33eded448e8692af4318ff0350ec7f5b952bb58cab40681b612b78af9254",
+  "procedureSHA256": "49550e54208bad6e0e302d6070a3510a27dc9b4af25e9e160c897f73c1e9ab25",
+  "recheckedRuntime": "39/39_STAGE_CANONICAL_MATCH",
+  "recheckedCanonicalTests": {
+    "node": "541/541_PASS",
+    "python": "13/13_PASS"
+  },
+  "recheckedBrowserReceipts": {
+    "stage": "63d916faea9087bd6cc7c201d49c252c9b73a41dec3d69ac75285759bbafaa7f",
+    "canonical": "8818e641a8a03317ab2057451fb65b52263df6dcc04c4d8d5885d99d99a93a56"
+  },
+  "recheckedBrowserCases": {
+    "stage": 7,
+    "canonical": 7
+  },
+  "recheckedScreenshotHashes": "14/14_MATCH_STAGE_CANONICAL",
+  "recheckedBrowserArtifacts": 26,
+  "recheckedStageQaManifestRows": 27,
+  "recheckedPhotoReferences": "8/8_ORIGINAL_SHA_MATCH_HTTP_DENY",
+  "parentP03FinalSHA256": "1132a7d8eae167a9afa60e5271bfec282b53b848054f3637cb973467fcd67c6d",
+  "parentP03PostreceiptSHA256": "48abc24fecae4df657e79d4ed7ba6d365fb4a97a086fbf99792b9b8535da362e",
+  "guardedBackupSHA256": "bd0bfb24e720faf852c741a747330e74c7b3699c9f77f2320324014ede866d11",
+  "guardedApplySHA256": "8e8a222f1d1adaa851a026b4a1390ff11d853e6093699302f1fb382bf531d864",
+  "coreWorldSessionReplayChanged": false,
+  "rightsClearance": false,
+  "hardwareValidated": false,
+  "firmwareInstalled": "UNKNOWN",
+  "featureClaims": "65/65_HOLD",
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "oemConformity": "NOT_CLAIMED",
+  "scopeLimit": "P04 bounded BL/DUAL/NAV synthetic software, not full phase4 or OEM certification",
+  "notes": "Independent post-seal filesystem reread; no runtime/old receipt/source photo modification."
+}

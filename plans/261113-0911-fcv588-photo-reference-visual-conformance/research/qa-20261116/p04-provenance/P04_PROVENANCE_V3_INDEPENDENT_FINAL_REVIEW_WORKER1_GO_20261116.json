@@ -1,0 +1,130 @@
+{
+  "schema": "fcv588-p04-provenance-v3-independent-final-review-worker1-v1",
+  "createdAt": "2026-11-16T09:19:46.8206086+07:00",
+  "reviewerId": "worker-1",
+  "decision": "GO",
+  "decisionScope": "FROZEN_P04_V3_STAGE_SOURCE_AND_SOURCE_BOUND_BROWSER_EVIDENCE_ONLY",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "bindings": {
+    "stageReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V3_STAGE_RECEIPT_20261116.json",
+      "sha256": "7599509a0bb6332b147df47226a8b2640c44b577d0e65ae4981fcceace1f9129"
+    },
+    "compatibilityReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_COMPAT_PROBE_RESULT_V3_20261116.json",
+      "sha256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6"
+    },
+    "browserReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\fcv588-p04-provenance-v3-stop-browser-v2-20261116T091433+0700-bcfbfd0a.json",
+      "sha256": "71937c3649c3eda5090e5399eb8d023034100492bee6037c76fd76fd724c3623"
+    }
+  },
+  "bindingMatches": {
+    "stageReceipt": true,
+    "compatibilityReceipt": true,
+    "browserReceipt": true,
+    "stageRootExact": true
+  },
+  "frozenSource": {
+    "canonicalDiffStatus": "EXACT_8_PATHS_4_RUNTIME_4_TESTS",
+    "runtimePaths": [
+      "src/core/scenario.mjs",
+      "src/devices/fcv588/echo-projection.mjs",
+      "web/app.mjs",
+      "web/fcv588-echo-rasterizer.mjs"
+    ],
+    "testPaths": [
+      "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+      "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+      "test/fcv588-p04-bottom-provenance.test.mjs",
+      "test/fcv588-photo-modes.test.mjs"
+    ],
+    "sourceSha256": {
+      "src/core/scenario.mjs": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "web/app.mjs": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+      "web/fcv588-echo-rasterizer.mjs": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "test/fcv588-p04-bottom-provenance-v2.test.mjs": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212",
+      "test/fcv588-p04-bottom-provenance-v3.test.mjs": "69b33a2f4646e97535ecd33e5a182e3318cbf757d0baddfef0a4c5e7a440bfa1",
+      "test/fcv588-p04-bottom-provenance.test.mjs": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd",
+      "test/fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955"
+    },
+    "browserSourceManifest": {
+      "files": 38,
+      "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040",
+      "recomputedByReviewer": true,
+      "beforeAfterStable": true
+    }
+  },
+  "sourceReview": {
+    "scenarioIdentityBinding": "PASS: provenance is bound to authoritative scenario id/version/fingerprint plus sensor model, simTick, world bottom and column count; foreign scenario provenance fails closed against the runtime authoritative identity",
+    "worldConsistency": "PASS: producer rejects worldState.bottomDepthM inconsistent with bottomDepthAt(scenario, simTick)",
+    "rawDisplayQuantizationTick231": "PASS: Bottom Lock maps authored raw seabed through the same sounderSourceRowForDepth rounding used by makeEchoFrame; sealed targeted evidence covers TRAINING_SCENARIO tick231 with 160/160 lower-band columns",
+    "bottomLockRasterPhantom": "PASS: rasterizeFcvEcho bypasses legacy coherentBottom inference for Bottom Lock, so global bottom plus fish pixels cannot synthesize a decorative seabed tail",
+    "bottomZoomMarkerZoom": "PASS: retained byte-equivalence witnesses Bottom Zoom efe712c15b072f07da63487ad630ef8d5bf060ebc04db0491b925c07623132e3 and Marker Zoom 3959bbf444817583042348fe3f26275c342e47c18bc3babedadb3c2394597f2a",
+    "pictureStopHistory": "PASS: Stop freezes pixels, startDepthM and bottomDepthM while sourceTick advances, preventing catch-up of stopped history",
+    "drawOverlaysFrozenMetadata": "PASS: all six NAV/DUAL/ZOOM/normal drawOverlays call sites use the exact history-qualified frame.bottomDepthM; no stale drawOverlays(...o.bottomDepthM) call remains",
+    "replayObservationCompatibility": "PASS: compatibility receipt preserves observation keyset, raw channel bytes, session hashes and protected session/protocol/profile/model/settings/adapter sources"
+  },
+  "tests": {
+    "targeted": {"tests": 52, "pass": 52, "fail": 0},
+    "fullNode": {"tests": 563, "pass": 563, "fail": 0},
+    "python": {"tests": 13, "status": "OK"},
+    "compatibility": "PASS"
+  },
+  "browserReview": {
+    "overallStatus": "PASS",
+    "caseCount": 6,
+    "loadedBodyRows": 216,
+    "loadedBodySourceMatches": 216,
+    "loadedBodyMismatchCount": 0,
+    "photo404Count": 8,
+    "sourceTreeStable": true,
+    "serverCleanup": "PASS",
+    "stopProof": {
+      "tickBefore": 4,
+      "tickAfter": 14,
+      "bottomZoneNarrowWitnessSha256": "b72ad7ad1f185cf3c5301c76952c861f03699a657fdd2ad97a24cc5b2292e946",
+      "bottomZoneStandardWitnessSha256": "c20f398930c9eb2493c50d7c81d1f6feded5d919cd6651013d288b96ccdc079b",
+      "bottomZoneWitnessNonVacuous": true,
+      "backingCanvasBeforeSha256": "7cd38fdc515e8dbaaf4e89bdd25c0d9b2b9b902c23fdbab5dc57276d3e26c7e5",
+      "backingCanvasAfterSha256": "7cd38fdc515e8dbaaf4e89bdd25c0d9b2b9b902c23fdbab5dc57276d3e26c7e5",
+      "changedPixelCount": 0,
+      "changedPixelBoundingBox": null
+    },
+    "priorWholeElementFailureAttribution": "NON_PRODUCT_SCOPE: prior receipt 7b9c144ffbfcc7dedc214a315dfc46e4e26f508ab7ec6273b9e6066967e5032a compared DOM-composited output including live depth DOM; corrected proof compares #echo-canvas backing pixels where sonar/Bottom Zone are rendered"
+  },
+  "priorNoGoEvidencePreserved": [
+    {
+      "path": "P04_INDEPENDENT_REVIEW_NO_GO_20261116.json",
+      "sha256": "ddd85002200201bbba321c7e7c8318061fc9f8cc7a1a4f012d75147ef28c5330"
+    },
+    {
+      "path": "P04_PROVENANCE_V2_INDEPENDENT_FINAL_REVIEW_20261116.json",
+      "sha256": "954bdacf518f30237a13cb6ae967184fac7d58d5936d9d1aee5931bef4cd2db4"
+    },
+    {
+      "path": "P04_PROVENANCE_V3_INDEPENDENT_FINAL_REVIEW_20261116.json",
+      "sha256": "1a92cc99aaff9039e1d1f0f1a40a568f10a5a174b6a6c881422491a0423718a7"
+    }
+  ],
+  "blockingFindings": [],
+  "holds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemPercentClaim": null
+  },
+  "operations": {
+    "runtimeEditedByReviewer": false,
+    "canonicalAppliedByReviewer": false,
+    "browserStartedByReviewer": false,
+    "serverStartedOrKilledByReviewer": false,
+    "port4173Operation": "NONE",
+    "guardExecutedByReviewer": false,
+    "reviewReceiptWriteOnce": true
+  }
+}

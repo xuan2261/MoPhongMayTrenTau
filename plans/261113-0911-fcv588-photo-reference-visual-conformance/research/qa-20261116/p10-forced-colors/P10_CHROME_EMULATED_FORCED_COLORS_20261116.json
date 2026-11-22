@@ -1,0 +1,36 @@
+{
+  "cleanup": {
+    "testPortClosed": true,
+    "user4173Alive": true
+  },
+  "consolePageErrors": [],
+  "createdAt": "2026-11-16T13:42:39.761457+07:00",
+  "mode": "1366x768 only; source unchanged; one owned Chrome and port",
+  "nativeNarratorSpeech": "NOT_RUN",
+  "observation": {
+    "focusedId": "key-power",
+    "forcedColorsMatch": true,
+    "instructorPanelCount": 5,
+    "instructorTabCount": 5,
+    "lcdIsGlobalLiveRegion": false,
+    "pageHorizontalOverflow": false,
+    "powerBackground": "rgba(255, 255, 255, 0)",
+    "powerColor": "rgb(0, 0, 0)",
+    "powerOutlineStyle": "solid",
+    "powerOutlineWidth": "3px",
+    "powerVisible": true,
+    "tabsWithNames": 5
+  },
+  "parentP09SHA256": "759f146c349c2ad348fc5b98e21fbc79d1d857623253811f0a01d3b9408995b9",
+  "realOSWindowBlur": "NOT_VERIFIED",
+  "realWindowsForcedColors": "NOT_RUN",
+  "runtime39Unchanged": true,
+  "schema": "fcv588-p10-chrome-forced-colors-emulation-v1",
+  "scope": "CHROME_FORCED_COLORS_MEDIA_EMULATION_NOT_NATIVE_WINDOWS_HIGH_CONTRAST",
+  "screenshot": {
+    "bytes": 59776,
+    "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-forced-colors/P10_CHROME_EMULATED_FORCED_COLORS_1366x768_20261116.png",
+    "sha256": "a1e86d366f71c82f84f07b3c7de2de51fde5eb54570ee4adcc25efa83282a991"
+  },
+  "status": "PASS_EMULATED_FORCED_COLORS_BOUNDED_DOM_CHECKS"
+}

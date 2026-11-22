@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-11-16T10:24:14.259642+07:00",
+  "finalPath": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+  "method": "Fresh SHA-readback and validation after final file written; no browser rerun; worker-1 independent GO bound by SHA.",
+  "rehash": {
+    "evidence": 13,
+    "photos": "8/8",
+    "port4207": "CLOSED",
+    "runtime": "39/39",
+    "screenshots": "39/39",
+    "server4173": "HTTP 200"
+  },
+  "rightsFirmwareHardwareFeatureReleaseHoldsRemain": true,
+  "schema": "fcv588-p07-bounded-independent-postreceipt-v1",
+  "status": "PASS_BOUNDED_INDEPENDENT_READBACK"
+}

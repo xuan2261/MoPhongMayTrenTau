@@ -1,0 +1,259 @@
+{
+  "acceptance": {
+    "analystSemanticMapping": "PROVISIONAL_NOT_OEM_LANGUAGE_ORACLE",
+    "fullVietnameseLanguageDictionary": "HOLD",
+    "installedFirmware": "UNKNOWN",
+    "photoLiteralTranscription": "BOUNDED_SOURCE_DIRECT",
+    "photoSpecificMenuOrderDifference": "OBSERVED_AS_SEMANTIC_CROSSWALK",
+    "rightsToRedistributePhotos": "HOLD",
+    "runtimeApply": "HOLD_UNTIL_SOURCE_VALID_COMPLETE_SCOPE_AND_FROZEN_STAGING_QA",
+    "samePhotoReferenceAndCanonicalFirmware": "NOT_ESTABLISHED"
+  },
+  "comparisonClass": "ONE_UNCALIBRATED_REFERENCE_JPEG_IN_PROJECT_2016_COLLECTION",
+  "createdAt": "2026-11-16T16:29:35.221958+07:00",
+  "crosswalk": [
+    {
+      "analystSemanticSourceId": "sounder.pictureAdvance",
+      "photoLiteral": "Kéo Hình : x4",
+      "photoOrder": 1,
+      "runtimeEnglishLabel": "Pic. Advance",
+      "runtimeOrder": 1,
+      "sameOrdinal": true,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.zoomMode",
+      "photoLiteral": "K. Phóng đại : Bám Đáy",
+      "photoOrder": 2,
+      "runtimeEnglishLabel": "Zoom Mode",
+      "runtimeOrder": 12,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.shift",
+      "photoLiteral": "Di chuyển : 2m",
+      "photoOrder": 3,
+      "runtimeEnglishLabel": "Shift",
+      "runtimeOrder": 13,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.interference",
+      "photoLiteral": "Nhiễu cạn : Tự Động",
+      "photoOrder": 4,
+      "runtimeEnglishLabel": "Interference",
+      "runtimeOrder": 2,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.colorErase",
+      "photoLiteral": "Xóa màu : 0%",
+      "photoOrder": 5,
+      "runtimeEnglishLabel": "Color Erase",
+      "runtimeOrder": 4,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.clutter",
+      "photoLiteral": "Nhiễu tạp : 60%",
+      "photoOrder": 6,
+      "runtimeEnglishLabel": "Clutter",
+      "runtimeOrder": 3,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.whiteLine",
+      "photoLiteral": "Đường trắng : Biên",
+      "photoOrder": 7,
+      "runtimeEnglishLabel": "White Line",
+      "runtimeOrder": 5,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.whiteMarker",
+      "photoLiteral": "Dấu Trắng",
+      "photoOrder": 8,
+      "runtimeEnglishLabel": "White Marker",
+      "runtimeOrder": 6,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.tvg",
+      "photoLiteral": "TVG : Tr. Bình",
+      "photoOrder": 9,
+      "runtimeEnglishLabel": "TVG",
+      "runtimeOrder": 7,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.smoothing",
+      "photoLiteral": "Làm nhẵn : Tắt",
+      "photoOrder": 10,
+      "runtimeEnglishLabel": "Smoothing",
+      "runtimeOrder": 8,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.bottomZone",
+      "photoLiteral": "Khu vực Đáy",
+      "photoOrder": 11,
+      "runtimeEnglishLabel": "Bottom Zone",
+      "runtimeOrder": 9,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.txPower",
+      "photoLiteral": "C.suất Phát : Tự Động",
+      "photoOrder": 12,
+      "runtimeEnglishLabel": "TX Power",
+      "runtimeOrder": 10,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    },
+    {
+      "analystSemanticSourceId": "sounder.txRate",
+      "photoLiteral": "Tỉ lệ Phát : 10",
+      "photoOrder": 13,
+      "runtimeEnglishLabel": "TX Rate",
+      "runtimeOrder": 11,
+      "sameOrdinal": false,
+      "sourceClass": "PHOTOGRAPHIC_VI_LITERAL_AND_ANALYST_SEMANTIC_MAPPING_NOT_OEM_TRANSLATION_CERTIFICATION"
+    }
+  ],
+  "differentOrdinalRows1Based": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "invertedPhotoRowPairs1Based": [
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      2,
+      12
+    ],
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "lexicalValueDiscrepancyCandidates": {
+    "atlasPercentageValues": "Current choice arrays are numeric strings without percent sign; LCD rendering localization still unverified",
+    "atlasWhiteLineChoices": [
+      "Off",
+      "On"
+    ],
+    "interpretation": "Photo text/value vs current English training option set; firmware equivalence and semantics still unverified",
+    "photoPercentAppearance": "Xóa màu : 0%; Nhiễu tạp : 60%",
+    "photoWhiteLineValueInAtlas": false,
+    "photoWhiteLineVisibleValue": "Biên"
+  },
+  "operations": {
+    "noBrowserRun": true,
+    "noExistingEvidenceOverwritten": true,
+    "noOEMMediaDerivative": true,
+    "noSourceEdited": true
+  },
+  "pairwiseOrderInversionCount": 21,
+  "photo": "giaoDien.jpg",
+  "photoReceiptSha256": "9c8c7397a42610005a9fed7535a722f951ab708273068301c44f49faf81b2e83",
+  "photoVisibleMenuRows": 13,
+  "runtimeLedgerSha256": "7c44ea82784a64c08fbf05ac81d59b79da46816e0283d99a49205ae45c56fc9c",
+  "runtimeSounderMenuRows": 13,
+  "sameOrdinalCount": 1,
+  "schema": "fcv588-p12-photo-literal-to-current-menu-order-crosswalk-v1",
+  "status": "PASS_SOURCE_COMPARISON_PHOTO_SPECIFIC_MENU_ORDER_DIFFERENCE_DETECTED_NO_RUNTIME_CHANGE"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "FCV588_P26_SYNTHETIC_ACTIVE_BZ_TEST_FIXTURE_V1",
+  "status": "SYNTHETIC_TEST_ONLY_NOT_HISTORICAL_OEM",
+  "mode": "LF-ZOOM",
+  "zoomMode": "Bottom Zoom",
+  "profile": "F1-public-reference-22",
+  "sessionHash": "f0-fnv1a32-8e55e324",
+  "fileSHA256": {
+    "P26_SYNTHETIC_ACTIVE_BZ_PROFILE22_ENVELOPE_20261117.json": "374f916d5174e17cfac27c956f93a3cae187166417326fc5d7c0155f715f638e",
+    "P26_SYNTHETIC_ACTIVE_BZ_P04_TEST_ONLY_SIDECAR_20261117.json": "d717a1900b2d9697720192c55dace5ff0f40d1959611fa628a880520088c8796",
+    "P26_SYNTHETIC_ACTIVE_BZ_P23_CLASSROOM_SIDECAR_20261117.json": "ecb606f0f20ad71450ca4fea29412913c1f004b80a7e8e311515236c64da6844"
+  },
+  "sidecarP04HistoricalProvenance": false,
+  "sidecarP23OEMFidelity": false,
+  "servedToBrowserHTTP": false,
+  "purpose": "Same exact active LF-ZOOM synthetic replay, sidecar selected presentation only"
+}

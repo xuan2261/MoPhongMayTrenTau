@@ -1,0 +1,20 @@
+{
+  "schema": "FCV588_P24_SIDECAR_GUARDED_CANONICAL_APPLY_V1",
+  "status": "APPLIED_THREE_NEW_FILES_POSTQA_PENDING",
+  "scope": "PURE_OFFLINE_ARCHIVE_API_NO_UI_OR_REPLAY_CORE_CHANGES",
+  "p23ParentFinalSHA256": "d5b1bfe16e82948c434c67682f04ba79ae939f89be61af88ede6e7021ec3c74a",
+  "p23ParentPostSHA256": "9d94af354d4dffa7d6d8e10736955193f562f55feadc754229934a3eedceb095",
+  "dryrunV2SHA256": "2b92adf5f01427260821abf33571ffd8f955593fec30372a34d2b9decfea5fb5",
+  "allowedNewFilesSHA256": {
+    "src/devices/fcv588/archive-compat.mjs": "cf56fbf1c78395fd8df8cb5a67d0d39b907fa464fa7187bf0203925c29b81d18",
+    "test/fcv588-p24-zoom-archive.test.mjs": "ec6ebf908acee166f861c8a52d2b44362a318b356979ad12ec217d586b681445",
+    "test/fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d"
+  },
+  "unchangedCanonicalP23Runtime50SHA": true,
+  "OEMReferenceOnly8SHA": true,
+  "sidecarFingerprintAuthentication": false,
+  "archiveVisualUIAvailable": false,
+  "independentReadOnlyReviews": "worker35_worker36_worker37_BOUNDED_GO",
+  "protectedUserServer": "127.0.0.1:4173 PID1204_LISTEN_UNTOUCHED",
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "FCV588_P26_STAGE_FOCUSED_V3",
+  "status": "PASS",
+  "exitCode": 0,
+  "command": [
+    "C:\\nvm4w\\nodejs\\node.exe",
+    "--test",
+    "test/fcv588-p26-archive-bz-viewer.test.mjs"
+  ],
+  "summary": [
+    "# tests 9",
+    "# pass 9",
+    "# fail 0",
+    "# skipped 0"
+  ],
+  "sourceSHA256": {
+    "web/app.mjs": "48a6120fc1767e20e63e751c7227a86f8d23715bfbb7a75d6cd1a3ba63a208e2",
+    "web/index.html": "d71c7fd4ac9f5a297f4148594e25724b449e13903a4db3695f86d900f3fc7d6a",
+    "web/styles.css": "1718b38028a7c9d70dd8b67b8b3792c79ef0770acabbb7c72789da61a7de6ac6",
+    "web/fcv588-archive-bz-viewer.mjs": "d77fae273ba3a4357c9eff7758da71d8582b4464657099bd386a970fb037c976",
+    "test/fcv588-p26-archive-bz-viewer.test.mjs": "89d524f8177262ee351d3555f7f4e717daca8ffbcc3c27dcd4a0c14bfb8433d3"
+  },
+  "logSHA256": "460bef7ae6269c364b7cf1d6a7b7c5c670a064657c6b39e947ab997bbd853098",
+  "powerOffSourceValidREDPreserved": true
+}

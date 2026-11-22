@@ -1,0 +1,37 @@
+{
+  "schema": "P35_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "timestampUtc": "2026-11-21T15:46:51.0380323Z",
+  "decision": "PASS_BOUNDED_INTEGRITY_ONLY",
+  "releaseApproval": "HOLD",
+  "p35FinalIntegritySha256": "cefefa04d9e14cf2edc588242d246e0af64396d4f8efe81b29ec1dd53c0638eb",
+  "p35ArtifactsRehashed": 15,
+  "p28ToP32ParentSha256": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30_FINAL": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30_POST": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5",
+    "P31_FINAL": "27dc44249a425f01b6848f58467a88fc02fd90aaa0aa3ec4ad7cc61e8eb60a36",
+    "P31_POST": "3b535d1eee65b25a91f7f8c542577ffbb3f287af2bc4630ba6b247310728c32c",
+    "P32_FINAL": "1146a3b48d3afe7f1ce1744d5ed78a3f78567b30184284e36a01df501afbe0b1",
+    "P32_POST": "83c0e68a372dc137ddf7608b5b5448961720b97875db4c87a5876133eedbcbad"
+  },
+  "verified": {
+    "oneLiteralHtmlDelta": true,
+    "canonicalWebSHA": "45a22ae65ea13f68a836f6dc7515b4d2718b7d528044cdc50ac81ba51caa2763",
+    "newTestSHA": "a521cbb82aef1ba176d5c6589040484c8685a41db717c38be76a7a48011963eb",
+    "stageChrome": "PASS_BOUNDED_LIVE_DOM_ACCESSIBLE_NAME",
+    "canonicalTargeted": "15/15",
+    "canonicalFullNode": "618/618",
+    "failedStageChromeV1V2Preserved": true,
+    "p33AndP34SealsIntact": true,
+    "installedP31ExeAndAsarIntact": true,
+    "userServer4173Pid": 1204,
+    "testPort4295Closed": true,
+    "hostFCVProcesses": 0,
+    "hostNarratorProcesses": 0,
+    "spokenNarratorVerified": false
+  },
+  "remainingGate": "Human confirmation ur_asb15jf1xdyv OPEN, no release authority"
+}

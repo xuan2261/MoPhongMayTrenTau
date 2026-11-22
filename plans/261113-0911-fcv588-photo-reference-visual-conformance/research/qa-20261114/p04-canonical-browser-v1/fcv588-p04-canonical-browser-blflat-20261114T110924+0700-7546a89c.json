@@ -1,0 +1,483 @@
+{
+  "schema": "fcv588-p04-canonical-browser-blflat-v2",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "port": 4188,
+  "sourceManifestBefore": {
+    "files": 37,
+    "sha256": "35968e27f2c95406036a25155057283f38fac845bb3365f27da0f33d35a77808"
+  },
+  "photoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "lf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "hf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "dual.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF"
+      },
+      "geometryProof": {
+        "name": "LF-Blue",
+        "mode": "LF",
+        "lcdRect": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 231.390625,
+          "right": 323.3125,
+          "top": 723.953125,
+          "bottom": 773.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1366x768-LF-Blue.png",
+        "bytes": 301482,
+        "sha256": "83e7e3965ae01eae2aad59e606cd3ffa12cd2ba1f3afa3a9421100a7d800234b"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "DUAL-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "DUAL"
+      },
+      "geometryProof": {
+        "name": "DUAL-Blue",
+        "mode": "DUAL",
+        "lcdRect": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 358.4765625,
+          "right": 450.3984375,
+          "top": 723.953125,
+          "bottom": 773.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": 50,
+        "dividerX": 404.4453125,
+        "depthIntersectsDivider": true,
+        "header": "AUTO_R   G:AF   LF/HF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1366x768-DUAL-Blue.png",
+        "bytes": 303540,
+        "sha256": "352b52f9eb96b4ab73fb00b46cc9639504c5b5bc8762a05eba88e91887dd859d"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "BL-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "geometryProof": {
+        "name": "BL-LF-Blue",
+        "mode": "LF-ZOOM",
+        "lcdRect": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 231.390625,
+          "right": 323.3125,
+          "top": 723.953125,
+          "bottom": 773.953125,
+          "width": 91.921875,
+          "height": 50
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "AUTO_R   G:AF   BL-LF   x1",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "bottomLockFlatProof": {
+        "sample": {
+          "x0": 105,
+          "x1": 180,
+          "y0": 460,
+          "height": 640,
+          "width": 480
+        },
+        "strongestRow": 639,
+        "strongPixels": 76,
+        "sampleWidth": 76,
+        "coverage": 1,
+        "inLowerBand": true,
+        "topRows": [
+          {
+            "y": 639,
+            "strong": 76
+          },
+          {
+            "y": 638,
+            "strong": 76
+          },
+          {
+            "y": 637,
+            "strong": 76
+          },
+          {
+            "y": 636,
+            "strong": 76
+          },
+          {
+            "y": 635,
+            "strong": 76
+          }
+        ]
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1366x768-BL-LF-Blue.png",
+        "bytes": 311135,
+        "sha256": "c588c134c5e904790ed5cad4112e73173e2d5eef02f00466d02f70dacbd1437f"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "NAV1-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "NAV1"
+      },
+      "geometryProof": {
+        "name": "NAV1-Blue",
+        "mode": "NAV1",
+        "lcdRect": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "depthHidden": true,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1366x768-NAV1-Blue.png",
+        "bytes": 298528,
+        "sha256": "c30ffd69df9421c717d971961bfe5edaeed7eff0c2fff94c1720bf4d7b83fb9d"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "NAV2-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "NAV2"
+      },
+      "geometryProof": {
+        "name": "NAV2-Blue",
+        "mode": "NAV2",
+        "lcdRect": {
+          "left": 216.390625,
+          "right": 592.5,
+          "top": 285.5,
+          "bottom": 787.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "depthHidden": true,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "",
+        "scrollWidth": 1351,
+        "viewportWidth": 1366
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1366x768-NAV2-Blue.png",
+        "bytes": 302126,
+        "sha256": "d7cbcf481c6ff1be9bf2ae7d71a10587d616406a2b46a0432b97e937eb8e6cfa"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "DUAL-Blue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "DUAL"
+      },
+      "geometryProof": {
+        "name": "DUAL-Blue",
+        "mode": "DUAL",
+        "lcdRect": {
+          "left": 25,
+          "right": 335,
+          "top": -555.125,
+          "bottom": -140.984375,
+          "width": 310,
+          "height": 414.140625
+        },
+        "depthRect": {
+          "left": 151.859375,
+          "right": 208.140625,
+          "top": -182.984375,
+          "bottom": -154.984375,
+          "width": 56.28125,
+          "height": 28
+        },
+        "depthHidden": false,
+        "dualAnchorPercent": 50,
+        "dividerX": 180,
+        "depthIntersectsDivider": true,
+        "header": "AUTO_R   G:AF   LF/HF   x1",
+        "scrollWidth": 360,
+        "viewportWidth": 375
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-375x812-DUAL-Blue.png",
+        "bytes": 58900,
+        "sha256": "ce2b0ed49d309bec8f347ac50839a4045bbfc6849d3c5ee83306efbfdf7e0e85"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    },
+    {
+      "name": "NAV2-Blue",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": "PASS",
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "NAV2"
+      },
+      "geometryProof": {
+        "name": "NAV2-Blue",
+        "mode": "NAV2",
+        "lcdRect": {
+          "left": 493.390625,
+          "right": 869.5,
+          "top": 287.5,
+          "bottom": 789.953125,
+          "width": 376.109375,
+          "height": 502.453125
+        },
+        "depthRect": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "depthHidden": true,
+        "dualAnchorPercent": null,
+        "dividerX": null,
+        "depthIntersectsDivider": null,
+        "header": "",
+        "scrollWidth": 1905,
+        "viewportWidth": 1920
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p04-canonical-browser-v1\\fcv588-p04-canonical-browser-blflat-20261114T110924+0700-7546a89c-1920x1080-NAV2-Blue.png",
+        "bytes": 457977,
+        "sha256": "6c08368399fc98fd5e82ee62bb599e5f3b343be887b55200109ae730bc58ba7f"
+      },
+      "loadedBodyCount": 35,
+      "loadedBodyAggregateSha256": "22d86e5ba27f5a9add29b478ac9ee4ae1b39c034ab6fa9d87353187ae778ae70",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      }
+    }
+  ],
+  "objectiveFailures": [],
+  "overallStatus": "PASS",
+  "serverCleanup": "PASS",
+  "server": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\tools\\server.mjs",
+    "sha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+    "node": "C:\\nvm4w\\nodejs\\node.exe",
+    "pid": 4052
+  },
+  "browser": {
+    "version": "157.0.8103.78",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "sourceManifestAfter": {
+    "files": 37,
+    "sha256": "35968e27f2c95406036a25155057283f38fac845bb3365f27da0f33d35a77808"
+  },
+  "sourceTreeStable": true,
+  "finishedAt": "2026-11-14T11:10:19.708511+07:00"
+}

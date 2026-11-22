@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "collectedAtUtc": "2026-10-15T02:08:54.192073+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "browser": "Google Chrome",
+  "preflight": "SOURCE_TREE_IDENTITY_PASS",
+  "postflight": "SOURCE_TREE_STABLE_PASS",
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "status": "PASS",
+      "metrics": {
+        "width": 360,
+        "height": 800,
+        "scrollWidth": 360,
+        "frame": {
+          "x": 9,
+          "y": 352.59375,
+          "width": 342,
+          "height": 1151.328125,
+          "right": 351,
+          "bottom": 1503.921875
+        },
+        "lcd": {
+          "x": 25,
+          "y": 405.59375,
+          "width": 310,
+          "height": 413.328125,
+          "right": 335,
+          "bottom": 818.921875
+        },
+        "pad": {
+          "x": 100,
+          "y": 918.921875,
+          "width": 160,
+          "height": 160,
+          "right": 260,
+          "bottom": 1078.921875
+        },
+        "teacherLesson": {
+          "x": 24,
+          "y": 2607.859375,
+          "width": 312,
+          "height": 369.5625,
+          "right": 336,
+          "bottom": 2977.421875
+        },
+        "instructorControls": {
+          "gain-minus": {
+            "x": 217,
+            "y": 1790.109375,
+            "width": 48,
+            "height": 44,
+            "right": 265,
+            "bottom": 1834.109375
+          },
+          "gain-plus": {
+            "x": 274,
+            "y": 1790.109375,
+            "width": 48,
+            "height": 44,
+            "right": 322,
+            "bottom": 1834.109375
+          },
+          "mode-minus": {
+            "x": 217,
+            "y": 1846.109375,
+            "width": 48,
+            "height": 44,
+            "right": 265,
+            "bottom": 1890.109375
+          },
+          "mode-plus": {
+            "x": 274,
+            "y": 1846.109375,
+            "width": 48,
+            "height": 44,
+            "right": 322,
+            "bottom": 1890.109375
+          },
+          "btn-pause": {
+            "x": 24,
+            "y": 1920.109375,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 1964.109375
+          },
+          "btn-step": {
+            "x": 24,
+            "y": 1972.109375,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 2016.109375
+          },
+          "btn-reset": {
+            "x": 24,
+            "y": 2024.109375,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 2068.109375
+          },
+          "btn-replay": {
+            "x": 24,
+            "y": 2076.109375,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 2120.109375
+          },
+          "btn-nav-fixture": {
+            "x": 37,
+            "y": 2291.671875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2335.671875
+          },
+          "btn-mount-fixture": {
+            "x": 37,
+            "y": 2343.671875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2387.671875
+          },
+          "btn-tankenmaru-fixture": {
+            "x": 37,
+            "y": 2395.671875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2439.671875
+          },
+          "btn-battery-fixture": {
+            "x": 37,
+            "y": 2447.671875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2491.671875
+          },
+          "btn-error-fixture": {
+            "x": 37,
+            "y": 2499.671875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2543.671875
+          },
+          "lesson-picker": {
+            "x": 37,
+            "y": 2700.859375,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2744.859375
+          },
+          "btn-start-lesson": {
+            "x": 37,
+            "y": 2842.421875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2886.421875
+          },
+          "btn-score": {
+            "x": 37,
+            "y": 2894.421875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2938.421875
+          }
+        },
+        "controls": {
+          "key-menu": {
+            "x": 24,
+            "y": 862.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 906.921875
+          },
+          "pad-up": {
+            "x": 158,
+            "y": 924.921875,
+            "width": 44,
+            "height": 44,
+            "right": 202,
+            "bottom": 968.921875
+          },
+          "pad-down": {
+            "x": 158,
+            "y": 1028.921875,
+            "width": 44,
+            "height": 44,
+            "right": 202,
+            "bottom": 1072.921875
+          },
+          "pad-left": {
+            "x": 106,
+            "y": 976.921875,
+            "width": 44,
+            "height": 44,
+            "right": 150,
+            "bottom": 1020.921875
+          },
+          "pad-right": {
+            "x": 210,
+            "y": 976.921875,
+            "width": 44,
+            "height": 44,
+            "right": 254,
+            "bottom": 1020.921875
+          },
+          "key-enter": {
+            "x": 24,
+            "y": 1090.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 1134.921875
+          },
+          "key-range": {
+            "x": 24,
+            "y": 1146.921875,
+            "width": 150,
+            "height": 44,
+            "right": 174,
+            "bottom": 1190.921875
+          },
+          "key-mark": {
+            "x": 186,
+            "y": 1146.921875,
+            "width": 150,
+            "height": 44,
+            "right": 336,
+            "bottom": 1190.921875
+          },
+          "key-func": {
+            "x": 24,
+            "y": 1202.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 1246.921875
+          },
+          "gain-knob": {
+            "x": 67,
+            "y": 1277.921875,
+            "width": 64,
+            "height": 64,
+            "right": 131,
+            "bottom": 1341.921875
+          },
+          "mode-knob": {
+            "x": 229,
+            "y": 1277.921875,
+            "width": 64,
+            "height": 64,
+            "right": 293,
+            "bottom": 1341.921875
+          },
+          "key-power": {
+            "x": 55,
+            "y": 1354.921875,
+            "width": 250,
+            "height": 50,
+            "right": 305,
+            "bottom": 1404.921875
+          }
+        }
+      },
+      "touchMinCssPx": 44,
+      "steps": [
+        "ACTUAL_PHONE_TOUCH_TARGETS_PASS",
+        "ACTUAL_PHONE_TRACKPAD_NO_DUPLICATE_PASS",
+        "ACTUAL_PHONE_LAST_SYSTEM_MENU_IN_LCD_PASS",
+        "ACTUAL_PHONE_D09_DETAILS_RETURN_AND_REVOKE_PASS",
+        "ACTUAL_PHONE_B19_WHITE_PALETTE_READABLE_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v22_mobile_360x800.png"
+      ],
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 30,
+        "verifiedUniquePaths": 30,
+        "browserLoadedResponsesSha256": "ed981747eadad45ee7f1ea65354425daa718a4f979abd0d9474bee7736d63837",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/tankenmaru-status.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    {
+      "viewport": "390x844",
+      "status": "PASS",
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "frame": {
+          "x": 9,
+          "y": 352.59375,
+          "width": 372,
+          "height": 1191.328125,
+          "right": 381,
+          "bottom": 1543.921875
+        },
+        "lcd": {
+          "x": 25,
+          "y": 405.59375,
+          "width": 340,
+          "height": 453.328125,
+          "right": 365,
+          "bottom": 858.921875
+        },
+        "pad": {
+          "x": 115,
+          "y": 958.921875,
+          "width": 160,
+          "height": 160,
+          "right": 275,
+          "bottom": 1118.921875
+        },
+        "teacherLesson": {
+          "x": 24,
+          "y": 2628.671875,
+          "width": 342,
+          "height": 369.5625,
+          "right": 366,
+          "bottom": 2998.234375
+        },
+        "instructorControls": {
+          "gain-minus": {
+            "x": 247,
+            "y": 1830.109375,
+            "width": 48,
+            "height": 44,
+            "right": 295,
+            "bottom": 1874.109375
+          },
+          "gain-plus": {
+            "x": 304,
+            "y": 1830.109375,
+            "width": 48,
+            "height": 44,
+            "right": 352,
+            "bottom": 1874.109375
+          },
+          "mode-minus": {
+            "x": 247,
+            "y": 1886.109375,
+            "width": 48,
+            "height": 44,
+            "right": 295,
+            "bottom": 1930.109375
+          },
+          "mode-plus": {
+            "x": 304,
+            "y": 1886.109375,
+            "width": 48,
+            "height": 44,
+            "right": 352,
+            "bottom": 1930.109375
+          },
+          "btn-pause": {
+            "x": 24,
+            "y": 1960.109375,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 2004.109375
+          },
+          "btn-step": {
+            "x": 24,
+            "y": 2012.109375,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 2056.109375
+          },
+          "btn-reset": {
+            "x": 24,
+            "y": 2064.109375,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 2108.109375
+          },
+          "btn-replay": {
+            "x": 24,
+            "y": 2116.109375,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 2160.109375
+          },
+          "btn-nav-fixture": {
+            "x": 37,
+            "y": 2312.484375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2356.484375
+          },
+          "btn-mount-fixture": {
+            "x": 37,
+            "y": 2364.484375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2408.484375
+          },
+          "btn-tankenmaru-fixture": {
+            "x": 37,
+            "y": 2416.484375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2460.484375
+          },
+          "btn-battery-fixture": {
+            "x": 37,
+            "y": 2468.484375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2512.484375
+          },
+          "btn-error-fixture": {
+            "x": 37,
+            "y": 2520.484375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2564.484375
+          },
+          "lesson-picker": {
+            "x": 37,
+            "y": 2721.671875,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2765.671875
+          },
+          "btn-start-lesson": {
+            "x": 37,
+            "y": 2863.234375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2907.234375
+          },
+          "btn-score": {
+            "x": 37,
+            "y": 2915.234375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2959.234375
+          }
+        },
+        "controls": {
+          "key-menu": {
+            "x": 24,
+            "y": 902.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 946.921875
+          },
+          "pad-up": {
+            "x": 173,
+            "y": 964.921875,
+            "width": 44,
+            "height": 44,
+            "right": 217,
+            "bottom": 1008.921875
+          },
+          "pad-down": {
+            "x": 173,
+            "y": 1068.921875,
+            "width": 44,
+            "height": 44,
+            "right": 217,
+            "bottom": 1112.921875
+          },
+          "pad-left": {
+            "x": 121,
+            "y": 1016.921875,
+            "width": 44,
+            "height": 44,
+            "right": 165,
+            "bottom": 1060.921875
+          },
+          "pad-right": {
+            "x": 225,
+            "y": 1016.921875,
+            "width": 44,
+            "height": 44,
+            "right": 269,
+            "bottom": 1060.921875
+          },
+          "key-enter": {
+            "x": 24,
+            "y": 1130.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 1174.921875
+          },
+          "key-range": {
+            "x": 24,
+            "y": 1186.921875,
+            "width": 165,
+            "height": 44,
+            "right": 189,
+            "bottom": 1230.921875
+          },
+          "key-mark": {
+            "x": 201,
+            "y": 1186.921875,
+            "width": 165,
+            "height": 44,
+            "right": 366,
+            "bottom": 1230.921875
+          },
+          "key-func": {
+            "x": 24,
+            "y": 1242.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 1286.921875
+          },
+          "gain-knob": {
+            "x": 74.5,
+            "y": 1317.921875,
+            "width": 64,
+            "height": 64,
+            "right": 138.5,
+            "bottom": 1381.921875
+          },
+          "mode-knob": {
+            "x": 251.5,
+            "y": 1317.921875,
+            "width": 64,
+            "height": 64,
+            "right": 315.5,
+            "bottom": 1381.921875
+          },
+          "key-power": {
+            "x": 70,
+            "y": 1394.921875,
+            "width": 250,
+            "height": 50,
+            "right": 320,
+            "bottom": 1444.921875
+          }
+        }
+      },
+      "touchMinCssPx": 44,
+      "steps": [
+        "ACTUAL_PHONE_TOUCH_TARGETS_PASS",
+        "ACTUAL_PHONE_TRACKPAD_NO_DUPLICATE_PASS",
+        "ACTUAL_PHONE_LAST_SYSTEM_MENU_IN_LCD_PASS",
+        "ACTUAL_PHONE_D09_DETAILS_RETURN_AND_REVOKE_PASS",
+        "ACTUAL_PHONE_B19_WHITE_PALETTE_READABLE_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v22_mobile_390x844.png",
+        "docs/qa/screenshots/fcv588_public_v22_mobile_390x844_palette_white.png"
+      ],
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 30,
+        "verifiedUniquePaths": 30,
+        "browserLoadedResponsesSha256": "3b26ec66e9d4f8b62e38dfe7f9eb7feccea6f0faf60473e7a14b8f63e32615bb",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/tankenmaru-status.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    }
+  ],
+  "limitations": [
+    "This is a responsive classroom reflow, not OEM face geometry",
+    "Phone/touch simulation is Chrome emulation, not measured physical hardware"
+  ],
+  "qaHarnessSourceIdentity": {
+    "status": "PASS_UNCHANGED",
+    "sourceDigestsSha256": {
+      "mobileRunner": "4814db2c171a36eeede437b5cae386f191492e5368cbb33e7451dab55fd20e4c",
+      "sharedChromeVerifier": "aa0534eaf7cdb1cda075b61dd64117fb409f33671ade5212a63a70852ab8f85d"
+    },
+    "sourcePaths": {
+      "mobileRunner": "tools/fcv588_mobile_viewport_acceptance.py",
+      "sharedChromeVerifier": "tools/fcv588_chrome_viewport_acceptance.py"
+    }
+  },
+  "servedSourceIdentity": {
+    "status": "PASS",
+    "profileRevision": "F1-public-reference-16",
+    "filesCompared": 32,
+    "sourceManifestSha256": "56cffc8a30c09349b1d7ffa14410b2802d7463133bc0ecd7a3a48df7fc907aec",
+    "fileDigests": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "sha256": "45b0303d2ec3119880b46a91f39b64206710b024a14f7bb922c5686516a0448d"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "sha256": "eb5ed1072404323bab54d31442916492eaaada4ce6a703eaca1da254b2bdef43"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "sha256": "a389d01092ffdfe815843f67cbffe3b24520f7239bb7229e524e4148fef06d9f"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "sha256": "2fde5d5261e75b81ca023fc31a7ef51f26bccde8c3a386e111b860dcb1aa51a6"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "sha256": "de238620474c278b3ade7d2cb6b870b002dd0140cbee028faa375ba99419cd45"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "sha256": "bbbee943cc2d6e557de46c101b606a0b0f47314843b5deb7a8bbb4f20f536dd4"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "sha256": "c63e93cbb4c4fb208a08618c7da0328d275cd896c32959aa02aba2d8091caa91"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "ec52a5d698250561803fd5d97f13316d85802f14b790aebe2e78d9f2a669525a"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "sha256": "c7f847728d4c1ce087cffc395ff2fd7d71fdfdc90b54a6043e4554ff73233648"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "sha256": "e0a210a8a062261b12bd0b138c796b940e64b84896d18a87d060f7b5053d9a17"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "sha256": "38ab061a66e864abc66d9f0a1219b4d798a93f179363d7f8c02c4978acd350dc"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "sha256": "e33ed1d7c4138323de8ff34564eec456826ec69e048dbf4f83a8c4a836a75256"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "sha256": "6c4eeabe6c8f9e58183c2cd7e4b98a08974eb18a8c0661cf30daf746966a9893"
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      },
+      {
+        "path": "web/app.mjs",
+        "sha256": "182d36350d8414459c230c2de144fefc108d73c75f8da22bddee39a6157aafa7"
+      },
+      {
+        "path": "web/favicon.svg",
+        "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "7dfe2ca97fd35a5ca467ffd4cd9c4f25ca03ee1b074ebfcabcff3f093c42eb4b"
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "c59d41fbab76568d62c2a09815d3bd2de6c83df2a5c37b5f5ba1d41dcbcae8ac"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "sha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "sha256": "7a8a4794a661c4a28ea4cef7246f9bb97c2a60810a8ec4a360c47a8468a6c901"
+      }
+    ]
+  },
+  "status": "PASS_OBSERVED_PHONE_VIEWPORTS"
+}

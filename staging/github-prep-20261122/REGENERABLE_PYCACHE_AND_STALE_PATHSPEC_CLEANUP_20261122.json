@@ -1,0 +1,137 @@
+{
+  "schema": "RegenerablePycacheAndStalePathsV1",
+  "date": "2026-11-22",
+  "status": "VERIFIED_REGENERABLE_PYCACHE_AND_STALE_GIT_LIST_REMOVED",
+  "files": 86.0,
+  "bytes": 2291037.0,
+  "removedDirectories": 25,
+  "stalePathspecSha256": "9632DC424FB59FA32CBFB770C1BD3EC0D3DBEB25954B7243349399389F9623F2",
+  "reason": "86 compiled Python files have corresponding .py sources and the 676-path Git force-add list refers to retired historical stages",
+  "directories": [
+    {
+      "files": 6,
+      "bytes": 157418,
+      "path": "docs/qa/FCV588_P20_NATIVE_DIRECT_WINDOWS_20261117/__pycache__"
+    },
+    {
+      "files": 2,
+      "bytes": 69784,
+      "path": "docs/qa/FCV588_P21_FOCUS_ROOTCAUSE_20261117/__pycache__"
+    },
+    {
+      "files": 4,
+      "bytes": 115879,
+      "path": "docs/qa/FCV588_P22_WIN32_KEY_INPUT_20261117/__pycache__"
+    },
+    {
+      "files": 5,
+      "bytes": 94644,
+      "path": "docs/qa/FCV588_P23_WHITE_PALETTE_PHOTO_FIXTURES_20261117/__pycache__"
+    },
+    {
+      "files": 4,
+      "bytes": 104399,
+      "path": "docs/qa/FCV588_P27_EVENT_TIMELINE_20261117/__pycache__"
+    },
+    {
+      "files": 6,
+      "bytes": 107518,
+      "path": "docs/qa/FCV588_P28_MODE_VISUAL_20261117/__pycache__"
+    },
+    {
+      "files": 2,
+      "bytes": 50600,
+      "path": "docs/qa/FCV588_VISUAL_P04_20261114/__pycache__"
+    },
+    {
+      "files": 2,
+      "bytes": 42234,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261114/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 28099,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261114/p04-stage/guarded-apply-dryrun/__pycache__"
+    },
+    {
+      "files": 9,
+      "bytes": 187671,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 44608,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-provenance-browser-v3-stop/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 47895,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-provenance-browser-v3-stop-v2/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 40683,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-provenance-canonical-browser/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 47870,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-provenance-canonical-browser-v3-stop/__pycache__"
+    },
+    {
+      "files": 2,
+      "bytes": 42273,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p06-face/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 63838,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-browser/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 17913,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/__pycache__"
+    },
+    {
+      "files": 5,
+      "bytes": 126569,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/__pycache__"
+    },
+    {
+      "files": 3,
+      "bytes": 24304,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/worktree/test/__pycache__"
+    },
+    {
+      "files": 11,
+      "bytes": 374275,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/worktree/tools/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 25066,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 20984,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-finalize/__pycache__"
+    },
+    {
+      "files": 1,
+      "bytes": 28067,
+      "path": "staging/fcv588-p36-live-bottom-zoom-20261122/__pycache__"
+    },
+    {
+      "files": 3,
+      "bytes": 24304,
+      "path": "test/__pycache__"
+    },
+    {
+      "files": 12,
+      "bytes": 404142,
+      "path": "tools/__pycache__"
+    }
+  ]
+}

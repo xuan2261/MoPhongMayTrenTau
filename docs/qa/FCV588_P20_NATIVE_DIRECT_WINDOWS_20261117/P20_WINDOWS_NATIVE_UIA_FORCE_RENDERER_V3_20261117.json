@@ -1,0 +1,162 @@
+{
+  "schema": "FCV588_P20_WINDOWS_NATIVE_UIA_FORCE_RENDERER_V3",
+  "createdAt": "2026-11-17T03:30:57.902362+00:00",
+  "scope": "WINDOWS_UIAUTOMATION_FROM_REAL_CHROME_HWND_NOT_NARRATOR_SPEECH",
+  "status": "NATIVE_UIA_OBSERVED",
+  "port": 4220,
+  "forceRendererAccessibility": true,
+  "errors": [],
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "dom": {
+    "enhanced": "true",
+    "tabNames": [
+      "Phiên",
+      "Trợ giúp",
+      "Tình huống",
+      "Bài học",
+      "Nguồn & QA"
+    ],
+    "powerLabel": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+    "funcLabel": "FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng"
+  },
+  "windowCandidates": [
+    {
+      "hwnd": 31198094,
+      "pid": 30056,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+      "foreground": false
+    }
+  ],
+  "targetWindow": {
+    "hwnd": 31198094,
+    "pid": 30056,
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+    "foreground": false
+  },
+  "nativeUIAutomation": {
+    "status": "OBSERVED",
+    "data": {
+      "rootName": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+      "rootControlType": "ControlType.Window",
+      "descendants": 115,
+      "scanned": 115,
+      "matches": [
+        {
+          "name": "FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng",
+          "controlType": "ControlType.Button",
+          "automationId": "key-func",
+          "isEnabled": true
+        },
+        {
+          "name": "GAIN",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+          "controlType": "ControlType.Button",
+          "automationId": "gain-knob",
+          "isEnabled": true
+        },
+        {
+          "name": "MODE",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+          "controlType": "ControlType.Button",
+          "automationId": "mode-knob",
+          "isEnabled": true
+        },
+        {
+          "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+          "controlType": "ControlType.Button",
+          "automationId": "key-power",
+          "isEnabled": true
+        },
+        {
+          "name": "Phiên thực hành",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "Nhóm công cụ giảng viên D15",
+          "controlType": "ControlType.Tab",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "Phiên",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-session",
+          "isEnabled": true
+        },
+        {
+          "name": "Trợ giúp",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-help",
+          "isEnabled": true
+        },
+        {
+          "name": "Tình huống",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-fixtures",
+          "isEnabled": true
+        },
+        {
+          "name": "Bài học",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-lessons",
+          "isEnabled": true
+        },
+        {
+          "name": "Nguồn & QA",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-sources",
+          "isEnabled": true
+        },
+        {
+          "name": "Phiên",
+          "controlType": "ControlType.Pane",
+          "automationId": "d15-panel-session",
+          "isEnabled": true
+        },
+        {
+          "name": "FCV588-P20-NATIVE-UIA-20261117",
+          "controlType": "ControlType.TabItem",
+          "automationId": "view_20",
+          "isEnabled": true
+        },
+        {
+          "name": "Vietnamese",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "English",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        }
+      ]
+    }
+  },
+  "qaPortClosed": true,
+  "protected4173StillListening": true,
+  "sourcePostSHAcount": 50,
+  "originalForegroundUnchanged": true
+}

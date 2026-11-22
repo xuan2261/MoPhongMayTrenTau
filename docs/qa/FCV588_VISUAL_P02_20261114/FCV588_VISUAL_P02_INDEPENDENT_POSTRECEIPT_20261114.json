@@ -1,0 +1,30 @@
+{
+  "timestampUtc": "2026-11-14T02:49:46.521925+00:00",
+  "status": "P02_INDEPENDENT_READBACK_SHA_MATCH_PARTIAL_VISUAL_WORK",
+  "finalReceiptSHA256": "15ff0baab0b8bbe213c52857b630341a426305a7cf64eae9c07d1ac55f447d53",
+  "recheckedRuntime": "38/38_MATCH",
+  "originalV57HistoricalReceipts": {
+    "V57_HEADER_COMPACT_SCOPED_INTEGRITY_20261031.json": "aaa6c3b37b106e5828fac430bdfb94472a27ab8497f0828deacce305b4cf99dc",
+    "V57_HEADER_COMPACT_INDEPENDENT_POSTRECEIPT_20261031.json": "8c533aa069fd5002af1413908c5aa0d18fec8e57a73c685684cea2ec40e22d42",
+    "V57_HEADER_COMPACT_REPORT_20261031.md": "32f2bb56d329cc7bc2a594a4cac6761e68af4e16c8af89025b3ef67851b8aa45",
+    "v57_independent_postreadback.py": "f63a7e8cc974b7c471b076b204401accd754baee7eeea6751a9caa7eee099b23"
+  },
+  "recheckedPhotoReferences": "8/8_MATCH_REFERENCE_ONLY",
+  "recheckedChromeReceipts": "2/2_MATCH",
+  "recheckedScreenshots": "36/36_MATCH",
+  "recheckedQALogs": "4/4_MATCH",
+  "preservedRedFailureLogsSHA256": {
+    "stage-photo-display-RED.txt": "ab95646ffd4b485cdb22ea0a5afb01c26560176cd2b19e2e83a8b69385cfe79a",
+    "stage-full-node-attempt1.txt": "3cc8dc67049e88974070b3a12ac1740441cf8efb7276891f69611e98c8a88cfc",
+    "stage-failing-targeted-attempt2.txt": "88a11e9a64265a429509e6fc78d43eb3abf37049c053d41bfb9492d5af1a6ae9",
+    "stage-photo-RED-reviewfix.txt": "9e3b3f04956bba36e914b21f82f0b0bdd181bbb421e423cbbde81d135988a73c"
+  },
+  "coreSessionScenarioReplayChanged": false,
+  "sourceRights": "HOLD",
+  "hardwareValidated": false,
+  "firmwareInstalled": "UNKNOWN",
+  "featureClaims": "65/65_HOLD",
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "notes": "Pure independent filesystem readback; not separate OEM operator physical acceptance or full 7-phase implementation"
+}

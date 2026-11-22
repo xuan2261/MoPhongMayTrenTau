@@ -1,0 +1,98 @@
+{
+  "timestampUtc": "2026-10-22T08:11:25.0135894Z",
+  "status": "V55B_SCOPED_SOFTWARE_QA_PASS_REAL_OS_FOCUS_AND_SPEECH_NOT_RUN_PHASE6_OPEN",
+  "source": "canonical Windows C:",
+  "scope": "QA_ONLY_SYNTHETIC_EVENTTARGET_BRIDGE_AND_REGRESSION_WITHOUT_REAL_OS_FOCUS",
+  "pinnedReceipts": {
+    "docs/qa/FCV588_V50_FINAL_INTEGRITY_20261019.json": "88b6633a7bd8b68e0e3f048319095eb4d1d783e7f91d74fefad05e59770fd36a",
+    "docs/qa/FCV588_V50_POSTRECEIPT_READBACK_20261019.json": "1c95c486994004457f16f71fb75f885449f9b3ba00ea75ca348275016fcbb31b",
+    "docs/qa/FCV588_V54_SCOPED_QA_INTEGRITY_20261022.json": "d08c5650e734665b8a7c43076df1c8a5e44565f3c601a3aaba763abef26c4d54",
+    "docs/qa/FCV588_V54_SCOPED_QA_POSTRECEIPT_READBACK_20261022.json": "80b7e5b04ca12b31149c57fe5dc1dbab9a5117f3f293b946662cd607bc2eac23",
+    "docs/qa/FCV588_V55_QA_READINESS_20261022.json": "f31572536427752c4e43448bcc47c9bba65283881966032e80c972d7b03b4295",
+    "docs/qa/FCV588_V55_QA_READINESS_VALIDATED_ATTEMPT2_20261022.json": "a921a5e26a536e8a8a39e2566d1f792438002ed18fa0f0e520d471d1c33d2661"
+  },
+  "v54ParentFilesSHA": "9/9_MATCH",
+  "canonicalRuntimeSHA": "37/37_MATCH",
+  "v54EvidenceFilesSHA": "25/25_MATCH",
+  "packageJsonSHA256": "b91f5ac1f49e6003c247c4ebac8296e257ee96b7f9e35828e6e27b0ae3d1b6d0",
+  "newRunnerSHA256": "fd256805d67624e0da93b5825af994da07d26278cfb791cf49828ddae35a8483",
+  "sourceCodeChanges": 0,
+  "newQaFiles": [
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/v55b_hold_bridge.test.mjs",
+      "bytes": 5388,
+      "sha256": "fd256805d67624e0da93b5825af994da07d26278cfb791cf49828ddae35a8483"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_HOLD_BRIDGE_ATTEMPT1_NODE_20261022.log",
+      "bytes": 1236,
+      "sha256": "a60efe5c43b81c1ab92de57bde1e055f1806531c4fa6ea6bdc51ac03573537c3"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_EXISTING_TARGETED_NODE_20261022.log",
+      "bytes": 4664,
+      "sha256": "40f2a25fda118213c5dae86599bf02274b9c11f1c8ce579bbea47ed344106d1f"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_FULL_NODE_20261022.log",
+      "bytes": 122394,
+      "sha256": "261cf30d3e86cd608181ca7d46af1847af50eb1dfd03ee362e634bed6d4ad9db"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_PYTHON_20261022.log",
+      "bytes": 2527,
+      "sha256": "0522a436bac40e316d729cb3af79a64b5b5634f901b3f6aae14e90b348c1e3db"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_POSTDOCUMENT_NODE_20261022.log",
+      "bytes": 122382,
+      "sha256": "9abec8d04d6b7ab159a407346a5eb04a3c9531c9b6a2b82e4ec74364f4491d18"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_POSTDOCUMENT_PYTHON_20261022.log",
+      "bytes": 2527,
+      "sha256": "4dbcb17ce07c51216ab176f6706fe273db76b42883e0a970102ce1d1b4bdff13"
+    },
+    {
+      "path": "docs/qa/FCV588_V55B_SOURCE_UNIT_20261022/V55B_SCOPE_RESULTS_AND_REAL_QA_PROTOCOL_20261022.md",
+      "bytes": 8419,
+      "sha256": "7e6ca14833c53ff7a6cf6974b9b9270600c7fdcad2a931ba0745e56d406e3a97"
+    }
+  ],
+  "newQaFileCount": 8,
+  "tests": {
+    "bridge": "5/5_PASS_EXIT0_SYNTHETIC",
+    "targeted": "21/21_PASS_EXIT0",
+    "nodeFull": "511/511_PASS_EXIT0",
+    "python": "13/13_PASS_EXIT0",
+    "postdocumentNode": "511/511_PASS_EXIT0",
+    "postdocumentPython": "13/13_PASS_EXIT0"
+  },
+  "environment": {
+    "hostWindowsVersion": "NT_10.0.18363.0",
+    "hypervisorPresent": false,
+    "windowsSandbox": "DISABLED",
+    "hyperV": "DISABLED",
+    "virtualMachinePlatform": "DISABLED",
+    "narratorExecutablePresent": true,
+    "narratorRunning": false,
+    "nvdaRunning": false,
+    "qaIsolationApproval": "NOT_VERIFIED"
+  },
+  "realNarratorNvdaUtterance": "NOT_RUN",
+  "realWindowsBlurDuringPowerHold": "NOT_RUN",
+  "osFocusCancelReplay": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "phase6ChecklistBaseline": "14/50",
+  "acceptedNamedTasksBaseline": "6/22",
+  "rightsClearance": false,
+  "installedFirmware": "UNKNOWN",
+  "reviewerSignoff": "NOT_OBTAINED",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "qaListenersOpen": 0,
+  "diskD": "NOT_ACCESSED",
+  "backup": "NOT_ATTEMPTED",
+  "actualReleaseApproval": false
+}

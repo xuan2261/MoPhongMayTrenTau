@@ -1,0 +1,48 @@
+{
+  "recordedAtUtc": "2026-10-22T06:30:17.7855343Z",
+  "status": "V54_ATTEMPT2_INDEPENDENT_READBACK_SOURCE_SCOPED_DOM_ARIA_PASS_NOT_SPEECH",
+  "parentV53SealSHA256": "428b1b7f5b249e9502ec947fc80a15b0deea903f5f30ad946378705929aed4ea",
+  "parentV53PostSHA256": "5e39b82211ee56f9e66664a6c6db9492fe79ad22af863f66aae08e892ab34f8d",
+  "verifyOriginalAttempt": "FAILED_EXIT2_PRESERVED",
+  "verifySecondAttempt": "PASS_EXIT0",
+  "exactRunnerSourceSHA256": "a17e32b50511cda99ac669ebe3d4d4ad109c07453408da246b7ed8da48cf715b",
+  "pythonStdoutEncodingOnlyDifference": "UTF8_ENVIRONMENT",
+  "bytePinnedInputs": {
+    "V54_POWER_PHASED_DOM_RAW_20261022.json": "b91f2264223923085ae7ac2f538614ae61af0ba2ec5e323c55e8883bdd9e89ea",
+    "v54_phased_power_aria_probe.py": "a17e32b50511cda99ac669ebe3d4d4ad109c07453408da246b7ed8da48cf715b",
+    "V54_POWER_PHASED_ARIA_ASSERTIONS_20261022.json": "259197b9fecf7a61f01ee877d30c15c6db4904233b5f64396477098684afbe23",
+    "V54_PHASED_AX_UTF8_VERIFY_RUN_20261022.log": "dffa996b9baba6580cf3156554065dc97b398f67b3adf763015d1cbb7646bec0"
+  },
+  "originalFailedLogSha256": "75815cfd08b8d60be4b428ffbac467a50b1f939e398e5d15c95234dec5cf29ef",
+  "rawEventTimelineSha256": "b91f2264223923085ae7ac2f538614ae61af0ba2ec5e323c55e8883bdd9e89ea",
+  "assertionReceiptSha256": "259197b9fecf7a61f01ee877d30c15c6db4904233b5f64396477098684afbe23",
+  "thirteenAssertionsVerified": 13,
+  "trustedPowerInputEdges": 2,
+  "liveTitleTransitions": 2,
+  "holdVisualTicks": 8,
+  "brillVisualTicks": 7,
+  "browserRequests": 35,
+  "browserExceptions": 0,
+  "screenshots": [
+    {
+      "file": "V54_1366x768_ACTUAL_POWER_HOLD_20261022.png",
+      "sha256": "0b2ba36a9b7739afb9d7e6330b9fdf9072003991a453dea88cc12e1caced7dd3",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "file": "V54_1366x768_BRILL_PREVIEW_20261022.png",
+      "sha256": "55bed2d83f566e2118e92be5a2d95d63bb003b74772bcc2858523599790759fd",
+      "width": 1366,
+      "height": 768
+    }
+  ],
+  "QAServicePort4284Closed": true,
+  "actualSpokenScreenreader": "NOT_RUN",
+  "genuineOSWindowBlur": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "codeRuntimeChanged": false
+}

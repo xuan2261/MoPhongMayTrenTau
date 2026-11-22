@@ -1,0 +1,466 @@
+{
+  "timestampUtc": "2026-10-19T10:01:44.461659+00:00",
+  "status": "V47_CANONICAL_WHITE_MARKER_SOURCE_GRADE_D15_QA_RECONCILED_PHASE6_HOLD",
+  "scope": "FCV588_PUBLIC_REFERENCE_WHITE_MARKER_FIRMWARE_GAP_TRAINING_ONLY",
+  "supervisor": "USER_AUTHORIZED_GPT6_SELF_REVIEW_NOT_INDEPENDENT_OEM",
+  "parentV46FinalSHA": "b8080291f753a56aa428bf038de8e98f4f84f13686b415d941f7074fe66f809d",
+  "parentV46PostSHA": "7f8a00fb1be746655a6decffb5551c9019fa777a722c2301879512bcd01cb84c",
+  "stageBaselineSHA": "45f334d97d0cbdb42c07c60cd6490f138eef06310d826264f4ae31d0e3a9c1f3",
+  "stagePreChromeSHA": "91f2bf8160138c9eaa2b1999cb0c504baa5af5764da184737e1d47b925fb747a",
+  "stageManifestSHA": "c96ae28ad0f5035f180af47f4d00ae4faf203bc039af01c638faed209bcd89e4",
+  "canonicalGoSHA": "8d86d05c5096492ffca3fb0579d15798cae0c938cc1d20bafff49565b6044b1e",
+  "canonicalApplySHA": "8812e1a165e19c8de68ba0fb465a82125c53394fdf6d8eca025248b97756a8ce",
+  "runtimeSourceHashes": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+    "src/devices/fcv588/menu-atlas.mjs": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+  },
+  "runtimeSourceSHA": 37,
+  "runtimeChangedPaths": [
+    "src/devices/fcv588/menu-atlas.mjs",
+    "web/lcd-instructor-meta.mjs"
+  ],
+  "runtimeChanged": 2,
+  "runtimeUnchanged": 35,
+  "approvedFileSHA": [
+    {
+      "path": "src/devices/fcv588/menu-atlas.mjs",
+      "preimageSHA": "47953dd718da59ff2f5b55681110c65c616b6949a2a28f6960513661c84d08bc",
+      "stageSHA": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+    },
+    {
+      "path": "web/lcd-instructor-meta.mjs",
+      "preimageSHA": "27616043b941751e299642bc6d16493cf1a5de6bf55c9b97eec9e3b36ce70b4e",
+      "stageSHA": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+    },
+    {
+      "path": "test/fcv588-v47-white-marker-firmware-boundary.test.mjs",
+      "preimageSHA": null,
+      "stageSHA": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-menu-atlas.json",
+      "preimageSHA": "fe178a91438167507673b0e18f57fc2d4fab71bc2fc2b5198aa84a1e7d43b192",
+      "stageSHA": "2e2b1918207dfa55a80a024e7f5f9ec2248bdad9e43cbc661bdeadb6564677cf"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "preimageSHA": "3f6c0bb48eacdde598ca267c56c3efc83a5977999d160629619e14b9764c009b",
+      "stageSHA": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d"
+    },
+    {
+      "path": "docs/research/FCV588_V47_WHITE_MARKER_FIRMWARE_SOURCE_ATLAS_20261019.md",
+      "preimageSHA": null,
+      "stageSHA": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6"
+    }
+  ],
+  "actualCopiedFileSHA": [
+    {
+      "path": "src/devices/fcv588/menu-atlas.mjs",
+      "preimageSHA": "47953dd718da59ff2f5b55681110c65c616b6949a2a28f6960513661c84d08bc",
+      "expectedSHA": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "actualSHA": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+    },
+    {
+      "path": "web/lcd-instructor-meta.mjs",
+      "preimageSHA": "27616043b941751e299642bc6d16493cf1a5de6bf55c9b97eec9e3b36ce70b4e",
+      "expectedSHA": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3",
+      "actualSHA": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+    },
+    {
+      "path": "test/fcv588-v47-white-marker-firmware-boundary.test.mjs",
+      "preimageSHA": null,
+      "expectedSHA": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773",
+      "actualSHA": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-menu-atlas.json",
+      "preimageSHA": "fe178a91438167507673b0e18f57fc2d4fab71bc2fc2b5198aa84a1e7d43b192",
+      "expectedSHA": "2e2b1918207dfa55a80a024e7f5f9ec2248bdad9e43cbc661bdeadb6564677cf",
+      "actualSHA": "2e2b1918207dfa55a80a024e7f5f9ec2248bdad9e43cbc661bdeadb6564677cf"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "preimageSHA": "3f6c0bb48eacdde598ca267c56c3efc83a5977999d160629619e14b9764c009b",
+      "expectedSHA": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d",
+      "actualSHA": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d"
+    },
+    {
+      "path": "docs/research/FCV588_V47_WHITE_MARKER_FIRMWARE_SOURCE_ATLAS_20261019.md",
+      "preimageSHA": null,
+      "expectedSHA": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6",
+      "actualSHA": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6"
+    }
+  ],
+  "profileRevision": "F1-public-reference-21",
+  "sourceAuthority": "FURUNO_OME23890E_1.22_and_FCV588_628_SoftwareHistory_2016",
+  "installedFirmware": "UNKNOWN",
+  "oemRights": "HOLD",
+  "sourceGrade": "TRAINING_WHITE_MARKER_PREVIEW_FIRMWARE_UNKNOWN",
+  "B07OnlyMetadataChange": true,
+  "stageValidRedPassed": 2,
+  "stageValidRedFailed": 5,
+  "stageFocusedPassed": 7,
+  "stageTargetedPassed": 48,
+  "stageFullNodePassed": 504,
+  "stagePythonPassed": 13,
+  "canonicalTargetedPassed": 48,
+  "canonicalFullNodePassed": 504,
+  "canonicalPostdocumentPassed": 504,
+  "canonicalPythonPassed": 13,
+  "stageLogSHA": {
+    "evidence/V47_B07_SCOPED_FIX_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_B07_SCOPED_FIX_RUN_20261019.log",
+      "sha256": "4e1a1ed1cf8c127acdd2879ddedee7dedef4f083512f110c2ecfa80441cded2f"
+    },
+    "evidence/V47_STAGE_FULL_NODE_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_FULL_NODE_20261019.log",
+      "sha256": "ee0d673330c17e4c3ed46243c17ac2ce26c50b6f9368337dfc36b8f788d08657"
+    },
+    "evidence/V47_STAGE_PYTHON_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_PYTHON_20261019.log",
+      "sha256": "2938ec0d6d4080c38a9c618c4e5f2e8d914b5ba689fa21d67e9ea5dc1ff1c00c"
+    },
+    "evidence/V47_STAGE_WHITE_MARKER_CHROME_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_WHITE_MARKER_CHROME_RUN_20261019.log",
+      "sha256": "fdc94e62a2079416b4766a1fe863878fc7c3f5975a0f28e99db22e7f6b684b76"
+    },
+    "evidence/V47_STAGE_WHITE_MARKER_CHROME_V2_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_WHITE_MARKER_CHROME_V2_RUN_20261019.log",
+      "sha256": "45e383ed057c404bc75a7c426e5c380cd27e94b766c59fe3d2b8822bcf60ec8f"
+    },
+    "evidence/V47_WHITE_MARKER_FINAL_VALID_RED_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_FINAL_VALID_RED_20261019.log",
+      "sha256": "14cf6b85653470b11efb76c8e2fb673b27902cbc97b88227ea7b431f959207e1"
+    },
+    "evidence/V47_WHITE_MARKER_FOCUSED_B07_GREEN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_FOCUSED_B07_GREEN_20261019.log",
+      "sha256": "410249cc30fd09ab72fb57a96a762ee1ad617612de971fbce05c03c46ae18be6"
+    },
+    "evidence/V47_WHITE_MARKER_FOCUSED_GREEN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_FOCUSED_GREEN_20261019.log",
+      "sha256": "8b1abc695ad7c0884c5ad6cfbcedc611f638e858cc4d85e1d8f248cbf2a5cfd7"
+    },
+    "evidence/V47_WHITE_MARKER_ORIGINAL_RED_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_ORIGINAL_RED_20261019.log",
+      "sha256": "0a31cb24490e5fcf499ea5950f28727dee04cb55af4e1cf56f75b0127457673b"
+    },
+    "evidence/V47_WHITE_MARKER_SOURCE_VALID_RED_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_SOURCE_VALID_RED_20261019.log",
+      "sha256": "1b104bffe93942d56723bf6a12f5e9d37ca09e62bbdc477758a7ee9aaa0741ae"
+    },
+    "evidence/V47_WHITE_MARKER_TARGETED_NODE_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_TARGETED_NODE_20261019.log",
+      "sha256": "e842263db99a75e155737b82af956313288e9a4cf981db98815677512cc1e9a9"
+    },
+    "evidence/V47_WHITE_MARKER_VALID_RED_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_VALID_RED_20261019.log",
+      "sha256": "25d840b475b5ab556c7951ac745de0a5179ffc9851a880be7f0d0feee600d747"
+    }
+  },
+  "stagePythonLog": {
+    "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_PYTHON_20261019.log",
+    "sha256": "2938ec0d6d4080c38a9c618c4e5f2e8d914b5ba689fa21d67e9ea5dc1ff1c00c",
+    "tests": 13,
+    "passed": 13
+  },
+  "stageDecisionsSHA": [
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_B01_METADATA_SCOPE_STOP_GPT6_GO_20261019.md",
+      "sha256": "4638a834a7eff97b5bad495ba00d9d774ed274e8ecdd9ece811250c400399ecc"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_B07_METADATA_SCOPE_STOP_GPT6_GO_20261019.md",
+      "sha256": "cb92e04af02d65de6de69fb092848da7b81cabb268d6224c45e6a4c65802bd2e"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_ORIGINAL_RED_HARNESS_ALIAS_STOP_GPT6_GO_20261019.md",
+      "sha256": "007b056295fab2a8d2ceab0210fe665dcf0060ef86c2c626353ceddc1bd0e7f6"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_PATCH_MANIFEST_NOTE_FILTER_STOP_GPT6_GO_20261019.md",
+      "sha256": "4a88c95a3a446264e6ac9d6a2f48e2878d476bc6db47d1f62a61b4962c261459"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_SENSOR_CHANNEL_KEY_HARNESS_STOP_GPT6_GO_20261019.md",
+      "sha256": "9d87c6a09cd811e12c1eb77937ca0e52201b48c8706d11562c48f195b87e9f25"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_CHROME_V1_CASE_ENCODING_STOP_GPT6_GO_20261019.md",
+      "sha256": "20d29aab47074a28236c66fda4b4e981999ce2b4b5f2eab32d3eed9f9b45953a"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_VALID_RED_FINGERPRINT_TEST_STOP_GPT6_GO_20261019.md",
+      "sha256": "9d0be16ee275bc203b63d5c614dba697bbe7a39d90571ce8b43e1f1fcac5800e"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_WHITE_MARKER_FINAL_RED_GPT6_STAGE_GO_20261019.md",
+      "sha256": "7a6c2dc0fe71bf03d178f3a11d45895731fcfa3f3cf9b8e4f87c5a15c5f0a759"
+    }
+  ],
+  "canonicalApplyStopNotesSHA": [
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_PROPERTY_PREFLIGHT_STOP_GPT6_GO_20261019.md",
+      "sha256": "69ef598e3f108d4c35b938edeb561434c10f910b191c126b8cd06cc6b8bede5a"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_V1_STATUS_STOP_GPT6_GO_20261019.md",
+      "sha256": "c7da4591b0ba3f4e9a9aa8173bcf4ff8f9b64dc40ed15341a273316755e1a559"
+    },
+    {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_V2_SCHEMA_STOP_GPT6_GO_20261019.md",
+      "sha256": "a4e9ae9309ed447c663adbeb860d20379122acf8c197e19540cf3bc6666e6c6e"
+    }
+  ],
+  "canonicalExtraLogsSHA": {
+    "evidence/V47_CANONICAL_APPLY_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_RUN_20261019.log",
+      "sha256": "398e32a1c4393c733091b298f260df0cd0431d23b2007d79c69ab63f54f742d8"
+    },
+    "evidence/V47_CANONICAL_APPLY_V2_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_V2_RUN_20261019.log",
+      "sha256": "7d7018c3c7da1a3d6c8b568ce7e22755160055172908983b9538d41c399d0f26"
+    },
+    "evidence/V47_CANONICAL_APPLY_READONLY_GATE_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_READONLY_GATE_20261019.log",
+      "sha256": "63da768b4753fd57be3006e6d1c65de400aa36b5b7343d865d1f3a6d614a1890"
+    },
+    "evidence/V47_CANONICAL_APPLY_VALIDATED_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_APPLY_VALIDATED_RUN_20261019.log",
+      "sha256": "7711a30d0f3bb9f71a7c07e84cc75e5da364b7b9cff9326af933e0bb3456d614"
+    },
+    "evidence/V47_CANONICAL_WHITE_MARKER_CHROME_V2_RUN_20261019.log": {
+      "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_WHITE_MARKER_CHROME_V2_RUN_20261019.log",
+      "sha256": "153366039fceba57ea3b5651a7bc65e8587fd7e0c7334929d43d25c3a112f815"
+    }
+  },
+  "canonicalNodeLogs": [
+    {
+      "path": "docs/qa/FCV588_V47_CANONICAL_TARGETED_NODE_20261019.log",
+      "sha256": "6e4ac4c2ba423d30aa3a42950f60ba6bd89901d0e282f7ffc57c76e2343e68d1",
+      "tests": 48,
+      "passed": 48,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V47_CANONICAL_FULL_NODE_20261019.log",
+      "sha256": "d9e6447bb24348fc8815427fe17f26e285cb886b2eac0ac4c801b5dae7fe6b6c",
+      "tests": 504,
+      "passed": 504,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V47_POSTDOCUMENT_FULL_NODE_20261019.log",
+      "sha256": "4f976c957554a7c3737eddb2d48684d3127ee0aac7805772e417bbe63153a118",
+      "tests": 504,
+      "passed": 504,
+      "failed": 0
+    }
+  ],
+  "canonicalPythonLog": {
+    "path": "docs/qa/FCV588_V47_CANONICAL_PYTHON_20261019.log",
+    "sha256": "7ca18983054dad58a9a9fdfffea55a391ad26187489d172b8b6243e3d0fb1d48",
+    "tests": 13,
+    "passed": 13
+  },
+  "stageChrome": {
+    "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_STAGE_WHITE_MARKER_CHROME_V2_20261019.json",
+    "sha256": "4b0afa9a99e5bc37500b4af78d2ee6160c6e72321f456c212adfd602d82221d4",
+    "assertions": 126,
+    "browserLoadedBodySHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-320x720-selected.png",
+        "sha256": "0f34700ef5a802feda8ef185f3096ebe31b374441c523394e663502169d4a650"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-320x720-editor.png",
+        "sha256": "9f71c9a6e3d483a18c147f3c9b896a49d9745ee36e89807003eea6c9aa850074"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-375x812-selected.png",
+        "sha256": "cc6cbd80eb63e94fc25b7293aec4c2929c921165e4a4353af2cd3ce43daef627"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-375x812-editor.png",
+        "sha256": "b0f2e769e782c9f94bd6d4adeeaf73da0bdcb4b1175a2f2a15420b367acabf7b"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-768x1024-selected.png",
+        "sha256": "9c327a69c7e49c4f357dbbaf677051c59bd5ecdea1e20774fa8df2faa4c3d621"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-768x1024-editor.png",
+        "sha256": "d4dab7ad58dfca47383ce1e7792972f6d9f4c7830b420608a6fd717ca44e7404"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1366x768-selected.png",
+        "sha256": "a5cd4ba22a508a80c77d428376d45069ab80b8635a245d2abd4e772509efc12b"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1366x768-editor.png",
+        "sha256": "4200a676c3548841ecde6c778e08cadae38db67f0da50831c07f853fe50ff39f"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1440x900-selected.png",
+        "sha256": "7595c2167a883a950015f9708c231510c9c4ae44843c1209306bb5672a5ced57"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1440x900-editor.png",
+        "sha256": "49298b86b778ceabc7a0f728e261257687c6a1a8f6a3326da10bd70fd6949d25"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1920x1080-selected.png",
+        "sha256": "e32f249a2318fb6c3a132acdd2289fb582c1ed2202241b984d91a69b1bbbffd4"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-stage-white-marker-1920x1080-editor.png",
+        "sha256": "bf104ee5ea82e7a3f366108d7d982a29e56363c94835497b08e23ed1f71012a0"
+      }
+    ]
+  },
+  "canonicalChrome": {
+    "path": "staging/fcv588-v47-white-marker-firmware/evidence/V47_CANONICAL_WHITE_MARKER_CHROME_V2_20261019.json",
+    "sha256": "12e4c4605abd208009bc8b97f5ed74171a50fb12f0a13c28558991e0bb45c251",
+    "assertions": 126,
+    "browserLoadedBodySHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-320x720-selected.png",
+        "sha256": "0f34700ef5a802feda8ef185f3096ebe31b374441c523394e663502169d4a650"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-320x720-editor.png",
+        "sha256": "9f71c9a6e3d483a18c147f3c9b896a49d9745ee36e89807003eea6c9aa850074"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-375x812-selected.png",
+        "sha256": "cc6cbd80eb63e94fc25b7293aec4c2929c921165e4a4353af2cd3ce43daef627"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-375x812-editor.png",
+        "sha256": "b0f2e769e782c9f94bd6d4adeeaf73da0bdcb4b1175a2f2a15420b367acabf7b"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-768x1024-selected.png",
+        "sha256": "9c327a69c7e49c4f357dbbaf677051c59bd5ecdea1e20774fa8df2faa4c3d621"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-768x1024-editor.png",
+        "sha256": "d4dab7ad58dfca47383ce1e7792972f6d9f4c7830b420608a6fd717ca44e7404"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1366x768-selected.png",
+        "sha256": "a5cd4ba22a508a80c77d428376d45069ab80b8635a245d2abd4e772509efc12b"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1366x768-editor.png",
+        "sha256": "4200a676c3548841ecde6c778e08cadae38db67f0da50831c07f853fe50ff39f"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1440x900-selected.png",
+        "sha256": "7595c2167a883a950015f9708c231510c9c4ae44843c1209306bb5672a5ced57"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1440x900-editor.png",
+        "sha256": "49298b86b778ceabc7a0f728e261257687c6a1a8f6a3326da10bd70fd6949d25"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1920x1080-selected.png",
+        "sha256": "e32f249a2318fb6c3a132acdd2289fb582c1ed2202241b984d91a69b1bbbffd4"
+      },
+      {
+        "path": "staging/fcv588-v47-white-marker-firmware/evidence/screenshots/v47v2-canonical-white-marker-1920x1080-editor.png",
+        "sha256": "bf104ee5ea82e7a3f366108d7d982a29e56363c94835497b08e23ed1f71012a0"
+      }
+    ]
+  },
+  "stageChromeAssertions": 126,
+  "canonicalChromeAssertions": 126,
+  "stageBrowserLoadedResponseSHA": 210,
+  "canonicalBrowserLoadedResponseSHA": 210,
+  "newV47ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": 263,
+  "historicalPythonTrainingFixtureSHA": 16,
+  "documentsSHA": [
+    {
+      "path": "docs/research/FCV588_V47_WHITE_MARKER_FIRMWARE_SOURCE_ATLAS_20261019.md",
+      "sha256": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6"
+    },
+    {
+      "path": "docs/qa/FCV588_V47_DESKTOP_MANUAL_PARTIAL_20261019.md",
+      "sha256": "0d44d5bb67295eeff792bb25c94a1c05efdeb71f89ec311f6954ee28a4094960"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-19-v47-white-marker-integration.md",
+      "sha256": "790ba6f3453d02baf107de60918303fb70b2da741fa9c2d7c6a67178a64b3cb9"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "d421b9753162367b3c9b57ad2bf5e0c38e6386dde4746492e7b1ce6b1ee2a996"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "409bd1617045409472cd99d49373ed6f1f42a46dda1d3798d8aad5d0b69a8a67"
+    }
+  ],
+  "preservedV46DocumentsSHA": 3,
+  "httpReceiptSHA": "a2b1ccdd77fbf6e6ca1390be6f857a9f499d59ea7788dcec15bcdf3c27d37313",
+  "httpDenials": 4,
+  "ownedQAportsClosed": {
+    "4233": true,
+    "4234": true
+  },
+  "actualCoSDesktopViewport": "1912x970_PARTIAL",
+  "actualCoSDesktopScreenshot": "CONNECTOR_ID_NOT_SAVED_NO_SHA",
+  "nativeAttachedExactViewports": "NOT_RUN",
+  "narratorNvdaSpokenOutput": "NOT_RUN",
+  "genuineOsWindowBlur": "NOT_RUN",
+  "hardwareValidated": false,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "releaseApproval": "HOLD",
+  "gitCommitted": false
+}

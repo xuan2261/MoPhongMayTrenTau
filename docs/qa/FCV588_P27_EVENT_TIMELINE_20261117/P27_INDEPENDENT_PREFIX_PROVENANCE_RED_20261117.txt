@@ -1,0 +1,155 @@
+TAP version 13
+# Subtest: P27 archive D15 timeline controls exist and model is pure
+ok 1 - P27 archive D15 timeline controls exist and model is pure
+  ---
+  duration_ms: 1.5749
+  type: 'test'
+  ...
+# Subtest: P27 exact full replay at N and zero-event prefix reconstruct initial deterministic state
+ok 2 - P27 exact full replay at N and zero-event prefix reconstruct initial deterministic state
+  ---
+  duration_ms: 93.7936
+  type: 'test'
+  ...
+# Subtest: P27 random seek is deterministic and does not retain mutable cached frame pixels
+ok 3 - P27 random seek is deterministic and does not retain mutable cached frame pixels
+  ---
+  duration_ms: 82.2661
+  type: 'test'
+  ...
+# Subtest: P27 P04/P23 explicit sidecar changes only synthetic BZ left projection
+ok 4 - P27 P04/P23 explicit sidecar changes only synthetic BZ left projection
+  ---
+  duration_ms: 44.4904
+  type: 'test'
+  ...
+# Subtest: P27 frozen profile22 legacy archive and profile21 legacy fixtures can replay selected prefixes
+ok 5 - P27 frozen profile22 legacy archive and profile21 legacy fixtures can replay selected prefixes
+  ---
+  duration_ms: 23.5376
+  type: 'test'
+  ...
+# Subtest: P27 rejects invalid step numbers and enforces bounded source schema
+ok 6 - P27 rejects invalid step numbers and enforces bounded source schema
+  ---
+  duration_ms: 8.9056
+  type: 'test'
+  ...
+# Subtest: P27 reset and navigation UI are D15-only and never write live session or storage
+not ok 7 - P27 reset and navigation UI are D15-only and never write live session or storage
+  ---
+  duration_ms: 1.8843
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p27-event-timeline-20261117\\test\\fcv588-p27-archive-timeline.test.mjs:112:1'
+  failureType: 'testCodeFailure'
+  error: 'event prefixes must not be re-authored as v7 replay envelope/sidecar archives'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    /**
+     * P27 D15-only bounded archive event timeline.
+     * Full P24/P25 archive is validated BEFORE any partial replay. A selected
+     * prefix is an instructor-only derived synthetic preview, NOT a re-labelled
+     * original archive or evidence that intermediate LCD pixels were captured.
+     *
+     * No network, browser storage, device I/O, live session or OEM imagery.
+     */
+    import {decodeFcv588ArchivePair} from "./fcv588-archive-import.mjs";
+    import {replayFcv588Archive,createFcv588ArchiveSidecar} from
+      "../src/devices/fcv588/archive-compat.mjs";
+    import {getFcvReplayAdapter} from "../src/devices/fcv588/replay-compat.mjs";
+    import {TRAINING_SCENARIO} from "../src/core/scenario.mjs";
+    import {createSession,dispatch,createReplayEnvelope,sessionHash} from
+      "../src/core/session.mjs";
+    import {projectFcv588ArchiveBZViewer} from "./fcv588-archive-bz-viewer.mjs";
+    
+    const LIMIT=2000;
+    
+    /** A closed-over, validated archive; callers can only choose step indexes.
+     * Recompute deterministic prefix, rather than keeping 2000 bulky snapshots
+     * or trusting truncated envelope bytes as an original signed archive.
+     */
+    export function createFcv588ArchiveTimeline(envelopeText,sidecarText){
+      const summary=decodeFcv588ArchivePair(envelopeText,sidecarText);
+      const envelope=JSON.parse(envelopeText);
+      const sidecar=JSON.parse(sidecarText);
+      const {session,presentationContract}=replayFcv588Archive(
+        TRAINING_SCENARIO,envelope,sidecar);
+      if(summary.sessionHash!==sessionHash(session) ||
+         summary.presentationContract!==presentationContract ||
+         envelope.events.length>LIMIT)
+        throw new Error("P27 full archive replay identity drift");
+      const adapter=getFcvReplayAdapter(envelope.profileRevision);
+      const total=envelope.events.length;
+      // All objects stay private inside this closure. Original v7 envelope and
+      // its authoritative finalSessionHash are never re-authored or re-labeled.
+      function select(index){
+        if(!Number.isSafeInteger(index) || index<0 || index>total)
+          throw new RangeError("P27 event index outside validated replay log");
+        let prefix=createSession(adapter,TRAINING_SCENARIO);
+        for(let i=0;i<index;i++){
+          const event=envelope.events[i];
+          const {seq,tick,schemaVersion,...payload}=event;
+          prefix=dispatch(prefix,adapter,payload,TRAINING_SCENARIO);
+          // Validate the prefix against the original source event metadata.
+          const recorded=prefix.events[i];
+          if(recorded.seq!==seq || recorded.tick!==tick ||
+             recorded.schemaVersion!==schemaVersion)
+            throw new Error("P27 prefix event drift");
+        }
+        const prefixHash=sessionHash(prefix);
+        if(index===total && prefixHash!==summary.sessionHash)
+          throw new Error("P27 final timeline hash drift");
+        const derivedEnvelope=createReplayEnvelope(prefix);
+        const derivedSidecar=createFcv588ArchiveSidecar(derivedEnvelope,
+          {presentationContract});
+        const visual=projectFcv588ArchiveBZViewer(
+          JSON.stringify(derivedEnvelope),JSON.stringify(derivedSidecar));
+        if(visual.summary.sessionHash!==prefixHash ||
+           visual.summary.presentationContract!==presentationContract)
+          throw new Error("P27 synthetic prefix frame drift");
+        const event=index>0?envelope.events[index-1]:null;
+        return Object.freeze({
+          index,total,
+          prefixSessionHash:prefixHash,
+          fullSessionHash:summary.sessionHash,
+          presentationContract,
+          profileRevision:envelope.profileRevision,
+          worldTick:prefix.worldState.simTick,
+          activeMode:prefix.deviceState.mode,
+          power:prefix.deviceState.power,
+          eventKind:event?.kind??"initial",
+          eventControl:event?.control??null,
+          eventTick:event?.tick??0,
+          derivedPrefixOnly:index!==total,
+          visual,
+          sourceClass:"SYNTHETIC_TIMELINE_PREVIEW_NOT_ARCHIVED_PIXELS",
+        });
+      }
+      return Object.freeze({
+        eventCount:total,profileRevision:envelope.profileRevision,
+        presentationContract,fullSessionHash:summary.sessionHash,
+        select,
+      });
+    }
+    
+  operator: 'doesNotMatch'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p27-event-timeline-20261117/test/fcv588-p27-archive-timeline.test.mjs:122:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 427.3897

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "error": null,
+  "receipt": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_LCD_V30_GREEN_RECEIPT.json",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": 17,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": 17,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "360x800",
+      "checks": 17,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "390x844",
+      "checks": 17,
+      "failed": [],
+      "executionError": null
+    }
+  ]
+}

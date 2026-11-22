@@ -1,0 +1,5 @@
+P32 RESOURCE ANALYSIS ATTEMPT1 — FAILED_SETUP
+Command: node staging/fcv588-p32-host-qa-20261121/p32-analyze.mjs
+Cause: The initial analysis script encoded an invalid Windows root string, so fs.readFileSync raised ENOENT before reading the immutable benchmark receipt.
+Resolution: replaced the root literal with path.resolve(import.meta.dirname,"..",".."). The next attempt succeeded and wrote the separate P32_P30_VS_P31_RESOURCE_ANALYSIS_V1_20261121.json. No underlying benchmark result was changed.
+Status: FAILED_SETUP (retained for audit); not a product or measurement failure.

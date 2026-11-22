@@ -1,0 +1,524 @@
+{
+  "schema": "fcv588-p04-bottom-provenance-isolated-stage-v1",
+  "createdAt": "2026-11-16T08:21:25.064882+07:00",
+  "scope": "P04_BL_SAFE_SYNTHETIC_DISPLAY_TRAINING_STAGE_ONLY",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "qaRoot": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance",
+  "decision": "CONDITIONAL_GO_PRESENTATION_COMPANION_NO_SENSOR_SCHEMA_BUMP",
+  "canonicalSeals": {
+    "p05P06Final": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P05_P06_20261116\\FCV588_VISUAL_P05_P06_FINAL_INTEGRITY_20261116.json",
+      "sha256": "ecdfb0bc680f35a6935bb11a4bbadd1f95e3441069b7074a0b68ab22506b4ee4",
+      "expected": "ecdfb0bc680f35a6935bb11a4bbadd1f95e3441069b7074a0b68ab22506b4ee4"
+    },
+    "independentPost": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P05_P06_20261116\\FCV588_VISUAL_P05_P06_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "9befe64829bf9c79fb7e0505fe1db83a5edf676ce1f4c22a7073ca3cd7a6160e",
+      "expected": "9befe64829bf9c79fb7e0505fe1db83a5edf676ce1f4c22a7073ca3cd7a6160e"
+    },
+    "runtime39": {
+      "matches": 39,
+      "total": 39,
+      "rows": [
+        {
+          "path": "src/core/device-runtime.mjs",
+          "expected": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+          "actual": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+          "match": true
+        },
+        {
+          "path": "src/core/lessons.mjs",
+          "expected": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "actual": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "match": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "expected": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "actual": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "match": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "expected": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "actual": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "match": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "expected": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "actual": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "expected": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "actual": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "expected": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "actual": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "expected": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "actual": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "expected": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "actual": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/claim-gate.mjs",
+          "expected": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+          "actual": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "expected": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "actual": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "expected": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "actual": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "expected": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "actual": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "expected": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+          "actual": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "expected": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "actual": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "expected": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "actual": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "expected": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "actual": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "expected": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "actual": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "expected": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "actual": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "expected": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "actual": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "expected": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "actual": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "expected": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "actual": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "match": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "expected": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "actual": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "match": true
+        },
+        {
+          "path": "web/app.mjs",
+          "expected": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+          "actual": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+          "match": true
+        },
+        {
+          "path": "web/favicon.svg",
+          "expected": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+          "actual": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+          "match": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "expected": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+          "actual": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+          "match": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "expected": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "actual": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "match": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "expected": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "actual": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "match": true
+        },
+        {
+          "path": "web/index.html",
+          "expected": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "actual": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "match": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "expected": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "actual": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "match": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "expected": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "actual": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "match": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "expected": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "actual": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "match": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "expected": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "actual": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "match": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "expected": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "actual": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "match": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "expected": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "actual": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "match": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "expected": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "actual": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "match": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "expected": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "actual": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "match": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "expected": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "actual": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "match": true
+        },
+        {
+          "path": "web/styles.css",
+          "expected": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "actual": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "match": true
+        }
+      ]
+    }
+  },
+  "originalP04FishOnlyRed": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-extended\\P04_NEAR_BOTTOM_FISH_ONLY_RED_RECEIPT_20261116.json",
+    "sha256": "c4d7ba7bcc7998dd48fd270541e7e694ee6a930d27809a5bb44b5d4bf2677690",
+    "declaredLogSha256": "e336be0e97bfd856df008728eed711e2a593c619aaa4132783bbf3ca3ddbbf51",
+    "actualLogSha256": "e336be0e97bfd856df008728eed711e2a593c619aaa4132783bbf3ca3ddbbf51",
+    "unchanged": true
+  },
+  "allowlist": {
+    "status": "EXACT_6_PATHS",
+    "expected": {
+      "src/core/scenario.mjs": "MODIFIED",
+      "src/devices/fcv588/echo-projection.mjs": "MODIFIED",
+      "web/app.mjs": "MODIFIED",
+      "web/fcv588-echo-rasterizer.mjs": "MODIFIED",
+      "test/fcv588-p04-bottom-provenance.test.mjs": "NEW",
+      "test/fcv588-photo-modes.test.mjs": "MODIFIED"
+    },
+    "actual": [
+      {
+        "path": "src/core/scenario.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+        "stageSha256": "149d5157c1bbb86fa7f0a68bd8b653c328095588633cec2998277210303b0778"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+        "stageSha256": "b38d5761da3b545ff2fde4017cae1e7f5c797de4dffc5210fc6c7cca012461ef"
+      },
+      {
+        "path": "test/fcv588-p04-bottom-provenance.test.mjs",
+        "kind": "NEW",
+        "canonicalSha256": null,
+        "stageSha256": "15b6b41d3d6eb4df39b5d038752aeb9de353497aaa39ffc3470ad3a41e4f66d5"
+      },
+      {
+        "path": "test/fcv588-photo-modes.test.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "85f201ba3697b6ae408f0bf64c6fcbdf81aed44553f3dfa47862eb4ca4fe2f7c",
+        "stageSha256": "a2b3c2787debd32684cefd747ca258c0b31e8b333c78057a3e47206cbf4bd124"
+      },
+      {
+        "path": "web/app.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+        "stageSha256": "4bd5844222eadfc6e86f051f93cd07177490b08c4b1270b063c29e057de9604b"
+      },
+      {
+        "path": "web/fcv588-echo-rasterizer.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+        "stageSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699"
+      }
+    ]
+  },
+  "protectedCanonicalEquivalence": [
+    {
+      "path": "src/core/session.mjs",
+      "canonicalSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "stageSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "path": "src/core/protocol.mjs",
+      "canonicalSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "stageSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/profile-version.mjs",
+      "canonicalSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "stageSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/model.mjs",
+      "canonicalSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "stageSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/settings.mjs",
+      "canonicalSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+      "stageSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/adapter.mjs",
+      "canonicalSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "stageSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    }
+  ],
+  "contractPreservation": {
+    "observationSchema": "UNCHANGED_BY_TESTED_KEYSET",
+    "sensorModelVersion": "fcv588-sonar-illustrative-v1",
+    "profileRevision": "F1-public-reference-21",
+    "sessionReplay": "UNCHANGED_FILES_AND_REPLAY_HASH_TEST_PASS",
+    "companionSerializedIntoReplay": false,
+    "bzMzCanonicalPixelSha": {
+      "Bottom Zoom": "efe712c15b072f07da63487ad630ef8d5bf060ebc04db0491b925c07623132e3",
+      "Marker Zoom": "3959bbf444817583042348fe3f26275c342e47c18bc3babedadb3c2394597f2a"
+    }
+  },
+  "implementation": {
+    "sourceCompanion": "scenario-authored per-column bottom present/depth/sample-time metadata beside observeSounder",
+    "sourceIdentityGuards": [
+      "sourceClass",
+      "simTick",
+      "sensorModelVersion",
+      "latestWorldBottomDepthM",
+      "columns",
+      "sampleTime",
+      "finite in-frame depth"
+    ],
+    "bottomLock": "uses per-column authored depths only; missing/absent/spoofed provenance falls back to absolute slice",
+    "rasterizer": "Bottom Lock bypasses legacy coherentBottom decorative core/tail inference; normal/BZ/MZ unchanged",
+    "history": "flattening occurs before existing picture history; no companion metadata is shifted or serialized"
+  },
+  "validation": {
+    "redInitial": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\p04-provenance-red.txt",
+      "sha256": "e21b90cc9070e793c07b0ac203ec3b8d076ef2c06e68f910e46cfde04def22e1",
+      "markers": [
+        "# tests 6",
+        "# fail 4",
+        "source companion producer is required"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    "redRasterCorrection": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\p04-provenance-red2.txt",
+      "sha256": "1cf2e249fc03524c88cba4b4bc5b90ed0fa592ced31372bde2510e25b8df9b52",
+      "markers": [
+        "# tests 6",
+        "# fail 5",
+        "BL raster art must not infer bottom from fish pixels plus a single global depth"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    "targetedFinal": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\p04-provenance-targeted-final.txt",
+      "sha256": "e47493ca0d8696fd7908f3a6485364850fe787cd49946be7611bed833cf1405c",
+      "markers": [
+        "# tests 23",
+        "# pass 23",
+        "# fail 0"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    "nodeFull": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\p04-provenance-full-node.txt",
+      "sha256": "4b99aa1234e8f491258ab705ba15bd1eef4759103aa9e318891726d4e0f6773f",
+      "markers": [
+        "# tests 559",
+        "# pass 559",
+        "# fail 0"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    "python": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\p04-provenance-python.txt",
+      "sha256": "5ae2c2229785a9d52bba70f6b56fe6f56e203bb547b7cafc4a39c43e4896210a",
+      "markers": [
+        "Ran 13 tests",
+        "OK"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    "nodeVersion": "v22.22.0",
+    "pythonVersion": "3.11.5"
+  },
+  "referenceOnlyPhotos": {
+    "status": "UNCHANGED_REFERENCE_ONLY",
+    "runtimeCopiesInStageSrcWeb": [],
+    "rows": [
+      {
+        "name": "dual.jpg",
+        "expected": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+        "actual": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "giaoDien.jpg",
+        "expected": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+        "actual": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "hf.jpg",
+        "expected": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+        "actual": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "lf.jpg",
+        "expected": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+        "actual": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "nav1.jpg",
+        "expected": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+        "actual": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "nav2.jpg",
+        "expected": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+        "actual": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "zoom.jpg",
+        "expected": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+        "actual": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      },
+      {
+        "name": "zoom2.jpg",
+        "expected": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+        "actual": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+        "match": true,
+        "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+      }
+    ]
+  },
+  "review": {
+    "baseChecklist": "Pre-Landing Review: No issues found.",
+    "independentReview": "PENDING_PRIME_ASSIGNED_REVIEWERS"
+  },
+  "operations": {
+    "canonicalApplied": false,
+    "commitCreated": false,
+    "browserRun": false,
+    "port4173Operation": "NONE",
+    "networkHardwareIo": "NONE"
+  },
+  "holds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemPercentClaim": null
+  },
+  "status": "P04_PROVENANCE_STAGE_QA_PASS_INDEPENDENT_REVIEW_PENDING",
+  "canonicalReadiness": "NOT_REQUESTED_NO_APPLY",
+  "objectiveFailures": []
+}

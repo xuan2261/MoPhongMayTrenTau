@@ -1,0 +1,298 @@
+{
+  "schema": "FCV588_P15_LCD_GEOMETRY_INDEPENDENT_POSTRECEIPT_V1",
+  "reviewedAtLocal": "2026-11-16T21:02:57.7828820+07:00",
+  "independentReviewer": "worker-2",
+  "reviewMode": "READ_ONLY_POST_APPLY_INDEPENDENT_QA",
+  "decision": "PASS",
+  "decisionScope": "P15 canonical G1/G2 internal LCD geometry post-apply integrity only",
+  "finalIntegrity": {
+    "path": "docs/qa/FCV588_P15_LCD_GEOMETRY_20261116/FCV588_P15_LCD_GEOMETRY_FINAL_INTEGRITY_20261116.json",
+    "sha256": "a6aa5038292e5d1d3da20170f9bbed1804ee5262e749cb9b4e5cf53207deafed",
+    "rehashMatch": true,
+    "reportedStatus": "CANONICAL_G1G2_APPLIED_NODE_PYTHON_CHROME_PASS_INDEPENDENT_POSTRECEIPT_PENDING"
+  },
+  "checks": [
+    {
+      "id": "runtime50_canonical_stage_final",
+      "status": "PASS",
+      "canonicalRuntimeCount": 50,
+      "stageRuntimeCount": 50,
+      "canonicalStageFinalHashMismatches": 0,
+      "details": "Every final runtime SHA was independently recomputed from canonical and _p15_stage_20261116; all 50/50 match the final integrity runtime50 map."
+    },
+    {
+      "id": "p14_runtime_delta",
+      "status": "PASS",
+      "changedRuntimeCount": 1,
+      "changedRuntimePaths": [
+        "web/styles.css"
+      ],
+      "details": "Compared against the sealed P14 canonical preimage hashes; every runtime path except web/styles.css is unchanged."
+    },
+    {
+      "id": "canonical_stage_complete_tree",
+      "status": "PASS",
+      "roots": [
+        "src",
+        "web",
+        "test"
+      ],
+      "canonicalFileCount": 159,
+      "stageFileCount": 159,
+      "hashDiffCount": 0,
+      "details": "Post-apply canonical and stage are byte-identical across src/web/test, including the new P15 test."
+    },
+    {
+      "id": "exact_two_path_apply",
+      "status": "PASS",
+      "applyReceiptSHA256": "8d0eb84830c3cfb03d4b9b2a707688db2f26786c5c566c2de547a20a93e52337",
+      "allowlistSHA256": "d18f8e7a19f6cb82b03eeaecf8acceb16af578842639374f1658adfebcc7e8ec",
+      "paths": [
+        {
+          "path": "web/styles.css",
+          "operation": "modify",
+          "p14PreimageSHA256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "canonicalStageReceiptSHA256": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+          "match": true
+        },
+        {
+          "path": "test/fcv588-p15-uniform-lcd-css.test.mjs",
+          "operation": "create",
+          "p14PreimageSHA256": null,
+          "canonicalStageReceiptSHA256": "2a750cb43e2ffd965eb1266046b45aad30da692312db1e172faa0acd73d162b0",
+          "match": true
+        }
+      ]
+    },
+    {
+      "id": "preimage_backup_css",
+      "status": "PASS",
+      "backupZipSHA256": "f73e84c94b73943bc26a4d18778f06de05684f183e1f209111610bf415d03e01",
+      "preimageCssSHA256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "match": true
+    },
+    {
+      "id": "p14_parent_integrity",
+      "status": "PASS",
+      "finalIntegritySHA256": "195d0737b602196bddb5971964500dabab41d19eaee08b5b620e97f26089e99e",
+      "independentPostreceiptSHA256": "2dfeb190a2160fb4e6f24988fa7d054b2dd0098f14c378901068cef6321b8754",
+      "unchanged": true
+    },
+    {
+      "id": "p15_continuation_report",
+      "status": "PASS",
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/continuation-2026-11-16-photo-p15-uniform-lcd-css-postapply.md",
+      "sha256": "47f435d41cd5add47ee3b870d941d134f1dfcae055e0042a01708c147ae56e2b",
+      "matchesFinalIntegrityReportSHA256": true
+    },
+    {
+      "id": "oem_reference_only_photos",
+      "status": "PASS",
+      "count": 8,
+      "hashMismatches": 0,
+      "details": "All eight originals under sources/FCV588_GiaoDienThucTeMay2016 re-hash to the exact REFERENCE_ONLY SHA values recorded in final integrity."
+    },
+    {
+      "id": "postapply_node",
+      "status": "PASS",
+      "artifactSHA256": "633e47c92eaab79864a31ed30f96636ba80d65905de63885fd723eaa51eb8e3c",
+      "tests": 579,
+      "passed": 579,
+      "failed": 0,
+      "skipped": 0,
+      "details": "Existing post-apply receipt inspected only; no rerun performed."
+    },
+    {
+      "id": "postapply_python",
+      "status": "PASS",
+      "artifactSHA256": "83660e3d44610ac01f1cce70ef9c06b24a9c596419e80e7dbe10a7d3383ac315",
+      "tests": 13,
+      "result": "OK",
+      "details": "Existing post-apply receipt inspected only; no rerun performed."
+    },
+    {
+      "id": "postapply_geometry_chrome",
+      "status": "PASS",
+      "artifactSHA256": "467454793e7f61728650c61a80aca8a3f733132f9fbe648dc3b2a8f091ec2691",
+      "viewports": 8,
+      "checks": 13,
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "ownedServerExited": true,
+      "details": "Existing canonical geometry Chrome receipt inspected only; no browser rerun performed."
+    },
+    {
+      "id": "canonical_v1_screenshot_evidence",
+      "status": "HOLD_EXCLUDED_FROM_ACCEPTANCE",
+      "v1ReceiptSHA256": "3cf3c5d4acfca35b41eef6196ad84f68858f5fb46fa5ba38a66d4c1c91c9a922",
+      "holdReceiptSHA256": "ea0d2c1eaa2256be3db561722ae6ccc7c335ab3c9cd42e63b496106ad6481842",
+      "mismatchedOnDiskScreenshotHashes": 7,
+      "usedForAcceptance": false,
+      "replacement": "P15_CANONICAL_CHROME_MODE_GEOMETRY_SEALED_V2_20261116.json"
+    },
+    {
+      "id": "canonical_sealed_v2_mode_chrome",
+      "status": "PASS",
+      "artifactSHA256": "c457bcad0816b3033f0569e3a55d59c53ee1c9b27631a2979d183604a9988c03",
+      "checks": 103,
+      "passed": 103,
+      "failed": 0,
+      "views": 3,
+      "modeScreenshots": 21,
+      "zoomScreenshots": 3,
+      "screenshotFiles": 24,
+      "screenshotHashMismatchesOnDisk": 0,
+      "httpBodies": 273,
+      "httpBodiesHashMatched": 273,
+      "oemJpegRoutes": 8,
+      "oemJpeg404": 8,
+      "pageErrors": 0,
+      "externalNetworkRequests": 0,
+      "testOwnedPort": 4216,
+      "ownedServerExited": true,
+      "usedForAcceptance": true
+    },
+    {
+      "id": "stage_canonical_v2_image_reconciliation",
+      "status": "PASS",
+      "artifactSHA256": "4aad95bc9484666a3bcb39b6dbb3335b4feaa5e9c758b3b48681a8a1673ba912",
+      "modeAndZoomPairs": 24,
+      "menuPairs": 2,
+      "totalPairs": 26,
+      "pngByteEqual": 26,
+      "pngByteDifferent": 0,
+      "decodedPixelEqual": 26,
+      "directCurrentFileHashMismatches": 0,
+      "details": "All 24 stage/canonical sealed V2 mode+zoom pairs and both menu pairs are byte-identical; reconciliation also records decoded RGBA equality."
+    },
+    {
+      "id": "canonical_menu_chrome",
+      "status": "PASS",
+      "artifactSHA256": "98d3d5dbebdfac36e744fa3993b1fc273015371129beceb050b69a250c7ec314",
+      "checks": 10,
+      "passed": 10,
+      "loadedBodies": 164,
+      "loadedBodiesHashMatched": 164,
+      "menuScreenshots": 2,
+      "ap1SounderRows": 13,
+      "bothViewsContainAll13ExpectedLabels": true,
+      "oemJpeg404": 8,
+      "errors": 0,
+      "ownedServerExited": true
+    },
+    {
+      "id": "source_editor_replay_drift",
+      "status": "PASS",
+      "details": "No executable/editor/replay source changed from P14 to P15. web/app.mjs, web/lcd-config-presentation.mjs, src/devices/fcv588/settings.mjs, src/devices/fcv588/settings-profile21.mjs and src/devices/fcv588/replay-compat.mjs retain their P14 hashes. Post-apply Node evidence includes exact historical profile21 editing/replay and profile22 deterministic replay checks passing."
+    },
+    {
+      "id": "network_and_photo_boundary",
+      "status": "PASS",
+      "details": "Sealed V2 records 0 external network requests, 0 page errors, 273/273 loaded source bodies matching, and all 8 OEM JPEG routes returning 404. Canonical menu records 164/164 loaded bodies matching and all 8 OEM JPEG routes returning 404. Original OEM files remain unchanged on disk."
+    },
+    {
+      "id": "protected_user_server",
+      "status": "PASS",
+      "listenersChecked": [
+        4173,
+        4214,
+        4215,
+        4216
+      ],
+      "observedListeners": [
+        {
+          "LocalAddress": "127.0.0.1",
+          "LocalPort": 4173,
+          "OwningProcess": 1204
+        }
+      ],
+      "testOwnedPortsListening": false,
+      "details": "Read-only OS socket enumeration only; no HTTP request or server action was performed."
+    },
+    {
+      "id": "release_hardware_firmware_rights_boundary",
+      "status": "PASS_HOLD_PRESERVED",
+      "profileClass": "PUBLIC_REFERENCE",
+      "profileRevision": "F1-public-reference-22",
+      "phase6": "OPEN",
+      "claims": "65/65 HOLD",
+      "hardwareValidated": false,
+      "firmwareInstalled": null,
+      "rightsClearance": false,
+      "releaseApproval": "HOLD",
+      "oemCertified": false
+    }
+  ],
+  "acceptanceEvidence": {
+    "canonicalModeChrome": "P15_CANONICAL_CHROME_MODE_GEOMETRY_SEALED_V2_20261116.json",
+    "canonicalModeChromeSHA256": "c457bcad0816b3033f0569e3a55d59c53ee1c9b27631a2979d183604a9988c03",
+    "imageReconciliation": "P15_STAGE_CANONICAL_SEALED_V2_PIXEL_RECONCILIATION_20261116.json",
+    "imageReconciliationSHA256": "4aad95bc9484666a3bcb39b6dbb3335b4feaa5e9c758b3b48681a8a1673ba912",
+    "canonicalMenu": "P15_CANONICAL_CHROME_MENU_CSS_20261116.json",
+    "canonicalMenuSHA256": "98d3d5dbebdfac36e744fa3993b1fc273015371129beceb050b69a250c7ec314",
+    "v1UsedForAcceptance": false
+  },
+  "independentApprovals": {
+    "preapplyCodeReviewSHA256": "f1b45077098086d562086dde316e7cf36e38239ceffa6cdc9f3c7388e45ad0db",
+    "visualReviewSHA256": "9f93a54f447181348bcdd93f82374203da8e2ae626c1a5c78afa45fbe11b7d08"
+  },
+  "blockedPoints": [
+    {
+      "id": "OLD_OFFLINE_CHROMIUM_WEBVIEW_CQW",
+      "status": "NOT_YET_VERIFIED",
+      "blocksThisDecision": false,
+      "blocks": "Portability claim to unspecified older offline Chromium/WebView engines."
+    },
+    {
+      "id": "OEM_PIXEL_PHYSICAL_ORACLE",
+      "status": "HOLD",
+      "blocksThisDecision": false,
+      "blocks": "OEM framebuffer/pixel or calibrated physical-fidelity certification."
+    },
+    {
+      "id": "OEM_RIGHTS_RELEASE_HARDWARE_FIRMWARE",
+      "status": "HOLD",
+      "blocksThisDecision": false,
+      "blocks": "Release approval, hardware validation, firmware-installed claim, rights clearance and OEM certification."
+    },
+    {
+      "id": "NATIVE_ACCESSIBILITY_AND_TRUE_POWER_BLUR",
+      "status": "NOT_ACCEPTED",
+      "blocksThisDecision": false,
+      "blocks": "Windows native Narrator/NVDA/High Contrast and true POWER window.blur acceptance."
+    },
+    {
+      "id": "PHOTO_2016_PROVENANCE",
+      "status": "SOURCE_GAP",
+      "blocksThisDecision": false,
+      "blocks": "Exact 2016 capture/provenance claim because EXIF capture time is missing."
+    }
+  ],
+  "limitations": [
+    "PASS applies to the exact P15 G1/G2 canonical internal geometry and source-integrity scope only.",
+    "V1 canonical screenshot evidence is intentionally preserved as failed/HOLD and is not used for acceptance.",
+    "Stage-to-canonical pixel equality is simulator evidence only; it does not establish OEM photo equivalence or physical certification.",
+    "No test suite, Chrome session, browser, user server or QA server was started, rerun, restarted, killed or modified during this independent post-apply review.",
+    "Only this postreceipt JSON was created by the reviewer."
+  ],
+  "evidenceSHA256": {
+    "stageSourceSeal": "7afd374b89f0ddce597ba9917dfca7d2af532932a205868cc410267f727326e3",
+    "guardAllowlist": "d18f8e7a19f6cb82b03eeaecf8acceb16af578842639374f1658adfebcc7e8ec",
+    "guardBackup": "f73e84c94b73943bc26a4d18778f06de05684f183e1f209111610bf415d03e01",
+    "independentCodeGo": "f1b45077098086d562086dde316e7cf36e38239ceffa6cdc9f3c7388e45ad0db",
+    "independentVisualGo": "9f93a54f447181348bcdd93f82374203da8e2ae626c1a5c78afa45fbe11b7d08",
+    "canonicalApply": "8d0eb84830c3cfb03d4b9b2a707688db2f26786c5c566c2de547a20a93e52337",
+    "canonicalNode": "633e47c92eaab79864a31ed30f96636ba80d65905de63885fd723eaa51eb8e3c",
+    "canonicalPython": "83660e3d44610ac01f1cce70ef9c06b24a9c596419e80e7dbe10a7d3383ac315",
+    "canonicalGeometry": "467454793e7f61728650c61a80aca8a3f733132f9fbe648dc3b2a8f091ec2691",
+    "canonicalChromeSealedV2": "c457bcad0816b3033f0569e3a55d59c53ee1c9b27631a2979d183604a9988c03",
+    "canonicalMenu": "98d3d5dbebdfac36e744fa3993b1fc273015371129beceb050b69a250c7ec314",
+    "stageCanonicalV2ImageReconciliation": "4aad95bc9484666a3bcb39b6dbb3335b4feaa5e9c758b3b48681a8a1673ba912",
+    "originalV1InvalidEvidenceHold": "ea0d2c1eaa2256be3db561722ae6ccc7c335ab3c9cd42e63b496106ad6481842",
+    "p14FinalIntegrity": "195d0737b602196bddb5971964500dabab41d19eaee08b5b620e97f26089e99e",
+    "p14IndependentPostreceipt": "2dfeb190a2160fb4e6f24988fa7d054b2dd0098f14c378901068cef6321b8754",
+    "p15ContinuationReport": "47f435d41cd5add47ee3b870d941d134f1dfcae055e0042a01708c147ae56e2b",
+    "finalIntegrity": "a6aa5038292e5d1d3da20170f9bbed1804ee5262e749cb9b4e5cf53207deafed"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "FCV588_P31_NATIVE_UIA_INVOKE_POWER_V1",
+  "status": "PASS",
+  "forceRendererAccessibility": false,
+  "beforePowerOff": true,
+  "afterPowerOff": false,
+  "afterRunningState": true,
+  "releaseApproval": "HOLD",
+  "afterSignals": [
+    "Tập trung vào máy",
+    "Tập trung vào máy",
+    "FURUNO",
+    "BOOTING"
+  ]
+}

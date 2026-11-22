@@ -1,0 +1,20 @@
+{
+  "schema": "FCV588_P24_CANONICAL_ARCHIVE_FILE_READBACK_V1",
+  "status": "PASS_CANONICAL_OLD_AND_NEW_SIDECAR_FILE_READBACK",
+  "coreReplayEnvelopeV7Unchanged": true,
+  "frozenPreP23SourceSHA256": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d",
+  "oldProfile": "F1-public-reference-22",
+  "oldSelectedContract": "P04_HISTORIC",
+  "oldSessionHash": "f0-fnv1a32-a429fc78",
+  "currentProfile": "F1-public-reference-22",
+  "newSelectedContract": "P23_LOWER_BOTTOM",
+  "newSessionHash": "f0-fnv1a32-1ed9e57e",
+  "rawArchiveWithoutSidecarRejected": true,
+  "rawStateOnlyReplayUnchanged": true,
+  "activeBZBottomFraction": 0.75,
+  "activeBZStartDepthM": 42.5,
+  "hardwareValidated": false,
+  "oemPixelFidelityVerified": false,
+  "archiveBrowserUI": "NOT_PRESENT",
+  "releaseApproval": "HOLD"
+}

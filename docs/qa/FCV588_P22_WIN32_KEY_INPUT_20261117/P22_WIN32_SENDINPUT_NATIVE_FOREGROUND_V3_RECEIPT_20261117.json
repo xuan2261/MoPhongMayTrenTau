@@ -1,0 +1,314 @@
+{
+  "schema": "FCV588_P22_NATIVE_OS_KEY_INJECTION_V3",
+  "dateUTC": "2026-11-17T04:14:10.342418+00:00",
+  "scope": "WIN32_SENDINPUT_INJECTED_KEY_NOT_PHYSICAL_OPERATOR",
+  "port": 4222,
+  "debugPort": 9232,
+  "status": "P22_PASS_WIN32_INJECTED_SPACE_AND_NATIVE_FOCUS_CANCEL_NOT_HUMAN_PHYSICAL",
+  "checks": {
+    "chromeSetForegroundError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+    "chromeWin32Foreground": true,
+    "physicalSpaceInitiallyUp": true,
+    "sendInputKeyDownCount": 1,
+    "osInjectedSpaceDownDelivered": true,
+    "witnessSetForegroundError": null,
+    "witnessWin32Foreground": true,
+    "windowBlurStrict": true,
+    "hasFocusFalse": true,
+    "visibilityHidden": false,
+    "cancelOnce": true,
+    "powerStatusUnchanged": true,
+    "sendInputKeyUpCount": 1,
+    "noExtraBrowserUp": true,
+    "noBrowserKeyupDelivered": true,
+    "spaceReleasedAfterCleanup": true
+  },
+  "errors": [],
+  "parentSHA": {
+    "P21Final": "d28130041496e487f76048e3145f7fb97f475ed9b56d5787aa462ade976fa876",
+    "P21Post": "d2afcc24f0789bba2754f5fd87f60ede20b34e0f1618095ddf8e48256be4e140"
+  },
+  "originalForeground": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "witnessCandidates": [
+    {
+      "hwnd": 272697440,
+      "pid": 30224,
+      "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "foreground": false
+    }
+  ],
+  "debugTarget": "http://127.0.0.1:4222/",
+  "browserVersion": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "chromeCandidates": [
+    {
+      "hwnd": 65145736,
+      "pid": 15712,
+      "title": "FCV588-P22-OWNED-CHROME-OS-KEY-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": false
+    }
+  ],
+  "beforeKey": {
+    "browser": {
+      "hasFocus": true,
+      "visibility": "visible",
+      "active": "key-power",
+      "pressing": false,
+      "count": 0,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15503.100000143051,
+          "focus": false
+        },
+        {
+          "type": "focus",
+          "target": "window",
+          "trusted": true,
+          "ms": 15516.600000143051,
+          "focus": true
+        },
+        {
+          "type": "visibilitychange",
+          "visible": "visible",
+          "ms": 15531.200000047684
+        },
+        {
+          "type": "focus",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15557.900000095367,
+          "focus": true
+        }
+      ]
+    },
+    "win32": {
+      "hwnd": 65145736,
+      "pid": 15712,
+      "title": "FCV588-P22-OWNED-CHROME-OS-KEY-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": true
+    }
+  },
+  "afterNativeKeyDown": {
+    "browser": {
+      "hasFocus": true,
+      "visibility": "visible",
+      "active": "key-power",
+      "pressing": true,
+      "count": 1,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15503.100000143051,
+          "focus": false
+        },
+        {
+          "type": "focus",
+          "target": "window",
+          "trusted": true,
+          "ms": 15516.600000143051,
+          "focus": true
+        },
+        {
+          "type": "visibilitychange",
+          "visible": "visible",
+          "ms": 15531.200000047684
+        },
+        {
+          "type": "focus",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15557.900000095367,
+          "focus": true
+        },
+        {
+          "type": "keydown",
+          "key": " ",
+          "code": "",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15589.100000143051
+        }
+      ]
+    },
+    "win32": {
+      "hwnd": 65145736,
+      "pid": 15712,
+      "title": "FCV588-P22-OWNED-CHROME-OS-KEY-20261117 - Google Chrome",
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "foreground": true
+    }
+  },
+  "afterNativeFocusSwitch": {
+    "browser": {
+      "hasFocus": false,
+      "visibility": "visible",
+      "active": "key-power",
+      "pressing": false,
+      "count": 2,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15503.100000143051,
+          "focus": false
+        },
+        {
+          "type": "focus",
+          "target": "window",
+          "trusted": true,
+          "ms": 15516.600000143051,
+          "focus": true
+        },
+        {
+          "type": "visibilitychange",
+          "visible": "visible",
+          "ms": 15531.200000047684
+        },
+        {
+          "type": "focus",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15557.900000095367,
+          "focus": true
+        },
+        {
+          "type": "keydown",
+          "key": " ",
+          "code": "",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15589.100000143051
+        },
+        {
+          "type": "blur",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15595.400000095367,
+          "focus": false
+        },
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15596.799999952316,
+          "focus": false
+        }
+      ]
+    },
+    "win32": {
+      "hwnd": 272697440,
+      "pid": 30224,
+      "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "foreground": true
+    }
+  },
+  "visibilityStateObservationNotGate": "Visibility is not a POWER cancel source contract or P11 acceptance requirement; window-target blur and document.hasFocus false are required. Preserve visibilityHidden=false if observed.",
+  "osKeyUpTargetWin32": {
+    "hwnd": 272697440,
+    "pid": 30224,
+    "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "foreground": true
+  },
+  "afterNativeKeyUp": {
+    "browser": {
+      "hasFocus": false,
+      "visibility": "visible",
+      "active": "key-power",
+      "pressing": false,
+      "count": 2,
+      "status": "POWER OFF",
+      "events": [
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15503.100000143051,
+          "focus": false
+        },
+        {
+          "type": "focus",
+          "target": "window",
+          "trusted": true,
+          "ms": 15516.600000143051,
+          "focus": true
+        },
+        {
+          "type": "visibilitychange",
+          "visible": "visible",
+          "ms": 15531.200000047684
+        },
+        {
+          "type": "focus",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15557.900000095367,
+          "focus": true
+        },
+        {
+          "type": "keydown",
+          "key": " ",
+          "code": "",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15589.100000143051
+        },
+        {
+          "type": "blur",
+          "target": "key-power",
+          "trusted": true,
+          "ms": 15595.400000095367,
+          "focus": false
+        },
+        {
+          "type": "blur",
+          "target": "window",
+          "trusted": true,
+          "ms": 15596.799999952316,
+          "focus": false
+        }
+      ]
+    },
+    "win32": {
+      "hwnd": 272697440,
+      "pid": 30224,
+      "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "foreground": true
+    }
+  },
+  "originalForegroundRestored": true,
+  "foregroundAfterCleanup": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "portsClosed": {
+    "server4222": true,
+    "debug9232": true,
+    "user4173": true
+  },
+  "canonicalSourceMatched": 50,
+  "parentP21FinalUnchanged": true,
+  "ownedProfileRemoved": true
+}

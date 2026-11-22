@@ -1,0 +1,73 @@
+{
+  "schema": "MoPhongMayTrenTauWorkspaceCleanupFinalV2",
+  "status": "VERIFIED_LOCAL_WORKSPACE_CLEANUP",
+  "date": "2026-11-22",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "preCountBeforeThisReport": 3885,
+  "preBytesBeforeThisReport": 2068303498,
+  "historicRootsArchived": 40,
+  "archivedFileCount": 19502,
+  "deduplicatedBlobCount": 2950,
+  "archiveSHA256": "1F9979B58F8282AA39385B8027B3E013F81A2DDA733D499C2456D38DD522B94A",
+  "archivePath": "staging/github-prep-20261122/HISTORICAL_STAGES_DEDUP_20261122.zip",
+  "fullRestoredAndVerifiedFiles": 19502,
+  "ntfsJunctionsRecorded": 24,
+  "ntfsJunctionsRestoredP13toP15": 3,
+  "additionalChromiumProfileFilesRemoved": 289,
+  "nodeTests": "618/618 PASS",
+  "pythonTests": "13/13 PASS",
+  "electronBuild": "58/58 PASS",
+  "gitPhysicalFilesIgnored": 0,
+  "largeFilesHandledByLFS": 7,
+  "filenameSensitiveCandidates": 0,
+  "githubUploaded": false,
+  "gitRootInitialized": false,
+  "releaseApproval": "HOLD",
+  "stagingRemaining": [
+    {
+      "name": "fcv588-electron-installer-p30-20261121",
+      "bytes": 366040727,
+      "fileCount": 201
+    },
+    {
+      "name": "fcv588-electron-poc-20261121",
+      "bytes": 1048035,
+      "fileCount": 123
+    },
+    {
+      "name": "fcv588-native-accessibility-p31-20261121",
+      "bytes": 122619130,
+      "fileCount": 129
+    },
+    {
+      "name": "fcv588-p32-host-qa-20261121",
+      "bytes": 20105,
+      "fileCount": 3
+    },
+    {
+      "name": "fcv588-p33-native-at-20261121",
+      "bytes": 17248,
+      "fileCount": 2
+    },
+    {
+      "name": "fcv588-p35-power-brill-a11y-20261121",
+      "bytes": 499666,
+      "fileCount": 62
+    },
+    {
+      "name": "fcv588-p36-live-bottom-zoom-20261122",
+      "bytes": 504045,
+      "fileCount": 56
+    },
+    {
+      "name": "github-prep-20261122",
+      "bytes": 905913515,
+      "fileCount": 22
+    }
+  ],
+  "limitations": [
+    "Publishing license and privacy review pending",
+    "Full source-code and OEM hardware equivalence not accepted",
+    "GitHub remote/repository target not supplied"
+  ]
+}

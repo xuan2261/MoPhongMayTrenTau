@@ -1,0 +1,66 @@
+{
+  "scope": "CHROME_REAL_DOM_POINTER_KEYBOARD_NOT_HARDWARE_OR_SCREENREADER",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-v56-d15-tab-ui-20261031",
+  "origin": "http://127.0.0.1:4286",
+  "viewports": [
+    {
+      "viewport": [
+        1912,
+        970
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError('expected compact tabs')",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError('expected compact tabs')",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "status": "FAIL_PRESERVED",
+      "error": "AssertionError('expected compact tabs')",
+      "pageErrors": []
+    }
+  ],
+  "errors": [
+    {
+      "viewport": [
+        1912,
+        970
+      ],
+      "error": "AssertionError('expected compact tabs')"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "error": "AssertionError('expected compact tabs')"
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "error": "AssertionError('expected compact tabs')"
+    },
+    {
+      "noJavascript": "AssertionError()"
+    }
+  ],
+  "noJavascript": {
+    "tablistHidden": null,
+    "panels": [],
+    "fixtures": true,
+    "lessons": true
+  }
+}

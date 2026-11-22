@@ -1,0 +1,11 @@
+{
+  "schema": "FCV588_P24_DISPLAY_SIDECAR_RED_V1",
+  "stageOnly": true,
+  "preP23FrozenProfile22SHA256": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d",
+  "testSHA256": "ed3e16ccebb3ff7cd8538ef0ce9a7f6b2f894f0b378d6b286e97a20f19244785",
+  "exitCode": 1,
+  "stdoutTail": "TAP version 13\n# node:internal/modules/esm/resolve:274\n#     throw new ERR_MODULE_NOT_FOUND(\n#           ^\n# Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\\\\Work\\\\MoPhongMayTrenTau\\\\staging\\\\fcv588-p24-historical-display-contract-20261117\\\\src\\\\devices\\\\fcv588\\\\archive-compat.mjs' imported from C:\\\\Work\\\\MoPhongMayTrenTau\\\\staging\\\\fcv588-p24-historical-display-contract-20261117\\\\test\\\\fcv588-p24-zoom-archive.test.mjs\n#     at finalizeResolution (node:internal/modules/esm/resolve:274:11)\n#     at moduleResolve (node:internal/modules/esm/resolve:859:10)\n#     at defaultResolve (node:internal/modules/esm/resolve:983:11)\n#     at \\#cachedDefaultResolve (node:internal/modules/esm/loader:731:20)\n#     at ModuleLoader.resolve (node:internal/modules/esm/loader:708:38)\n#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:310:38)\n#     at ModuleJob._link (node:internal/modules/esm/module_job:182:49) {\n#   code: 'ERR_MODULE_NOT_FOUND',\n#   url: 'file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p24-historical-display-contract-20261117/src/devices/fcv588/archive-compat.mjs'\n# }\n# Node.js v22.22.0\n# Subtest: test\\\\fcv588-p24-zoom-archive.test.mjs\nnot ok 1 - test\\\\fcv588-p24-zoom-archive.test.mjs\n  ---\n  duration_ms: 133.2287\n  type: 'test'\n  location: 'C:\\\\Work\\\\MoPhongMayTrenTau\\\\staging\\\\fcv588-p24-historical-display-contract-20261117\\\\test\\\\fcv588-p24-zoom-archive.test.mjs:1:1'\n  failureType: 'testCodeFailure'\n  exitCode: 1\n  signal: ~\n  error: 'test failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 146.0817\n",
+  "stderrTail": "",
+  "sourceAbsent": true,
+  "canonicalUnchanged": true
+}

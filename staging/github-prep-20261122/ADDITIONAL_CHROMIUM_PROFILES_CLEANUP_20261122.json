@@ -1,0 +1,33 @@
+{
+  "schema": "RegenerableChromiumProfilesFinalCleanup",
+  "status": "VERIFIED_REGENERABLE_TEST_PROFILES_DELETED_AFTER_QA",
+  "date": "2026-11-22",
+  "candidateCount": 4,
+  "fileCount": 289.0,
+  "bytes": 34163828,
+  "rows": [
+    {
+      "bytes": 8623094,
+      "count": 72,
+      "path": "docs/qa/FCV588_ELECTRON_P33_NARRATOR_AT_20261121/p33-uia-profile-v1"
+    },
+    {
+      "bytes": 8623094,
+      "count": 72,
+      "path": "docs/qa/FCV588_ELECTRON_P33_NARRATOR_AT_20261121/p33-uia-profile-v2"
+    },
+    {
+      "bytes": 8413084,
+      "count": 70,
+      "path": "docs/qa/FCV588_ELECTRON_POC_20261121/smoke-profile-v1"
+    },
+    {
+      "bytes": 8504556,
+      "count": 75,
+      "path": "docs/qa/FCV588_ELECTRON_POC_20261121/zip-smoke-profile-v1"
+    }
+  ],
+  "reason": "Test-owned Chromium user-data folders with Local State/Trust Tokens; no receipts or original source files",
+  "nodeQA": "618/618 PASS",
+  "pythonQA": "13/13 PASS"
+}

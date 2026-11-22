@@ -1,0 +1,5 @@
+DRY_RUN_PASS P03_parent_39/39; P04_stage_39; runtime_delta_5; test_delta_5; Node_541; Python_13; Chrome_7
+APPLY_DISABLED_THIS_INVOCATION; no canonical bytes written
+PLANNED_PATHS=['src/devices/fcv588/display-layout.mjs', 'src/devices/fcv588/echo-projection.mjs', 'test/fcv588-photo-display.test.mjs', 'test/fcv588-photo-modes.test.mjs', 'test/fcv588-public-display-widgets.test.mjs', 'test/fcv588-public-display.test.mjs', 'test/web-layout.test.mjs', 'web/app.mjs', 'web/lcd-presentation.mjs', 'web/styles.css']
+P04_STAGE_RECEIPT_SHA256=d66a2f24561662fd897223cc1a6a53edd97c2909890b8d3131334e0f97694bf6
+P04_BROWSER_SHA256=63d916faea9087bd6cc7c201d49c252c9b73a41dec3d69ac75285759bbafaa7f

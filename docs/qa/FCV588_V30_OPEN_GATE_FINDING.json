@@ -1,0 +1,65 @@
+{
+  "observedAtUtc": "2026-10-15T23:53:25.655Z",
+  "status": "CONFIRMED_OPEN_CONTROL_STATE_FINDING_NOT_A_PASS",
+  "scope": "IN_MEMORY_EXISTING_REDUCER_SOURCE_OPTION_REVOCATION",
+  "modelSha256": "d5b53d83552d90a35ce44a9e8e74bc5167b78d5d193a96751bbe538666ce49bb",
+  "findings": [
+    {
+      "kind": "menu",
+      "before": {
+        "option": true,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": true,
+        "worldTick": 4
+      },
+      "revoked": {
+        "option": false,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": false,
+        "worldTick": 4
+      },
+      "regranted": {
+        "option": true,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": true,
+        "worldTick": 4
+      }
+    },
+    {
+      "kind": "installation",
+      "before": {
+        "option": true,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": true,
+        "worldTick": 4
+      },
+      "revoked": {
+        "option": false,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": false,
+        "worldTick": 4
+      },
+      "regranted": {
+        "option": true,
+        "committed": "Off",
+        "editing": true,
+        "draft": "On",
+        "editorVisible": true,
+        "worldTick": 4
+      }
+    }
+  ],
+  "repairStatus": "NOT_IMPLEMENTED_REQUIRES_REPLAY_PROFILE_COMPATIBILITY_DECISION",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

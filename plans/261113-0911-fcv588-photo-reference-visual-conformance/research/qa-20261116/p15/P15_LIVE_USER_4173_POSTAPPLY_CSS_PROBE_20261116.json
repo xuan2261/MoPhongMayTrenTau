@@ -1,0 +1,46 @@
+{
+  "schema": "P15_LIVE_USER_SERVER_POSTAPPLY_CSS_READONLY_V1",
+  "status": "PASS",
+  "server": "127.0.0.1:4173",
+  "cssSHA256": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+  "cssHTTPStatus": 200,
+  "cssExactCanonical": true,
+  "indexHTTPStatus": 200,
+  "indexExactCanonical": true,
+  "referenceOEMPhotoDeniedHTTP404": [
+    {
+      "photo": "dual.jpg",
+      "http": 404
+    },
+    {
+      "photo": "giaoDien.jpg",
+      "http": 404
+    },
+    {
+      "photo": "hf.jpg",
+      "http": 404
+    },
+    {
+      "photo": "lf.jpg",
+      "http": 404
+    },
+    {
+      "photo": "nav1.jpg",
+      "http": 404
+    },
+    {
+      "photo": "nav2.jpg",
+      "http": 404
+    },
+    {
+      "photo": "zoom.jpg",
+      "http": 404
+    },
+    {
+      "photo": "zoom2.jpg",
+      "http": 404
+    }
+  ],
+  "serverRestarted": false,
+  "runtimeFilesModified": false
+}

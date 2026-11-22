@@ -1,0 +1,61 @@
+{
+  "schema": "FCV588_P36_LIVE_BOTTOM_ZOOM_FINAL_INTEGRITY_V1",
+  "timeUtc": "2026-11-22T02:50:04.2603984Z",
+  "decision": "PASS_BOUNDED_LIVE_BOTTOM_ZOOM_QA_ONLY",
+  "releaseApproval": "HOLD",
+  "sourceManifestSha256": "4b4cc22dfb946079da0a68c1fda4a1a6408960afa99e4840027facaef45b7869",
+  "canonicalAndStageRuntimeFilesSHAEqual": "54/54",
+  "canonicalProductFilesModified": 0,
+  "parentP28ToP32SHA": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30_FINAL": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30_POST": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5",
+    "P31_FINAL": "27dc44249a425f01b6848f58467a88fc02fd90aaa0aa3ec4ad7cc61e8eb60a36",
+    "P31_POST": "3b535d1eee65b25a91f7f8c542577ffbb3f287af2bc4630ba6b247310728c32c",
+    "P32_FINAL": "1146a3b48d3afe7f1ce1744d5ed78a3f78567b30184284e36a01df501afbe0b1",
+    "P32_POST": "83c0e68a372dc137ddf7608b5b5448961720b97875db4c87a5876133eedbcbad"
+  },
+  "parentP33PostSHA256": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630",
+  "parentP34PostSHA256": "a1db29e8aaf1b94b7ae1de54263eee6b1cef182a1002278aed46d15fa1dc17f0",
+  "parentP35PostSHA256": "937ca3a539e62c8746a19f78edf380d8453b2e8cd205afe512e07d34db369b99",
+  "artifactSha256": {
+    "finalReport": "384c26e2ce1cc6c31a9692d3a2acf1958ac7003be070a323e49ab47d2fe0877c",
+    "canonicalNode": "e3f4ff74e2015fb9ede8caa381be892ceceb9b23f20b10f4f4a40c80a6fee48e",
+    "stageBrowserReceipt": "de1f07343c60679465ba3e811ed5c0cb300aa82b43f8bd9711ca889b122b1155",
+    "stageBrowserExecutionLog": "e825a969b2e99b67714b3cfdd6cf16359292f1747376962c0b7324047c70e57e",
+    "stageBrowserRunner": "f0cb354cdc8d9484a827843273d0550ee3857a111f4886f7e19a00b4a30de5c3",
+    "manifest": "4b4cc22dfb946079da0a68c1fda4a1a6408960afa99e4840027facaef45b7869",
+    "installedElectronExe": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+    "installedElectronAsar": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190"
+  },
+  "screenshotsSha256": {
+    "P36_STAGE_LF_ZOOM_1366x768_20261122.png": "87a024f0de63a64c5b7b502a0e4ce5e77abf598c3f867465def18148f2a7113f",
+    "P36_STAGE_HF_ZOOM_1366x768_20261122.png": "5dbc811492db0f8b6d014eb23fb876edb65e116877467e2627ac2d9ae025dbfc",
+    "P36_STAGE_LF_ZOOM_1920x1080_20261122.png": "6cadb949ef875e2270255259e7e2ac3717a5f7461080701571ac8c0f1921dd2f",
+    "P36_STAGE_HF_ZOOM_1920x1080_20261122.png": "ff4fd0cf99b444714506c617f1101f1b54780be09be5dcc211a28fb8b157bc30"
+  },
+  "verified": {
+    "canonicalTargetedNode": "7/7",
+    "chromeModesAndViewports": "4/4",
+    "actualSourceResponseBodies": "208/208",
+    "photoOEMRoutesDenied": "8/8",
+    "powerLongHoldOff": "PASS",
+    "chromeJSAndExternalErrors": 0,
+    "qaPort4296Closed": true,
+    "userPort4173Pid": 1204,
+    "installedElectronModified": false,
+    "humanNarratorSpokenVerified": false,
+    "phase6": "OPEN",
+    "firmwareInstalled": "UNKNOWN",
+    "hardwareValidated": false
+  },
+  "limitations": [
+    "Synthetic classroom only",
+    "Chrome viewport not physical native monitor",
+    "No exact OEM pixel/Furuno hardware validation",
+    "Narrator audible speech not checked"
+  ]
+}

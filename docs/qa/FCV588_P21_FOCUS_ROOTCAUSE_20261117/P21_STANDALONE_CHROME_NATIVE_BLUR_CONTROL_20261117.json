@@ -1,0 +1,38 @@
+{
+  "schema": "FCV588_P21_STANDALONE_CHROME_WIN32_FOCUS_V1",
+  "createdAt": "2026-11-17T03:54:58.994682+00:00",
+  "scope": "DIRECT_CHROME_SPAWNED_INDEPENDENT_OF_PLAYWRIGHT_CONTROL_WITH_CDP_DIAGNOSTICS_NOT_HUMAN_PHYSICAL_KEY",
+  "status": "HARNESS_ERROR",
+  "port": 4221,
+  "debugPort": 9231,
+  "stages": {},
+  "errors": [
+    "AssertionError('FCV588 page missing')"
+  ],
+  "p20FinalSHA256": "32e27b4e7f0d2b961ce35b0b176abe78385f663790563dd75f7a1ccdc7bc2759",
+  "p20PostSHA256": "0fd9e5ffba3d941c23962810b3c75ffdee20a4068776779152cba09b8d461171",
+  "originalForeground": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "cdpEndpointLocalhostOnly": true,
+  "pageReady": false,
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P21_FOCUS_ROOTCAUSE_20261117\\p21_native_chrome_focus_control.py\", line 130, in main\n    assert R['pageReady'],'FCV588 page missing'\nAssertionError: FCV588 page missing\n",
+  "originalForegroundRestored": true,
+  "foregroundAfterCleanup": {
+    "hwnd": 5769834,
+    "pid": 25584,
+    "title": "Tiếp tục kiểm chứng P16 - Helium",
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "foreground": true
+  },
+  "qaWebClosed": true,
+  "debugPortClosed": true,
+  "protected4173Listening": true,
+  "sourcePostimageMatched": 50,
+  "p20FinalUnchanged": true,
+  "profileRemoved": true
+}

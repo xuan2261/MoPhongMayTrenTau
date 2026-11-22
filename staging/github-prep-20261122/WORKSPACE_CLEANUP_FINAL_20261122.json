@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-22",
+  "status": "VERIFIED_LOCAL_CLEANUP_NO_GITHUB_UPLOAD",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "physicalFilesBeforeReceipt": 4172,
+  "physicalBytesBeforeReceipt": 2102464973,
+  "historicalStageRootsRetired": 40,
+  "archivedFilesSHA256Verified": 19502,
+  "archivedJunctionRecords": 24,
+  "uniqueArchivedSHA256Blobs": 2950,
+  "archiveSHA256": "1F9979B58F8282AA39385B8027B3E013F81A2DDA733D499C2456D38DD522B94A",
+  "archivePath": "staging/github-prep-20261122/HISTORICAL_STAGES_DEDUP_20261122.zip",
+  "nodeTests": "618/618 PASS",
+  "pythonTests": "13/13 PASS",
+  "electronSourceBundle": "58/58 PASS",
+  "gitAudit": "0 ignored surviving physical files",
+  "lfsLargeFileChecks": "7/7 PASS",
+  "sensitiveFilenameCandidates": 6,
+  "githubUploaded": false,
+  "releaseApproval": "HOLD",
+  "rootGitInitialized": false
+}

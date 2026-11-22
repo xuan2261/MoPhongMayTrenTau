@@ -1,0 +1,181 @@
+{
+  "verified_at_utc": "2026-10-13T22:16:16.734418+00:00",
+  "status": "PASS_AVAILABLE_ASSETS_WITH_GAPS",
+  "verified_pdf_files": 24,
+  "verified_zip_files": 2,
+  "verified_total_bytes": 197171462,
+  "known_acquisition_gaps": [
+    {
+      "id": "FCV588_OME23890B2_2018",
+      "reason": "non-PDF response"
+    },
+    {
+      "id": "AIS_R5_SUPREME_FCC_OLD",
+      "reason": "403 Client Error: Forbidden for url: https://fccid.io/QWZR5-AIS/User-Manual/Manual-1980818.pdf"
+    },
+    {
+      "id": "AIS_R5_SOLID_FCC_OLD",
+      "reason": "403 Client Error: Forbidden for url: https://fccid.io/QWZR5-AIS/User-Manual/manual-1791683.pdf"
+    }
+  ],
+  "validation_failures": [],
+  "verified_paths_and_hashes": [
+    {
+      "file": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf",
+      "size": 19384609,
+      "sha256": "3003e23b9d1eda509ceb968130249fe02aa279c2efb3cf900dde54ab9d709cd3",
+      "pages": 88
+    },
+    {
+      "file": "sources/manuals/FCV-588/FURUNO_FCV588_FCV628_Software_History.pdf",
+      "size": 58225,
+      "sha256": "aa0d7b9e703d26d533a88cbaedff6a1d2e90ac3dbec923ca78d45fa2953dbbe4",
+      "pages": 1
+    },
+    {
+      "file": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Guide_Multilingual.pdf",
+      "size": 13723882,
+      "sha256": "46336e6562c7491a5406c06ed015bf5f3177143c90c4ddba3e8f6f4cedda77b4",
+      "pages": 26
+    },
+    {
+      "file": "sources/manuals/FCV-588/FURUNO_FCV588_Brochure_Manufacturer_Reference.pdf",
+      "size": 1635693,
+      "sha256": "2f10fab1b47cfd9019ef2d1975e295a2edbcc5ecc4c4baeaa2eab76de7855498",
+      "pages": 6
+    },
+    {
+      "file": "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Manual_OME35190U5_2024.pdf",
+      "size": 6243423,
+      "sha256": "f6a3111610a710b0128ebd5044ae0d70b6ee924e05f3df79c34889f139fa2d69",
+      "pages": 325
+    },
+    {
+      "file": "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Guide.pdf",
+      "size": 282258,
+      "sha256": "e92801f729d6773833a270f3e805bb70e6d80b1857d104255504a820859cc23f",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev14.pdf",
+      "size": 2586521,
+      "sha256": "4c70e4bf90cdbf1497d31646128d99cd61daf71cd6ec7ded3df9312f7fa2e151",
+      "pages": 86
+    },
+    {
+      "file": "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev15.pdf",
+      "size": 3451154,
+      "sha256": "b8a89b3828110a5ded06c56e49cece0a885775cb7a59fb973df1e26d5fddb6b3",
+      "pages": 88
+    },
+    {
+      "file": "sources/manuals/MDC-2060/KODEN_MDC2000_Quick_Reference_Rev00.pdf",
+      "size": 363308,
+      "sha256": "46c462d80a674654ce522595b19f48965b938c26e493cbbba8d027577e8404ec",
+      "pages": 2
+    },
+    {
+      "file": "sources/manuals/NS4000/TRANSAS_NS4000_4100_User_Manual_v2.00.009_MIRROR.pdf",
+      "size": 19292000,
+      "sha256": "85d725891e882cd486003359eafd1fd71b11d45e07bfc104bf6f4eb653b723f9",
+      "pages": 311
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/R5_SUPREME_Documentation_Package_J1.zip",
+      "size": 68247956,
+      "sha256": "3f4e2e088492c26a3d22f35699c5701320b2dad30b652f6e8b719119a7aed65d",
+      "archive": true
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-300_L1_R5_Supreme_AIS_Transponder_System_Manual.pdf",
+      "size": 9064912,
+      "sha256": "75abb3edeffb73e57ebbffe42eb516d2a5b9763caba980d8a7c31c4bf31b8798",
+      "pages": 145
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-383_H1_R5_Supreme_Navigation_System_MkII-MkIII_Manual.pdf",
+      "size": 13112864,
+      "sha256": "c45306c2e2bbd03ebfda6f5fef1e74376683940d3668dc23eee894d7faada93f",
+      "pages": 203
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-363_D2_R5_SUPREME_AIS_Installation_Short_Instruction.pdf",
+      "size": 426817,
+      "sha256": "6b240ce585a8877a11fe8cd93259fc38d9acc26c063e196869764c52c56884c0",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-364_E1_R5_SUPREME_AIS_Operator_Short_Instruction.pdf",
+      "size": 564238,
+      "sha256": "f2f8d9e3653ec1b0a0d21a1f1841beffaadcc39443f9781fe468721b93e6290e",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-385_C1_R5_Supreme_Navigation_System_MkII-MkIII_Installation_Short_Instruction.pdf",
+      "size": 997972,
+      "sha256": "78a010f27b4922702d8c3cce409249d51caf621a67059587b83ccb6194eb3480",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-386_C1_R5_Supreme_Navigation_System_MkII-MkII_Operator_Short_Instruction.pdf",
+      "size": 1200418,
+      "sha256": "2864dced18c4c7dbd91362738b4ac0162ae228f881bfb452a542eb7c32b11643",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/R5_SOLID_Documentation_Package_J1.zip",
+      "size": 22838197,
+      "sha256": "452fdaccdf0553d87bb55437e1d6e02d9e97fb759ce05bd8500bd92a4eff44cd",
+      "archive": true
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-200_N1_R5_Solid_AIS_Transponder_System_Manual.pdf",
+      "size": 5461224,
+      "sha256": "7142605ef19d69181f4dc6c52593a56968e1620b50f2598b2784bd3112b75258",
+      "pages": 107
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF",
+      "size": 25536,
+      "sha256": "ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b",
+      "pages": 1
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-201_E1_R5_Solid_Installation_Short_Instruction.pdf",
+      "size": 520828,
+      "sha256": "c891ca7a9f905eda8b8ab2d855576cf9f31638a823af93e375b737c2a36d5ae4",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-202_E1_R5_Solid_Operator_Short_Instruction.pdf",
+      "size": 597707,
+      "sha256": "a66f0082f5a5df577434b6b8ba7bf223659df63c111b8c0d72d21c783f948918",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-200_N1_R5_Solid_AIS_Transponder_System_Manual-DE.pdf",
+      "size": 5664856,
+      "sha256": "d4810cb85f9659c6456728704607619668e80f7f1fcb3922f8f39717c7937821",
+      "pages": 110
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF",
+      "size": 25536,
+      "sha256": "ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b",
+      "pages": 1
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-201_E1_R5_Solid_Installation_Short_Instruction-DE.pdf",
+      "size": 593360,
+      "sha256": "3abd8bdfd77d5ed380988378586a1487af4f891bc92fedb9e6712ed72989eecd",
+      "pages": 4
+    },
+    {
+      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-202_E1_R5_Solid_Operator_Short_Instruction-DE.pdf",
+      "size": 807968,
+      "sha256": "5fd654eb6a7dbd9e0b047b1d7882772090a7c6f9fc0675bed2753b0a2d4ad522",
+      "pages": 4
+    }
+  ],
+  "not_an_approval_to_redistribute": true
+}

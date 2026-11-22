@@ -1,0 +1,298 @@
+TAP version 13
+# Subtest: student console explicitly displays the three-part public-reference disclaimer
+ok 1 - student console explicitly displays the three-part public-reference disclaimer
+  ---
+  duration_ms: 1.6266
+  type: 'test'
+  ...
+# Subtest: no active profile or source asset asserts certified hardware or redistribution rights
+ok 2 - no active profile or source asset asserts certified hardware or redistribution rights
+  ---
+  duration_ms: 5.9448
+  type: 'test'
+  ...
+# Subtest: public lesson decisions require authoritative source, verified implementation and browser evidence
+ok 3 - public lesson decisions require authoritative source, verified implementation and browser evidence
+  ---
+  duration_ms: 1.0171
+  type: 'test'
+  ...
+# Subtest: every available lesson is explicitly training-only and source referenced
+ok 4 - every available lesson is explicitly training-only and source referenced
+  ---
+  duration_ms: 2.2004
+  type: 'test'
+  ...
+# Subtest: MODE lesson passes on actual deterministic recorded transitions and replay
+ok 5 - MODE lesson passes on actual deterministic recorded transitions and replay
+  ---
+  duration_ms: 19.2382
+  type: 'test'
+  ...
+# Subtest: missing required action is not graded PASS even if mode field happens to match
+ok 6 - missing required action is not graded PASS even if mode field happens to match
+  ---
+  duration_ms: 5.2476
+  type: 'test'
+  ...
+# Subtest: teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+ok 7 - teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+  ---
+  duration_ms: 6.3446
+  type: 'test'
+  ...
+# Subtest: scoring a new lesson attempt cannot credit actions or UI time from before start
+ok 8 - scoring a new lesson attempt cannot credit actions or UI time from before start
+  ---
+  duration_ms: 9.068
+  type: 'test'
+  ...
+# Subtest: a fresh lesson attempt with new events passes from its own recorded sequence
+ok 9 - a fresh lesson attempt with new events passes from its own recorded sequence
+  ---
+  duration_ms: 8.4056
+  type: 'test'
+  ...
+# Subtest: waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+ok 10 - waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+  ---
+  duration_ms: 10.2963
+  type: 'test'
+  ...
+# Subtest: D15 training score refuses forged device state or altered event sequence, even when probes match
+ok 11 - D15 training score refuses forged device state or altered event sequence, even when probes match
+  ---
+  duration_ms: 5.6641
+  type: 'test'
+  ...
+# Subtest: D15 scoring ignores inherited lesson state without a new event in the current attempt
+ok 12 - D15 scoring ignores inherited lesson state without a new event in the current attempt
+  ---
+  duration_ms: 5.001
+  type: 'test'
+  ...
+# Subtest: D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+ok 13 - D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+  ---
+  duration_ms: 8.3583
+  type: 'test'
+  ...
+# Subtest: D15 rejects a stale lesson-start fingerprint from another session with the same event count
+ok 14 - D15 rejects a stale lesson-start fingerprint from another session with the same event count
+  ---
+  duration_ms: 5.1095
+  type: 'test'
+  ...
+# Subtest: D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+ok 15 - D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+  ---
+  duration_ms: 4.2662
+  type: 'test'
+  ...
+# Subtest: D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+ok 16 - D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+  ---
+  duration_ms: 6.9536
+  type: 'test'
+  ...
+# Subtest: D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+ok 17 - D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+  ---
+  duration_ms: 19.8426
+  type: 'test'
+  ...
+# Subtest: D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+ok 18 - D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+  ---
+  duration_ms: 8.1804
+  type: 'test'
+  ...
+# Subtest: D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+ok 19 - D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+  ---
+  duration_ms: 21.2903
+  type: 'test'
+  ...
+# Subtest: D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+ok 20 - D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+  ---
+  duration_ms: 11.6172
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+ok 21 - D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+  ---
+  duration_ms: 22.2096
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+ok 22 - D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+  ---
+  duration_ms: 29.9445
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+ok 23 - D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+  ---
+  duration_ms: 13.9861
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+ok 24 - D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+  ---
+  duration_ms: 13.3908
+  type: 'test'
+  ...
+# Subtest: public trace accounts for 64 FCV operator features and separate teacher D15
+ok 25 - public trace accounts for 64 FCV operator features and separate teacher D15
+  ---
+  duration_ms: 2.4256
+  type: 'test'
+  ...
+# Subtest: public feature claims never overwrite real-device approval and resolve evidence
+ok 26 - public feature claims never overwrite real-device approval and resolve evidence
+  ---
+  duration_ms: 0.8474
+  type: 'test'
+  ...
+# Subtest: no untested operator behavior is promoted to public-reference conformance
+ok 27 - no untested operator behavior is promoted to public-reference conformance
+  ---
+  duration_ms: 0.3076
+  type: 'test'
+  ...
+# Subtest: V36: source changes are discrete; first render is silent
+ok 28 - V36: source changes are discrete; first render is silent
+  ---
+  duration_ms: 2.8372
+  type: 'test'
+  ...
+# Subtest: V36: world tick changes age but not announcement or stored state
+ok 29 - V36: world tick changes age but not announcement or stored state
+  ---
+  duration_ms: 1.3485
+  type: 'test'
+  ...
+# Subtest: V36: revoke emits a single human-readable D14 status change
+ok 30 - V36: revoke emits a single human-readable D14 status change
+  ---
+  duration_ms: 0.6063
+  type: 'test'
+  ...
+# Subtest: V36: stale threshold notifies once, never on every expired tick
+ok 31 - V36: stale threshold notifies once, never on every expired tick
+  ---
+  duration_ms: 0.5022
+  type: 'test'
+  ...
+# Subtest: V36: D09 grant/revoke and D14 exclusion combine into one announcement
+ok 32 - V36: D09 grant/revoke and D14 exclusion combine into one announcement
+  ---
+  duration_ms: 0.6192
+  type: 'test'
+  ...
+# Subtest: V36: malformed previous rows fail closed instead of announcing
+ok 33 - V36: malformed previous rows fail closed instead of announcing
+  ---
+  duration_ms: 0.3679
+  type: 'test'
+  ...
+# Subtest: V36: three named h4 articles and one off-device polite live status
+ok 34 - V36: three named h4 articles and one off-device polite live status
+  ---
+  duration_ms: 10.397
+  type: 'test'
+  ...
+# Subtest: V36: D15 typography is rem-based without editing OEM LCD CSS
+ok 35 - V36: D15 typography is rem-based without editing OEM LCD CSS
+  ---
+  duration_ms: 1.4862
+  type: 'test'
+  ...
+# Subtest: V36: app announces only semantic changes, without timers or FCV input
+ok 36 - V36: app announces only semantic changes, without timers or FCV input
+  ---
+  duration_ms: 2.3521
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 37 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.7188
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 38 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.3941
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 39 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.3835
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 40 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 2.9568
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 41 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 3.7828
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 42 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 1.7433
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 43 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.6832
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 44 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.5186
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 45 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.358
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 46 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.6707
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 47 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.4706
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 48 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.5268
+  type: 'test'
+  ...
+1..48
+# tests 48
+# suites 0
+# pass 48
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 392.606

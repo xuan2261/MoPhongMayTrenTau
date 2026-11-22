@@ -1,0 +1,262 @@
+TAP version 13
+# Subtest: first MODE detent opens selection without immediate effective mode switch
+ok 1 - first MODE detent opens selection without immediate effective mode switch
+  ---
+  duration_ms: 7.3173
+  type: 'test'
+  ...
+# Subtest: UI clock expires MODE independently of paused world and is replay-deterministic
+ok 2 - UI clock expires MODE independently of paused world and is replay-deterministic
+  ---
+  duration_ms: 8.3817
+  type: 'test'
+  ...
+# Subtest: public reducer revision rejects replay envelopes bound to F0 semantics
+ok 3 - public reducer revision rejects replay envelopes bound to F0 semantics
+  ---
+  duration_ms: 1.9825
+  type: 'test'
+  ...
+# Subtest: brilliance key cycles levels and an independent UI timeout commits the preview
+ok 4 - brilliance key cycles levels and an independent UI timeout commits the preview
+  ---
+  duration_ms: 2.4409
+  type: 'test'
+  ...
+# Subtest: POWER hold boundary is greater than 3000ms and F0 remains isolated
+ok 5 - POWER hold boundary is greater than 3000ms and F0 remains isolated
+  ---
+  duration_ms: 2.2317
+  type: 'test'
+  ...
+# Subtest: POWER hold shows a replayable countdown and cancelled input does not shut down
+ok 6 - POWER hold shows a replayable countdown and cancelled input does not shut down
+  ---
+  duration_ms: 3.5672
+  type: 'test'
+  ...
+# Subtest: RANGE repeated press in manual mode stages next preset until ENTER
+ok 7 - RANGE repeated press in manual mode stages next preset until ENTER
+  ---
+  duration_ms: 2.7074
+  type: 'test'
+  ...
+# Subtest: GAIN Auto Offset is bounded independently from manual gain
+ok 8 - GAIN Auto Offset is bounded independently from manual gain
+  ---
+  duration_ms: 1.6862
+  type: 'test'
+  ...
+# Subtest: free VRM is disabled in NAV after MODE selection commits
+ok 9 - free VRM is disabled in NAV after MODE selection commits
+  ---
+  duration_ms: 1.5302
+  type: 'test'
+  ...
+# Subtest: local training settings roundtrip is schema-versioned, bounded and never includes serials
+ok 10 - local training settings roundtrip is schema-versioned, bounded and never includes serials
+  ---
+  duration_ms: 5.3667
+  type: 'test'
+  ...
+# Subtest: stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+ok 11 - stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+  ---
+  duration_ms: 1.8352
+  type: 'test'
+  ...
+# Subtest: reloaded settings are applied only through a canonical logged replay event
+ok 12 - reloaded settings are applied only through a canonical logged replay event
+  ---
+  duration_ms: 8.7691
+  type: 'test'
+  ...
+# Subtest: new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+ok 13 - new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+  ---
+  duration_ms: 5.4516
+  type: 'test'
+  ...
+# Subtest: malformed settings and prototype-pollution keys are rejected, not executed
+ok 14 - malformed settings and prototype-pollution keys are rejected, not executed
+  ---
+  duration_ms: 1.6217
+  type: 'test'
+  ...
+# Subtest: browser reload explicitly replays vetted local settings, not an unlogged state mutation
+ok 15 - browser reload explicitly replays vetted local settings, not an unlogged state mutation
+  ---
+  duration_ms: 8.9378
+  type: 'test'
+  ...
+# Subtest: V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+ok 16 - V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+  ---
+  duration_ms: 4.8836
+  type: 'test'
+  ...
+# Subtest: explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+ok 17 - explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+  ---
+  duration_ms: 13.3927
+  type: 'test'
+  ...
+# Subtest: legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+ok 18 - legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+  ---
+  duration_ms: 4.3739
+  type: 'test'
+  ...
+# Subtest: migration retains legitimate ship draft while rejecting transaction draftValue
+ok 19 - migration retains legitimate ship draft while rejecting transaction draftValue
+  ---
+  duration_ms: 1.8506
+  type: 'test'
+  ...
+# Subtest: A04 BRILL left restarts the existing training inactivity interval
+ok 20 - A04 BRILL left restarts the existing training inactivity interval
+  ---
+  duration_ms: 14.4626
+  type: 'test'
+  ...
+# Subtest: A04 BRILL down restarts the existing training inactivity interval
+ok 21 - A04 BRILL down restarts the existing training inactivity interval
+  ---
+  duration_ms: 5.6855
+  type: 'test'
+  ...
+# Subtest: A04 BRILL right restarts the existing training inactivity interval
+ok 22 - A04 BRILL right restarts the existing training inactivity interval
+  ---
+  duration_ms: 4.829
+  type: 'test'
+  ...
+# Subtest: A04 BRILL up restarts the existing training inactivity interval
+ok 23 - A04 BRILL up restarts the existing training inactivity interval
+  ---
+  duration_ms: 3.8238
+  type: 'test'
+  ...
+# Subtest: BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+ok 24 - BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+  ---
+  duration_ms: 2.2372
+  type: 'test'
+  ...
+# Subtest: MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+ok 25 - MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+  ---
+  duration_ms: 1.7178
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels visible draft and regrant cannot revive it
+ok 26 - V30-B menu: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 77.1589
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 27 - V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 38.308
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 28 - V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 10.8108
+  type: 'test'
+  ...
+# Subtest: menu: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 29 - menu: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 7.9312
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels visible draft and regrant cannot revive it
+ok 30 - V30-B installation: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 37.9644
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 31 - V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 38.8942
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 32 - V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 11.9903
+  type: 'test'
+  ...
+# Subtest: installation: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 33 - installation: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 8.1904
+  type: 'test'
+  ...
+# Subtest: unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+ok 34 - unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+  ---
+  duration_ms: 5.0997
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.accuFish draft even without a row-list change
+ok 35 - P1 live capability loss cancels display.accuFish draft even without a row-list change
+  ---
+  duration_ms: 6.8997
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.rezBoost draft even without a row-list change
+ok 36 - P1 live capability loss cancels display.rezBoost draft even without a row-list change
+  ---
+  duration_ms: 6.7604
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+ok 37 - P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+  ---
+  duration_ms: 6.5245
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM1 enable and threshold notices identify the actual edited field
+ok 38 - V30-E ALARM1 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 6.0139
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM2 enable and threshold notices identify the actual edited field
+ok 39 - V30-E ALARM2 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.6413
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM3 enable and threshold notices identify the actual edited field
+ok 40 - V30-E ALARM3 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.5857
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM4 enable and threshold notices identify the actual edited field
+ok 41 - V30-E ALARM4 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.5838
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM5 enable and threshold notices identify the actual edited field
+ok 42 - V30-E ALARM5 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 5.4444
+  type: 'test'
+  ...
+1..42
+# tests 42
+# suites 0
+# pass 42
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 457.9675

@@ -1,0 +1,58 @@
+{
+  "schema": "P33_NATIVE_UIA_ANNOUNCEMENT_SURROGATE_V2",
+  "status": "PASS_NATIVE_UIA_FOCUS_SURROGATE",
+  "installedVersion": "0.0.3",
+  "narratorLaunched": false,
+  "nvdaLaunched": false,
+  "spokenAudioVerified": false,
+  "uiAutomationFocusEvents": [
+    "FOCUS|13416|ControlType.Button|GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+    "FOCUS|13416|ControlType.Button|GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+    "FOCUS|13416|ControlType.Button|MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+    "FOCUS|13416|ControlType.Button|Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+    "FOCUS|13416|ControlType.Button|Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt"
+  ],
+  "uiAutomationLiveRegionEvents": [],
+  "controls": {
+    "MODE": {
+      "name": "MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "type": "ControlType.Button",
+      "focusable": true
+    },
+    "GAIN": {
+      "name": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "type": "ControlType.Button",
+      "focusable": true
+    },
+    "POWER": {
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "type": "ControlType.Button",
+      "focusable": true
+    }
+  },
+  "actions": [
+    "GAIN_SETFOCUS_PASS",
+    "MODE_SETFOCUS_PASS",
+    "POWER_SETFOCUS_PASS",
+    "POWER_INVOKE_OFF_TO_BOOT_OR_RUNNING_PASS"
+  ],
+  "errors": [],
+  "releaseApproval": "HOLD",
+  "windowName": "MoPhongMayTrenTau | FCV-588 Public Reference",
+  "mainPID": 13416,
+  "processCount": 4,
+  "descendantCount": 90,
+  "powerOffAfterNativeInvoke": false,
+  "bootOrRunningTextObserved": [
+    "BOOTING"
+  ],
+  "focusSequenceVerified": true,
+  "cleanupOwnedPids": [
+    13416,
+    30124,
+    15752,
+    10364
+  ],
+  "cleanupWaitMilliseconds": 10000,
+  "fcv588ProcessesRemaining": 0
+}

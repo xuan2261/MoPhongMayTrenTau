@@ -1,0 +1,38 @@
+{
+  "timestampUtc": "2026-10-19T11:57:08.346644+00:00",
+  "status": "V49_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptSHA": "ee7bd271586245500d8629bc87ed3322c995146d5ed10e0d444327361efcb511",
+  "parentV48FinalSHA": "4682a5d195a1e60f6648f41ab9c3b30008bcfcf8d222189aa93ad5465b4bf58b",
+  "parentV48PostreceiptSHA": "2dd3a50efe1627f42725476269c516e1795d50f3d1da9afb6ffbcf5e6d493d31",
+  "originalFinalCheckerRunLogSHA": "28d5e7bae62fffcafb4cbb6461bd089ba0e42df4520d17051978ae9730fbdf09",
+  "independentCheckerSourceSHA": "95a9e50c39d76ab3317d1580f2af6672247c05bfa8959a81a8b0d42f6f09adaf",
+  "runtime": 37,
+  "changedRuntime": [
+    "web/app.mjs",
+    "web/index.html"
+  ],
+  "newScreenshotsSHA": 12,
+  "originalTrainingFixturesSHA": 34,
+  "sourceBoundChromeStage": 69,
+  "sourceBoundChromeCanonical": 69,
+  "loadedChromeStageBodySHA": 105,
+  "loadedChromeCanonicalBodySHA": 105,
+  "canonicalNode": 511,
+  "postdocumentNode": 511,
+  "canonicalPython": 13,
+  "qaPortsClosed": [
+    4237,
+    4238
+  ],
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "nativeExactAttachedViewports": "NOT_RUN",
+  "actualNarratorNvdaSpeech": "NOT_RUN",
+  "genuineOsWindowBlur": "NOT_RUN",
+  "firmwareInstalled": "UNKNOWN",
+  "oemRights": "HOLD",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "checklist": "14/50",
+  "namedTasks": "6/22"
+}

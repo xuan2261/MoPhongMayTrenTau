@@ -1,0 +1,21 @@
+{
+  "schema": "FCV588_P24_STAGE_FULL_NODE_V1",
+  "scope": "ZOOM_ARCHIVE_MODULE_TEST_ONLY_NO_APP_CHANGES",
+  "status": "PASS",
+  "exitCode": 0,
+  "testFiles": 97,
+  "summary": {
+    "tests": "587",
+    "pass": "587",
+    "fail": "0",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "6031.6839"
+  },
+  "failures": [],
+  "logSHA256": "7e3e6cc3d1ed57a5937d164e25bf2eebdf931724629becce8b585c24fb7ff826",
+  "parentRuntime50Unchanged": true,
+  "moduleSHA256": "fc11f8151a6333a8c2d5916bd6e6517c02e7eda49092e68b6ebea3b2a6b03431",
+  "testSHA256": "098a558e08f30104e8abc1fcdc8ba6b1a1a565bc0c332a9744985dd4787ca964"
+}

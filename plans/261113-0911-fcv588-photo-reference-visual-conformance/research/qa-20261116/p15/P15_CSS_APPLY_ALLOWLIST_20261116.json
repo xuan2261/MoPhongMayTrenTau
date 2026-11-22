@@ -1,0 +1,18 @@
+{
+  "schema": "FCV588_P15_CSS_GUARDED_ALLOWLIST_V1",
+  "status": "PREPARED_NOT_APPLIED",
+  "paths": [
+    {
+      "path": "web/styles.css",
+      "operation": "modify",
+      "canonicalPreimageSHA256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "stageSHA256": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb"
+    },
+    {
+      "path": "test/fcv588-p15-uniform-lcd-css.test.mjs",
+      "operation": "create",
+      "canonicalPreimageSHA256": null,
+      "stageSHA256": "2a750cb43e2ffd965eb1266046b45aad30da692312db1e172faa0acd73d162b0"
+    }
+  ]
+}

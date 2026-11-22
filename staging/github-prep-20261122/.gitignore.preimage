@@ -1,0 +1,20 @@
+# Generated artifacts and local secrets. Does not hide source or evidence docs.
+node_modules/
+dist/
+coverage/
+*.log
+.cache/
+.tmp/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+Thumbs.db
+
+# Manufacturer / third-party manuals are private, rights-restricted evidence.
+# Keep metadata readable in repo but never accidentally publish PDF/ZIP assets.
+sources/manuals/**/*.pdf
+sources/manuals/**/*.PDF
+sources/manuals/**/*.zip
+sources/manuals/**/*.ZIP

@@ -1,0 +1,31 @@
+{
+  "timestampUtc": "2026-10-19T10:47:48.286164+00:00",
+  "status": "V48_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptSHA": "4682a5d195a1e60f6648f41ab9c3b30008bcfcf8d222189aa93ad5465b4bf58b",
+  "parentV47FinalSHA": "4b039b74b393a62d8aaa05658fd2aa5b124e7551e5f28546a67383331291517c",
+  "parentV47PostreceiptSHA": "b51aa2babcc86757a63dfb4dee77e475a30463750c410f11b64328aafa36c7ea",
+  "checkerSourceSHA": "f1761bf59904639f703df64a9b82b5108ff44c5079b550508ff76033a71f7223",
+  "originalFinalSealLogSHA": "caf416472e0d2511d55d73e041f3ca3100d44a287778f5556dabd5501edf737b",
+  "runtimeSourceSHA": 37,
+  "canonicalNewTestSHA": "b2876f5f70d13df231a80ba01f06c506740144a4497207d86be4284a378c6d5d",
+  "stageSourceSHA": 37,
+  "canonicalTargetedNode": 16,
+  "canonicalFullNode": 507,
+  "postdocumentNode": 507,
+  "python": 13,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "qaPortsClosed": [
+    4233,
+    4234,
+    4235,
+    4236
+  ],
+  "hardwareValidated": false,
+  "installedFirmware": "UNKNOWN",
+  "oemRights": "HOLD",
+  "releaseApproval": "HOLD",
+  "nativeWindowBlur": "NOT_RUN",
+  "narratorNvdaSpeech": "NOT_RUN",
+  "newV48Chrome": "NOT_RUN"
+}

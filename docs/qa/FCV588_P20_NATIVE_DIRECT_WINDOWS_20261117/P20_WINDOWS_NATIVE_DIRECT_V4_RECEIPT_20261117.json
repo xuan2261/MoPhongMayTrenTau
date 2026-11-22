@@ -1,0 +1,294 @@
+{
+  "schema": "FCV588_P20_NATIVE_WIN32_UIA_DIRECT_V4",
+  "createdAt": "2026-11-17T03:28:07.984874+00:00",
+  "port": 4220,
+  "status": "FAIL_BROWSER_BLUR_NOT_OBSERVED_AFTER_REAL_WIN32_SWITCH",
+  "gates": {
+    "uniqueChromeHwnd": true,
+    "uiaInspected": true,
+    "uniqueWitnessHwnd": true,
+    "chromeForegroundBeforeDown": true,
+    "downEdge": true,
+    "witnessOwnsForeground": true,
+    "actualWindowBlur": false,
+    "cancelOnce": false,
+    "powerStatusUnchanged": true,
+    "noStrayKeyup": false
+  },
+  "issues": [],
+  "scope": "WINDOWS_HEADED_CHROME_NATIVE_FOREGROUND_UIA_AUTOMATED_KEYBOARD_NOT_HUMAN_PHYSICAL_SPEECH",
+  "parentSHA256": {
+    "p19Final": "1fc1b43ced49b9c9d630218ee3c9211573b0e00474f207ba3aa5f0e864158f11",
+    "p19Post": "1824e63e7b54c88801a002adf2758203ea1c4ce750fed2f48c822f2ab9a3a83b"
+  },
+  "sourcePreimage": "50/50",
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "chromeWindowCandidates": [
+    {
+      "hwnd": 2362682,
+      "pid": 9444,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+      "foreground": false
+    }
+  ],
+  "chromeWindow": {
+    "hwnd": 2362682,
+    "pid": 9444,
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+    "foreground": false
+  },
+  "uia": {
+    "status": "OBSERVED",
+    "data": {
+      "rootName": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+      "rootControlType": "ControlType.Window",
+      "descendants": 54,
+      "scanned": 54,
+      "matches": [
+        {
+          "name": "FCV588-P20-DIRECT-WINDOWS-QA-20261117",
+          "controlType": "ControlType.TabItem",
+          "automationId": "view_20",
+          "isEnabled": true
+        },
+        {
+          "name": "Vietnamese",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "English",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        }
+      ]
+    }
+  },
+  "witnessWindow": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "chromeForegroundAttemptError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+  "preHold": {
+    "win32": {
+      "foreground": {
+        "hwnd": 2362682,
+        "pid": 9444,
+        "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+        "foreground": true
+      },
+      "page": null
+    },
+    "browser": {
+      "hasFocus": true,
+      "activeElement": "key-power",
+      "pressing": false,
+      "eventCount": 1,
+      "status": "POWER OFF",
+      "powerOff": true,
+      "events": [
+        {
+          "type": "focus",
+          "ms": 1263.0999999046326,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "blur",
+          "ms": 15572.799999952316,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "focus",
+          "ms": 15573,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        }
+      ]
+    }
+  },
+  "afterDown": {
+    "win32": {
+      "foreground": {
+        "hwnd": 2362682,
+        "pid": 9444,
+        "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+        "foreground": true
+      },
+      "page": null
+    },
+    "browser": {
+      "hasFocus": true,
+      "activeElement": "key-power",
+      "pressing": true,
+      "eventCount": 2,
+      "status": "POWER OFF",
+      "powerOff": true,
+      "events": [
+        {
+          "type": "focus",
+          "ms": 1263.0999999046326,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "blur",
+          "ms": 15572.799999952316,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "focus",
+          "ms": 15573,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        }
+      ]
+    }
+  },
+  "witnessForegroundAttemptError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+  "foregroundAfterSwitch": {
+    "foreground": {
+      "hwnd": 8653244,
+      "pid": 18532,
+      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "title": "JeikCode Desktop",
+      "foreground": true
+    },
+    "page": null
+  },
+  "afterOSForegroundChange": {
+    "win32": {
+      "foreground": {
+        "hwnd": 8653244,
+        "pid": 18532,
+        "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+        "title": "JeikCode Desktop",
+        "foreground": true
+      },
+      "page": null
+    },
+    "browser": {
+      "hasFocus": true,
+      "activeElement": "key-power",
+      "pressing": true,
+      "eventCount": 2,
+      "status": "POWER OFF",
+      "powerOff": true,
+      "events": [
+        {
+          "type": "focus",
+          "ms": 1263.0999999046326,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "blur",
+          "ms": 15572.799999952316,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "focus",
+          "ms": 15573,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        }
+      ]
+    }
+  },
+  "afterKeyup": {
+    "win32": {
+      "foreground": {
+        "hwnd": 8653244,
+        "pid": 18532,
+        "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+        "title": "JeikCode Desktop",
+        "foreground": true
+      },
+      "page": null
+    },
+    "browser": {
+      "hasFocus": true,
+      "activeElement": "key-power",
+      "pressing": false,
+      "eventCount": 3,
+      "status": "POWER OFF",
+      "powerOff": true,
+      "events": [
+        {
+          "type": "focus",
+          "ms": 1263.0999999046326,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "blur",
+          "ms": 15572.799999952316,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "focus",
+          "ms": 15573,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        }
+      ]
+    }
+  },
+  "originalForegroundRestoreAttempt": null,
+  "originalForegroundRestored": true,
+  "foregroundAtEnd": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "ownedPortClosed": true,
+  "protectedUserServerStillListening": true,
+  "canonicalRuntimeAfter": 50,
+  "parentP19Unchanged": true
+}

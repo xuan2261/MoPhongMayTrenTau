@@ -1,0 +1,35 @@
+{
+  "status": "V40_CANONICAL_HTTP_LOCALHOST_SOURCE_AND_DENIALS_PASS",
+  "checkedAtUtc": "2026-10-18T14:02:06.8711536Z",
+  "rootStatus": 200,
+  "cspConnectSrcNone": true,
+  "nosniff": true,
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/docs/qa/FCV588_V39_FINAL_INTEGRITY_20261018.json",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "method": "GET",
+      "path": "/sources/manuals/MANIFEST.json",
+      "status": 404,
+      "denied": true
+    },
+    {
+      "method": "GET",
+      "path": "/web/%2e%2e%2fdocs/qa/FCV588_V39_FINAL_INTEGRITY_20261018.json",
+      "status": 403,
+      "denied": true
+    },
+    {
+      "method": "POST",
+      "path": "/",
+      "status": 405,
+      "denied": true
+    }
+  ],
+  "passed": 4,
+  "releaseApproval": "HOLD"
+}

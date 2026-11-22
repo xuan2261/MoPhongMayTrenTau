@@ -1,0 +1,32 @@
+{
+  "schema": "FCV588_P26_PREAPPLY_FINAL_GO_V3",
+  "status": "BOUNDED_CANONICAL_APPLY_GO_EXACT_FIVE_PATHS",
+  "createdAt": "2026-11-17T09:39:10.514359+00:00",
+  "freshPinnedDryrunV2SHA256": "b9e50cb6094c27ff9fa481486aba9bd2623c40956f813e92163cd8b8c27780e3",
+  "preimageBackupZIPSHA256": "61ba402e32e07ef1a64c2d58b257ec3cec4aafca22b4e207ee5c802c87f9c96c",
+  "parentP25FinalSHA256": "3fdac61ebd16a1728e47d0a4382eb15f07597d98f5e161e3084cb4cbab541dff",
+  "parentP25PostSHA256": "266b46ffe6f045d4be37a72de11ecb2b5721553d5d33237bb47e4eb131c08d5d",
+  "reviewers": [
+    "worker36 BOUNDED_CANONICAL_APPLY_GO",
+    "worker38 BOUNDED_CANONICAL_APPLY_GO"
+  ],
+  "appliedSourceSHA256Expected": {
+    "web/app.mjs": "48a6120fc1767e20e63e751c7227a86f8d23715bfbb7a75d6cd1a3ba63a208e2",
+    "web/index.html": "d71c7fd4ac9f5a297f4148594e25724b449e13903a4db3695f86d900f3fc7d6a",
+    "web/styles.css": "1718b38028a7c9d70dd8b67b8b3792c79ef0770acabbb7c72789da61a7de6ac6",
+    "web/fcv588-archive-bz-viewer.mjs": "d77fae273ba3a4357c9eff7758da71d8582b4464657099bd386a970fb037c976",
+    "test/fcv588-p26-archive-bz-viewer.test.mjs": "89d524f8177262ee351d3555f7f4e717daca8ffbcc3c27dcd4a0c14bfb8433d3"
+  },
+  "P25Runtime52UnchangedBefore": true,
+  "OEM8UnchangedBefore": true,
+  "stageQA": "Focused9_Node605_Python13_Chrome9_HTTP51",
+  "browserV4SHA256": "37ed95cb8a5fb7312c9ccb5c739ba316c112a293fcd1f943b76cf750392b0c81",
+  "listenerBefore": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 4173,
+      "OwningProcess": 1204
+    }
+  ],
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,940 @@
+{
+  "schemaVersion": 1,
+  "checkpoint": "V27",
+  "basis": "DERIVED_FROM_EXECUTED_SIMULATOR_RECEIPTS_NOT_NEW_BROWSER_RUN",
+  "recordedBrowserCollectionUtc": "2026-10-15T11:20:59.217679+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "oemFidelityPercent": null,
+  "sourceReceipts": [
+    {
+      "path": "docs/qa/FCV588_LCD_V27_GREEN_RECEIPT.json",
+      "sha256": "e52df8d2d883d4fcba630f0cc7e986558da0b8278165bfd5d54b67dcc96b90ee"
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_VIEWPORT_V27_RECEIPT.json",
+      "sha256": "c4f43295767377929afc87917eb2d43f08a2aef7bd27a9f5f583e280d39ccfe5"
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_MOBILE_V27_RECEIPT.json",
+      "sha256": "92e166ebaf58ae1c871391ce1797c728f82fd126a7110f7a7a32821580d4f078"
+    }
+  ],
+  "runtimeProfile": "F1-public-reference-19",
+  "runtimeFileCount": 33,
+  "runtimeManifestSha256": "2b9003590613d42aba72bf98aa33d4cb4f4d5a6ae173c9328f5329e4b38545ed",
+  "referenceBasis": [
+    {
+      "subject": "logical LCD",
+      "value": [
+        480,
+        640
+      ],
+      "grade": "MANUFACTURER_WEB_CORROBORATED",
+      "url": "https://www.furuno.it/lang--en--art--FCV-588--FCV588.html"
+    },
+    {
+      "subject": "effective LCD and overall drawing envelope",
+      "effectiveLcdMm": [
+        128,
+        171
+      ],
+      "drawingEnvelopeMm": [
+        233,
+        270
+      ],
+      "grade": "EXISTING_CURATED_PROJECT_REFERENCE_NOT_NEW_HARDWARE_MEASUREMENT",
+      "source": "docs/research/FCV588_PUBLIC_UI_REFERENCE_MATRIX_2026-10-14.md"
+    },
+    {
+      "subject": "head, keys, bracket, dial angles and menu rectangles",
+      "grade": "ORIGINAL_REFERENCE_ESTIMATE",
+      "measuredHardwareCoordinates": null
+    }
+  ],
+  "authoredMenuLayout": {
+    "grade": "ORIGINAL_REFERENCE_ESTIMATE_NOT_OEM",
+    "mainMenu": {
+      "widthPercentOfLcd": 96,
+      "leftPercent": 2,
+      "topPercent": 7,
+      "maxHeightPercent": 90
+    },
+    "categories": [
+      "Sounder",
+      "Display",
+      "Alarm",
+      "Data",
+      "System"
+    ],
+    "navigation": "Existing simulator left/right categories, up/down items; not an OEM sequence sign-off"
+  },
+  "fullBrowserResults": [
+    {
+      "viewport": "1366x768",
+      "verifiedResponses": 63,
+      "verifiedUniquePaths": 31,
+      "browserLoadedResponsesSha256": "74de75789581f27d4a77a5c829b9d5babcd08753c2e298725fea176b01af3a59"
+    },
+    {
+      "viewport": "1920x1080",
+      "verifiedResponses": 63,
+      "verifiedUniquePaths": 31,
+      "browserLoadedResponsesSha256": "98ab78f8bae5ae1a2fefefe0eff9b6f54c91aa9e834e04f4b567ad4b7040efee"
+    },
+    {
+      "viewport": "360x800",
+      "verifiedResponses": 31,
+      "verifiedUniquePaths": 31,
+      "browserLoadedResponsesSha256": "36ee815eda832598bf2c9844f4490886eabc6fe4c87a0f0486401e0feca76951"
+    },
+    {
+      "viewport": "390x844",
+      "verifiedResponses": 31,
+      "verifiedUniquePaths": 31,
+      "browserLoadedResponsesSha256": "2a401d800df66fe321b3ec8db33374a32d62a27fb3f159867222e1be2aef4ca2"
+    }
+  ],
+  "measurements": [
+    {
+      "viewport": "1366x768",
+      "geometry": {
+        "basis": "OBSERVED_SIMULATOR_NOT_MEASURED_HARDWARE",
+        "layout": "REFERENCE_ESTIMATE",
+        "viewport": [
+          1366,
+          768
+        ],
+        "logicalLcd": [
+          480,
+          640
+        ],
+        "elements": {
+          ".device-frame": {
+            "css": {
+              "x": 175.5,
+              "y": 315.796875,
+              "width": 680,
+              "height": 787.96875
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1.1587775735294117
+            }
+          },
+          ".equipment": {
+            "css": {
+              "x": 175.5,
+              "y": 315.796875,
+              "width": 680,
+              "height": 680
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          "#lcd": {
+            "css": {
+              "x": 223.890625,
+              "y": 410.46875,
+              "width": 376.109375,
+              "height": 502.453125
+            },
+            "relativeToHead": {
+              "x": 0.07116268382352942,
+              "y": 0.1392233455882353,
+              "width": 0.5531020220588235,
+              "height": 0.7389016544117647
+            }
+          },
+          "#key-menu": {
+            "css": {
+              "x": 691.359375,
+              "y": 364.953125,
+              "width": 89.09375,
+              "height": 34
+            },
+            "relativeToHead": {
+              "x": 0.7586167279411765,
+              "y": 0.07228860294117648,
+              "width": 0.1310202205882353,
+              "height": 0.05
+            }
+          },
+          ".pad": {
+            "css": {
+              "x": 687.921875,
+              "y": 405.15625,
+              "width": 96,
+              "height": 96
+            },
+            "relativeToHead": {
+              "x": 0.7535615808823529,
+              "y": 0.1314108455882353,
+              "width": 0.1411764705882353,
+              "height": 0.1411764705882353
+            }
+          },
+          "#key-enter": {
+            "css": {
+              "x": 691.359375,
+              "y": 508.546875,
+              "width": 89.09375,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7586167279411765,
+              "y": 0.28345588235294117,
+              "width": 0.1310202205882353,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-range": {
+            "css": {
+              "x": 689.828125,
+              "y": 554.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.3510110294117647,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-mark": {
+            "css": {
+              "x": 689.828125,
+              "y": 593.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.4083639705882353,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-func": {
+            "css": {
+              "x": 689.828125,
+              "y": 632.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.46571691176470587,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#gain-knob": {
+            "css": {
+              "x": 703.421875,
+              "y": 705.109375,
+              "width": 65,
+              "height": 65
+            },
+            "relativeToHead": {
+              "x": 0.7763556985294118,
+              "y": 0.5725183823529412,
+              "width": 0.09558823529411764,
+              "height": 0.09558823529411764
+            }
+          },
+          "#mode-knob": {
+            "css": {
+              "x": 703.421875,
+              "y": 814.234375,
+              "width": 65,
+              "height": 65
+            },
+            "relativeToHead": {
+              "x": 0.7763556985294118,
+              "y": 0.7329963235294118,
+              "width": 0.09558823529411764,
+              "height": 0.09558823529411764
+            }
+          },
+          "#key-power": {
+            "css": {
+              "x": 715.921875,
+              "y": 899.109375,
+              "width": 40,
+              "height": 37
+            },
+            "relativeToHead": {
+              "x": 0.7947380514705882,
+              "y": 0.8578125,
+              "width": 0.058823529411764705,
+              "height": 0.054411764705882354
+            }
+          }
+        }
+      },
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_lcd_v27_green_1366x768_sounder.png",
+        "docs/qa/screenshots/fcv588_lcd_v27_green_1366x768_lcd_test_blue.png"
+      ],
+      "visualChecks": [
+        "BRILL_PREVIEW_CHANGES_LCD_BEFORE_COMMIT",
+        "CANCELLED_POWER_HOLD_PRESERVES_BRILL_PREVIEW",
+        "BRILL_COMMIT_PRESERVES_PREVIEW_WITHOUT_WORLD_TICK",
+        "FIVE_CATEGORIES_VISIBLE_WITH_ACTIVE_SOUNDER",
+        "MAIN_MENU_ROWS_HAVE_SEMANTIC_IDS_NOT_HELP_TEXT",
+        "EDIT_HAS_SEPARATE_SELECTED_CHOICE_AND_UNCHANGED_CATEGORY",
+        "CATEGORY_RAIL_FOLLOWS_PHYSICAL_INPUT",
+        "LCD_TEST_DISPLAYS_BLACK",
+        "LCD_TEST_DISPLAYS_WHITE",
+        "LCD_TEST_DISPLAYS_RED",
+        "LCD_TEST_DISPLAYS_GREEN",
+        "LCD_TEST_DISPLAYS_BLUE",
+        "LCD_TEST_HAS_NO_SONAR_LABELS_OR_MENU_OBSTRUCTION",
+        "LCD_TEST_EXIT_RESTORES_SYSTEM_AND_SONAR",
+        "DISPLAY_WORKFLOWS_PRESERVE_REPLAY_AND_WORLD_CLOCK",
+        "RESET_RELOAD_CLEARS_DIAGNOSTIC_VIEW",
+        "NO_BROWSER_CONSOLE_OR_NETWORK_ERRORS"
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "geometry": {
+        "basis": "OBSERVED_SIMULATOR_NOT_MEASURED_HARDWARE",
+        "layout": "REFERENCE_ESTIMATE",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "logicalLcd": [
+          480,
+          640
+        ],
+        "elements": {
+          ".device-frame": {
+            "css": {
+              "x": 452.5,
+              "y": 321.796875,
+              "width": 680,
+              "height": 787.96875
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1.1587775735294117
+            }
+          },
+          ".equipment": {
+            "css": {
+              "x": 452.5,
+              "y": 321.796875,
+              "width": 680,
+              "height": 680
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          "#lcd": {
+            "css": {
+              "x": 500.890625,
+              "y": 416.46875,
+              "width": 376.109375,
+              "height": 502.453125
+            },
+            "relativeToHead": {
+              "x": 0.07116268382352942,
+              "y": 0.1392233455882353,
+              "width": 0.5531020220588235,
+              "height": 0.7389016544117647
+            }
+          },
+          "#key-menu": {
+            "css": {
+              "x": 968.359375,
+              "y": 370.953125,
+              "width": 89.09375,
+              "height": 34
+            },
+            "relativeToHead": {
+              "x": 0.7586167279411765,
+              "y": 0.07228860294117648,
+              "width": 0.1310202205882353,
+              "height": 0.05
+            }
+          },
+          ".pad": {
+            "css": {
+              "x": 964.921875,
+              "y": 411.15625,
+              "width": 96,
+              "height": 96
+            },
+            "relativeToHead": {
+              "x": 0.7535615808823529,
+              "y": 0.1314108455882353,
+              "width": 0.1411764705882353,
+              "height": 0.1411764705882353
+            }
+          },
+          "#key-enter": {
+            "css": {
+              "x": 968.359375,
+              "y": 514.546875,
+              "width": 89.09375,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7586167279411765,
+              "y": 0.28345588235294117,
+              "width": 0.1310202205882353,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-range": {
+            "css": {
+              "x": 966.828125,
+              "y": 560.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.3510110294117647,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-mark": {
+            "css": {
+              "x": 966.828125,
+              "y": 599.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.4083639705882353,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#key-func": {
+            "css": {
+              "x": 966.828125,
+              "y": 638.484375,
+              "width": 92.171875,
+              "height": 31
+            },
+            "relativeToHead": {
+              "x": 0.7563648897058823,
+              "y": 0.46571691176470587,
+              "width": 0.135546875,
+              "height": 0.045588235294117645
+            }
+          },
+          "#gain-knob": {
+            "css": {
+              "x": 980.421875,
+              "y": 711.109375,
+              "width": 65,
+              "height": 65
+            },
+            "relativeToHead": {
+              "x": 0.7763556985294118,
+              "y": 0.5725183823529412,
+              "width": 0.09558823529411764,
+              "height": 0.09558823529411764
+            }
+          },
+          "#mode-knob": {
+            "css": {
+              "x": 980.421875,
+              "y": 820.234375,
+              "width": 65,
+              "height": 65
+            },
+            "relativeToHead": {
+              "x": 0.7763556985294118,
+              "y": 0.7329963235294118,
+              "width": 0.09558823529411764,
+              "height": 0.09558823529411764
+            }
+          },
+          "#key-power": {
+            "css": {
+              "x": 992.921875,
+              "y": 905.109375,
+              "width": 40,
+              "height": 37
+            },
+            "relativeToHead": {
+              "x": 0.7947380514705882,
+              "y": 0.8578125,
+              "width": 0.058823529411764705,
+              "height": 0.054411764705882354
+            }
+          }
+        }
+      },
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_lcd_v27_green_1920x1080_sounder.png",
+        "docs/qa/screenshots/fcv588_lcd_v27_green_1920x1080_lcd_test_blue.png"
+      ],
+      "visualChecks": [
+        "BRILL_PREVIEW_CHANGES_LCD_BEFORE_COMMIT",
+        "CANCELLED_POWER_HOLD_PRESERVES_BRILL_PREVIEW",
+        "BRILL_COMMIT_PRESERVES_PREVIEW_WITHOUT_WORLD_TICK",
+        "FIVE_CATEGORIES_VISIBLE_WITH_ACTIVE_SOUNDER",
+        "MAIN_MENU_ROWS_HAVE_SEMANTIC_IDS_NOT_HELP_TEXT",
+        "EDIT_HAS_SEPARATE_SELECTED_CHOICE_AND_UNCHANGED_CATEGORY",
+        "CATEGORY_RAIL_FOLLOWS_PHYSICAL_INPUT",
+        "LCD_TEST_DISPLAYS_BLACK",
+        "LCD_TEST_DISPLAYS_WHITE",
+        "LCD_TEST_DISPLAYS_RED",
+        "LCD_TEST_DISPLAYS_GREEN",
+        "LCD_TEST_DISPLAYS_BLUE",
+        "LCD_TEST_HAS_NO_SONAR_LABELS_OR_MENU_OBSTRUCTION",
+        "LCD_TEST_EXIT_RESTORES_SYSTEM_AND_SONAR",
+        "DISPLAY_WORKFLOWS_PRESERVE_REPLAY_AND_WORLD_CLOCK",
+        "RESET_RELOAD_CLEARS_DIAGNOSTIC_VIEW",
+        "NO_BROWSER_CONSOLE_OR_NETWORK_ERRORS"
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "geometry": {
+        "basis": "OBSERVED_SIMULATOR_NOT_MEASURED_HARDWARE",
+        "layout": "TRAINING_REFLOW",
+        "viewport": [
+          360,
+          800
+        ],
+        "logicalLcd": [
+          480,
+          640
+        ],
+        "elements": {
+          ".device-frame": {
+            "css": {
+              "x": 9,
+              "y": 352.59375,
+              "width": 342,
+              "height": 1202.140625
+            },
+            "relativeToHead": {
+              "x": -0.034375,
+              "y": -0.07554979086815221,
+              "width": 1.06875,
+              "height": 1.1212527507760468
+            }
+          },
+          ".equipment": {
+            "css": {
+              "x": 20,
+              "y": 433.59375,
+              "width": 320,
+              "height": 1072.140625
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          "#lcd": {
+            "css": {
+              "x": 25,
+              "y": 438.59375,
+              "width": 310,
+              "height": 414.140625
+            },
+            "relativeToHead": {
+              "x": 0.015625,
+              "y": 0.00466356733754026,
+              "width": 0.96875,
+              "height": 0.3862745383797018
+            }
+          },
+          "#key-menu": {
+            "css": {
+              "x": 24,
+              "y": 877.734375,
+              "width": 312,
+              "height": 48
+            },
+            "relativeToHead": {
+              "x": 0.0125,
+              "y": 0.4142559424049434,
+              "width": 0.975,
+              "height": 0.04477024644038649
+            }
+          },
+          ".pad": {
+            "css": {
+              "x": 100,
+              "y": 941.734375,
+              "width": 160,
+              "height": 160
+            },
+            "relativeToHead": {
+              "x": 0.25,
+              "y": 0.4739496043254587,
+              "width": 0.5,
+              "height": 0.14923415480128832
+            }
+          },
+          "#key-enter": {
+            "css": {
+              "x": 24,
+              "y": 1117.734375,
+              "width": 312,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.0125,
+              "y": 0.6381071746068758,
+              "width": 0.975,
+              "height": 0.041039392570354286
+            }
+          },
+          "#key-range": {
+            "css": {
+              "x": 24,
+              "y": 1177.734375,
+              "width": 312,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.0125,
+              "y": 0.694069982657359,
+              "width": 0.975,
+              "height": 0.041039392570354286
+            }
+          },
+          "#key-mark": {
+            "css": {
+              "x": 24,
+              "y": 1233.734375,
+              "width": 312,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.0125,
+              "y": 0.7463019368378099,
+              "width": 0.975,
+              "height": 0.041039392570354286
+            }
+          },
+          "#key-func": {
+            "css": {
+              "x": 24,
+              "y": 1289.734375,
+              "width": 312,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.0125,
+              "y": 0.7985338910182608,
+              "width": 0.975,
+              "height": 0.041039392570354286
+            }
+          },
+          "#gain-knob": {
+            "css": {
+              "x": 67,
+              "y": 1367.734375,
+              "width": 64,
+              "height": 64
+            },
+            "relativeToHead": {
+              "x": 0.146875,
+              "y": 0.8712855414838888,
+              "width": 0.2,
+              "height": 0.059693661920515326
+            }
+          },
+          "#mode-knob": {
+            "css": {
+              "x": 229,
+              "y": 1367.734375,
+              "width": 64,
+              "height": 64
+            },
+            "relativeToHead": {
+              "x": 0.653125,
+              "y": 0.8712855414838888,
+              "width": 0.2,
+              "height": 0.059693661920515326
+            }
+          },
+          "#key-power": {
+            "css": {
+              "x": 55,
+              "y": 1447.734375,
+              "width": 250,
+              "height": 50
+            },
+            "relativeToHead": {
+              "x": 0.109375,
+              "y": 0.945902618884533,
+              "width": 0.78125,
+              "height": 0.0466356733754026
+            }
+          }
+        }
+      },
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_lcd_v27_green_360x800_sounder.png",
+        "docs/qa/screenshots/fcv588_lcd_v27_green_360x800_lcd_test_blue.png"
+      ],
+      "visualChecks": [
+        "BRILL_PREVIEW_CHANGES_LCD_BEFORE_COMMIT",
+        "CANCELLED_POWER_HOLD_PRESERVES_BRILL_PREVIEW",
+        "BRILL_COMMIT_PRESERVES_PREVIEW_WITHOUT_WORLD_TICK",
+        "FIVE_CATEGORIES_VISIBLE_WITH_ACTIVE_SOUNDER",
+        "MAIN_MENU_ROWS_HAVE_SEMANTIC_IDS_NOT_HELP_TEXT",
+        "EDIT_HAS_SEPARATE_SELECTED_CHOICE_AND_UNCHANGED_CATEGORY",
+        "CATEGORY_RAIL_FOLLOWS_PHYSICAL_INPUT",
+        "LCD_TEST_DISPLAYS_BLACK",
+        "LCD_TEST_DISPLAYS_WHITE",
+        "LCD_TEST_DISPLAYS_RED",
+        "LCD_TEST_DISPLAYS_GREEN",
+        "LCD_TEST_DISPLAYS_BLUE",
+        "LCD_TEST_HAS_NO_SONAR_LABELS_OR_MENU_OBSTRUCTION",
+        "LCD_TEST_EXIT_RESTORES_SYSTEM_AND_SONAR",
+        "DISPLAY_WORKFLOWS_PRESERVE_REPLAY_AND_WORLD_CLOCK",
+        "RESET_RELOAD_CLEARS_DIAGNOSTIC_VIEW",
+        "NO_BROWSER_CONSOLE_OR_NETWORK_ERRORS"
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "geometry": {
+        "basis": "OBSERVED_SIMULATOR_NOT_MEASURED_HARDWARE",
+        "layout": "TRAINING_REFLOW",
+        "viewport": [
+          390,
+          844
+        ],
+        "logicalLcd": [
+          480,
+          640
+        ],
+        "elements": {
+          ".device-frame": {
+            "css": {
+              "x": 9,
+              "y": 352.59375,
+              "width": 372,
+              "height": 1230.21875
+            },
+            "relativeToHead": {
+              "x": -0.03142857142857143,
+              "y": -0.07282740018544014,
+              "width": 1.062857142857143,
+              "height": 1.1060942373071845
+            }
+          },
+          ".equipment": {
+            "css": {
+              "x": 20,
+              "y": 433.59375,
+              "width": 350,
+              "height": 1112.21875
+            },
+            "relativeToHead": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          "#lcd": {
+            "css": {
+              "x": 25,
+              "y": 438.59375,
+              "width": 340,
+              "height": 454.21875
+            },
+            "relativeToHead": {
+              "x": 0.014285714285714285,
+              "y": 0.004495518529965441,
+              "width": 0.9714285714285714,
+              "height": 0.408389761456548
+            }
+          },
+          "#key-menu": {
+            "css": {
+              "x": 24,
+              "y": 917.8125,
+              "width": 342,
+              "height": 48
+            },
+            "relativeToHead": {
+              "x": 0.011428571428571429,
+              "y": 0.43536287263634066,
+              "width": 0.9771428571428571,
+              "height": 0.04315697788766823
+            }
+          },
+          ".pad": {
+            "css": {
+              "x": 115,
+              "y": 981.8125,
+              "width": 160,
+              "height": 160
+            },
+            "relativeToHead": {
+              "x": 0.2714285714285714,
+              "y": 0.4929055098198983,
+              "width": 0.45714285714285713,
+              "height": 0.1438565929588941
+            }
+          },
+          "#key-enter": {
+            "css": {
+              "x": 24,
+              "y": 1157.8125,
+              "width": 342,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.011428571428571429,
+              "y": 0.6511477620746818,
+              "width": 0.9771428571428571,
+              "height": 0.039560563063695875
+            }
+          },
+          "#key-range": {
+            "css": {
+              "x": 24,
+              "y": 1217.8125,
+              "width": 342,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.011428571428571429,
+              "y": 0.7050939844342671,
+              "width": 0.9771428571428571,
+              "height": 0.039560563063695875
+            }
+          },
+          "#key-mark": {
+            "css": {
+              "x": 24,
+              "y": 1273.8125,
+              "width": 342,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.011428571428571429,
+              "y": 0.75544379196988,
+              "width": 0.9771428571428571,
+              "height": 0.039560563063695875
+            }
+          },
+          "#key-func": {
+            "css": {
+              "x": 24,
+              "y": 1329.8125,
+              "width": 342,
+              "height": 44
+            },
+            "relativeToHead": {
+              "x": 0.011428571428571429,
+              "y": 0.805793599505493,
+              "width": 0.9771428571428571,
+              "height": 0.039560563063695875
+            }
+          },
+          "#gain-knob": {
+            "css": {
+              "x": 74.5,
+              "y": 1407.8125,
+              "width": 64,
+              "height": 64
+            },
+            "relativeToHead": {
+              "x": 0.15571428571428572,
+              "y": 0.8759236885729539,
+              "width": 0.18285714285714286,
+              "height": 0.05754263718355764
+            }
+          },
+          "#mode-knob": {
+            "css": {
+              "x": 251.5,
+              "y": 1407.8125,
+              "width": 64,
+              "height": 64
+            },
+            "relativeToHead": {
+              "x": 0.6614285714285715,
+              "y": 0.8759236885729539,
+              "width": 0.18285714285714286,
+              "height": 0.05754263718355764
+            }
+          },
+          "#key-power": {
+            "css": {
+              "x": 70,
+              "y": 1487.8125,
+              "width": 250,
+              "height": 50
+            },
+            "relativeToHead": {
+              "x": 0.14285714285714285,
+              "y": 0.9478519850524009,
+              "width": 0.7142857142857143,
+              "height": 0.04495518529965441
+            }
+          }
+        }
+      },
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_lcd_v27_green_390x844_sounder.png",
+        "docs/qa/screenshots/fcv588_lcd_v27_green_390x844_lcd_test_blue.png"
+      ],
+      "visualChecks": [
+        "BRILL_PREVIEW_CHANGES_LCD_BEFORE_COMMIT",
+        "CANCELLED_POWER_HOLD_PRESERVES_BRILL_PREVIEW",
+        "BRILL_COMMIT_PRESERVES_PREVIEW_WITHOUT_WORLD_TICK",
+        "FIVE_CATEGORIES_VISIBLE_WITH_ACTIVE_SOUNDER",
+        "MAIN_MENU_ROWS_HAVE_SEMANTIC_IDS_NOT_HELP_TEXT",
+        "EDIT_HAS_SEPARATE_SELECTED_CHOICE_AND_UNCHANGED_CATEGORY",
+        "CATEGORY_RAIL_FOLLOWS_PHYSICAL_INPUT",
+        "LCD_TEST_DISPLAYS_BLACK",
+        "LCD_TEST_DISPLAYS_WHITE",
+        "LCD_TEST_DISPLAYS_RED",
+        "LCD_TEST_DISPLAYS_GREEN",
+        "LCD_TEST_DISPLAYS_BLUE",
+        "LCD_TEST_HAS_NO_SONAR_LABELS_OR_MENU_OBSTRUCTION",
+        "LCD_TEST_EXIT_RESTORES_SYSTEM_AND_SONAR",
+        "DISPLAY_WORKFLOWS_PRESERVE_REPLAY_AND_WORLD_CLOCK",
+        "RESET_RELOAD_CLEARS_DIAGNOSTIC_VIEW",
+        "NO_BROWSER_CONSOLE_OR_NETWORK_ERRORS"
+      ]
+    }
+  ],
+  "unresolved": [
+    "Bare-head and mounting dimensions not measured",
+    "OEM button-center coordinates, fonts and colorimetry not established",
+    "Exact manufacturer menu keyboard sequence and layout not independently accepted",
+    "Phone layout is an explicit training reflow, not physical-face geometry",
+    "Independent reviewer, course release and hardware equivalence remain HOLD"
+  ]
+}

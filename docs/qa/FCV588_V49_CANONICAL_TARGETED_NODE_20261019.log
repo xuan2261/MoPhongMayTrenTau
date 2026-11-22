@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: source cue: off, booting and malformed modes cannot suggest active NAV
+ok 1 - source cue: off, booting and malformed modes cannot suggest active NAV
+  ---
+  duration_ms: 2.0124
+  type: 'test'
+  ...
+# Subtest: C11: typed fresh Own source, stale boundary and negative-age sample
+ok 2 - C11: typed fresh Own source, stale boundary and negative-age sample
+  ---
+  duration_ms: 0.7058
+  type: 'test'
+  ...
+# Subtest: C11: revoked, missing, invalid typed position fail closed
+ok 3 - C11: revoked, missing, invalid typed position fail closed
+  ---
+  duration_ms: 0.4027
+  type: 'test'
+  ...
+# Subtest: C11/D14: selected unavailable NMEA cannot be projected as Own
+ok 4 - C11/D14: selected unavailable NMEA cannot be projected as Own
+  ---
+  duration_ms: 0.4666
+  type: 'test'
+  ...
+# Subtest: D09: virtual option On and revoke change only external provenance
+ok 5 - D09: virtual option On and revoke change only external provenance
+  ---
+  duration_ms: 0.5024
+  type: 'test'
+  ...
+# Subtest: source-unverified menu path: warning is external, verified rows do not inherit it
+ok 6 - source-unverified menu path: warning is external, verified rows do not inherit it
+  ---
+  duration_ms: 0.9484
+  type: 'test'
+  ...
+# Subtest: D11: diagnostic display has instructor-only, not hardware wording
+ok 7 - D11: diagnostic display has instructor-only, not hardware wording
+  ---
+  duration_ms: 0.2149
+  type: 'test'
+  ...
+# Subtest: keyboard focus boundary: teacher keyboard cannot steer physical controls
+ok 8 - keyboard focus boundary: teacher keyboard cannot steer physical controls
+  ---
+  duration_ms: 0.7024
+  type: 'test'
+  ...
+# Subtest: external notes and accessibility: data provenance cannot become LCD artwork
+ok 9 - external notes and accessibility: data provenance cannot become LCD artwork
+  ---
+  duration_ms: 12.128
+  type: 'test'
+  ...
+# Subtest: V36: source changes are discrete; first render is silent
+ok 10 - V36: source changes are discrete; first render is silent
+  ---
+  duration_ms: 2.8111
+  type: 'test'
+  ...
+# Subtest: V36: world tick changes age but not announcement or stored state
+ok 11 - V36: world tick changes age but not announcement or stored state
+  ---
+  duration_ms: 1.3663
+  type: 'test'
+  ...
+# Subtest: V36: revoke emits a single human-readable D14 status change
+ok 12 - V36: revoke emits a single human-readable D14 status change
+  ---
+  duration_ms: 0.6264
+  type: 'test'
+  ...
+# Subtest: V36: stale threshold notifies once, never on every expired tick
+ok 13 - V36: stale threshold notifies once, never on every expired tick
+  ---
+  duration_ms: 0.5163
+  type: 'test'
+  ...
+# Subtest: V36: D09 grant/revoke and D14 exclusion combine into one announcement
+ok 14 - V36: D09 grant/revoke and D14 exclusion combine into one announcement
+  ---
+  duration_ms: 0.627
+  type: 'test'
+  ...
+# Subtest: V36: malformed previous rows fail closed instead of announcing
+ok 15 - V36: malformed previous rows fail closed instead of announcing
+  ---
+  duration_ms: 0.3604
+  type: 'test'
+  ...
+# Subtest: V36: three named h4 articles and one off-device polite live status
+ok 16 - V36: three named h4 articles and one off-device polite live status
+  ---
+  duration_ms: 10.4435
+  type: 'test'
+  ...
+# Subtest: V36: D15 typography is rem-based without editing OEM LCD CSS
+ok 17 - V36: D15 typography is rem-based without editing OEM LCD CSS
+  ---
+  duration_ms: 1.5006
+  type: 'test'
+  ...
+# Subtest: V36: app announces only semantic changes, without timers or FCV input
+ok 18 - V36: app announces only semantic changes, without timers or FCV input
+  ---
+  duration_ms: 2.6054
+  type: 'test'
+  ...
+# Subtest: V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+ok 19 - V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+  ---
+  duration_ms: 3.8383
+  type: 'test'
+  ...
+# Subtest: V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+ok 20 - V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+  ---
+  duration_ms: 1.1885
+  type: 'test'
+  ...
+# Subtest: V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+ok 21 - V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+  ---
+  duration_ms: 1.4592
+  type: 'test'
+  ...
+# Subtest: V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+ok 22 - V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+  ---
+  duration_ms: 1.1538
+  type: 'test'
+  ...
+# Subtest: V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+ok 23 - V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+  ---
+  duration_ms: 16.0145
+  type: 'test'
+  ...
+# Subtest: V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+ok 24 - V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+  ---
+  duration_ms: 2.8165
+  type: 'test'
+  ...
+# Subtest: V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+ok 25 - V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+  ---
+  duration_ms: 11.4622
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 26 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.7303
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 27 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.403
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 28 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.4182
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 29 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 2.9437
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 193.8588

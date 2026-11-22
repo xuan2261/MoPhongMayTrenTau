@@ -1,0 +1,26 @@
+{
+  "schema": "FCV588_P27_STAGE_FOCUSED_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "command": [
+    "C:\\nvm4w\\nodejs\\node.exe",
+    "--test",
+    "test/fcv588-p27-archive-timeline.test.mjs"
+  ],
+  "summary": [
+    "# tests 7",
+    "# pass 7",
+    "# fail 0",
+    "# skipped 0"
+  ],
+  "logSHA256": "eba0b7cef9e3c8a6e47eddb93ce6e56ddd2ed4605b0d9f79076108083f7bd1e9",
+  "sourceSHA256": {
+    "web/app.mjs": "7ae7a6d48616a3ae0aa8243df535a94d8de15dcd1af127146cd75341bed1ff08",
+    "web/index.html": "a755b819daed2e1a6d58f2fd3bdae0f614233cc2d0d9da9f06cc4220061797ca",
+    "web/styles.css": "ebcf23fc6f9c6f2f9b990eb0a162670dcd00b02942e0c5c391352cfffc714866",
+    "web/fcv588-archive-bz-viewer.mjs": "0f9e22d6369823c717f5e1fcbcaeba8915b0be8c480483da00ac30511467649e",
+    "web/fcv588-archive-timeline.mjs": "6f23f1311db820263717e0d7eb7b2012a5497eef61e2f9adcba89bfe1c60ab8d",
+    "test/fcv588-p27-archive-timeline.test.mjs": "aa214cf266b91bdb56234329da9138dcd30453c44de606dc9b971221f492c758"
+  },
+  "provenanceSourceValidREDPreserved": true
+}

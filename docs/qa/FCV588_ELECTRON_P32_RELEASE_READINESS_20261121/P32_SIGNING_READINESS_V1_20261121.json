@@ -1,0 +1,47 @@
+{
+  "schema": "FCV588_P32_SIGNING_READINESS_V1",
+  "status": "BLOCKED_NO_LOCAL_CODE_SIGNING_CREDENTIAL",
+  "installerTarget": "NSIS Windows x64",
+  "signToolPresent": true,
+  "signToolVersion": "10.0.22621.1",
+  "artifacts": {
+    "InstalledEXE": {
+      "sha256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+      "bytes": 249978880,
+      "AuthenticodeStatus": "NotSigned",
+      "signerPresent": false,
+      "timestampPresent": false
+    },
+    "InstalledUninstaller": {
+      "sha256": "35fb79ab65772fd064f3c81fe129908423bf62a9770b168dd73b43445935ce93",
+      "bytes": 140251,
+      "AuthenticodeStatus": "NotSigned",
+      "signerPresent": false,
+      "timestampPresent": false
+    },
+    "P31Installer": {
+      "sha256": "31c4fe13e1a378ecf95029a446bc32aa798e48f00f29913dfcfa3358de22153b",
+      "bytes": 121310497,
+      "AuthenticodeStatus": "NotSigned",
+      "signerPresent": false,
+      "timestampPresent": false
+    }
+  },
+  "certificateStoreAggregates": {
+    "Cert:\\CurrentUser\\My": {
+      "totalPersonalCertificates": 3,
+      "codeSigningCertificates": 0,
+      "codeSigningWithPrivateKey": 0
+    },
+    "Cert:\\LocalMachine\\My": {
+      "totalPersonalCertificates": 2,
+      "codeSigningCertificates": 0,
+      "codeSigningWithPrivateKey": 0
+    }
+  },
+  "externalCloudHSMServiceAssessed": false,
+  "signingAttempted": false,
+  "trustedPublisherApproved": false,
+  "SmartScreenEDRValidated": false,
+  "releaseApproval": "HOLD"
+}

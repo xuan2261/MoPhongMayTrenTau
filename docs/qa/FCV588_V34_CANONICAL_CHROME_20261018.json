@@ -1,0 +1,3211 @@
+{
+  "collectedAtUtc": "2026-10-18T00:11:28.533494+00:00",
+  "scope": "CANONICAL_V34_POSTINTEGRATION_BROWSER_SOURCE_BOUND_QA",
+  "servedBase": "http://127.0.0.1:4195",
+  "chrome": "155.0.8059.80",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": [
+        {
+          "name": "INITIAL_STORAGE_EMPTY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "PUBLIC_WARNING_OUTSIDE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "INSTRUCTOR_GUIDANCE_IS_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_HIDDEN_WHEN_POWER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_LCD_NOT_PERMANENT_LIVE_REGION",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_OPERATOR_SELECTION_IS_EXTERNAL_SCOPED_STATUS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_EXISTS_ONLY_OUTSIDE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_CURRENT_MODE_EXTERNAL_AFTER_BOOT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_ON_SCREEN_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_POSITION_INSIDE_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": {
+            "left": 324.5625,
+            "right": 11,
+            "bottom": 9,
+            "top": 479.453125
+          }
+        },
+        {
+          "name": "RANGE_OPERATOR_ROWS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_TEACHER_DETAILS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_HELP_NOT_ON_LCD",
+          "passed": true,
+          "evidence": "AUTO_R G:AF LF x1\n[DEMO]\n52.0\nm\nRange\n  Auto\n▶ Manual"
+        },
+        {
+          "name": "V34_RANGE_SELECTION_IS_SCREENREADER_PERCEIVABLE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_SAME_MENU_SELECTION_NO_TICK_ANNOUNCEMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_TEACHER_FOCUSED_KEYS_NEVER_DISPATCH_FCV",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HARDWARE_FOCUSED_SHORTCUT_STILL_WORKS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "BRILL_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MODE_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MODE_CUE_PERSISTS_AFTER_EDITOR_CANCEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_LANGUAGE_DISABLED_NO_HOLD_LABEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_NOT_RAW_INTERNAL_CODE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_DISABLED_SELECTION_VISUALLY_MUTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_RIGHTS_HOLD_NEAR_DEVICE_EXTERNAL_CUE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_DISABLED_SELECTION_SPOKEN",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_MOVEMENT_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_RETURN_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D14_UNVERIFIED_MENU_PATH_DISCLOSED_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_MENU_SOURCE_PROVENANCE_IS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_LIVE_NMEA_STAYS_DISCONNECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_NO_RECEIVER_EXPLAINED_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_FRESH_OWN_SAMPLE_SHOWN_WITH_SOURCE_CAUTION",
+          "passed": true,
+          "evidence": "NMEA: OFF\nOWN POSITION: 10.5000°N 106.7502°E\nOWN SPEED: 7.0 kn"
+        },
+        {
+          "name": "V34_D14_FRESH_TYPED_OWN_NOT_REAL_NMEA",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_NO_FIXTURE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_FIXTURE_REVOKED_SHOWN_EXTERNALLY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "C11_UNVERIFIED_TRIP_PATH_MARKED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_C11_TRIP_PATH_WARNING_NOT_LCDBORDER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_VALUES_AND_TRAINER_PROVENANCE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "LCD_TEST_BLACK_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            0,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "name": "V34_D11_A11Y_HOLD_NOT_PAINTED_ON_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_WHITE_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "name": "LCD_TEST_RETURN_RESTORES_DEMO_INDICATOR",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_BACK_RETURNS_TO_SYSTEM_MENU",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_DECLARED_VIRTUAL_OPTION_MENU",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_TANKENMARU_DISALLOWS_NMEA",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.tankenmaruDetails",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_MANUAL_DEFAULTS_NO_RF_ON_LCD",
+          "passed": true,
+          "evidence": "Output: Off\nPic. Sync: Yes\nSub Clutter: 4"
+        },
+        {
+          "name": "V34_D09_NO_RF_AND_VIRTUAL_OPTION_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_OPTION_REVOKE_CLEARS_DETAILS",
+          "passed": true,
+          "evidence": "▶ Range Presets\n  Zoom Range : 20\n  B/L Range : 5\n  Language\n  Units\n  Calibration\n  Transducer : GENERIC_600W\n  Demo : On\n  Diagnostics\n  LCD Test\n  Restore Defaults\n  Tankenmaru System : Off\n  NMEA : Off\n  Receiver Status\n  FUNC Key : Pic. Advance\n  Key Beep : Off\n  Draft\n  Installation Settings"
+        },
+        {
+          "name": "V34_D09_REVOKE_CUE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HEADER_INFO_MENU_AVAILABLE",
+          "passed": true,
+          "evidence": [
+            "display.aScope",
+            "display.colors",
+            "display.depthSize",
+            "display.zoomMarker",
+            "display.accuFish",
+            "display.bottomDiscrimination",
+            "display.rezBoost",
+            "display.fishSymbol",
+            "display.fishSize",
+            "display.palette",
+            "display.colorBar",
+            "display.tempGraph",
+            "display.windowSize",
+            "display.battery",
+            "display.headerInfo",
+            "display.navData"
+          ]
+        },
+        {
+          "name": "V34_HEADER_OFF_HIDES_LCD_HEADER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_PENDING_MODE_CAN_BE_SELECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_TIMED_COMMIT_PERSISTS_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV_MODE_CUE_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "NO_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "evidence": {
+            "width": 1366,
+            "height": 768,
+            "scrollWidth": 1366,
+            "demoVisible": true
+          }
+        },
+        {
+          "name": "NO_EXTERNAL_REQUESTS",
+          "passed": true,
+          "evidence": [
+            "http://127.0.0.1:4195/",
+            "http://127.0.0.1:4195/web/styles.css",
+            "http://127.0.0.1:4195/web/app.mjs",
+            "http://127.0.0.1:4195/src/core/scenario.mjs",
+            "http://127.0.0.1:4195/src/core/session.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4195/src/core/lessons.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4195/web/hold-input.mjs",
+            "http://127.0.0.1:4195/web/pad-repeat.mjs",
+            "http://127.0.0.1:4195/web/rotary-input.mjs",
+            "http://127.0.0.1:4195/web/key-feedback.mjs",
+            "http://127.0.0.1:4195/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4195/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4195/src/core/protocol.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4195/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "NO_TRAINING_CANVAS_PAINT",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "NO_JS_NETWORK_ERRORS",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "V34_BROWSER_LOADED_RESPONSE_BYTES_MATCH_CANONICAL",
+          "passed": true,
+          "evidence": {
+            "verified": 34,
+            "requested": 34,
+            "errors": [],
+            "paths": [
+              "src/core/lessons.mjs",
+              "src/core/protocol.mjs",
+              "src/core/scenario.mjs",
+              "src/core/session.mjs",
+              "src/devices/fcv588/adapter.mjs",
+              "src/devices/fcv588/alarms.mjs",
+              "src/devices/fcv588/calibration.mjs",
+              "src/devices/fcv588/capabilities.mjs",
+              "src/devices/fcv588/display-layout.mjs",
+              "src/devices/fcv588/display-palette.mjs",
+              "src/devices/fcv588/display-widgets.mjs",
+              "src/devices/fcv588/echo-projection.mjs",
+              "src/devices/fcv588/menu-atlas.mjs",
+              "src/devices/fcv588/model.mjs",
+              "src/devices/fcv588/navigation.mjs",
+              "src/devices/fcv588/profile-version.mjs",
+              "src/devices/fcv588/receiver-status.mjs",
+              "src/devices/fcv588/settings.mjs",
+              "src/devices/fcv588/tankenmaru-status.mjs",
+              "src/devices/fcv588/training-faults.mjs",
+              "src/devices/fcv588/units.mjs",
+              "web/app.mjs",
+              "web/favicon.svg",
+              "web/hold-input.mjs",
+              "web/index.html",
+              "web/key-feedback.mjs",
+              "web/keyboard-shortcuts.mjs",
+              "web/lcd-config-presentation.mjs",
+              "web/lcd-control-presentation.mjs",
+              "web/lcd-instructor-meta.mjs",
+              "web/lcd-presentation.mjs",
+              "web/pad-repeat.mjs",
+              "web/rotary-input.mjs",
+              "web/styles.css"
+            ]
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-range.png",
+          "sha256": "3ee6946e5c2d6ca44d0e5f96477360327b793e03720e1e277c69cc24a0a082f1"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-range-complete-device.png",
+          "sha256": "f69c3a076ce92d4720ca03ebb7c9a41deb995a55b6f938177a9e384d87590ba8"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-range-instructor.png",
+          "sha256": "53397ffa297f1fef05f2f5eef4ee750a80c4608d3838b604999fca30f8aff0f2"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-brill.png",
+          "sha256": "959f665cdf07d1246aaf69018861fa55465424578f130902a77ccba451030d90"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-mode.png",
+          "sha256": "528da91179db3a968273b4aa3a97dcb7202e7fbc65ba61a55b96f069a9e3e3d0"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-current-mode-external.png",
+          "sha256": "9c938d95174f5c459f8e7116a050f9998b2f951593d2da9cf2924c170ef02301"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-language.png",
+          "sha256": "fd8f45ac9fa801242e7af1547124d4d715bb0732f7c88efedf2408d31789582b"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-language-source-near-face.png",
+          "sha256": "fd8f45ac9fa801242e7af1547124d4d715bb0732f7c88efedf2408d31789582b"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-receiver.png",
+          "sha256": "edc03709309c258e81aa5467ae672f1c86910ed05b0c78904cfc09282533bf63"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-receiver-fresh.png",
+          "sha256": "2c49678eb1ddf51b8848f5f4364c6b60ab348d555f70a57c76018ac26beb2443"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-trip.png",
+          "sha256": "5c17ded9dd217233764d2ea444983cd6ebe2dc7cbd3a15349250bbfa24410c40"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-lcd-test-return.png",
+          "sha256": "e46d1980e505bc4ecfeab8d0b95c47f4ae89339aa6614cfcd162ddfba21dbd54"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-tankenmaru.png",
+          "sha256": "303553a58884b4bfc0bf2a40c7114661f6acb0bcdc0edfc92499e2b9d47bcbf0"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-nav2-header-off-cue.png",
+          "sha256": "6f82973e26afbe30bc749cb7c11084c6a0a7cb7319149104be01c671552e9fe1"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1366x768-nav2-header-off-device.png",
+          "sha256": "78a1822090d5e63b659fc2789fecb22ae4741c0fe12500486d689ae00760c354"
+        }
+      ],
+      "capturedCanvasCalls": 685,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "verifiedBrowserResponses": 34,
+      "browserSourceBodyErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": [
+        {
+          "name": "INITIAL_STORAGE_EMPTY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "PUBLIC_WARNING_OUTSIDE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "INSTRUCTOR_GUIDANCE_IS_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_HIDDEN_WHEN_POWER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_LCD_NOT_PERMANENT_LIVE_REGION",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_OPERATOR_SELECTION_IS_EXTERNAL_SCOPED_STATUS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_EXISTS_ONLY_OUTSIDE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_CURRENT_MODE_EXTERNAL_AFTER_BOOT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_ON_SCREEN_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_POSITION_INSIDE_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": {
+            "left": 322.21875,
+            "right": 11,
+            "bottom": 9,
+            "top": 478.453125
+          }
+        },
+        {
+          "name": "RANGE_OPERATOR_ROWS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_TEACHER_DETAILS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_HELP_NOT_ON_LCD",
+          "passed": true,
+          "evidence": "AUTO_R G:AF LF x1\n[DEMO]\n52.0\nm\nRange\n  Auto\n▶ Manual"
+        },
+        {
+          "name": "V34_RANGE_SELECTION_IS_SCREENREADER_PERCEIVABLE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_SAME_MENU_SELECTION_NO_TICK_ANNOUNCEMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_TEACHER_FOCUSED_KEYS_NEVER_DISPATCH_FCV",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HARDWARE_FOCUSED_SHORTCUT_STILL_WORKS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "BRILL_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MODE_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MODE_CUE_PERSISTS_AFTER_EDITOR_CANCEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_LANGUAGE_DISABLED_NO_HOLD_LABEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_NOT_RAW_INTERNAL_CODE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_DISABLED_SELECTION_VISUALLY_MUTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_RIGHTS_HOLD_NEAR_DEVICE_EXTERNAL_CUE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_DISABLED_SELECTION_SPOKEN",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_MOVEMENT_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_RETURN_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D14_UNVERIFIED_MENU_PATH_DISCLOSED_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_MENU_SOURCE_PROVENANCE_IS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_LIVE_NMEA_STAYS_DISCONNECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_NO_RECEIVER_EXPLAINED_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_FRESH_OWN_SAMPLE_SHOWN_WITH_SOURCE_CAUTION",
+          "passed": true,
+          "evidence": "NMEA: OFF\nOWN POSITION: 10.5000°N 106.7502°E\nOWN SPEED: 7.0 kn"
+        },
+        {
+          "name": "V34_D14_FRESH_TYPED_OWN_NOT_REAL_NMEA",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_NO_FIXTURE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_FIXTURE_REVOKED_SHOWN_EXTERNALLY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "C11_UNVERIFIED_TRIP_PATH_MARKED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_C11_TRIP_PATH_WARNING_NOT_LCDBORDER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_VALUES_AND_TRAINER_PROVENANCE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "LCD_TEST_BLACK_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            0,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "name": "V34_D11_A11Y_HOLD_NOT_PAINTED_ON_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_WHITE_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "name": "LCD_TEST_RETURN_RESTORES_DEMO_INDICATOR",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_BACK_RETURNS_TO_SYSTEM_MENU",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_DECLARED_VIRTUAL_OPTION_MENU",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_TANKENMARU_DISALLOWS_NMEA",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.tankenmaruDetails",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_MANUAL_DEFAULTS_NO_RF_ON_LCD",
+          "passed": true,
+          "evidence": "Output: Off\nPic. Sync: Yes\nSub Clutter: 4"
+        },
+        {
+          "name": "V34_D09_NO_RF_AND_VIRTUAL_OPTION_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_OPTION_REVOKE_CLEARS_DETAILS",
+          "passed": true,
+          "evidence": "▶ Range Presets\n  Zoom Range : 20\n  B/L Range : 5\n  Language\n  Units\n  Calibration\n  Transducer : GENERIC_600W\n  Demo : On\n  Diagnostics\n  LCD Test\n  Restore Defaults\n  Tankenmaru System : Off\n  NMEA : Off\n  Receiver Status\n  FUNC Key : Pic. Advance\n  Key Beep : Off\n  Draft\n  Installation Settings"
+        },
+        {
+          "name": "V34_D09_REVOKE_CUE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HEADER_INFO_MENU_AVAILABLE",
+          "passed": true,
+          "evidence": [
+            "display.aScope",
+            "display.colors",
+            "display.depthSize",
+            "display.zoomMarker",
+            "display.accuFish",
+            "display.bottomDiscrimination",
+            "display.rezBoost",
+            "display.fishSymbol",
+            "display.fishSize",
+            "display.palette",
+            "display.colorBar",
+            "display.tempGraph",
+            "display.windowSize",
+            "display.battery",
+            "display.headerInfo",
+            "display.navData"
+          ]
+        },
+        {
+          "name": "V34_HEADER_OFF_HIDES_LCD_HEADER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_PENDING_MODE_CAN_BE_SELECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_TIMED_COMMIT_PERSISTS_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV_MODE_CUE_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "NO_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "evidence": {
+            "width": 1920,
+            "height": 1080,
+            "scrollWidth": 1920,
+            "demoVisible": true
+          }
+        },
+        {
+          "name": "NO_EXTERNAL_REQUESTS",
+          "passed": true,
+          "evidence": [
+            "http://127.0.0.1:4195/",
+            "http://127.0.0.1:4195/web/styles.css",
+            "http://127.0.0.1:4195/web/app.mjs",
+            "http://127.0.0.1:4195/src/core/scenario.mjs",
+            "http://127.0.0.1:4195/src/core/session.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4195/src/core/lessons.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4195/web/hold-input.mjs",
+            "http://127.0.0.1:4195/web/pad-repeat.mjs",
+            "http://127.0.0.1:4195/web/rotary-input.mjs",
+            "http://127.0.0.1:4195/web/key-feedback.mjs",
+            "http://127.0.0.1:4195/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4195/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4195/src/core/protocol.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4195/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "NO_TRAINING_CANVAS_PAINT",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "NO_JS_NETWORK_ERRORS",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "V34_BROWSER_LOADED_RESPONSE_BYTES_MATCH_CANONICAL",
+          "passed": true,
+          "evidence": {
+            "verified": 34,
+            "requested": 34,
+            "errors": [],
+            "paths": [
+              "src/core/lessons.mjs",
+              "src/core/protocol.mjs",
+              "src/core/scenario.mjs",
+              "src/core/session.mjs",
+              "src/devices/fcv588/adapter.mjs",
+              "src/devices/fcv588/alarms.mjs",
+              "src/devices/fcv588/calibration.mjs",
+              "src/devices/fcv588/capabilities.mjs",
+              "src/devices/fcv588/display-layout.mjs",
+              "src/devices/fcv588/display-palette.mjs",
+              "src/devices/fcv588/display-widgets.mjs",
+              "src/devices/fcv588/echo-projection.mjs",
+              "src/devices/fcv588/menu-atlas.mjs",
+              "src/devices/fcv588/model.mjs",
+              "src/devices/fcv588/navigation.mjs",
+              "src/devices/fcv588/profile-version.mjs",
+              "src/devices/fcv588/receiver-status.mjs",
+              "src/devices/fcv588/settings.mjs",
+              "src/devices/fcv588/tankenmaru-status.mjs",
+              "src/devices/fcv588/training-faults.mjs",
+              "src/devices/fcv588/units.mjs",
+              "web/app.mjs",
+              "web/favicon.svg",
+              "web/hold-input.mjs",
+              "web/index.html",
+              "web/key-feedback.mjs",
+              "web/keyboard-shortcuts.mjs",
+              "web/lcd-config-presentation.mjs",
+              "web/lcd-control-presentation.mjs",
+              "web/lcd-instructor-meta.mjs",
+              "web/lcd-presentation.mjs",
+              "web/pad-repeat.mjs",
+              "web/rotary-input.mjs",
+              "web/styles.css"
+            ]
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-range.png",
+          "sha256": "bbf91360720ce7d3678ea044e619c6b5a28adc7287854d8c3a74718beb2ad0fe"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-range-complete-device.png",
+          "sha256": "193a300d6fea9c3251419a262c57eab21b950ddf37f5531a0d3d29101b8fdb84"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-range-instructor.png",
+          "sha256": "64a1fbfdc2adfa4e7dddc5eae2ea6ec359e71fbeb48c6bd25cc83430a8bee3b3"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-brill.png",
+          "sha256": "a912a84da1b94227343e529d9b9e9e6492b18753b5d733ac86140cab51be6923"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-mode.png",
+          "sha256": "7e0f167ed624289fbc4c805aedf0e25cdfa9eec59225eeb8f9b14d0c7916703e"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-current-mode-external.png",
+          "sha256": "e6bcfae35959355bb123f7b09d9ced63da46c03594baa89159c1594848d61580"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-language.png",
+          "sha256": "925dcb3145bd656f8af902f31fcfecf3717eb769fd44efa8869702ebfcaf7506"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-language-source-near-face.png",
+          "sha256": "925dcb3145bd656f8af902f31fcfecf3717eb769fd44efa8869702ebfcaf7506"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-receiver.png",
+          "sha256": "3c1418732cb979a13972edc9afa9a684d32b5da272754b0c6970579a41aa67ab"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-receiver-fresh.png",
+          "sha256": "770b5a86f7eb96ad632dadbdae0451118830dc5b19b56ab1750dec0374be69c3"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-trip.png",
+          "sha256": "895ffa51132171c9d0360866e311de1e7f8b4d15fc5b377993351aeb21a9bb91"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-lcd-test-return.png",
+          "sha256": "96665f8fc42dc33514fe89e137479465b1aab037675dc35038b5fc317e89019c"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-tankenmaru.png",
+          "sha256": "61be8682ba854a88fedfdde893f5b32e0ad2a8b7ee047fb0d8f22688eb12aad5"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-nav2-header-off-cue.png",
+          "sha256": "267d50df5ecb4b29a11455fbebc6c0a0c3d5efe2ba9441563795db91782dc2e1"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-1920x1080-nav2-header-off-device.png",
+          "sha256": "fada5629500447c54e01467d4ef5c7a8e9b8fbac2496e1831481d77c0f2cafea"
+        }
+      ],
+      "capturedCanvasCalls": 685,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "verifiedBrowserResponses": 34,
+      "browserSourceBodyErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "360x800",
+      "checks": [
+        {
+          "name": "INITIAL_STORAGE_EMPTY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "PUBLIC_WARNING_OUTSIDE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "INSTRUCTOR_GUIDANCE_IS_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_HIDDEN_WHEN_POWER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_LCD_NOT_PERMANENT_LIVE_REGION",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_OPERATOR_SELECTION_IS_EXTERNAL_SCOPED_STATUS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_EXISTS_ONLY_OUTSIDE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_LAYOUT_DISCLAIMER_BEFORE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_CURRENT_MODE_EXTERNAL_AFTER_BOOT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_ON_SCREEN_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_POSITION_INSIDE_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": {
+            "left": 269.296875,
+            "right": 11,
+            "bottom": 9,
+            "top": 395.140625
+          }
+        },
+        {
+          "name": "RANGE_OPERATOR_ROWS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_TEACHER_DETAILS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_HELP_NOT_ON_LCD",
+          "passed": true,
+          "evidence": "AUTO_R G:AF LF x1\n[DEMO]\n52.0\nm\nRange\n  Auto\n▶ Manual"
+        },
+        {
+          "name": "V34_RANGE_SELECTION_IS_SCREENREADER_PERCEIVABLE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_SAME_MENU_SELECTION_NO_TICK_ANNOUNCEMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_GUIDES_OUTSIDE_FACE_AND_NO_OVERLAP",
+          "passed": true,
+          "evidence": {
+            "upperEndsBeforeFace": true,
+            "lowerStartsAfterFace": true
+          }
+        },
+        {
+          "name": "V34_TEACHER_FOCUSED_KEYS_NEVER_DISPATCH_FCV",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HARDWARE_FOCUSED_SHORTCUT_STILL_WORKS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "BRILL_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_BRILL_TIME_GUIDE_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MODE_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MODE_CUE_PERSISTS_AFTER_EDITOR_CANCEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_MODE_CUE_OUTSIDE_HARDWARE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_LANGUAGE_DISABLED_NO_HOLD_LABEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_NOT_RAW_INTERNAL_CODE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_DISABLED_SELECTION_VISUALLY_MUTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_RIGHTS_HOLD_NEAR_DEVICE_EXTERNAL_CUE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_DISABLED_SELECTION_SPOKEN",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_MOVEMENT_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_RETURN_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D14_UNVERIFIED_MENU_PATH_DISCLOSED_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_MENU_SOURCE_PROVENANCE_IS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_LIVE_NMEA_STAYS_DISCONNECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_NO_RECEIVER_EXPLAINED_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_FRESH_OWN_SAMPLE_SHOWN_WITH_SOURCE_CAUTION",
+          "passed": true,
+          "evidence": "NMEA: OFF\nOWN POSITION: 10.5000°N 106.7502°E\nOWN SPEED: 7.0 kn"
+        },
+        {
+          "name": "V34_D14_FRESH_TYPED_OWN_NOT_REAL_NMEA",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_NO_FIXTURE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_FIXTURE_REVOKED_SHOWN_EXTERNALLY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "C11_UNVERIFIED_TRIP_PATH_MARKED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_C11_TRIP_PATH_WARNING_NOT_LCDBORDER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_VALUES_AND_TRAINER_PROVENANCE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "LCD_TEST_BLACK_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            0,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "name": "V34_D11_A11Y_HOLD_NOT_PAINTED_ON_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_WHITE_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "name": "LCD_TEST_RETURN_RESTORES_DEMO_INDICATOR",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_BACK_RETURNS_TO_SYSTEM_MENU",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_DECLARED_VIRTUAL_OPTION_MENU",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_TANKENMARU_DISALLOWS_NMEA",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.tankenmaruDetails",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_MANUAL_DEFAULTS_NO_RF_ON_LCD",
+          "passed": true,
+          "evidence": "Output: Off\nPic. Sync: Yes\nSub Clutter: 4"
+        },
+        {
+          "name": "V34_D09_NO_RF_AND_VIRTUAL_OPTION_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_OPTION_REVOKE_CLEARS_DETAILS",
+          "passed": true,
+          "evidence": "▶ Range Presets\n  Zoom Range : 20\n  B/L Range : 5\n  Language\n  Units\n  Calibration\n  Transducer : GENERIC_600W\n  Demo : On\n  Diagnostics\n  LCD Test\n  Restore Defaults\n  Tankenmaru System : Off\n  NMEA : Off\n  Receiver Status\n  FUNC Key : Pic. Advance\n  Key Beep : Off\n  Draft\n  Installation Settings"
+        },
+        {
+          "name": "V34_D09_REVOKE_CUE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HEADER_INFO_MENU_AVAILABLE",
+          "passed": true,
+          "evidence": [
+            "display.aScope",
+            "display.colors",
+            "display.depthSize",
+            "display.zoomMarker",
+            "display.accuFish",
+            "display.bottomDiscrimination",
+            "display.rezBoost",
+            "display.fishSymbol",
+            "display.fishSize",
+            "display.palette",
+            "display.colorBar",
+            "display.tempGraph",
+            "display.windowSize",
+            "display.battery",
+            "display.headerInfo",
+            "display.navData"
+          ]
+        },
+        {
+          "name": "V34_HEADER_OFF_HIDES_LCD_HEADER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_PENDING_MODE_CAN_BE_SELECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_TIMED_COMMIT_PERSISTS_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV_MODE_CUE_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_NAV_CUE_ABOVE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "NO_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "evidence": {
+            "width": 360,
+            "height": 800,
+            "scrollWidth": 360,
+            "demoVisible": true
+          }
+        },
+        {
+          "name": "NO_EXTERNAL_REQUESTS",
+          "passed": true,
+          "evidence": [
+            "http://127.0.0.1:4195/",
+            "http://127.0.0.1:4195/web/styles.css",
+            "http://127.0.0.1:4195/web/app.mjs",
+            "http://127.0.0.1:4195/src/core/scenario.mjs",
+            "http://127.0.0.1:4195/src/core/session.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4195/src/core/lessons.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4195/web/hold-input.mjs",
+            "http://127.0.0.1:4195/web/pad-repeat.mjs",
+            "http://127.0.0.1:4195/web/rotary-input.mjs",
+            "http://127.0.0.1:4195/web/key-feedback.mjs",
+            "http://127.0.0.1:4195/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4195/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4195/src/core/protocol.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4195/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "NO_TRAINING_CANVAS_PAINT",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "NO_JS_NETWORK_ERRORS",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "V34_BROWSER_LOADED_RESPONSE_BYTES_MATCH_CANONICAL",
+          "passed": true,
+          "evidence": {
+            "verified": 34,
+            "requested": 34,
+            "errors": [],
+            "paths": [
+              "src/core/lessons.mjs",
+              "src/core/protocol.mjs",
+              "src/core/scenario.mjs",
+              "src/core/session.mjs",
+              "src/devices/fcv588/adapter.mjs",
+              "src/devices/fcv588/alarms.mjs",
+              "src/devices/fcv588/calibration.mjs",
+              "src/devices/fcv588/capabilities.mjs",
+              "src/devices/fcv588/display-layout.mjs",
+              "src/devices/fcv588/display-palette.mjs",
+              "src/devices/fcv588/display-widgets.mjs",
+              "src/devices/fcv588/echo-projection.mjs",
+              "src/devices/fcv588/menu-atlas.mjs",
+              "src/devices/fcv588/model.mjs",
+              "src/devices/fcv588/navigation.mjs",
+              "src/devices/fcv588/profile-version.mjs",
+              "src/devices/fcv588/receiver-status.mjs",
+              "src/devices/fcv588/settings.mjs",
+              "src/devices/fcv588/tankenmaru-status.mjs",
+              "src/devices/fcv588/training-faults.mjs",
+              "src/devices/fcv588/units.mjs",
+              "web/app.mjs",
+              "web/favicon.svg",
+              "web/hold-input.mjs",
+              "web/index.html",
+              "web/key-feedback.mjs",
+              "web/keyboard-shortcuts.mjs",
+              "web/lcd-config-presentation.mjs",
+              "web/lcd-control-presentation.mjs",
+              "web/lcd-instructor-meta.mjs",
+              "web/lcd-presentation.mjs",
+              "web/pad-repeat.mjs",
+              "web/rotary-input.mjs",
+              "web/styles.css"
+            ]
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-range.png",
+          "sha256": "02e2b4d2eb7ad3a0ad57e91796a1c1e09654355159432d89ab2c58d849e56443"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-range-complete-device.png",
+          "sha256": "a1c13034df5cfe9d54623768f7de5fc90cfd8999a2defa9b340ae0e040d04e1b"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-range-instructor.png",
+          "sha256": "1da9af4a7978dd4cce54552ebec569d1c29d3093bb49d966f669fd63afcadf86"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-brill.png",
+          "sha256": "2c660241b8ff2f9436ed8dd0c2c34397622a4c24540073f08d875877383090a9"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-mode.png",
+          "sha256": "1d45cdec42d024f512e1f00747c5d4f3259e20c0b8d671bb28bf616865643987"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-current-mode-external.png",
+          "sha256": "cfc2d85d6bbd1a61f6f3dc83ae1c9b6d0b7b24df7214990b356af20633bca9a6"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-language.png",
+          "sha256": "d105739c870736d3a44497dfabd73d6384cb4275363f7e60b48d40f686881544"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-language-source-near-face.png",
+          "sha256": "c8294ffa79e3a448ffc146f339da1e2ec1bdfc082f18fb121b8fc23a8846490e"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-receiver.png",
+          "sha256": "3a3448fb234a53834af4d1687015a0690cce80baf21cdd60bbd4a25c5b26268d"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-receiver-fresh.png",
+          "sha256": "4ea88cbdf9457df0d89d6b8bb06cce356c4e66ad5045a24f18c550dcf669b39d"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-trip.png",
+          "sha256": "0c16f1659adc8882584e058d7bd8338a496a7e11d445c5c438093723bdb92392"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-lcd-test-return.png",
+          "sha256": "344951414d10b953f4395bb98cfe10cfc1e4d91d130284b2bf2e194e01ff0d24"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-tankenmaru.png",
+          "sha256": "2de281f505b3533944fed0674c099d702984835ff995fc35bb282ebceffa7633"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-nav2-header-off-cue.png",
+          "sha256": "78a8b6fdce22d9a2c5239d2031e7fea92ccb89c7c5d3ca2420288528188aca5a"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-360x800-nav2-header-off-device.png",
+          "sha256": "0ac2af4780266144d6f7e9c14f45fdd6f21dc389ffc46dcf096bb6d06f40d195"
+        }
+      ],
+      "capturedCanvasCalls": 685,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "verifiedBrowserResponses": 34,
+      "browserSourceBodyErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "390x844",
+      "checks": [
+        {
+          "name": "INITIAL_STORAGE_EMPTY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "PUBLIC_WARNING_OUTSIDE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "INSTRUCTOR_GUIDANCE_IS_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_HIDDEN_WHEN_POWER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_LCD_NOT_PERMANENT_LIVE_REGION",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_OPERATOR_SELECTION_IS_EXTERNAL_SCOPED_STATUS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_EXISTS_ONLY_OUTSIDE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_LAYOUT_DISCLAIMER_BEFORE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_CURRENT_MODE_EXTERNAL_AFTER_BOOT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_ON_SCREEN_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_POSITION_INSIDE_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": {
+            "left": 299.296875,
+            "right": 11,
+            "bottom": 9,
+            "top": 435.21875
+          }
+        },
+        {
+          "name": "RANGE_OPERATOR_ROWS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_TEACHER_DETAILS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_HELP_NOT_ON_LCD",
+          "passed": true,
+          "evidence": "AUTO_R G:AF LF x1\n[DEMO]\n52.0\nm\nRange\n  Auto\n▶ Manual"
+        },
+        {
+          "name": "V34_RANGE_SELECTION_IS_SCREENREADER_PERCEIVABLE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_SAME_MENU_SELECTION_NO_TICK_ANNOUNCEMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_GUIDES_OUTSIDE_FACE_AND_NO_OVERLAP",
+          "passed": true,
+          "evidence": {
+            "upperEndsBeforeFace": true,
+            "lowerStartsAfterFace": true
+          }
+        },
+        {
+          "name": "V34_TEACHER_FOCUSED_KEYS_NEVER_DISPATCH_FCV",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HARDWARE_FOCUSED_SHORTCUT_STILL_WORKS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "BRILL_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_BRILL_TIME_GUIDE_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MODE_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MODE_CUE_PERSISTS_AFTER_EDITOR_CANCEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_MODE_CUE_OUTSIDE_HARDWARE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_LANGUAGE_DISABLED_NO_HOLD_LABEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_NOT_RAW_INTERNAL_CODE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_DISABLED_SELECTION_VISUALLY_MUTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_RIGHTS_HOLD_NEAR_DEVICE_EXTERNAL_CUE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_DISABLED_SELECTION_SPOKEN",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_MOVEMENT_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_RETURN_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D14_UNVERIFIED_MENU_PATH_DISCLOSED_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_MENU_SOURCE_PROVENANCE_IS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_LIVE_NMEA_STAYS_DISCONNECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_NO_RECEIVER_EXPLAINED_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_FRESH_OWN_SAMPLE_SHOWN_WITH_SOURCE_CAUTION",
+          "passed": true,
+          "evidence": "NMEA: OFF\nOWN POSITION: 10.5000°N 106.7502°E\nOWN SPEED: 7.0 kn"
+        },
+        {
+          "name": "V34_D14_FRESH_TYPED_OWN_NOT_REAL_NMEA",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_NO_FIXTURE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_FIXTURE_REVOKED_SHOWN_EXTERNALLY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "C11_UNVERIFIED_TRIP_PATH_MARKED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_C11_TRIP_PATH_WARNING_NOT_LCDBORDER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_VALUES_AND_TRAINER_PROVENANCE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "LCD_TEST_BLACK_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            0,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "name": "V34_D11_A11Y_HOLD_NOT_PAINTED_ON_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_WHITE_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "name": "LCD_TEST_RETURN_RESTORES_DEMO_INDICATOR",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_BACK_RETURNS_TO_SYSTEM_MENU",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_DECLARED_VIRTUAL_OPTION_MENU",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_TANKENMARU_DISALLOWS_NMEA",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.tankenmaruDetails",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_MANUAL_DEFAULTS_NO_RF_ON_LCD",
+          "passed": true,
+          "evidence": "Output: Off\nPic. Sync: Yes\nSub Clutter: 4"
+        },
+        {
+          "name": "V34_D09_NO_RF_AND_VIRTUAL_OPTION_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_OPTION_REVOKE_CLEARS_DETAILS",
+          "passed": true,
+          "evidence": "▶ Range Presets\n  Zoom Range : 20\n  B/L Range : 5\n  Language\n  Units\n  Calibration\n  Transducer : GENERIC_600W\n  Demo : On\n  Diagnostics\n  LCD Test\n  Restore Defaults\n  Tankenmaru System : Off\n  NMEA : Off\n  Receiver Status\n  FUNC Key : Pic. Advance\n  Key Beep : Off\n  Draft\n  Installation Settings"
+        },
+        {
+          "name": "V34_D09_REVOKE_CUE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HEADER_INFO_MENU_AVAILABLE",
+          "passed": true,
+          "evidence": [
+            "display.aScope",
+            "display.colors",
+            "display.depthSize",
+            "display.zoomMarker",
+            "display.accuFish",
+            "display.bottomDiscrimination",
+            "display.rezBoost",
+            "display.fishSymbol",
+            "display.fishSize",
+            "display.palette",
+            "display.colorBar",
+            "display.tempGraph",
+            "display.windowSize",
+            "display.battery",
+            "display.headerInfo",
+            "display.navData"
+          ]
+        },
+        {
+          "name": "V34_HEADER_OFF_HIDES_LCD_HEADER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_PENDING_MODE_CAN_BE_SELECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_TIMED_COMMIT_PERSISTS_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV_MODE_CUE_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_NAV_CUE_ABOVE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "NO_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "evidence": {
+            "width": 390,
+            "height": 844,
+            "scrollWidth": 390,
+            "demoVisible": true
+          }
+        },
+        {
+          "name": "NO_EXTERNAL_REQUESTS",
+          "passed": true,
+          "evidence": [
+            "http://127.0.0.1:4195/",
+            "http://127.0.0.1:4195/web/styles.css",
+            "http://127.0.0.1:4195/web/app.mjs",
+            "http://127.0.0.1:4195/src/core/scenario.mjs",
+            "http://127.0.0.1:4195/src/core/session.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4195/src/core/lessons.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4195/web/hold-input.mjs",
+            "http://127.0.0.1:4195/web/pad-repeat.mjs",
+            "http://127.0.0.1:4195/web/rotary-input.mjs",
+            "http://127.0.0.1:4195/web/key-feedback.mjs",
+            "http://127.0.0.1:4195/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4195/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4195/src/core/protocol.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4195/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "NO_TRAINING_CANVAS_PAINT",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "NO_JS_NETWORK_ERRORS",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "V34_BROWSER_LOADED_RESPONSE_BYTES_MATCH_CANONICAL",
+          "passed": true,
+          "evidence": {
+            "verified": 34,
+            "requested": 34,
+            "errors": [],
+            "paths": [
+              "src/core/lessons.mjs",
+              "src/core/protocol.mjs",
+              "src/core/scenario.mjs",
+              "src/core/session.mjs",
+              "src/devices/fcv588/adapter.mjs",
+              "src/devices/fcv588/alarms.mjs",
+              "src/devices/fcv588/calibration.mjs",
+              "src/devices/fcv588/capabilities.mjs",
+              "src/devices/fcv588/display-layout.mjs",
+              "src/devices/fcv588/display-palette.mjs",
+              "src/devices/fcv588/display-widgets.mjs",
+              "src/devices/fcv588/echo-projection.mjs",
+              "src/devices/fcv588/menu-atlas.mjs",
+              "src/devices/fcv588/model.mjs",
+              "src/devices/fcv588/navigation.mjs",
+              "src/devices/fcv588/profile-version.mjs",
+              "src/devices/fcv588/receiver-status.mjs",
+              "src/devices/fcv588/settings.mjs",
+              "src/devices/fcv588/tankenmaru-status.mjs",
+              "src/devices/fcv588/training-faults.mjs",
+              "src/devices/fcv588/units.mjs",
+              "web/app.mjs",
+              "web/favicon.svg",
+              "web/hold-input.mjs",
+              "web/index.html",
+              "web/key-feedback.mjs",
+              "web/keyboard-shortcuts.mjs",
+              "web/lcd-config-presentation.mjs",
+              "web/lcd-control-presentation.mjs",
+              "web/lcd-instructor-meta.mjs",
+              "web/lcd-presentation.mjs",
+              "web/pad-repeat.mjs",
+              "web/rotary-input.mjs",
+              "web/styles.css"
+            ]
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-range.png",
+          "sha256": "fc2b842ac5e4f7fc92d5b6c40b822366b06ee2f410b60d661e58540d1c65650c"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-range-complete-device.png",
+          "sha256": "44ef0b53fd9bfea29bbda1e24874a15ebe1d8b0255e489b578858804fc69e618"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-range-instructor.png",
+          "sha256": "78d21a2c550c7fd5b9d9b8d346d211653264862183c531f918950d02ee51fb79"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-brill.png",
+          "sha256": "97e8b5a02482141d6bc8da031364d6cee1f2542142155e8a970274e7a692fb4c"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-mode.png",
+          "sha256": "255db343f447f27b1203b24fe581314a586804ff4c94396140f12583da2b1603"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-current-mode-external.png",
+          "sha256": "f828bc332a824332ba91548424b97c88cb6c61323cf177bc2e4df725a85e8086"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-language.png",
+          "sha256": "ef26142111c8af97264f27d6d3eca510609ef6c57c8225c2761a7da5a9a7098e"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-language-source-near-face.png",
+          "sha256": "d1cf793ceee579f1b2b4c8006fc3a737920ddea3f9b0e15e48111283beb4bca5"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-receiver.png",
+          "sha256": "7f01b75656882f32fc62abaf0b5d21c05b95eae5ed9faac2b38a974a6444a7bd"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-receiver-fresh.png",
+          "sha256": "61c2174dcd15c3f646d4edf2d16fd3a1cc6201c83e29ee62bc356862938f7a65"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-trip.png",
+          "sha256": "1339be6935e9ec757ae07db7de7e08b989579c7bd1ef626bea8481ad89a5ebd3"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-lcd-test-return.png",
+          "sha256": "a50ac6ca800e91eb9823a7e37fe039e69e8fe26797a6db292d8fe63b7dacf4c7"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-tankenmaru.png",
+          "sha256": "883737250302b74d2cd1a67556c3fc8035f814410df082c14d98bb0dea795f47"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-nav2-header-off-cue.png",
+          "sha256": "9329e7630b1a18ada943f7b34fdf699a4b398c5ba59007321ccdedf46e7b4f5a"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-390x844-nav2-header-off-device.png",
+          "sha256": "fb281f06eb8b0b7ad30fe5a9d7190cf4767c357680f9b882463f424f5821f951"
+        }
+      ],
+      "capturedCanvasCalls": 677,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "verifiedBrowserResponses": 34,
+      "browserSourceBodyErrors": [],
+      "status": "PASS"
+    },
+    {
+      "viewport": "320x720",
+      "checks": [
+        {
+          "name": "INITIAL_STORAGE_EMPTY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "PUBLIC_WARNING_OUTSIDE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "INSTRUCTOR_GUIDANCE_IS_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_HIDDEN_WHEN_POWER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_LCD_NOT_PERMANENT_LIVE_REGION",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_OPERATOR_SELECTION_IS_EXTERNAL_SCOPED_STATUS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_A11Y_HOLD_EXISTS_ONLY_OUTSIDE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_LAYOUT_DISCLAIMER_BEFORE_DEVICE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_CURRENT_MODE_EXTERNAL_AFTER_BOOT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_ON_SCREEN_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "DEMO_POSITION_INSIDE_BOTTOM_RIGHT",
+          "passed": true,
+          "evidence": {
+            "left": 229.296875,
+            "right": 11,
+            "bottom": 9,
+            "top": 341.703125
+          }
+        },
+        {
+          "name": "RANGE_OPERATOR_ROWS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_TEACHER_DETAILS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "RANGE_HELP_NOT_ON_LCD",
+          "passed": true,
+          "evidence": "AUTO_R G:AF LF x1\n[DEMO]\n52.0\nm\nRange\n  Auto\n▶ Manual"
+        },
+        {
+          "name": "V34_RANGE_SELECTION_IS_SCREENREADER_PERCEIVABLE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_SAME_MENU_SELECTION_NO_TICK_ANNOUNCEMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_GUIDES_OUTSIDE_FACE_AND_NO_OVERLAP",
+          "passed": true,
+          "evidence": {
+            "upperEndsBeforeFace": true,
+            "lowerStartsAfterFace": true
+          }
+        },
+        {
+          "name": "V34_TEACHER_FOCUSED_KEYS_NEVER_DISPATCH_FCV",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HARDWARE_FOCUSED_SHORTCUT_STILL_WORKS",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "BRILL_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MOBILE_BRILL_TIME_GUIDE_OUTSIDE_FACE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "MODE_CHOICES_AND_GUIDE_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MODE_CUE_PERSISTS_AFTER_EDITOR_CANCEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_MODE_CUE_OUTSIDE_HARDWARE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_LANGUAGE_DISABLED_NO_HOLD_LABEL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_REASON_NOT_RAW_INTERNAL_CODE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D04_DISABLED_SELECTION_VISUALLY_MUTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_RIGHTS_HOLD_NEAR_DEVICE_EXTERNAL_CUE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D04_DISABLED_SELECTION_SPOKEN",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_MOVEMENT_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_MENU_SELECTION_RETURN_ANNOUNCED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D14_UNVERIFIED_MENU_PATH_DISCLOSED_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_MENU_SOURCE_PROVENANCE_IS_EXTERNAL",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_LIVE_NMEA_STAYS_DISCONNECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_NO_RECEIVER_EXPLAINED_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_FRESH_OWN_SAMPLE_SHOWN_WITH_SOURCE_CAUTION",
+          "passed": true,
+          "evidence": "NMEA: OFF\nOWN POSITION: 10.5000°N 106.7502°E\nOWN SPEED: 7.0 kn"
+        },
+        {
+          "name": "V34_D14_FRESH_TYPED_OWN_NOT_REAL_NMEA",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D14_NO_FIXTURE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_D14_FIXTURE_REVOKED_SHOWN_EXTERNALLY",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_MENU_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "data.nav1",
+            "data.nav2",
+            "data.waypoint",
+            "data.destination",
+            "data.deleteAllWaypoint",
+            "data.trip",
+            "data.resetTrip",
+            "data.bearing",
+            "data.windSpeedDirection",
+            "data.tripSource",
+            "data.tempSource",
+            "data.speedSource"
+          ]
+        },
+        {
+          "name": "C11_UNVERIFIED_TRIP_PATH_MARKED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_C11_TRIP_PATH_WARNING_NOT_LCDBORDER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "C11_TRIP_VALUES_AND_TRAINER_PROVENANCE",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_ENTRY_EXISTS",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "LCD_TEST_BLACK_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            0,
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "name": "V34_D11_A11Y_HOLD_NOT_PAINTED_ON_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_WHITE_PIXELS_UNOBSTRUCTED",
+          "passed": true,
+          "evidence": [
+            255,
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "name": "LCD_TEST_RETURN_RESTORES_DEMO_INDICATOR",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "LCD_TEST_BACK_RETURNS_TO_SYSTEM_MENU",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_DECLARED_VIRTUAL_OPTION_MENU",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.nmea",
+            "system.receiverStatus",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_TANKENMARU_DISALLOWS_NMEA",
+          "passed": true,
+          "evidence": [
+            "system.rangePresets",
+            "system.zoomRange",
+            "system.blRange",
+            "system.language",
+            "system.units",
+            "system.calibration",
+            "system.transducer",
+            "system.demo",
+            "system.diagnostics",
+            "system.lcdTest",
+            "system.restore",
+            "system.tankenmaru",
+            "system.tankenmaruDetails",
+            "system.keySetup",
+            "system.keyBeep",
+            "system.draft",
+            "system.installation"
+          ]
+        },
+        {
+          "name": "D09_MANUAL_DEFAULTS_NO_RF_ON_LCD",
+          "passed": true,
+          "evidence": "Output: Off\nPic. Sync: Yes\nSub Clutter: 4"
+        },
+        {
+          "name": "V34_D09_NO_RF_AND_VIRTUAL_OPTION_OUTSIDE_LCD",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "D09_OPTION_REVOKE_CLEARS_DETAILS",
+          "passed": true,
+          "evidence": "▶ Range Presets\n  Zoom Range : 20\n  B/L Range : 5\n  Language\n  Units\n  Calibration\n  Transducer : GENERIC_600W\n  Demo : On\n  Diagnostics\n  LCD Test\n  Restore Defaults\n  Tankenmaru System : Off\n  NMEA : Off\n  Receiver Status\n  FUNC Key : Pic. Advance\n  Key Beep : Off\n  Draft\n  Installation Settings"
+        },
+        {
+          "name": "V34_D09_REVOKE_CUE_FAILS_CLOSED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_HEADER_INFO_MENU_AVAILABLE",
+          "passed": true,
+          "evidence": [
+            "display.aScope",
+            "display.colors",
+            "display.depthSize",
+            "display.zoomMarker",
+            "display.accuFish",
+            "display.bottomDiscrimination",
+            "display.rezBoost",
+            "display.fishSymbol",
+            "display.fishSize",
+            "display.palette",
+            "display.colorBar",
+            "display.tempGraph",
+            "display.windowSize",
+            "display.battery",
+            "display.headerInfo",
+            "display.navData"
+          ]
+        },
+        {
+          "name": "V34_HEADER_OFF_HIDES_LCD_HEADER",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_PENDING_MODE_CAN_BE_SELECTED",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV2_TIMED_COMMIT_PERSISTS_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_NAV_MODE_CUE_WHEN_HEADER_OFF",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "V34_PHONE_NAV_CUE_ABOVE_EQUIPMENT",
+          "passed": true,
+          "evidence": ""
+        },
+        {
+          "name": "NO_HORIZONTAL_OVERFLOW",
+          "passed": true,
+          "evidence": {
+            "width": 320,
+            "height": 720,
+            "scrollWidth": 320,
+            "demoVisible": true
+          }
+        },
+        {
+          "name": "NO_EXTERNAL_REQUESTS",
+          "passed": true,
+          "evidence": [
+            "http://127.0.0.1:4195/",
+            "http://127.0.0.1:4195/web/styles.css",
+            "http://127.0.0.1:4195/web/app.mjs",
+            "http://127.0.0.1:4195/src/core/scenario.mjs",
+            "http://127.0.0.1:4195/src/core/session.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/adapter.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/model.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/menu-atlas.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/echo-projection.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/navigation.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-layout.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-widgets.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/calibration.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/receiver-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/tankenmaru-status.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/training-faults.mjs",
+            "http://127.0.0.1:4195/src/core/lessons.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/settings.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/units.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/display-palette.mjs",
+            "http://127.0.0.1:4195/web/hold-input.mjs",
+            "http://127.0.0.1:4195/web/pad-repeat.mjs",
+            "http://127.0.0.1:4195/web/rotary-input.mjs",
+            "http://127.0.0.1:4195/web/key-feedback.mjs",
+            "http://127.0.0.1:4195/web/keyboard-shortcuts.mjs",
+            "http://127.0.0.1:4195/web/lcd-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-config-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-control-presentation.mjs",
+            "http://127.0.0.1:4195/web/lcd-instructor-meta.mjs",
+            "http://127.0.0.1:4195/src/core/protocol.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/capabilities.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/alarms.mjs",
+            "http://127.0.0.1:4195/src/devices/fcv588/profile-version.mjs",
+            "http://127.0.0.1:4195/web/favicon.svg"
+          ]
+        },
+        {
+          "name": "NO_TRAINING_CANVAS_PAINT",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "NO_JS_NETWORK_ERRORS",
+          "passed": true,
+          "evidence": []
+        },
+        {
+          "name": "V34_BROWSER_LOADED_RESPONSE_BYTES_MATCH_CANONICAL",
+          "passed": true,
+          "evidence": {
+            "verified": 34,
+            "requested": 34,
+            "errors": [],
+            "paths": [
+              "src/core/lessons.mjs",
+              "src/core/protocol.mjs",
+              "src/core/scenario.mjs",
+              "src/core/session.mjs",
+              "src/devices/fcv588/adapter.mjs",
+              "src/devices/fcv588/alarms.mjs",
+              "src/devices/fcv588/calibration.mjs",
+              "src/devices/fcv588/capabilities.mjs",
+              "src/devices/fcv588/display-layout.mjs",
+              "src/devices/fcv588/display-palette.mjs",
+              "src/devices/fcv588/display-widgets.mjs",
+              "src/devices/fcv588/echo-projection.mjs",
+              "src/devices/fcv588/menu-atlas.mjs",
+              "src/devices/fcv588/model.mjs",
+              "src/devices/fcv588/navigation.mjs",
+              "src/devices/fcv588/profile-version.mjs",
+              "src/devices/fcv588/receiver-status.mjs",
+              "src/devices/fcv588/settings.mjs",
+              "src/devices/fcv588/tankenmaru-status.mjs",
+              "src/devices/fcv588/training-faults.mjs",
+              "src/devices/fcv588/units.mjs",
+              "web/app.mjs",
+              "web/favicon.svg",
+              "web/hold-input.mjs",
+              "web/index.html",
+              "web/key-feedback.mjs",
+              "web/keyboard-shortcuts.mjs",
+              "web/lcd-config-presentation.mjs",
+              "web/lcd-control-presentation.mjs",
+              "web/lcd-instructor-meta.mjs",
+              "web/lcd-presentation.mjs",
+              "web/pad-repeat.mjs",
+              "web/rotary-input.mjs",
+              "web/styles.css"
+            ]
+          }
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-range.png",
+          "sha256": "dcd45d9b4f8fdfb8262d7f8de4f1254e1076134c3c4cd5eedfc3fba4e8252516"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-range-complete-device.png",
+          "sha256": "03b5d127c6499ffcbde5a6fba0a590e0edf8f571fd8b56be0255c062246b6bb0"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-range-instructor.png",
+          "sha256": "2c03e8e1cc6fdc75b0b57eadcbfdc1642ef5fc405abee6ecb2a8bb485b48ffa5"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-brill.png",
+          "sha256": "afc096204465235a49a253b5757b5b5ae4f40c7d5b0719d1576c09f2b006cc3e"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-mode.png",
+          "sha256": "e384e26c19e1d32febf8896c4119bfcd1054c97af64c75fe769ea50efdb62e51"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-current-mode-external.png",
+          "sha256": "b43f2b3e69e254741bdfd7025ce9f51d40afbbb68469d38424f18abce0432189"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-language.png",
+          "sha256": "12e2343a1df1b0821c1a464c5bf99fdca37dfd38d57083a8ea8894d281e361e2"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-language-source-near-face.png",
+          "sha256": "14f703d316741176a058fc9dc3bbe7bc5150751357ee7eff4f54ded39fd8938c"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-receiver.png",
+          "sha256": "50f6f9274c3d2d318b008cc0ccb117ba922d92b153e7ccd060f941a237598c34"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-receiver-fresh.png",
+          "sha256": "d627de2a85a1af44c5789eb128cbd926dbf2021d0b08d534385e961c9f05d6ce"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-trip.png",
+          "sha256": "10c651fb3b61a5f1a8a84b08013fb2edf5f539fcd740a9bb2a2fe6e419d282a5"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-lcd-test-return.png",
+          "sha256": "417876b9a2f2a767cb842bd28181503344597a187177d3c80d8dd0d91cad2f42"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-tankenmaru.png",
+          "sha256": "4fd099d929b3345f17b5e67af13b3122587d3abb9a3b8855fcff358bdeecb371"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-nav2-header-off-cue.png",
+          "sha256": "8786ef5a3e651394004eff935051263ac12349138b6c52971e5f52c7f1b4bbec"
+        },
+        {
+          "path": "docs/qa/screenshots/fcv588-v34-canonical-20261018-320x720-nav2-header-off-device.png",
+          "sha256": "c08d8b361ab7fc606345f899a1e964bac75c702c8f06af63447f6492ada99ed6"
+        }
+      ],
+      "capturedCanvasCalls": 677,
+      "requestedPaths": [
+        "/",
+        "/src/core/lessons.mjs",
+        "/src/core/protocol.mjs",
+        "/src/core/scenario.mjs",
+        "/src/core/session.mjs",
+        "/src/devices/fcv588/adapter.mjs",
+        "/src/devices/fcv588/alarms.mjs",
+        "/src/devices/fcv588/calibration.mjs",
+        "/src/devices/fcv588/capabilities.mjs",
+        "/src/devices/fcv588/display-layout.mjs",
+        "/src/devices/fcv588/display-palette.mjs",
+        "/src/devices/fcv588/display-widgets.mjs",
+        "/src/devices/fcv588/echo-projection.mjs",
+        "/src/devices/fcv588/menu-atlas.mjs",
+        "/src/devices/fcv588/model.mjs",
+        "/src/devices/fcv588/navigation.mjs",
+        "/src/devices/fcv588/profile-version.mjs",
+        "/src/devices/fcv588/receiver-status.mjs",
+        "/src/devices/fcv588/settings.mjs",
+        "/src/devices/fcv588/tankenmaru-status.mjs",
+        "/src/devices/fcv588/training-faults.mjs",
+        "/src/devices/fcv588/units.mjs",
+        "/web/app.mjs",
+        "/web/favicon.svg",
+        "/web/hold-input.mjs",
+        "/web/key-feedback.mjs",
+        "/web/keyboard-shortcuts.mjs",
+        "/web/lcd-config-presentation.mjs",
+        "/web/lcd-control-presentation.mjs",
+        "/web/lcd-instructor-meta.mjs",
+        "/web/lcd-presentation.mjs",
+        "/web/pad-repeat.mjs",
+        "/web/rotary-input.mjs",
+        "/web/styles.css"
+      ],
+      "verifiedBrowserResponses": 34,
+      "browserSourceBodyErrors": [],
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "canonicalRuntimeFileCount": 36,
+  "canonicalRuntimeSha256": "6b11aea2b54806ea596f1c7533216a8d87da77234b29286011fd2d5ab3c90fd0",
+  "canonicalRuntimeStable": true,
+  "browserHarnessSha256": "1ad7de942992df49316ebd6bec7b9981ce7248bea3ff18b3eecc9fa6db9870fa",
+  "result": "CANONICAL_V34_POSTINTEGRATION_BROWSER_PASS",
+  "phase2Supervisor": "USER_APPROVED_GPT6_SELF_REVIEW",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

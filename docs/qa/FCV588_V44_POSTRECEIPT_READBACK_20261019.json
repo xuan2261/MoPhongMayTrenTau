@@ -1,0 +1,45 @@
+{
+  "atUtc": "2026-10-19T04:07:35.584917+00:00",
+  "status": "V44_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_V44_FINAL_INTEGRITY_20261019.json",
+  "finalReceiptSHA": "bd5e4230d01c90856d8fe9773d46569802bcf0a888901099a583e4155d63a471",
+  "originalFinalRunLogSHA": "8fb8c30201d2982aea65a0cfc0dd9479ddc1129182764392c3c112e471b0564a",
+  "runtimeStageCanonicalSHA": 37,
+  "runtimeChangesFromV43": 0,
+  "approvedCanonicalTestOnlyFilesSHA": 2,
+  "documentsSHA": 5,
+  "newV44ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": 199,
+  "historicalPythonFixtureSHA": 16,
+  "nodeFull": 491,
+  "nodePostdocument": 491,
+  "pythonTests": 13,
+  "targetedNodeTests": 13,
+  "stageBrowserAssertions": 114,
+  "canonicalBrowserAssertions": 114,
+  "stageLoadedBrowserBodySHA": 210,
+  "canonicalLoadedBrowserBodySHA": 210,
+  "httpNegativeRoutesDenied": 4,
+  "ownedQaPortsClosed": {
+    "4227": true,
+    "4228": true
+  },
+  "parentV43FinalSHA": "13e713bf6397561a0d42219462fd7c0c5bfb02d0e2aff16b0b8280ca50e8336e",
+  "parentV43PostSHA": "7abfc97db2816e24a41cc3980e66b08340e407f6954e3ff032cc260ae9e03d14",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "sourceGap": "MIXED_BRILL_TRACKPAD_DIRECTION_UNCONFIRMED",
+  "actualNativeDesktopExactViewports": "NOT_RUN",
+  "narratorNvdaSpeech": "NOT_RUN",
+  "genuineOsBlur": "NOT_RUN"
+}

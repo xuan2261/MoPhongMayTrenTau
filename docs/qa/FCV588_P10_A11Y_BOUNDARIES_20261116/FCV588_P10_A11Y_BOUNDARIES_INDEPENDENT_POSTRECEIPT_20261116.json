@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-11-16T13:47:44.796239+07:00",
+  "finalPath": "docs/qa/FCV588_P10_A11Y_BOUNDARIES_20261116/FCV588_P10_A11Y_BOUNDARIES_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "414c0151053bec55271032170e0fba2139fd1627e5fee7524cdf6c1bcf490655",
+  "freshReadback": {
+    "boundEvidence": 9,
+    "ports4207_4208": "CLOSED",
+    "referencePhotos": "8/8",
+    "runtime": "39/39",
+    "server4173": "HTTP200"
+  },
+  "note": "Independent worker reviewed evidence; local postreceipt is a separate SHA readback, not a spoken-output or real OS focus certificate.",
+  "schema": "fcv588-p10-bounded-a11y-independent-postreceipt-v1",
+  "status": "PASS_EVIDENCE_READBACK_NATIVE_QA_HOLD"
+}

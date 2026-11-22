@@ -1,0 +1,7 @@
+file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-photo-echo-20261114/tools/server.mjs:14
+const PORT = Number(process.env.PORT ?? 4173);
+                                      ^
+
+SyntaxError: Unexpected token '?'
+    at Loader.moduleStrategy (internal/modules/esm/translators.js:140:18)
+    at async link (internal/modules/esm/module_job.js:42:21)

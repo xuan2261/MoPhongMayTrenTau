@@ -1,0 +1,2023 @@
+{
+  "scope": "65_FEATURE_METADATA_CROSS_LEDGER_AND_RIGHTS_GATES_ONLY",
+  "status": "CONSISTENT_SOURCE_METADATA_NOT_OPERATOR_OEM_CONFORMANCE",
+  "timestampUtc": "2026-10-22T05:12:30.762192+00:00",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "authoritativeCheckpointSha256": "4650306d6c088fc19eaa09b66922faaf29712015ae9a2f8fdf5795d2e780107f",
+  "parentV52IndependentPostSha256": "410966989a000ac7553f2085b13474dd6d5ac686a35df516f824a03a4ebb4608",
+  "sourceHashesSha256": {
+    "trace": "0068b51cfb9516b1f8ed798d431f927c7bb40ac91b73286bb11666df0a88d332",
+    "implementation": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d",
+    "sourceLedger": "ece7e8f78f09b5f074d19e995ebd0bddb9237b44d368d42b0b689acfdebe1a98",
+    "featureDraft": "071cba194c64e79ec74ec345b324dda0d11caa0204df18b163e6766238eb1fa7",
+    "rightsPolicy": "941a6b7a5f3ff15065268cfc1cd6830909bd575ea9b09af13296b573e58c4959"
+  },
+  "sourceCatalogCount": 11,
+  "frameAuditedVideos": 0,
+  "totalFeatureRows": 65,
+  "operatorRows": 64,
+  "teacherRows": 1,
+  "unapprovedClaimCount": 65,
+  "testReferencesChecked": 143,
+  "missingTestReferences": [],
+  "crossLedgerDifferences": [],
+  "observedCheckpointGaps": [
+    "C11",
+    "D04",
+    "D09",
+    "D14"
+  ],
+  "additionalMenuSourceGaps": [
+    {
+      "menuArea": "APPENDIX_1_MENU_TREE",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "INSTALLATION_4_9_IEC",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "INSTALLATION_4_10_SETUP",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    },
+    {
+      "menuArea": "SYSTEM_TANKENMARU_NMEA_BRANCH",
+      "sourceId": "PUB-FCV-001",
+      "sourceStatus": "SOURCE_GAP",
+      "courseReviewStatus": "NOT_REVIEWED"
+    }
+  ],
+  "summary": {
+    "sourceStatusTrace": {
+      "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED": 64,
+      "PLATFORM_ONLY": 1
+    },
+    "authorityTierTrace": {
+      "INTERNAL_TRAINING": 1,
+      "MANUFACTURER_MANUAL": 64
+    },
+    "rightsDecisionTrace": {
+      "CURATED_NOTES_ONLY": 64,
+      "ORIGINAL_PLATFORM_CODE": 1
+    },
+    "draftImplementationStatus": {
+      "OPEN": 53,
+      "SIMULATED_APPROXIMATION": 12
+    },
+    "implementationCheckpoint": {
+      "MENU_ONLY_PARTIAL": 3,
+      "NOT_IMPLEMENTED": 1,
+      "OPERABLE_SYNTHETIC_SUBSET": 61
+    },
+    "testEvidenceMeaning": {
+      "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE": 52,
+      "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE": 13
+    },
+    "sourceModes": {
+      "DOCUMENTED_RULE": 3,
+      "DOCUMENT_METADATA_ONLY": 1,
+      "PHOTO_LAYOUT": 4,
+      "SECONDARY_REPORT": 1,
+      "VIDEO_METADATA_ONLY": 2
+    },
+    "guardsWithFirmwareDependency": 19
+  },
+  "rows": [
+    {
+      "featureId": "A01",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "Sản phẩm, §1.1 tr.1"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-003"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A02",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.1 tr.1"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-003"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A03",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.2 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A04",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.3 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A05",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4 tr.2–4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A06",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.1 tr.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-003"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_OPT",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A07",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.2 tr.3"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-002",
+        "PUB-FCV-003"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-003"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_OPT",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A08",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.3 tr.3–4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A09",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.4.4 tr.4"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-manual-layout.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A10",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.5 tr.5, §2.2 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A11",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.6 tr.5–6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A12",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.7 tr.6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A13",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.8 tr.7, §1.22 tr.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A14",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.9 tr.7–8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A15",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.10 tr.8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A16",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§1.19 tr.18–19, §2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-basic.test.mjs",
+        "test/fcv588-public-panel.test.mjs",
+        "test/fcv588-public-keyboard.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "A17",
+      "scope": "FCV_OPERATOR",
+      "domain": "panel_controls_basic",
+      "manualRefs": [
+        "§2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-key-feedback.test.mjs",
+        "test/fcv588-public-pad-repeat.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B01",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.4, §1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B02",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.11 tr.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B03",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.12 tr.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B04",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.13 tr.10"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B05",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.14 tr.10"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B06",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder tr.22–23"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B07",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder, software history"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-011"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B08",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder tr.22–23"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B09",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B10",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B11",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B12",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B13",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Sounder, §2.2"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-display-widgets.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B14",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.17 tr.14"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B15",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.15 tr.11–12"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B16",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.16 tr.13–14"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B17",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.15–1.17, §2.7"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B18",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Display tr.23–24"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-display-widgets.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B19",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.22 Display, software history"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "B20",
+      "scope": "FCV_OPERATOR",
+      "domain": "sonar_display",
+      "manualRefs": [
+        "§1.10, §1.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C01",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C02",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C03",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C04",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C05",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-arrival.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C06",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C07",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.18 tr.14–17"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C08",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.20 tr.18–21"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C09",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.20 tr.19–21"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C10",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.4.4, §1.21 tr.20–22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-manual-layout.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C11",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.22 Data tr.24–25"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-nav-box-config.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C12",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.21–1.22"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 3,
+      "testReferences": [
+        "test/fcv588-public-alarm-menu.test.mjs",
+        "test/fcv588-public-alarms.test.mjs",
+        "test/fcv588-public-navigation.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "C13",
+      "scope": "FCV_OPERATOR",
+      "domain": "alarms_navigation",
+      "manualRefs": [
+        "§1.22 Data / §2.6"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-trip.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D01",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.1 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_FW_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D02",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.2 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-range-bank.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D03",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.3 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D04",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.4 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "nonBehavioralSourceIds": [
+        "PUB-FCV-011"
+      ],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "NOT_IMPLEMENTED",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 0,
+      "testReferences": [],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D05",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.5 tr.27"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-units.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D06",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.6 tr.27–28"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-calibration.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D07",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.7 tr.28, sản phẩm"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D08",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.8 tr.28"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D09",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§2.9 tr.29"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_OPT",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D10",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.2–3.3"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 1,
+      "testReferences": [
+        "test/fcv588-public-fault-fixtures.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D11",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.7, §3.8"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D12",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§3.9"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D13",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "§1–3 / cần máy thật"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_CORE_FW",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D14",
+      "scope": "FCV_OPERATOR",
+      "domain": "system_diagnostics",
+      "manualRefs": [
+        "Menu System/NMEA, phần giao tiếp"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "sourceStatusImplementation": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "draftGuard": "DRAFT_DATA",
+      "draftImplementationStatus": "OPEN",
+      "observedImplementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-receiver-status.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    },
+    {
+      "featureId": "D15",
+      "scope": "INSTRUCTOR_PLATFORM",
+      "domain": "system_diagnostics",
+      "manualRefs": [],
+      "publicSourceIds": [],
+      "nonBehavioralSourceIds": [],
+      "sourceStatusTrace": "PLATFORM_ONLY",
+      "sourceStatusImplementation": "PLATFORM_ONLY",
+      "rightsDecision": "ORIGINAL_PLATFORM_CODE",
+      "draftGuard": "TEACHER_ONLY",
+      "draftImplementationStatus": "SIMULATED_APPROXIMATION",
+      "observedImplementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "testReferenceCount": 2,
+      "testReferences": [
+        "test/fcv588-public-course.test.mjs",
+        "test/fcv588-public-training-fixtures.test.mjs"
+      ],
+      "sourceAndRightsReview": "NOT_REVIEWED",
+      "claimDecision": "HOLD",
+      "publicConformance": "NOT_ESTABLISHED",
+      "operatorHardwareConformance": "NOT_ESTABLISHED",
+      "releaseReady": false
+    }
+  ],
+  "rightsReviewObservation": "Only source metadata and user-authored notes; not a legal license or permission to copy OEM media.",
+  "actualInstalledFirmware": "UNKNOWN",
+  "physicalHardwareVerified": false,
+  "independentReviewer": "NOT_OBTAINED",
+  "actualSpokenNarratorNvda": "NOT_RUN",
+  "genuineOsBlurWhileHoldingPower": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD"
+}

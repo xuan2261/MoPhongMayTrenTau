@@ -1,0 +1,26 @@
+{
+  "schema": "FCV588_P23_GUARDED_CANONICAL_APPLY_V1",
+  "status": "CANONICAL_APPLY_SUCCEEDED_POST_QA_PENDING",
+  "scope": "ACTIVE_DISPLAY_BZ_ONLY_HISTORIC_P04_PROJECTION_RETAINED",
+  "parentP22FinalSHA256": "3f0af32087e021eba9b360d7591b8909df2c0515c59b435e9a531829ba6655a3",
+  "guardedDryrunSHA256": "1b14c8dcdc5ce1dba7b99c8246d2683773ac541f43d8c7cdcedb9cf1a22db39b",
+  "backupPreimageZIPSHA256": "b93646679b5c9bbcf66ca01974a7380942e0dd1c6f43a0234f7bfcac153d6aa8",
+  "independentGoEvidence": "worker-33_BOUNDED_GO_in_session_on_verified_v3_node_and_chrome",
+  "appliedFilesSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "060feab89b38e13a3832af694f22752d26457b9d810400c4d887908fbe122253",
+    "web/app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "09d1269de69a1b6beb251720d9cd53625cbfe753a5604b827143cdb42c4889e9",
+    "test/fcv588-p23-bottom-zoom-manual.test.mjs": "8c3b91c6914fded1788682800a55631f7627148d8b7c4b214e3e3e1c11be4f29"
+  },
+  "preimageExistingSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+    "web/app.mjs": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "58ec6560ed1bcde72f864ae90630337adb597e1e9fad5bf837ab9121f3cd724f"
+  },
+  "runtimeSourceOther48Unchanged": true,
+  "originalOEMPhotos8Unchanged": true,
+  "userServer4173PID1204": "LISTEN_UNTOUCHED",
+  "canonicalNoGit": true,
+  "historicalVisualReplay": "NOT_FULLY_VERSIONED_ARCHIVED_ENVELOPES",
+  "releaseApproval": "HOLD"
+}

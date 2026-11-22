@@ -1,0 +1,40 @@
+{
+  "schema": "P30_HOST_NATIVE_UIA_V1",
+  "processAlive": true,
+  "processes": [
+    {
+      "Id": 18200,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    },
+    {
+      "Id": 19480,
+      "MainWindowHandle": {
+        "value": 130747084
+      },
+      "MainWindowTitle": "MoPhongMayTrenTau | FCV-588 Public Reference"
+    },
+    {
+      "Id": 20284,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    },
+    {
+      "Id": 21700,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    }
+  ],
+  "uiaLoaded": true,
+  "windowMatched": true,
+  "controls": [],
+  "status": "PARTIAL",
+  "releaseApproval": "HOLD",
+  "windowName": "MoPhongMayTrenTau | FCV-588 Public Reference"
+}

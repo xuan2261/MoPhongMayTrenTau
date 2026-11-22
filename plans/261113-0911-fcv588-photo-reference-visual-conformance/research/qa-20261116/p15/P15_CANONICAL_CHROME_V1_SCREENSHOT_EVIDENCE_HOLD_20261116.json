@@ -1,0 +1,64 @@
+{
+  "schema": "P15_REAL_CHROME_V1_EVIDENCE_INTEGRITY_HOLD_V1",
+  "verdict": "V1_RECEIPT_SCREENSHOT_SHA_INCONSISTENT; EXCLUDE_FROM_FINAL_SCREENSHOT_ATTESTATION",
+  "v1ReceiptSHA256": "3cf3c5d4acfca35b41eef6196ad84f68858f5fb46fa5ba38a66d4c1c91c9a922",
+  "v1MismatchCount": 7,
+  "v1Mismatches": [
+    {
+      "name": "P15_CANONICAL_MODE_NAV1_1366x768_20261116.png",
+      "receiptSHA256": "35cbfb5da230fcc754dc246009c671b5b0080f9e4eb6d0840b303fc1969c6446",
+      "currentFileSHA256": "7dee61b668aa79e777d3555aca8c22eee31cbc4557ac361f8c4e569126130ced",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836756.2809234
+    },
+    {
+      "name": "P15_CANONICAL_MODE_LF_ZOOM_1366x768_20261116.png",
+      "receiptSHA256": "923cae90ffe48cd5f6769e5ac9e72a3c2536051313631fe422e97f66292c434e",
+      "currentFileSHA256": "12249875751b4d3c8a41f1db28249db7d62f3c9f04c4b4af17d362cfc3bc9c7d",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836756.9241717
+    },
+    {
+      "name": "P15_CANONICAL_MODE_LF_1366x768_20261116.png",
+      "receiptSHA256": "ba4ab90d4d7e70a9ce4b4a6af2afe3bfbe6a289b2dde61c9b71927af6191226f",
+      "currentFileSHA256": "8f8a67588c1ca1e7ff0662d563502dafdd4177ac13368a0f2fe1844861664781",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836757.805698
+    },
+    {
+      "name": "P15_CANONICAL_MODE_DUAL_1366x768_20261116.png",
+      "receiptSHA256": "beab83bb54925df06fa0732d76c3f812b4309cd2f1eade3dd6861dfc9d4502bf",
+      "currentFileSHA256": "fac9cf0b8d5bfba55f5f30d66f555c5f47f453f7dd9b0d2ca0a582c0718bf138",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836758.4454255
+    },
+    {
+      "name": "P15_CANONICAL_MODE_HF_1366x768_20261116.png",
+      "receiptSHA256": "752a99c39365f900e518e6f2349268d0ff6dea4e59a9ed126de87cfcc8352ca6",
+      "currentFileSHA256": "9713d35e1ba092fc92ea5098aac9b7326cec36dd558a94018868b04cbf24537c",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836759.3126216
+    },
+    {
+      "name": "P15_CANONICAL_MODE_HF_ZOOM_1366x768_20261116.png",
+      "receiptSHA256": "27ca2f35dda5442bf9e3301d479d04874b531aff01d9eca962a93eab925222c1",
+      "currentFileSHA256": "32087d146d6743e0b2b077d67c57d957ea6211335687aaccb5b1bdc293f2ff66",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836759.9147668
+    },
+    {
+      "name": "P15_CANONICAL_MODE_NAV2_1366x768_20261116.png",
+      "receiptSHA256": "4284651877bad2708680057f15849d064de858f37416ae57c09dec695a9f5158",
+      "currentFileSHA256": "7b966628eac0f60b7b1d44fb0dc98c25cf05ddff49abb144b74d4cbed83f301b",
+      "receiptDoesNotMatchFile": true,
+      "fileModifiedTimeUTC": 1794836760.7655888
+    }
+  ],
+  "v1RetainedUnchanged": true,
+  "observedCause": "UNKNOWN; seven on-disk PNGs no longer match values stored in V1 receipt, regardless of decoded image appearance",
+  "v2ReplacementReceipt": "P15_CANONICAL_CHROME_MODE_GEOMETRY_SEALED_V2_20261116.json",
+  "v2ReplacementReceiptSHA256": "c457bcad0816b3033f0569e3a55d59c53ee1c9b27631a2979d183604a9988c03",
+  "v2ReceiptChecks": "103/103 PASS",
+  "v2ScreenshotShaMatchesAllFiles": 24,
+  "noRuntimeChangeForThisReconciliation": true
+}

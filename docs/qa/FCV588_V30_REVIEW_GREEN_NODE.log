@@ -1,0 +1,226 @@
+TAP version 13
+# Subtest: range-bank projects only the existing semantic operator fields and never mutates state
+ok 1 - range-bank projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 13.7506
+  type: 'test'
+  ...
+# Subtest: units projects only the existing semantic operator fields and never mutates state
+ok 2 - units projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 6.1578
+  type: 'test'
+  ...
+# Subtest: calibration projects only the existing semantic operator fields and never mutates state
+ok 3 - calibration projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.7834
+  type: 'test'
+  ...
+# Subtest: nav-boxes projects only the existing semantic operator fields and never mutates state
+ok 4 - nav-boxes projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 2.8585
+  type: 'test'
+  ...
+# Subtest: fish-alarm projects only the existing semantic operator fields and never mutates state
+ok 5 - fish-alarm projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.1908
+  type: 'test'
+  ...
+# Subtest: fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+ok 6 - fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 3.8493
+  type: 'test'
+  ...
+# Subtest: installation projects only the existing semantic operator fields and never mutates state
+ok 7 - installation projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.9894
+  type: 'test'
+  ...
+# Subtest: func-program projects only the existing semantic operator fields and never mutates state
+ok 8 - func-program projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 1.777
+  type: 'test'
+  ...
+# Subtest: Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 9 - Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 62.2514
+  type: 'test'
+  ...
+# Subtest: Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 10 - Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 35.8456
+  type: 'test'
+  ...
+# Subtest: Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 11 - Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 34.6566
+  type: 'test'
+  ...
+# Subtest: NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 12 - NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 33.0028
+  type: 'test'
+  ...
+# Subtest: ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 13 - ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 34.0651
+  type: 'test'
+  ...
+# Subtest: all bounded numeric configuration windows keep edge and middle drafts visible in original order
+ok 14 - all bounded numeric configuration windows keep edge and middle drafts visible in original order
+  ---
+  duration_ms: 9.0949
+  type: 'test'
+  ...
+# Subtest: Range Bank uses selected depth units consistently without reinterpreting stored meters
+ok 15 - Range Bank uses selected depth units consistently without reinterpreting stored meters
+  ---
+  duration_ms: 1.2888
+  type: 'test'
+  ...
+# Subtest: alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+ok 16 - alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+  ---
+  duration_ms: 6.2427
+  type: 'test'
+  ...
+# Subtest: Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+ok 17 - Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+  ---
+  duration_ms: 3.271
+  type: 'test'
+  ...
+# Subtest: FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+ok 18 - FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+  ---
+  duration_ms: 1.5226
+  type: 'test'
+  ...
+# Subtest: configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+ok 19 - configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+  ---
+  duration_ms: 2.0205
+  type: 'test'
+  ...
+# Subtest: runtime configuration renderer consumes semantic projections using safe inert DOM
+ok 20 - runtime configuration renderer consumes semantic projections using safe inert DOM
+  ---
+  duration_ms: 15.5123
+  type: 'test'
+  ...
+# Subtest: review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+ok 21 - review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+  ---
+  duration_ms: 25.6166
+  type: 'test'
+  ...
+# Subtest: review A: pending Off cannot suppress a committed On alarm or its current cause
+ok 22 - review A: pending Off cannot suppress a committed On alarm or its current cause
+  ---
+  duration_ms: 3.5681
+  type: 'test'
+  ...
+# Subtest: shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+ok 23 - shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+  ---
+  duration_ms: 3.1055
+  type: 'test'
+  ...
+# Subtest: FUNC projects every Clutter value through a bounded ordered window with one selected value
+ok 24 - FUNC projects every Clutter value through a bounded ordered window with one selected value
+  ---
+  duration_ms: 128.1243
+  type: 'test'
+  ...
+# Subtest: main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+ok 25 - main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+  ---
+  duration_ms: 12.3814
+  type: 'test'
+  ...
+# Subtest: FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+ok 26 - FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+  ---
+  duration_ms: 58.0937
+  type: 'test'
+  ...
+# Subtest: FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+ok 27 - FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+  ---
+  duration_ms: 1.535
+  type: 'test'
+  ...
+# Subtest: renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+ok 28 - renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+  ---
+  duration_ms: 8.8638
+  type: 'test'
+  ...
+# Subtest: reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+ok 29 - reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+  ---
+  duration_ms: 10.4082
+  type: 'test'
+  ...
+# Subtest: legend honors palette and White Marker settings without owning or mutating source colors
+ok 30 - legend honors palette and White Marker settings without owning or mutating source colors
+  ---
+  duration_ms: 2.0102
+  type: 'test'
+  ...
+# Subtest: legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+ok 31 - legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+  ---
+  duration_ms: 1.6318
+  type: 'test'
+  ...
+# Subtest: legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+ok 32 - legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+  ---
+  duration_ms: 1.5862
+  type: 'test'
+  ...
+# Subtest: invalid legend bounds are rejected rather than drawing outside the screen
+ok 33 - invalid legend bounds are rejected rather than drawing outside the screen
+  ---
+  duration_ms: 8.9736
+  type: 'test'
+  ...
+# Subtest: picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+ok 34 - picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+  ---
+  duration_ms: 0.3286
+  type: 'test'
+  ...
+# Subtest: picture-rate label follows commit and cancel without advancing the world or rewriting replay
+ok 35 - picture-rate label follows commit and cancel without advancing the world or rewriting replay
+  ---
+  duration_ms: 8.5599
+  type: 'test'
+  ...
+# Subtest: the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+ok 36 - the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+  ---
+  duration_ms: 10.63
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 421.595

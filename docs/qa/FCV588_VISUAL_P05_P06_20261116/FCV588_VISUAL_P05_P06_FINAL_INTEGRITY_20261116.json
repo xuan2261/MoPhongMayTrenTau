@@ -1,0 +1,150 @@
+{
+  "schema": "fcv588-p05-p06-visual-final-integrity-v1",
+  "timestampUtc": "2026-11-16T00:43:23.016775+00:00",
+  "status": "P05_P06_BOUNDED_SOFTWARE_QA_PASS_RIGHTS_HARDWARE_RELEASE_HOLD",
+  "scope": "P05 two-column menu and P06 estimated faceplate/focus UI; not full photo/OEM accuracy",
+  "parentP04": {
+    "finalSHA256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+    "postSHA256": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90"
+  },
+  "integratedStageSealSHA256": "96225310c3614d0d4b64af038fca70bfbe4a3c8cb25b3910ab2154a88d71095c",
+  "guardedApply": {
+    "receiptSHA256": "f0294580fdf64f0c8118fb50c577fc13d9ca02cd3943e219b0ce2f3c6cd28a7e",
+    "intentSHA256": "fd0c385a741ba17eaa40b46e31396d288ab2bc6aecb02d575f9715659ee9aa6d",
+    "backupSHA256": "555a8cc794f95a74bfe48c4df195e0e4c40759a0ac660d139670bffe67128404"
+  },
+  "runtimeSHA256": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+    "src/devices/fcv588/menu-atlas.mjs": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-echo-rasterizer.mjs": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+    "web/lcd-presentation.mjs": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660"
+  },
+  "runtimeCount": 39,
+  "changedRuntimePaths": [
+    "web/app.mjs",
+    "web/index.html",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "newTestSHA256": {
+    "test/fcv588-photo-menu-layout.test.mjs": "8a3b9dd935b210f97474135d99bc42f282eca8c06f8b5e7a77225953b61ed189",
+    "test/fcv588-photo-menu-actions.test.mjs": "3d87129cb8262d066a7650ce1349d7cac95067bbde863c77761cf61cc44474bc",
+    "test/fcv588-photo-face-geometry.test.mjs": "d16145b935f0d1122dccd3a81ff75dcf7bb082ddabe53db25981bcd9e5f59adc",
+    "test/fcv588-device-focus.test.mjs": "cfc5aff3ee1f835cceb2c91ff37dcd04f8097674acf2bf3803af398623856250"
+  },
+  "canonicalQA": {
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/p05-p06-canonical-node-v1.txt": "fb837a2861112256c91a5d06d8ba53244b2031224aa1f0994807b8ad2e148fc4",
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/p05-p06-canonical-python-v1.txt": "ff3e995349de23d6cc17da7a0ae0c5c4b48b628815d48609e0095cbb6d577ccc"
+  },
+  "canonicalChromeReceipts": {
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/canonical-browser-p05-v1/fcv588-p05-menu-browser-20261116T074255+0700-9332c776.json": "6e14d724fc02eee7997e704555dd95e9f16a122642260229998c13020425b93e",
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/canonical-browser-p06-v1/20261116T074240-870bcd8e-receipt.json": "e7b4c6913de631f1d80da3b85ccad4a52d95f0cb98afa391b0491b8c4a8c9855"
+  },
+  "canonicalScreenshotSHA256": {
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p05-v1\\fcv588-p05-menu-browser-20261116T074255+0700-9332c776-1366x768-Blue.png": "be084d21ba7ba63a77a95adda6eac6fcf730c0ee6101b51f3c836d196df0134b",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p05-v1\\fcv588-p05-menu-browser-20261116T074255+0700-9332c776-1366x768-White.png": "7e9ef558359b9b81e22e475724a270739b4532c4cdb3818f4f2c77b4c8b4da0c",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p05-v1\\fcv588-p05-menu-browser-20261116T074255+0700-9332c776-375x812-Blue.png": "fbeae439fc02a72f138a2d2dc8d1218a25dbb9c7dcc8f033f625805d37de025c",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p06-v1\\20261116T074240-870bcd8e-375x812-focus.png": "e9d5ae77386f032287c83516ac2ca77909f47b8477cc20d09c875b0fce305a8b",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p06-v1\\20261116T074240-870bcd8e-1366x768-focus.png": "f5db53252082942de3b46b6e3536d3a2a68692e6ad1cd1e803f73cd4ed39cca2",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\canonical-browser-p06-v1\\20261116T074240-870bcd8e-1920x1080-focus.png": "3ce529959736111be11e49bb603ab990ad054a93b4052a5fd62f911bbcf94015"
+  },
+  "stageQA": {
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/p05-p06-integrated-node-v2.txt": "40836929ca313c6bace9ce913a883c0b3ebd264d634d9b9d87116b508f3d3565",
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/p05-p06-integrated-python-v2.txt": "a4983ffb4083ac03e53d761b42ae127140cc579c5d7f696639977c9762d30bd2",
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/browser-p05-v1/fcv588-p05-menu-browser-20261116T073418+0700-ba7d5815.json": "b713e8cf756cfeaade9d9cff02644d81e18696919224d207e0531d32bf2ba75e",
+    "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/integrated/browser-p06-v1/20261116T073351-e166c036-receipt.json": "210afd831df9d0e3d14ac041cf746a8a7a058574c1e82a509fb3270ccbc4886d"
+  },
+  "stageScreenshotSHA256": {
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p05-v1\\fcv588-p05-menu-browser-20261116T073418+0700-ba7d5815-1366x768-Blue.png": "be084d21ba7ba63a77a95adda6eac6fcf730c0ee6101b51f3c836d196df0134b",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p05-v1\\fcv588-p05-menu-browser-20261116T073418+0700-ba7d5815-1366x768-White.png": "7e9ef558359b9b81e22e475724a270739b4532c4cdb3818f4f2c77b4c8b4da0c",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p05-v1\\fcv588-p05-menu-browser-20261116T073418+0700-ba7d5815-375x812-Blue.png": "fbeae439fc02a72f138a2d2dc8d1218a25dbb9c7dcc8f033f625805d37de025c",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p06-v1\\20261116T073351-e166c036-375x812-focus.png": "e9d5ae77386f032287c83516ac2ca77909f47b8477cc20d09c875b0fce305a8b",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p06-v1\\20261116T073351-e166c036-1366x768-focus.png": "f5db53252082942de3b46b6e3536d3a2a68692e6ad1cd1e803f73cd4ed39cca2",
+    "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\integrated\\browser-p06-v1\\20261116T073351-e166c036-1920x1080-focus.png": "3ce529959736111be11e49bb603ab990ad054a93b4052a5fd62f911bbcf94015"
+  },
+  "photoReferenceSHA256": {
+    "dual.jpg": {
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "bytes": 195647,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "giaoDien.jpg": {
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "bytes": 201715,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "hf.jpg": {
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "bytes": 172515,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "lf.jpg": {
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "bytes": 192510,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "nav1.jpg": {
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "bytes": 177079,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "nav2.jpg": {
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "bytes": 167246,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "zoom.jpg": {
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "bytes": 186315,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    },
+    "zoom2.jpg": {
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "bytes": 170297,
+      "rights": "REFERENCE_ONLY_CLEARANCE_NOT_OBTAINED"
+    }
+  },
+  "p04NearBottomFishOnly": "MEDIUM_NOT_FIXED_SEPARATE_RED_HOLD",
+  "firmwareLocale": "HOLD",
+  "rightsClearance": "HOLD",
+  "hardwareValidated": false,
+  "featureClaims": "65/65 HOLD",
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "oemVisualPercent": null
+}

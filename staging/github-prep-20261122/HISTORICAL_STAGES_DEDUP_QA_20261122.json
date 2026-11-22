@@ -1,0 +1,14 @@
+{
+  "schema": "FCV588HistoricalContentStoreQA20261122",
+  "status": "VERIFIED_ARCHIVE_AND_FULL_FILE_RESTORE",
+  "archiveSha256": "1f9979b58f8282aa39385b8027b3e013f81a2dda733d499c2456d38dd522b94a",
+  "manifestSha256": "51344f216b27196f30b213db5dfb1fc689b91e1adfbd051f9287f014c7cdf7da",
+  "fileCount": 19502,
+  "restoredBytes": 1657539303,
+  "stageRoots": 40,
+  "blobShaVerified": 2950,
+  "junctionRecords": 24,
+  "isolatedRestoreVerifiedFiles": 19502,
+  "scriptSha256": "91AF8009D6C910BCD1E709D217EFD3EE579E141A7C930E4A0FDC72907ECD9A6F",
+  "note": "Independent restoration tested all files into an isolated folder with byte hash assertions, before original stages are removed. Windows junction aliases are separately represented and require native restoration."
+}

@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: source cue: off, booting and malformed modes cannot suggest active NAV
+ok 1 - source cue: off, booting and malformed modes cannot suggest active NAV
+  ---
+  duration_ms: 2.0443
+  type: 'test'
+  ...
+# Subtest: C11: typed fresh Own source, stale boundary and negative-age sample
+ok 2 - C11: typed fresh Own source, stale boundary and negative-age sample
+  ---
+  duration_ms: 0.6195
+  type: 'test'
+  ...
+# Subtest: C11: revoked, missing, invalid typed position fail closed
+ok 3 - C11: revoked, missing, invalid typed position fail closed
+  ---
+  duration_ms: 0.3482
+  type: 'test'
+  ...
+# Subtest: C11/D14: selected unavailable NMEA cannot be projected as Own
+ok 4 - C11/D14: selected unavailable NMEA cannot be projected as Own
+  ---
+  duration_ms: 0.4095
+  type: 'test'
+  ...
+# Subtest: D09: virtual option On and revoke change only external provenance
+ok 5 - D09: virtual option On and revoke change only external provenance
+  ---
+  duration_ms: 0.4972
+  type: 'test'
+  ...
+# Subtest: source-unverified menu path: warning is external, verified rows do not inherit it
+ok 6 - source-unverified menu path: warning is external, verified rows do not inherit it
+  ---
+  duration_ms: 0.9948
+  type: 'test'
+  ...
+# Subtest: D11: diagnostic display has instructor-only, not hardware wording
+ok 7 - D11: diagnostic display has instructor-only, not hardware wording
+  ---
+  duration_ms: 0.1863
+  type: 'test'
+  ...
+# Subtest: keyboard focus boundary: teacher keyboard cannot steer physical controls
+ok 8 - keyboard focus boundary: teacher keyboard cannot steer physical controls
+  ---
+  duration_ms: 0.652
+  type: 'test'
+  ...
+# Subtest: external notes and accessibility: data provenance cannot become LCD artwork
+ok 9 - external notes and accessibility: data provenance cannot become LCD artwork
+  ---
+  duration_ms: 12.0992
+  type: 'test'
+  ...
+# Subtest: V57 keeps one canonical public-reference notice in the masthead
+ok 10 - V57 keeps one canonical public-reference notice in the masthead
+  ---
+  duration_ms: 1.6249
+  type: 'test'
+  ...
+# Subtest: V57 removes repeated eyebrow and keeps a concise, truthful console heading
+ok 11 - V57 removes repeated eyebrow and keeps a concise, truthful console heading
+  ---
+  duration_ms: 0.2846
+  type: 'test'
+  ...
+# Subtest: V57 preserves live MODE state and concise synthetic-echo source cue
+ok 12 - V57 preserves live MODE state and concise synthetic-echo source cue
+  ---
+  duration_ms: 0.1836
+  type: 'test'
+  ...
+# Subtest: V57 retains explicit no-hardware and no-navigation safety disclaimer
+ok 13 - V57 retains explicit no-hardware and no-navigation safety disclaimer
+  ---
+  duration_ms: 0.198
+  type: 'test'
+  ...
+# Subtest: V57 compact masthead remains visible and responsive at phone width
+ok 14 - V57 compact masthead remains visible and responsive at phone width
+  ---
+  duration_ms: 0.3564
+  type: 'test'
+  ...
+# Subtest: V57 runtime MODE cue keeps its live mode and short synthetic-source label
+ok 15 - V57 runtime MODE cue keeps its live mode and short synthetic-source label
+  ---
+  duration_ms: 0.4532
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 16 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.5692
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 17 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.4591
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 18 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2361
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 19 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.375
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 148.0533

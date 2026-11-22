@@ -1,0 +1,50 @@
+{
+  "timestampUtc": "2026-10-19T10:04:33.045593+00:00",
+  "status": "V47_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_V47_FINAL_INTEGRITY_20261019.json",
+  "finalReceiptSHA": "4b039b74b393a62d8aaa05658fd2aa5b124e7551e5f28546a67383331291517c",
+  "originalFinalCheckerRunLogSHA": "63dac14c4967bd104f965efb51677d74a3eb117d0a3335eb1ffe4417c36ef138",
+  "checkerSourceSHA": "a008d0ceb81731f4f2b7eef2c4a7a1acb0b8ed01c985cfe2d3e46bcbfe8d4591",
+  "parentV46FinalSHA": "b8080291f753a56aa428bf038de8e98f4f84f13686b415d941f7074fe66f809d",
+  "parentV46PostSHA": "7f8a00fb1be746655a6decffb5551c9019fa777a722c2301879512bcd01cb84c",
+  "runtimeSourceStageCanonicalSHA": 37,
+  "runtimeChangedFromV46": 2,
+  "runtimeUnchangedFromV46": 35,
+  "approvedCanonicalFilesSHA": 6,
+  "documentsSHA": 5,
+  "stageNode": 504,
+  "canonicalNode": 504,
+  "postdocumentNode": 504,
+  "canonicalTargetedNode": 48,
+  "pythonTests": 13,
+  "stageBrowserAssertions": 126,
+  "canonicalBrowserAssertions": 126,
+  "stageBrowserBodySHA": 210,
+  "canonicalBrowserBodySHA": 210,
+  "newV47ScreenshotsSHA": 24,
+  "historicalScreenshotsSHA": 263,
+  "pythonOriginalTrainingFixturesSHA": 16,
+  "httpNegativeRoutesDenied": 4,
+  "ownedQAportsClosed": {
+    "4233": true,
+    "4234": true
+  },
+  "profileRevision": "F1-public-reference-21",
+  "installedFirmware": "UNKNOWN",
+  "oemRights": "HOLD",
+  "genuineOSWindowBlur": "NOT_RUN",
+  "narratorNvdaSpokenOutput": "NOT_RUN",
+  "nativeAttachedExactViewports": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,330 @@
+{
+  "observedAtUtc": "2026-10-16T01:10:14.080133+00:00",
+  "scope": "CURRENT_LOCAL_SOURCE_AND_HISTORICAL_V30_RECEIPT_RECONCILIATION_NO_BROWSER_RERUN",
+  "status": "LOCAL_V30_SOURCE_AND_HARNESS_MATCH",
+  "workspace": "C:\\Work\\MoPhongMayTrenTau",
+  "gitPresent": false,
+  "runtimeManifestSha256": "99097efbccc12d8538a041643f22b22d268dadb3e24d9ec9acbc6f718d4c1117",
+  "runtimeFiles": 34,
+  "receipts": [
+    {
+      "path": "docs/qa/FCV588_CONFIGURATION_V30_REVIEW_RECEIPT.json",
+      "sha256": "2367313626a105fbf77e01679f15fd017c3eb7eca59e1cf56ce5712037e02782",
+      "recordedStatus": "PASS",
+      "localSourceMatch": true,
+      "currentHarnessMatch": true
+    },
+    {
+      "path": "docs/qa/FCV588_FUNC_V30_GREEN_RECEIPT.json",
+      "sha256": "e080f6b66ae1e37c20da18d3c2d27c88b6d4ec6dda0df30975ff6d324b4c4f4f",
+      "recordedStatus": "PASS",
+      "localSourceMatch": true,
+      "currentHarnessMatch": true
+    },
+    {
+      "path": "docs/qa/FCV588_LCD_V30_GREEN_RECEIPT.json",
+      "sha256": "b4ae063ace0099b6f0010e154b6103087d94bbdcc677692c6dc96046907679f7",
+      "recordedStatus": "PASS",
+      "localSourceMatch": true,
+      "currentHarnessMatch": true
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_VIEWPORT_V30_RECEIPT.json",
+      "sha256": "8c28f36aa80851ae1cf68e406b90210bb3b00613dd501f4ba2746dd8f7a20c92",
+      "recordedStatus": "PASS_OBSERVED_VIEWPORTS",
+      "localSourceMatch": true,
+      "currentHarnessMatch": true
+    },
+    {
+      "path": "docs/qa/FCV588_CHROME_MOBILE_V30_RECEIPT.json",
+      "sha256": "90090f3548d3e5e632975433dd5d5fe67e02d3c59bba66fb8aee27fb9d0f9272",
+      "recordedStatus": "PASS_OBSERVED_PHONE_VIEWPORTS",
+      "localSourceMatch": true,
+      "currentHarnessMatch": true
+    }
+  ],
+  "ledgerSha256": "d81e5a35f907118ca985f9e7c445f58fbe00384619ff2d191d9fda2ab6544a3b",
+  "ledgerHasV30": false,
+  "checklist": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-01-start.md",
+      "sha256": "3bbefdd6f43ede84303d45e1a343673b8e6da3646ccb28bba1c8639b7273dbf3",
+      "entries": [
+        {
+          "checked": true,
+          "criterion": "Existing 11-source ledger is preserved and extensible; each entry has authorityTier, evidenceMode, access, rights, source branch and no false audited-video timestamp."
+        },
+        {
+          "checked": true,
+          "criterion": "Public trace matrix covers 64 operator features plus D15 instructor separately without editing operatorFidelityStatus/targetHardwareEvidenceIds."
+        },
+        {
+          "checked": true,
+          "criterion": "Default FCV588_PUBLIC_DEMO_UNKNOWN_FW profile has Demo On, no attached equipment, unknown firmware, safe virtual Type; alternate generic600/generic1kW/525STID-PWD are separate test fixtures, not simultaneously present."
+        },
+        {
+          "checked": true,
+          "criterion": "New rights policy distinguishes authorized reading/retention/AI processing/reproduction/redistribution; marks unverified processing permission as project safety HOLD, not a verbatim publisher AI ban."
+        },
+        {
+          "checked": true,
+          "criterion": "Student UI visibly states PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY; server cannot expose sources/manuals, transcripts or teacher-only private files."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 1.0 baseline text-only regression documented and GREEN."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 1.1 existing source ledger extended and rigorously graded."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 1.2 public trace created with 64 operator rows + D15 separate."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 1.3 profile and distinct virtual transducer conditions valid."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 1.4 visible banner and source rights guard tested."
+        }
+      ],
+      "tasks": [
+        "1.0 — Repair known plan-text regression without weakening fidelity checks",
+        "1.1 — Source provenance, rights and extensible evidence ledger",
+        "1.2 — 64+1 public source/claim trace matrix",
+        "1.3 — Synthetic Demo and transducer-guard profiles",
+        "1.4 — Claims, original assets and visible student disclaimer"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-02-physical-panel-and-controls.md",
+      "sha256": "d1868f14c494f630fa7a8d6fe21b41bae18e5093f6a2dacd342e3e9c88da4967",
+      "entries": [
+        {
+          "checked": true,
+          "criterion": "Original panel artwork from independently drawn geometry, separate ENTER, TrackPad, POWER/BRILL and two rotary knobs, 480x640 logical LCD; instructor assists stay distinct."
+        },
+        {
+          "checked": false,
+          "criterion": "Explicit recorded UI time permits ~6-second MODE/BRILL timeout even when teacher pauses synthetic world; replay and profile versions updated consistently."
+        },
+        {
+          "checked": false,
+          "criterion": "Power/startup/hold-off behavior, MENU/ESC, RANGE, GAIN+offset and VRM obey manual-supported transitions; FUNC 650ms remains visibly provisional if no better evidence."
+        },
+        {
+          "checked": false,
+          "criterion": "F0 tests asserting known-wrong immediate MODE semantics are migrated with source citation and before/after rationale, not disabled."
+        },
+        {
+          "checked": true,
+          "criterion": "Task 2.1 independently drawn/accessible panel and input replay."
+        },
+        {
+          "checked": false,
+          "criterion": "Task 2.2 MODE selection and UI clock independently recorded/replayed."
+        },
+        {
+          "checked": false,
+          "criterion": "Task 2.3 power/BRILL/Range/Gain/VRM reference paths and negative states."
+        }
+      ],
+      "tasks": [
+        "2.1 — Panel geometry and input fidelity",
+        "2.2 — Replayable UI clock and MODE selection",
+        "2.3 — POWER, BRILL, RANGE, GAIN and VRM edge cases"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-03-menu-atlas-and-configuration.md",
+      "sha256": "dd1a020e5016061e8aad8a2ca3497e49115290916ce8a575c9042abd6d356b1a",
+      "entries": [
+        {
+          "checked": false,
+          "criterion": "Versioned five-menu Sounder/Display/Alarm/Data/System atlas covers all source-documented Appendix1 nodes or marks gaps explicitly."
+        },
+        {
+          "checked": false,
+          "criterion": "Menu interaction has cursor, stage, commit/ESC, nested path and persistence only when documented."
+        },
+        {
+          "checked": false,
+          "criterion": "Installation-only setup and normal System paths are separate; Tankenmaru On disallows NMEA config/port in simulated status."
+        },
+        {
+          "checked": false,
+          "criterion": "Synthetic receive/missing/stale NMEA data (IEC 61162-1) never means actual input/output, ship network or navigating aid."
+        },
+        {
+          "checked": false,
+          "criterion": "Five-menu atlas complete for claimed public revision, with explicit unsupported branches."
+        },
+        {
+          "checked": false,
+          "criterion": "Stage/commit/ESC/persistence and units tested."
+        },
+        {
+          "checked": false,
+          "criterion": "§4.10 installation and Tankenmaru/NMEA mutually exclusive guarded states tested."
+        }
+      ],
+      "tasks": [
+        "3.1 — Versioned FCV menu atlas and reachability",
+        "3.2 — Settings transaction, units and power persistence",
+        "3.3 — System, transducer and IEC installation-specific gates"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-04-sonar-views-and-advanced.md",
+      "sha256": "0a948b09f72493926c84cd460e7404ab65e6e28395a56f7e9e81c803f2ce8967",
+      "entries": [
+        {
+          "checked": false,
+          "criterion": "LF/HF/DUAL and BL/BZ/MZ zoom mode display/header/scale transitions match published descriptions while sensor content remains synthetic."
+        },
+        {
+          "checked": false,
+          "criterion": "Picture Advance all 8 steps, Stop and processing controls operate only in documented contexts; world and session time remain independent."
+        },
+        {
+          "checked": false,
+          "criterion": "ACCU-FISH/RezBoost/BDS never enabled merely by Demo mode or generic 600W power rating; guard named transducer + operating parameters."
+        },
+        {
+          "checked": false,
+          "criterion": "Original Canvas/SVG graphics are independent art; no manufacturer screenshot, video frame or proprietary acoustic algorithm shipped."
+        },
+        {
+          "checked": false,
+          "criterion": "Raw world/sensor invariant proven over projection changes."
+        },
+        {
+          "checked": false,
+          "criterion": "All claimed display modes and eight Picture Advance states tested."
+        },
+        {
+          "checked": false,
+          "criterion": "Advanced options validated per named virtual transducer, depth/speed/installation and firmware source guard."
+        }
+      ],
+      "tasks": [
+        "4.1 — Stable raw sonar ports and deterministic scenario fixtures",
+        "4.2 — LF/HF/DUAL/Zoom layouts, processing and Picture Advance",
+        "4.3 — ACCU-FISH, Bottom Discrimination and RezBoost guarded states"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-05-alarms-nav-demo-diagnostics.md",
+      "sha256": "94e0525d4803658a683063246e00e6baf579a88877f997a82c323ad432b965bb",
+      "entries": [
+        {
+          "checked": false,
+          "criterion": "ALARM1-5 conditions have documented within-profile AND, cross-profile independent activation, mute vs cause-clear and persistent threshold settings."
+        },
+        {
+          "checked": false,
+          "criterion": "NAV1/NAV2/waypoints support missing or stale synthetic data, valid/invalid inputs and reversible modal workflows."
+        },
+        {
+          "checked": false,
+          "criterion": "System Demo is distinct from teacher-generated scenario; all controls operative while capability guards still apply."
+        },
+        {
+          "checked": false,
+          "criterion": "Diagnostics, LCD test and restore are clearly SIMULATED_ONLY without real software version, real ship data or hardware I/O."
+        },
+        {
+          "checked": false,
+          "criterion": "Alarm profiles reproduce AND cause logic, acknowledge and clear."
+        },
+        {
+          "checked": false,
+          "criterion": "NAV/waypoint operations and missing/stale data tested."
+        },
+        {
+          "checked": false,
+          "criterion": "Demo/Diagnostics/Restore fully synthetic and safe."
+        }
+      ],
+      "tasks": [
+        "5.1 — Alarm conjunction, causes, acknowledge and simultaneous profiles",
+        "5.2 — Synthetic NAV, data boxes and waypoint CRUD",
+        "5.3 — System Demo, diagnostics and safe restore"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "e35e9dac4ac2615dc43d0cf41e2f3b4e85785bb1e40e81f2903470eee1a49360",
+      "entries": [
+        {
+          "checked": false,
+          "criterion": "All publicly claimed FCV behaviors have source/document section or actually audited video timestamps and per-profile success/cancel/negative tests; 64 FCV and D15 distinct."
+        },
+        {
+          "checked": false,
+          "criterion": "Public banner exact: PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY; no restricted source/media in runtime or packaging."
+        },
+        {
+          "checked": false,
+          "criterion": "Real Windows browser smoke checks page load, controls, keyboard, hold, focus and responsive layout with console/network captured AFTER attach and reload."
+        },
+        {
+          "checked": false,
+          "criterion": "Completed individual training lessons can receive PUBLIC_REFERENCE_CONFORMANT only after source/rights/replay/browser/reviewer evidence. Overall hardware equivalence remains HOLD."
+        },
+        {
+          "checked": false,
+          "criterion": "64 FCV + D15 source/claim audit and independent rights review."
+        },
+        {
+          "checked": false,
+          "criterion": "Node static coverage and real browser smoke with attach-before-reload diagnostics."
+        },
+        {
+          "checked": false,
+          "criterion": "Reviewed conditional lessons and honest report; unknowns visible, hardware HOLD."
+        }
+      ],
+      "tasks": [
+        "6.1 — Full trace, rights and source/claim audit",
+        "6.2 — Static UI/security and actual browser operation",
+        "6.3 — Replayable course lessons and conditional acceptance"
+      ]
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-07-shared-world-and-future-devices.md",
+      "sha256": "edd535128da39b76f6cb25e0b3f06dbb109fb918384cb9bccbf5576514809264",
+      "entries": [
+        {
+          "checked": true,
+          "criterion": "One world clock, named deterministic sensor streams and isolated device-specific state are proven by repeatable tests."
+        },
+        {
+          "checked": false,
+          "criterion": "Replay rejects mismatched active device set/profile/version while preserving previous FCV-only historical fixtures via explicit format migration."
+        },
+        {
+          "checked": false,
+          "criterion": "AIS R5 SUPREME vs SOLID, FAR-2127 controller, MDC-2060 revision, NS4000 version and J2000 identity remain independent holds until confirmed."
+        },
+        {
+          "checked": true,
+          "criterion": "FCV raw world/sensor/replay invariant under second inert device."
+        },
+        {
+          "checked": false,
+          "criterion": "Strict unknown model/firmware variants stay HOLD; explicit upgrade route documented."
+        }
+      ],
+      "tasks": [
+        "7.1 — Second-device inert subscriber and replay isolation",
+        "7.2 — Future-variant HOLD and safe hardware-upgrade documentation"
+      ]
+    }
+  ],
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

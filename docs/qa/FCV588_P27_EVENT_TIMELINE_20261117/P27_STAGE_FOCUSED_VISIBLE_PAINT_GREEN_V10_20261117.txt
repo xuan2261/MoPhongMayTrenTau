@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: P27 archive D15 timeline controls exist and model is pure
+ok 1 - P27 archive D15 timeline controls exist and model is pure
+  ---
+  duration_ms: 1.4543
+  type: 'test'
+  ...
+# Subtest: P27 exact full replay at N and zero-event prefix reconstruct initial deterministic state
+ok 2 - P27 exact full replay at N and zero-event prefix reconstruct initial deterministic state
+  ---
+  duration_ms: 83.2414
+  type: 'test'
+  ...
+# Subtest: P27 random seek is deterministic and does not retain mutable cached frame pixels
+ok 3 - P27 random seek is deterministic and does not retain mutable cached frame pixels
+  ---
+  duration_ms: 76.1542
+  type: 'test'
+  ...
+# Subtest: P27 P04/P23 explicit sidecar changes only synthetic BZ left projection
+ok 4 - P27 P04/P23 explicit sidecar changes only synthetic BZ left projection
+  ---
+  duration_ms: 42.6903
+  type: 'test'
+  ...
+# Subtest: P27 frozen profile22 legacy archive and profile21 legacy fixtures can replay selected prefixes
+ok 5 - P27 frozen profile22 legacy archive and profile21 legacy fixtures can replay selected prefixes
+  ---
+  duration_ms: 18.8529
+  type: 'test'
+  ...
+# Subtest: P27 rejects invalid step numbers and enforces bounded source schema
+ok 6 - P27 rejects invalid step numbers and enforces bounded source schema
+  ---
+  duration_ms: 10.2444
+  type: 'test'
+  ...
+# Subtest: P27 reset and navigation UI are D15-only and never write live session or storage
+ok 7 - P27 reset and navigation UI are D15-only and never write live session or storage
+  ---
+  duration_ms: 1.5098
+  type: 'test'
+  ...
+# Subtest: P27 first canvas frame is painted only after panel shown and stale RGBA is reset
+ok 8 - P27 first canvas frame is painted only after panel shown and stale RGBA is reset
+  ---
+  duration_ms: 1.0516
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 390.0584

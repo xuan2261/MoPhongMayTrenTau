@@ -1,0 +1,1297 @@
+import {TRAINING_SCENARIO, observeSounder, makeEchoFrame, effectiveRangeM,
+  projectSyntheticSeabedProvenance,projectSyntheticSounderSourceIdentity} from
+  "../src/core/scenario.mjs";
+import {createSession, dispatch, replay, createReplayEnvelope, reset, sessionHash} from "../src/core/session.mjs";
+import {FCV588_ADAPTER} from "../src/devices/fcv588/adapter.mjs";
+import {DISPLAY_MODES} from "../src/devices/fcv588/model.mjs";
+import {FCV_RANGE_BANK_FIELDS} from
+  "../src/devices/fcv588/menu-atlas.mjs";
+import {projectFcvEcho, projectFcvZoom, projectFcvAScope, projectFcvBottomDiscrimination, projectFcvBottomZone, advanceFcvPictureHistory, depthFractionOnFcvFrame, shouldRenderFcvSonar} from "../src/devices/fcv588/echo-projection.mjs";
+import {projectNavData,projectFcvManualNavBoxes,
+  projectFcvTravelValues} from "../src/devices/fcv588/navigation.mjs";
+import {planFcvScreenLayout,planFcvDepthReadout,planFcvNavRows} from
+  "../src/devices/fcv588/display-layout.mjs";
+import {projectFcvDisplayWidgets,projectFcvZoomWindowMarker} from
+  "../src/devices/fcv588/display-widgets.mjs";
+import {projectFcvCalibratedReadings} from
+  "../src/devices/fcv588/calibration.mjs";
+import {projectFcvTrainingReceiver} from
+  "../src/devices/fcv588/receiver-status.mjs";
+import {projectFcvTankenmaruTrainingStatus} from
+  "../src/devices/fcv588/tankenmaru-status.mjs";
+import {projectFcvTrainingFaults} from "../src/devices/fcv588/training-faults.mjs";
+import {FCV588_TRAINING_LESSONS, assessFcvLesson} from "../src/core/lessons.mjs";
+import {FCV_SETTINGS_STORAGE_KEY, decodeFcvSettings, decodeFcvProfile19Settings,
+  encodeFcvSettings} from "../src/devices/fcv588/settings.mjs";
+import {convertFcvDepth,formatFcvDepth,
+  formatFcvTemperature,formatFcvFishSize,formatFcvDistance} from
+  "../src/devices/fcv588/units.mjs";
+import {getFcvDisplayPalette,getFcvLcdContrastTheme} from
+  "../src/devices/fcv588/display-palette.mjs";
+import {rasterizeFcvEcho} from "./fcv588-echo-rasterizer.mjs";
+import {bindHoldControl} from "./hold-input.mjs";
+import {bindRepeatPadControl} from "./pad-repeat.mjs";
+import {bindRotaryDragControl} from "./rotary-input.mjs";
+import {shouldPlayFcvKeyTone,createFcvKeyTonePlayer} from "./key-feedback.mjs";
+import {shouldRouteFcvShortcut} from "./keyboard-shortcuts.mjs";
+import {bindInstructorTabs} from "./instructor-tabs.mjs";
+import {projectFcvLcdPresentation,projectFcvMainMenu,projectFcvFuncSetting,
+  projectFcvEchoLegend,projectFcvAlarmPresentation,
+  projectFcvPhotoStatusHeader,projectFcvDepthTicks,
+  shouldShowFcvGlobalDepth} from "./lcd-presentation.mjs";
+import {projectFcvConfiguration} from "./lcd-config-presentation.mjs";
+import {projectFcvControl} from "./lcd-control-presentation.mjs";
+import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
+  projectFcvSelectionAnnouncement,
+  explainFcvSourceReason} from
+  "./lcd-instructor-meta.mjs";
+import {projectFcvInstructorSourceMatrix,projectFcvInstructorSourceTransition} from
+  "./fcv588-training-source-matrix.mjs";
+
+const adapter = FCV588_ADAPTER;
+const playKeyTone=createFcvKeyTonePlayer();
+const $ = id => document.getElementById(id);
+const scenario = TRAINING_SCENARIO;
+let session = createSession(adapter, scenario);
+let paused = false;
+let cachedTick = -1;
+let cachedObservation;
+let cachedSeabedProvenance;
+let cachedSeabedSourceIdentity;
+let lastObservedSettings = encodeFcvSettings(session.deviceState.settings);
+const frozenFrames = new Map();
+const canvas = $("echo-canvas");
+const ctx = canvas.getContext("2d", {alpha: false});
+const displayCanvas = document.createElement("canvas");
+const displayCtx = displayCanvas.getContext("2d", {alpha: false});
+
+// Local configuration is not a replay or live-device session. Only menu
+// settings are persisted, never world time, active alarms, waypoints or inputs.
+// A schema/profile mismatch is rejected by the codec before entering the
+// canonical event log. Storage can be unavailable in privacy-restricted tabs.
+function restoreSettingsOnReload() {
+  let raw;
+  try {
+    raw = localStorage.getItem(FCV_SETTINGS_STORAGE_KEY);
+  } catch {
+    return "Local storage không khả dụng; chạy với cấu hình mặc định.";
+  }
+  if (raw === null) return "";
+  const currentSettings=decodeFcvSettings(raw);
+  const settings=currentSettings??decodeFcvProfile19Settings(raw);
+  if (!settings) {
+    return "Cấu hình lưu không hợp lệ/khác phiên bản; đã bỏ qua, không dùng cấu hình cũ.";
+  }
+  try {
+    session = dispatch(session, adapter, {kind: "restore-settings", settings}, scenario);
+    lastObservedSettings = encodeFcvSettings(session.deviceState.settings);
+    // Do not rewrite the original stored bytes during startup. Only a later
+    // committed setting change may persist a new profile21 envelope.
+    if(!currentSettings)return "Đã chuyển cấu hình LOCAL profile19 sang profile21 qua sự kiện khôi phục; giữ nguyên bản lưu cũ tới lần thay đổi cấu hình. Không chuyển replay hoặc quyền tùy chọn.";
+    return "Đã khôi phục cấu hình LOCAL qua sự kiện replay; thiết bị vẫn tắt.";
+  } catch {
+    return "Không thể khôi phục cấu hình LOCAL; đã giữ cấu hình mặc định.";
+  }
+}
+
+function persistSettingsAfterChange() {
+  const encoded = encodeFcvSettings(session.deviceState.settings);
+  if (encoded === lastObservedSettings) return;
+  // Avoid writing on every UI/world tick, including when storage is blocked.
+  lastObservedSettings = encoded;
+  try {
+    localStorage.setItem(FCV_SETTINGS_STORAGE_KEY, encoded);
+  } catch {
+    $("validation-status").textContent =
+      "Không thể lưu cấu hình trong trình duyệt; trạng thái hiện tại vẫn hoạt động.";
+  }
+}
+
+function observation() {
+  if (cachedTick !== session.worldState.simTick) {
+    cachedTick = session.worldState.simTick;
+    cachedObservation = observeSounder(scenario, session.worldState, {columns: 160, rows: 301});
+    cachedSeabedProvenance=projectSyntheticSeabedProvenance(
+      scenario,session.worldState,{columns:cachedObservation.columns});
+    cachedSeabedSourceIdentity=projectSyntheticSounderSourceIdentity(
+      scenario,session.worldState,{columns:cachedObservation.columns});
+  }
+  return cachedObservation;
+}
+
+function send(input) {
+  try {
+    const priorSonar=shouldRenderFcvSonar(session.deviceState);
+    session = dispatch(session, adapter, input, scenario);
+    if(shouldPlayFcvKeyTone(session.deviceState,input))playKeyTone();
+    if(priorSonar!==shouldRenderFcvSonar(session.deviceState))frozenFrames.clear();
+    persistSettingsAfterChange();
+    render();
+  } catch (err) {
+    $("validation-status").textContent = "Lỗi input đã chặn: " + err.message;
+  }
+}
+
+const lcdRgb=components=>"rgb("+components.join(",")+")";
+function drawChannel(frame, x0, y0, w, h,{axis="absolute"}={}) {
+  const palette=getFcvDisplayPalette(session.deviceState.settings);
+  const contrast=getFcvLcdContrastTheme(session.deviceState.settings);
+  // View-only painter: extra subpixel texture uses ONLY synthetic frame bytes.
+  // No acoustic observation/event/replay data is changed or read from hardware.
+  const settings=session.deviceState.settings;
+  const raster=rasterizeFcvEcho(frame,palette,{
+    clutterPct:Number(settings.clutter??0),
+    colorErasePct:Number(settings.colorErase??0),
+    zeroLineRejector:settings.zeroLineRejector==="On",
+  });
+  displayCanvas.width = raster.width;
+  displayCanvas.height = raster.height;
+  const pixels = displayCtx.createImageData(raster.width, raster.height);
+  pixels.data.set(raster.data);
+  displayCtx.putImageData(pixels, 0, 0);
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(displayCanvas, x0, y0, w, h);
+  ctx.fillStyle = lcdRgb(contrast.foreground);
+  ctx.font = "12px Consolas, monospace";
+  // Photo LF/HF/DUAL/BL cases identify channels in the status/mode context.
+  // Do not invent a separate "50 kHz / 200 kHz" label inside every sonar
+  // pane. The axis stays below the top status strip.
+  const ticks=projectFcvDepthTicks(frame,{height:h,
+    top:62,bottom:12,units:session.deviceState.settings.units,axis});
+  for(const tick of ticks){
+    ctx.fillStyle=lcdRgb(contrast.foreground);
+    ctx.fillText(tick.label,x0+w-48,y0+tick.y);
+    ctx.fillRect(x0+w-8,y0+tick.y-2,7,1);
+  }
+}
+
+function sounderFrame(observation, state, frequencyKhz, zoom = false) {
+  const key = frequencyKhz + (zoom ? "-zoom" : "-regular");
+  const seabedProvenance=cachedSeabedProvenance?.simTick===observation.simTick &&
+    cachedSeabedProvenance?.columns===observation.columns
+    ?cachedSeabedProvenance:null;
+  const seabedSourceIdentity=cachedSeabedSourceIdentity?.simTick===observation.simTick &&
+    cachedSeabedSourceIdentity?.columns===observation.columns
+    ?cachedSeabedSourceIdentity:null;
+  const projected = zoom
+    ? projectFcvZoom(observation, state,
+      {frequencyKhz,seabedProvenance,seabedSourceIdentity})
+    : projectFcvEcho(observation, state, {frequencyKhz});
+  const previous=frozenFrames.get(key);
+  const candidate={...projected,bottomDepthM:observation.bottomDepthM};
+  const frame = advanceFcvPictureHistory(previous, candidate,
+    state, observation.simTick);
+  // Stop freezes the display provenance as well as its source pixels; the
+  // world/observation is free to continue without moving the stopped image.
+  if(previous && state.settings.pictureAdvance==="Stop" &&
+    previous.projectionKey===frame.projectionKey &&
+    previous.frequencyKhz===frame.frequencyKhz &&
+    previous.rangeM===frame.rangeM){
+    frame.bottomDepthM=previous.bottomDepthM;
+  }
+  frozenFrames.set(key, frame);
+  return frame;
+}
+
+function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
+  const zone=projectFcvBottomZone(frame,bottomDepthM,
+    frame.overlays?.bottomZone??"Standard");
+  if(zone){
+    ctx.fillStyle="#7adab522";
+    ctx.fillRect(x0,y0+zone.topFraction*h,w,
+      (zone.bottomFraction-zone.topFraction)*h);
+    ctx.strokeStyle="#8dd4ac77";
+    ctx.strokeRect(x0+0.5,y0+zone.topFraction*h,w-1,
+      Math.max(1,(zone.bottomFraction-zone.topFraction)*h));
+  }
+  if (frame.overlays?.whiteLine) {
+    const fraction=depthFractionOnFcvFrame(frame,bottomDepthM);
+    if(fraction>=0 && fraction<=1){
+      ctx.fillStyle = "#f2ffff";
+      ctx.fillRect(x0,y0+fraction*h,w,3);
+    }
+  }
+  if (frame.overlays?.aScope) {
+    const scope=projectFcvAScope(frame);
+    const band = Math.min(36, w / 5);
+    ctx.fillStyle = "#061e30aa";
+    ctx.fillRect(x0 + w - band, y0, band, h);
+    for (let y = 0; y < frame.rows; y += 3) {
+      const strength=scope[y]/255;
+      ctx.fillStyle=frame.overlays.aScopeMode==="Peak"?"#ffe09e":"#d9f0fe";
+      ctx.fillRect(x0 + w - band, y0 + y / frame.rows * h,
+        strength * (band - 3), 2);
+    }
+  }
+  if (frame.overlays?.bottomDiscrimination) {
+    const bottom=projectFcvBottomDiscrimination(frame);
+    const width=Math.max(85,w-18);
+    const panelTop=y0+h-109;
+    ctx.fillStyle="#06192fe0";
+    ctx.fillRect(x0+9,panelTop,width,96);
+    ctx.fillStyle="#e9f2bb";
+    ctx.font="bold 11px Consolas, monospace";
+    ctx.fillText("BOTTOM TYPE "+(bottom?.mode??""),
+      x0+15,panelTop+16);
+    if(bottom?.status==="SYNTHETIC_ONLY"){
+      const tones=["#677875","#d0c18a","#8a8c86","#c9ad80"];
+      if(bottom.mode==="Probability"){
+        const barWidth=Math.max(35,width-126);
+        bottom.values.forEach((entry,i)=>{
+          const yy=panelTop+29+i*15;
+          ctx.fillStyle="#e8edf3";
+          ctx.font="10px Consolas, monospace";
+          ctx.fillText(entry.label,x0+15,yy+3);
+          ctx.fillStyle=tones[i];
+          ctx.fillRect(x0+71,yy-8,barWidth*entry.weight,9);
+          ctx.fillStyle="#e8edf3";
+          ctx.fillText((entry.weight*100).toFixed(0)+"%",
+            x0+76+barWidth,yy+2);
+        });
+      }else{
+        let x=x0+16;
+        const barWidth=width-15;
+        bottom.values.forEach((entry,i)=>{
+          const band=barWidth*entry.weight;
+          ctx.fillStyle=tones[i];
+          ctx.fillRect(x,panelTop+32,band,25);
+          x+=band;
+        });
+        ctx.fillStyle="#e9f2bb";
+        ctx.font="10px Consolas, monospace";
+        ctx.fillText("CLASS: "+bottom.dominantType,x0+16,panelTop+79);
+      }
+    }else{
+      ctx.fillStyle="#d9e2e9";
+      ctx.font="11px Consolas, monospace";
+      ctx.fillText("NO CLASSIFICATION DATA",x0+16,panelTop+47);
+    }
+  }
+  if (frame.overlays?.accuFish) {
+    ctx.fillStyle = "#d4f1a8";
+    ctx.font = "bold 12px Consolas, monospace";
+    ctx.fillText("FISH SIZE", x0 + 9, y0 + h - 44);
+    if(frame.overlays.fishSymbol!=="Off"){
+      const large=frame.overlays.fishSize==="Large";
+      for(const fish of frame.syntheticFish??[]){
+        const xx=x0+fish.xFraction*w;
+        const yy=y0+fish.yFraction*h;
+        const sz=large?7:5;
+        ctx.fillStyle="#e7e9a4";
+        ctx.beginPath();
+        if(frame.overlays.fishSymbol==="Circle"){
+          ctx.arc(xx,yy,sz,0,Math.PI*2);
+        }else{
+          // Independently drawn training icon; no OEM fish imagery.
+          ctx.ellipse(xx,yy,sz*1.55,sz,0,0,Math.PI*2);
+        }
+        ctx.fill();
+        ctx.font="bold 10px Consolas, monospace";
+        ctx.fillStyle="#fff2c2";
+        ctx.fillText(formatFcvFishSize(fish.sizeCm,
+          session.deviceState.settings.fishSizeUnit),
+          Math.max(x0+8,Math.min(x0+w-88,xx+10)),
+          Math.max(y0+28,yy-8));
+      }
+    }
+  }
+  if (frame.overlays?.rezBoost) {
+    ctx.fillStyle = "#f8d290";
+    ctx.font = "bold 12px Consolas, monospace";
+    ctx.fillText("REZBOOST", x0 + 9, y0 + 61);
+  }
+  return Boolean(frame.overlays?.bottomDiscrimination);
+}
+const clampUi = (v,lo,hi) => Math.max(lo,Math.min(hi,v));
+
+function drawSupplementaryDisplay(state,simTick,width,height){
+  // All values are typed instructor/synthetic projections, never live feeds.
+  const {tempGraph,navData,battery}=projectFcvDisplayWidgets(state,
+    state.navigationObservation,simTick);
+  if(navData){
+    const x=width-217,y=145;
+    ctx.fillStyle="#071b32e0";
+    ctx.fillRect(x,y,208,navData.boxes.length*28+22);
+    ctx.fillStyle="#fed996";
+    ctx.font="bold 11px Consolas, monospace";
+    ctx.fillText("NAV DATA",x+7,y+15);
+    ctx.font="11px Consolas, monospace";
+    for(const [i,box] of navData.boxes.entries()){
+      ctx.fillStyle="#b2d5e4";
+      ctx.fillText(box.label+": "+displayOnlySyntheticValue(box.value),
+        x+7,y+35+i*28,194);
+    }
+  }
+  if(tempGraph){
+    const x=12,y=height-111,w=176,h=84;
+    ctx.fillStyle="#06182cdc";
+    ctx.fillRect(x,y,w,h);
+    ctx.fillStyle="#c6ebf0";
+    ctx.font="11px Consolas, monospace";
+    if(tempGraph.status!=="SYNTHETIC_DATA"){
+      ctx.fillText("TEMP GRAPH · NO DATA",x+8,y+20);
+    }else{
+      ctx.fillText("TEMP "+formatFcvTemperature(tempGraph.currentC,
+        state.settings.tempUnit),x+8,y+17);
+      ctx.strokeStyle="#ffda89";
+      ctx.lineWidth=2;
+      ctx.beginPath();
+      tempGraph.samples.forEach((sample,i)=>{
+        const xx=x+8+i/(tempGraph.samples.length-1)*(w-17);
+        const yy=y+51-(sample-tempGraph.currentC)/
+          tempGraph.scaleSpanC*44;
+        if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);
+      });
+      ctx.stroke();
+      ctx.fillStyle="#83adba";
+    }
+  }
+  // Instructor-triggered battery fault has no verified FCV display oracle;
+  // the external D15 fault panel retains the cue instead.
+}
+
+function renderScreen() {
+  const state = session.deviceState;
+  const alarmPresentation=projectFcvAlarmPresentation(state);
+  const {width, height} = canvas;
+  // Only a panel actually painted from a capability-eligible frame may lift
+  // the depth label. A saved BDS preference alone is not an active panel.
+  let bottomDiscPainted=false;
+  const drawOverlays=(...args)=>{
+    bottomDiscPainted=drawSourceGradedOverlays(...args)||bottomDiscPainted;
+  };
+  const depthIndicator=$("depth-display").parentElement;
+  depthIndicator.dataset.view=state.mode;
+  depthIndicator.style.setProperty("--depth-bottom","10px");
+  depthIndicator.style.removeProperty("--dual-depth-anchor");
+  const sonarAvailable=shouldRenderFcvSonar(state);
+  const contrast=getFcvLcdContrastTheme(state.settings);
+  // Original presentation approximation: brightness changes LCD pixels and
+  // overlays only, never the synthetic sonar observation or replay inputs.
+  const presentation=projectFcvLcdPresentation(state);
+  const {luminance,testPattern}=presentation;
+  $("lcd").style.filter = "brightness("+luminance+")";
+  $("lcd").style.setProperty("--fcv-lcd-foreground",lcdRgb(contrast.foreground));
+  $("lcd").style.setProperty("--fcv-lcd-shadow",lcdRgb(contrast.shadow));
+  ctx.fillStyle = lcdRgb(contrast.background);
+  ctx.fillRect(0, 0, width, height);
+  $("off-screen").hidden = state.power !== "off";
+  $("screen-top").hidden=Boolean(testPattern);
+  // Reset the independently painted DEMO element BEFORE the LCD Test early
+  // return, otherwise its previous frame could cover the solid test pixels.
+  $("demo-indicator").hidden=state.power!=="on" || !state.demoOn ||
+    Boolean(testPattern);
+  $("depth-display").parentElement.hidden = state.power !== "on" || Boolean(testPattern);
+  $("depth-display").parentElement.dataset.size=state.settings.depthSize??"Medium";
+  const testStatus=$("lcd-test-status");
+  testStatus.hidden=!testPattern;
+  const testMessage=testPattern?"LCD TEST · SIMULATED · "+testPattern.name+
+    ". TrackPad đổi màu; MENU/ESC trở lại. Mẫu màu lớp học, không phải phép kiểm tra phần cứng.":"";
+  if(testStatus.textContent!==testMessage)testStatus.textContent=testMessage;
+  canvas.setAttribute("aria-label",testPattern?"LCD TEST · SIMULATED · "+testPattern.name:
+    "Ảnh hồi âm minh họa theo dữ liệu mô phỏng");
+  if(testPattern){
+    // Use our declared diagnostic sequence, not the live sonar background.
+    // Keep instructions outside the LCD so every test pixel is unobstructed.
+    ctx.fillStyle=lcdRgb(testPattern.rgb);
+    ctx.fillRect(0,0,width,height);
+    $("vrm-indicator").hidden=true;
+    $("screen-top").textContent="LCD TEST · SIMULATED · "+testPattern.name;
+    renderDialog();
+    return;
+  }
+  const vrmEligible=state.power==="on" && sonarAvailable && state.vrmVisible &&
+    !["NAV1","NAV2"].includes(state.mode);
+  let vrmFraction=null;
+  if(vrmEligible){
+    const range=effectiveRangeM(observation(),state);
+    const start=state.rangeMode==="manual"?Number(state.settings.shift??0):0;
+    vrmFraction=depthFractionOnFcvFrame({rangeM:range,startDepthM:start},
+      state.vrmDepthM);
+  }
+  const vrmShown=vrmEligible && vrmFraction>=0 && vrmFraction<=1;
+  $("vrm-indicator").hidden = !vrmShown;
+  if (vrmShown) {
+    $("vrm-indicator").textContent = "VRM " +
+      formatFcvDepth(state.vrmDepthM,state.settings.units);
+    $("vrm-indicator").style.top = Math.max(2,
+      Math.min(94,100*vrmFraction)) + "%";
+  }
+  if (state.power === "booting") {
+    ctx.fillStyle = "#b8d5e8";
+    ctx.textAlign = "center";
+    ctx.font = "bold 32px Consolas, monospace";
+    ctx.fillText("FCV-588", width / 2, height / 2 - 20);
+    ctx.font = "18px Consolas, monospace";
+    ctx.fillText("INITIALIZING ... " + state.bootElapsed + "/4", width / 2, height / 2 + 25);
+    ctx.textAlign = "left";
+  }
+  if (state.power === "on") {
+    const o = observation();
+    const layout=planFcvScreenLayout(state,{width,height});
+    const depthReadout=planFcvDepthReadout(state,layout,{width,height});
+    if(depthReadout.kind==="dual-divider")
+      depthIndicator.style.setProperty("--dual-depth-anchor",
+        (depthReadout.anchorFraction*100)+"%");
+    if (["NAV1", "NAV2"].includes(state.mode)) {
+      const input = state.trainingFixture.navigation === true
+        ? state.navigationObservation : null;
+      const nav = projectFcvManualNavBoxes({
+        mode:state.mode,sample:input,navState:state.navigation,
+        settings:state.settings,
+        sonarDepthM:sonarAvailable?o.bottomDepthM:null,
+        simTick:session.worldState.simTick,staleAfterTicks:10,
+        units:state.settings.units,
+        tempUnit:state.settings.tempUnit,speedUnit:state.settings.speedUnit,
+        distanceUnit:state.settings.distanceUnit,
+      });
+      const navPane=layout.panes.nav;
+      const sounderPane=layout.panes.sonar;
+      // NAV left pane is owned only by the configured selectable boxes.
+      // Never invent a global DEPTH fallback when DEPTH was not selected.
+      depthIndicator.hidden=!shouldShowFcvGlobalDepth(state.mode,nav.boxes);
+      if(sonarAvailable){
+        const normal=sounderFrame(o,state,50);
+        drawChannel(normal,sounderPane.x,0,sounderPane.width,height);
+        drawOverlays(normal,sounderPane.x,0,
+          sounderPane.width,height,normal.bottomDepthM);
+      }else{
+        ctx.fillStyle=lcdRgb(contrast.background);
+        ctx.fillRect(sounderPane.x,0,sounderPane.width,height);
+        ctx.fillStyle=lcdRgb(contrast.foreground);
+        ctx.font="12px Consolas, monospace";
+        ctx.fillText("NO SONAR DATA",sounderPane.x+6,height/2,
+          sounderPane.width-12);
+      }
+      ctx.fillStyle=lcdRgb(contrast.navPanel);
+      ctx.fillRect(navPane.x,0,navPane.width,height);
+      const navRows=planFcvNavRows(nav.boxes.map(box=>({
+        ...box,value:displayOnlySyntheticValue(box.value),
+      })),navPane);
+      for(const row of navRows){
+        ctx.fillStyle=lcdRgb(contrast.secondary);
+        ctx.font=row.labelFontPx+"px Consolas, monospace";
+        ctx.fillText(row.label,row.labelX,row.labelY,row.width-32);
+        ctx.fillStyle=lcdRgb(contrast.navValue);
+        ctx.font="bold "+row.valueFontPx+"px Consolas, monospace";
+        row.valueLines.forEach((line,index)=>ctx.fillText(line,row.valueX,
+          row.valueY+index*row.valueLineHeight,row.width-32));
+        if(row.separatorY!==null){
+          ctx.fillStyle=lcdRgb(contrast.secondary);
+          ctx.fillRect(row.x+8,row.separatorY-1,row.width-16,1);
+        }
+      }
+      // Source freshness and synthetic provenance are described outside LCD.
+      ctx.fillStyle=lcdRgb(contrast.foreground);
+      ctx.fillRect(navPane.width-1,0,2,height);
+    } else if (!sonarAvailable) {
+      ctx.fillStyle=lcdRgb(contrast.background);
+      ctx.fillRect(0,0,width,height);
+      ctx.fillStyle=lcdRgb(contrast.foreground);
+      ctx.textAlign="center";
+      ctx.font="bold 24px Consolas, monospace";
+      ctx.fillText("NO SONAR DATA",width/2,height/2-18);
+      ctx.font="15px Consolas, monospace";
+      ctx.textAlign="left";
+    } else if (state.mode === "DUAL") {
+      const lf = sounderFrame(o,state,50);
+      const hf = sounderFrame(o,state,200);
+      const leftWidth=layout.panes.lf.width;
+      drawChannel(lf,0,0,leftWidth,height);
+      drawChannel(hf,leftWidth,0,width-leftWidth,height);
+      drawOverlays(lf,0,0,leftWidth,height,lf.bottomDepthM);
+      drawOverlays(hf,leftWidth,0,width-leftWidth,height,hf.bottomDepthM);
+      ctx.fillStyle = lcdRgb(contrast.foreground);
+      ctx.fillRect(leftWidth-1,0,2,height);
+    } else {
+      const frequencyKhz = state.mode.includes("HF") ? 200 : 50;
+      const normal = sounderFrame(o,state,frequencyKhz);
+      if (state.mode.includes("ZOOM")) {
+        const zoom = sounderFrame(o,state,frequencyKhz,true);
+        const leftWidth=layout.panes.zoom.width;
+        // OME-23890-E §1.4.3: zoom LEFT, normal single-frequency RIGHT.
+        drawChannel(zoom,layout.panes.zoom.x,0,leftWidth,height,{
+          axis:zoom.zoomMode==="Bottom Lock"?"bottom-lock":"absolute",
+        });
+        drawChannel(normal,layout.panes.normal.x,0,
+          layout.panes.normal.width,height);
+        drawOverlays(zoom,layout.panes.zoom.x,0,leftWidth,height,
+          zoom.bottomDepthM);
+        drawOverlays(normal,layout.panes.normal.x,0,
+          layout.panes.normal.width,height,normal.bottomDepthM);
+        const marker=projectFcvZoomWindowMarker(state,normal,zoom);
+        if(marker){
+          ctx.strokeStyle=lcdRgb(contrast.navHeading);
+          ctx.lineWidth=2;
+          ctx.setLineDash([4,4]);
+          for(const fraction of [marker.topFraction,marker.bottomFraction]){
+            ctx.beginPath();ctx.moveTo(layout.panes.normal.x+6,fraction*height);
+            ctx.lineTo(width-6,fraction*height);ctx.stroke();
+          }
+          ctx.setLineDash([]);
+        }
+        ctx.fillStyle=lcdRgb(contrast.foreground);
+        ctx.fillRect(leftWidth-1,0,2,height);
+      } else {
+        drawChannel(normal,0,0,width,height);
+        drawOverlays(normal,0,0,width,height,normal.bottomDepthM);
+      }
+    }
+    if(!["NAV1","NAV2"].includes(state.mode))
+      drawSupplementaryDisplay(state,session.worldState.simTick,width,height);
+    const legend=projectFcvEchoLegend(state,{width,height,
+      xOffset:layout.panes.sonar?.x??0});
+    if(legend){
+      for(const band of legend.bands){
+        ctx.fillStyle=lcdRgb(band.rgb);
+        ctx.fillRect(band.x,band.y,band.width,band.height);
+      }
+    }
+    depthIndicator.style.setProperty("--depth-bottom",bottomDiscPainted?"19%":"10px");
+    if (vrmShown) {
+      if (vrmShown) {
+        const y = vrmFraction * height;
+        ctx.strokeStyle = lcdRgb(contrast.navHeading);
+        ctx.lineWidth = 2;
+        ctx.setLineDash([8, 6]);
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+    const displayCalibrated=projectFcvCalibratedReadings(state.settings,
+      sonarAvailable?{sourceClass:"SYNTHETIC_FIXTURE",
+        bottomDepthM:o.bottomDepthM}:null);
+    const depth=convertFcvDepth(displayCalibrated.depthM??null,state.settings.units);
+    $("depth-display").textContent=sonarAvailable && depth.value!==null
+      ? depth.value.toFixed(1):"--.-";
+    $("depth-unit").textContent=depth.unit;
+    if(alarmPresentation.activeIds.length){
+      ctx.fillStyle="#921d28";
+      ctx.fillRect(8,Math.min(height-60,80),width-16,26);
+      ctx.fillStyle="#ffffff";
+      ctx.font="bold 16px Consolas, monospace";
+      ctx.fillText(alarmPresentation.activeIds.join(" / ") +
+        (alarmPresentation.audible?" ACTIVE":" ACK"),15,Math.min(height-60,80)+19);
+    }
+    // Faults injected by the instructor have no verified OEM alarm-pixel
+    // counterpart. Keep them in the D15 panel, not the device LCD.
+  }
+  $("screen-top").textContent=projectFcvPhotoStatusHeader(state).text;
+  // Manual §2.8 supports a [DEMO] indicator while Demo is on. Bottom-right
+  // is a provisional original-art placement, NOT an OEM-measured coordinate.
+  // Keep the model/menu contract and source-grade pixel placement separately.
+  renderDialog();
+}
+
+function keepMenuSelectionVisible(content,selected){
+  if(!selected)return;
+  const itemRect=selected.getBoundingClientRect();
+  const portRect=content.getBoundingClientRect();
+  if(itemRect.bottom>portRect.bottom-6){
+    content.scrollTop+=itemRect.bottom-portRect.bottom+9;
+  }else if(itemRect.top<portRect.top+6){
+    content.scrollTop-=portRect.top-itemRect.top+9;
+  }
+}
+
+let previousGuidanceAnnouncementTitle=null;
+function publishInstructorGuidance({title,summary="",help="",source=""}){
+  // Only semantic D15 guidance titles may reach the assistive live region.
+  // The visible current/help fields include countdowns updated on UI ticks.
+  // Initial render stays silent; subsequent title changes announce once.
+  const announcementTitle=title||"Hỗ trợ thao tác (bên ngoài máy)";
+  const live=$("operator-guidance-announcement");
+  if(previousGuidanceAnnouncementTitle===null){
+    previousGuidanceAnnouncementTitle=announcementTitle;
+  }else if(previousGuidanceAnnouncementTitle!==announcementTitle){
+    previousGuidanceAnnouncementTitle=announcementTitle;
+    if(live.textContent!==announcementTitle)live.textContent=announcementTitle;
+  }
+  const values={
+    "operator-guidance-title":title||"Hỗ trợ thao tác (bên ngoài máy)",
+    "operator-guidance-current":summary,
+    "operator-guidance-help":help,
+    "operator-guidance-source":source ||
+      "PUBLIC_REFERENCE: toàn bộ dữ liệu tàu, sonar và nguồn nhận đều được giả lập."
+  };
+  // Avoid repeated live-region announcements on each simulated frame.
+  for(const [id,value] of Object.entries(values)){
+    const el=$(id);
+    if(el.textContent!==value)el.textContent=value;
+  }
+  const active=session.deviceState.power==="on" &&
+    Boolean(session.deviceState.overlay);
+  const quickSurfaces=[
+    ["operator-quick-guide","operator-quick-title","operator-quick-status"],
+    ["operator-quick-guide-bottom","operator-quick-title-bottom",
+      "operator-quick-status-bottom"]
+  ];
+  for(const [surface] of quickSurfaces)$(surface).hidden=!active;
+  if(active){
+    const brief=summary.replace(/\n/g," · ");
+    const remaining=help.match(/Còn [\d.]+ s[^\n]*/)?.[0]??"";
+    const compact=[brief,remaining].filter(Boolean).join(" · ");
+    for(const [,titleId,statusId] of quickSurfaces){
+      const titleText=title||"Hỗ trợ thao tác bên ngoài mặt máy";
+      const statusText=compact||"Chi tiết thao tác ở bảng giảng viên.";
+      if($(titleId).textContent!==titleText)$(titleId).textContent=titleText;
+      if($(statusId).textContent!==statusText)$(statusId).textContent=statusText;
+    }
+  }
+}
+
+function publishSourceCue(state,simTick){
+  const cue=projectFcvSourceCue(state,simTick);
+  const element=$("source-cue");
+  element.hidden=!cue.visible;
+  element.dataset.sourceState=cue.status;
+  // Keep the non-live status cue stable through world ticks, avoiding repeated
+  // screen-reader announcements. Instructor guidance owns live descriptions.
+  for(const [id,value] of [["source-cue-title",cue.title],
+    ["source-cue-detail",cue.detail]]){
+    if($(id).textContent!==value)$(id).textContent=value;
+  }
+}
+
+let previousInstructorSourceRows=null;
+function publishInstructorSourceMatrix(state,simTick){
+  const projection=projectFcvInstructorSourceMatrix(state,simTick);
+  // A read-only D15 explanation, never another device input or timer.
+  // The first render is silent; meaningful changes get one off-device status
+  // announcement, not continuous full-LCD or tick-dependent announcements.
+  const transition=projectFcvInstructorSourceTransition(
+    previousInstructorSourceRows,projection.rows);
+  for(const entry of projection.rows){
+    const id=entry.id.toLowerCase();
+    const block=document.querySelector('[data-matrix-id="'+entry.id+'"]');
+    if(block?.dataset.sourceState!==entry.status)
+      block.dataset.sourceState=entry.status;
+    for(const [suffix,value] of Object.entries({
+      state:entry.statusText,summary:entry.summary,details:entry.details
+    })){
+      const label=$("source-matrix-"+id+"-"+suffix);
+      if(label.textContent!==value)label.textContent=value;
+    }
+  }
+  previousInstructorSourceRows=projection.rows;
+  if(transition){
+    // One DOM update per semantic change, even when the same status wording
+    // recurs after a different intermediate state. No timers or focus moves.
+    $("source-matrix-announcement").textContent=transition.text;
+  }
+}
+
+let lastA11ySelectionKey=null;
+function publishOperatorSelection(){
+  const lcdOverlay=$("lcd-overlay");
+  const selected=$("dialog-content").querySelector('[aria-current="true"]');
+  const choice=$("lcd-menu-options").hidden?null:
+    $("lcd-menu-options").querySelector('[aria-current="true"]');
+  const cue=projectFcvSelectionAnnouncement({
+    visible:!lcdOverlay.hidden,
+    layout:lcdOverlay.dataset.layout,
+    title:$("dialog-title").textContent,
+    rowText:selected?.textContent??"",
+    choiceText:choice?.textContent??"",
+    disabled:selected?.getAttribute("aria-disabled")==="true"
+  });
+  if(!cue){
+    if(lastA11ySelectionKey!==null){
+      lastA11ySelectionKey=null;
+      $("operator-selection-status").textContent="";
+    }
+    return;
+  }
+  if(lastA11ySelectionKey!==cue.key){
+    lastA11ySelectionKey=cue.key;
+    $("operator-selection-status").textContent=cue.text;
+  }
+}
+
+function renderMainMenuChrome(projected,title,content){
+  title.textContent=projected.category;
+  const categories=$("lcd-menu-categories");
+  categories.replaceChildren(...projected.categories.map(item=>{
+    const label=document.createElement("div");
+    label.textContent=item.label;
+    label.dataset.category=item.label;
+    label.setAttribute("role","listitem");
+    if(item.selected)label.setAttribute("aria-current","true");
+    return label;
+  }));
+  const rows=projected.rows.map(item=>{
+    const row=document.createElement("div");
+    row.className="lcd-menu-row";
+    const label=document.createElement("span");
+    label.className="lcd-menu-label";
+    label.textContent=(item.selected?"▶ ":"")+displayOnlySyntheticValue(item.label);
+    const value=document.createElement("span");
+    value.className="lcd-menu-value";
+    value.textContent=item.valueText?": "+displayOnlySyntheticValue(item.valueText):"";
+    row.replaceChildren(label,value);
+    row.setAttribute("aria-label",displayOnlySyntheticValue(item.text));
+    row.dataset.entryId=item.id;
+    row.dataset.sourceGrade=item.sourceStatus||"UNKNOWN";
+    if(item.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED"){
+      row.dataset.trainingPath="unverified";
+    }
+    row.setAttribute("role","listitem");
+    if(item.selected)row.setAttribute("aria-current","true");
+    if(item.disabled)row.setAttribute("aria-disabled","true");
+    return row;
+  });
+  content.setAttribute("role","list");
+  content.setAttribute("aria-label",projected.category);
+  content.replaceChildren(...rows);
+  const active=projected.rows.find(row=>row.selected);
+  const sourceUnverified=active?.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED";
+  publishInstructorGuidance({
+    title:projected.title,
+    help:projected.help,
+    source:sourceUnverified
+      ? "SOURCE_GAP: mục thao tác được thêm cho giáo trình, chưa chứng minh là đường dẫn menu FCV-588 trên firmware thật."
+      :projected.reason
+      ? "Mục này chưa được phép dùng: "+explainFcvSourceReason(projected.reason)
+      : "Menu được dựng độc lập theo các mục có nguồn; độ chính xác firmware chưa xác nhận."
+  });
+  const options=$("lcd-menu-options");
+  options.replaceChildren();
+  if(projected.editor){
+    const heading=document.createElement("div");
+    heading.className="lcd-options-title";
+    heading.textContent=displayOnlySyntheticValue(projected.editor.title)+" · "+
+      (projected.editor.index+1)+"/"+projected.editor.total;
+    options.appendChild(heading);
+    for(const item of projected.editor.choices){
+      const choice=document.createElement("div");
+      choice.textContent=item.value;
+      choice.setAttribute("role","listitem");
+      if(item.selected)choice.setAttribute("aria-current","true");
+      options.appendChild(choice);
+    }
+    keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));
+  }
+  const footer=$("dialog-footer");
+  footer.textContent=projected.footerKeys.join("   ");
+  footer.hidden=false;
+  keepMenuSelectionVisible(content,rows[projected.rows.findIndex(row=>row.selected)]);
+}
+
+function renderConfigurationChrome(projected,title,content){
+  title.textContent=projected.title;
+  content.setAttribute("role","list");
+  content.setAttribute("aria-label",projected.path);
+  const rows=projected.rows.map(item=>{
+    const row=document.createElement("div");
+    row.className="lcd-menu-row";
+    row.textContent=item.text;
+    row.dataset.fieldKey=item.fieldKey;
+    row.setAttribute("role","listitem");
+    if(item.selected)row.setAttribute("aria-current","true");
+    if(item.disabled)row.setAttribute("aria-disabled","true");
+    return row;
+  });
+  content.replaceChildren(...rows);
+  const transaction=$("lcd-config-transaction");
+  if(projected.transaction){
+    const value=projected.transaction;
+    transaction.dataset.fieldKey=value.fieldKey;
+    transaction.dataset.committedValue=value.committedValue??"";
+    transaction.dataset.draftValue=value.draftValue;
+    // Keep invisible metadata for focus/testing; LCD only shows operator rows.
+    transaction.hidden=true;
+  }
+  const options=$("lcd-menu-options");
+  options.replaceChildren();
+  if(projected.editor){
+    const editor=projected.editor;
+    const heading=document.createElement("div");
+    heading.className="lcd-options-title";
+    heading.textContent=editor.title+" · "+(editor.index+1)+"/"+editor.total;
+    options.appendChild(heading);
+    for(const item of editor.choices){
+      const row=document.createElement("div");
+      row.textContent=item.text;
+      row.dataset.choiceValue=item.value;
+      row.setAttribute("role","listitem");
+      if(item.selected)row.setAttribute("aria-current","true");
+      options.appendChild(row);
+    }
+    keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));
+  }
+  publishInstructorGuidance({
+    title:projected.path,
+    summary:projected.transaction
+      ?"Đã lưu: "+projected.transaction.committedText+
+        "\nĐang chọn: "+projected.transaction.draftText:"",
+    help:projected.help,
+    source:explainFcvSourceReason(projected.note)
+  });
+  keepMenuSelectionVisible(content,content.querySelector('[aria-current="true"]'));
+}
+
+function renderControlChrome(projected,title,content){
+  title.textContent=projected.title;
+  content.setAttribute("role","list");
+  content.setAttribute("aria-label",projected.title);
+  content.replaceChildren(...projected.rows.map(item=>{
+    const row=document.createElement("div");
+    row.className="lcd-menu-row";
+    row.textContent=(item.selected?"▶ ":"  ")+item.text;
+    row.dataset.controlValue=item.value;
+    row.setAttribute("role","listitem");
+    if(item.selected)row.setAttribute("aria-current","true");
+    return row;
+  }));
+  const summary=$("lcd-control-summary");
+  summary.hidden=true;
+  summary.dataset.controlKind=projected.kind;
+  summary.dataset.currentValue=projected.currentValue;
+  summary.dataset.draftValue=projected.draftValue;
+  const countdown=Number.isFinite(projected.remainingMs)
+    ?"\nCòn "+(projected.remainingMs/1000).toFixed(1)+" s (đồng hồ mô phỏng)":"";
+  publishInstructorGuidance({
+    title:projected.title+" — thao tác giảng viên",
+    summary:"Hiện tại: "+projected.currentText+"\nĐang chọn: "+projected.draftText,
+    help:projected.help+countdown,
+    source:projected.note
+  });
+  keepMenuSelectionVisible(content,content.querySelector('[aria-current="true"]'));
+}
+
+function renderDialog() {
+  const overlay = session.deviceState.overlay;
+  const mainMenu=projectFcvMainMenu(session.deviceState);
+  const funcSetting=projectFcvFuncSetting(session.deviceState);
+  const configuration=projectFcvConfiguration(session.deviceState);
+  const control=projectFcvControl(session.deviceState);
+  $("lcd-overlay").hidden = !overlay || session.deviceState.power !== "on" || overlay.kind==="lcd-test";
+  $("lcd-overlay").dataset.layout=mainMenu?"main-menu":funcSetting?"func-setting":
+    configuration?"configuration":control?"control":"dialog";
+  $("lcd-menu-categories").hidden=!mainMenu;
+  $("lcd-menu-options").hidden=!(mainMenu?.editor || configuration?.editor);
+  const transaction=$("lcd-config-transaction");
+  transaction.hidden=true;
+  transaction.replaceChildren();
+  for(const key of ["fieldKey","committedValue","draftValue"])delete transaction.dataset[key];
+  const controlSummary=$("lcd-control-summary");
+  controlSummary.hidden=true;
+  controlSummary.replaceChildren();
+  for(const key of ["controlKind","currentValue","draftValue"])delete controlSummary.dataset[key];
+  $("dialog-footer").textContent="";
+  $("dialog-footer").hidden=true;
+  $("dialog-content").removeAttribute("role");
+  $("dialog-content").removeAttribute("aria-label");
+  if (!overlay){
+    publishInstructorGuidance(projectFcvInstructorMeta(session.deviceState,null,
+      session.worldState.simTick));
+    return;
+  }
+  const title = $("dialog-title");
+  const content = $("dialog-content");
+  if(mainMenu){
+    renderMainMenuChrome(mainMenu,title,content);
+    return;
+  }
+  if(funcSetting){
+    title.textContent=displayOnlySyntheticValue(funcSetting.title);
+    content.setAttribute("role","list");
+    content.setAttribute("aria-label",funcSetting.title);
+    const rows=funcSetting.choices.map(choice=>{
+      const row=document.createElement("div");
+      row.className="lcd-menu-row";
+      row.textContent=(choice.selected?"▶ ":"  ")+choice.value;
+      row.dataset.choiceValue=choice.value;
+      row.setAttribute("role","listitem");
+      if(choice.selected)row.setAttribute("aria-current","true");
+      return row;
+    });
+    content.replaceChildren(...rows);
+    publishInstructorGuidance({
+      title:funcSetting.title,
+      summary:"Mục "+(funcSetting.index+1)+"/"+funcSetting.total,
+      help:funcSetting.help,
+      source:"Gán FUNC là thao tác mô phỏng, chưa có đối chứng chính xác bố cục firmware."
+    });
+    keepMenuSelectionVisible(content,content.querySelector('[aria-current="true"]'));
+    return;
+  }
+  if(configuration){
+    renderConfigurationChrome(configuration,title,content);
+    return;
+  }
+  if(control){
+    renderControlChrome(control,title,content);
+    return;
+  }
+  if (overlay.kind === "range") {
+    title.textContent = "Range";
+    content.textContent = "NO DATA";
+  } else if(overlay.kind==="window-size"){
+    title.textContent="WINDOW SIZE";
+    content.textContent="Split pane: "+overlay.draftRatio+"% / "+
+      String(100-Number(overlay.draftRatio))+"%";
+  } else if(overlay.kind==="receiver-status"){
+    title.textContent="RECEIVER STATUS";
+    // A training observation must not be mistaken for real NMEA reception.
+    // Display current typed Own fixture state, fail closed when stale/missing;
+    // the source/provenance remains conspicuous in the external instructor UI.
+    const projected=projectFcvTrainingReceiver(session.deviceState,
+      session.worldState.simTick);
+    const fresh=projected.status==="SYNTHETIC_TRAINING_OBSERVATION";
+    content.textContent="NMEA: OFF\nOWN POSITION: "+
+      (fresh?displayOnlySyntheticValue(projected.positionText):"NO DATA")+
+      "\nOWN SPEED: "+(fresh && Number.isFinite(projected.speedKn)
+        ?projected.speedKn.toFixed(1)+" kn":"NO DATA");
+  } else if(overlay.kind==="tankenmaru-details"){
+    title.textContent="TANKENMARU";
+    const virtual=projectFcvTankenmaruTrainingStatus(session.deviceState);
+    content.textContent=virtual.values
+      ?"Output: "+virtual.values.output+"\n"+
+        "Pic. Sync: "+virtual.values.pictureSync+"\n"+
+        "Sub Clutter: "+virtual.values.subClutter
+      :"NO DATA";
+  } else if (["gain","brill","mode"].includes(overlay.kind)) {
+    title.textContent = "CONTROL";
+    content.textContent = "NO DATA";
+  } else if (overlay.kind === "func-setting") {
+    title.textContent = overlay.label + " / FUNC";
+    // Invalid presentation input cannot manufacture an editable value.
+    content.textContent = "NO DATA";
+  } else if (overlay.kind === "power-hold") {
+    title.textContent = "POWER";
+    // Shutdown has not committed: the user may still release the key.
+    content.textContent = "";
+  } else if(overlay.kind === "diagnostics"){
+    title.textContent="DIAGNOSTICS";
+    content.textContent="NO DATA";
+  } else if(overlay.kind === "lcd-test"){
+    title.textContent="LCD TEST";
+    content.textContent="";
+  } else if(overlay.kind === "confirm-restore"){
+    title.textContent="RESTORE";
+    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+  } else if(overlay.kind === "trip-status"){
+    title.textContent="TRIP / ODOMETER";
+    const nav=session.deviceState.navigation;
+    const travel=projectFcvTravelValues(nav,session.deviceState.settings);
+    const tripText=travel.tripNm===null?"NO DATA":
+      formatFcvDistance(travel.tripNm,
+        session.deviceState.settings.distanceUnit);
+    const odometerText=travel.odometerNm===null?"NO DATA":
+      formatFcvDistance(travel.odometerNm,
+        session.deviceState.settings.distanceUnit);
+    content.textContent="TRIP  "+tripText+"\n"+
+      "ODOMETER  "+odometerText+"\n"+
+      "TRIP SOURCE: "+session.deviceState.settings.tripSource;
+  } else if(overlay.kind === "confirm-trip-reset"){
+    title.textContent="RESET TRIP";
+    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+  } else if(overlay.kind === "waypoints"){
+    title.textContent=overlay.purpose==="destination"?
+      "GO TO WPT":"WPT LIST";
+    const list=session.deviceState.navigation?.waypoints??[];
+    const offset=overlay.purpose==="destination"?1:0;
+    content.textContent=(offset?
+      (overlay.itemIndex===0?"▶ ":"  ")+"OFF\n":"")+
+      list.map((w,i)=>
+        (i+offset===overlay.itemIndex?"▶ ":"  ")+w.id+" "+w.name).join("\n")+
+      (list.length?"":"\nNO DATA");
+  } else if(overlay.kind==="waypoint-detail"){
+    const waypoint=session.deviceState.navigation.waypoints[overlay.itemIndex];
+    title.textContent="WPT LIST";
+    content.textContent=waypoint?
+      waypoint.id+" · "+waypoint.name+"\n"+
+      (overlay.fieldIndex===0?"▶ ":"  ")+"Name\n"+
+      (overlay.fieldIndex===1?"▶ ":"  ")+"Erase?":"WPT NOT FOUND";
+  } else if(overlay.kind==="waypoint-name"){
+    title.textContent="WPT NAME";
+    const draft=overlay.draftName;
+    const cursor=overlay.charIndex;
+    content.textContent=overlay.waypointId+"\n"+
+      draft.slice(0,cursor)+"["+draft[cursor]+"]"+draft.slice(cursor+1);
+  } else if(overlay.kind==="confirm-waypoint-delete" ||
+      overlay.kind==="confirm-delete-all-waypoints"){
+    title.textContent="ERASE WPT?";
+    content.textContent=(overlay.kind==="confirm-waypoint-delete"?
+      overlay.waypointId:"DELETE ALL WPT")+
+      "\n"+(overlay.confirm?"▶ YES   NO":"  YES ▶ NO");
+  } else {
+    title.textContent = "MENU / ESC";
+    content.textContent = "NO DATA";
+  }
+  publishInstructorGuidance(projectFcvInstructorMeta(session.deviceState,overlay,
+    session.worldState.simTick));
+  // The remaining legacy waypoint list retains its current behavior. All
+  // configuration lists above use actual semantic fields, not text splitting.
+  if(overlay.kind==="waypoints" &&
+      Number.isInteger(overlay.itemIndex)){
+    const lines=content.textContent.split("\n");
+    const rows=lines.map((line,index)=>{
+      const row=document.createElement("div");
+      row.className="lcd-menu-row";
+      row.textContent=line;
+      if(index===overlay.itemIndex)row.setAttribute("aria-current","true");
+      return row;
+    });
+    content.replaceChildren(...rows);
+    keepMenuSelectionVisible(content,rows[overlay.itemIndex]);
+  }
+}
+
+function renderPhysicalDialState(state) {
+  // Read-only view of canonical state, not another rotary counter or timer.
+  // Angles are original training illustration, NOT measured OEM detents.
+  const pending=state.overlay?.kind==="mode";
+  const selected=pending?state.overlay.candidate:state.mode;
+  const index=DISPLAY_MODES.indexOf(selected);
+  const mode=$("mode-knob");
+  mode.style.setProperty("--dial-angle",((index-3)*45)+"deg");
+  mode.dataset.selection=selected;
+  mode.dataset.pending=String(pending);
+  mode.setAttribute("aria-label","MODE: "+selected+
+    (pending?" đang chọn; chế độ đang chạy "+state.mode:" đang chọn")+
+    ". Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.");
+  for(const label of document.querySelectorAll(".mode-scale [data-mode]")){
+    label.dataset.selected=String(label.dataset.mode===selected);
+  }
+  const manual=state.gainMode==="off";
+  const value=manual?state.manualGain:state.autoGainOffset;
+  const description=manual?"Manual "+value.toFixed(1):
+    "Auto "+state.gainMode+" · Offset "+(value>0?"+":"")+value;
+  const gain=$("gain-knob");
+  gain.style.setProperty("--dial-angle",((manual?value-5:value)*27)+"deg");
+  gain.dataset.selection=description;
+  gain.setAttribute("aria-label","GAIN: "+description+
+    ". Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.");
+  const readout="MODE "+selected+(pending?" (đang chọn; hiện tại "+state.mode+")":"")+
+    " · GAIN "+description;
+  // Do not make assistive technology announce the same value on every tick.
+  if($("dial-readout").textContent!==readout)$("dial-readout").textContent=readout;
+}
+
+function render() {
+  const s = session.deviceState;
+  const injectedFaults=projectFcvTrainingFaults(s);
+  $("btn-nav-fixture").setAttribute("aria-pressed",String(s.trainingFixture.navigation));
+  $("btn-nav-fixture").textContent =
+    "Vị trí tổng hợp: " + (s.trainingFixture.navigation ? "BẬT" : "TẮT");
+  $("btn-mount-fixture").setAttribute("aria-pressed",String(s.trainingFixture.virtualMounting));
+  $("btn-mount-fixture").textContent =
+    "Gá đầu dò 525STID-PWD ảo: " + (s.trainingFixture.virtualMounting ? "BẬT" : "TẮT");
+  $("btn-tankenmaru-fixture").setAttribute("aria-pressed",String(s.trainingFixture.tankenmaruOption));
+  $("btn-tankenmaru-fixture").textContent =
+    "Tùy chọn Tankenmaru ảo: " + (s.trainingFixture.tankenmaruOption ? "BẬT" : "TẮT");
+  $("btn-battery-fixture").setAttribute("aria-pressed",String(s.trainingFixture.lowBattery));
+  $("btn-battery-fixture").textContent =
+    "Pin yếu giả lập: " + (s.trainingFixture.lowBattery ? "BẬT" : "TẮT");
+  $("btn-error-fixture").setAttribute("aria-pressed",String(s.trainingFixture.systemError));
+  $("btn-error-fixture").textContent =
+    "Lỗi hệ thống giả lập: " + (s.trainingFixture.systemError ? "BẬT" : "TẮT");
+  $("training-fault-status").textContent=injectedFaults.length
+    ?"INJECTED TRAINING FAULT · "+injectedFaults.map(f=>f.code).join(" / ")+
+      " · Không phải cảnh báo từ phần cứng."
+    :"Không có cảnh báo lỗi giả lập.";
+  $("tick-count").textContent = String(session.worldState.simTick).padStart(4, "0");
+  $("event-count").textContent = String(session.events.length).padStart(3, "0");
+  $("mode-state").textContent = s.mode;
+  $("clock-line").textContent = "T + " + String(session.worldState.simTick).padStart(4, "0") + " s";
+  $("status-line").textContent = s.power==="on" && injectedFaults.length
+    ?"SIMULATED FAULT · "+injectedFaults.map(f=>f.code).join(" / "):
+    s.notice || (s.power === "on" ? "RUN · DEMO DATA" :
+      s.power === "booting" ? "BOOTING" : "POWER OFF");
+  $("btn-pause").textContent = paused ? "Tiếp tục thời gian" : "Tạm dừng thời gian";
+  renderPhysicalDialState(s);
+  renderScreen();
+  publishSourceCue(s,session.worldState.simTick);
+  publishInstructorSourceMatrix(s,session.worldState.simTick);
+  publishOperatorSelection();
+}
+
+const press = control => send({kind: "press", control});
+const pad = direction => send({kind: "pad", control: "trackpad", direction});
+const rotate = (control, steps) => send({kind: "rotate", control, steps});
+const holdBindings = [];
+// D15 fixtures are separate from FCV hardware and are never stored as
+// persistent device settings. They remain deterministic session events.
+$("btn-nav-fixture").addEventListener("click",()=>send({
+  kind:"training-fixture",fixture:"navigation",
+  enabled:!session.deviceState.trainingFixture.navigation,
+}));
+$("btn-mount-fixture").addEventListener("click",()=>send({
+  kind:"training-fixture",fixture:"virtualMounting",
+  enabled:!session.deviceState.trainingFixture.virtualMounting,
+}));
+$("btn-tankenmaru-fixture").addEventListener("click",()=>send({
+  kind:"training-fixture",fixture:"tankenmaruOption",
+  enabled:!session.deviceState.trainingFixture.tankenmaruOption,
+}));
+$("btn-battery-fixture").addEventListener("click",()=>send({
+  kind:"training-fixture",fixture:"lowBattery",
+  enabled:!session.deviceState.trainingFixture.lowBattery,
+}));
+$("btn-error-fixture").addEventListener("click",()=>send({
+  kind:"training-fixture",fixture:"systemError",
+  enabled:!session.deviceState.trainingFixture.systemError,
+}));
+
+const lessonPicker = $("lesson-picker");
+let lessonAttempt = null;
+for (const lesson of FCV588_TRAINING_LESSONS) {
+  const option = document.createElement("option");
+  option.value = lesson.id;
+  option.textContent = lesson.titleVi;
+  lessonPicker.appendChild(option);
+}
+function renderLessonInstruction() {
+  const lesson = FCV588_TRAINING_LESSONS.find(item => item.id === lessonPicker.value);
+  $("lesson-instruction").textContent = lesson
+    ? lesson.instructionVi + " · Nguồn " + lesson.manualSection +
+      ". Dữ liệu không dùng cho tàu thực."
+    : "Không tìm thấy bài học.";
+}
+lessonPicker.addEventListener("change", () => {
+  lessonAttempt = null;
+  renderLessonInstruction();
+  $("lesson-result").textContent =
+    "Đã chọn bài khác. Nhấn Bắt đầu lượt thực hành mới để chấm thao tác từ đây.";
+});
+$("btn-start-lesson").addEventListener("click", () => {
+  lessonAttempt = {lessonId:lessonPicker.value,
+    startSeq:session.events.length,
+    startSessionHash:sessionHash(session),
+    baselineWaypointCount:session.deviceState.navigation.waypoints.length};
+  $("lesson-result").textContent =
+    "Đang ghi lượt thực hành từ sự kiện " +
+    String(lessonAttempt.startSeq + 1) +
+    ". Chỉ tính thao tác mới kể từ khi bắt đầu lượt này.";
+});
+$("btn-score").addEventListener("click", () => {
+  if (!lessonAttempt || lessonAttempt.lessonId !== lessonPicker.value) {
+    $("lesson-result").textContent =
+      "CHƯA BẮT ĐẦU LƯỢT HỌC — nhấn Bắt đầu lượt thực hành mới trước khi thao tác.";
+    return;
+  }
+  const result = assessFcvLesson(session, lessonPicker.value,
+    {startSeq:lessonAttempt.startSeq,
+      startSessionHash:lessonAttempt.startSessionHash,
+      baselineWaypointCount:lessonAttempt.baselineWaypointCount});
+  $("lesson-result").textContent = result.passed
+    ? "ĐẠT chuỗi thao tác mô phỏng — không phải FURUNO/HARDWARE PASS."
+    : "CHƯA ĐẠT: " + result.reasons.join(", ") +
+      " · Kiểm tra bài học và thiết lập khởi đầu.";
+});
+renderLessonInstruction();
+
+$("key-menu").addEventListener("click", () => press("menu"));
+$("key-range").addEventListener("click", () => press("range"));
+$("key-mark").addEventListener("click", () => press("mark"));
+$("key-enter").addEventListener("click", () => press("enter"));
+for (const d of ["up", "down", "left", "right"]) {
+  holdBindings.push(bindRepeatPadControl({
+    button:$("pad-"+d),direction:d,emit:input=>send(input),
+  }));
+}
+const gainDrag=bindRotaryDragControl({button:$("gain-knob"),control:"gain",
+  emit:input=>send(input)});
+const modeDrag=bindRotaryDragControl({button:$("mode-knob"),control:"mode",
+  emit:input=>send(input)});
+holdBindings.push(gainDrag,modeDrag);
+$("gain-knob").addEventListener("click", event => {
+  if(!gainDrag.suppressClick(event))send({kind:"push",control:"gain"});
+});
+for (const control of ["gain", "mode"]) {
+  $(control + "-minus").addEventListener("click", () => rotate(control, -1));
+  $(control + "-plus").addEventListener("click", () => rotate(control, 1));
+  $(control + "-knob").addEventListener("wheel", ev => {
+    ev.preventDefault();
+    rotate(control, ev.deltaY > 0 ? -1 : 1);
+  }, {passive: false});
+  $(control + "-knob").addEventListener("keydown", ev => {
+    if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(ev.key) || ev.repeat) return;
+    ev.preventDefault();
+    rotate(control, ["ArrowRight", "ArrowUp"].includes(ev.key) ? 1 : -1);
+  });
+}
+for (const control of ["power", "func"]) {
+  holdBindings.push(bindHoldControl({
+    button: $("key-" + control), control,
+    emit: input => send(input),
+  }));
+}
+
+$("btn-pause").addEventListener("click", () => {
+  paused = !paused;
+  render();
+});
+$("btn-step").addEventListener("click", () => send({kind: "tick", steps: 1}));
+$("btn-reset").addEventListener("click", () => {
+  for (const binding of holdBindings) binding.cancel();
+  lessonAttempt = null;
+  $("lesson-result").textContent =
+    "Đã đặt lại phiên. Cần bắt đầu lượt thực hành mới trước khi đánh giá.";
+  const retainedSettings = {...session.deviceState.settings};
+  session = reset(adapter, scenario);
+  // Teacher reset starts a new world/log but must not erase device preferences.
+  session = dispatch(session, adapter,
+    {kind: "restore-settings", settings: retainedSettings}, scenario);
+  // Reset removes volatile option grants, not stored preferences. Match the
+  // startup baseline so a later non-setting key cannot silently rewrite them.
+  lastObservedSettings=encodeFcvSettings(session.deviceState.settings);
+  cachedTick = -1;
+  frozenFrames.clear();
+  $("validation-status").textContent =
+    "Đã đặt lại thế giới, cảm biến và phiên học; giữ cấu hình máy, ghi sự kiện khôi phục mới.";
+  render();
+});
+$("btn-replay").addEventListener("click", () => {
+  try {
+    const re = replay(adapter, scenario, createReplayEnvelope(session));
+    const equal = sessionHash(re) === sessionHash(session);
+    $("validation-status").textContent = equal
+      ? "REPLAY PASS — trạng thái và sự kiện trùng khớp (" + session.events.length + " bước)."
+      : "REPLAY FAIL — cần kiểm tra tính xác định.";
+  } catch (err) {
+    $("validation-status").textContent = "REPLAY REJECTED — " + err.message;
+  }
+});
+
+const shortcuts = {
+  ArrowUp: () => pad("up"), ArrowDown: () => pad("down"),
+  ArrowLeft: () => pad("left"), ArrowRight: () => pad("right"),
+  Escape: () => press("menu"), Enter: () => press("enter"),
+  r: () => press("range"), g: () => send({kind: "push", control: "gain"}),
+  "[": () => rotate("mode", -1), "]": () => rotate("mode", 1),
+  "-": () => rotate("gain", -1), "=": () => rotate("gain", 1),
+};
+document.addEventListener("keydown", ev => {
+  if (!shouldRouteFcvShortcut(ev)) return;
+  const action = shortcuts[ev.key];
+  if (!action) return;
+  ev.preventDefault();
+  action();
+});
+// One quantized runtime timer: display modal time is logged independently from
+// a teacher-paused synthetic world. No Date.now-driven reducer mutation.
+let worldIntervalMs = 0;
+setInterval(() => {
+  if (["mode", "brill", "power-hold"].includes(session.deviceState.overlay?.kind)) {
+    send({kind: "ui-tick", elapsedMs: 250});
+  }
+  if (!paused) {
+    worldIntervalMs += 250;
+    if (worldIntervalMs >= 1000) {
+      worldIntervalMs = 0;
+      send({kind: "tick", steps: 1});
+    }
+  }
+}, 250);
+const storageStatus = restoreSettingsOnReload();
+if (storageStatus) $("validation-status").textContent = storageStatus;
+// D15 is a separate instructor UI. Moving its existing DOM nodes once never
+// enters session events/replay and never alters the OEM-lookalike face.
+bindInstructorTabs(document.querySelector(".training-panel"));
+render();

@@ -1,0 +1,89 @@
+{
+  "schema": "FCV588_P32_RESOURCE_ANALYSIS_V1",
+  "status": "PASS_NUMERIC_ANALYSIS",
+  "benchmarkSHA256": "4503005aae0155d71709b89cc857629bc9f39570912cfdd1ff5ebce856f074ae",
+  "verdict": "INCONCLUSIVE",
+  "limiter": "Three short pairs, idle POWER OFF only, host background load not gated; not enough to infer overhead on active LCD or classroom hardware.",
+  "resources": {
+    "cpu": {
+      "metric": "percent of one logical core, all matching Electron processes",
+      "P30": {
+        "median": 1.836,
+        "range": [
+          0,
+          2.069
+        ]
+      },
+      "P31": {
+        "median": 4.056,
+        "range": [
+          0.52,
+          4.873
+        ]
+      },
+      "effectP31MinusP30": {
+        "meanDifference": 1.848,
+        "paired95PctTInterval": [
+          -1.292556303268557,
+          4.988556303268557
+        ],
+        "nPairs": 3
+      }
+    },
+    "privateMemory": {
+      "metric": "median sum PrivateMemorySize64 of all matching Electron processes in MiB",
+      "P30": {
+        "median": 263.408,
+        "range": [
+          260.82,
+          275.076
+        ]
+      },
+      "P31": {
+        "median": 261.629,
+        "range": [
+          260.453,
+          264.158
+        ]
+      },
+      "effectP31MinusP30": {
+        "meanDifference": -4.354666666666674,
+        "paired95PctTInterval": [
+          -23.964383727913667,
+          15.25505039458032
+        ],
+        "nPairs": 3
+      }
+    }
+  },
+  "pairs": [
+    {
+      "pair": 1,
+      "order": [
+        "P30",
+        "P31"
+      ],
+      "cpuDifferenceOneCorePct": 0.52,
+      "privateDifferenceMiB": -13.447000000000003
+    },
+    {
+      "pair": 2,
+      "order": [
+        "P31",
+        "P30"
+      ],
+      "cpuDifferenceOneCorePct": 1.987,
+      "privateDifferenceMiB": -0.36700000000001864
+    },
+    {
+      "pair": 3,
+      "order": [
+        "P30",
+        "P31"
+      ],
+      "cpuDifferenceOneCorePct": 3.037,
+      "privateDifferenceMiB": 0.75
+    }
+  ],
+  "releaseApproval": "HOLD"
+}

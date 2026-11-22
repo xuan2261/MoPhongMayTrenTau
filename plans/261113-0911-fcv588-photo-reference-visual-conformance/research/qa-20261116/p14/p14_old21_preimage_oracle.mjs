@@ -1,0 +1,14 @@
+import {FCV588_ADAPTER as adapter} from "../../../../../src/devices/fcv588/adapter.mjs";
+import {TRAINING_SCENARIO as scenario} from "../../../../../src/core/scenario.mjs";
+import {createSession,dispatch,createReplayEnvelope,sessionHash,replay} from "../../../../../src/core/session.mjs";
+import {getFcvMenuItems} from "../../../../../src/devices/fcv588/menu-atlas.mjs";
+const inputs=[{kind:"down",control:"power"},{kind:"up",control:"power",durationMs:100},{kind:"tick",steps:4},{kind:"press",control:"menu"},...Array.from({length:5},()=>({kind:"pad",control:"trackpad",direction:"down"}))];
+let session=createSession(adapter,scenario);
+for(const input of inputs)session=dispatch(session,adapter,input,scenario);
+const selectionEnvelope=createReplayEnvelope(session);
+const selection={id:getFcvMenuItems("Sounder",session.deviceState)[session.deviceState.overlay.itemIndex].id,sessionHash:sessionHash(session),profileHash:session.meta.profileHash,envelopeHash:selectionEnvelope.contentFingerprint,profileRevision:session.profileRevision,eventCount:session.events.length};
+const editing=dispatch(session,adapter,{kind:"press",control:"enter"},scenario);
+const editingEnvelope=createReplayEnvelope(editing);
+const edited={id:getFcvMenuItems("Sounder",editing.deviceState)[editing.deviceState.overlay.itemIndex].id,sessionHash:sessionHash(editing),profileHash:editing.meta.profileHash,envelopeHash:editingEnvelope.contentFingerprint,profileRevision:editing.profileRevision,eventCount:editing.events.length,editEntryId:editing.deviceState.overlay.editEntryId};
+if(sessionHash(replay(adapter,scenario,selectionEnvelope))!==selection.sessionHash || sessionHash(replay(adapter,scenario,editingEnvelope))!==edited.sessionHash)throw Error("baseline replay broken");
+console.log(JSON.stringify({selection,editing:edited,inputs},null,2));

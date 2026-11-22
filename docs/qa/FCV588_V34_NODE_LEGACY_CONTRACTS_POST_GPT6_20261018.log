@@ -1,0 +1,562 @@
+TAP version 13
+# Subtest: lesson picker and score action are labeled and instructor-only
+ok 1 - lesson picker and score action are labeled and instructor-only
+  ---
+  duration_ms: 2.1651
+  type: 'test'
+  ...
+# Subtest: physical keyboard, responsive portrait, focus and training warning are still explicit
+ok 2 - physical keyboard, responsive portrait, focus and training warning are still explicit
+  ---
+  duration_ms: 0.2766
+  type: 'test'
+  ...
+# Subtest: BRILL changes the entire LCD luminance and depth units are display-only
+ok 3 - BRILL changes the entire LCD luminance and depth units are display-only
+  ---
+  duration_ms: 0.3058
+  type: 'test'
+  ...
+# Subtest: Demo Off never draws a fictitious live sonar trace without a virtual fixture
+ok 4 - Demo Off never draws a fictitious live sonar trace without a virtual fixture
+  ---
+  duration_ms: 0.2027
+  type: 'test'
+  ...
+# Subtest: Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+ok 5 - Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+  ---
+  duration_ms: 0.5084
+  type: 'test'
+  ...
+# Subtest: runtime remains localhost only and cannot statically expose documents
+ok 6 - runtime remains localhost only and cannot statically expose documents
+  ---
+  duration_ms: 0.3304
+  type: 'test'
+  ...
+# Subtest: Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+ok 7 - Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+  ---
+  duration_ms: 10.2221
+  type: 'test'
+  ...
+# Subtest: Chrome acceptance refuses stale served source and attests clean isolated storage
+ok 8 - Chrome acceptance refuses stale served source and attests clean isolated storage
+  ---
+  duration_ms: 1.2983
+  type: 'test'
+  ...
+# Subtest: Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+ok 9 - Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+  ---
+  duration_ms: 1.7433
+  type: 'test'
+  ...
+# Subtest: long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+ok 10 - long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+  ---
+  duration_ms: 1.0128
+  type: 'test'
+  ...
+# Subtest: LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+ok 11 - LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+  ---
+  duration_ms: 0.4718
+  type: 'test'
+  ...
+# Subtest: menu conveys source and rights HOLD separately from an unavailable capability
+ok 12 - menu conveys source and rights HOLD separately from an unavailable capability
+  ---
+  duration_ms: 0.3159
+  type: 'test'
+  ...
+# Subtest: phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+ok 13 - phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+  ---
+  duration_ms: 3.0214
+  type: 'test'
+  ...
+# Subtest: Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+ok 14 - Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+  ---
+  duration_ms: 1.9709
+  type: 'test'
+  ...
+# Subtest: low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+ok 15 - low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+  ---
+  duration_ms: 1.4612
+  type: 'test'
+  ...
+# Subtest: phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+ok 16 - phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+  ---
+  duration_ms: 1.0923
+  type: 'test'
+  ...
+# Subtest: V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+ok 17 - V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+  ---
+  duration_ms: 2.5856
+  type: 'test'
+  ...
+# Subtest: range-bank projects only the existing semantic operator fields and never mutates state
+ok 18 - range-bank projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 14.4814
+  type: 'test'
+  ...
+# Subtest: units projects only the existing semantic operator fields and never mutates state
+ok 19 - units projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 6.2087
+  type: 'test'
+  ...
+# Subtest: calibration projects only the existing semantic operator fields and never mutates state
+ok 20 - calibration projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.1101
+  type: 'test'
+  ...
+# Subtest: nav-boxes projects only the existing semantic operator fields and never mutates state
+ok 21 - nav-boxes projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 2.59
+  type: 'test'
+  ...
+# Subtest: fish-alarm projects only the existing semantic operator fields and never mutates state
+ok 22 - fish-alarm projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 3.7063
+  type: 'test'
+  ...
+# Subtest: fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+ok 23 - fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 2.943
+  type: 'test'
+  ...
+# Subtest: installation projects only the existing semantic operator fields and never mutates state
+ok 24 - installation projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.485
+  type: 'test'
+  ...
+# Subtest: func-program projects only the existing semantic operator fields and never mutates state
+ok 25 - func-program projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 1.8664
+  type: 'test'
+  ...
+# Subtest: Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 26 - Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 62.4544
+  type: 'test'
+  ...
+# Subtest: Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 27 - Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 37.0734
+  type: 'test'
+  ...
+# Subtest: Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 28 - Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 34.9899
+  type: 'test'
+  ...
+# Subtest: NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 29 - NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 33.2685
+  type: 'test'
+  ...
+# Subtest: ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 30 - ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 34.2064
+  type: 'test'
+  ...
+# Subtest: all bounded numeric configuration windows keep edge and middle drafts visible in original order
+ok 31 - all bounded numeric configuration windows keep edge and middle drafts visible in original order
+  ---
+  duration_ms: 9.2838
+  type: 'test'
+  ...
+# Subtest: Range Bank uses selected depth units consistently without reinterpreting stored meters
+ok 32 - Range Bank uses selected depth units consistently without reinterpreting stored meters
+  ---
+  duration_ms: 1.3947
+  type: 'test'
+  ...
+# Subtest: alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+ok 33 - alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+  ---
+  duration_ms: 6.7767
+  type: 'test'
+  ...
+# Subtest: Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+ok 34 - Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+  ---
+  duration_ms: 3.4675
+  type: 'test'
+  ...
+# Subtest: FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+ok 35 - FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+  ---
+  duration_ms: 1.5486
+  type: 'test'
+  ...
+# Subtest: configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+ok 36 - configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+  ---
+  duration_ms: 2.0821
+  type: 'test'
+  ...
+# Subtest: runtime configuration renderer consumes semantic projections using safe inert DOM
+ok 37 - runtime configuration renderer consumes semantic projections using safe inert DOM
+  ---
+  duration_ms: 15.7499
+  type: 'test'
+  ...
+# Subtest: B19 Colors 8/16 is labeled a synthetic preview rather than an unknown installed firmware entitlement
+ok 38 - B19 Colors 8/16 is labeled a synthetic preview rather than an unknown installed firmware entitlement
+  ---
+  duration_ms: 3.4579
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 39 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 12.6583
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 40 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 0.7343
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 41 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 11.237
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 42 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 10.9504
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 43 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.3623
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 44 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 11.0425
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 45 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 9.5845
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 46 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 0.6153
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 47 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 14.9401
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 48 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 4.3905
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 49 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 13.8792
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 50 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.2508
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 51 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 12.7574
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 52 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 14.775
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 53 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 9.516
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 54 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 5.6608
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 55 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.3806
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 56 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.5464
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 57 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 6.3013
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 58 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.2765
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 59 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 6.2943
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 60 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.2617
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 61 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 11.5996
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 62 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 20.7345
+  type: 'test'
+  ...
+# Subtest: FUNC projects every Clutter value through a bounded ordered window with one selected value
+ok 63 - FUNC projects every Clutter value through a bounded ordered window with one selected value
+  ---
+  duration_ms: 129.1917
+  type: 'test'
+  ...
+# Subtest: main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+ok 64 - main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+  ---
+  duration_ms: 12.0703
+  type: 'test'
+  ...
+# Subtest: FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+ok 65 - FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+  ---
+  duration_ms: 57.9416
+  type: 'test'
+  ...
+# Subtest: FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+ok 66 - FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+  ---
+  duration_ms: 1.7579
+  type: 'test'
+  ...
+# Subtest: renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+ok 67 - renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+  ---
+  duration_ms: 8.8946
+  type: 'test'
+  ...
+# Subtest: Brill draft drives visible luminance before commit without mutating canonical state
+ok 68 - Brill draft drives visible luminance before commit without mutating canonical state
+  ---
+  duration_ms: 14.269
+  type: 'test'
+  ...
+# Subtest: cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+ok 69 - cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+  ---
+  duration_ms: 3.4928
+  type: 'test'
+  ...
+# Subtest: LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+ok 70 - LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+  ---
+  duration_ms: 2.75
+  type: 'test'
+  ...
+# Subtest: main menu projects five named categories and exactly the operator rows, without help-as-item
+ok 71 - main menu projects five named categories and exactly the operator rows, without help-as-item
+  ---
+  duration_ms: 5.0741
+  type: 'test'
+  ...
+# Subtest: choice preview tracks real staged value and cancel restores committed value
+ok 72 - choice preview tracks real staged value and cancel restores committed value
+  ---
+  duration_ms: 2.0306
+  type: 'test'
+  ...
+# Subtest: large option lists are bounded while preserving the active value and original ordering
+ok 73 - large option lists are bounded while preserving the active value and original ordering
+  ---
+  duration_ms: 1.6043
+  type: 'test'
+  ...
+# Subtest: source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+ok 74 - source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+  ---
+  duration_ms: 3.1169
+  type: 'test'
+  ...
+# Subtest: D02 has eight numbered, versioned training range slots with default bank
+ok 75 - D02 has eight numbered, versioned training range slots with default bank
+  ---
+  duration_ms: 5.0137
+  type: 'test'
+  ...
+# Subtest: D02 evidence atlas lists each training slot with explicit HOLD
+ok 76 - D02 evidence atlas lists each training slot with explicit HOLD
+  ---
+  duration_ms: 8.3755
+  type: 'test'
+  ...
+# Subtest: D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+ok 77 - D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+  ---
+  duration_ms: 18.0329
+  type: 'test'
+  ...
+# Subtest: D02 slot eight can be edited independently and manual RANGE displays its configured depth
+ok 78 - D02 slot eight can be edited independently and manual RANGE displays its configured depth
+  ---
+  duration_ms: 6.1832
+  type: 'test'
+  ...
+# Subtest: §2.2 units change restores all eight depth presets, including customized entries
+ok 79 - §2.2 units change restores all eight depth presets, including customized entries
+  ---
+  duration_ms: 9.0472
+  type: 'test'
+  ...
+# Subtest: §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+ok 80 - §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+  ---
+  duration_ms: 0.7109
+  type: 'test'
+  ...
+# Subtest: D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+ok 81 - D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+  ---
+  duration_ms: 4.2425
+  type: 'test'
+  ...
+# Subtest: D14 real receiver stays disconnected; status defaults to NO DATA
+ok 82 - D14 real receiver stays disconnected; status defaults to NO DATA
+  ---
+  duration_ms: 7.8664
+  type: 'test'
+  ...
+# Subtest: D14 typed D15 ownship appears only as fresh synthetic training receive data
+ok 83 - D14 typed D15 ownship appears only as fresh synthetic training receive data
+  ---
+  duration_ms: 9.5241
+  type: 'test'
+  ...
+# Subtest: D14 receiver projection shares NAV hemisphere/range validity and never accepts fake real fixes
+ok 84 - D14 receiver projection shares NAV hemisphere/range validity and never accepts fake real fixes
+  ---
+  duration_ms: 1.5569
+  type: 'test'
+  ...
+# Subtest: D14 never reports usable Own trip/speed/temperature when synthetic fix is missing, stale or suppressed
+ok 85 - D14 never reports usable Own trip/speed/temperature when synthetic fix is missing, stale or suppressed
+  ---
+  duration_ms: 3.2938
+  type: 'test'
+  ...
+# Subtest: D14 Receiver Status does not expose an invalid or source-disabled ownship speed
+ok 86 - D14 Receiver Status does not expose an invalid or source-disabled ownship speed
+  ---
+  duration_ms: 1.0563
+  type: 'test'
+  ...
+# Subtest: D14 training status opens on device without pretending to use a physical NMEA port
+ok 87 - D14 training status opens on device without pretending to use a physical NMEA port
+  ---
+  duration_ms: 8.0572
+  type: 'test'
+  ...
+# Subtest: D14 explicitly labels synthetic receiver state and forbids physical transport code
+ok 88 - D14 explicitly labels synthetic receiver state and forbids physical transport code
+  ---
+  duration_ms: 10.4034
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 89 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.6894
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 90 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.4769
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 91 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2154
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 92 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.4388
+  type: 'test'
+  ...
+1..92
+# tests 92
+# suites 0
+# pass 92
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 437.9233

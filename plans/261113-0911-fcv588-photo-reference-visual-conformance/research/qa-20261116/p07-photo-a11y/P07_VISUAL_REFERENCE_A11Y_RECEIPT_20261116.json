@@ -1,0 +1,146 @@
+{
+  "schema": "fcv588-p07-visual-reference-a11y-assessment-v1",
+  "createdAt": "2026-11-16T09:45:00+07:00",
+  "reviewerId": "worker-1",
+  "scope": "P07_PHOTO_PHYSICAL_LANDMARK_AND_ACCESSIBILITY_QA_ONLY",
+  "decision": "PASS_WITH_SOURCE_GAPS",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "operations": {
+    "runtimeEdited": false,
+    "canonicalSourceEdited": false,
+    "originalPhotoEdited": false,
+    "browserLaunched": false,
+    "networkUsed": false,
+    "photoCopiedIntoWeb": false,
+    "narratorRun": false,
+    "nvdaRun": false,
+    "port4173Operation": "NONE"
+  },
+  "bindings": {
+    "assessment": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-photo-a11y/P07_VISUAL_REFERENCE_A11Y_ASSESSMENT_20261116.md",
+      "sha256": "455dc75a18b96ffc27a070b9315ac27889c5a69aaba206f9eecb4dd4bae464c5"
+    },
+    "photoAtlas": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/2026-11-14-photo-mode-atlas.md",
+      "sha256": "eb005af84b63e09450f2009dec809ab5e6098262f7645e7cd09f9ab75e1ef6c4"
+    },
+    "phase07Spec": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/phase-07-independent-visual-qa.md",
+      "sha256": "e6fd7897174be7cf6607a0d87c4e78d5328e0454ba00194034cc904a366c64d4"
+    },
+    "p04Browser": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p04-provenance-browser-v3-stop-v2/fcv588-p04-provenance-v3-stop-browser-v2-20261116T091433+0700-bcfbfd0a.json",
+      "sha256": "71937c3649c3eda5090e5399eb8d023034100492bee6037c76fd76fd724c3623"
+    },
+    "p05Browser": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p05-menu/browser/fcv588-p05-menu-browser-20261116T070410+0700-16f3e05f.json",
+      "sha256": "65bf0eb4d0d396618e360223195189e010f9aefb19537c11e8d365a92e4cae04"
+    },
+    "p06BrowserHistorical": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p06-face/browser-prime-v5/20261116T073245-0eb320b7-receipt.json",
+      "sha256": "aeacfe272aa4aae98a3ff88d1218de976c2c34dbc70f4a2a9c157090c4c96683",
+      "exactCurrentSource": false
+    }
+  },
+  "photos": [
+    {"name":"giaoDien.jpg","width":590,"height":1280,"sha256":"e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c","mode":"MENU"},
+    {"name":"lf.jpg","width":590,"height":1280,"sha256":"c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef","mode":"LF"},
+    {"name":"hf.jpg","width":590,"height":1280,"sha256":"7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9","mode":"HF"},
+    {"name":"dual.jpg","width":590,"height":1280,"sha256":"4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b","mode":"DUAL"},
+    {"name":"zoom.jpg","width":590,"height":1280,"sha256":"ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52","mode":"BL-LF"},
+    {"name":"zoom2.jpg","width":590,"height":1280,"sha256":"41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99","mode":"BL-HF"},
+    {"name":"nav1.jpg","width":590,"height":1280,"sha256":"b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e","mode":"NAV1"},
+    {"name":"nav2.jpg","width":590,"height":1280,"sha256":"9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6","mode":"NAV2"}
+  ],
+  "photoLandmarks": {
+    "measurementClass": "PHOTO_SPACE_EDGE_RELATIONSHIP_ONLY_NOT_HOMOGRAPHY",
+    "splitFractions": {
+      "dual.jpg": {"leftX":75,"dividerX":256,"rightX":457,"fraction":0.4738},
+      "zoom.jpg": {"leftX":58,"dividerX":253,"rightX":469,"fraction":0.4745},
+      "zoom2.jpg": {"leftX":68,"dividerX":277,"rightX":492,"fraction":0.4929},
+      "nav1.jpg": {"leftX":53,"dividerX":334,"rightX":443,"fraction":0.7205},
+      "nav2.jpg": {"leftX":96,"dividerX":327,"rightX":436,"fraction":0.6794}
+    },
+    "supports": [
+      "DUAL and Bottom Lock are approximately half-width pane splits",
+      "NAV data occupies approximately two thirds left with sonar strip on right",
+      "Bottom Lock pane is left and normal pane is right"
+    ],
+    "sourceGaps": [
+      "no calibrated camera intrinsics",
+      "no coplanar scale/checkerboard/AprilTag",
+      "no approved repeatable four-corner LCD ROI for all eight photos",
+      "non-planar bezel/knobs/keys cannot be rectified by LCD homography",
+      "exact physical mm positions/detents/OEM pixel coordinates/RGB/glyphs/fonts unsupported"
+    ]
+  },
+  "simulatorGeometryEvidence": {
+    "p04": {
+      "status": "PASS_RELATIONSHIP_ONLY",
+      "bottomLockStrongestRow": 639,
+      "canvasRows": 640,
+      "sampleCoverage": 1.0
+    },
+    "p05": {
+      "status": "PASS_RELATIONSHIP_ONLY",
+      "overlayInsideLcd": true,
+      "sidebarBeforeContent": true,
+      "uncoveredBottomFraction1366": 0.21463444973100723,
+      "uncoveredBottomFraction375": 0.21565742312771174
+    },
+    "p06": {
+      "status": "PASS_STATIC_RELATIONSHIP_ONLY",
+      "displayHousingLeftPercent": 5.5,
+      "displayHousingWidthPercent": 59,
+      "controlsLeftPercent": 73,
+      "controlsWidthPercent": 21,
+      "padPx": 86,
+      "knobPx": 59,
+      "physicalMmConformance": "SOURCE_GAP"
+    }
+  },
+  "currentAccessibilitySource": {
+    "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+    "web/styles.css": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/app.mjs": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee"
+  },
+  "accessibility": {
+    "staticDomAria": "VERIFIED_STATIC",
+    "d15Tabs": 5,
+    "tablistTabpanelPairing": "VERIFIED_STATIC",
+    "rovingTabindex": "VERIFIED_STATIC",
+    "arrowHomeEndNavigation": "VERIFIED_STATIC",
+    "focusVisible": "VERIFIED_STATIC",
+    "teacherFocusBlocksFcvShortcutRouting": "VERIFIED_STATIC",
+    "nativeButtonEnterSpaceNotDuplicated": "VERIFIED_STATIC",
+    "liveRegionsSeparatedFromLcd": "VERIFIED_STATIC",
+    "currentSourceSeenInP04Chrome": true,
+    "currentSourceP04MobileD15OutsideLcdAndNoOperatorEventDrift": true,
+    "p06HistoricalDeviceFocusChrome": "PASS_HISTORICAL_SOURCE_ONLY",
+    "narratorSpeech": "NOT_RUN",
+    "nvdaSpeech": "NOT_RUN",
+    "osWindowBlurRefocus": "NOT_RUN",
+    "forcedColorsAssistiveReview": "NOT_RUN",
+    "notRunPrerequisites": [
+      "interactive Windows desktop",
+      "exact current canonical served on owned loopback QA port",
+      "Narrator or NVDA installed/enabled",
+      "deterministic keyboard traversal",
+      "auditable speech transcript or Speech Viewer capture",
+      "explicit OS window blur/refocus sequence"
+    ]
+  },
+  "holds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemFidelityPercentClaim": null
+  },
+  "boundedNextAction": "If quantitative photo geometry is required, create a restricted non-served per-photo four-corner LCD ROI/homography protocol with recorded uncertainty and reject incomplete images; compare normalized LCD-plane landmarks only. Run Narrator/NVDA and OS-focus as a separate interactive Windows accessibility QA, never infer spoken output from DOM tests."
+}

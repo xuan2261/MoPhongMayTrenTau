@@ -1,0 +1,47 @@
+{
+  "timestampUtc": "2026-10-22T06:26:44.4689693Z",
+  "status": "STOP_V54_QA_RUNNER_EXIT2_TERMINAL_ENCODING_AFTER_RAW_ASSERTIONS",
+  "contract": "Phase6 V54-A actual trusted pointerdown/up, per-phase live-title, UI tick non-spam; process exit 0 required",
+  "observedProcessExit": 2,
+  "observedFailure": "UnicodeEncodeError under cp1252 at stdout print of Vietnamese semantic title",
+  "evidenceOriginalHashesSHA256": {
+    "v54_phased_power_aria_probe.py": "a17e32b50511cda99ac669ebe3d4d4ad109c07453408da246b7ed8da48cf715b",
+    "V54_PHASED_AX_RUN_ORIGINAL_20261022.log": "75815cfd08b8d60be4b428ffbac467a50b1f939e398e5d15c95234dec5cf29ef",
+    "V54_POWER_PHASED_DOM_RAW_20261022.json": "467250cca55a3c20d6c5cb900a53e3d9084f13478e8ce6eb35159a21a8594811",
+    "V54_POWER_PHASED_ARIA_ASSERTIONS_20261022.json": "6f127d93dcef04ead1609aa5640689b88645836ede7db1bdddb71b2da753ebb5",
+    "V54_POWER_PHASED_FIRST_STOP_20261022.txt": "4819c2a3e55254a018f55fd627cd2f17d69926fe848cd628719ce2020dcc0616",
+    "V54_1366x768_ACTUAL_POWER_HOLD_20261022.png": "d7c126282536549e241709612dfd425768d5fefa52f094fe113a8f372e0718bf",
+    "V54_1366x768_BRILL_PREVIEW_20261022.png": "4a9a19ce6b1db3a072a9435b23b4c409b8759b658f4e7bc18a162bda35b92706"
+  },
+  "supportingRawTraceSha": "467250cca55a3c20d6c5cb900a53e3d9084f13478e8ce6eb35159a21a8594811",
+  "assessedAssertionsAllTrue": true,
+  "assessedAssertionsCount": 13,
+  "physicalBrowserTrustedEdges": 2,
+  "liveMutations": [
+    {
+      "phase": "power-held",
+      "text": "Giữ POWER/BRILL",
+      "t": 5510.6
+    },
+    {
+      "phase": "power-released",
+      "text": "Brill — thao tác giảng viên",
+      "t": 7122.2
+    }
+  ],
+  "holdCurrentMutations": 8,
+  "brillHelpMutations": 7,
+  "outcomeForWholeRunner": "FAIL_EXIT2_UNRESOLVED_PENDING_COUNSEL",
+  "outcomeForRawDOM": "OBSERVED_SOURCE_BOUNDED_ONLY_NOT_FINAL_ACCEPTANCE",
+  "actualNarratorNvdaSpoken": "NOT_RUN",
+  "genuineWindowsOsBlurWhileHold": "NOT_RUN",
+  "kongmingReview": "REQUESTED_GENERIC_WORKER_LABEL_NOT_VERIFIED_ORIGINAL_DEFINITION",
+  "originalScreenshotsVisuallyReviewed": true,
+  "cleanupPort4284ListenerCount": 0,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "firmware": "UNKNOWN",
+  "sourceCodeChanged": false,
+  "prohibitDriveDRespected": true
+}

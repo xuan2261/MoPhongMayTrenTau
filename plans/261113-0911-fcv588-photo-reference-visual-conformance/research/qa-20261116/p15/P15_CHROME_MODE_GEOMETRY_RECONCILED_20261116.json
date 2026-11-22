@@ -1,0 +1,110 @@
+{
+  "schema": "P15_BROWSER_EVIDENCE_RECONCILIATION_V1",
+  "status": "PASS_BOUNDED_NO_SOURCE_EDIT",
+  "originalBrowserReceiptSHA256": "bcd4ffb9d44f3b11d1f24d2ee65aa850da54d8152a7069c00383e8a58ec9d27e",
+  "originalBrowserStatus": "FAILED_HARNESS_COUNT_ASSERTION_ONLY",
+  "harnessIssue": "Three >=45 live-response-count assumptions were not grounded in actual browser request graph; observed exact 39 unique loaded bodies per viewport. Not a product/network/hash failure.",
+  "originalFailedAssertions": [
+    "(375, 812) loaded HTTP source body SHA 39 exact",
+    "(1366, 768) loaded HTTP source body SHA 39 exact",
+    "(1920, 1080) loaded HTTP source body SHA 39 exact"
+  ],
+  "revalidatedChecks": 100,
+  "newSourceSetCheck": "All three 39-path URL sets identical, exact expected captured paths and all 273 body SHA match canonical files",
+  "canonicalRuntime50Exact": true,
+  "viewportModeSummaries": [
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "uniqueHTTPSourceBodies": 39,
+      "modeCount": 7,
+      "uniqueModeScreenshots": 7,
+      "horizontalOverflow": 0,
+      "screenRatio": 0.748551
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "uniqueHTTPSourceBodies": 39,
+      "modeCount": 7,
+      "uniqueModeScreenshots": 7,
+      "horizontalOverflow": 0,
+      "screenRatio": 0.748559
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "uniqueHTTPSourceBodies": 39,
+      "modeCount": 7,
+      "uniqueModeScreenshots": 7,
+      "horizontalOverflow": 0,
+      "screenRatio": 0.748559
+    }
+  ],
+  "loadedURLSet": [
+    "/",
+    "/src/core/lessons.mjs",
+    "/src/core/protocol.mjs",
+    "/src/core/scenario.mjs",
+    "/src/core/session.mjs",
+    "/src/devices/fcv588/adapter.mjs",
+    "/src/devices/fcv588/alarms.mjs",
+    "/src/devices/fcv588/calibration.mjs",
+    "/src/devices/fcv588/capabilities-profile21.mjs",
+    "/src/devices/fcv588/capabilities.mjs",
+    "/src/devices/fcv588/display-layout.mjs",
+    "/src/devices/fcv588/display-palette.mjs",
+    "/src/devices/fcv588/display-widgets.mjs",
+    "/src/devices/fcv588/echo-projection.mjs",
+    "/src/devices/fcv588/menu-atlas-profile21.mjs",
+    "/src/devices/fcv588/menu-atlas.mjs",
+    "/src/devices/fcv588/model.mjs",
+    "/src/devices/fcv588/navigation.mjs",
+    "/src/devices/fcv588/profile-version.mjs",
+    "/src/devices/fcv588/receiver-status.mjs",
+    "/src/devices/fcv588/settings.mjs",
+    "/src/devices/fcv588/tankenmaru-status.mjs",
+    "/src/devices/fcv588/training-faults.mjs",
+    "/src/devices/fcv588/units.mjs",
+    "/web/app.mjs",
+    "/web/favicon.svg",
+    "/web/fcv588-echo-rasterizer.mjs",
+    "/web/fcv588-training-source-matrix.mjs",
+    "/web/hold-input.mjs",
+    "/web/instructor-tabs.mjs",
+    "/web/key-feedback.mjs",
+    "/web/keyboard-shortcuts.mjs",
+    "/web/lcd-config-presentation.mjs",
+    "/web/lcd-control-presentation.mjs",
+    "/web/lcd-instructor-meta.mjs",
+    "/web/lcd-presentation.mjs",
+    "/web/pad-repeat.mjs",
+    "/web/rotary-input.mjs",
+    "/web/styles.css"
+  ],
+  "totalCapturedHTTPBodies": 273,
+  "bodySHA256Matches": 273,
+  "rehashedScreenshotCount": 24,
+  "distinctScreenshotCount": 24,
+  "zoomModes": [
+    "Bottom Lock",
+    "Bottom Zoom",
+    "Marker Zoom"
+  ],
+  "realChromePageErrors": 0,
+  "outboundRequests": 0,
+  "oemReferenceDenied404": 8,
+  "testOwnedPort4216Closed": true,
+  "sourceLimitations": [
+    "Photo ROI/homography and OEM pixel/color equivalence not established",
+    "This acceptance derives from captured REAL browser responses and original screenshot bytes, not a new browser execution",
+    "Native Windows screenreader/focus/High Contrast NOT_RUN here",
+    "Old attempt1 and attempt2 logs preserved unchanged"
+  ]
+}

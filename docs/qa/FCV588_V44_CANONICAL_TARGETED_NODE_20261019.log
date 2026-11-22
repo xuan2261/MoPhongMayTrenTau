@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+ok 1 - V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+  ---
+  duration_ms: 12.5302
+  type: 'test'
+  ...
+# Subtest: V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+ok 2 - V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+  ---
+  duration_ms: 16.1817
+  type: 'test'
+  ...
+# Subtest: V43 independent six-second UI clock and ENTER/MENU commits keep preview
+ok 3 - V43 independent six-second UI clock and ENTER/MENU commits keep preview
+  ---
+  duration_ms: 4.2086
+  type: 'test'
+  ...
+# Subtest: V43 cancelled POWER hold preserves BRILL preview and descending progression
+ok 4 - V43 cancelled POWER hold preserves BRILL preview and descending progression
+  ---
+  duration_ms: 4.1723
+  type: 'test'
+  ...
+# Subtest: V43 behavior profile separates legacy replay/settings without schema trickery
+ok 5 - V43 behavior profile separates legacy replay/settings without schema trickery
+  ---
+  duration_ms: 4.7681
+  type: 'test'
+  ...
+# Subtest: V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+ok 6 - V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+  ---
+  duration_ms: 5.9642
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 left/right adjust Brill draft without committing and clamp at 9
+ok 7 - V44 §1.3 left/right adjust Brill draft without committing and clamp at 9
+  ---
+  duration_ms: 13.262
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 mixed left/right input respects the 0 lower bound
+ok 8 - V44 §1.3 mixed left/right input respects the 0 lower bound
+  ---
+  duration_ms: 10.984
+  type: 'test'
+  ...
+# Subtest: V44 mixed POWER/BRILL and TrackPad never jumps outside 0..9 or mutates observations
+ok 9 - V44 mixed POWER/BRILL and TrackPad never jumps outside 0..9 or mutates observations
+  ---
+  duration_ms: 7.5624
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 left/right restarts training inactivity timer after mixed BRILL
+ok 10 - V44 §1.3 left/right restarts training inactivity timer after mixed BRILL
+  ---
+  duration_ms: 4.2151
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 ENTER/MENU save staged TrackPad value and reopening is non-committing
+ok 11 - V44 §1.3 ENTER/MENU save staged TrackPad value and reopening is non-committing
+  ---
+  duration_ms: 3.6742
+  type: 'test'
+  ...
+# Subtest: V44 canceled POWER hold retains mixed BRILL preview, the UI clock and sensor separation
+ok 12 - V44 canceled POWER hold retains mixed BRILL preview, the UI clock and sensor separation
+  ---
+  duration_ms: 3.3771
+  type: 'test'
+  ...
+# Subtest: V44 projector remains read-only and source gap does not alter V43 profile
+ok 13 - V44 projector remains read-only and source gap does not alter V43 profile
+  ---
+  duration_ms: 3.7723
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 185.902

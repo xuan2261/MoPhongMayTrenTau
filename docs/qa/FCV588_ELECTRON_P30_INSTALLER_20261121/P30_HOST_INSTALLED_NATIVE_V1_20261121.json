@@ -1,0 +1,41 @@
+{
+  "schema": "P30_HOST_INSTALLED_EXE_NATIVE_V1",
+  "mainPID": 30380,
+  "mainAlive": true,
+  "processCount": 4,
+  "windowIdentities": [
+    {
+      "Id": 22576,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    },
+    {
+      "Id": 23440,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    },
+    {
+      "Id": 27728,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    },
+    {
+      "Id": 30380,
+      "MainWindowHandle": {
+        "value": 0
+      },
+      "MainWindowTitle": ""
+    }
+  ],
+  "nonLoopbackEstablishedConnections": 0,
+  "qaProfileSeedExists": true,
+  "exeSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+  "releaseApproval": "HOLD",
+  "strictAirgap": false
+}

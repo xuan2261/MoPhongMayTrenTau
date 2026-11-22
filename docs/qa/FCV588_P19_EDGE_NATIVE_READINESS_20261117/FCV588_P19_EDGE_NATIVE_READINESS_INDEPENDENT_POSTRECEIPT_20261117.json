@@ -1,0 +1,30 @@
+{
+  "schema": "FCV588_P19_QA_ONLY_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "createdAt": "2026-11-17T03:08:59.3787581Z",
+  "status": "P19_POSTRECEIPT_PASS_EDGE_BROWSER_ONLY_NATIVE_BLOCKED",
+  "validationMethod": "SEPARATE_POWERSHELL_READBACK_SHA_AND_EXPLICIT_SNAPSHOT",
+  "p19FinalSHA256": "1fc1b43ced49b9c9d630218ee3c9211573b0e00474f207ba3aa5f0e864158f11",
+  "p19ReportSHA256": "55d745a0e7a953d743478cbf7fe1b682c42ac66bad0f2a552ae77abd1ec9edee",
+  "p19EdgeReceiptSHA256": "0c3c0005ed69c9231c04614469fa4f5ad4168b060efaa10d20ca51c873b6f1ea",
+  "p19EdgeRunnerSHA256": "67b1a2149ff5e6eb12dfa1bf511386aa64fd29b22567eb45f323500b9f3b2c4a",
+  "shaReferencesMatched": {
+    "receiptMatch": true,
+    "runnerMatch": true,
+    "parentMatch": true,
+    "parentPostMatch": true,
+    "reportMatch": true
+  },
+  "canonicalRuntimeSHA": "50/50",
+  "originalOEMReferenceOnlySHA": "8/8",
+  "edgeChecks": "39/39",
+  "browserLoadedBodySHA": "39/39",
+  "browserVersion": "157.0.4341.60",
+  "pageErrors": 0,
+  "externalRequests": 0,
+  "ownedQaPort4219Closed": true,
+  "protectedUserServer": "127.0.0.1:4173 PID1204",
+  "qaPorts4214to4219Listeners": 0,
+  "nativeAccessibility": "NOT_ACCEPTED_BLOCKED",
+  "canonicalRuntimeChanged": false,
+  "releaseApproval": "HOLD"
+}

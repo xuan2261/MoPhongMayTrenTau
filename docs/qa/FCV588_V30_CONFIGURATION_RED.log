@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "error": null,
+  "receipt": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_CONFIGURATION_V30_RED_RECEIPT.json",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": 0,
+      "failed": [],
+      "executionError": "Locator.evaluate: Error: strict mode violation: locator(\".lesson-panel\") resolved to 2 elements:\n    1) <section class=\"lesson-panel\" aria-label=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho gi\u1ea3ng vi\u00ean\">\u2026</section> aka get_by_role(\"region\", name=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho\")\n    2) <section class=\"lesson-panel\" aria-labelledby=\"lesson-panel-title\">\u2026</section> aka get_by_role(\"region\", name=\"B\u00e0i th\u1ef1c h\u00e0nh c\u00f3 ch\u1ea5m thao t\u00e1c\")\n\nCall log:\n  - waiting for locator(\".lesson-panel\")\n"
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": 0,
+      "failed": [],
+      "executionError": "Locator.evaluate: Error: strict mode violation: locator(\".lesson-panel\") resolved to 2 elements:\n    1) <section class=\"lesson-panel\" aria-label=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho gi\u1ea3ng vi\u00ean\">\u2026</section> aka get_by_role(\"region\", name=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho\")\n    2) <section class=\"lesson-panel\" aria-labelledby=\"lesson-panel-title\">\u2026</section> aka get_by_role(\"region\", name=\"B\u00e0i th\u1ef1c h\u00e0nh c\u00f3 ch\u1ea5m thao t\u00e1c\")\n\nCall log:\n  - waiting for locator(\".lesson-panel\")\n"
+    },
+    {
+      "viewport": "360x800",
+      "checks": 0,
+      "failed": [],
+      "executionError": "Locator.evaluate: Error: strict mode violation: locator(\".lesson-panel\") resolved to 2 elements:\n    1) <section class=\"lesson-panel\" aria-label=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho gi\u1ea3ng vi\u00ean\">\u2026</section> aka get_by_role(\"region\", name=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho\")\n    2) <section class=\"lesson-panel\" aria-labelledby=\"lesson-panel-title\">\u2026</section> aka get_by_role(\"region\", name=\"B\u00e0i th\u1ef1c h\u00e0nh c\u00f3 ch\u1ea5m thao t\u00e1c\")\n\nCall log:\n  - waiting for locator(\".lesson-panel\")\n"
+    },
+    {
+      "viewport": "390x844",
+      "checks": 0,
+      "failed": [],
+      "executionError": "Locator.evaluate: Error: strict mode violation: locator(\".lesson-panel\") resolved to 2 elements:\n    1) <section class=\"lesson-panel\" aria-label=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho gi\u1ea3ng vi\u00ean\">\u2026</section> aka get_by_role(\"region\", name=\"Ngu\u1ed3n d\u1eef li\u1ec7u \u1ea3o ch\u1ec9 d\u00e0nh cho\")\n    2) <section class=\"lesson-panel\" aria-labelledby=\"lesson-panel-title\">\u2026</section> aka get_by_role(\"region\", name=\"B\u00e0i th\u1ef1c h\u00e0nh c\u00f3 ch\u1ea5m thao t\u00e1c\")\n\nCall log:\n  - waiting for locator(\".lesson-panel\")\n"
+    }
+  ]
+}

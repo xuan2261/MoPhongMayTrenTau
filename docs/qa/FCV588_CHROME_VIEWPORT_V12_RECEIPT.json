@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "collectedAtUtc": "2026-10-14T14:13:10.785100+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "engine": "actual Google Chrome via Python Playwright",
+  "chromeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "preflight": "SOURCE_TREE_IDENTITY_PASS",
+  "postflight": "SOURCE_TREE_STABLE_PASS",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "ISOLATED_STORAGE_EMPTY_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "ACTUAL_POINTER_CANCEL_AND_CAPTURE_RELEASE_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "ACTUAL_D15_LESSON_SCORING_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v12_1366x768.png"
+      ],
+      "preScenarioStorageKeys": [],
+      "storageContext": "ISOLATED_NEW_BROWSER_CONTEXT",
+      "requestsCaptured": 56,
+      "postReloadRequestsCaptured": 28,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 10
+    },
+    {
+      "viewport": "1920x1080",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "ISOLATED_STORAGE_EMPTY_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "ACTUAL_POINTER_CANCEL_AND_CAPTURE_RELEASE_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "ACTUAL_NAV2_BOX_CONFIGURED_AND_LIVE_LCD_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v12_1920x1080.png",
+        "docs/qa/screenshots/fcv588_public_v12_1920x1080_nav2_configured.png"
+      ],
+      "preScenarioStorageKeys": [],
+      "storageContext": "ISOLATED_NEW_BROWSER_CONTEXT",
+      "requestsCaptured": 56,
+      "postReloadRequestsCaptured": 28,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 10
+    }
+  ],
+  "sourceRights": "ORIGINAL_CANVAS_ONLY",
+  "limitations": [
+    "Headless Chrome viewport is exact; not physical monitor pixel geometry",
+    "No manufacturer asset or installed firmware conformance approval",
+    "Long-duration pointer capture was tested by Chromium touchCancel and releasePointerCapture; physical touchscreen hardware remains unverified"
+  ],
+  "servedSourceIdentity": {
+    "status": "PASS",
+    "profileRevision": "F1-public-reference-11",
+    "filesCompared": 30,
+    "sourceManifestSha256": "5d4edb397d94c11110e892f1736fe387e875d5f237cff5478fb69895f3147ac1",
+    "fileDigests": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "sha256": "2c527d5f53ba9ba2e8dc1a46c99ef4178a76c60f46e485b8256f40bada7694cd"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "sha256": "8989ad53d12ed8582c87ebc23b0540308b448a6b8803c40f93e53a4e93d34557"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "sha256": "66d69af00d78de52f7cf1bffb0614d68e46e20ac1d0844912b58256ddeaa5da7"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "sha256": "2fde5d5261e75b81ca023fc31a7ef51f26bccde8c3a386e111b860dcb1aa51a6"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "sha256": "de238620474c278b3ade7d2cb6b870b002dd0140cbee028faa375ba99419cd45"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "sha256": "bbbee943cc2d6e557de46c101b606a0b0f47314843b5deb7a8bbb4f20f536dd4"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "sha256": "42784551215afd775c087e76cbcf8f6801f1b19b69c76c52ee5486aa90976a5e"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "sha256": "7fb88ff603ea22073a265f36073d6657decb4007d7465aa550b0b0ca0597e0b0"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "ac67f28159d4167edd0edbfd3bc3b3952951c6fb50ca10d5f57c1ebc0196f6ab"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "sha256": "f454e15e6dc37cede348200a0aeee0da677b5402ce2c9eab2290e70727c52209"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "sha256": "77fc12b6a5fb5f7b3c69782fa96466c561f7c5278fa5006b09362180f77fa6ee"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "sha256": "571819c9cbbed25a982b4672281f1855ed4f39153cb9e8abaefa83a18840e1d1"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "sha256": "72b4b480c7b187e510688b225af47bc875895047c6f8442ea830315e3007444b"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "sha256": "8d375c6f851bea5e1347b5ab7f058c302672ff93aced4e2ad0a36bfa34dd91c5"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      },
+      {
+        "path": "web/app.mjs",
+        "sha256": "72218183f25a19aeef472c6a949ecd3d1eb436a5d3caa0c5ea4c65da31ab8f77"
+      },
+      {
+        "path": "web/favicon.svg",
+        "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "7dfe2ca97fd35a5ca467ffd4cd9c4f25ca03ee1b074ebfcabcff3f093c42eb4b"
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "e0caf83be85aea04bbd64fc6975693e73bd14f75b98f757e9ef0b247b87b3cb4"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "sha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/styles.css",
+        "sha256": "d15338c29e5cff617d0dc64ab6e68764cbd165dbf851ad019f83eb7d384022a7"
+      }
+    ]
+  },
+  "status": "PASS_OBSERVED_VIEWPORTS"
+}

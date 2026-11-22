@@ -1,0 +1,27 @@
+{
+  "timestampUtc": "2026-10-31T03:46:36.1807192Z",
+  "status": "V56_CANONICAL_APPLY_GUARDS_MATCH_BEFORE_WRITE",
+  "oldCanonicalSHA": {
+    "web/index.html": "87b5528aeaf6bd1f6d819c975f85aafd41fbdf76e8cb3e0bad2a7211f7fa446a",
+    "web/app.mjs": "ecaed0cd25b57e43e2910d15e2d5a802ec238258c0dce9c4dc6ecf86cb4b5dd0",
+    "web/styles.css": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+  },
+  "stageNewSHA": {
+    "web/index.html": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243",
+    "web/app.mjs": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/styles.css": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+  },
+  "stageChangedExisting": [
+    "web/app.mjs",
+    "web/index.html",
+    "web/styles.css"
+  ],
+  "canonicalEarlyChangedExisting": [
+    "web/styles.css"
+  ],
+  "stageUnit": "20/20_PASS",
+  "stageBrowser": "3/3_PASS_36_SOURCE_BODIES_EACH",
+  "testSHA256": "4f87fbbea569df5e780064f53fc3179f74dd2091ea5af5ce9a94b7224ef505e8",
+  "historicalPinsStillRequired": "V55_BOTH_RECEIPTS_AND_V54_37_RUNTIME"
+}

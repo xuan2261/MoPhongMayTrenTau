@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-19",
+  "purpose": "Identification and evidence gating; not an executable menu/state language",
+  "devices": [
+    {
+      "profileId": "furuno.fcv588.cv588e",
+      "manufacturer": "FURUNO",
+      "model": "FCV-588",
+      "deviceClass": "fishfinder",
+      "controllerVariant": "integrated-controls",
+      "firmwareVersion": null,
+      "manualRevision": "OME-23890-E (Aug 2025)",
+      "manualArchive": [
+        "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf"
+      ],
+      "manualRights": "RESTRICTED_REFERENCE_ONLY",
+      "evidencePack": "docs/evidence/FCV-588.md",
+      "evidenceStatus": "manual-verified-hardware-unverified",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "F1_PUBLIC_REFERENCE_PARTIAL",
+      "profileRevision": "F1-public-reference-22",
+      "assetLicenseClearance": false
+    },
+    {
+      "profileId": "koden.mdc2060.pending",
+      "manufacturer": "KODEN",
+      "model": "MDC-2060",
+      "deviceClass": "radar",
+      "controllerVariant": null,
+      "firmwareVersion": null,
+      "manualRevision": null,
+      "archivedReferenceRevisions": ["MDC-2000 Rev14", "MDC-2000 Rev15", "Quick Reference Rev00"],
+      "manualArchive": [
+        "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev14.pdf",
+        "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev15.pdf",
+        "sources/manuals/MDC-2060/KODEN_MDC2000_Quick_Reference_Rev00.pdf"
+      ],
+      "manualRights": "RESTRICTED_REFERENCE_ONLY; PERMISSION_REQUIRED_FOR_AI_PROCESSING",
+      "evidencePack": null,
+      "evidenceStatus": "identity-known-version-pending",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "NOT_STARTED",
+      "profileRevision": null,
+      "assetLicenseClearance": false
+    },
+    {
+      "profileId": "furuno.far2127.pending",
+      "manufacturer": "FURUNO",
+      "model": "FAR-2127",
+      "deviceClass": "radar",
+      "controllerVariant": null,
+      "controllerCandidates": ["RCU-014", "RCU-015"],
+      "firmwareVersion": null,
+      "manualRevision": null,
+      "manualArchive": [
+        "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Manual_OME35190U5_2024.pdf",
+        "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Guide.pdf"
+      ],
+      "manualRights": "RESTRICTED_REFERENCE_ONLY",
+      "evidencePack": null,
+      "evidenceStatus": "controller-variant-unconfirmed",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "NOT_STARTED",
+      "profileRevision": null,
+      "assetLicenseClearance": false
+    },
+    {
+      "profileId": "ais.r5.pending",
+      "manufacturer": null,
+      "model": "AIS R5",
+      "deviceClass": "ais",
+      "controllerVariant": null,
+      "candidateFamilies": ["R5 SUPREME", "R5 SOLID"],
+      "firmwareVersion": null,
+      "manualRevision": null,
+      "archivedCandidateDocumentation": [
+        "sources/manuals/AIS-R5-SUPREME/R5_SUPREME_Documentation_Package_J1.zip",
+        "sources/manuals/AIS-R5-SOLID/R5_SOLID_Documentation_Package_J1.zip"
+      ],
+      "manualRights": "RESTRICTED_REFERENCE_ONLY",
+      "evidencePack": null,
+      "evidenceStatus": "variant-unconfirmed",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "NOT_STARTED",
+      "profileRevision": null,
+      "assetLicenseClearance": false
+    },
+    {
+      "profileId": "transas.ns4000.pending",
+      "manufacturer": "Transas/Wartsila (candidate)",
+      "model": "Navi-Sailor 4000 / NS4000",
+      "deviceClass": "ecdis",
+      "controllerVariant": null,
+      "firmwareVersion": null,
+      "manualRevision": null,
+      "archivedReferenceRevisions": ["Navi-Sailor 4000 v2.00.009 (third-party archive)"],
+      "manualArchive": ["sources/manuals/NS4000/TRANSAS_NS4000_4100_User_Manual_v2.00.009_MIRROR.pdf"],
+      "manualRights": "RESTRICTED_REFERENCE_ONLY",
+      "evidencePack": null,
+      "evidenceStatus": "version-unconfirmed",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "NOT_STARTED",
+      "profileRevision": null,
+      "assetLicenseClearance": false
+    },
+    {
+      "profileId": "koden.j2000.identity-hold",
+      "manufacturer": "KODEN (claim unverified)",
+      "model": "J2000 (unverified)",
+      "deviceClass": "fishfinder-candidate",
+      "controllerVariant": null,
+      "firmwareVersion": null,
+      "manualRevision": null,
+      "manualArchive": [],
+      "manualRights": "SOURCE_NOT_IDENTIFIED",
+      "evidencePack": null,
+      "evidenceStatus": "identity-HOLD",
+      "releaseApproval": "HOLD",
+      "implementationStatus": "NOT_STARTED",
+      "profileRevision": null,
+      "assetLicenseClearance": false
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "FCV588_P25_THREE_MODIFIED_PREIMAGES_V1",
+  "modified": {
+    "web/app.mjs": {
+      "sha256": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+      "size": 58922
+    },
+    "web/index.html": {
+      "sha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "size": 18014
+    },
+    "web/styles.css": {
+      "sha256": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "size": 35008
+    }
+  },
+  "newTargetsAbsent": [
+    "web/fcv588-archive-import.mjs",
+    "test/fcv588-p25-archive-ui.test.mjs"
+  ],
+  "newDesiredSHA256": {
+    "web/app.mjs": "cc766a2e9afd54a3fa6509e4da542fe9ed674ebf945069b48fd5a05bc94c0e4d",
+    "web/index.html": "7dbb1d55f4c5fa372560d02a60ca36907ad0199d27964bec161d4e37cd0f2b97",
+    "web/styles.css": "eac4f828ad578e636f6a504359738df248228ab4b1ddfa10a1e74fe2bb02ebcf",
+    "web/fcv588-archive-import.mjs": "1ea213fbca888cd6ebc81d5ecd1877c262e11660155e01cd8ee2a74df5d8e0d0",
+    "test/fcv588-p25-archive-ui.test.mjs": "6ff892c3a64c09883afeaf0646565ca28acb197825eec51ac4e57945842eccc3"
+  },
+  "parentP24FinalSHA256": "9763e8f2c834a3c1b9a3eca9fe9993debe0e7bf81e8ee9e2cbaad5ed20c77694",
+  "parentP24PostSHA256": "77fe6cf4ae135ae59c6aa193b81aa2c57564cdcf716a24f8a4be519cdc07a410",
+  "evidenceSHA256": {
+    "P25_STAGE_SOURCE_VALID_UI_RED_20261117.json": "5353e44ef4b21a5b267f7508d3f927f6ab380027fc5022ea2ae9cdbd6c308fc2",
+    "P25_STAGE_FOCUSED_GREEN_20261117.json": "150b26c841e49596869a3120d77b364a017c8c399e03f73237c95fdc98d1442b",
+    "P25_STAGE_FULL_NODE_20261117.json": "3315e7b90cfea0bbb5159cc6c6ab74b215789dd2514d828316d3a33b86773bb2",
+    "P25_STAGE_PYTHON_20261117.json": "655185fbe64c74f7aefb0996c5035118cfa413dce48dd215d1fec21d018e87f6",
+    "P25_STAGE_PYTHON_V2_20261117.json": "3cc41b52a5726ef2d0b783ff796630ad114fe8397b5776a9ef5e060b1c8e406c",
+    "P25_STAGE_BROWSER_20261117.json": "c35c4c16b7e78e1b5a5451b88f5a473642f1b4a60d1c128304422161ece4d3df",
+    "P25_STAGE_BROWSER_V2_20261117.json": "092f861e61ab6026b82907aa8111b1f14cba52921f34d60366cd61e5146ec8b1"
+  },
+  "checks": {
+    "P23runtime": 50,
+    "P24module": 1,
+    "OEM": 8,
+    "P25focused": 7,
+    "P25fullNode": 596,
+    "P25python": 13,
+    "P25browserCases": 4,
+    "P25browserHTTP": 50
+  },
+  "reviews": "PENDING_FINAL_SOURCE_GO",
+  "releaseApproval": "HOLD",
+  "status": "DRYRUN_SHA_PINNED_REVIEW_PENDING",
+  "preimageZIPSHA256": "984ec99eb0f9314191c4da81629fe7a96c93fbe606b7b0af9f0dacae136425d0",
+  "createdAt": "2026-11-17T08:42:13.270985+00:00"
+}

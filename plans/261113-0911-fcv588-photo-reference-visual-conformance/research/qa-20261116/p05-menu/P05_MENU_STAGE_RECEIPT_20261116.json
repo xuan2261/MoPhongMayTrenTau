@@ -1,0 +1,287 @@
+{
+  "schema": "fcv588-p05-menu-isolated-stage-v1",
+  "createdAt": "2026-11-16T07:05:01.531208+07:00",
+  "scope": "P05_MENU_ISOLATED_STAGING_ONLY_NO_CANONICAL_APPLY",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p05menu-20261116",
+  "qaRoot": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu",
+  "canonicalSeals": {
+    "p04Final": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P04_20261114\\FCV588_VISUAL_P04_FINAL_INTEGRITY_20261114.json",
+      "sha256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+      "expected": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b"
+    },
+    "p04IndependentPost": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_VISUAL_P04_20261114\\FCV588_VISUAL_P04_INDEPENDENT_POSTRECEIPT_20261114.json",
+      "sha256": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90",
+      "expected": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90"
+    }
+  },
+  "referenceOnlyPhotos": [
+    {
+      "name": "giaoDien.jpg",
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c"
+    },
+    {
+      "name": "lf.jpg",
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef"
+    },
+    {
+      "name": "hf.jpg",
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9"
+    },
+    {
+      "name": "dual.jpg",
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b"
+    },
+    {
+      "name": "zoom.jpg",
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52"
+    },
+    {
+      "name": "zoom2.jpg",
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99"
+    },
+    {
+      "name": "nav1.jpg",
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e"
+    },
+    {
+      "name": "nav2.jpg",
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6"
+    }
+  ],
+  "menuLocaleConformance": "HOLD",
+  "allowlist": {
+    "status": "EXACT_5_PATHS",
+    "expected": {
+      "web/app.mjs": "MODIFIED",
+      "web/lcd-presentation.mjs": "MODIFIED",
+      "web/styles.css": "MODIFIED",
+      "test/fcv588-photo-menu-layout.test.mjs": "NEW",
+      "test/fcv588-photo-menu-actions.test.mjs": "NEW"
+    },
+    "actualDiff": [
+      {
+        "path": "test/fcv588-photo-menu-actions.test.mjs",
+        "kind": "NEW",
+        "canonicalSha256": null,
+        "stageSha256": "3d87129cb8262d066a7650ce1349d7cac95067bbde863c77761cf61cc44474bc"
+      },
+      {
+        "path": "test/fcv588-photo-menu-layout.test.mjs",
+        "kind": "NEW",
+        "canonicalSha256": null,
+        "stageSha256": "8a3b9dd935b210f97474135d99bc42f282eca8c06f8b5e7a77225953b61ed189"
+      },
+      {
+        "path": "web/app.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+        "stageSha256": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7"
+      },
+      {
+        "path": "web/lcd-presentation.mjs",
+        "kind": "MODIFIED",
+        "canonicalSha256": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+        "stageSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef"
+      },
+      {
+        "path": "web/styles.css",
+        "kind": "MODIFIED",
+        "canonicalSha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+        "stageSha256": "a82ffe6b0fecd9cc356b888987db778c36c2498cb55381ca20a2509404fe460e"
+      }
+    ]
+  },
+  "protectedCanonicalEquivalence": [
+    {
+      "path": "src/core/session.mjs",
+      "canonicalSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "stageSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "path": "src/core/protocol.mjs",
+      "canonicalSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "stageSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "path": "src/core/scenario.mjs",
+      "canonicalSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "stageSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/model.mjs",
+      "canonicalSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "stageSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "match": true
+    },
+    {
+      "path": "src/devices/fcv588/menu-atlas.mjs",
+      "canonicalSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "stageSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "match": true
+    }
+  ],
+  "implementation": {
+    "projectionOwner": "web/lcd-presentation.mjs::projectFcvMainMenu",
+    "domOwner": "web/app.mjs::renderMainMenuChrome",
+    "cssSelectorsEdited": [
+      ".lcd-overlay[data-layout=\"main-menu\"]",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-overlay-title",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-body",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-main",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-overlay-content",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-row",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-label",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-value",
+      ".lcd-overlay[data-layout=\"main-menu\"] .lcd-menu-options"
+    ],
+    "behavior": [
+      "two-column label/value rows",
+      "five-group left sidebar",
+      "bounded overlay leaves sonar/depth visible",
+      "operator-key footer only",
+      "choice editor overlays right pane",
+      "MENU/ESC cancel and ENTER commit preserved",
+      "keyboard left/right/Escape preserved",
+      "375px no horizontal overflow"
+    ]
+  },
+  "validation": {
+    "red": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\p05-red.txt",
+      "sha256": "66e043c8d8742ab0bbfa9c5594078471291042d8ed167e7de97308b8dd1228a8",
+      "markers": [
+        "# tests 4",
+        "# fail 3",
+        "undefined !== '1x'",
+        "- 'HOLD'"
+      ],
+      "status": "PASS",
+      "missing": []
+    },
+    "greenTargeted": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\p05-green-targeted-final2.txt",
+      "sha256": "9a106b691350510bdb3cbfa13970d17a4f79d17535be751e3e922d150db44ec5",
+      "markers": [
+        "# tests 4",
+        "# pass 4",
+        "# fail 0"
+      ],
+      "status": "PASS",
+      "missing": []
+    },
+    "nodeFull": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\p05-full-node-final2.txt",
+      "sha256": "48bce401d8b626307d25d40fb063dea3463278a1f353e3736a21d8aa0eabf48d",
+      "markers": [
+        "# tests 545",
+        "# pass 545",
+        "# fail 0"
+      ],
+      "status": "PASS",
+      "missing": []
+    },
+    "python": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\p05-python-final2.txt",
+      "sha256": "d94d4a30d39dbd9efee30fea38b92f3fb1ea1f39b64d94f34713aacd42270141",
+      "markers": [
+        "Ran 13 tests",
+        "OK"
+      ],
+      "status": "PASS",
+      "missing": []
+    },
+    "browser": {
+      "runPath": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\p05-browser-run-final2.txt",
+      "runSha256": "bd7e6d80a5f4885090ba8c09ea90a2ee2dd440c81e0299a1e4527301e805028a",
+      "receiptPath": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\browser\\fcv588-p05-menu-browser-20261116T070410+0700-16f3e05f.json",
+      "receiptSha256": "65bf0eb4d0d396618e360223195189e010f9aefb19537c11e8d365a92e4cae04",
+      "manifestPath": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p05-menu\\browser\\fcv588-p05-menu-browser-20261116T070410+0700-16f3e05f-sha256.txt",
+      "manifestSha256": "ae3ff5a37a5ae70063a3a1db597fa421c22d98438a890ffa874806b2faf6b538",
+      "status": "PASS",
+      "port": 4192,
+      "photoDeny": {
+        "status": "PASS",
+        "paths": [
+          {
+            "name": "giaoDien.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "lf.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "hf.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "dual.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "zoom.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "zoom2.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "nav1.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          },
+          {
+            "name": "nav2.jpg",
+            "statusCode": 404,
+            "status": "PASS"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "name": "1366x768-Blue",
+          "loadedBodyCount": 35,
+          "loadedBodyMatches": 35,
+          "screenshotSha256": "7763dbf702bb325d8169327ccb2d08b0aca24c5f94f4cd8827ca5773ed251850",
+          "uncoveredBottomFraction": 0.21463444973100723
+        },
+        {
+          "name": "1366x768-White",
+          "loadedBodyCount": 35,
+          "loadedBodyMatches": 35,
+          "screenshotSha256": "60468a722b4f3b18a9c1048d82240d8879c5c429904e9437971539d4db7f59d6",
+          "uncoveredBottomFraction": 0.21463444973100723
+        },
+        {
+          "name": "375x812-Blue",
+          "loadedBodyCount": 35,
+          "loadedBodyMatches": 35,
+          "screenshotSha256": "ada1cdfed91f06e22aa666c5f5c85a907396d92de262f99892cd6ae997e226e9",
+          "uncoveredBottomFraction": 0.21565742312771174
+        }
+      ]
+    }
+  },
+  "operations": {
+    "canonicalApplied": false,
+    "commitCreated": false,
+    "userOwnedPort4173Operation": "NONE",
+    "networkHardwareIo": "NONE"
+  },
+  "status": "PASS",
+  "canonicalReadiness": "NOT_REQUESTED_NO_APPLY",
+  "objectiveFailures": []
+}

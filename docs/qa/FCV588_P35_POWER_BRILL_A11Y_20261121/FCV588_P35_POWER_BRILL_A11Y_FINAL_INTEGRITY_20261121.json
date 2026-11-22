@@ -1,0 +1,49 @@
+{
+  "schema": "P35_POWER_BRILL_A11Y_FINAL_INTEGRITY_V1",
+  "timestampUtc": "2026-11-21T15:44:00.0107707Z",
+  "decision": "PASS_BOUNDED_ACCESSIBLE_NAME_AND_CANONICAL_NODE_ONLY",
+  "releaseApproval": "HOLD",
+  "canonicalChangedPaths": [
+    "web/index.html",
+    "test/fcv588-p35-power-brill-a11y.test.mjs"
+  ],
+  "sha256": {
+    "web": "45a22ae65ea13f68a836f6dc7515b4d2718b7d528044cdc50ac81ba51caa2763",
+    "test": "a521cbb82aef1ba176d5c6589040484c8685a41db717c38be76a7a48011963eb",
+    "stagedWeb": "45a22ae65ea13f68a836f6dc7515b4d2718b7d528044cdc50ac81ba51caa2763",
+    "chromeV1": "c3d27ebec31991621136ffbaf1eefb552c7b189411a0955debc18b352d170b6d",
+    "chromeV2": "45ed4c185a726f32672e70e652094b7b52ff3b723734b64791802d120c8435f4",
+    "chromeV3": "bc1a6caadb366588f7bb02e6360a970f473293c1ddfb63bed6e575e729f7d559",
+    "focused": "10b6a91a3be8ef013edcd55fd16bcb6849c94b49f41f04f0d45cb34abb4b570a",
+    "npmCheck": "51855cf5601b308a0a7e8d61bbfaaef500457d509458e884da5070b00412bd31",
+    "preimage": "64f37f967439cf8e82cdcee48094083c1fed4347464753782ec62bda52573e87",
+    "apply": "179d41ec8a63209b0e6b5a1715871ca0e261cc6830cbdd56199c2e7c8b50a26d",
+    "p33": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630",
+    "p34": "a1db29e8aaf1b94b7ae1de54263eee6b1cef182a1002278aed46d15fa1dc17f0",
+    "exe": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+    "asar": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+    "finalReport": "bc1466477f8a90bf1786328d1b8856de73ff5334db7676b6f494be3b08095e81"
+  },
+  "verified": {
+    "oneLiteralHtmlChanged": true,
+    "stageSourceRedAfterHarnessCorrection": true,
+    "stageUnitGreen": "1/1",
+    "stageChrome": "PASS_BOUNDED_LIVE_DOM_ACCESSIBLE_NAME",
+    "chromeV1": "FAILED_SETUP",
+    "chromeV2": "FAILED_LOG_UNICODE",
+    "canonicalFocused": "15/15",
+    "canonicalFullNode": "618/618",
+    "userServer4173Pid": 1204,
+    "stageQaPort4295Closed": true,
+    "installedElectronChanged": false,
+    "narratorSpeechVerified": false,
+    "phase6": "OPEN",
+    "hardwareValidated": false,
+    "firmwareInstalled": "UNKNOWN"
+  },
+  "limitations": [
+    "No human-heard Narrator utterance",
+    "No rebuild of installed P31",
+    "No OEM/rights/hardware/release approval"
+  ]
+}

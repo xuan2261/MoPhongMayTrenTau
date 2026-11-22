@@ -1,0 +1,8 @@
+npm ERR! code EJSONPARSE
+npm ERR! path C:\Work\MoPhongMayTrenTau\staging\fcv588-electron-poc-20261121/package.json
+npm ERR! JSON.parse Bad escaped character in JSON at position 439 (line 9 column 198) while parsing '{
+npm ERR! JSON.parse   "name": "fcv588-synthetic-electron-p'
+npm ERR! JSON.parse Failed to parse JSON data.
+npm ERR! JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+
+npm ERR! A complete log of this run can be found in: C:\Users\Z10PAD8C_Xuan2261\AppData\Local\npm-cache\_logs\2026-11-21T07_54_43_659Z-debug-0.log

@@ -1,0 +1,322 @@
+TAP version 13
+# Subtest: P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+ok 1 - P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+  ---
+  duration_ms: 20.1634
+  type: 'test'
+  ...
+# Subtest: P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+ok 2 - P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+  ---
+  duration_ms: 41.6259
+  type: 'test'
+  ...
+# Subtest: P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+ok 3 - P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+  ---
+  duration_ms: 46.6764
+  type: 'test'
+  ...
+# Subtest: P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+ok 4 - P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+  ---
+  duration_ms: 88.327
+  type: 'test'
+  ...
+# Subtest: P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+ok 5 - P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+  ---
+  duration_ms: 15.7482
+  type: 'test'
+  ...
+# Subtest: P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+ok 6 - P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+  ---
+  duration_ms: 4.0564
+  type: 'test'
+  ...
+# Subtest: P04 two-column authored historical seabed is flattened from per-column source depth
+ok 7 - P04 two-column authored historical seabed is flattened from per-column source depth
+  ---
+  duration_ms: 2.0617
+  type: 'test'
+  ...
+# Subtest: P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+ok 8 - P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+  ---
+  duration_ms: 12.1457
+  type: 'test'
+  ...
+# Subtest: P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+ok 9 - P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+  ---
+  duration_ms: 44.7368
+  type: 'test'
+  ...
+# Subtest: P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+ok 10 - P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+  ---
+  duration_ms: 9.3181
+  type: 'test'
+  ...
+# Subtest: P04 companion provenance stays outside observation, replay and profile21 contracts
+ok 11 - P04 companion provenance stays outside observation, replay and profile21 contracts
+  ---
+  duration_ms: 6.669
+  type: 'test'
+  ...
+# Subtest: P04 runtime wires companion metadata beside, not into, the cached observation
+ok 12 - P04 runtime wires companion metadata beside, not into, the cached observation
+  ---
+  duration_ms: 10.9227
+  type: 'test'
+  ...
+# Subtest: P03 raster must be display-only, deterministic, bounded and leave source untouched
+ok 13 - P03 raster must be display-only, deterministic, bounded and leave source untouched
+  ---
+  duration_ms: 38.8275
+  type: 'test'
+  ...
+# Subtest: P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+ok 14 - P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+  ---
+  duration_ms: 35.9215
+  type: 'test'
+  ...
+# Subtest: P03 seabed has contiguous strong core and graded tail below each typed bottom column
+ok 15 - P03 seabed has contiguous strong core and graded tail below each typed bottom column
+  ---
+  duration_ms: 4.63
+  type: 'test'
+  ...
+# Subtest: P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+ok 16 - P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+  ---
+  duration_ms: 20.889
+  type: 'test'
+  ...
+# Subtest: P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+ok 17 - P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+  ---
+  duration_ms: 4.5749
+  type: 'test'
+  ...
+# Subtest: P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+ok 18 - P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+  ---
+  duration_ms: 21.052
+  type: 'test'
+  ...
+# Subtest: P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+ok 19 - P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+  ---
+  duration_ms: 39.3785
+  type: 'test'
+  ...
+# Subtest: P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+ok 20 - P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+  ---
+  duration_ms: 103.1169
+  type: 'test'
+  ...
+# Subtest: P03 live canvas uses the owned view-only raster, preserving screen annotation path
+ok 21 - P03 live canvas uses the owned view-only raster, preserving screen annotation path
+  ---
+  duration_ms: 11.7445
+  type: 'test'
+  ...
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 22 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 3.4523
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+ok 23 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+  ---
+  duration_ms: 5.2713
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+ok 24 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+  ---
+  duration_ms: 1.2212
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 25 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.6766
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 26 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 1.0925
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 27 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 10.2245
+  type: 'test'
+  ...
+# Subtest: B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+ok 28 - B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+  ---
+  duration_ms: 3.9043
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 29 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 12.8038
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 30 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 0.8334
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 31 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 11.1555
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 32 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 11.5106
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 33 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.3954
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 34 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 11.6223
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 35 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 9.5655
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 36 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 0.6236
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 37 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 15.9409
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 38 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 3.9032
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 39 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 13.5348
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 40 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.338
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 41 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 12.3088
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 42 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 14.182
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 43 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 9.9524
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 44 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 5.8912
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 45 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.3695
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 46 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.5641
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 47 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 5.9248
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 48 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.2894
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 49 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 6.5369
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 50 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.3011
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 51 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 11.2218
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 52 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 21.7403
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 436.6495

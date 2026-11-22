@@ -1,0 +1,3 @@
+P30 HOST finalizer attempt1 failed after writing report and before writing final JSON.
+ReferenceError: installedExeSHA256 is not defined at desktop/p30-host-finalize.mjs:117:3
+Preserved report write-once; corrected finalizer checks existing report bytes for exact match.

@@ -1,0 +1,33 @@
+{
+  "timestampUtc": "2026-10-22T05:42:01.3691802Z",
+  "status": "V53_PARTIAL_SHA_READBACK_PASS_WITH_DYNAMIC_A11Y_STOP_PHASE6_HOLD",
+  "v53PartialSealSHA256": "428b1b7f5b249e9502ec947fc80a15b0deea903f5f30ad946378705929aed4ea",
+  "parentPinnedSHA": "7_OF_7_MATCH",
+  "v53EvidenceSHA": "32_OF_32_MATCH",
+  "canonicalRuntimeSHA": "37_OF_37_MATCH",
+  "sourceRightsFeatureRows": 65,
+  "claimHold": 65,
+  "targetedNodeTests": 48,
+  "fullNodeTests": 511,
+  "pythonTests": 13,
+  "postdocumentNodeTests": 511,
+  "postdocumentPythonTests": 13,
+  "chromiumAccessibilityTree": "STRUCTURAL_ONLY_PASS",
+  "chromiumTimedAriaCountdown": "INCONCLUSIVE_ORIGINAL_VERIFY_FAILED",
+  "originalQaFailureLogsPreserved": true,
+  "ownQaHttpPortsClosed": [
+    4173,
+    4261,
+    4273
+  ],
+  "installedFirmware": "UNKNOWN",
+  "reviewerSignoff": "NOT_OBTAINED",
+  "actualNarratorNvdaSpoken": "NOT_RUN",
+  "genuineOsWindowBlurPowerHold": "NOT_RUN",
+  "rightsClearance": false,
+  "hardwareValidated": false,
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "reviewerKind": "INDEPENDENT_SHA_READBACK_NOT_INDEPENDENT_HUMAN_OR_OEM_QA",
+  "notFinal": "MUST_KEEP_HOLD_UNTIL_ACTUAL_SPOKEN_BLUR_AND_PER_FEATURE_SOURCES"
+}

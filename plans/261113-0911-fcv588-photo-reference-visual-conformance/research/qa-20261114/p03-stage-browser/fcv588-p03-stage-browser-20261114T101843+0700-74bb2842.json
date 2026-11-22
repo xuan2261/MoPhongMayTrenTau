@@ -1,0 +1,584 @@
+{
+  "schema": "fcv588-p03-stage-browser-qa-v1",
+  "createdAt": "2026-11-14T10:18:43.522197+07:00",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-echo-20261114",
+  "outputDir": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser",
+  "server": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-echo-20261114\\tools\\server.mjs",
+    "sha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+    "nodePath": "C:\\nvm4w\\nodejs\\node.exe",
+    "port": 4184,
+    "url": "http://127.0.0.1:4184/",
+    "strictServerRequired": true,
+    "pid": 30108,
+    "stdout": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-server.stdout.txt",
+    "stderr": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-server.stderr.txt"
+  },
+  "rasterizer": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-echo-20261114\\web\\fcv588-echo-rasterizer.mjs",
+    "sha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+    "requiredBrowserPath": "web/fcv588-echo-rasterizer.mjs"
+  },
+  "sourceManifestBefore": {
+    "files": 37,
+    "sha256": "410590c21f721f500fc610710597f4b628a913dbe4648c9ade511625c30c4bb5"
+  },
+  "sourceManifestAfter": {
+    "files": 37,
+    "sha256": "410590c21f721f500fc610710597f4b628a913dbe4648c9ade511625c30c4bb5"
+  },
+  "sourceTreeStable": true,
+  "photoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "lf.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/lf.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "hf.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/hf.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "dual.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/dual.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "zoom.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "zoom2.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "nav1.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "name": "nav2.jpg",
+        "url": "http://127.0.0.1:4184/sources/FCV588_GiaoDienThucTeMay2016/nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS",
+        "error": null
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scrollWidth": 1351,
+        "scrollHeight": 1081,
+        "mode": "LF",
+        "header": "AUTO_R   G:AF   LF   x1",
+        "tick": "0005",
+        "events": "007",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1366x768-LF-Blue.png",
+        "bytes": 301482,
+        "sha256": "83e7e3965ae01eae2aad59e606cd3ffa12cd2ba1f3afa3a9421100a7d800234b"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "DUAL-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "DUAL",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scrollWidth": 1351,
+        "scrollHeight": 1081,
+        "mode": "DUAL",
+        "header": "AUTO_R   G:AF   LF/HF   x1",
+        "tick": "0004",
+        "events": "031",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1366x768-DUAL-Blue.png",
+        "bytes": 303545,
+        "sha256": "4c0e69f0849bbef9010b8dd584bda6284ead66a712ac16e24353e43df2a378fa"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "HF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "HF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scrollWidth": 1351,
+        "scrollHeight": 1081,
+        "mode": "HF",
+        "header": "AUTO_R   G:AF   HF   x1",
+        "tick": "0004",
+        "events": "032",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1366x768-HF-Blue.png",
+        "bytes": 296103,
+        "sha256": "d8ca710c1123028e0a6df4fa321f45d5970d3dfd8f09edc59165c40f44f8534a"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "LF-ZOOM-Bottom-Lock-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF-ZOOM",
+        "palette": "Blue-default",
+        "zoomMode": "Bottom Lock",
+        "menuProof": {
+          "row": "▶ Zoom Mode",
+          "choicesSeen": [
+            "Bottom Lock"
+          ],
+          "committed": "Bottom Lock"
+        },
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scrollWidth": 1351,
+        "scrollHeight": 1081,
+        "mode": "LF-ZOOM",
+        "header": "AUTO_R   G:AF   BL-LF   x1",
+        "tick": "0004",
+        "events": "046",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": [
+          "mophongmaytrentau.fcv588.public-reference.settings.v18"
+        ]
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1366x768-LF-ZOOM-Bottom-Lock-Blue.png",
+        "bytes": 309734,
+        "sha256": "d221cf879d7bc3d4f3858c6e14bfd4eb90833341f4099fca2f3926e42933ed76"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "LF-White",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF",
+        "palette": "White",
+        "menuProof": {
+          "before": "▶ Palette : Blue",
+          "committed": "White",
+          "ink": {
+            "caption": "rgb(16, 38, 49)",
+            "depth": "rgb(16, 38, 49)"
+          }
+        }
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1366,
+          "height": 768,
+          "dpr": 1
+        },
+        "scrollWidth": 1351,
+        "scrollHeight": 1081,
+        "mode": "LF",
+        "header": "AUTO_R   G:AF   LF   x1",
+        "tick": "0004",
+        "events": "021",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": [
+          "mophongmaytrentau.fcv588.public-reference.settings.v18"
+        ]
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1366x768-LF-White.png",
+        "bytes": 302016,
+        "sha256": "6b83601d60f93b334cc3ddc7182b35428758c60f6b82bf64b302feef700acb32"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "LF-Blue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 375,
+          "height": 812,
+          "dpr": 1
+        },
+        "scrollWidth": 360,
+        "scrollHeight": 2258,
+        "mode": "LF",
+        "header": "AUTO_R   G:AF   LF   x1",
+        "tick": "0004",
+        "events": "006",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-375x812-LF-Blue.png",
+        "bytes": 52013,
+        "sha256": "731d347bfd3210593fb5fc24a757cc724659b22b000c0bd5dc51df6150d0ee2e"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "HF-Blue",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "HF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 375,
+          "height": 812,
+          "dpr": 1
+        },
+        "scrollWidth": 360,
+        "scrollHeight": 2258,
+        "mode": "HF",
+        "header": "AUTO_R   G:AF   HF   x1",
+        "tick": "0004",
+        "events": "032",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-375x812-HF-Blue.png",
+        "bytes": 58648,
+        "sha256": "771fd2126cb2f65db0bdc51cfc3c5b3e1e36aa3f472948c4a8497d498fa88693"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "LF-Blue",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "LF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1920,
+          "height": 1080,
+          "dpr": 1
+        },
+        "scrollWidth": 1905,
+        "scrollHeight": 1083,
+        "mode": "LF",
+        "header": "AUTO_R   G:AF   LF   x1",
+        "tick": "0004",
+        "events": "006",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1920x1080-LF-Blue.png",
+        "bytes": 459982,
+        "sha256": "4e2f23986a7f77a47cfe88bdc126de12d3c2f037fc3c93ab35345e2f1d32a224"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    },
+    {
+      "name": "HF-Blue",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": "PASS",
+      "loadedJsCssAllMatchedStage": true,
+      "objectiveFailures": [],
+      "setupProof": {
+        "mode": "HF",
+        "palette": "Blue-default"
+      },
+      "state": {
+        "href": "http://127.0.0.1:4184/",
+        "viewport": {
+          "width": 1920,
+          "height": 1080,
+          "dpr": 1
+        },
+        "scrollWidth": 1905,
+        "scrollHeight": 1083,
+        "mode": "HF",
+        "header": "AUTO_R   G:AF   HF   x1",
+        "tick": "0004",
+        "events": "032",
+        "overlayHidden": true,
+        "canvas": {
+          "width": 480,
+          "height": 640
+        },
+        "storageKeys": []
+      },
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\p03-stage-browser\\fcv588-p03-stage-browser-20261114T101843+0700-74bb2842-1920x1080-HF-Blue.png",
+        "bytes": 454032,
+        "sha256": "5e9208da2137b812a0ab956e6d87a01ebc938bc95ef48663474064c588124f7e"
+      },
+      "failure": null,
+      "rasterizerLoaded": true,
+      "rasterizerBodySha256": "69b4e1d93ebb30707e0a6a4992dfe70cad71f7b975aff0be690b6e110fdfcf0e",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "bodyRead": 0
+      },
+      "loadedJsCssCount": 35,
+      "loadedJsCssAggregateSha256": "2346a7e0652e555b1150866ca506eea34de5ada3cc17a2816493557ba1a8c1dc"
+    }
+  ],
+  "overallStatus": "PASS",
+  "objectiveFailures": [],
+  "serverCleanup": "PASS",
+  "browser": {
+    "engine": "Google Chrome via Python Playwright",
+    "version": "157.0.8103.78",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "headless": false
+  },
+  "finishedAt": "2026-11-14T10:19:36.479869+07:00"
+}

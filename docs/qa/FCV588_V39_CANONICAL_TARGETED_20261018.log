@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: V37 C11: premature MARK cannot invent position; committed synthetic waypoint uses Own only
+ok 1 - V37 C11: premature MARK cannot invent position; committed synthetic waypoint uses Own only
+  ---
+  duration_ms: 27.2483
+  type: 'test'
+  ...
+# Subtest: V37 C11/D14: NMEA selected after destination cannot borrow Own ETA or live speed
+ok 2 - V37 C11/D14: NMEA selected after destination cannot borrow Own ETA or live speed
+  ---
+  duration_ms: 12.1831
+  type: 'test'
+  ...
+# Subtest: V37 D09: revoke suspended edit and regrant cannot revive RF or a draft
+ok 3 - V37 D09: revoke suspended edit and regrant cannot revive RF or a draft
+  ---
+  duration_ms: 15.0271
+  type: 'test'
+  ...
+# Subtest: V37 D14: three NMEA preferences survive power cycle but never imply a receiver
+ok 4 - V37 D14: three NMEA preferences survive power cycle but never imply a receiver
+  ---
+  duration_ms: 15.7927
+  type: 'test'
+  ...
+# Subtest: V38 C11 name editor cancels without commit, then explicit save survives replay
+ok 5 - V38 C11 name editor cancels without commit, then explicit save survives replay
+  ---
+  duration_ms: 25.2459
+  type: 'test'
+  ...
+# Subtest: V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+ok 6 - V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+  ---
+  duration_ms: 16.9744
+  type: 'test'
+  ...
+# Subtest: V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+ok 7 - V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+  ---
+  duration_ms: 7.8682
+  type: 'test'
+  ...
+# Subtest: V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+ok 8 - V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+  ---
+  duration_ms: 8.2657
+  type: 'test'
+  ...
+# Subtest: V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+ok 9 - V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+  ---
+  duration_ms: 11.8302
+  type: 'test'
+  ...
+# Subtest: V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+ok 10 - V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+  ---
+  duration_ms: 6.8744
+  type: 'test'
+  ...
+# Subtest: V38 protocol rejects out-of-order power edges without corrupting replay
+ok 11 - V38 protocol rejects out-of-order power edges without corrupting replay
+  ---
+  duration_ms: 4.2285
+  type: 'test'
+  ...
+# Subtest: V39 C11: Delete All with a selected destination remains atomic through POWER-suspended confirmation
+ok 12 - V39 C11: Delete All with a selected destination remains atomic through POWER-suspended confirmation
+  ---
+  duration_ms: 34.1299
+  type: 'test'
+  ...
+# Subtest: V39 C11: Delete All NO/MENU/POWER OFF cancel; after GO TO Off numbering never reuses waypoint IDs
+ok 13 - V39 C11: Delete All NO/MENU/POWER OFF cancel; after GO TO Off numbering never reuses waypoint IDs
+  ---
+  duration_ms: 14.2972
+  type: 'test'
+  ...
+# Subtest: V39 D14: NMEA draft survives short POWER cancel only as draft; POWER OFF discards it
+ok 14 - V39 D14: NMEA draft survives short POWER cancel only as draft; POWER OFF discards it
+  ---
+  duration_ms: 16.3073
+  type: 'test'
+  ...
+# Subtest: V39 D09/D14: virtual option excludes NMEA rows but never changes stored NMEA source choice
+ok 15 - V39 D09/D14: virtual option excludes NMEA rows but never changes stored NMEA source choice
+  ---
+  duration_ms: 21.2226
+  type: 'test'
+  ...
+# Subtest: V39 legacy profile19: explicit settings import preserves validated NMEA choices, strips virtual entitlement
+ok 16 - V39 legacy profile19: explicit settings import preserves validated NMEA choices, strips virtual entitlement
+  ---
+  duration_ms: 10.6741
+  type: 'test'
+  ...
+# Subtest: V39 archived replay/profile is rejected even with a valid explicit settings import
+ok 17 - V39 archived replay/profile is rejected even with a valid explicit settings import
+  ---
+  duration_ms: 1.447
+  type: 'test'
+  ...
+# Subtest: V39 no source event that only changes teacher projection may mutate world clock
+ok 18 - V39 no source event that only changes teacher projection may mutate world clock
+  ---
+  duration_ms: 3.3117
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 262.7974

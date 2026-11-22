@@ -1,0 +1,516 @@
+TAP version 13
+# Subtest: V57 keeps one canonical public-reference notice in the masthead
+ok 1 - V57 keeps one canonical public-reference notice in the masthead
+  ---
+  duration_ms: 1.8673
+  type: 'test'
+  ...
+# Subtest: V57 removes repeated eyebrow and keeps a concise, truthful console heading
+ok 2 - V57 removes repeated eyebrow and keeps a concise, truthful console heading
+  ---
+  duration_ms: 0.341
+  type: 'test'
+  ...
+# Subtest: V57 preserves live MODE state and concise synthetic-echo source cue
+not ok 3 - V57 preserves live MODE state and concise synthetic-echo source cue
+  ---
+  duration_ms: 2.1984
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\stage\\test\\fcv588-v57-header-compact.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /detail:"Hồi âm mô phỏng\."/. Input:
+    
+    '/**\n' +
+      ' * STAGING ONLY: split source-graded teaching metadata from the FCV-588 face.\n' +
+      ' * This is a read-only presentation boundary, not a hardware parser or reducer.\n' +
+      ' * Real receiver, sonar, RF or navigation signals are never produced here.\n' +
+      ' */\n' +
+      'import {projectFcvTrainingReceiver} from "../src/devices/fcv588/receiver-status.mjs";\n' +
+      'import {projectFcvTankenmaruTrainingStatus} from "../src/devices/fcv588/tankenmaru-status.mjs";\n' +
+      'import {projectFcvManualNavBoxes} from "../src/devices/fcv588/navigation.mjs";\n' +
+      'import {getFcvMenuItems} from "../src/devices/fcv588/menu-atlas.mjs";\n' +
+      'import {DISPLAY_MODES} from "../src/devices/fcv588/model.mjs";\n' +
+      '\n' +
+      'const BASE="Dữ liệu và trạng thái chỉ phục vụ lớp học. Không kết nối thiết bị, đầu dò, GPS, NMEA hay hệ thống tàu thật.";\n' +
+      '\n' +
+      'export function explainFcvSourceReason(reason){\n' +
+      '  if(/LANGUAGE_ASSETS_AND_REBOOT/.test(reason??""))\n' +
+      '    return "D04: Chưa có quyền đối với tài nguyên ngôn ngữ và đối chứng khởi động lại.";\n' +
+      '  if(/TANKENMARU_OPTION_NOT_DECLARED/.test(reason??""))\n' +
+      '    return "D09: Chưa khai báo tùy chọn Tankenmaru ảo trong bảng giảng viên.";\n' +
+      '  if(/NAMED_VIRTUAL_MOUNT_UNVERIFIED/.test(reason??""))\n' +
+      '    return "Đầu dò tương thích và điều kiện sử dụng chưa được xác minh.";\n' +
+      '  if(/(?:SOURCE_GAP|RIGHTS_HOLD|CONFLICT_HOLD|UNVERIFIED)/.test(reason??""))\n' +
+      '    return "Không đủ bằng chứng hoặc quyền sử dụng cho chức năng này.";\n' +
+      '  return reason||"Chưa có đối chứng đầy đủ với firmware FCV-588.";\n' +
+      '}\n' +
+      '\n' +
+      'const SOURCE_STATES=Object.freeze({\n' +
+      '  SYNTHETIC_TRAINING_OBSERVATION:"Dữ liệu giả lập còn hiệu lực",\n' +
+      '  STALE_TRAINING_DATA:"Dữ liệu giả lập đã hết hạn",\n' +
+      '  NO_TRAINING_DATA:"Chưa có dữ liệu giả lập",\n' +
+      '  INACTIVE_TANKENMARU:"Nguồn bị khóa khi bật Tankenmaru",\n' +
+      '  NO_EXTERNAL_RECEIVER:"Không có đầu thu NMEA bên ngoài",\n' +
+      '  SYNTHETIC_OWN:"Dữ liệu Own giả lập",\n' +
+      '  VIRTUAL_OPTION_REFERENCE:"Đã bật tùy chọn ảo (không có phần cứng)",\n' +
+      '  SOURCE_GAP_OPTION_NOT_ACTIVE:"Không có tùy chọn ảo đang hoạt động"\n' +
+      '});\n' +
+      'export function describeTrainingStatus(value){\n' +
+      '  return SOURCE_STATES[value]??"Chưa có trạng thái xác minh";\n' +
+      '}\n' +
+      '\n' +
+      '/**\n' +
+      ' * Compact instructor-only source notice displayed BESIDE the equipment.\n' +
+      ' * It may never paint a training mark on an OEM-looking menu row or LCD.\n' +
+      ' * No receiver feed, hardware authorization or reducer state is created.\n' +
+      ' */\n' +
+      'export function projectFcvSourceCue(state,simTick){\n' +
+      '  const hidden={visible:false,status:"HIDDEN",title:"",detail:""};\n' +
+      '  if(state?.power!=="on")return hidden;\n' +
+      '  if(!DISPLAY_MODES.includes(state.mode)){\n' +
+      '    return {visible:true,status:"INVALID_MODE",\n' +
+      '      title:"Chế độ vận hành không xác định",\n' +
+      '      detail:"Không có căn cứ cho MODE này; không diễn giải như màn hình OEM."};\n' +
+      '  }\n' +
+      '  const overlay=state?.overlay;\n' +
+      '  if(overlay?.kind==="menu"){\n' +
+      '    const items=getFcvMenuItems(overlay.category,state);\n' +
+      '    const active=items?.[overlay.itemIndex];\n' +
+      '    if(active?.disabled===true){\n' +
+      '      const reason=String(active.disabledReason??"");\n' +
+      '      const rightsGap=/(?:SOURCE_GAP|RIGHTS_HOLD|CONFLICT_HOLD|UNVERIFIED)/.test(reason);\n' +
+      '      return {visible:true,\n' +
+      '        status:rightsGap?"SOURCE_HOLD_DISABLED_MENU_OPTION":"DISABLED_MENU_OPTION",\n' +
+      '        title:"Mục chưa khả dụng: "+active.label,\n' +
+      '        detail:rightsGap\n' +
+      '          ?explainFcvSourceReason(reason)\n' +
+      '          :"Chưa đáp ứng điều kiện thao tác trong cấu hình lớp học hiện tại."};\n' +
+      '    }\n' +
+      '    if(active?.id==="display.colors" &&\n' +
+      '       active.sourceStatus==="TRAINING_PALETTE_PREVIEW_FIRMWARE_UNKNOWN"){\n' +
+      '      return {visible:true,status:active.sourceStatus,\n' +
+      '        title:"Display > Colors · xem trước lớp học",\n' +
+      '        detail:"Theo lịch sử FURUNO v2.01, mục Colors có lựa chọn 8/16 màu. "+\n' +
+      '          "Bảng màu ở đây là giả lập huấn luyện độc lập; firmware đang cài "+\n' +
+      '          "trên FCV-588 thực tế chưa xác định. Không xác nhận màu LCD OEM."};\n' +
+      '    }\n' +
+      '    if(active?.id==="sounder.whiteMarker" &&\n' +
+      '       active.sourceStatus==="TRAINING_WHITE_MARKER_PREVIEW_FIRMWARE_UNKNOWN"){\n' +
+      '      return {visible:true,status:active.sourceStatus,\n' +
+      '        title:"Sounder > White Marker · xem trước lớp học",\n' +
+      '        detail:"Manual FURUNO §1.22 hướng dẫn chọn màu hồi âm trên thanh màu "+\n' +
+      '          "bằng phím lên/xuống, ENTER để xác nhận và Off để tắt. "+\n' +
+      '          "Lựa chọn White/Gray trong giao diện hiện tại chỉ là giả lập huấn luyện, "+\n' +
+      '          "không phải danh sách lựa chọn OEM đã xác nhận. "+\n' +
+      '          "Firmware đang cài trên FCV-588 thực tế chưa xác định; "+\n' +
+      '          "màu hiển thị được dựng độc lập, không phải màu LCD FURUNO."};\n' +
+      '    }\n' +
+      '    if(active?.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED"){\n' +
+      '      return {visible:true,status:active.sourceStatus,\n' +
+      '        title:"Đường dẫn menu chưa được xác minh",\n' +
+      '        detail:"Mục \\""+active.label+"\\" do nền tảng lớp học bổ sung; chưa có căn cứ xác nhận vị trí menu trên firmware FCV-588."};\n' +
+      '    }\n' +
+      '  }\n' +
+      '  if(overlay?.kind==="tankenmaru-details"){\n' +
+      '    const selected=projectFcvTankenmaruTrainingStatus(state);\n' +
+      '    return {visible:true,status:selected.status,\n' +
+      '      title:"D09 · Tankenmaru ảo",\n' +
+      '      detail:selected.status==="VIRTUAL_OPTION_REFERENCE"\n' +
+      '        ?"Chỉ hiển thị giá trị manual tham khảo. Không có thiết bị đối tác hoặc phát RF."\n' +
+      '        :"Chưa có quyền tùy chọn ảo đang hoạt động. Không kết nối phần cứng."};\n' +
+      '  }\n' +
+      '  if(overlay?.kind==="lcd-test"){\n' +
+      '    return {visible:true,status:"SYNTHETIC_LCD_TEST",\n' +
+      '      title:"D11 · LCD TEST giả lập",\n' +
+      '      detail:"Mẫu màu là kiểm tra giao diện lớp học, không phải kết quả chẩn đoán LCD phần cứng."};\n' +
+      '  }\n' +
+      '  if(!["NAV1","NAV2"].includes(state.mode) &&\n' +
+      '      overlay?.kind!=="receiver-status"){\n' +
+      '    return {visible:true,status:"SIMULATED_SONAR",\n' +
+      '      title:"MODE hiện tại: "+(state.mode??"KHÔNG XÁC ĐỊNH"),\n' +
+      '      detail:"Hồi âm mô phỏng; không kết nối đầu dò."};\n' +
+      '  }\n' +
+      '  const receiver=projectFcvTrainingReceiver(state,simTick);\n' +
+      '  const notices={\n' +
+      '    SYNTHETIC_TRAINING_OBSERVATION:\n' +
+      '      "Vị trí Own tổng hợp còn hiệu lực; không phải GPS hay bản tin NMEA của tàu.",\n' +
+      '    STALE_TRAINING_DATA:\n' +
+      '      "Mẫu vị trí Own tổng hợp đã hết hạn; dữ liệu không còn được hiển thị như giá trị hiện tại.",\n' +
+      '    NO_TRAINING_DATA:\n' +
+      '      "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu.",\n' +
+      '    INACTIVE_TANKENMARU:\n' +
+      '      "Nguồn ảo đang bị khóa bởi tùy chọn Tankenmaru; không có dữ liệu nhận từ tàu."\n' +
+      '  };\n' +
+      '  const selected=receiver.selectedSources??{};\n' +
+      '  const nmea=["speed","temperature","trip"].filter(key=>selected[key]==="NMEA")\n' +
+      '    .map(key=>({speed:"Speed",temperature:"Temp",trip:"Trip"})[key]);\n' +
+      '  const nmeaNote=nmea.length\n' +
+      '    ?" Các kênh "+nmea.join(", ")+" đang chọn NMEA nhưng không có đầu thu, phải giữ NO DATA."\n' +
+      '    :" NMEA vật lý: không kết nối.";\n' +
+      '  return {visible:true,status:receiver.status,\n' +
+      '    title:overlay?.kind==="receiver-status"\n' +
+      '      ?"D14 · Nguồn dữ liệu nhận · MODE "+state.mode\n' +
+      '      :"C11 · Nguồn NAV · MODE "+state.mode,\n' +
+      '    detail:(notices[receiver.status]??"Chưa xác minh được trạng thái nguồn.")+nmeaNote};\n' +
+      '}\n' +
+      '\n' +
+      '/**\n' +
+      ' * A single discrete screen-reader announcement for user-driven menu changes.\n' +
+      ' * The operator LCD must not become a high-frequency live region again.\n' +
+      ' * Callers supply read-only semantic data from the already rendered rows.\n' +
+      ' */\n' +
+      'export function projectFcvSelectionAnnouncement({\n' +
+      '  visible=false,layout="",title="",rowText="",choiceText="",disabled=false\n' +
+      '}={}){\n' +
+      '  if(!visible || !rowText || !["main-menu","configuration",\n' +
+      '    "control","func-setting","dialog"].includes(layout))return null;\n' +
+      '  const normalize=value=>String(value??"").replace(/^\\s*▶\\s*/,"")\n' +
+      '    .replace(/\\s+/g," ").trim();\n' +
+      '  const menu=normalize(title);\n' +
+      '  const row=normalize(rowText);\n' +
+      '  const choice=normalize(choiceText);\n' +
+      '  if(!row)return null;\n' +
+      '  const phrase=[menu,row,choice?"Đang chọn "+choice:"",disabled?"Mục không khả dụng":""]\n' +
+      '    .filter(Boolean).join(". ");\n' +
+      '  return {key:JSON.stringify([layout,menu,row,choice,Boolean(disabled)]),\n' +
+      '    text:phrase+"."};\n' +
+      '}\n' +
+      '\n' +
+      'export function displayOnlySyntheticValue(input){\n' +
+      '  if(input===null || input===undefined)return "NO DATA";\n' +
+      '  // OEM TIME TO GO/ETA cannot be inferred from a synthetic route/speed\n' +
+      '  // estimate. Put that estimate in the instructor panel, not the LCD.\n' +
+      '  if(/ \\(SIM EST\\)$/.test(String(input)))return "NO DATA";\n' +
+      '  // Type-tagged training values stay unchanged in state/replay. The teacher\n' +
+      '  // panel, not the FCV face, identifies their simulated provenance.\n' +
+      '  return String(input).replace(/^SIM (?=\\d)/,"")\n' +
+      '    .replace(/ \\((?:SIM|SIM EST)\\)$/,"")\n' +
+      '    .replace(/\\s*·\\s*(?:SIM|SIMULATED|TRAINING ONLY|SYNTHETIC ONLY)(?=\\s*(?:$|:))/g,"");\n' +
+      '}\n' +
+      '\n' +
+      'function guide(title,summary="",help="",source=BASE){\n' +
+      '  return {title,summary,help,source};\n' +
+      '}\n' +
+      '\n' +
+      'export function projectFcvInstructorMeta(state,overlay,simTick){\n' +
+      '  if(!overlay){\n' +
+      '    if(["NAV1","NAV2"].includes(state?.mode)){\n' +
+      '      const r=projectFcvTrainingReceiver(state,simTick);\n' +
+      '      const projected=projectFcvManualNavBoxes({\n' +
+      '        mode:state.mode,settings:state.settings,\n' +
+      '        navState:state.navigation,\n' +
+      '        sample:state.trainingFixture?.navigation?state.navigationObservation:null,\n' +
+      '        simTick\n' +
+      '      });\n' +
+      '      const estimate=projected.boxes.find(box=>\n' +
+      '        box.label==="TIME TO GO" && /\\(SIM EST\\)$/.test(box.value));\n' +
+      '      return guide("C11 — Dữ liệu NAV giả lập",\n' +
+      '        "Chế độ "+state.mode+" · "+describeTrainingStatus(r.status),\n' +
+      '        "Trip: "+r.selectedSources.trip+" / "+describeTrainingStatus(r.selectedSources.tripStatus)+\n' +
+      '          "\\nSpeed: "+r.selectedSources.speed+" / "+describeTrainingStatus(r.selectedSources.speedStatus)+\n' +
+      '          "\\nTemp: "+r.selectedSources.temperature+" / "+describeTrainingStatus(r.selectedSources.tempStatus)+\n' +
+      '          (estimate?"\\nTIME TO GO ước tính lớp học: "+estimate.value:""),\n' +
+      '        "Không có GPS/NMEA tàu; các giá trị NAV/waypoint trên LCD là bài tập." );\n' +
+      '    }\n' +
+      '    return guide("Trạng thái mô phỏng",\n' +
+      '      state?.power==="on"?"Màn hình vận hành đang bật.":"Màn hình đang tắt.",\n' +
+      '      "Hướng dẫn và nguồn dữ liệu hiển thị tại đây, không đặt trong LCD.");\n' +
+      '  }\n' +
+      '  if(overlay.kind==="receiver-status"){\n' +
+      '    const r=projectFcvTrainingReceiver(state,simTick);\n' +
+      '    return guide("D14 — Trạng'... 3375 more characters
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    /**
+     * STAGING ONLY: split source-graded teaching metadata from the FCV-588 face.
+     * This is a read-only presentation boundary, not a hardware parser or reducer.
+     * Real receiver, sonar, RF or navigation signals are never produced here.
+     */
+    import {projectFcvTrainingReceiver} from "../src/devices/fcv588/receiver-status.mjs";
+    import {projectFcvTankenmaruTrainingStatus} from "../src/devices/fcv588/tankenmaru-status.mjs";
+    import {projectFcvManualNavBoxes} from "../src/devices/fcv588/navigation.mjs";
+    import {getFcvMenuItems} from "../src/devices/fcv588/menu-atlas.mjs";
+    import {DISPLAY_MODES} from "../src/devices/fcv588/model.mjs";
+    
+    const BASE="Dữ liệu và trạng thái chỉ phục vụ lớp học. Không kết nối thiết bị, đầu dò, GPS, NMEA hay hệ thống tàu thật.";
+    
+    export function explainFcvSourceReason(reason){
+      if(/LANGUAGE_ASSETS_AND_REBOOT/.test(reason??""))
+        return "D04: Chưa có quyền đối với tài nguyên ngôn ngữ và đối chứng khởi động lại.";
+      if(/TANKENMARU_OPTION_NOT_DECLARED/.test(reason??""))
+        return "D09: Chưa khai báo tùy chọn Tankenmaru ảo trong bảng giảng viên.";
+      if(/NAMED_VIRTUAL_MOUNT_UNVERIFIED/.test(reason??""))
+        return "Đầu dò tương thích và điều kiện sử dụng chưa được xác minh.";
+      if(/(?:SOURCE_GAP|RIGHTS_HOLD|CONFLICT_HOLD|UNVERIFIED)/.test(reason??""))
+        return "Không đủ bằng chứng hoặc quyền sử dụng cho chức năng này.";
+      return reason||"Chưa có đối chứng đầy đủ với firmware FCV-588.";
+    }
+    
+    const SOURCE_STATES=Object.freeze({
+      SYNTHETIC_TRAINING_OBSERVATION:"Dữ liệu giả lập còn hiệu lực",
+      STALE_TRAINING_DATA:"Dữ liệu giả lập đã hết hạn",
+      NO_TRAINING_DATA:"Chưa có dữ liệu giả lập",
+      INACTIVE_TANKENMARU:"Nguồn bị khóa khi bật Tankenmaru",
+      NO_EXTERNAL_RECEIVER:"Không có đầu thu NMEA bên ngoài",
+      SYNTHETIC_OWN:"Dữ liệu Own giả lập",
+      VIRTUAL_OPTION_REFERENCE:"Đã bật tùy chọn ảo (không có phần cứng)",
+      SOURCE_GAP_OPTION_NOT_ACTIVE:"Không có tùy chọn ảo đang hoạt động"
+    });
+    export function describeTrainingStatus(value){
+      return SOURCE_STATES[value]??"Chưa có trạng thái xác minh";
+    }
+    
+    /**
+     * Compact instructor-only source notice displayed BESIDE the equipment.
+     * It may never paint a training mark on an OEM-looking menu row or LCD.
+     * No receiver feed, hardware authorization or reducer state is created.
+     */
+    export function projectFcvSourceCue(state,simTick){
+      const hidden={visible:false,status:"HIDDEN",title:"",detail:""};
+      if(state?.power!=="on")return hidden;
+      if(!DISPLAY_MODES.includes(state.mode)){
+        return {visible:true,status:"INVALID_MODE",
+          title:"Chế độ vận hành không xác định",
+          detail:"Không có căn cứ cho MODE này; không diễn giải như màn hình OEM."};
+      }
+      const overlay=state?.overlay;
+      if(overlay?.kind==="menu"){
+        const items=getFcvMenuItems(overlay.category,state);
+        const active=items?.[overlay.itemIndex];
+        if(active?.disabled===true){
+          const reason=String(active.disabledReason??"");
+          const rightsGap=/(?:SOURCE_GAP|RIGHTS_HOLD|CONFLICT_HOLD|UNVERIFIED)/.test(reason);
+          return {visible:true,
+            status:rightsGap?"SOURCE_HOLD_DISABLED_MENU_OPTION":"DISABLED_MENU_OPTION",
+            title:"Mục chưa khả dụng: "+active.label,
+            detail:rightsGap
+              ?explainFcvSourceReason(reason)
+              :"Chưa đáp ứng điều kiện thao tác trong cấu hình lớp học hiện tại."};
+        }
+        if(active?.id==="display.colors" &&
+           active.sourceStatus==="TRAINING_PALETTE_PREVIEW_FIRMWARE_UNKNOWN"){
+          return {visible:true,status:active.sourceStatus,
+            title:"Display > Colors · xem trước lớp học",
+            detail:"Theo lịch sử FURUNO v2.01, mục Colors có lựa chọn 8/16 màu. "+
+              "Bảng màu ở đây là giả lập huấn luyện độc lập; firmware đang cài "+
+              "trên FCV-588 thực tế chưa xác định. Không xác nhận màu LCD OEM."};
+        }
+        if(active?.id==="sounder.whiteMarker" &&
+           active.sourceStatus==="TRAINING_WHITE_MARKER_PREVIEW_FIRMWARE_UNKNOWN"){
+          return {visible:true,status:active.sourceStatus,
+            title:"Sounder > White Marker · xem trước lớp học",
+            detail:"Manual FURUNO §1.22 hướng dẫn chọn màu hồi âm trên thanh màu "+
+              "bằng phím lên/xuống, ENTER để xác nhận và Off để tắt. "+
+              "Lựa chọn White/Gray trong giao diện hiện tại chỉ là giả lập huấn luyện, "+
+              "không phải danh sách lựa chọn OEM đã xác nhận. "+
+              "Firmware đang cài trên FCV-588 thực tế chưa xác định; "+
+              "màu hiển thị được dựng độc lập, không phải màu LCD FURUNO."};
+        }
+        if(active?.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED"){
+          return {visible:true,status:active.sourceStatus,
+            title:"Đường dẫn menu chưa được xác minh",
+            detail:"Mục \""+active.label+"\" do nền tảng lớp học bổ sung; chưa có căn cứ xác nhận vị trí menu trên firmware FCV-588."};
+        }
+      }
+      if(overlay?.kind==="tankenmaru-details"){
+        const selected=projectFcvTankenmaruTrainingStatus(state);
+        return {visible:true,status:selected.status,
+          title:"D09 · Tankenmaru ảo",
+          detail:selected.status==="VIRTUAL_OPTION_REFERENCE"
+            ?"Chỉ hiển thị giá trị manual tham khảo. Không có thiết bị đối tác hoặc phát RF."
+            :"Chưa có quyền tùy chọn ảo đang hoạt động. Không kết nối phần cứng."};
+      }
+      if(overlay?.kind==="lcd-test"){
+        return {visible:true,status:"SYNTHETIC_LCD_TEST",
+          title:"D11 · LCD TEST giả lập",
+          detail:"Mẫu màu là kiểm tra giao diện lớp học, không phải kết quả chẩn đoán LCD phần cứng."};
+      }
+      if(!["NAV1","NAV2"].includes(state.mode) &&
+          overlay?.kind!=="receiver-status"){
+        return {visible:true,status:"SIMULATED_SONAR",
+          title:"MODE hiện tại: "+(state.mode??"KHÔNG XÁC ĐỊNH"),
+          detail:"Hồi âm mô phỏng; không kết nối đầu dò."};
+      }
+      const receiver=projectFcvTrainingReceiver(state,simTick);
+      const notices={
+        SYNTHETIC_TRAINING_OBSERVATION:
+          "Vị trí Own tổng hợp còn hiệu lực; không phải GPS hay bản tin NMEA của tàu.",
+        STALE_TRAINING_DATA:
+          "Mẫu vị trí Own tổng hợp đã hết hạn; dữ liệu không còn được hiển thị như giá trị hiện tại.",
+        NO_TRAINING_DATA:
+          "Không có mẫu vị trí Own hợp lệ: nguồn ảo tắt, thiếu hoặc sai kiểu dữ liệu.",
+        INACTIVE_TANKENMARU:
+          "Nguồn ảo đang bị khóa bởi tùy chọn Tankenmaru; không có dữ liệu nhận từ tàu."
+      };
+      const selected=receiver.selectedSources??{};
+      const nmea=["speed","temperature","trip"].filter(key=>selected[key]==="NMEA")
+        .map(key=>({speed:"Speed",temperature:"Temp",trip:"Trip"})[key]);
+      const nmeaNote=nmea.length
+        ?" Các kênh "+nmea.join(", ")+" đang chọn NMEA nhưng không có đầu thu, phải giữ NO DATA."
+        :" NMEA vật lý: không kết nối.";
+      return {visible:true,status:receiver.status,
+        title:overlay?.kind==="receiver-status"
+          ?"D14 · Nguồn dữ liệu nhận · MODE "+state.mode
+          :"C11 · Nguồn NAV · MODE "+state.mode,
+        detail:(notices[receiver.status]??"Chưa xác minh được trạng thái nguồn.")+nmeaNote};
+    }
+    
+    /**
+     * A single discrete screen-reader announcement for user-driven menu changes.
+     * The operator LCD must not become a high-frequency live region again.
+     * Callers supply read-only semantic data from the already rendered rows.
+     */
+    export function projectFcvSelectionAnnouncement({
+      visible=false,layout="",title="",rowText="",choiceText="",disabled=false
+    }={}){
+      if(!visible || !rowText || !["main-menu","configuration",
+        "control","func-setting","dialog"].includes(layout))return null;
+      const normalize=value=>String(value??"").replace(/^\s*▶\s*/,"")
+        .replace(/\s+/g," ").trim();
+      const menu=normalize(title);
+      const row=normalize(rowText);
+      const choice=normalize(choiceText);
+      if(!row)return null;
+      const phrase=[menu,row,choice?"Đang chọn "+choice:"",disabled?"Mục không khả dụng":""]
+        .filter(Boolean).join(". ");
+      return {key:JSON.stringify([layout,menu,row,choice,Boolean(disabled)]),
+        text:phrase+"."};
+    }
+    
+    export function displayOnlySyntheticValue(input){
+      if(input===null || input===undefined)return "NO DATA";
+      // OEM TIME TO GO/ETA cannot be inferred from a synthetic route/speed
+      // estimate. Put that estimate in the instructor panel, not the LCD.
+      if(/ \(SIM EST\)$/.test(String(input)))return "NO DATA";
+      // Type-tagged training values stay unchanged in state/replay. The teacher
+      // panel, not the FCV face, identifies their simulated provenance.
+      return String(input).replace(/^SIM (?=\d)/,"")
+        .replace(/ \((?:SIM|SIM EST)\)$/,"")
+        .replace(/\s*·\s*(?:SIM|SIMULATED|TRAINING ONLY|SYNTHETIC ONLY)(?=\s*(?:$|:))/g,"");
+    }
+    
+    function guide(title,summary="",help="",source=BASE){
+      return {title,summary,help,source};
+    }
+    
+    export function projectFcvInstructorMeta(state,overlay,simTick){
+      if(!overlay){
+        if(["NAV1","NAV2"].includes(state?.mode)){
+          const r=projectFcvTrainingReceiver(state,simTick);
+          const projected=projectFcvManualNavBoxes({
+            mode:state.mode,settings:state.settings,
+            navState:state.navigation,
+            sample:state.trainingFixture?.navigation?state.navigationObservation:null,
+            simTick
+          });
+          const estimate=projected.boxes.find(box=>
+            box.label==="TIME TO GO" && /\(SIM EST\)$/.test(box.value));
+          return guide("C11 — Dữ liệu NAV giả lập",
+            "Chế độ "+state.mode+" · "+describeTrainingStatus(r.status),
+            "Trip: "+r.selectedSources.trip+" / "+describeTrainingStatus(r.selectedSources.tripStatus)+
+              "\nSpeed: "+r.selectedSources.speed+" / "+describeTrainingStatus(r.selectedSources.speedStatus)+
+              "\nTemp: "+r.selectedSources.temperature+" / "+describeTrainingStatus(r.selectedSources.tempStatus)+
+              (estimate?"\nTIME TO GO ước tính lớp học: "+estimate.value:""),
+            "Không có GPS/NMEA tàu; các giá trị NAV/waypoint trên LCD là bài tập." );
+        }
+        return guide("Trạng thái mô phỏng",
+          state?.power==="on"?"Màn hình vận hành đang bật.":"Màn hình đang tắt.",
+          "Hướng dẫn và nguồn dữ liệu hiển thị tại đây, không đặt trong LCD.");
+      }
+      if(overlay.kind==="receiver-status"){
+        const r=projectFcvTrainingReceiver(state,simTick);
+        return guide("D14 — Trạng thái dữ liệu nhận ảo",
+          "Receiver: "+describeTrainingStatus(r.status)+"\nPosition: "+r.positionText,
+          "Nguồn Speed: "+r.selectedSources.speed+" / "+describeTrainingStatus(r.selectedSources.speedStatus)+
+            "\nNguồn Temp: "+r.selectedSources.temperature+" / "+describeTrainingStatus(r.selectedSources.tempStatus)+
+            "\nNguồn Trip: "+r.selectedSources.trip+" / "+describeTrainingStatus(r.selectedSources.tripStatus)+
+            "\nMENU/ESC để quay lại.",
+          "NMEA physical port: OFF. Transport: NONE. Không phải dữ liệu GPS/NMEA của tàu.");
+      }
+      if(overlay.kind==="tankenmaru-details"){
+        const r=projectFcvTankenmaruTrainingStatus(state);
+        return guide("D09 — Tùy chọn Tankenmaru ảo",
+          describeTrainingStatus(r.status),
+          "§2.9: Output/Pic. Sync/Sub Clutter là giá trị tham chiếu, chỉ đọc. MENU/ESC để quay lại.",
+          "KHÔNG phát RF, không có màn hình tàu đối tác hoặc cấu hình tùy chọn thực.");
+      }
+      if(overlay.kind==="diagnostics")return guide("Diagnostics (giả lập)",
+        "Installed firmware: UNKNOWN. Physical sensor: NONE.",
+        "Các lỗi do giảng viên đưa vào là tình huống mô phỏng, không phải mã đo phần cứng.");
+      if(overlay.kind==="trip-status")return guide("C11/C13 — Quãng đường giả lập",
+        "Trip Source: "+(state?.settings?.tripSource??"Own"),
+        "Các số Trip/Odometer là bộ đếm của kịch bản lớp học; nguồn NMEA chưa được kết nối.");
+      if(overlay.kind==="confirm-trip-reset")return guide("Xác nhận reset Trip",
+        "Chỉ đặt lại Trip của tình huống lớp học; Odometer được bảo toàn.",
+        "◀/▶ lựa chọn · ENTER xác nhận · MENU/ESC hủy.");
+      if(overlay.kind==="confirm-restore")return guide("Xác nhận khôi phục cấu hình",
+        "Chỉ áp dụng bộ nhớ mô phỏng. Không gửi lệnh sang thiết bị thật.",
+        "◀/▶ lựa chọn · ENTER xác nhận · MENU/ESC hủy.");
+      if(overlay.kind==="window-size")return guide("Kích thước cửa sổ",
+        "Bố cục vùng chia là diễn giải độc lập, không phải tọa độ OEM.",
+        "◀/▶ dịch đường chia · ENTER lưu · MENU/ESC hủy.");
+      if(overlay.kind==="power-hold")return guide("Giữ POWER/BRILL",
+        "Còn "+(Number(overlay.remainingMs)/1000).toFixed(2)+" s (đồng hồ UI).",
+        "Nhả phím sớm sẽ không tắt máy. Thời gian này vẫn là khoảng mô phỏng.");
+      if(overlay.kind==="waypoints" || overlay.kind==="waypoint-detail" ||
+          overlay.kind==="waypoint-name" || overlay.kind==="confirm-waypoint-delete" ||
+          overlay.kind==="confirm-delete-all-waypoints"){
+        return guide("C11 — Waypoint giả lập", "Các điểm chỉ nằm trong phiên lớp học.",
+          "Dùng TrackPad chọn/đổi ký tự, ENTER xác nhận, MENU/ESC hủy. Điểm đích đang hoạt động không thể xóa.");
+      }
+      if(overlay.kind==="lcd-test")return guide("LCD test trong lớp học",
+        "Mẫu màu là minh họa, không phải chẩn đoán phần cứng.",
+        "Thông tin test nằm ngoài LCD để không che các pixel màu.");
+      if(overlay.kind==="range" || overlay.kind==="gain" ||
+          overlay.kind==="mode" || overlay.kind==="brill" ||
+          overlay.kind==="func-setting"){
+        return guide("Giá trị điều khiển không hợp lệ",
+          "Dữ liệu lựa chọn không thể hiển thị/lưu, không phải lỗi thiết bị thật.",
+          "MENU/ESC quay lại. Các giá trị và hành vi chưa xác minh giữ trạng thái HOLD.");
+      }
+      return guide("Menu vận hành / lớp học",
+        "Nội dung chưa được xác nhận theo từng phiên bản firmware.",
+        "MENU/ESC trở lại; chỉ thay đổi lựa chọn khi điều kiện đã được khai báo.");
+    }
+    
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/docs/qa/FCV588_V57_HEADER_COMPACT_20261031/stage/test/fcv588-v57-header-compact.test.mjs:32:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: V57 retains explicit no-hardware and no-navigation safety disclaimer
+ok 4 - V57 retains explicit no-hardware and no-navigation safety disclaimer
+  ---
+  duration_ms: 0.3505
+  type: 'test'
+  ...
+# Subtest: V57 compact masthead remains visible and responsive at phone width
+ok 5 - V57 compact masthead remains visible and responsive at phone width
+  ---
+  duration_ms: 0.3564
+  type: 'test'
+  ...
+# Subtest: V57 runtime MODE cue keeps its live mode and short synthetic-source label
+ok 6 - V57 runtime MODE cue keeps its live mode and short synthetic-source label
+  ---
+  duration_ms: 0.5974
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 5
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 157.2415

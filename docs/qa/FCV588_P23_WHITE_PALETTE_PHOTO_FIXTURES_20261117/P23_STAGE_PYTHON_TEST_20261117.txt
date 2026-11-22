@@ -1,0 +1,34 @@
+test_current_runner_and_imported_helper_are_both_pinned (test_fcv588_chrome_harness_identity.HarnessIdentityTests.test_current_runner_and_imported_helper_are_both_pinned) ... ok
+test_desktop_receipt_must_identify_its_exact_runner_and_reject_drift (test_fcv588_chrome_harness_identity.HarnessIdentityTests.test_desktop_receipt_must_identify_its_exact_runner_and_reject_drift) ... ok
+test_helper_changed_during_browser_workflow_rejects_pass (test_fcv588_chrome_harness_identity.HarnessIdentityTests.test_helper_changed_during_browser_workflow_rejects_pass) ... ok
+test_actual_browser_responses_pass_when_every_loaded_byte_matches (test_fcv588_chrome_response_integrity.BrowserLoadedSourceTests.test_actual_browser_responses_pass_when_every_loaded_byte_matches) ... ok
+test_missing_body_or_failed_body_collection_never_passes (test_fcv588_chrome_response_integrity.BrowserLoadedSourceTests.test_missing_body_or_failed_body_collection_never_passes) ... ok
+test_swapped_response_during_run_fails_despite_same_pre_post_manifest (test_fcv588_chrome_response_integrity.BrowserLoadedSourceTests.test_swapped_response_during_run_fails_despite_same_pre_post_manifest) ... ok
+test_unexpected_path_or_external_source_is_not_accepted (test_fcv588_chrome_response_integrity.BrowserLoadedSourceTests.test_unexpected_path_or_external_source_is_not_accepted) ... ok
+setUpClass (test_fcv588_visual_atlas.VisualAtlasTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (test_fcv588_visual_atlas.VisualAtlasTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\test\test_fcv588_visual_atlas.py", line 15, in setUpClass
+    cls.result = atlas.build()
+                 ^^^^^^^^^^^^^
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\tools\build_fcv588_visual_atlas.py", line 60, in build
+    probe, probe_id = load_receipt(f"docs/qa/FCV588_LCD_{checkpoint}_GREEN_RECEIPT.json")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\tools\build_fcv588_visual_atlas.py", line 31, in load_receipt
+    raw = path.read_bytes()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p23-bz-lower-20261117\\docs\\qa\\FCV588_LCD_V27_GREEN_RECEIPT.json'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.076s
+
+FAILED (errors=1)

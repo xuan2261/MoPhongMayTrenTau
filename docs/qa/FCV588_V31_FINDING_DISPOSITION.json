@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-16",
+  "runtimeManifestSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+  "profileRevision": "F1-public-reference-20",
+  "scope": "IMPLEMENTED_REPAIRS_AND_SCOPED_EVIDENCE_NOT_INTEGRATED_ACCEPTANCE",
+  "findings": [
+    {"id": "V30-B", "disposition": "REPAIRED_SCOPED_STATE_AND_CHROME_VERIFIED_FULL_REGRESSION_PENDING", "evidence": ["test/fcv588-public-v31-transactions.test.mjs", "docs/qa/FCV588_V31_STATE_COMPAT_RED.log", "docs/qa/FCV588_V31_STATE_COMPAT_GREEN.log", "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json"]},
+    {"id": "V30-E", "disposition": "REPAIRED_SCOPED_STATE_AND_CHROME_VERIFIED_FULL_REGRESSION_PENDING", "evidence": ["test/fcv588-public-v31-transactions.test.mjs", "docs/qa/FCV588_V31_STATE_COMPAT_RED.log", "docs/qa/FCV588_V31_STATE_COMPAT_GREEN.log", "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json"]},
+    {"id": "V31-CAPABILITY-DRAFT", "disposition": "REPAIRED_SCOPED_VERIFIED_NO_NEW_OEM_CAPABILITY", "evidence": ["test/fcv588-public-v31-transactions.test.mjs", "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json"]},
+    {"id": "V31-BRILL-IDLE", "disposition": "REPAIRED_TRAINING_INACTIVITY_RED_GREEN_VERIFIED_EXACT_OEM_TIMING_HOLD", "evidence": ["test/fcv588-public-v31-control-clock.test.mjs", "docs/qa/FCV588_V31_STATE_COMPAT_RED.log", "docs/qa/FCV588_V31_STATE_COMPAT_GREEN.log", "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json"]},
+    {"id": "V31-RESET-STORAGE", "disposition": "REPAIRED_BROWSER_RED_GREEN_VERIFIED_WITH_POWERED_OFF_MENU_PROBE", "evidence": ["docs/qa/FCV588_OPERATOR_V31_RED_RECEIPT.json", "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json"]},
+    {"id": "V31-QA-01", "disposition": "OPEN_INCORRECT_AUTO_FIXTURE_UNCORRECTED_REQUIRED_COUNSEL_NOT_EXECUTED", "evidence": ["docs/qa/FCV588_V31_CONTROL_UNIT_GREEN.log", "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/v31-failure-counsel-packet.md"]}
+  ],
+  "fullRegression": "NOT_EXECUTED_ON_CURRENT_V31_SOURCE",
+  "historicalV30FindingReceipt": "PRESERVED_UNCHANGED_NOT_RELABELED",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

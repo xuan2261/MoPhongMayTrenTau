@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: Windows POC manual migration roundtrip: only signed/versioned settings
+ok 1 - Windows POC manual migration roundtrip: only signed/versioned settings
+  ---
+  duration_ms: 5.533
+  type: 'test'
+  ...
+# Subtest: Windows POC rejects invalid, oversize, unrecognized and tampered imports
+ok 2 - Windows POC rejects invalid, oversize, unrecognized and tampered imports
+  ---
+  duration_ms: 2.8628
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 143.2551

@@ -1,0 +1,39 @@
+{
+  "schema": "FCV588_P23_STAGE_VERSIONED_DISPLAY_FULL_NODE_V1",
+  "stageOnly": true,
+  "nodeBinary": "C:\\nvm4w\\nodejs\\node.exe",
+  "testFiles": 96,
+  "exitCode": 1,
+  "summary": {
+    "tests": "545",
+    "pass": "523",
+    "fail": "22",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "4266.826"
+  },
+  "failureHead": [
+    "not ok 3 - test\\\\f1-plan-links.test.mjs",
+    "not ok 86 - independent F1 implementation status accounts for all 64 operator rows plus D15",
+    "not ok 87 - derived D15 implementation note matches the seven actual versioned scored lessons without claiming OEM release",
+    "not ok 88 - C05/C13 synthetic navigation checkpoints cite actual targeted scenarios, without raising claims",
+    "not ok 89 - D10 trainer fault cues are a synthetic-only subset, not observed battery or error codes",
+    "not ok 90 - A17 key-beep choice and browser TrackPad auto-repeat are synthetic subset with source HOLD",
+    "not ok 91 - D02 eight-slot manual Range bank has targeted tests but no OEM conformance",
+    "not ok 92 - 64+D15 classification fails closed instead of treating an unreviewed domain smoke as operable",
+    "not ok 29 - test\\\\fcv588-public-claims.test.mjs",
+    "not ok 39 - test\\\\fcv588-public-evidence.test.mjs",
+    "not ok 48 - test\\\\fcv588-public-menu.test.mjs",
+    "not ok 55 - test\\\\fcv588-public-profile.test.mjs",
+    "not ok 330 - D02 evidence atlas lists each training slot with explicit HOLD",
+    "not ok 59 - test\\\\fcv588-public-replan.test.mjs",
+    "not ok 64 - test\\\\fcv588-public-trace.test.mjs",
+    "not ok 484 - V41 versioned public-reference atlas agrees with the two runtime menu labels",
+    "not ok 507 - V46 public menu atlas metadata mirrors OEM literal and retains firmware unknown grade",
+    "not ok 514 - V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract"
+  ],
+  "logSHA256": "5a39e9ff46875a067f4ec32779dfb0fbb9a9a3b3982029dd5a9b8f6fe58a2d56",
+  "logFile": "P23_STAGE_VERSIONED_DISPLAY_FULL_NODE_20261117.txt",
+  "runtimeCanonUnchanged": true
+}

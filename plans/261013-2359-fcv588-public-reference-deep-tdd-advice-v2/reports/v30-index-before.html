@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>MoPhongMayTrenTau | FCV-588 Public Reference</title>
+  <link rel="icon" type="image/svg+xml" href="/web/favicon.svg">
+  <link rel="stylesheet" href="/web/styles.css">
+  <script type="module" src="/web/app.mjs"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="identity"><span class="mark" aria-hidden="true">≈</span>
+        <div><strong>MoPhongMayTrenTau</strong><small>MARITIME INSTRUMENT TRAINING LAB</small></div>
+      </div>
+      <span class="state-chip">F1 · PUBLIC REFERENCE · CHƯA XÁC NHẬN PHẦN CỨNG</span>
+    </header>
+    <main>
+      <div class="public-reference-banner" role="note">PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY</div>
+      <div class="heading">
+        <div><p class="eyebrow">THỰC HÀNH TƯƠNG TÁC · MÁY ĐO SÂU</p>
+          <h1>FCV-588 <span>Training Console</span></h1>
+          <p class="subtitle">Bố cục và nút thao tác dựng độc lập từ manual; chưa đạt chuẩn hình ảnh/hành vi giống máy thật.</p></div>
+        <div class="live-chip"><span class="dot"></span><span id="connection-status">MÔI TRƯỜNG GIẢ LẬP</span></div>
+      </div>
+      <section class="workbench" aria-label="Mô phỏng FCV-588">
+        <div class="device-frame" data-panel-reference="FCV588_PUBLIC_REFERENCE_ESTIMATE" aria-label="Mặt trước FCV-588 minh họa theo nguồn công khai">
+          <p class="mobile-training-note">BỐ CỤC ĐIỆN THOẠI DÀNH CHO LUYỆN TẬP: phím được phóng to và chuyển xuống dưới LCD, không phải hình học mặt máy FCV-588 thực.</p>
+          <div class="equipment">
+            <div class="display-housing">
+              <div class="bezel-header"><span class="manufacturer-name">FURUNO</span></div>
+              <div id="lcd" class="lcd" aria-live="polite">
+                <canvas id="echo-canvas" width="480" height="640" role="img" aria-label="Ảnh hồi âm minh họa theo dữ liệu mô phỏng"></canvas>
+                <div class="screen-top" id="screen-top">POWER OFF</div>
+                <div class="depth-indicator"><strong id="depth-display">--.-</strong><span id="depth-unit">m</span></div>
+                <div class="vrm-indicator" id="vrm-indicator" hidden>VRM --.- m</div>
+                <div class="lcd-overlay" id="lcd-overlay" hidden>
+                  <div class="lcd-overlay-title" id="dialog-title"></div>
+                  <div class="lcd-menu-body">
+                    <div id="lcd-menu-categories" class="lcd-menu-categories" role="list" aria-label="Năm nhóm menu" hidden></div>
+                    <div class="lcd-menu-main">
+                      <div class="lcd-overlay-content" id="dialog-content"></div>
+                      <div id="lcd-menu-options" class="lcd-menu-options" role="list" aria-label="Lựa chọn đang chỉnh" hidden></div>
+                    </div>
+                  </div>
+                  <div class="lcd-overlay-footer" id="dialog-footer">▲ ▼ ◀ ▶ · ENTER xác nhận · MENU/ESC quay lại</div>
+                </div>
+                <div class="off-screen" id="off-screen" aria-label="LCD đang tắt"></div>
+              </div>
+            </div>
+            <div class="controls" aria-label="Các phím và núm điều khiển">
+              <button id="key-menu" class="hardware-key" type="button">MENU<br><span>ESC</span></button>
+              <div class="pad" role="group" aria-label="TrackPad bốn hướng">
+                <button type="button" id="pad-up" class="pad-up" aria-label="TrackPad lên">▲</button>
+                <button type="button" id="pad-left" class="pad-left" aria-label="TrackPad trái">◀</button>
+                <button type="button" id="pad-right" class="pad-right" aria-label="TrackPad phải">▶</button>
+                <button type="button" id="pad-down" class="pad-down" aria-label="TrackPad xuống">▼</button>
+              </div>
+              <button type="button" id="key-enter" class="hardware-key enter-key">ENTER</button>
+              <div class="key-row">
+                <button id="key-range" type="button" class="hardware-key">RANGE</button>
+                <button id="key-mark" type="button" class="hardware-key">MARK</button>
+                <button id="key-func" type="button" class="hardware-key" aria-label="FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng">FUNC</button>
+              </div>
+              <div class="knob-wrap gain-wrap">
+                <span class="knob-label">GAIN <small>PUSH TO AUTO</small></span>
+                <div class="knob-group">
+                  <button id="gain-knob" class="knob" type="button" aria-label="Nhấn núm GAIN; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
+                </div>
+              </div>
+              <div class="knob-wrap mode-wrap">
+                <span class="knob-label">MODE</span>
+                <div class="knob-group">
+                  <div class="mode-scale" aria-hidden="true">
+                    <span data-mode="NAV1">NAV1</span><span data-mode="LF-ZOOM">LF-ZOOM</span>
+                    <span data-mode="LF">LF</span><span data-mode="DUAL">DUAL</span>
+                    <span data-mode="HF">HF</span><span data-mode="HF-ZOOM">HF-ZOOM</span>
+                    <span data-mode="NAV2">NAV2</span>
+                  </div>
+                  <button id="mode-knob" class="knob knob-mode" type="button" aria-label="Núm MODE: kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
+                </div>
+              </div>
+              <button id="key-power" type="button" class="power-button" aria-label="Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt"><i class="power-glyph" aria-hidden="true"></i><span>BRILL</span></button>
+            </div>
+          </div>
+          <div class="device-footer" role="note">Hình vẽ độc lập theo nguồn công khai · Chưa xác nhận hình học/phần cứng OEM</div>
+        </div>
+        <aside class="training-panel">
+          <div class="panel-head"><p class="eyebrow">INSTRUCTOR CONTROL</p><h2>Phiên thực hành</h2></div>
+          <div class="stats">
+            <div><small>SIM TICK</small><strong id="tick-count">0000</strong></div>
+            <div><small>SỰ KIỆN</small><strong id="event-count">000</strong></div>
+            <div><small>CHẾ ĐỘ</small><strong id="mode-state">LF</strong></div>
+          </div>
+          <div class="instructor-telemetry" role="group" aria-label="D15: Trạng thái và đồng hồ mô phỏng, không phải hiển thị thiết bị thật">
+            <span id="status-line">STANDBY — POWER OFF</span>
+            <span id="clock-line">T + 0000 s</span>
+          </div>
+          <p id="lcd-test-status" class="hint" role="status" aria-live="polite" hidden></p>
+          <section class="rotary-assist" aria-labelledby="rotary-assist-title">
+            <h3 id="rotary-assist-title">Trợ xoay núm trên máy tính</h3>
+            <p class="hint">Các nút ± dưới đây chỉ có ở giao diện học tập, <strong>không phải phím trên FCV-588 thật.</strong></p>
+            <p class="hint">Nhấn POWER/BRILL để khởi động. FUNC hỗ trợ nhấn ngắn và nhấn giữ. Vạch núm và góc chia là minh họa trạng thái, chưa đo từ phần cứng.</p>
+            <p id="dial-readout" class="hint" role="status" aria-live="polite"></p>
+            <div class="rotary-assist-row">
+              <span>GAIN</span>
+              <button id="gain-minus" class="trainer-rotate" type="button" aria-label="Trợ xoay GAIN giảm">−</button>
+              <button id="gain-plus" class="trainer-rotate" type="button" aria-label="Trợ xoay GAIN tăng">+</button>
+            </div>
+            <div class="rotary-assist-row">
+              <span>MODE</span>
+              <button id="mode-minus" class="trainer-rotate" type="button" aria-label="Trợ xoay MODE lùi">−</button>
+              <button id="mode-plus" class="trainer-rotate" type="button" aria-label="Trợ xoay MODE tiến">+</button>
+            </div>
+          </section>
+          <div class="trainer-buttons">
+            <button type="button" id="btn-pause" class="primary">Tạm dừng thời gian</button>
+            <button type="button" id="btn-step">+1 giây giả lập</button>
+            <button type="button" id="btn-reset">Đặt lại bài</button>
+            <button type="button" id="btn-replay">Kiểm tra replay</button>
+          </div>
+          <section class="lesson-panel" aria-label="Nguồn dữ liệu ảo chỉ dành cho giảng viên">
+            <h3>Fixture dữ liệu — INSTRUCTOR ONLY</h3>
+            <p class="hint">Các nút này là công cụ D15 của lớp học, không phải menu FCV-588 và không kết nối GPS, đầu dò hay thiết bị thật.</p>
+            <button id="btn-nav-fixture" type="button" aria-pressed="false">Vị trí tổng hợp: TẮT</button>
+            <button id="btn-mount-fixture" type="button" aria-pressed="false">Gá đầu dò 525STID-PWD ảo: TẮT</button>
+            <button id="btn-tankenmaru-fixture" type="button" aria-pressed="false">Tùy chọn Tankenmaru ảo: TẮT</button>
+            <button id="btn-battery-fixture" type="button" aria-pressed="false">Pin yếu giả lập: TẮT</button>
+            <button id="btn-error-fixture" type="button" aria-pressed="false">Lỗi hệ thống giả lập: TẮT</button>
+            <p id="training-fault-status" class="hint" role="status" aria-live="polite">Không có cảnh báo lỗi giả lập.</p>
+          </section>
+          <section class="lesson-panel" aria-labelledby="lesson-panel-title">
+            <h3 id="lesson-panel-title">Bài thực hành có chấm thao tác</h3>
+            <label for="lesson-picker">Chọn bài học huấn luyện</label>
+            <select id="lesson-picker" aria-describedby="lesson-instruction"></select>
+            <p class="hint" id="lesson-instruction">Bài thực hành dựa trên tài liệu công khai, không phải chứng nhận FURUNO.</p>
+            <button id="btn-start-lesson" type="button">Bắt đầu lượt thực hành mới</button>
+            <button id="btn-score" type="button">Đánh giá chuỗi thao tác</button>
+            <div id="lesson-result" role="status" aria-live="polite">Chưa đánh giá bài thực hành.</div>
+          </section>
+          <div id="validation-status" class="validation-status" role="status">Chưa có phiên kiểm thử tương tác.</div>
+          <h3>Thao tác đang hỗ trợ</h3>
+          <p class="hint">Bật POWER, xoay MODE và chờ hết thời gian chọn; dùng MENU/ESC, ENTER, TrackPad và các núm để thay đổi cài đặt. Những dữ liệu trên màn hình đều tổng hợp; FUNC và một số lựa chọn tùy phiên bản còn giới hạn bằng chứng.</p>
+          <div class="shortcut-line"><kbd>←↑↓→</kbd> TrackPad <kbd>Enter</kbd> xác nhận <kbd>Esc</kbd> trở lại</div>
+          <h3>Thiết bị tiếp theo</h3>
+          <div class="device-roadmap"><div>01 <strong>FCV-588</strong><em>F1 PUBLIC_REFERENCE đang thực hiện</em></div>
+            <div>02 <strong>MDC-2060</strong><em>Hồ sơ chờ duyệt</em></div>
+            <div>03 <strong>AIS R5</strong><em>Chờ xác nhận biến thể</em></div>
+            <div>04 <strong>FAR-2127</strong><em>Chờ lựa chọn RCU</em></div>
+            <div>05 <strong>NS4000</strong><em>Chờ phiên bản</em></div>
+            <div>06 <strong>KODEN J2000</strong><em>HOLD nhận diện</em></div>
+          </div>
+        </aside>
+      </section>
+      <p class="disclaimer">Dữ liệu độ sâu, mục tiêu và tín hiệu trên màn hình là minh họa sinh bằng thuật toán. Không kết nối đầu dò, hệ thống hàng hải hoặc thiết bị phát sóng. Không sử dụng để dẫn tàu thực tế.</p>
+    </main>
+  </div>
+</body>
+</html>

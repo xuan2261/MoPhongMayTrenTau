@@ -1,0 +1,110 @@
+{
+    "collectedAtUtc":  "2026-10-17T06:05:05.2877704Z",
+    "scope":  "PNG_SAVED_ARTIFACT_HEADER_SHA_READBACK_ONLY_NOT_NEW_VISUAL_OR_CHROME_TEST",
+    "receipt":  "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json",
+    "receiptSha256":  "a99ba9173406cce964bcfb3d54c1d531431e575187f8ad29f83dfd30103e3b20",
+    "profile":  "F1-public-reference-20",
+    "imageCount":  12,
+    "status":  "SAVED_IMAGE_BYTES_AND_VIEWPORT_DIMENSIONS_MATCH",
+    "screenshots":  [
+                        {
+                            "viewport":  "1366x768",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_range_pending.png",
+                            "width":  1366,
+                            "height":  768,
+                            "bytes":  310567,
+                            "sha256":  "65e53a6c3ecb0880231f1fa1db3489ada92d7d31b3921743707d1862e972f390"
+                        },
+                        {
+                            "viewport":  "1366x768",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_brill_pending.png",
+                            "width":  1366,
+                            "height":  768,
+                            "bytes":  310488,
+                            "sha256":  "f64245205dd318abf1299af035650865a3f3ce10bda07c24a2521e2d0db7ec28"
+                        },
+                        {
+                            "viewport":  "1366x768",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_mode_pending.png",
+                            "width":  1366,
+                            "height":  768,
+                            "bytes":  313239,
+                            "sha256":  "9d2d53b5ef0a99e7f2c314f70e3b929c5f79ed28056c7cd455030de7d4addce1"
+                        },
+                        {
+                            "viewport":  "1920x1080",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_range_pending.png",
+                            "width":  1920,
+                            "height":  1080,
+                            "bytes":  539864,
+                            "sha256":  "d75b1403b82b4e25d92fbb04722e5070dea5aeff53a35007d6c05083bd903378"
+                        },
+                        {
+                            "viewport":  "1920x1080",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_brill_pending.png",
+                            "width":  1920,
+                            "height":  1080,
+                            "bytes":  539859,
+                            "sha256":  "ec086e35851c58468a8fc682b414d70a9408acd1700266d6587a61743b13bce0"
+                        },
+                        {
+                            "viewport":  "1920x1080",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_mode_pending.png",
+                            "width":  1920,
+                            "height":  1080,
+                            "bytes":  543701,
+                            "sha256":  "335c7cf18563930527e438cb28f845af6ca49ccab6803c92c5fcf2dc5ea0d703"
+                        },
+                        {
+                            "viewport":  "360x800",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_360x800_range_pending.png",
+                            "width":  360,
+                            "height":  800,
+                            "bytes":  53899,
+                            "sha256":  "42b8db329cdfd34464fab778556f1773b1671fe026c1d85dd47703f8479b648b"
+                        },
+                        {
+                            "viewport":  "360x800",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_360x800_brill_pending.png",
+                            "width":  360,
+                            "height":  800,
+                            "bytes":  64298,
+                            "sha256":  "798821c904e833e2d617b835705e7ce2105d1564bf97d0f631ad2372256e00b5"
+                        },
+                        {
+                            "viewport":  "360x800",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_360x800_mode_pending.png",
+                            "width":  360,
+                            "height":  800,
+                            "bytes":  53880,
+                            "sha256":  "28679a64856e73bcaf3deba3556a564cca5739729fa105b05fbd7901469ab5f4"
+                        },
+                        {
+                            "viewport":  "390x844",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_390x844_range_pending.png",
+                            "width":  390,
+                            "height":  844,
+                            "bytes":  55791,
+                            "sha256":  "b650d205307bd71b7d6a46b443bfd3971d92927f33f9312883b4bd474d86a1fc"
+                        },
+                        {
+                            "viewport":  "390x844",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_390x844_brill_pending.png",
+                            "width":  390,
+                            "height":  844,
+                            "bytes":  68107,
+                            "sha256":  "8702b711554ff3ee0bd77859e7504b940c7e97a2b6738399d97e782ea9166df4"
+                        },
+                        {
+                            "viewport":  "390x844",
+                            "path":  "docs/qa/screenshots/fcv588_operator_v31_green_390x844_mode_pending.png",
+                            "width":  390,
+                            "height":  844,
+                            "bytes":  55247,
+                            "sha256":  "79eed5a2150fe7bb91b6e8c87377ce1c30543893f6a273b09cce80b1927f31e3"
+                        }
+                    ],
+    "phase2Verify":  "STOP_NOT_EXECUTED",
+    "newBrowserRun":  "NOT_EXECUTED",
+    "releaseApproval":  "HOLD"
+}

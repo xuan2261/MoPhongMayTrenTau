@@ -1,0 +1,879 @@
+{
+  "stage": "C:\\Work\\MoPhongMayTrenTau\\_p14_stage_20261116",
+  "port": 4214,
+  "views": [
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "overlay": "▶ Pic. Advance\n: 1/2\nZoom Mode\nShift\n: 0\nInterference\n: Auto\nColor Erase\nClutter\nWhite Line\nWhite Marker\nTVG\n: Medium\nSmoothing\n: On\nBottom Zone\nTX Power\n: Auto\nTX Rate\n: 10",
+      "screenshot": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p14\\P14_STAGE_CHROME_V3_375x812_20261116.png",
+      "screenshotSha": "b290a70bec8ecf055eb1ae271482b9229d6638bb8da2867cbed61d7b962eeef9",
+      "sourceCount": 77,
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "overlay": "▶ Pic. Advance\n: 1/2\nZoom Mode\nShift\n: 0\nInterference\n: Auto\nColor Erase\nClutter\nWhite Line\nWhite Marker\nTVG\n: Medium\nSmoothing\n: On\nBottom Zone\nTX Power\n: Auto\nTX Rate\n: 10",
+      "screenshot": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p14\\P14_STAGE_CHROME_V3_1366x768_20261116.png",
+      "screenshotSha": "d1456f1a22a2d5ce68ffc64a2747fb7fd2c2bd5299f728b36fdcbfbfdd80a8cd",
+      "sourceCount": 77,
+      "pageErrors": []
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "name": "375 legacy21 storage raw retained at boot",
+      "pass": true
+    },
+    {
+      "name": "375 AP-1 Sounder 13 row order",
+      "pass": true
+    },
+    {
+      "name": "375 real browser source bodies 77 all hash-match",
+      "pass": true
+    },
+    {
+      "name": "375 no browser JS exceptions",
+      "pass": true
+    },
+    {
+      "name": "1366 legacy21 storage raw retained at boot",
+      "pass": true
+    },
+    {
+      "name": "1366 AP-1 Sounder 13 row order",
+      "pass": true
+    },
+    {
+      "name": "1366 real browser source bodies 77 all hash-match",
+      "pass": true
+    },
+    {
+      "name": "1366 no browser JS exceptions",
+      "pass": true
+    },
+    {
+      "name": "8 OEM reference JPEG not served",
+      "pass": true
+    },
+    {
+      "name": "owned port4214 server cleaned",
+      "pass": true
+    }
+  ],
+  "loadedBodies": [
+    {
+      "url": "/",
+      "sha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "url": "/web/styles.css",
+      "sha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "match": true
+    },
+    {
+      "url": "/web/app.mjs",
+      "sha256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "url": "/src/core/scenario.mjs",
+      "sha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "url": "/src/core/session.mjs",
+      "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/adapter.mjs",
+      "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/echo-projection.mjs",
+      "sha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/model.mjs",
+      "sha256": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/navigation.mjs",
+      "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-widgets.mjs",
+      "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/receiver-status.mjs",
+      "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-layout.mjs",
+      "sha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/calibration.mjs",
+      "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/training-faults.mjs",
+      "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings.mjs",
+      "sha256": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-palette.mjs",
+      "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/units.mjs",
+      "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "url": "/src/core/lessons.mjs",
+      "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-echo-rasterizer.mjs",
+      "sha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "url": "/web/hold-input.mjs",
+      "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "url": "/web/pad-repeat.mjs",
+      "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "url": "/web/rotary-input.mjs",
+      "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "url": "/web/key-feedback.mjs",
+      "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "url": "/web/keyboard-shortcuts.mjs",
+      "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "url": "/web/instructor-tabs.mjs",
+      "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-presentation.mjs",
+      "sha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-config-presentation.mjs",
+      "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-control-presentation.mjs",
+      "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-training-source-matrix.mjs",
+      "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/capabilities.mjs",
+      "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "url": "/src/core/protocol.mjs",
+      "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/alarms.mjs",
+      "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-instructor-meta.mjs",
+      "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version.mjs",
+      "sha256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "url": "/web/favicon.svg",
+      "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings-profile21.mjs",
+      "sha256": "f82e62b3da3145373903e64a4e0c089d4e29206d1072532254cb7b9e436dd010",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version-profile21.mjs",
+      "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "match": true
+    },
+    {
+      "url": "/web/styles.css",
+      "sha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "match": true
+    },
+    {
+      "url": "/",
+      "sha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "url": "/web/app.mjs",
+      "sha256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "url": "/src/core/scenario.mjs",
+      "sha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "url": "/src/core/session.mjs",
+      "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/adapter.mjs",
+      "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/echo-projection.mjs",
+      "sha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/navigation.mjs",
+      "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/model.mjs",
+      "sha256": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings.mjs",
+      "sha256": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/receiver-status.mjs",
+      "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-layout.mjs",
+      "sha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/units.mjs",
+      "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/calibration.mjs",
+      "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/training-faults.mjs",
+      "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-widgets.mjs",
+      "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "url": "/src/core/lessons.mjs",
+      "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-palette.mjs",
+      "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-echo-rasterizer.mjs",
+      "sha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "url": "/web/hold-input.mjs",
+      "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "url": "/web/pad-repeat.mjs",
+      "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "url": "/web/rotary-input.mjs",
+      "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "url": "/web/key-feedback.mjs",
+      "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "url": "/web/keyboard-shortcuts.mjs",
+      "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "url": "/web/instructor-tabs.mjs",
+      "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-config-presentation.mjs",
+      "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-control-presentation.mjs",
+      "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-presentation.mjs",
+      "sha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+      "match": true
+    },
+    {
+      "url": "/src/core/protocol.mjs",
+      "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-training-source-matrix.mjs",
+      "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-instructor-meta.mjs",
+      "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/capabilities.mjs",
+      "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/alarms.mjs",
+      "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version.mjs",
+      "sha256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "url": "/web/favicon.svg",
+      "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "url": "/",
+      "sha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "url": "/web/styles.css",
+      "sha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "match": true
+    },
+    {
+      "url": "/web/app.mjs",
+      "sha256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "url": "/src/core/scenario.mjs",
+      "sha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-widgets.mjs",
+      "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/navigation.mjs",
+      "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/echo-projection.mjs",
+      "sha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/adapter.mjs",
+      "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/calibration.mjs",
+      "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/training-faults.mjs",
+      "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-layout.mjs",
+      "sha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/receiver-status.mjs",
+      "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/model.mjs",
+      "sha256": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "url": "/src/core/session.mjs",
+      "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "url": "/web/key-feedback.mjs",
+      "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "url": "/web/keyboard-shortcuts.mjs",
+      "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "url": "/web/rotary-input.mjs",
+      "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "url": "/web/pad-repeat.mjs",
+      "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-echo-rasterizer.mjs",
+      "sha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-config-presentation.mjs",
+      "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "url": "/web/instructor-tabs.mjs",
+      "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-presentation.mjs",
+      "sha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+      "match": true
+    },
+    {
+      "url": "/web/hold-input.mjs",
+      "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/units.mjs",
+      "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-control-presentation.mjs",
+      "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-palette.mjs",
+      "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings.mjs",
+      "sha256": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "url": "/src/core/lessons.mjs",
+      "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-instructor-meta.mjs",
+      "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-training-source-matrix.mjs",
+      "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "url": "/src/core/protocol.mjs",
+      "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/capabilities.mjs",
+      "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version.mjs",
+      "sha256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/alarms.mjs",
+      "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "url": "/web/favicon.svg",
+      "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings-profile21.mjs",
+      "sha256": "f82e62b3da3145373903e64a4e0c089d4e29206d1072532254cb7b9e436dd010",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version-profile21.mjs",
+      "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "match": true
+    },
+    {
+      "url": "/web/styles.css",
+      "sha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+      "match": true
+    },
+    {
+      "url": "/",
+      "sha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "url": "/web/app.mjs",
+      "sha256": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "url": "/src/core/scenario.mjs",
+      "sha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "url": "/src/core/session.mjs",
+      "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/adapter.mjs",
+      "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-layout.mjs",
+      "sha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/echo-projection.mjs",
+      "sha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/navigation.mjs",
+      "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/calibration.mjs",
+      "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/receiver-status.mjs",
+      "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-widgets.mjs",
+      "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/training-faults.mjs",
+      "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "url": "/web/pad-repeat.mjs",
+      "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "url": "/web/rotary-input.mjs",
+      "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/display-palette.mjs",
+      "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "url": "/web/hold-input.mjs",
+      "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/units.mjs",
+      "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-echo-rasterizer.mjs",
+      "sha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "url": "/web/key-feedback.mjs",
+      "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/settings.mjs",
+      "sha256": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "url": "/src/core/lessons.mjs",
+      "sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/model.mjs",
+      "sha256": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "url": "/web/keyboard-shortcuts.mjs",
+      "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "url": "/web/instructor-tabs.mjs",
+      "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-config-presentation.mjs",
+      "sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-presentation.mjs",
+      "sha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-control-presentation.mjs",
+      "sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "url": "/web/lcd-instructor-meta.mjs",
+      "sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "url": "/web/fcv588-training-source-matrix.mjs",
+      "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "url": "/src/core/protocol.mjs",
+      "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/capabilities.mjs",
+      "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/profile-version.mjs",
+      "sha256": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "url": "/src/devices/fcv588/alarms.mjs",
+      "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "url": "/web/favicon.svg",
+      "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    }
+  ],
+  "originalJpegStatus": [
+    {
+      "name": "dual.jpg",
+      "status": 404
+    },
+    {
+      "name": "giaoDien.jpg",
+      "status": 404
+    },
+    {
+      "name": "hf.jpg",
+      "status": 404
+    },
+    {
+      "name": "lf.jpg",
+      "status": 404
+    },
+    {
+      "name": "nav1.jpg",
+      "status": 404
+    },
+    {
+      "name": "nav2.jpg",
+      "status": 404
+    },
+    {
+      "name": "zoom.jpg",
+      "status": 404
+    },
+    {
+      "name": "zoom2.jpg",
+      "status": 404
+    }
+  ],
+  "serverPid": 29080,
+  "serverExited": true
+}

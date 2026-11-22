@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-11-16T16:47:37.775249+07:00",
+  "finalPath": "docs/qa/FCV588_P12_MENU_SOURCE_20261116/FCV588_P12_MENU_SOURCE_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "5afe2663a1d0d3dff6e213fc537fad3b7dfe5817d7aa776ee4a769e580780855",
+  "freshReadback": {
+    "boundEvidenceCount": 14,
+    "canonicalRuntime": "39/39",
+    "originalJPG": "8/8",
+    "qaPorts": "CLOSED",
+    "referenceManuals": "3/3",
+    "server4173": "HTTP200 PID1204"
+  },
+  "note": "Independent reviewer and local byte readback support exact source/gap classification, not firmware/original-image licensing nor a canonical patch.",
+  "releaseDecision": "NO_GO",
+  "schema": "fcv588-p12-menu-source-independent-postreceipt-v1",
+  "status": "PASS_EVIDENCE_READBACK_STAGING_CANONICAL_APPLY_NO_GO"
+}

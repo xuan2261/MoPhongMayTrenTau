@@ -1,0 +1,3480 @@
+
+> mophongmaytrentau-f0@0.1.0 check
+> node --check src/core/session.mjs && node --check src/core/scenario.mjs && node --check src/devices/fcv588/model.mjs && node --check web/hold-input.mjs && node --check web/app.mjs && npm test
+
+
+> mophongmaytrentau-f0@0.1.0 test
+> node --test test/*.test.mjs
+
+TAP version 13
+# Subtest: F0 defaults are offline, pinned, and powered off
+ok 1 - F0 defaults are offline, pinned, and powered off
+  ---
+  duration_ms: 5.0598
+  type: 'test'
+  ...
+# Subtest: world clock advances with FCV off, while device remains off
+ok 2 - world clock advances with FCV off, while device remains off
+  ---
+  duration_ms: 59.6107
+  type: 'test'
+  ...
+# Subtest: physical long/short press comes from integer tick edges
+ok 3 - physical long/short press comes from integer tick edges
+  ---
+  duration_ms: 6.4752
+  type: 'test'
+  ...
+# Subtest: captured POWER hold duration works independently of paused sim time
+ok 4 - captured POWER hold duration works independently of paused sim time
+  ---
+  duration_ms: 10.522
+  type: 'test'
+  ...
+# Subtest: same-revision replay and live session reject changed hold, gesture or control semantics
+ok 5 - same-revision replay and live session reject changed hold, gesture or control semantics
+  ---
+  duration_ms: 11.0871
+  type: 'test'
+  ...
+# Subtest: canonical replay detects same-revision reducer-result drift without trusting a client checksum as authentication
+ok 6 - canonical replay detects same-revision reducer-result drift without trusting a client checksum as authentication
+  ---
+  duration_ms: 7.5539
+  type: 'test'
+  ...
+# Subtest: boot completes on simulated ticks only
+ok 7 - boot completes on simulated ticks only
+  ---
+  duration_ms: 1.7886
+  type: 'test'
+  ...
+# Subtest: replay reproduces all session hashes and prefix checkpoints
+ok 8 - replay reproduces all session hashes and prefix checkpoints
+  ---
+  duration_ms: 34.4811
+  type: 'test'
+  ...
+# Subtest: reset clears held keys, sequence and all independent states
+ok 9 - reset clears held keys, sequence and all independent states
+  ---
+  duration_ms: 3.8478
+  type: 'test'
+  ...
+# Subtest: replay fails closed on header, scenario, profile, sequence or tick drift
+ok 10 - replay fails closed on header, scenario, profile, sequence or tick drift
+  ---
+  duration_ms: 5.1367
+  type: 'test'
+  ...
+# Subtest: swapped metadata and logs reject before any replay state updates
+ok 11 - swapped metadata and logs reject before any replay state updates
+  ---
+  duration_ms: 5.2988
+  type: 'test'
+  ...
+# Subtest: illegal control, reserved fields and edge errors reject
+ok 12 - illegal control, reserved fields and edge errors reject
+  ---
+  duration_ms: 4.9824
+  type: 'test'
+  ...
+# Subtest: stable named noise streams are independent of other device instances
+ok 13 - stable named noise streams are independent of other device instances
+  ---
+  duration_ms: 1.4387
+  type: 'test'
+  ...
+# Subtest: device inputs never mutate or advance world until explicit tick
+ok 14 - device inputs never mutate or advance world until explicit tick
+  ---
+  duration_ms: 1.6435
+  type: 'test'
+  ...
+# Subtest: FCV MODE selector cycles seven candidates, then commits on timeout (OME §1.4)
+ok 15 - FCV MODE selector cycles seven candidates, then commits on timeout (OME §1.4)
+  ---
+  duration_ms: 17.1131
+  type: 'test'
+  ...
+# Subtest: range selection stages edits and only ENTER commits
+ok 16 - range selection stages edits and only ENTER commits
+  ---
+  duration_ms: 8.885
+  type: 'test'
+  ...
+# Subtest: GAIN push selects manual mode and rotary changes 0..10
+ok 17 - GAIN push selects manual mode and rotary changes 0..10
+  ---
+  duration_ms: 5.7089
+  type: 'test'
+  ...
+# Subtest: GAIN in automatic mode changes only Auto Gain Offset, not manual gain (OME §1.6)
+ok 18 - GAIN in automatic mode changes only Auto Gain Offset, not manual gain (OME §1.6)
+  ---
+  duration_ms: 1.7943
+  type: 'test'
+  ...
+# Subtest: brilliance can be adjusted in dialog and committed with MENU/ESC
+ok 19 - brilliance can be adjusted in dialog and committed with MENU/ESC
+  ---
+  duration_ms: 2.0842
+  type: 'test'
+  ...
+# Subtest: free TrackPad adjusts VRM depth while sonar mode is active, not NAV
+ok 20 - free TrackPad adjusts VRM depth while sonar mode is active, not NAV
+  ---
+  duration_ms: 2.3347
+  type: 'test'
+  ...
+# Subtest: MARK rejects absent positioning; FUNC hold opens the source-backed assignment selector
+ok 21 - MARK rejects absent positioning; FUNC hold opens the source-backed assignment selector
+  ---
+  duration_ms: 3.1337
+  type: 'test'
+  ...
+# Subtest: observation remains identical under manual Range and Gain, display reacts
+ok 22 - observation remains identical under manual Range and Gain, display reacts
+  ---
+  duration_ms: 39.6786
+  type: 'test'
+  ...
+# Subtest: AgentKit F1 plan has seven non-empty planned phases and no fake completion
+ok 23 - AgentKit F1 plan has seven non-empty planned phases and no fake completion
+  ---
+  duration_ms: 95.9844
+  type: 'test'
+  ...
+# Subtest: all local markdown plan references resolve in the intended workspace
+ok 24 - all local markdown plan references resolve in the intended workspace
+  ---
+  duration_ms: 11.031
+  type: 'test'
+  ...
+# Subtest: P06 device-focus toggle is external presentation state only
+ok 25 - P06 device-focus toggle is external presentation state only
+  ---
+  duration_ms: 1.7732
+  type: 'test'
+  ...
+# Subtest: P06 focus mode de-emphasizes D15 without hiding its five accessible tabs
+ok 26 - P06 focus mode de-emphasizes D15 without hiding its five accessible tabs
+  ---
+  duration_ms: 0.6342
+  type: 'test'
+  ...
+# Subtest: P06 focused D15 restores full opacity even when device-focus toggle is checked
+ok 27 - P06 focused D15 restores full opacity even when device-focus toggle is checked
+  ---
+  duration_ms: 0.3018
+  type: 'test'
+  ...
+# Subtest: P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+ok 28 - P04 provenance v2 rejects cross-scenario metadata and inconsistent world bottom
+  ---
+  duration_ms: 21.719
+  type: 'test'
+  ...
+# Subtest: P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+ok 29 - P04 provenance v2 tick231 maps authored raw bottom through makeEchoFrame sampling
+  ---
+  duration_ms: 54.0629
+  type: 'test'
+  ...
+# Subtest: P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+ok 30 - P04 provenance v2 Stop freezes BL depth-window metadata with frozen pixels
+  ---
+  duration_ms: 54.494
+  type: 'test'
+  ...
+# Subtest: P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+ok 31 - P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+  ---
+  duration_ms: 115.0511
+  type: 'test'
+  ...
+# Subtest: P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+ok 32 - P04 provenance producer authors absent seabed for a near-bottom fish-only synthetic scenario
+  ---
+  duration_ms: 22.0261
+  type: 'test'
+  ...
+# Subtest: P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+ok 33 - P04 missing or spoofed bottom provenance fails closed to the absolute BL slice
+  ---
+  duration_ms: 7.8987
+  type: 'test'
+  ...
+# Subtest: P04 two-column authored historical seabed is flattened from per-column source depth
+ok 34 - P04 two-column authored historical seabed is flattened from per-column source depth
+  ---
+  duration_ms: 3.6392
+  type: 'test'
+  ...
+# Subtest: P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+ok 35 - P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection
+  ---
+  duration_ms: 16.2083
+  type: 'test'
+  ...
+# Subtest: P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+ok 36 - P04 BL picture Stop and slow history remain deterministic after source-authored flattening
+  ---
+  duration_ms: 60.2131
+  type: 'test'
+  ...
+# Subtest: P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+ok 37 - P04 BL rasterizer never reconstructs a seabed tail from global depth alone
+  ---
+  duration_ms: 14.8277
+  type: 'test'
+  ...
+# Subtest: P04 companion provenance stays outside observation, replay and profile21 contracts
+ok 38 - P04 companion provenance stays outside observation, replay and profile21 contracts
+  ---
+  duration_ms: 10.0968
+  type: 'test'
+  ...
+# Subtest: P04 runtime wires companion metadata beside, not into, the cached observation
+ok 39 - P04 runtime wires companion metadata beside, not into, the cached observation
+  ---
+  duration_ms: 12.6797
+  type: 'test'
+  ...
+# Subtest: P14 frozen original canonical profile21 fixture P14_LEGACY_PROFILE21_SELECTION_ENVELOPE_20261116.json
+ok 40 - P14 frozen original canonical profile21 fixture P14_LEGACY_PROFILE21_SELECTION_ENVELOPE_20261116.json
+  ---
+  duration_ms: 22.8215
+  type: 'test'
+  ...
+# Subtest: P14 frozen original canonical profile21 fixture P14_LEGACY_PROFILE21_EDITING_ENVELOPE_20261116.json
+ok 41 - P14 frozen original canonical profile21 fixture P14_LEGACY_PROFILE21_EDITING_ENVELOPE_20261116.json
+  ---
+  duration_ms: 8.8506
+  type: 'test'
+  ...
+# Subtest: P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NAV1_ENVELOPE_20261116.json
+ok 42 - P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NAV1_ENVELOPE_20261116.json
+  ---
+  duration_ms: 38.7674
+  type: 'test'
+  ...
+# Subtest: P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NAV2_ENVELOPE_20261116.json
+ok 43 - P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NAV2_ENVELOPE_20261116.json
+  ---
+  duration_ms: 10.2686
+  type: 'test'
+  ...
+# Subtest: P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_DATA_SOURCE_ENVELOPE_20261116.json
+ok 44 - P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_DATA_SOURCE_ENVELOPE_20261116.json
+  ---
+  duration_ms: 13.0249
+  type: 'test'
+  ...
+# Subtest: P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NMEA_COMMITTED_ENVELOPE_20261116.json
+ok 45 - P14 canonical profile21 pinned NAV/Data fixture: P14_LEGACY_PROFILE21_NMEA_COMMITTED_ENVELOPE_20261116.json
+  ---
+  duration_ms: 7.9455
+  type: 'test'
+  ...
+# Subtest: P14 archived21 historical menu presentation must use its original semantic atlas
+ok 46 - P14 archived21 historical menu presentation must use its original semantic atlas
+  ---
+  duration_ms: 20.1561
+  type: 'test'
+  ...
+# Subtest: P14 frozen profile21 envelope renders historically named White Marker after replay
+ok 47 - P14 frozen profile21 envelope renders historically named White Marker after replay
+  ---
+  duration_ms: 5.6258
+  type: 'test'
+  ...
+# Subtest: P14 exposes active profile22 with manual AP-1 menu order bound into adapter profile hash
+ok 48 - P14 exposes active profile22 with manual AP-1 menu order bound into adapter profile hash
+  ---
+  duration_ms: 9.9232
+  type: 'test'
+  ...
+# Subtest: P14 archived profile21 menu/adapter preserves original selected row and byte-for-byte historic replay hashes
+ok 49 - P14 archived profile21 menu/adapter preserves original selected row and byte-for-byte historic replay hashes
+  ---
+  duration_ms: 25.1013
+  type: 'test'
+  ...
+# Subtest: P14 historic profile21 committed White Marker editor also replays under its exact old hash
+ok 50 - P14 historic profile21 committed White Marker editor also replays under its exact old hash
+  ---
+  duration_ms: 9.5311
+  type: 'test'
+  ...
+# Subtest: P14 profile22 menu navigation and selection-only replay deterministic, no reinterpretation with old profile
+ok 51 - P14 profile22 menu navigation and selection-only replay deterministic, no reinterpretation with old profile
+  ---
+  duration_ms: 13.3013
+  type: 'test'
+  ...
+# Subtest: P14 legacy stored profile21 settings import explicitly, current22 decode rejects old without implicit rewrite
+ok 52 - P14 legacy stored profile21 settings import explicitly, current22 decode rejects old without implicit rewrite
+  ---
+  duration_ms: 1.7325
+  type: 'test'
+  ...
+# Subtest: P14 explicit legacy compatibility is reachable in app storage logic without replay migration or forced original storage rewrite
+ok 53 - P14 explicit legacy compatibility is reachable in app storage logic without replay migration or forced original storage rewrite
+  ---
+  duration_ms: 13.6808
+  type: 'test'
+  ...
+# Subtest: photo-reference header renders MAN.R and integer G:10 without inventing voltage
+ok 54 - photo-reference header renders MAN.R and integer G:10 without inventing voltage
+  ---
+  duration_ms: 3.0592
+  type: 'test'
+  ...
+# Subtest: source-backed labels distinguish DUAL and zoom mode without changing selector state
+ok 55 - source-backed labels distinguish DUAL and zoom mode without changing selector state
+  ---
+  duration_ms: 0.5902
+  type: 'test'
+  ...
+# Subtest: NAV photo displays its data-region labels, not an invented global range/gain header
+ok 56 - NAV photo displays its data-region labels, not an invented global range/gain header
+  ---
+  duration_ms: 1.7233
+  type: 'test'
+  ...
+# Subtest: photo-body sonar canvas does not invent per-pane 50/200 kHz text or NAV title
+ok 57 - photo-body sonar canvas does not invent per-pane 50/200 kHz text or NAV title
+  ---
+  duration_ms: 10.724
+  type: 'test'
+  ...
+# Subtest: photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+ok 58 - photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+  ---
+  duration_ms: 2.1396
+  type: 'test'
+  ...
+# Subtest: NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+ok 59 - NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+  ---
+  duration_ms: 0.3208
+  type: 'test'
+  ...
+# Subtest: P03 raster must be display-only, deterministic, bounded and leave source untouched
+ok 60 - P03 raster must be display-only, deterministic, bounded and leave source untouched
+  ---
+  duration_ms: 54.4169
+  type: 'test'
+  ...
+# Subtest: P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+ok 61 - P03 LF surface clutter comes from explicit synthetic display-art profile, not a fake receiver
+  ---
+  duration_ms: 50.2656
+  type: 'test'
+  ...
+# Subtest: P03 seabed has contiguous strong core and graded tail below each typed bottom column
+ok 62 - P03 seabed has contiguous strong core and graded tail below each typed bottom column
+  ---
+  duration_ms: 8.9615
+  type: 'test'
+  ...
+# Subtest: P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+ok 63 - P03 blank input, TX Off and fish-only input must not invent surface or bottom signal
+  ---
+  duration_ms: 26.6022
+  type: 'test'
+  ...
+# Subtest: P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+ok 64 - P03 a coherent midwater return must not be mistaken for seabed without matching typed bottom depth
+  ---
+  duration_ms: 4.6586
+  type: 'test'
+  ...
+# Subtest: P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+ok 65 - P03 without typed bottom depth never adds a synthetic seabed or near-surface layer
+  ---
+  duration_ms: 25.1828
+  type: 'test'
+  ...
+# Subtest: P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+ok 66 - P03 stops hold byte-stable raster, drawing not tied to advancing sourceTick
+  ---
+  duration_ms: 73.7965
+  type: 'test'
+  ...
+# Subtest: P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+ok 67 - P03 white/blue and 8/16 entries remain bounded, and invalid buffers fail closed
+  ---
+  duration_ms: 193.0156
+  type: 'test'
+  ...
+# Subtest: P03 live canvas uses the owned view-only raster, preserving screen annotation path
+ok 68 - P03 live canvas uses the owned view-only raster, preserving screen annotation path
+  ---
+  duration_ms: 20.8024
+  type: 'test'
+  ...
+# Subtest: P06 face keeps the observed LCD-left / narrow-control-right relationship
+ok 69 - P06 face keeps the observed LCD-left / narrow-control-right relationship
+  ---
+  duration_ms: 2.0325
+  type: 'test'
+  ...
+# Subtest: P06 right-column pad, keys and rotary knobs use restrained photo-informed proportions
+ok 70 - P06 right-column pad, keys and rotary knobs use restrained photo-informed proportions
+  ---
+  duration_ms: 1.1056
+  type: 'test'
+  ...
+# Subtest: P06 original reference photos remain reference-only and are not served artwork
+ok 71 - P06 original reference photos remain reference-only and are not served artwork
+  ---
+  duration_ms: 0.6249
+  type: 'test'
+  ...
+# Subtest: P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+ok 72 - P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+  ---
+  duration_ms: 26.653
+  type: 'test'
+  ...
+# Subtest: P05 left/right category navigation preserves committed settings
+ok 73 - P05 left/right category navigation preserves committed settings
+  ---
+  duration_ms: 4.5077
+  type: 'test'
+  ...
+# Subtest: P05 menu projection exposes two-column label/value data without changing atlas labels
+ok 74 - P05 menu projection exposes two-column label/value data without changing atlas labels
+  ---
+  duration_ms: 10.4363
+  type: 'test'
+  ...
+# Subtest: P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+ok 75 - P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+  ---
+  duration_ms: 8.5006
+  type: 'test'
+  ...
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 76 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 4.4626
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+ok 77 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+  ---
+  duration_ms: 7.2529
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+ok 78 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+  ---
+  duration_ms: 2.3074
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 79 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.6965
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 80 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 1.1561
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 81 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 14.0783
+  type: 'test'
+  ...
+# Subtest: independent F1 implementation status accounts for all 64 operator rows plus D15
+ok 82 - independent F1 implementation status accounts for all 64 operator rows plus D15
+  ---
+  duration_ms: 10.9907
+  type: 'test'
+  ...
+# Subtest: derived D15 implementation note matches the seven actual versioned scored lessons without claiming OEM release
+ok 83 - derived D15 implementation note matches the seven actual versioned scored lessons without claiming OEM release
+  ---
+  duration_ms: 2.0055
+  type: 'test'
+  ...
+# Subtest: C05/C13 synthetic navigation checkpoints cite actual targeted scenarios, without raising claims
+ok 84 - C05/C13 synthetic navigation checkpoints cite actual targeted scenarios, without raising claims
+  ---
+  duration_ms: 2.013
+  type: 'test'
+  ...
+# Subtest: D10 trainer fault cues are a synthetic-only subset, not observed battery or error codes
+ok 85 - D10 trainer fault cues are a synthetic-only subset, not observed battery or error codes
+  ---
+  duration_ms: 1.6646
+  type: 'test'
+  ...
+# Subtest: A17 key-beep choice and browser TrackPad auto-repeat are synthetic subset with source HOLD
+ok 86 - A17 key-beep choice and browser TrackPad auto-repeat are synthetic subset with source HOLD
+  ---
+  duration_ms: 1.8615
+  type: 'test'
+  ...
+# Subtest: D02 eight-slot manual Range bank has targeted tests but no OEM conformance
+ok 87 - D02 eight-slot manual Range bank has targeted tests but no OEM conformance
+  ---
+  duration_ms: 2.8135
+  type: 'test'
+  ...
+# Subtest: 64+D15 classification fails closed instead of treating an unreviewed domain smoke as operable
+ok 88 - 64+D15 classification fails closed instead of treating an unreviewed domain smoke as operable
+  ---
+  duration_ms: 22.2913
+  type: 'test'
+  ...
+# Subtest: generic Type=[600W] forbids all advanced visual claims, even under forged On settings
+ok 89 - generic Type=[600W] forbids all advanced visual claims, even under forged On settings
+  ---
+  duration_ms: 12.2862
+  type: 'test'
+  ...
+# Subtest: virtual 525STID-PWD permits BDS only with draft, mount, Auto and environment guards
+ok 90 - virtual 525STID-PWD permits BDS only with draft, mount, Auto and environment guards
+  ---
+  duration_ms: 0.9095
+  type: 'test'
+  ...
+# Subtest: runtime never invents a compatible/aligned mounting merely from a named transducer setting
+ok 91 - runtime never invents a compatible/aligned mounting merely from a named transducer setting
+  ---
+  duration_ms: 12.9216
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+ok 92 - §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+  ---
+  duration_ms: 13.5973
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+ok 93 - §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+  ---
+  duration_ms: 17.1822
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 enable remains independent of parameter editing
+ok 94 - §1.18 ALARM1 enable remains independent of parameter editing
+  ---
+  duration_ms: 6.5649
+  type: 'test'
+  ...
+# Subtest: independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+ok 95 - independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+  ---
+  duration_ms: 11.9365
+  type: 'test'
+  ...
+# Subtest: fish alarm Level and synthetic category govern detection, not merely the enabled switch
+ok 96 - fish alarm Level and synthetic category govern detection, not merely the enabled switch
+  ---
+  duration_ms: 6.157
+  type: 'test'
+  ...
+# Subtest: ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+ok 97 - ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+  ---
+  duration_ms: 8.5655
+  type: 'test'
+  ...
+# Subtest: §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+ok 98 - §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+  ---
+  duration_ms: 22.7507
+  type: 'test'
+  ...
+# Subtest: one ALARM profile AND-combines enabled conditions, never ORs them
+ok 99 - one ALARM profile AND-combines enabled conditions, never ORs them
+  ---
+  duration_ms: 3.1379
+  type: 'test'
+  ...
+# Subtest: separate ALARM1-5 profiles can fire simultaneously without merging conditions
+ok 100 - separate ALARM1-5 profiles can fire simultaneously without merging conditions
+  ---
+  duration_ms: 0.4168
+  type: 'test'
+  ...
+# Subtest: acknowledging silences active causes but never clears them prematurely
+ok 101 - acknowledging silences active causes but never clears them prematurely
+  ---
+  duration_ms: 0.5549
+  type: 'test'
+  ...
+# Subtest: missing synthetic sensor data does not fabricate causes
+ok 102 - missing synthetic sensor data does not fabricate causes
+  ---
+  duration_ms: 0.4161
+  type: 'test'
+  ...
+# Subtest: Inside/Outside profile conditions fail closed on missing values and honor boundaries
+ok 103 - Inside/Outside profile conditions fail closed on missing values and honor boundaries
+  ---
+  duration_ms: 0.8306
+  type: 'test'
+  ...
+# Subtest: C04 invalid negative speed never triggers an Outside alarm, while valid zero does
+ok 104 - C04 invalid negative speed never triggers an Outside alarm, while valid zero does
+  ---
+  duration_ms: 0.3669
+  type: 'test'
+  ...
+# Subtest: fish alarm threshold and source category are explicit and do not infer an ACCU-FISH device
+ok 105 - fish alarm threshold and source category are explicit and do not infer an ACCU-FISH device
+  ---
+  duration_ms: 0.3124
+  type: 'test'
+  ...
+# Subtest: Arrival alarm never guesses a real position or destination
+ok 106 - Arrival alarm never guesses a real position or destination
+  ---
+  duration_ms: 12.8646
+  type: 'test'
+  ...
+# Subtest: arrival radius triggers and clears on typed moving ownship, without actual GPS or NMEA output
+ok 107 - arrival radius triggers and clears on typed moving ownship, without actual GPS or NMEA output
+  ---
+  duration_ms: 24.8741
+  type: 'test'
+  ...
+# Subtest: arrival enable and radius are guarded, offline, versioned device choices
+ok 108 - arrival enable and radius are guarded, offline, versioned device choices
+  ---
+  duration_ms: 0.7218
+  type: 'test'
+  ...
+# Subtest: first MODE detent opens selection without immediate effective mode switch
+ok 109 - first MODE detent opens selection without immediate effective mode switch
+  ---
+  duration_ms: 8.7035
+  type: 'test'
+  ...
+# Subtest: UI clock expires MODE independently of paused world and is replay-deterministic
+ok 110 - UI clock expires MODE independently of paused world and is replay-deterministic
+  ---
+  duration_ms: 11.314
+  type: 'test'
+  ...
+# Subtest: public reducer revision rejects replay envelopes bound to F0 semantics
+ok 111 - public reducer revision rejects replay envelopes bound to F0 semantics
+  ---
+  duration_ms: 4.4401
+  type: 'test'
+  ...
+# Subtest: brilliance key cycles levels and an independent UI timeout commits the preview
+ok 112 - brilliance key cycles levels and an independent UI timeout commits the preview
+  ---
+  duration_ms: 5.3184
+  type: 'test'
+  ...
+# Subtest: POWER hold boundary is greater than 3000ms and F0 remains isolated
+ok 113 - POWER hold boundary is greater than 3000ms and F0 remains isolated
+  ---
+  duration_ms: 3.1878
+  type: 'test'
+  ...
+# Subtest: POWER hold shows a replayable countdown and cancelled input does not shut down
+ok 114 - POWER hold shows a replayable countdown and cancelled input does not shut down
+  ---
+  duration_ms: 8.1053
+  type: 'test'
+  ...
+# Subtest: RANGE repeated press in manual mode stages next preset until ENTER
+ok 115 - RANGE repeated press in manual mode stages next preset until ENTER
+  ---
+  duration_ms: 4.9115
+  type: 'test'
+  ...
+# Subtest: GAIN Auto Offset is bounded independently from manual gain
+ok 116 - GAIN Auto Offset is bounded independently from manual gain
+  ---
+  duration_ms: 3.5525
+  type: 'test'
+  ...
+# Subtest: free VRM is disabled in NAV after MODE selection commits
+ok 117 - free VRM is disabled in NAV after MODE selection commits
+  ---
+  duration_ms: 3.046
+  type: 'test'
+  ...
+# Subtest: lesson picker and score action are labeled and instructor-only
+ok 118 - lesson picker and score action are labeled and instructor-only
+  ---
+  duration_ms: 3.4238
+  type: 'test'
+  ...
+# Subtest: physical keyboard, responsive portrait, focus and training warning are still explicit
+ok 119 - physical keyboard, responsive portrait, focus and training warning are still explicit
+  ---
+  duration_ms: 0.4423
+  type: 'test'
+  ...
+# Subtest: BRILL changes the entire LCD luminance and depth units are display-only
+ok 120 - BRILL changes the entire LCD luminance and depth units are display-only
+  ---
+  duration_ms: 0.4933
+  type: 'test'
+  ...
+# Subtest: Demo Off never draws a fictitious live sonar trace without a virtual fixture
+ok 121 - Demo Off never draws a fictitious live sonar trace without a virtual fixture
+  ---
+  duration_ms: 1.6012
+  type: 'test'
+  ...
+# Subtest: Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+ok 122 - Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+  ---
+  duration_ms: 0.5557
+  type: 'test'
+  ...
+# Subtest: runtime remains localhost only and cannot statically expose documents
+ok 123 - runtime remains localhost only and cannot statically expose documents
+  ---
+  duration_ms: 0.3455
+  type: 'test'
+  ...
+# Subtest: Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+ok 124 - Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+  ---
+  duration_ms: 18.8438
+  type: 'test'
+  ...
+# Subtest: Chrome acceptance refuses stale served source and attests clean isolated storage
+ok 125 - Chrome acceptance refuses stale served source and attests clean isolated storage
+  ---
+  duration_ms: 2.3641
+  type: 'test'
+  ...
+# Subtest: Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+ok 126 - Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+  ---
+  duration_ms: 2.8792
+  type: 'test'
+  ...
+# Subtest: long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+ok 127 - long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+  ---
+  duration_ms: 1.6624
+  type: 'test'
+  ...
+# Subtest: LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+ok 128 - LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+  ---
+  duration_ms: 0.8038
+  type: 'test'
+  ...
+# Subtest: menu conveys source and rights HOLD separately from an unavailable capability
+ok 129 - menu conveys source and rights HOLD separately from an unavailable capability
+  ---
+  duration_ms: 0.5362
+  type: 'test'
+  ...
+# Subtest: phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+ok 130 - phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+  ---
+  duration_ms: 24.3222
+  type: 'test'
+  ...
+# Subtest: Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+ok 131 - Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+  ---
+  duration_ms: 2.9217
+  type: 'test'
+  ...
+# Subtest: low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+ok 132 - low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+  ---
+  duration_ms: 2.4987
+  type: 'test'
+  ...
+# Subtest: phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+ok 133 - phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+  ---
+  duration_ms: 2.2049
+  type: 'test'
+  ...
+# Subtest: V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+ok 134 - V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+  ---
+  duration_ms: 4.5771
+  type: 'test'
+  ...
+# Subtest: D06 Calib is a nested operator workflow with sourced fields, not an inert 0..3 scalar
+ok 135 - D06 Calib is a nested operator workflow with sourced fields, not an inert 0..3 scalar
+  ---
+  duration_ms: 24.8593
+  type: 'test'
+  ...
+# Subtest: D06 gain-adjust edits remain staged, cancelable, persistent, replayable and field bounded
+ok 136 - D06 gain-adjust edits remain staged, cancelable, persistent, replayable and field bounded
+  ---
+  duration_ms: 33.5222
+  type: 'test'
+  ...
+# Subtest: D06 classroom gain, temperature, speed and fish adjustments affect projections, not source observation
+ok 137 - D06 classroom gain, temperature, speed and fish adjustments affect projections, not source observation
+  ---
+  duration_ms: 22.4894
+  type: 'test'
+  ...
+# Subtest: D06 Water Type and Zero Line change training display state, never water salinity measurements
+ok 138 - D06 Water Type and Zero Line change training display state, never water salinity measurements
+  ---
+  duration_ms: 1.8845
+  type: 'test'
+  ...
+# Subtest: each sonar pane has five scale labels below header without invented per-pane kHz text
+ok 139 - each sonar pane has five scale labels below header without invented per-pane kHz text
+  ---
+  duration_ms: 8.0017
+  type: 'test'
+  ...
+# Subtest: student console explicitly displays the three-part public-reference disclaimer
+ok 140 - student console explicitly displays the three-part public-reference disclaimer
+  ---
+  duration_ms: 2.5349
+  type: 'test'
+  ...
+# Subtest: no active profile or source asset asserts certified hardware or redistribution rights
+ok 141 - no active profile or source asset asserts certified hardware or redistribution rights
+  ---
+  duration_ms: 10.3955
+  type: 'test'
+  ...
+# Subtest: public lesson decisions require authoritative source, verified implementation and browser evidence
+ok 142 - public lesson decisions require authoritative source, verified implementation and browser evidence
+  ---
+  duration_ms: 1.5993
+  type: 'test'
+  ...
+# Subtest: range-bank projects only the existing semantic operator fields and never mutates state
+ok 143 - range-bank projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 27.1348
+  type: 'test'
+  ...
+# Subtest: units projects only the existing semantic operator fields and never mutates state
+ok 144 - units projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 14.9089
+  type: 'test'
+  ...
+# Subtest: calibration projects only the existing semantic operator fields and never mutates state
+ok 145 - calibration projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 9.0847
+  type: 'test'
+  ...
+# Subtest: nav-boxes projects only the existing semantic operator fields and never mutates state
+ok 146 - nav-boxes projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 6.4122
+  type: 'test'
+  ...
+# Subtest: fish-alarm projects only the existing semantic operator fields and never mutates state
+ok 147 - fish-alarm projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.9012
+  type: 'test'
+  ...
+# Subtest: fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+ok 148 - fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 6.9135
+  type: 'test'
+  ...
+# Subtest: installation projects only the existing semantic operator fields and never mutates state
+ok 149 - installation projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 11.5728
+  type: 'test'
+  ...
+# Subtest: func-program projects only the existing semantic operator fields and never mutates state
+ok 150 - func-program projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.4071
+  type: 'test'
+  ...
+# Subtest: Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 151 - Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 121.6579
+  type: 'test'
+  ...
+# Subtest: Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 152 - Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 76.1115
+  type: 'test'
+  ...
+# Subtest: Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 153 - Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 69.563
+  type: 'test'
+  ...
+# Subtest: NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 154 - NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 63.6873
+  type: 'test'
+  ...
+# Subtest: ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 155 - ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 69.1627
+  type: 'test'
+  ...
+# Subtest: all bounded numeric configuration windows keep edge and middle drafts visible in original order
+ok 156 - all bounded numeric configuration windows keep edge and middle drafts visible in original order
+  ---
+  duration_ms: 23.0696
+  type: 'test'
+  ...
+# Subtest: Range Bank uses selected depth units consistently without reinterpreting stored meters
+ok 157 - Range Bank uses selected depth units consistently without reinterpreting stored meters
+  ---
+  duration_ms: 3.5617
+  type: 'test'
+  ...
+# Subtest: alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+ok 158 - alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+  ---
+  duration_ms: 23.6743
+  type: 'test'
+  ...
+# Subtest: Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+ok 159 - Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+  ---
+  duration_ms: 9.4426
+  type: 'test'
+  ...
+# Subtest: FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+ok 160 - FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+  ---
+  duration_ms: 3.8731
+  type: 'test'
+  ...
+# Subtest: configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+ok 161 - configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+  ---
+  duration_ms: 5.7112
+  type: 'test'
+  ...
+# Subtest: runtime configuration renderer consumes semantic projections using safe inert DOM
+ok 162 - runtime configuration renderer consumes semantic projections using safe inert DOM
+  ---
+  duration_ms: 26.4569
+  type: 'test'
+  ...
+# Subtest: review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+ok 163 - review A: committed Off suppresses the effective displayed alarm without rewriting its cached observation
+  ---
+  duration_ms: 49.8403
+  type: 'test'
+  ...
+# Subtest: review A: pending Off cannot suppress a committed On alarm or its current cause
+ok 164 - review A: pending Off cannot suppress a committed On alarm or its current cause
+  ---
+  duration_ms: 9.1431
+  type: 'test'
+  ...
+# Subtest: shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+ok 165 - shared alarm view recomputes audible only from enabled unacknowledged causes and ignores drafts
+  ---
+  duration_ms: 7.2952
+  type: 'test'
+  ...
+# Subtest: Range shows current and pending mode/preset without persisting a phantom control value
+ok 166 - Range shows current and pending mode/preset without persisting a phantom control value
+  ---
+  duration_ms: 24.8238
+  type: 'test'
+  ...
+# Subtest: Range formatting reads existing configured meters and current depth unit without changing storage
+ok 167 - Range formatting reads existing configured meters and current depth unit without changing storage
+  ---
+  duration_ms: 6.7714
+  type: 'test'
+  ...
+# Subtest: Gain exposes the pending mode and offset, while committed control values remain separate
+ok 168 - Gain exposes the pending mode and offset, while committed control values remain separate
+  ---
+  duration_ms: 9.6637
+  type: 'test'
+  ...
+# Subtest: BRILL selected level and existing idle timer are projected without a second clock
+ok 169 - BRILL selected level and existing idle timer are projected without a second clock
+  ---
+  duration_ms: 4.2598
+  type: 'test'
+  ...
+# Subtest: MODE displays all existing rotary positions and never advertises ENTER as commit
+ok 170 - MODE displays all existing rotary positions and never advertises ENTER as commit
+  ---
+  duration_ms: 3.5671
+  type: 'test'
+  ...
+# Subtest: basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+ok 171 - basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+  ---
+  duration_ms: 3.4669
+  type: 'test'
+  ...
+# Subtest: basic control renderer uses original inert DOM and has no independent state transitions
+ok 172 - basic control renderer uses original inert DOM and has no independent state transitions
+  ---
+  duration_ms: 19.2671
+  type: 'test'
+  ...
+# Subtest: every available lesson is explicitly training-only and source referenced
+ok 173 - every available lesson is explicitly training-only and source referenced
+  ---
+  duration_ms: 3.6597
+  type: 'test'
+  ...
+# Subtest: MODE lesson passes on actual deterministic recorded transitions and replay
+ok 174 - MODE lesson passes on actual deterministic recorded transitions and replay
+  ---
+  duration_ms: 37.4076
+  type: 'test'
+  ...
+# Subtest: missing required action is not graded PASS even if mode field happens to match
+ok 175 - missing required action is not graded PASS even if mode field happens to match
+  ---
+  duration_ms: 11.4549
+  type: 'test'
+  ...
+# Subtest: teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+ok 176 - teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+  ---
+  duration_ms: 14.564
+  type: 'test'
+  ...
+# Subtest: scoring a new lesson attempt cannot credit actions or UI time from before start
+ok 177 - scoring a new lesson attempt cannot credit actions or UI time from before start
+  ---
+  duration_ms: 20.4707
+  type: 'test'
+  ...
+# Subtest: a fresh lesson attempt with new events passes from its own recorded sequence
+ok 178 - a fresh lesson attempt with new events passes from its own recorded sequence
+  ---
+  duration_ms: 20.7898
+  type: 'test'
+  ...
+# Subtest: waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+ok 179 - waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+  ---
+  duration_ms: 27.9811
+  type: 'test'
+  ...
+# Subtest: D15 training score refuses forged device state or altered event sequence, even when probes match
+ok 180 - D15 training score refuses forged device state or altered event sequence, even when probes match
+  ---
+  duration_ms: 15.2138
+  type: 'test'
+  ...
+# Subtest: D15 scoring ignores inherited lesson state without a new event in the current attempt
+ok 181 - D15 scoring ignores inherited lesson state without a new event in the current attempt
+  ---
+  duration_ms: 13.8781
+  type: 'test'
+  ...
+# Subtest: D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+ok 182 - D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+  ---
+  duration_ms: 23.1137
+  type: 'test'
+  ...
+# Subtest: D15 rejects a stale lesson-start fingerprint from another session with the same event count
+ok 183 - D15 rejects a stale lesson-start fingerprint from another session with the same event count
+  ---
+  duration_ms: 14.7923
+  type: 'test'
+  ...
+# Subtest: D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+ok 184 - D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+  ---
+  duration_ms: 11.4714
+  type: 'test'
+  ...
+# Subtest: D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+ok 185 - D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+  ---
+  duration_ms: 20.9358
+  type: 'test'
+  ...
+# Subtest: D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+ok 186 - D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+  ---
+  duration_ms: 57.2324
+  type: 'test'
+  ...
+# Subtest: D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+ok 187 - D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+  ---
+  duration_ms: 24.9484
+  type: 'test'
+  ...
+# Subtest: D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+ok 188 - D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+  ---
+  duration_ms: 62.9499
+  type: 'test'
+  ...
+# Subtest: D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+ok 189 - D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+  ---
+  duration_ms: 32.3963
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+ok 190 - D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+  ---
+  duration_ms: 67.2049
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+ok 191 - D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+  ---
+  duration_ms: 87.0175
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+ok 192 - D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+  ---
+  duration_ms: 28.7457
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+ok 193 - D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+  ---
+  duration_ms: 33.4595
+  type: 'test'
+  ...
+# Subtest: Data menu declares documented bearing, wind, trip, speed and temperature source selectors
+ok 194 - Data menu declares documented bearing, wind, trip, speed and temperature source selectors
+  ---
+  duration_ms: 5.5942
+  type: 'test'
+  ...
+# Subtest: Trip Source changes counted world ticks: synthetic Own advances; unavailable NMEA never fabricates motion
+ok 195 - Trip Source changes counted world ticks: synthetic Own advances; unavailable NMEA never fabricates motion
+  ---
+  duration_ms: 55.9804
+  type: 'test'
+  ...
+# Subtest: C11 Trip Source NMEA masks previously accumulated Own trip on NAV and in the operator Trip overlay
+ok 196 - C11 Trip Source NMEA masks previously accumulated Own trip on NAV and in the operator Trip overlay
+  ---
+  duration_ms: 27.0206
+  type: 'test'
+  ...
+# Subtest: NAV projection masks NMEA speed and temperature, preserves typed synthetic Own and never makes up wind
+ok 197 - NAV projection masks NMEA speed and temperature, preserves typed synthetic Own and never makes up wind
+  ---
+  duration_ms: 21.2464
+  type: 'test'
+  ...
+# Subtest: C11 rejects negative synthetic STW/SOG rather than displaying a physically impossible speed
+ok 198 - C11 rejects negative synthetic STW/SOG rather than displaying a physically impossible speed
+  ---
+  duration_ms: 3.1518
+  type: 'test'
+  ...
+# Subtest: C11 NAV bearing/heading/SOG/pressure/XTE demand independently tagged, bounded synthetic fields
+ok 199 - C11 NAV bearing/heading/SOG/pressure/XTE demand independently tagged, bounded synthetic fields
+  ---
+  duration_ms: 4.2758
+  type: 'test'
+  ...
+# Subtest: bearing choice changes only synthetic display label; missing external heading/bearing remains NO DATA
+ok 200 - bearing choice changes only synthetic display label; missing external heading/bearing remains NO DATA
+  ---
+  duration_ms: 18.5788
+  type: 'test'
+  ...
+# Subtest: C11 Data source selection cannot fabricate C01 temperature/speed alarm inputs
+ok 201 - C11 Data source selection cannot fabricate C01 temperature/speed alarm inputs
+  ---
+  duration_ms: 29.6763
+  type: 'test'
+  ...
+# Subtest: D04 installer does not allow an unverified firmware language/reboot branch
+ok 202 - D04 installer does not allow an unverified firmware language/reboot branch
+  ---
+  duration_ms: 12.869
+  type: 'test'
+  ...
+# Subtest: Diagnostics is visibly synthetic and never invents an installed firmware
+ok 203 - Diagnostics is visibly synthetic and never invents an installed firmware
+  ---
+  duration_ms: 30.2531
+  type: 'test'
+  ...
+# Subtest: LCD test runs on simulated colors; restore requires explicit confirmation
+ok 204 - LCD test runs on simulated colors; restore requires explicit confirmation
+  ---
+  duration_ms: 20.4194
+  type: 'test'
+  ...
+# Subtest: MARK refuses absent synthetic position and records deterministic waypoint when enabled
+ok 205 - MARK refuses absent synthetic position and records deterministic waypoint when enabled
+  ---
+  duration_ms: 9.3019
+  type: 'test'
+  ...
+# Subtest: named virtual Bottom Disc ALARM1 two-condition cause acknowledges without clearing
+ok 206 - named virtual Bottom Disc ALARM1 two-condition cause acknowledges without clearing
+  ---
+  duration_ms: 8.5759
+  type: 'test'
+  ...
+# Subtest: FCV operator manual §1.18 any physical key silences sound, without suppressing the key action
+ok 207 - FCV operator manual §1.18 any physical key silences sound, without suppressing the key action
+  ---
+  duration_ms: 13.9397
+  type: 'test'
+  ...
+# Subtest: B18 supplemental Display controls have source-graded options and no orphan editable switches
+ok 208 - B18 supplemental Display controls have source-graded options and no orphan editable switches
+  ---
+  duration_ms: 16.4538
+  type: 'test'
+  ...
+# Subtest: B18 Temp Graph only draws typed instructor water temperature, with NO DATA otherwise
+ok 209 - B18 Temp Graph only draws typed instructor water temperature, with NO DATA otherwise
+  ---
+  duration_ms: 10.7062
+  type: 'test'
+  ...
+# Subtest: B18 supplemental graph cannot promote an out-of-range synthetic position into a live Own source
+ok 210 - B18 supplemental graph cannot promote an out-of-range synthetic position into a live Own source
+  ---
+  duration_ms: 15.3026
+  type: 'test'
+  ...
+# Subtest: B18 Nav Data and Battery widgets display source status without inventing position or voltage
+ok 211 - B18 Nav Data and Battery widgets display source status without inventing position or voltage
+  ---
+  duration_ms: 5.3623
+  type: 'test'
+  ...
+# Subtest: B18 supplemental Temp Graph and NAV speed honor §1.21 source selection instead of leaking Own data into NMEA
+ok 212 - B18 supplemental Temp Graph and NAV speed honor §1.21 source selection instead of leaking Own data into NMEA
+  ---
+  duration_ms: 10.9019
+  type: 'test'
+  ...
+# Subtest: B18 supplemental NAV speed follows configured §2.5 units without changing sensor truth
+ok 213 - B18 supplemental NAV speed follows configured §2.5 units without changing sensor truth
+  ---
+  duration_ms: 10.0952
+  type: 'test'
+  ...
+# Subtest: B18 expanded NAV widget masks invalid negative synthetic speed without hiding valid position
+ok 214 - B18 expanded NAV widget masks invalid negative synthetic speed without hiding valid position
+  ---
+  duration_ms: 3.3963
+  type: 'test'
+  ...
+# Subtest: B18 Zoom Marker brackets the actual active zoom window and does not exist on NAV/single views
+ok 215 - B18 Zoom Marker brackets the actual active zoom window and does not exist on NAV/single views
+  ---
+  duration_ms: 4.3952
+  type: 'test'
+  ...
+# Subtest: B18 Window Size acts only on split display, with staged TrackPad edit/cancel/replay
+ok 216 - B18 Window Size acts only on split display, with staged TrackPad edit/cancel/replay
+  ---
+  duration_ms: 35.4655
+  type: 'test'
+  ...
+# Subtest: B13 Zoom Range and B/L Range alter synthetic depth windows without mutating raw sonar
+ok 217 - B13 Zoom Range and B/L Range alter synthetic depth windows without mutating raw sonar
+  ---
+  duration_ms: 34.753
+  type: 'test'
+  ...
+# Subtest: supplemental LCD features are actually consumed by Canvas/DOM rendering
+ok 218 - supplemental LCD features are actually consumed by Canvas/DOM rendering
+  ---
+  duration_ms: 20.5669
+  type: 'test'
+  ...
+# Subtest: B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+ok 219 - B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+  ---
+  duration_ms: 6.4636
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 220 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 25.2697
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 221 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 1.2808
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 222 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 18.7989
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 223 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 20.5131
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 224 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.7794
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 225 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 24.1162
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 226 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 18.9225
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 227 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 1.0578
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 228 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 31.3632
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 229 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 7.3347
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 230 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 26.5917
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 231 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.4614
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 232 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 24.5362
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 233 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 25.2259
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 234 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 19.6179
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 235 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 13.263
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 236 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.6639
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 237 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.8793
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 238 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 10.8974
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 239 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.4882
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 240 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 12.7869
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 241 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.4789
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 242 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 23.017
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 243 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 46.1271
+  type: 'test'
+  ...
+# Subtest: fingerprint rejects arrays with hidden custom properties or empty slots
+ok 244 - fingerprint rejects arrays with hidden custom properties or empty slots
+  ---
+  duration_ms: 3.7768
+  type: 'test'
+  ...
+# Subtest: replay log owns an immutable snapshot of restored settings, not the caller's mutable object
+ok 245 - replay log owns an immutable snapshot of restored settings, not the caller's mutable object
+  ---
+  duration_ms: 19.8302
+  type: 'test'
+  ...
+# Subtest: portable replay envelope cannot mutate its source session through a nested field
+ok 246 - portable replay envelope cannot mutate its source session through a nested field
+  ---
+  duration_ms: 7.6796
+  type: 'test'
+  ...
+# Subtest: inert second-device history owns the caller's input and is independently replayable
+ok 247 - inert second-device history owns the caller's input and is independently replayable
+  ---
+  duration_ms: 13.1115
+  type: 'test'
+  ...
+# Subtest: public source ledger retains eleven canonical sources and permits extensions
+ok 248 - public source ledger retains eleven canonical sources and permits extensions
+  ---
+  duration_ms: 5.2937
+  type: 'test'
+  ...
+# Subtest: source authority, evidence modality and rights are independent dimensions
+ok 249 - source authority, evidence modality and rights are independent dimensions
+  ---
+  duration_ms: 0.9313
+  type: 'test'
+  ...
+# Subtest: source metadata distinguishes observations, revisions, rights and runtime assets
+ok 250 - source metadata distinguishes observations, revisions, rights and runtime assets
+  ---
+  duration_ms: 0.8151
+  type: 'test'
+  ...
+# Subtest: videos are metadata-only and no E2 audited frames are invented
+ok 251 - videos are metadata-only and no E2 audited frames are invented
+  ---
+  duration_ms: 0.4099
+  type: 'test'
+  ...
+# Subtest: manufacturer brochure is a nonmanual restricted reference pinned by SHA
+ok 252 - manufacturer brochure is a nonmanual restricted reference pinned by SHA
+  ---
+  duration_ms: 0.4276
+  type: 'test'
+  ...
+# Subtest: D10 starts with no invented hardware faults; only bounded instructor events inject warnings
+ok 253 - D10 starts with no invented hardware faults; only bounded instructor events inject warnings
+  ---
+  duration_ms: 33.3093
+  type: 'test'
+  ...
+# Subtest: D10 warnings survive physical keys and world ticks; only teacher clears them
+ok 254 - D10 warnings survive physical keys and world ticks; only teacher clears them
+  ---
+  duration_ms: 18.6782
+  type: 'test'
+  ...
+# Subtest: D10 fixture controls exist only in instructor area and readouts reveal their synthetic provenance
+ok 255 - D10 fixture controls exist only in instructor area and readouts reveal their synthetic provenance
+  ---
+  duration_ms: 14.6495
+  type: 'test'
+  ...
+# Subtest: FUNC projects every Clutter value through a bounded ordered window with one selected value
+ok 256 - FUNC projects every Clutter value through a bounded ordered window with one selected value
+  ---
+  duration_ms: 265.4487
+  type: 'test'
+  ...
+# Subtest: main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+ok 257 - main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+  ---
+  duration_ms: 30.4755
+  type: 'test'
+  ...
+# Subtest: FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+ok 258 - FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+  ---
+  duration_ms: 104.2985
+  type: 'test'
+  ...
+# Subtest: FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+ok 259 - FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+  ---
+  duration_ms: 2.7234
+  type: 'test'
+  ...
+# Subtest: renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+ok 260 - renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+  ---
+  duration_ms: 10.6082
+  type: 'test'
+  ...
+# Subtest: manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+ok 261 - manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+  ---
+  duration_ms: 4.8743
+  type: 'test'
+  ...
+# Subtest: FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+ok 262 - FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+  ---
+  duration_ms: 34.4118
+  type: 'test'
+  ...
+# Subtest: FUNC long key configures target; assignment persists and second short key uses it
+ok 263 - FUNC long key configures target; assignment persists and second short key uses it
+  ---
+  duration_ms: 22.4892
+  type: 'test'
+  ...
+# Subtest: Key Beep Off/On is an operator choice per manual §2.3 but not a hardware beeper
+ok 264 - Key Beep Off/On is an operator choice per manual §2.3 but not a hardware beeper
+  ---
+  duration_ms: 6.975
+  type: 'test'
+  ...
+# Subtest: optional key sound is lazily initialized, very short, and fails silently if no audio device
+ok 265 - optional key sound is lazily initialized, very short, and fails silently if no audio device
+  ---
+  duration_ms: 1.052
+  type: 'test'
+  ...
+# Subtest: System > Key Beep commit/cancel is replayable; setting does not mutate device world
+ok 266 - System > Key Beep commit/cancel is replayable; setting does not mutate device world
+  ---
+  duration_ms: 54.6353
+  type: 'test'
+  ...
+# Subtest: Escape works when a physical key retains keyboard focus
+ok 267 - Escape works when a physical key retains keyboard focus
+  ---
+  duration_ms: 3.0395
+  type: 'test'
+  ...
+# Subtest: Enter on a focused button is handled by its native click, not duplicated globally
+ok 268 - Enter on a focused button is handled by its native click, not duplicated globally
+  ---
+  duration_ms: 0.4235
+  type: 'test'
+  ...
+# Subtest: rotary arrows remain owned by focused knob and no key repeats are auto-dispatched
+ok 269 - rotary arrows remain owned by focused knob and no key repeats are auto-dispatched
+  ---
+  duration_ms: 0.5299
+  type: 'test'
+  ...
+# Subtest: Brill draft drives visible luminance before commit without mutating canonical state
+ok 270 - Brill draft drives visible luminance before commit without mutating canonical state
+  ---
+  duration_ms: 32.2228
+  type: 'test'
+  ...
+# Subtest: cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+ok 271 - cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+  ---
+  duration_ms: 8.0133
+  type: 'test'
+  ...
+# Subtest: LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+ok 272 - LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+  ---
+  duration_ms: 4.5634
+  type: 'test'
+  ...
+# Subtest: main menu projects five named categories and exactly the operator rows, without help-as-item
+ok 273 - main menu projects five named categories and exactly the operator rows, without help-as-item
+  ---
+  duration_ms: 7.8541
+  type: 'test'
+  ...
+# Subtest: choice preview tracks real staged value and cancel restores committed value
+ok 274 - choice preview tracks real staged value and cancel restores committed value
+  ---
+  duration_ms: 5.9168
+  type: 'test'
+  ...
+# Subtest: large option lists are bounded while preserving the active value and original ordering
+ok 275 - large option lists are bounded while preserving the active value and original ordering
+  ---
+  duration_ms: 5.568
+  type: 'test'
+  ...
+# Subtest: source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+ok 276 - source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+  ---
+  duration_ms: 6.5823
+  type: 'test'
+  ...
+# Subtest: manual OME-23890-E §1.4.3 puts zoom left and normal sounder right
+ok 277 - manual OME-23890-E §1.4.3 puts zoom left and normal sounder right
+  ---
+  duration_ms: 3.3336
+  type: 'test'
+  ...
+# Subtest: manual §1.4.2 dual shows LF left/HF right, NAV left two-thirds and sonar right third
+ok 278 - manual §1.4.2 dual shows LF left/HF right, NAV left two-thirds and sonar right third
+  ---
+  duration_ms: 2.1312
+  type: 'test'
+  ...
+# Subtest: manual NAV1 default boxes are SPEED STW and WIND; absent wind remains NO DATA
+ok 279 - manual NAV1 default boxes are SPEED STW and WIND; absent wind remains NO DATA
+  ---
+  duration_ms: 2.4231
+  type: 'test'
+  ...
+# Subtest: manual NAV2 defaults DEPTH TEMP TRIP ODOMETER without false real receiver claims
+ok 280 - manual NAV2 defaults DEPTH TEMP TRIP ODOMETER without false real receiver claims
+  ---
+  duration_ms: 1.8062
+  type: 'test'
+  ...
+# Subtest: Chrome Canvas uses manual-derived split plan, not reversed zoom or full-screen NAV
+ok 281 - Chrome Canvas uses manual-derived split plan, not reversed zoom or full-screen NAV
+  ---
+  duration_ms: 24.238
+  type: 'test'
+  ...
+# Subtest: FCV-588 manual §§1.15–1.17 places advanced echo modes in Display, not Sounder
+ok 282 - FCV-588 manual §§1.15–1.17 places advanced echo modes in Display, not Sounder
+  ---
+  duration_ms: 4.8609
+  type: 'test'
+  ...
+# Subtest: AUTO_R disables Shift, and RANGE key is inoperative when BDS is active
+ok 283 - AUTO_R disables Shift, and RANGE key is inoperative when BDS is active
+  ---
+  duration_ms: 41.607
+  type: 'test'
+  ...
+# Subtest: §1.16 choosing Bottom Disc. under Manual Range automatically activates AUTO_R
+ok 284 - §1.16 choosing Bottom Disc. under Manual Range automatically activates AUTO_R
+  ---
+  duration_ms: 26.8323
+  type: 'test'
+  ...
+# Subtest: all five authentic main menu headings expose public annotated entries
+ok 285 - all five authentic main menu headings expose public annotated entries
+  ---
+  duration_ms: 6.0986
+  type: 'test'
+  ...
+# Subtest: manual Appendix 1 menu branches and System sections are attributed to their actual roots
+ok 286 - manual Appendix 1 menu branches and System sections are attributed to their actual roots
+  ---
+  duration_ms: 0.6908
+  type: 'test'
+  ...
+# Subtest: §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+ok 287 - §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+  ---
+  duration_ms: 0.6291
+  type: 'test'
+  ...
+# Subtest: §4.10 Installation is a different fixture from normal System
+ok 288 - §4.10 Installation is a different fixture from normal System
+  ---
+  duration_ms: 0.774
+  type: 'test'
+  ...
+# Subtest: §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+ok 289 - §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+  ---
+  duration_ms: 0.7591
+  type: 'test'
+  ...
+# Subtest: D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+ok 290 - D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+  ---
+  duration_ms: 0.4316
+  type: 'test'
+  ...
+# Subtest: MENU opens a navigable category, arrows move focus and ESC closes
+ok 291 - MENU opens a navigable category, arrows move focus and ESC closes
+  ---
+  duration_ms: 16.9033
+  type: 'test'
+  ...
+# Subtest: menu edit stages then commits or cancels and survives power cycling
+ok 292 - menu edit stages then commits or cancels and survives power cycling
+  ---
+  duration_ms: 15.2907
+  type: 'test'
+  ...
+# Subtest: menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+ok 293 - menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+  ---
+  duration_ms: 1.7879
+  type: 'test'
+  ...
+# Subtest: second inert subscriber cannot alter FCV stream, replay hashes or observations
+ok 294 - second inert subscriber cannot alter FCV stream, replay hashes or observations
+  ---
+  duration_ms: 112.4384
+  type: 'test'
+  ...
+# Subtest: second device event is independently logged and never mutates FCV or world
+ok 295 - second device event is independently logged and never mutates FCV or world
+  ---
+  duration_ms: 1.9228
+  type: 'test'
+  ...
+# Subtest: inert observer logs one immutable canonical event rather than a caller-owned object
+ok 296 - inert observer logs one immutable canonical event rather than a caller-owned object
+  ---
+  duration_ms: 5.7737
+  type: 'test'
+  ...
+# Subtest: inert observer inspect protocol rejects unrecognized payloads rather than storing arbitrary data
+ok 297 - inert observer inspect protocol rejects unrecognized payloads rather than storing arbitrary data
+  ---
+  duration_ms: 2.1715
+  type: 'test'
+  ...
+# Subtest: observer refuses array objects with spoofed inspect fields hidden from array fingerprint
+ok 298 - observer refuses array objects with spoofed inspect fields hidden from array fingerprint
+  ---
+  duration_ms: 1.7692
+  type: 'test'
+  ...
+# Subtest: multi-device replay requires exact device-set version and rejects tampered inputs
+ok 299 - multi-device replay requires exact device-set version and rejects tampered inputs
+  ---
+  duration_ms: 13.1349
+  type: 'test'
+  ...
+# Subtest: unidentified AIS R5 family cannot instantiate a claimed SUPREME or SOLID UI
+ok 300 - unidentified AIS R5 family cannot instantiate a claimed SUPREME or SOLID UI
+  ---
+  duration_ms: 0.8121
+  type: 'test'
+  ...
+# Subtest: multi replay rejects changed primary profile even with identical id and revision
+ok 301 - multi replay rejects changed primary profile even with identical id and revision
+  ---
+  duration_ms: 3.1539
+  type: 'test'
+  ...
+# Subtest: multi replay inherits canonical same-revision hold threshold and gesture contract protections
+ok 302 - multi replay inherits canonical same-revision hold threshold and gesture contract protections
+  ---
+  duration_ms: 8.5341
+  type: 'test'
+  ...
+# Subtest: multi replay detects a same-revision primary reducer drift before returning a believable observer state
+ok 303 - multi replay detects a same-revision primary reducer drift before returning a believable observer state
+  ---
+  duration_ms: 8.6575
+  type: 'test'
+  ...
+# Subtest: multi replay binds inert observer revision and complete core/session contract
+ok 304 - multi replay binds inert observer revision and complete core/session contract
+  ---
+  duration_ms: 2.0295
+  type: 'test'
+  ...
+# Subtest: multi replay fingerprints the published inert stream schema, not only observer id and revision
+ok 305 - multi replay fingerprints the published inert stream schema, not only observer id and revision
+  ---
+  duration_ms: 1.8996
+  type: 'test'
+  ...
+# Subtest: historical compatible single-device envelope migrates only through an explicit validated adapter
+ok 306 - historical compatible single-device envelope migrates only through an explicit validated adapter
+  ---
+  duration_ms: 17.9036
+  type: 'test'
+  ...
+# Subtest: Phase7 observer consumes a named typed immutable world stream without inheriting FCV sonar controls
+ok 307 - Phase7 observer consumes a named typed immutable world stream without inheriting FCV sonar controls
+  ---
+  duration_ms: 2.3761
+  type: 'test'
+  ...
+# Subtest: C11 manual §1.21 NAV1/2 expose four individually configured editable operator boxes
+ok 308 - C11 manual §1.21 NAV1/2 expose four individually configured editable operator boxes
+  ---
+  duration_ms: 20.868
+  type: 'test'
+  ...
+# Subtest: C11 NAV1 add third box stages/cancels then commits and changes actual projected boxes
+ok 309 - C11 NAV1 add third box stages/cancels then commits and changes actual projected boxes
+  ---
+  duration_ms: 31.7462
+  type: 'test'
+  ...
+# Subtest: C11 NAV2 operator can change a box to STW, with missing source explicitly NO DATA
+ok 310 - C11 NAV2 operator can change a box to STW, with missing source explicitly NO DATA
+  ---
+  duration_ms: 7.8502
+  type: 'test'
+  ...
+# Subtest: C11 RANGE box uses only an active synthetic waypoint and fresh ownship, with source-safe negative states
+ok 311 - C11 RANGE box uses only an active synthetic waypoint and fresh ownship, with source-safe negative states
+  ---
+  duration_ms: 28.5494
+  type: 'test'
+  ...
+# Subtest: C11 POSITION NAV box uses S/W hemispheres for negative typed synthetic latitude and longitude
+ok 312 - C11 POSITION NAV box uses S/W hemispheres for negative typed synthetic latitude and longitude
+  ---
+  duration_ms: 3.0711
+  type: 'test'
+  ...
+# Subtest: C11 TIME TO GO is a visible source-gated synthetic destination estimate, never an NMEA substitute
+ok 313 - C11 TIME TO GO is a visible source-gated synthetic destination estimate, never an NMEA substitute
+  ---
+  duration_ms: 28.6516
+  type: 'test'
+  ...
+# Subtest: MARK cannot invent a waypoint without position; synthetic positions are explicit
+ok 314 - MARK cannot invent a waypoint without position; synthetic positions are explicit
+  ---
+  duration_ms: 4.7863
+  type: 'test'
+  ...
+# Subtest: waypoints support edit, destination selection, deletion and invalid target rejection
+ok 315 - waypoints support edit, destination selection, deletion and invalid target rejection
+  ---
+  duration_ms: 1.3208
+  type: 'test'
+  ...
+# Subtest: NAV1 and NAV2 show no-data for missing/stale observations, not real GPS
+ok 316 - NAV1 and NAV2 show no-data for missing/stale observations, not real GPS
+  ---
+  duration_ms: 1.2437
+  type: 'test'
+  ...
+# Subtest: FCV-588 operator manual §1.20 limits the stored waypoint list to 20
+ok 317 - FCV-588 operator manual §1.20 limits the stored waypoint list to 20
+  ---
+  duration_ms: 0.9036
+  type: 'test'
+  ...
+# Subtest: §1.20 waypoint names accept no more than eight operator-editable characters
+ok 318 - §1.20 waypoint names accept no more than eight operator-editable characters
+  ---
+  duration_ms: 0.7013
+  type: 'test'
+  ...
+# Subtest: TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+ok 319 - TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+  ---
+  duration_ms: 6.469
+  type: 'test'
+  ...
+# Subtest: TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+ok 320 - TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+  ---
+  duration_ms: 1.557
+  type: 'test'
+  ...
+# Subtest: TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+ok 321 - TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+  ---
+  duration_ms: 2.545
+  type: 'test'
+  ...
+# Subtest: TrackPad reset/dispose never strand timers or leak repeated events
+ok 322 - TrackPad reset/dispose never strand timers or leak repeated events
+  ---
+  duration_ms: 0.7823
+  type: 'test'
+  ...
+# Subtest: training face is independently styled to a public-reference proportion
+ok 323 - training face is independently styled to a public-reference proportion
+  ---
+  duration_ms: 2.8127
+  type: 'test'
+  ...
+# Subtest: student physical controls are separate keys and instructor helpers remain outside the device
+ok 324 - student physical controls are separate keys and instructor helpers remain outside the device
+  ---
+  duration_ms: 1.0168
+  type: 'test'
+  ...
+# Subtest: public overall-envelope art has independent support contours, an inert TrackPad center and rotary indicators
+ok 325 - public overall-envelope art has independent support contours, an inert TrackPad center and rotary indicators
+  ---
+  duration_ms: 0.5033
+  type: 'test'
+  ...
+# Subtest: wide training workbench centers the full-sized reference face in its device column without shifting instructor controls onto the bezel
+ok 326 - wide training workbench centers the full-sized reference face in its device column without shifting instructor controls onto the bezel
+  ---
+  duration_ms: 0.5461
+  type: 'test'
+  ...
+# Subtest: original face bounds its portrait LCD to manufacturer-public 128×171 against 233×270 reference proportions
+ok 327 - original face bounds its portrait LCD to manufacturer-public 128×171 against 233×270 reference proportions
+  ---
+  duration_ms: 0.6493
+  type: 'test'
+  ...
+# Subtest: physical labels and unpowered screen exclude application instructions
+ok 328 - physical labels and unpowered screen exclude application instructions
+  ---
+  duration_ms: 0.7008
+  type: 'test'
+  ...
+# Subtest: physical dial transforms are state-derived while seven mode labels stay non-interactive
+ok 329 - physical dial transforms are state-derived while seven mode labels stay non-interactive
+  ---
+  duration_ms: 15.9975
+  type: 'test'
+  ...
+# Subtest: instructor clock and synthetic run notices remain outside the FCV hardware face
+ok 330 - instructor clock and synthetic run notices remain outside the FCV hardware face
+  ---
+  duration_ms: 0.7068
+  type: 'test'
+  ...
+# Subtest: phone-specific non-OEM face warning precedes first operator input and LCD reflow
+ok 331 - phone-specific non-OEM face warning precedes first operator input and LCD reflow
+  ---
+  duration_ms: 1.0001
+  type: 'test'
+  ...
+# Subtest: local training settings roundtrip is schema-versioned, bounded and never includes serials
+ok 332 - local training settings roundtrip is schema-versioned, bounded and never includes serials
+  ---
+  duration_ms: 10.1786
+  type: 'test'
+  ...
+# Subtest: stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+ok 333 - stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+  ---
+  duration_ms: 3.6126
+  type: 'test'
+  ...
+# Subtest: reloaded settings are applied only through a canonical logged replay event
+ok 334 - reloaded settings are applied only through a canonical logged replay event
+  ---
+  duration_ms: 16.6685
+  type: 'test'
+  ...
+# Subtest: new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+ok 335 - new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+  ---
+  duration_ms: 10.705
+  type: 'test'
+  ...
+# Subtest: malformed settings and prototype-pollution keys are rejected, not executed
+ok 336 - malformed settings and prototype-pollution keys are rejected, not executed
+  ---
+  duration_ms: 2.9687
+  type: 'test'
+  ...
+# Subtest: browser reload explicitly replays vetted local settings, not an unlogged state mutation
+ok 337 - browser reload explicitly replays vetted local settings, not an unlogged state mutation
+  ---
+  duration_ms: 25.2402
+  type: 'test'
+  ...
+# Subtest: public reference profiles explicitly identify Demo, generic and named virtual transducers
+ok 338 - public reference profiles explicitly identify Demo, generic and named virtual transducers
+  ---
+  duration_ms: 3.9768
+  type: 'test'
+  ...
+# Subtest: generic Transducer Type 600W and 1kW never inherit named type advanced functions
+ok 339 - generic Transducer Type 600W and 1kW never inherit named type advanced functions
+  ---
+  duration_ms: 0.6708
+  type: 'test'
+  ...
+# Subtest: 525STID-PWD virtual BDS availability respects operating limits, not physical cabling
+ok 340 - 525STID-PWD virtual BDS availability respects operating limits, not physical cabling
+  ---
+  duration_ms: 2.1787
+  type: 'test'
+  ...
+# Subtest: unknown features cannot silently become available even on named transducer
+ok 341 - unknown features cannot silently become available even on named transducer
+  ---
+  duration_ms: 0.3312
+  type: 'test'
+  ...
+# Subtest: D02 has eight numbered, versioned training range slots with default bank
+ok 342 - D02 has eight numbered, versioned training range slots with default bank
+  ---
+  duration_ms: 8.8598
+  type: 'test'
+  ...
+# Subtest: D02 evidence atlas lists each training slot with explicit HOLD
+ok 343 - D02 evidence atlas lists each training slot with explicit HOLD
+  ---
+  duration_ms: 23.1651
+  type: 'test'
+  ...
+# Subtest: D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+ok 344 - D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+  ---
+  duration_ms: 41.8757
+  type: 'test'
+  ...
+# Subtest: D02 slot eight can be edited independently and manual RANGE displays its configured depth
+ok 345 - D02 slot eight can be edited independently and manual RANGE displays its configured depth
+  ---
+  duration_ms: 13.2782
+  type: 'test'
+  ...
+# Subtest: §2.2 units change restores all eight depth presets, including customized entries
+ok 346 - §2.2 units change restores all eight depth presets, including customized entries
+  ---
+  duration_ms: 23.1147
+  type: 'test'
+  ...
+# Subtest: §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+ok 347 - §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+  ---
+  duration_ms: 1.5036
+  type: 'test'
+  ...
+# Subtest: D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+ok 348 - D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+  ---
+  duration_ms: 8.227
+  type: 'test'
+  ...
+# Subtest: D14 real receiver stays disconnected; status defaults to NO DATA
+ok 349 - D14 real receiver stays disconnected; status defaults to NO DATA
+  ---
+  duration_ms: 14.2759
+  type: 'test'
+  ...
+# Subtest: D14 typed D15 ownship appears only as fresh synthetic training receive data
+ok 350 - D14 typed D15 ownship appears only as fresh synthetic training receive data
+  ---
+  duration_ms: 21.7512
+  type: 'test'
+  ...
+# Subtest: D14 receiver projection shares NAV hemisphere/range validity and never accepts fake real fixes
+ok 351 - D14 receiver projection shares NAV hemisphere/range validity and never accepts fake real fixes
+  ---
+  duration_ms: 3.2951
+  type: 'test'
+  ...
+# Subtest: D14 never reports usable Own trip/speed/temperature when synthetic fix is missing, stale or suppressed
+ok 352 - D14 never reports usable Own trip/speed/temperature when synthetic fix is missing, stale or suppressed
+  ---
+  duration_ms: 6.3024
+  type: 'test'
+  ...
+# Subtest: D14 Receiver Status does not expose an invalid or source-disabled ownship speed
+ok 353 - D14 Receiver Status does not expose an invalid or source-disabled ownship speed
+  ---
+  duration_ms: 2.5745
+  type: 'test'
+  ...
+# Subtest: D14 training status opens on device without pretending to use a physical NMEA port
+ok 354 - D14 training status opens on device without pretending to use a physical NMEA port
+  ---
+  duration_ms: 19.9669
+  type: 'test'
+  ...
+# Subtest: D14 explicitly labels synthetic receiver state and forbids physical transport code
+ok 355 - D14 explicitly labels synthetic receiver state and forbids physical transport code
+  ---
+  duration_ms: 17.31
+  type: 'test'
+  ...
+# Subtest: reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+ok 356 - reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+  ---
+  duration_ms: 18.5434
+  type: 'test'
+  ...
+# Subtest: legend honors palette and White Marker settings without owning or mutating source colors
+ok 357 - legend honors palette and White Marker settings without owning or mutating source colors
+  ---
+  duration_ms: 4.3734
+  type: 'test'
+  ...
+# Subtest: legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+ok 358 - legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+  ---
+  duration_ms: 2.1091
+  type: 'test'
+  ...
+# Subtest: legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+ok 359 - legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+  ---
+  duration_ms: 1.9248
+  type: 'test'
+  ...
+# Subtest: invalid legend bounds are rejected rather than drawing outside the screen
+ok 360 - invalid legend bounds are rejected rather than drawing outside the screen
+  ---
+  duration_ms: 11.1094
+  type: 'test'
+  ...
+# Subtest: picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+ok 361 - picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+  ---
+  duration_ms: 0.5311
+  type: 'test'
+  ...
+# Subtest: picture-rate label follows commit and cancel without advancing the world or rewriting replay
+ok 362 - picture-rate label follows commit and cancel without advancing the world or rewriting replay
+  ---
+  duration_ms: 11.5383
+  type: 'test'
+  ...
+# Subtest: the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+ok 363 - the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+  ---
+  duration_ms: 27.5995
+  type: 'test'
+  ...
+# Subtest: v2 public reference replan is separately scaffolded with seven real phases
+ok 364 - v2 public reference replan is separately scaffolded with seven real phases
+  ---
+  duration_ms: 8.188
+  type: 'test'
+  ...
+# Subtest: all seven phases provide future scout, inventory, scenario and stop gates
+ok 365 - all seven phases provide future scout, inventory, scenario and stop gates
+  ---
+  duration_ms: 1.9604
+  type: 'test'
+  ...
+# Subtest: all 22 executable tasks contain mechanical RED/GREEN/REFACTOR verification
+ok 366 - all 22 executable tasks contain mechanical RED/GREEN/REFACTOR verification
+  ---
+  duration_ms: 0.8426
+  type: 'test'
+  ...
+# Subtest: all new plan relative Markdown citations resolve in workspace
+ok 367 - all new plan relative Markdown citations resolve in workspace
+  ---
+  duration_ms: 28.5743
+  type: 'test'
+  ...
+# Subtest: critical source guards and rights ceiling remain explicit in new plan
+ok 368 - critical source guards and rights ceiling remain explicit in new plan
+  ---
+  duration_ms: 1.595
+  type: 'test'
+  ...
+# Subtest: touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+ok 369 - touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+  ---
+  duration_ms: 5.936
+  type: 'test'
+  ...
+# Subtest: rotary capture cancel, blur and pointer identity never rotate an inactive knob
+ok 370 - rotary capture cancel, blur and pointer identity never rotate an inactive knob
+  ---
+  duration_ms: 1.5468
+  type: 'test'
+  ...
+# Subtest: GAIN short tap retains push semantics; a dragged knob must not accidentally push
+ok 371 - GAIN short tap retains push semantics; a dragged knob must not accidentally push
+  ---
+  duration_ms: 2.7633
+  type: 'test'
+  ...
+# Subtest: GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+ok 372 - GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+  ---
+  duration_ms: 0.8453
+  type: 'test'
+  ...
+# Subtest: rotary capture rejection and disposal fail closed
+ok 373 - rotary capture rejection and disposal fail closed
+  ---
+  duration_ms: 0.6386
+  type: 'test'
+  ...
+# Subtest: Phase6 runtime packaging policy inspects all original JS/CSS/SVG assets in web and src
+ok 374 - Phase6 runtime packaging policy inspects all original JS/CSS/SVG assets in web and src
+  ---
+  duration_ms: 12.907
+  type: 'test'
+  ...
+# Subtest: Phase6 recursive rights gate refuses a nested restricted-media file, not only top-level filenames
+ok 375 - Phase6 recursive rights gate refuses a nested restricted-media file, not only top-level filenames
+  ---
+  duration_ms: 13.9891
+  type: 'test'
+  ...
+# Subtest: Phase6 rights gate recursively enumerates browser roots, not only top-level HTML
+ok 376 - Phase6 rights gate recursively enumerates browser roots, not only top-level HTML
+  ---
+  duration_ms: 13.709
+  type: 'test'
+  ...
+# Subtest: Phase6 extension policy explicitly rejects nested restricted assets
+ok 377 - Phase6 extension policy explicitly rejects nested restricted assets
+  ---
+  duration_ms: 0.4967
+  type: 'test'
+  ...
+# Subtest: generic virtual 600W cannot enter ACCU-FISH or Bottom Discrimination editing
+ok 378 - generic virtual 600W cannot enter ACCU-FISH or Bottom Discrimination editing
+  ---
+  duration_ms: 15.7882
+  type: 'test'
+  ...
+# Subtest: Tankenmaru On suppresses normal System NMEA without any ship interface
+ok 379 - Tankenmaru On suppresses normal System NMEA without any ship interface
+  ---
+  duration_ms: 11.4218
+  type: 'test'
+  ...
+# Subtest: D09 Installation NMEA row disappears during virtual Tankenmaru On and returns on Off
+ok 380 - D09 Installation NMEA row disappears during virtual Tankenmaru On and returns on Off
+  ---
+  duration_ms: 34.1663
+  type: 'test'
+  ...
+# Subtest: FCV manual §1.1 Tankenmaru mode disables MARK even with synthetic ownship
+ok 381 - FCV manual §1.1 Tankenmaru mode disables MARK even with synthetic ownship
+  ---
+  duration_ms: 11.8788
+  type: 'test'
+  ...
+# Subtest: D09 default PUBLIC_REFERENCE shows Tankenmaru source HOLD in both System and Installation, without enabling option
+ok 382 - D09 default PUBLIC_REFERENCE shows Tankenmaru source HOLD in both System and Installation, without enabling option
+  ---
+  duration_ms: 11.1637
+  type: 'test'
+  ...
+# Subtest: D09 declared teacher-only optional virtual fixture permits synthetic On but revocation immediately fails closed
+ok 383 - D09 declared teacher-only optional virtual fixture permits synthetic On but revocation immediately fails closed
+  ---
+  duration_ms: 20.1277
+  type: 'test'
+  ...
+# Subtest: D09 exposes a read-only documented-option status only after virtual option On, never real Output
+ok 384 - D09 exposes a read-only documented-option status only after virtual option On, never real Output
+  ---
+  duration_ms: 34.7996
+  type: 'test'
+  ...
+# Subtest: D09 revoking teacher option mid-edit prevents a delayed System or Installation commit
+ok 385 - D09 revoking teacher option mid-edit prevents a delayed System or Installation commit
+  ---
+  duration_ms: 30.4807
+  type: 'test'
+  ...
+# Subtest: D09 option revoke cannot reindex a staged FUNC Key or Key Beep edit into NMEA or Receiver Status
+ok 386 - D09 option revoke cannot reindex a staged FUNC Key or Key Beep edit into NMEA or Receiver Status
+  ---
+  duration_ms: 40.1154
+  type: 'test'
+  ...
+# Subtest: System Demo change is reversible and unrelated to real sensor presence
+ok 387 - System Demo change is reversible and unrelated to real sensor presence
+  ---
+  duration_ms: 7.7213
+  type: 'test'
+  ...
+# Subtest: Demo Off without a declared virtual sounder clears sonar-dependent synthetic alarms
+ok 388 - Demo Off without a declared virtual sounder clears sonar-dependent synthetic alarms
+  ---
+  duration_ms: 12.6612
+  type: 'test'
+  ...
+# Subtest: §4.10 Installation setup opens separately from ordinary System menu
+ok 389 - §4.10 Installation setup opens separately from ordinary System menu
+  ---
+  duration_ms: 10.4802
+  type: 'test'
+  ...
+# Subtest: public trace accounts for 64 FCV operator features and separate teacher D15
+ok 390 - public trace accounts for 64 FCV operator features and separate teacher D15
+  ---
+  duration_ms: 4.2416
+  type: 'test'
+  ...
+# Subtest: public feature claims never overwrite real-device approval and resolve evidence
+ok 391 - public feature claims never overwrite real-device approval and resolve evidence
+  ---
+  duration_ms: 2.996
+  type: 'test'
+  ...
+# Subtest: no untested operator behavior is promoted to public-reference conformance
+ok 392 - no untested operator behavior is promoted to public-reference conformance
+  ---
+  duration_ms: 0.649
+  type: 'test'
+  ...
+# Subtest: instructor-only synthetic navigation can be enabled and disabled without fictional FCV menu
+ok 393 - instructor-only synthetic navigation can be enabled and disabled without fictional FCV menu
+  ---
+  duration_ms: 32.7945
+  type: 'test'
+  ...
+# Subtest: a separately declared virtual mount fixture enables BDS only with named transducer and operating guards
+ok 394 - a separately declared virtual mount fixture enables BDS only with named transducer and operating guards
+  ---
+  duration_ms: 33.6181
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH and RezBoost require separately enabled named virtual training fixture
+ok 395 - ACCU-FISH and RezBoost require separately enabled named virtual training fixture
+  ---
+  duration_ms: 20.7019
+  type: 'test'
+  ...
+# Subtest: §1.18 Bottom Type alarm never identifies seabed when Bottom Disc. is unavailable
+ok 396 - §1.18 Bottom Type alarm never identifies seabed when Bottom Disc. is unavailable
+  ---
+  duration_ms: 11.5017
+  type: 'test'
+  ...
+# Subtest: fixture event is strictly bounded and is not a persistent device setting
+ok 397 - fixture event is strictly bounded and is not a persistent device setting
+  ---
+  duration_ms: 19.8371
+  type: 'test'
+  ...
+# Subtest: Bottom Disc Graphic and Probability consume only explicitly labeled synthetic seabed categories
+ok 398 - Bottom Disc Graphic and Probability consume only explicitly labeled synthetic seabed categories
+  ---
+  duration_ms: 16.2924
+  type: 'test'
+  ...
+# Subtest: Data Trip/Odometer counts only explicit synthetic navigation speed and world ticks
+ok 399 - Data Trip/Odometer counts only explicit synthetic navigation speed and world ticks
+  ---
+  duration_ms: 47.9977
+  type: 'test'
+  ...
+# Subtest: Reset Trip confirms before clearing and never erases Odometer
+ok 400 - Reset Trip confirms before clearing and never erases Odometer
+  ---
+  duration_ms: 26.5525
+  type: 'test'
+  ...
+# Subtest: OME-23890-E §2.5 has six distinct unit categories, not one global unit switch
+ok 401 - OME-23890-E §2.5 has six distinct unit categories, not one global unit switch
+  ---
+  duration_ms: 30.3607
+  type: 'test'
+  ...
+# Subtest: independent unit choices format synthetic temperature, fish, speed, wind and trip
+ok 402 - independent unit choices format synthetic temperature, fish, speed, wind and trip
+  ---
+  duration_ms: 0.9544
+  type: 'test'
+  ...
+# Subtest: D05 Units nested transaction stages, cancels and commits independent temperature unit
+ok 403 - D05 Units nested transaction stages, cancels and commits independent temperature unit
+  ---
+  duration_ms: 25.8687
+  type: 'test'
+  ...
+# Subtest: V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+ok 404 - V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+  ---
+  duration_ms: 9.2208
+  type: 'test'
+  ...
+# Subtest: explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+ok 405 - explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+  ---
+  duration_ms: 21.6572
+  type: 'test'
+  ...
+# Subtest: legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+ok 406 - legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+  ---
+  duration_ms: 8.8343
+  type: 'test'
+  ...
+# Subtest: migration retains legitimate ship draft while rejecting transaction draftValue
+ok 407 - migration retains legitimate ship draft while rejecting transaction draftValue
+  ---
+  duration_ms: 2.7633
+  type: 'test'
+  ...
+# Subtest: A04 BRILL left restarts the existing training inactivity interval
+ok 408 - A04 BRILL left restarts the existing training inactivity interval
+  ---
+  duration_ms: 34.0289
+  type: 'test'
+  ...
+# Subtest: A04 BRILL down restarts the existing training inactivity interval
+ok 409 - A04 BRILL down restarts the existing training inactivity interval
+  ---
+  duration_ms: 12.9621
+  type: 'test'
+  ...
+# Subtest: A04 BRILL right restarts the existing training inactivity interval
+ok 410 - A04 BRILL right restarts the existing training inactivity interval
+  ---
+  duration_ms: 10.2703
+  type: 'test'
+  ...
+# Subtest: A04 BRILL up restarts the existing training inactivity interval
+ok 411 - A04 BRILL up restarts the existing training inactivity interval
+  ---
+  duration_ms: 9.4133
+  type: 'test'
+  ...
+# Subtest: BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+ok 412 - BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+  ---
+  duration_ms: 4.3214
+  type: 'test'
+  ...
+# Subtest: MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+ok 413 - MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+  ---
+  duration_ms: 3.2982
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels visible draft and regrant cannot revive it
+ok 414 - V30-B menu: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 151.4683
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 415 - V30-B menu: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 64.127
+  type: 'test'
+  ...
+# Subtest: V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 416 - V30-B menu: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 14.8182
+  type: 'test'
+  ...
+# Subtest: menu: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 417 - menu: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 11.0564
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels visible draft and regrant cannot revive it
+ok 418 - V30-B installation: revoke cancels visible draft and regrant cannot revive it
+  ---
+  duration_ms: 53.2401
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+ok 419 - V30-B installation: revoke cancels POWER-wrapped draft and regrant cannot revive it
+  ---
+  duration_ms: 110.3423
+  type: 'test'
+  ...
+# Subtest: V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+ok 420 - V30-B installation: revoke committed On cancels an Off draft, retains other settings and restores NMEA rows
+  ---
+  duration_ms: 26.8547
+  type: 'test'
+  ...
+# Subtest: installation: power-off drops the draft; teacher reset/reload never invents an option grant
+ok 421 - installation: power-off drops the draft; teacher reset/reload never invents an option grant
+  ---
+  duration_ms: 20.6083
+  type: 'test'
+  ...
+# Subtest: unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+ok 422 - unrelated Units/Calibration draft is preserved by a Tankenmaru option change
+  ---
+  duration_ms: 11.3038
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.accuFish draft even without a row-list change
+ok 423 - P1 live capability loss cancels display.accuFish draft even without a row-list change
+  ---
+  duration_ms: 9.5116
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.rezBoost draft even without a row-list change
+ok 424 - P1 live capability loss cancels display.rezBoost draft even without a row-list change
+  ---
+  duration_ms: 9.0895
+  type: 'test'
+  ...
+# Subtest: P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+ok 425 - P1 live capability loss cancels display.bottomDiscrimination draft even without a row-list change
+  ---
+  duration_ms: 8.7393
+  type: 'test'
+  ...
+# Subtest: live BDS capability loss reconciles a draft suspended by POWER without altering its countdown
+ok 426 - live BDS capability loss reconciles a draft suspended by POWER without altering its countdown
+  ---
+  duration_ms: 50.2752
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM1 enable and threshold notices identify the actual edited field
+ok 427 - V30-E ALARM1 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 17.2541
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM2 enable and threshold notices identify the actual edited field
+ok 428 - V30-E ALARM2 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 15.0074
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM3 enable and threshold notices identify the actual edited field
+ok 429 - V30-E ALARM3 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 15.1597
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM4 enable and threshold notices identify the actual edited field
+ok 430 - V30-E ALARM4 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 15.4246
+  type: 'test'
+  ...
+# Subtest: V30-E ALARM5 enable and threshold notices identify the actual edited field
+ok 431 - V30-E ALARM5 enable and threshold notices identify the actual edited field
+  ---
+  duration_ms: 16.5217
+  type: 'test'
+  ...
+# Subtest: manual §1.20 WPT List opens waypoint fields, and TrackPad name editor commits deterministically
+ok 432 - manual §1.20 WPT List opens waypoint fields, and TrackPad name editor commits deterministically
+  ---
+  duration_ms: 42.8619
+  type: 'test'
+  ...
+# Subtest: deletion needs confirmation and the currently selected destination is protected
+ok 433 - deletion needs confirmation and the currently selected destination is protected
+  ---
+  duration_ms: 11.2723
+  type: 'test'
+  ...
+# Subtest: Go to WPT Off clears destination and Delete All WPT confirmation clears unprotected points
+ok 434 - Go to WPT Off clears destination and Delete All WPT confirmation clears unprotected points
+  ---
+  duration_ms: 33.1334
+  type: 'test'
+  ...
+# Subtest: V34: D04 Language source/rights disabled reason is visible before the device
+ok 435 - V34: D04 Language source/rights disabled reason is visible before the device
+  ---
+  duration_ms: 4.5299
+  type: 'test'
+  ...
+# Subtest: V34: procedural disabled item cannot expose raw state codes
+ok 436 - V34: procedural disabled item cannot expose raw state codes
+  ---
+  duration_ms: 0.99
+  type: 'test'
+  ...
+# Subtest: V34: NAV2 and NAV1 always disclose current MODE when Header Info is Off
+ok 437 - V34: NAV2 and NAV1 always disclose current MODE when Header Info is Off
+  ---
+  duration_ms: 1.5417
+  type: 'test'
+  ...
+# Subtest: V34: unknown active MODE fails closed without synthetic sonar claim
+ok 438 - V34: unknown active MODE fails closed without synthetic sonar claim
+  ---
+  duration_ms: 0.4313
+  type: 'test'
+  ...
+# Subtest: V34: accessible selection projects concise discrete row/choice text
+ok 439 - V34: accessible selection projects concise discrete row/choice text
+  ---
+  duration_ms: 3.2852
+  type: 'test'
+  ...
+# Subtest: V34: a dedicated off-device live selection replaces all-LCD aria-live
+ok 440 - V34: a dedicated off-device live selection replaces all-LCD aria-live
+  ---
+  duration_ms: 31.0595
+  type: 'test'
+  ...
+# Subtest: V34 presentation: source-backed [DEMO] moves to device LCD bottom-right, not the header
+ok 441 - V34 presentation: source-backed [DEMO] moves to device LCD bottom-right, not the header
+  ---
+  duration_ms: 17.2083
+  type: 'test'
+  ...
+# Subtest: V34 presentation: instructor guidance and safety remain outside the instrument
+ok 442 - V34 presentation: instructor guidance and safety remain outside the instrument
+  ---
+  duration_ms: 2.6868
+  type: 'test'
+  ...
+# Subtest: V34 presentation: source tagged synthetic values lose only the visible teaching suffix
+ok 443 - V34 presentation: source tagged synthetic values lose only the visible teaching suffix
+  ---
+  duration_ms: 1.0197
+  type: 'test'
+  ...
+# Subtest: V34 presentation: normal range shows Auto without Vietnamese text; teacher copy stays available
+ok 444 - V34 presentation: normal range shows Auto without Vietnamese text; teacher copy stays available
+  ---
+  duration_ms: 1.2531
+  type: 'test'
+  ...
+# Subtest: V34 presentation: disabled menu options keep canonical guards, not painted [HOLD]
+ok 445 - V34 presentation: disabled menu options keep canonical guards, not painted [HOLD]
+  ---
+  duration_ms: 2.2048
+  type: 'test'
+  ...
+# Subtest: V34 presentation: all new LCD help is routed to instructor metadata
+ok 446 - V34 presentation: all new LCD help is routed to instructor metadata
+  ---
+  duration_ms: 4.701
+  type: 'test'
+  ...
+# Subtest: V34 presentation: NAV metadata reflects typed fresh, stale and disconnected states
+ok 447 - V34 presentation: NAV metadata reflects typed fresh, stale and disconnected states
+  ---
+  duration_ms: 3.0789
+  type: 'test'
+  ...
+# Subtest: V34 presentation: Tankenmaru details are explicit instructor-only provenance
+ok 448 - V34 presentation: Tankenmaru details are explicit instructor-only provenance
+  ---
+  duration_ms: 0.582
+  type: 'test'
+  ...
+# Subtest: V34 presentation: raw source failure codes do not leak to the instructor
+ok 449 - V34 presentation: raw source failure codes do not leak to the instructor
+  ---
+  duration_ms: 0.9965
+  type: 'test'
+  ...
+# Subtest: V34 presentation: synthetic TIME TO GO is external teaching estimate, not operator ETA
+ok 450 - V34 presentation: synthetic TIME TO GO is external teaching estimate, not operator ETA
+  ---
+  duration_ms: 2.1295
+  type: 'test'
+  ...
+# Subtest: V34 presentation: early LCD-test return clears the separate DEMO painter
+ok 451 - V34 presentation: early LCD-test return clears the separate DEMO painter
+  ---
+  duration_ms: 5.3928
+  type: 'test'
+  ...
+# Subtest: V34 presentation: mobile guides bookend hardware without covering its LCD
+ok 452 - V34 presentation: mobile guides bookend hardware without covering its LCD
+  ---
+  duration_ms: 6.2819
+  type: 'test'
+  ...
+# Subtest: V34 presentation: root README/plan and protected bytes are not authored by UI branch
+ok 453 - V34 presentation: root README/plan and protected bytes are not authored by UI branch
+  ---
+  duration_ms: 3.3519
+  type: 'test'
+  ...
+# Subtest: source cue: off, booting and malformed modes cannot suggest active NAV
+ok 454 - source cue: off, booting and malformed modes cannot suggest active NAV
+  ---
+  duration_ms: 3.2841
+  type: 'test'
+  ...
+# Subtest: C11: typed fresh Own source, stale boundary and negative-age sample
+ok 455 - C11: typed fresh Own source, stale boundary and negative-age sample
+  ---
+  duration_ms: 1.2984
+  type: 'test'
+  ...
+# Subtest: C11: revoked, missing, invalid typed position fail closed
+ok 456 - C11: revoked, missing, invalid typed position fail closed
+  ---
+  duration_ms: 0.7685
+  type: 'test'
+  ...
+# Subtest: C11/D14: selected unavailable NMEA cannot be projected as Own
+ok 457 - C11/D14: selected unavailable NMEA cannot be projected as Own
+  ---
+  duration_ms: 0.8275
+  type: 'test'
+  ...
+# Subtest: D09: virtual option On and revoke change only external provenance
+ok 458 - D09: virtual option On and revoke change only external provenance
+  ---
+  duration_ms: 0.929
+  type: 'test'
+  ...
+# Subtest: source-unverified menu path: warning is external, verified rows do not inherit it
+ok 459 - source-unverified menu path: warning is external, verified rows do not inherit it
+  ---
+  duration_ms: 1.7744
+  type: 'test'
+  ...
+# Subtest: D11: diagnostic display has instructor-only, not hardware wording
+ok 460 - D11: diagnostic display has instructor-only, not hardware wording
+  ---
+  duration_ms: 0.3856
+  type: 'test'
+  ...
+# Subtest: keyboard focus boundary: teacher keyboard cannot steer physical controls
+ok 461 - keyboard focus boundary: teacher keyboard cannot steer physical controls
+  ---
+  duration_ms: 1.2488
+  type: 'test'
+  ...
+# Subtest: external notes and accessibility: data provenance cannot become LCD artwork
+ok 462 - external notes and accessibility: data provenance cannot become LCD artwork
+  ---
+  duration_ms: 32.9978
+  type: 'test'
+  ...
+# Subtest: V35: three deterministic D15 rows and no physical transport claims
+ok 463 - V35: three deterministic D15 rows and no physical transport claims
+  ---
+  duration_ms: 5.9958
+  type: 'test'
+  ...
+# Subtest: V35 C11/D14: typed Own waypoint and fresh sample are classroom-only
+ok 464 - V35 C11/D14: typed Own waypoint and fresh sample are classroom-only
+  ---
+  duration_ms: 0.9333
+  type: 'test'
+  ...
+# Subtest: V35 C11/D14: stale, future, revoked and invalid positions never look current
+ok 465 - V35 C11/D14: stale, future, revoked and invalid positions never look current
+  ---
+  duration_ms: 1.0253
+  type: 'test'
+  ...
+# Subtest: V35 C11: absent and invalid destinations cannot fabricate a route
+ok 466 - V35 C11: absent and invalid destinations cannot fabricate a route
+  ---
+  duration_ms: 1.2428
+  type: 'test'
+  ...
+# Subtest: V35 D14: NMEA selected with no receiver masks Own source provenance
+ok 467 - V35 D14: NMEA selected with no receiver masks Own source provenance
+  ---
+  duration_ms: 0.6601
+  type: 'test'
+  ...
+# Subtest: V35 D09: virtual option is not installed hardware, even when declared
+ok 468 - V35 D09: virtual option is not installed hardware, even when declared
+  ---
+  duration_ms: 0.6478
+  type: 'test'
+  ...
+# Subtest: V35: power-off fails closed for NAV and receiver even with cached samples
+ok 469 - V35: power-off fails closed for NAV and receiver even with cached samples
+  ---
+  duration_ms: 0.6119
+  type: 'test'
+  ...
+# Subtest: V35: actual deterministic teacher fixture event and replay keep readback stable
+ok 470 - V35: actual deterministic teacher fixture event and replay keep readback stable
+  ---
+  duration_ms: 27.6386
+  type: 'test'
+  ...
+# Subtest: V35: matrix owns no device I/O and stays entirely outside the face
+ok 471 - V35: matrix owns no device I/O and stays entirely outside the face
+  ---
+  duration_ms: 23.4305
+  type: 'test'
+  ...
+# Subtest: V36: source changes are discrete; first render is silent
+ok 472 - V36: source changes are discrete; first render is silent
+  ---
+  duration_ms: 5.0457
+  type: 'test'
+  ...
+# Subtest: V36: world tick changes age but not announcement or stored state
+ok 473 - V36: world tick changes age but not announcement or stored state
+  ---
+  duration_ms: 2.6047
+  type: 'test'
+  ...
+# Subtest: V36: revoke emits a single human-readable D14 status change
+ok 474 - V36: revoke emits a single human-readable D14 status change
+  ---
+  duration_ms: 1.3759
+  type: 'test'
+  ...
+# Subtest: V36: stale threshold notifies once, never on every expired tick
+ok 475 - V36: stale threshold notifies once, never on every expired tick
+  ---
+  duration_ms: 1.0153
+  type: 'test'
+  ...
+# Subtest: V36: D09 grant/revoke and D14 exclusion combine into one announcement
+ok 476 - V36: D09 grant/revoke and D14 exclusion combine into one announcement
+  ---
+  duration_ms: 1.5484
+  type: 'test'
+  ...
+# Subtest: V36: malformed previous rows fail closed instead of announcing
+ok 477 - V36: malformed previous rows fail closed instead of announcing
+  ---
+  duration_ms: 0.6349
+  type: 'test'
+  ...
+# Subtest: V36: three named h4 articles and one off-device polite live status
+ok 478 - V36: three named h4 articles and one off-device polite live status
+  ---
+  duration_ms: 20.4412
+  type: 'test'
+  ...
+# Subtest: V36: D15 typography is rem-based without editing OEM LCD CSS
+ok 479 - V36: D15 typography is rem-based without editing OEM LCD CSS
+  ---
+  duration_ms: 3.0796
+  type: 'test'
+  ...
+# Subtest: V36: app announces only semantic changes, without timers or FCV input
+ok 480 - V36: app announces only semantic changes, without timers or FCV input
+  ---
+  duration_ms: 5.6906
+  type: 'test'
+  ...
+# Subtest: V37 C11: premature MARK cannot invent position; committed synthetic waypoint uses Own only
+ok 481 - V37 C11: premature MARK cannot invent position; committed synthetic waypoint uses Own only
+  ---
+  duration_ms: 54.5687
+  type: 'test'
+  ...
+# Subtest: V37 C11/D14: NMEA selected after destination cannot borrow Own ETA or live speed
+ok 482 - V37 C11/D14: NMEA selected after destination cannot borrow Own ETA or live speed
+  ---
+  duration_ms: 23.7894
+  type: 'test'
+  ...
+# Subtest: V37 D09: revoke suspended edit and regrant cannot revive RF or a draft
+ok 483 - V37 D09: revoke suspended edit and regrant cannot revive RF or a draft
+  ---
+  duration_ms: 21.4829
+  type: 'test'
+  ...
+# Subtest: V37 D14: three NMEA preferences survive power cycle but never imply a receiver
+ok 484 - V37 D14: three NMEA preferences survive power cycle but never imply a receiver
+  ---
+  duration_ms: 23.0817
+  type: 'test'
+  ...
+# Subtest: V38 C11 name editor cancels without commit, then explicit save survives replay
+ok 485 - V38 C11 name editor cancels without commit, then explicit save survives replay
+  ---
+  duration_ms: 51.7308
+  type: 'test'
+  ...
+# Subtest: V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+ok 486 - V38 C11 protected destination refuses waypoint deletion until GO TO cleared
+  ---
+  duration_ms: 24.1387
+  type: 'test'
+  ...
+# Subtest: V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+ok 487 - V38 C11 power-off drops an uncommitted name; cancel of POWER preserves editor without saving
+  ---
+  duration_ms: 11.2402
+  type: 'test'
+  ...
+# Subtest: V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+ok 488 - V38 C11 MARK has 20-waypoint limit; teacher reset removes fixtures and waypoints
+  ---
+  duration_ms: 16.4725
+  type: 'test'
+  ...
+# Subtest: V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+ok 489 - V38 D09 details close on option revoke even under POWER wrapper; no NMEA/RF resurrects
+  ---
+  duration_ms: 19.3578
+  type: 'test'
+  ...
+# Subtest: V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+ok 490 - V38 D14/C11 bad-time, wrong-source, invalid-lat and NMEA cannot leak Own fields or ETA
+  ---
+  duration_ms: 12.9964
+  type: 'test'
+  ...
+# Subtest: V38 protocol rejects out-of-order power edges without corrupting replay
+ok 491 - V38 protocol rejects out-of-order power edges without corrupting replay
+  ---
+  duration_ms: 10.0838
+  type: 'test'
+  ...
+# Subtest: V39 C11: Delete All with a selected destination remains atomic through POWER-suspended confirmation
+ok 492 - V39 C11: Delete All with a selected destination remains atomic through POWER-suspended confirmation
+  ---
+  duration_ms: 53.9549
+  type: 'test'
+  ...
+# Subtest: V39 C11: Delete All NO/MENU/POWER OFF cancel; after GO TO Off numbering never reuses waypoint IDs
+ok 493 - V39 C11: Delete All NO/MENU/POWER OFF cancel; after GO TO Off numbering never reuses waypoint IDs
+  ---
+  duration_ms: 24.0792
+  type: 'test'
+  ...
+# Subtest: V39 D14: NMEA draft survives short POWER cancel only as draft; POWER OFF discards it
+ok 494 - V39 D14: NMEA draft survives short POWER cancel only as draft; POWER OFF discards it
+  ---
+  duration_ms: 26.1522
+  type: 'test'
+  ...
+# Subtest: V39 D09/D14: virtual option excludes NMEA rows but never changes stored NMEA source choice
+ok 495 - V39 D09/D14: virtual option excludes NMEA rows but never changes stored NMEA source choice
+  ---
+  duration_ms: 34.7379
+  type: 'test'
+  ...
+# Subtest: V39 legacy profile19: explicit settings import preserves validated NMEA choices, strips virtual entitlement
+ok 496 - V39 legacy profile19: explicit settings import preserves validated NMEA choices, strips virtual entitlement
+  ---
+  duration_ms: 20.2824
+  type: 'test'
+  ...
+# Subtest: V39 archived replay/profile is rejected even with a valid explicit settings import
+ok 497 - V39 archived replay/profile is rejected even with a valid explicit settings import
+  ---
+  duration_ms: 3.2187
+  type: 'test'
+  ...
+# Subtest: V39 no source event that only changes teacher projection may mutate world clock
+ok 498 - V39 no source event that only changes teacher projection may mutate world clock
+  ---
+  duration_ms: 8.093
+  type: 'test'
+  ...
+# Subtest: V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+ok 499 - V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+  ---
+  duration_ms: 2.8184
+  type: 'test'
+  ...
+# Subtest: V40 label-only correction preserves all nine OEM §1.1 operator controls
+ok 500 - V40 label-only correction preserves all nine OEM §1.1 operator controls
+  ---
+  duration_ms: 1.3193
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+ok 501 - V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+  ---
+  duration_ms: 6.3806
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+ok 502 - V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+  ---
+  duration_ms: 0.6983
+  type: 'test'
+  ...
+# Subtest: V41 versioned public-reference atlas agrees with the two runtime menu labels
+ok 503 - V41 versioned public-reference atlas agrees with the two runtime menu labels
+  ---
+  duration_ms: 13.5648
+  type: 'test'
+  ...
+# Subtest: V41 label scope leaves five menu roots and training metadata outside display
+ok 504 - V41 label scope leaves five menu roots and training metadata outside display
+  ---
+  duration_ms: 0.5794
+  type: 'test'
+  ...
+# Subtest: V42 OEM §1.4 MODE dialog heading is exactly MODE, without invented SELECT
+ok 505 - V42 OEM §1.4 MODE dialog heading is exactly MODE, without invented SELECT
+  ---
+  duration_ms: 10.8094
+  type: 'test'
+  ...
+# Subtest: V42 selected MODE projector retains timeout, cancellation and seven choices
+ok 506 - V42 selected MODE projector retains timeout, cancellation and seven choices
+  ---
+  duration_ms: 3.6792
+  type: 'test'
+  ...
+# Subtest: V42 change must not alter RANGE, BRILL and Auto Gain dialog names
+ok 507 - V42 change must not alter RANGE, BRILL and Auto Gain dialog names
+  ---
+  duration_ms: 2.798
+  type: 'test'
+  ...
+# Subtest: V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+ok 508 - V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+  ---
+  duration_ms: 17.1761
+  type: 'test'
+  ...
+# Subtest: V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+ok 509 - V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+  ---
+  duration_ms: 20.9374
+  type: 'test'
+  ...
+# Subtest: V43 independent six-second UI clock and ENTER/MENU commits keep preview
+ok 510 - V43 independent six-second UI clock and ENTER/MENU commits keep preview
+  ---
+  duration_ms: 6.2645
+  type: 'test'
+  ...
+# Subtest: V43 cancelled POWER hold preserves BRILL preview and descending progression
+ok 511 - V43 cancelled POWER hold preserves BRILL preview and descending progression
+  ---
+  duration_ms: 6.43
+  type: 'test'
+  ...
+# Subtest: V43 behavior profile separates legacy replay/settings without schema trickery
+ok 512 - V43 behavior profile separates legacy replay/settings without schema trickery
+  ---
+  duration_ms: 5.689
+  type: 'test'
+  ...
+# Subtest: V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+ok 513 - V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+  ---
+  duration_ms: 9.0141
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 left/right adjust Brill draft without committing and clamp at 9
+ok 514 - V44 §1.3 left/right adjust Brill draft without committing and clamp at 9
+  ---
+  duration_ms: 19.9046
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 mixed left/right input respects the 0 lower bound
+ok 515 - V44 §1.3 mixed left/right input respects the 0 lower bound
+  ---
+  duration_ms: 13.3424
+  type: 'test'
+  ...
+# Subtest: V44 mixed POWER/BRILL and TrackPad never jumps outside 0..9 or mutates observations
+ok 516 - V44 mixed POWER/BRILL and TrackPad never jumps outside 0..9 or mutates observations
+  ---
+  duration_ms: 11.6049
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 left/right restarts training inactivity timer after mixed BRILL
+ok 517 - V44 §1.3 left/right restarts training inactivity timer after mixed BRILL
+  ---
+  duration_ms: 6.7764
+  type: 'test'
+  ...
+# Subtest: V44 §1.3 ENTER/MENU save staged TrackPad value and reopening is non-committing
+ok 518 - V44 §1.3 ENTER/MENU save staged TrackPad value and reopening is non-committing
+  ---
+  duration_ms: 11.0477
+  type: 'test'
+  ...
+# Subtest: V44 canceled POWER hold retains mixed BRILL preview, the UI clock and sensor separation
+ok 519 - V44 canceled POWER hold retains mixed BRILL preview, the UI clock and sensor separation
+  ---
+  duration_ms: 10.2892
+  type: 'test'
+  ...
+# Subtest: V44 projector remains read-only and source gap does not alter V43 profile
+ok 520 - V44 projector remains read-only and source gap does not alter V43 profile
+  ---
+  duration_ms: 9.4867
+  type: 'test'
+  ...
+# Subtest: V46 FURUNO v2.01 literal Display > Colors excludes instructor suffix on OEM-facing menu
+ok 521 - V46 FURUNO v2.01 literal Display > Colors excludes instructor suffix on OEM-facing menu
+  ---
+  duration_ms: 4.4284
+  type: 'test'
+  ...
+# Subtest: V46 Colors choice window and operator LCD label must not print SIM or training provenance
+ok 522 - V46 Colors choice window and operator LCD label must not print SIM or training provenance
+  ---
+  duration_ms: 2.7345
+  type: 'test'
+  ...
+# Subtest: V46 D15 outside the device explicitly discloses Colors preview and unknown firmware
+ok 523 - V46 D15 outside the device explicitly discloses Colors preview and unknown firmware
+  ---
+  duration_ms: 0.8972
+  type: 'test'
+  ...
+# Subtest: V46 System R&D Echo history is research evidence, not an invented exposed OEM menu
+ok 524 - V46 System R&D Echo history is research evidence, not an invented exposed OEM menu
+  ---
+  duration_ms: 0.6354
+  type: 'test'
+  ...
+# Subtest: V46 original palette remains synthetic only, firmware/profile/replay unaffected
+ok 525 - V46 original palette remains synthetic only, firmware/profile/replay unaffected
+  ---
+  duration_ms: 4.2439
+  type: 'test'
+  ...
+# Subtest: V46 public menu atlas metadata mirrors OEM literal and retains firmware unknown grade
+ok 526 - V46 public menu atlas metadata mirrors OEM literal and retains firmware unknown grade
+  ---
+  duration_ms: 10.5939
+  type: 'test'
+  ...
+# Subtest: V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+ok 527 - V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+  ---
+  duration_ms: 5.2237
+  type: 'test'
+  ...
+# Subtest: V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+ok 528 - V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+  ---
+  duration_ms: 1.2404
+  type: 'test'
+  ...
+# Subtest: V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+ok 529 - V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+  ---
+  duration_ms: 1.8723
+  type: 'test'
+  ...
+# Subtest: V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+ok 530 - V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+  ---
+  duration_ms: 0.7667
+  type: 'test'
+  ...
+# Subtest: V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+ok 531 - V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+  ---
+  duration_ms: 27.1919
+  type: 'test'
+  ...
+# Subtest: V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+ok 532 - V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+  ---
+  duration_ms: 4.7921
+  type: 'test'
+  ...
+# Subtest: V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+ok 533 - V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+  ---
+  duration_ms: 67.1291
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+ok 534 - V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+  ---
+  duration_ms: 2.7858
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+ok 535 - V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+  ---
+  duration_ms: 1.2177
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+ok 536 - V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+  ---
+  duration_ms: 0.8513
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 537 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 2.73
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 538 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.4691
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 539 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.4266
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 540 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 3.8464
+  type: 'test'
+  ...
+# Subtest: V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+ok 541 - V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+  ---
+  duration_ms: 1.8194
+  type: 'test'
+  ...
+# Subtest: V56: all existing instructor capabilities and live regions remain unique
+ok 542 - V56: all existing instructor capabilities and live regions remain unique
+  ---
+  duration_ms: 0.9186
+  type: 'test'
+  ...
+# Subtest: V56: tab selection is owned by a one-time UI binder, never reducer/replay
+ok 543 - V56: tab selection is owned by a one-time UI binder, never reducer/replay
+  ---
+  duration_ms: 0.2648
+  type: 'test'
+  ...
+# Subtest: V57 keeps one canonical public-reference notice in the masthead
+ok 544 - V57 keeps one canonical public-reference notice in the masthead
+  ---
+  duration_ms: 2.7072
+  type: 'test'
+  ...
+# Subtest: V57 removes repeated eyebrow and keeps a concise, truthful console heading
+ok 545 - V57 removes repeated eyebrow and keeps a concise, truthful console heading
+  ---
+  duration_ms: 0.4671
+  type: 'test'
+  ...
+# Subtest: V57 preserves live MODE state and concise synthetic-echo source cue
+ok 546 - V57 preserves live MODE state and concise synthetic-echo source cue
+  ---
+  duration_ms: 0.3281
+  type: 'test'
+  ...
+# Subtest: V57 retains explicit no-hardware and no-navigation safety disclaimer
+ok 547 - V57 retains explicit no-hardware and no-navigation safety disclaimer
+  ---
+  duration_ms: 0.3535
+  type: 'test'
+  ...
+# Subtest: V57 compact masthead remains visible and responsive at phone width
+ok 548 - V57 compact masthead remains visible and responsive at phone width
+  ---
+  duration_ms: 0.5367
+  type: 'test'
+  ...
+# Subtest: V57 runtime MODE cue keeps its live mode and short synthetic-source label
+ok 549 - V57 runtime MODE cue keeps its live mode and short synthetic-source label
+  ---
+  duration_ms: 0.7745
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 550 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 4.0912
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 551 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 1.9682
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 552 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.73
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 553 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.5598
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 554 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.3662
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 555 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.7182
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 556 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.4797
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 557 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.5281
+  type: 'test'
+  ...
+# Subtest: new plan is separate from hardware-target plan and has seven executable phases
+ok 558 - new plan is separate from hardware-target plan and has seven executable phases
+  ---
+  duration_ms: 2.6028
+  type: 'test'
+  ...
+# Subtest: all phases carry deep scout, advice-compatible mechanical TDD and stop protocol
+ok 559 - all phases carry deep scout, advice-compatible mechanical TDD and stop protocol
+  ---
+  duration_ms: 81.1173
+  type: 'test'
+  ...
+# Subtest: new plan has no broken local markdown relative references
+ok 560 - new plan has no broken local markdown relative references
+  ---
+  duration_ms: 17.4416
+  type: 'test'
+  ...
+# Subtest: video/source research does not invent time-coded footage or installed firmware
+ok 561 - video/source research does not invent time-coded footage or installed firmware
+  ---
+  duration_ms: 1.3968
+  type: 'test'
+  ...
+# Subtest: broken brochure links were replaced with a verified manufacturer PDF and honest source grades
+ok 562 - broken brochure links were replaced with a verified manufacturer PDF and honest source grades
+  ---
+  duration_ms: 0.563
+  type: 'test'
+  ...
+# Subtest: public-reference screen atlas distinguishes Demo controls from guarded features and video claims
+ok 563 - public-reference screen atlas distinguishes Demo controls from guarded features and video claims
+  ---
+  duration_ms: 3.6081
+  type: 'test'
+  ...
+# Subtest: evidence register is explicit about 6 devices and rejects unsupported release
+ok 564 - evidence register is explicit about 6 devices and rejects unsupported release
+  ---
+  duration_ms: 2.1113
+  type: 'test'
+  ...
+# Subtest: model and evidence registration cannot drift silently
+ok 565 - model and evidence registration cannot drift silently
+  ---
+  duration_ms: 1.344
+  type: 'test'
+  ...
+# Subtest: other variants are held until model, hardware and version resolved
+ok 566 - other variants are held until model, hardware and version resolved
+  ---
+  duration_ms: 0.4562
+  type: 'test'
+  ...
+# Subtest: FCV-588 research inventory tracks all 65 unique tasks by domain
+ok 567 - FCV-588 research inventory tracks all 65 unique tasks by domain
+  ---
+  duration_ms: 2.9694
+  type: 'test'
+  ...
+# Subtest: feature register explicitly keeps all research behaviors unapproved
+ok 568 - feature register explicitly keeps all research behaviors unapproved
+  ---
+  duration_ms: 0.712
+  type: 'test'
+  ...
+# Subtest: research does not label provisional device behavior as validated
+ok 569 - research does not label provisional device behavior as validated
+  ---
+  duration_ms: 0.736
+  type: 'test'
+  ...
+# Subtest: manual references stay rights-restricted and provenance-marked
+ok 570 - manual references stay rights-restricted and provenance-marked
+  ---
+  duration_ms: 0.8595
+  type: 'test'
+  ...
+# Subtest: manual archive accounts for every named device without inventing missing versions
+ok 571 - manual archive accounts for every named device without inventing missing versions
+  ---
+  duration_ms: 0.8412
+  type: 'test'
+  ...
+# Subtest: local server serves only UI and source, not transcript or private documents
+ok 572 - local server serves only UI and source, not transcript or private documents
+  ---
+  duration_ms: 288.3523
+  type: 'test'
+  ...
+# Subtest: runtime server fails closed on binary/media extensions even inside public source roots
+ok 573 - runtime server fails closed on binary/media extensions even inside public source roots
+  ---
+  duration_ms: 11.169
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 574 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 2.3321
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 575 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.6325
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 576 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2962
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 577 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.679
+  type: 'test'
+  ...
+1..577
+# tests 577
+# suites 0
+# pass 577
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2013.9355

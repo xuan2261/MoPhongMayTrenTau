@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-18T05:37:35.1253371Z",
+  "status": "V36_CANONICAL_4_WEB_FILES_APPLIED_37_RUNTIME_SHA_MATCH",
+  "scope": "FCV588_D15_INSTRUCTOR_ONLY_A11Y",
+  "supervision": "GPT6_USER_APPROVED_GO",
+  "patchSHA256": "d9f68cd6dbfeb3cd86bc33b3fbd0894245a4c3da8e827639c856c5ceeb68e9d3",
+  "changedFiles": [
+    {
+      "path": "web/index.html",
+      "sha256": "7ec574436566e10e32064455dc3e8b0e53d1449723d53781d1b6e2f22e97340d"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+    },
+    {
+      "path": "web/app.mjs",
+      "sha256": "a77f165f77fb3a0e898df489bccf1c6f559adbcc15bbc0da1df12b4fda53adb1"
+    },
+    {
+      "path": "web/fcv588-training-source-matrix.mjs",
+      "sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+    }
+  ],
+  "runtimeSourceMatches": 37,
+  "srcCoreUnchanged": 23,
+  "originalV31FailureSHA256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "postIntegrationQA": "PENDING",
+  "hardwareValidated": false,
+  "screenReaderSpeechValidated": false,
+  "releaseApproval": "HOLD",
+  "gitCommitted": false
+}

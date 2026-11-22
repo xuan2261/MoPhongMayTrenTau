@@ -1,0 +1,30 @@
+{
+  "schema": "FCV588_P24_ARCHIVE_SIDECAR_GUARDED_DRYRUN_V1",
+  "status": "READY_STAGING_GO_CANONICAL_NOT_YET_CHANGED",
+  "scope": "PURE_REPLAY_API_ONLY_NO_UI_ARCHIVE_LOADER",
+  "p23FinalSHA256": "d5b1bfe16e82948c434c67682f04ba79ae939f89be61af88ede6e7021ec3c74a",
+  "p23PostSHA256": "9d94af354d4dffa7d6d8e10736955193f562f55feadc754229934a3eedceb095",
+  "canonical50SHAStable": true,
+  "OEMReference8SHAStable": true,
+  "allowedNEWPathsSHA256": {
+    "src/devices/fcv588/archive-compat.mjs": "fc11f8151a6333a8c2d5916bd6e6517c02e7eda49092e68b6ebea3b2a6b03431",
+    "test/fcv588-p24-zoom-archive.test.mjs": "098a558e08f30104e8abc1fcdc8ba6b1a1a565bc0c332a9744985dd4787ca964",
+    "test/fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d"
+  },
+  "preimageMustBeAbsent": [
+    "src/devices/fcv588/archive-compat.mjs",
+    "test/fcv588-p24-zoom-archive.test.mjs",
+    "test/fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json"
+  ],
+  "stageFullNodeSHA256": "952facc5d68eecb685b03a3d9bca40a1bbf6ba55b5974c7d5096c014100429b2",
+  "stageFullNode": "587/587",
+  "focusedGreenSHA256": "388943a25bc2b1072091e55294e6a2c3965f29f46750ac86632025b1a7b4bcde",
+  "readbackDemoSHA256": "1883b45955c1c935814b350659a9512ff6862d6cd8e3d593ae9e3bd6e05bf8e1",
+  "runtimeAppNoChanges": true,
+  "mutableCoreEnvelopeVersion": false,
+  "archiveWithoutSidecar": "REJECT_FOR_VISUAL_ONLY",
+  "rawStateReplay": "UNCHANGED",
+  "rightsClaim": "NONE",
+  "releaseApproval": "HOLD",
+  "independentReview": "PENDING"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "V40_CANONICAL_ONE_HTML_AND_NEW_TEST_APPLIED_SHA_MATCH",
+  "dateTimeUtc": "2026-10-18T13:57:08.4392056Z",
+  "v39ReceiptSHA": "35d2f106c60186d29f89fc159945b6530084a0822d2f3ea98fec0fa261600bce",
+  "v40ManifestSHA": "a5d2de2778ec76e49ea955b1fd962aaf35d2ddee40290ba14b68314ded114eef",
+  "changedRuntimePath": "web/index.html",
+  "priorHtmlSHA": "7ec574436566e10e32064455dc3e8b0e53d1449723d53781d1b6e2f22e97340d",
+  "appliedHtmlSHA": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+  "newTestPath": "test\\fcv588-v40-oem-menu-label.test.mjs",
+  "newTestSHA": "05a0f65efc116961f775c95d66e84c08d3f9da0b0bd223baf343358e9f178ec3",
+  "runtimeAssetsShaMatched": 37,
+  "coreModulesUnchanged": 23,
+  "productSemanticEventsChanged": false,
+  "releaseApproval": "HOLD"
+}

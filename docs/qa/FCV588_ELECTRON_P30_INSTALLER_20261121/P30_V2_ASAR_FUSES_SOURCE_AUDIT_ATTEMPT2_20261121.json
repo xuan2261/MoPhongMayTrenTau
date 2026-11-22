@@ -1,0 +1,31 @@
+{
+  "schema": "FCV588_P30_ASAR_FUSE_AUDIT_V1",
+  "status": "FAILED",
+  "parents": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e"
+  },
+  "fuses": {
+    "RunAsNode": false,
+    "EnableCookieEncryption": true,
+    "EnableNodeOptionsEnvironmentVariable": false,
+    "EnableNodeCliInspectArguments": false,
+    "EnableEmbeddedAsarIntegrityValidation": true,
+    "OnlyLoadAppFromAsar": true,
+    "LoadBrowserProcessSpecificV8Snapshot": false,
+    "GrantFileProtocolExtraPrivileges": false,
+    "WasmTrapHandlers": true
+  },
+  "files": [
+    {
+      "path": "desktop/main.cjs",
+      "sha256": "8798b9707b51bd6c5e0fa6a32320f595b76302caaafd3befe8176a115413fcd2"
+    }
+  ],
+  "artifacts": {},
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    description: 'SYNTHETIC TRAINING POC NOT OEM',\n    main: 'desktop/main.cjs',\n    name: 'fcv588-synthetic-electron-poc',\n+   private: true,\n    version: '0.0.1'\n  }\n\n    at file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-electron-installer-p30-20261121/desktop/p30-audit.mjs:49:32"
+}

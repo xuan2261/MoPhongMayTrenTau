@@ -1,0 +1,53 @@
+{
+  "schema": "P34_SPOKEN_NARRATOR_FEASIBILITY_V1",
+  "dateUtc": "2026-11-21T14:47:19.5395731Z",
+  "project": "MoPhongMayTrenTau",
+  "device": "FCV-588 Synthetic Training POC UNRELEASED",
+  "installedVersion": "0.0.3",
+  "scope": "Real Windows read-only speech-proof feasibility and preservation gate",
+  "decision": "BLOCKED_NO_PRIVACY_SAFE_NONHUMAN_SPEECH_CHANNEL",
+  "releaseApproval": "HOLD",
+  "spokenAudioVerified": false,
+  "narratorLaunched": false,
+  "fcv588Launched": false,
+  "audioCaptured": false,
+  "listenerAvailableInAgentSession": false,
+  "sourcesSha256": {
+    "P33Post": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630",
+    "P33Final": "4a880c71f503078e20dd4a585d408947b8830cc8f7fcac59fb1c52eca30a0478",
+    "InstalledExe": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+    "InstalledAsar": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+    "Narrator": "85ce3785d41289c9648efa06c7d2fe69f295b590ca6aec722efb97138ca71ed4"
+  },
+  "nativeNarratorVersion": "10.0.18362.1 (WinBuild.160101.0800)",
+  "windowsMetadata": {
+    "currentBuild": "19045",
+    "currentBuildNumber": "18363",
+    "osBuildCim": "18363"
+  },
+  "hostState": {
+    "fcv588Count": 0,
+    "narratorCount": 0,
+    "nvdaCount": 0,
+    "server4173Pid": 1204
+  },
+  "previousProof": {
+    "p33NativeUIA": "PASS_NATIVE_UIA_FOCUS_SURROGATE",
+    "p33HumanHeardNarrator": "BLOCKED_HUMAN_SPEECH_CONFIRMATION",
+    "p33ParentSHA": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630"
+  },
+  "feasibility": {
+    "UIA_Name_Focus_Events": "NOT_AUDIO_CONTENT_PROOF",
+    "Speech_Recap": "NOT_AVAILABLE_IN_INSTALLED_NARRATOR_18362_1_AS_OBSERVED",
+    "Process_Specific_WASAPI": "UNSUPPORTED_FOR_OBSERVED_OS_BUILDS_BELOW_20348",
+    "System_Wide_Loopback": "NOT_RUN_PRIVACY_BOUNDARY",
+    "Human_Listener": "REQUIRED_AND_NOT_PRESENT_IN_AGENT_RUN"
+  },
+  "nextAction": "One human on this real Windows host to follow existing P32_NARRATOR_HUMAN_ACCEPTANCE_20261121.md and record heard GAIN/MODE/POWER and state announcements in a NEW receipt.",
+  "notClaims": [
+    "UIA is not speech",
+    "No audibility PASS claimed",
+    "No release approval",
+    "No modification to previously sealed P28-P33 files"
+  ]
+}

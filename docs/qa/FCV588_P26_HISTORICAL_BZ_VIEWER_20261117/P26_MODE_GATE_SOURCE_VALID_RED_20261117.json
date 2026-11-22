@@ -1,0 +1,9 @@
+{
+  "schema": "FCV588_P26_MODE_GATE_SOURCE_VALID_RED_V1",
+  "status": "SOURCE_VALID_RED_ACTIVE_MODE_LF_NOT_ZOOM",
+  "exitCode": 1,
+  "testSHA256": "a07622a29732219543d28fa1881d9d85a8b5615e56a440d608a09bb556039c68",
+  "logSHA256": "055fac2e6252ad2c86818c0f11635bd5fa81f20445b9832818e3b960b1dc6ff9",
+  "rootCause": "P25 preview tests saved zoomMode preference; P26 ignored archived active deviceState.mode LF instead of requiring LF-ZOOM/HF-ZOOM",
+  "canonicalTouched": false
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "FCV588_P27_SOURCE_VALID_RED_V1",
+  "status": "EXPECTED_SOURCE_VALID_RED",
+  "exitCode": 1,
+  "testSHA256": "e3b8de8d0ee56242ee337edf06ba6290355ae0ce1d459099f1bcf019e68ae0d0",
+  "logSHA256": "64dfd1db29fc2c37f013c2d8314bf6a5582b1dc6bc92402ccf80c31bb9b969b8",
+  "reason": "P26 D15 lacks archive event timeline model/controls",
+  "canonicalTouched": false,
+  "P26FinalSHA256": "ecf30f5545c626c6d95a6f3797ae577ad48e66af8ae7ca8f3c27a9ba118d5d5a",
+  "P26IndependentPostSHA256": "3797f82bb079e6c89cc4c3523a093e187458c5c6037d4c4e78700b9fabbd5ef6"
+}

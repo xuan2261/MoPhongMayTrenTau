@@ -1,0 +1,118 @@
+{
+  "schema": "FCV588_P20_NATIVE_WIN32_UIA_DIRECT_V1",
+  "createdAt": "2026-11-17T03:22:16.285343+00:00",
+  "port": 4220,
+  "status": "HARNESS_BLOCKED_CHROME_NOT_FOREGROUND",
+  "gates": {
+    "uniqueChromeHwnd": true,
+    "uiaInspected": false,
+    "uniqueWitnessHwnd": true,
+    "chromeForegroundBeforeDown": false
+  },
+  "issues": [
+    "Chrome cleanup Error('Event loop is closed! Is Playwright already stopped?')"
+  ],
+  "scope": "WINDOWS_HEADED_CHROME_NATIVE_FOREGROUND_UIA_AUTOMATED_KEYBOARD_NOT_HUMAN_PHYSICAL_SPEECH",
+  "parentSHA256": {
+    "p19Final": "1fc1b43ced49b9c9d630218ee3c9211573b0e00474f207ba3aa5f0e864158f11",
+    "p19Post": "1824e63e7b54c88801a002adf2758203ea1c4ce750fed2f48c822f2ab9a3a83b"
+  },
+  "sourcePreimage": "50/50",
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "chromeWindowCandidates": [
+    {
+      "hwnd": 192875206,
+      "pid": 21036,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+      "foreground": false
+    }
+  ],
+  "chromeWindow": {
+    "hwnd": 192875206,
+    "pid": 21036,
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "title": "FCV588-P20-DIRECT-WINDOWS-QA-20261117 - Google Chrome",
+    "foreground": false
+  },
+  "uia": {
+    "status": "ERROR",
+    "code": 4294770688,
+    "stderr": "Cannot process command because a command is already specified with -Command or -EncodedCommand.\n",
+    "stdout": "cts.\n\n    If the value of Command is a string, Command must be the last parameter\n    in the command , because any characters typed after the command are \n    interpreted as the command arguments.\n\n    To write a string that runs a Windows PowerShell command, use the format:\n\t\"& {<command>}\"\n    where the quotation marks indicate a string and the invoke operator (&)\n    causes the command to be executed.\n\n-Help, -?, /?\n    Shows this message. If you are typing a PowerShell.exe command in Windows\n    PowerShell, prepend the command parameters with a hyphen (-), not a forward\n    slash (/). You can use either a hyphen or forward slash in Cmd.exe.\n\nEXAMPLES\n    PowerShell -PSConsoleFile SqlSnapIn.Psc1\n    PowerShell -version 2.0 -NoLogo -InputFormat text -OutputFormat XML\n    PowerShell -ConfigurationName AdminRoles\n    PowerShell -Command {Get-EventLog -LogName security}\n    PowerShell -Command \"& {Get-EventLog -LogName security}\"\n\n    # To use the -EncodedCommand parameter:\n    $command = 'dir \"c:\\program files\" '\n    $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)\n    $encodedCommand = [Convert]::ToBase64String($bytes)\n    powershell.exe -encodedCommand $encodedCommand\n"
+  },
+  "witnessWindow": {
+    "hwnd": 2690370,
+    "pid": 12296,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "title": "",
+    "foreground": false
+  },
+  "chromeForegroundAttemptError": "error(0, 'SetForegroundWindow', 'No error message is available')",
+  "preHold": {
+    "win32": {
+      "foreground": {
+        "hwnd": 8653244,
+        "pid": 18532,
+        "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+        "title": "JeikCode Desktop",
+        "foreground": true
+      },
+      "page": null
+    },
+    "browser": {
+      "hasFocus": true,
+      "activeElement": "key-power",
+      "pressing": false,
+      "eventCount": 1,
+      "status": "POWER OFF",
+      "powerOff": true,
+      "events": [
+        {
+          "type": "focus",
+          "ms": 1224.7000000476837,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "blur",
+          "ms": 2725,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        },
+        {
+          "type": "focus",
+          "ms": 2725.2999999523163,
+          "trusted": true,
+          "hasFocus": true,
+          "powerPressing": false,
+          "eventCount": 1
+        }
+      ]
+    }
+  },
+  "originalForegroundRestoreAttempt": null,
+  "originalForegroundRestored": true,
+  "foregroundAtEnd": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "ownedPortClosed": true,
+  "protectedUserServerStillListening": true,
+  "canonicalRuntimeAfter": 50,
+  "parentP19Unchanged": true
+}

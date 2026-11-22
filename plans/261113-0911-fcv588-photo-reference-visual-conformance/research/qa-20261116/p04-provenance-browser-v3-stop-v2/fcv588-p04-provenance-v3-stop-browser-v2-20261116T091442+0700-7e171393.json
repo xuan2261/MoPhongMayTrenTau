@@ -1,0 +1,22 @@
+{
+  "schema": "fcv588-p04-bottom-provenance-v3-stop-browser-v2",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "port": 4197,
+  "scope": "isolated synthetic Bottom Lock provenance + Stop/Bottom Zone smoke; no canonical apply",
+  "sourceManifestBefore": {
+    "files": 38,
+    "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040"
+  },
+  "photoDeny": {
+    "status": "NOT_RUN",
+    "paths": []
+  },
+  "cases": [],
+  "objectiveFailures": [
+    "port 4197 occupied"
+  ],
+  "overallStatus": "FAILED",
+  "serverCleanup": "NOT_RUN",
+  "fatalError": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop-v2\\p04_provenance_v3_stop_browser_qa_worker7_v2.py\", line 548, in main\n    raise RuntimeError(f\"port {PORT} occupied\")\nRuntimeError: port 4197 occupied\n",
+  "finishedAt": "2026-11-16T09:14:42.386217+07:00"
+}

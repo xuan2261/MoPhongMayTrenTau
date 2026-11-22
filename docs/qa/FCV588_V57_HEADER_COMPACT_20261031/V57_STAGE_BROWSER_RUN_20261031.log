@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Work\MoPhongMayTrenTau\docs\qa\FCV588_V57_HEADER_COMPACT_20261031\v57_header_browser_probe.py", line 67, in <module>
+    raise AssertionError("Dynamic source cue mismatch: "+json.dumps(cue,ensure_ascii=False))
+AssertionError: Dynamic source cue mismatch: {"visible": false, "title": "", "detail": ""}

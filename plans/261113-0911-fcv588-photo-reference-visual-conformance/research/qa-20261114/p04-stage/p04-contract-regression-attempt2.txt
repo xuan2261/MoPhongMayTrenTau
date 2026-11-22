@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+ok 1 - B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+  ---
+  duration_ms: 3.9246
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 2 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 12.6089
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 3 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 0.8638
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 4 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 11.0643
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 5 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 11.4265
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 6 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.4492
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 7 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 11.412
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 8 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 9.823
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 9 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 0.6161
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 10 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 15.3715
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 11 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 4.3154
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 12 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 13.3397
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 13 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.2717
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 14 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 13.7076
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 15 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 14.7515
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 16 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 9.9212
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 17 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 6.2921
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 18 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.3961
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 19 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.552
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 20 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 6.3203
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 21 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.2828
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 22 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 6.5201
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 23 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.276
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 24 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 12.2558
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 25 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 22.1392
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 26 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.5185
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 27 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.5063
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 28 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2221
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 29 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.4878
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 348.3126

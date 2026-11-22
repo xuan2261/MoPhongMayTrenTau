@@ -1,0 +1,382 @@
+TAP version 13
+# Subtest: §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+ok 1 - §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+  ---
+  duration_ms: 9.2537
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+ok 2 - §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+  ---
+  duration_ms: 12.3604
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 enable remains independent of parameter editing
+ok 3 - §1.18 ALARM1 enable remains independent of parameter editing
+  ---
+  duration_ms: 2.1515
+  type: 'test'
+  ...
+# Subtest: independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+ok 4 - independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+  ---
+  duration_ms: 10.8446
+  type: 'test'
+  ...
+# Subtest: fish alarm Level and synthetic category govern detection, not merely the enabled switch
+ok 5 - fish alarm Level and synthetic category govern detection, not merely the enabled switch
+  ---
+  duration_ms: 6.2902
+  type: 'test'
+  ...
+# Subtest: ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+ok 6 - ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+  ---
+  duration_ms: 5.0553
+  type: 'test'
+  ...
+# Subtest: §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+ok 7 - §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+  ---
+  duration_ms: 11.0945
+  type: 'test'
+  ...
+# Subtest: D06 Calib is a nested operator workflow with sourced fields, not an inert 0..3 scalar
+ok 8 - D06 Calib is a nested operator workflow with sourced fields, not an inert 0..3 scalar
+  ---
+  duration_ms: 12.0697
+  type: 'test'
+  ...
+# Subtest: D06 gain-adjust edits remain staged, cancelable, persistent, replayable and field bounded
+ok 9 - D06 gain-adjust edits remain staged, cancelable, persistent, replayable and field bounded
+  ---
+  duration_ms: 16.7188
+  type: 'test'
+  ...
+# Subtest: D06 classroom gain, temperature, speed and fish adjustments affect projections, not source observation
+ok 10 - D06 classroom gain, temperature, speed and fish adjustments affect projections, not source observation
+  ---
+  duration_ms: 12.7932
+  type: 'test'
+  ...
+# Subtest: D06 Water Type and Zero Line change training display state, never water salinity measurements
+ok 11 - D06 Water Type and Zero Line change training display state, never water salinity measurements
+  ---
+  duration_ms: 1.3699
+  type: 'test'
+  ...
+# Subtest: range-bank projects only the existing semantic operator fields and never mutates state
+ok 12 - range-bank projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 14.4451
+  type: 'test'
+  ...
+# Subtest: units projects only the existing semantic operator fields and never mutates state
+ok 13 - units projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 7.2645
+  type: 'test'
+  ...
+# Subtest: calibration projects only the existing semantic operator fields and never mutates state
+ok 14 - calibration projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.8183
+  type: 'test'
+  ...
+# Subtest: nav-boxes projects only the existing semantic operator fields and never mutates state
+ok 15 - nav-boxes projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 2.817
+  type: 'test'
+  ...
+# Subtest: fish-alarm projects only the existing semantic operator fields and never mutates state
+ok 16 - fish-alarm projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 5.0407
+  type: 'test'
+  ...
+# Subtest: fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+ok 17 - fish-alarm-setting projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 3.9773
+  type: 'test'
+  ...
+# Subtest: installation projects only the existing semantic operator fields and never mutates state
+ok 18 - installation projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 4.897
+  type: 'test'
+  ...
+# Subtest: func-program projects only the existing semantic operator fields and never mutates state
+ok 19 - func-program projects only the existing semantic operator fields and never mutates state
+  ---
+  duration_ms: 1.745
+  type: 'test'
+  ...
+# Subtest: Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 20 - Range8 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 59.6291
+  type: 'test'
+  ...
+# Subtest: Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 21 - Units keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 35.3548
+  type: 'test'
+  ...
+# Subtest: Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 22 - Calibration keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 32.8093
+  type: 'test'
+  ...
+# Subtest: NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 23 - NAV Box3 keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 29.4702
+  type: 'test'
+  ...
+# Subtest: ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+ok 24 - ALARM5 Bottom From keeps displayed stored/draft, cancel, commit, codec, replay and raw world consistent
+  ---
+  duration_ms: 30.4862
+  type: 'test'
+  ...
+# Subtest: all bounded numeric configuration windows keep edge and middle drafts visible in original order
+ok 25 - all bounded numeric configuration windows keep edge and middle drafts visible in original order
+  ---
+  duration_ms: 7.9222
+  type: 'test'
+  ...
+# Subtest: Range Bank uses selected depth units consistently without reinterpreting stored meters
+ok 26 - Range Bank uses selected depth units consistently without reinterpreting stored meters
+  ---
+  duration_ms: 1.3072
+  type: 'test'
+  ...
+# Subtest: alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+ok 27 - alarm display reads per-profile cause and acknowledgement, never treats enabled as triggered
+  ---
+  duration_ms: 5.6143
+  type: 'test'
+  ...
+# Subtest: Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+ok 28 - Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows
+  ---
+  duration_ms: 3.0974
+  type: 'test'
+  ...
+# Subtest: FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+ok 29 - FUNC assignment shows current assignment and pending target without changing V29 short FUNC
+  ---
+  duration_ms: 1.5567
+  type: 'test'
+  ...
+# Subtest: configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+ok 30 - configuration rejects invalid selections and drafts; missing stored values are never OEM defaults
+  ---
+  duration_ms: 2.2684
+  type: 'test'
+  ...
+# Subtest: runtime configuration renderer consumes semantic projections using safe inert DOM
+ok 31 - runtime configuration renderer consumes semantic projections using safe inert DOM
+  ---
+  duration_ms: 15.2115
+  type: 'test'
+  ...
+# Subtest: FUNC projects every Clutter value through a bounded ordered window with one selected value
+ok 32 - FUNC projects every Clutter value through a bounded ordered window with one selected value
+  ---
+  duration_ms: 123.5886
+  type: 'test'
+  ...
+# Subtest: main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+ok 33 - main-menu and FUNC use identical windows for Clutter, Color Erase and White Line
+  ---
+  duration_ms: 11.5797
+  type: 'test'
+  ...
+# Subtest: FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+ok 34 - FUNC visibility changes preserve stage, cancel, commit, raw observations, persistence and replay
+  ---
+  duration_ms: 54.2287
+  type: 'test'
+  ...
+# Subtest: FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+ok 35 - FUNC presentation rejects missing, powered-off and invalid draft inputs without inventing a choice
+  ---
+  duration_ms: 1.3625
+  type: 'test'
+  ...
+# Subtest: renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+ok 36 - renderer consumes the bounded FUNC projection and keeps help outside operator choice rows
+  ---
+  duration_ms: 8.1768
+  type: 'test'
+  ...
+# Subtest: manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+ok 37 - manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+  ---
+  duration_ms: 2.9328
+  type: 'test'
+  ...
+# Subtest: FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+ok 38 - FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+  ---
+  duration_ms: 16.9925
+  type: 'test'
+  ...
+# Subtest: FUNC long key configures target; assignment persists and second short key uses it
+ok 39 - FUNC long key configures target; assignment persists and second short key uses it
+  ---
+  duration_ms: 9.5668
+  type: 'test'
+  ...
+# Subtest: Brill draft drives visible luminance before commit without mutating canonical state
+ok 40 - Brill draft drives visible luminance before commit without mutating canonical state
+  ---
+  duration_ms: 14.5651
+  type: 'test'
+  ...
+# Subtest: cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+ok 41 - cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+  ---
+  duration_ms: 2.6007
+  type: 'test'
+  ...
+# Subtest: LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+ok 42 - LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+  ---
+  duration_ms: 2.3502
+  type: 'test'
+  ...
+# Subtest: main menu projects five named categories and exactly the operator rows, without help-as-item
+ok 43 - main menu projects five named categories and exactly the operator rows, without help-as-item
+  ---
+  duration_ms: 4.3261
+  type: 'test'
+  ...
+# Subtest: choice preview tracks real staged value and cancel restores committed value
+ok 44 - choice preview tracks real staged value and cancel restores committed value
+  ---
+  duration_ms: 1.9225
+  type: 'test'
+  ...
+# Subtest: large option lists are bounded while preserving the active value and original ordering
+ok 45 - large option lists are bounded while preserving the active value and original ordering
+  ---
+  duration_ms: 1.5671
+  type: 'test'
+  ...
+# Subtest: source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+ok 46 - source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+  ---
+  duration_ms: 2.7213
+  type: 'test'
+  ...
+# Subtest: C11 manual §1.21 NAV1/2 expose four individually configured editable operator boxes
+ok 47 - C11 manual §1.21 NAV1/2 expose four individually configured editable operator boxes
+  ---
+  duration_ms: 10.1888
+  type: 'test'
+  ...
+# Subtest: C11 NAV1 add third box stages/cancels then commits and changes actual projected boxes
+ok 48 - C11 NAV1 add third box stages/cancels then commits and changes actual projected boxes
+  ---
+  duration_ms: 16.9564
+  type: 'test'
+  ...
+# Subtest: C11 NAV2 operator can change a box to STW, with missing source explicitly NO DATA
+ok 49 - C11 NAV2 operator can change a box to STW, with missing source explicitly NO DATA
+  ---
+  duration_ms: 2.6091
+  type: 'test'
+  ...
+# Subtest: C11 RANGE box uses only an active synthetic waypoint and fresh ownship, with source-safe negative states
+ok 50 - C11 RANGE box uses only an active synthetic waypoint and fresh ownship, with source-safe negative states
+  ---
+  duration_ms: 11.8202
+  type: 'test'
+  ...
+# Subtest: C11 POSITION NAV box uses S/W hemispheres for negative typed synthetic latitude and longitude
+ok 51 - C11 POSITION NAV box uses S/W hemispheres for negative typed synthetic latitude and longitude
+  ---
+  duration_ms: 1.3259
+  type: 'test'
+  ...
+# Subtest: C11 TIME TO GO is a visible source-gated synthetic destination estimate, never an NMEA substitute
+ok 52 - C11 TIME TO GO is a visible source-gated synthetic destination estimate, never an NMEA substitute
+  ---
+  duration_ms: 10.1692
+  type: 'test'
+  ...
+# Subtest: D02 has eight numbered, versioned training range slots with default bank
+ok 53 - D02 has eight numbered, versioned training range slots with default bank
+  ---
+  duration_ms: 5.0602
+  type: 'test'
+  ...
+# Subtest: D02 evidence atlas lists each training slot with explicit HOLD
+ok 54 - D02 evidence atlas lists each training slot with explicit HOLD
+  ---
+  duration_ms: 7.3087
+  type: 'test'
+  ...
+# Subtest: D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+ok 55 - D02 System Range Presets stages, cancels and commits a single slot without rewriting other presets
+  ---
+  duration_ms: 18.1472
+  type: 'test'
+  ...
+# Subtest: D02 slot eight can be edited independently and manual RANGE displays its configured depth
+ok 56 - D02 slot eight can be edited independently and manual RANGE displays its configured depth
+  ---
+  duration_ms: 5.606
+  type: 'test'
+  ...
+# Subtest: §2.2 units change restores all eight depth presets, including customized entries
+ok 57 - §2.2 units change restores all eight depth presets, including customized entries
+  ---
+  duration_ms: 7.7534
+  type: 'test'
+  ...
+# Subtest: §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+ok 58 - §2.2 Auto Range ceiling cannot exceed highest manually configured preset
+  ---
+  duration_ms: 0.5833
+  type: 'test'
+  ...
+# Subtest: D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+ok 59 - D02 range dialog and bank render dynamic values but display is explicitly a training approximation
+  ---
+  duration_ms: 3.7205
+  type: 'test'
+  ...
+# Subtest: OME-23890-E §2.5 has six distinct unit categories, not one global unit switch
+ok 60 - OME-23890-E §2.5 has six distinct unit categories, not one global unit switch
+  ---
+  duration_ms: 13.4495
+  type: 'test'
+  ...
+# Subtest: independent unit choices format synthetic temperature, fish, speed, wind and trip
+ok 61 - independent unit choices format synthetic temperature, fish, speed, wind and trip
+  ---
+  duration_ms: 0.528
+  type: 'test'
+  ...
+# Subtest: D05 Units nested transaction stages, cancels and commits independent temperature unit
+ok 62 - D05 Units nested transaction stages, cancels and commits independent temperature unit
+  ---
+  duration_ms: 13.3373
+  type: 'test'
+  ...
+1..62
+# tests 62
+# suites 0
+# pass 62
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 424.889

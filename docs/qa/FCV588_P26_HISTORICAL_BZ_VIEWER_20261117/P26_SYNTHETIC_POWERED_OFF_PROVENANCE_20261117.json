@@ -1,0 +1,12 @@
+{
+  "schema": "FCV588_P26_POWERED_OFF_CLASSROOM_TEST_ONLY",
+  "status": "SYNTHETIC_NOT_HISTORIC_OEM",
+  "power": "off",
+  "mode": "LF-ZOOM",
+  "sessionHash": "f0-fnv1a32-5e6c217c",
+  "filesSHA256": {
+    "P26_SYNTHETIC_POWERED_OFF_LF_ZOOM_ENVELOPE_20261117.json": "c0e576f20f9616db6b773904fa9551f47dce24368ec3eb195ebf108a8cb25d28",
+    "P26_SYNTHETIC_POWERED_OFF_LF_ZOOM_P23_SIDECAR_20261117.json": "410a11b51103ab05811a10f7fdfb9cef41a17f4203c7bdbf448f375eaf6b424e"
+  },
+  "servedHTTP": false
+}

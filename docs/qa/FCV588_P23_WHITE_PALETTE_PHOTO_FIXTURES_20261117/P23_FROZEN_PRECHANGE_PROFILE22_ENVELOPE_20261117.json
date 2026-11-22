@@ -1,0 +1,90 @@
+{
+  "envelopeVersion": 7,
+  "deviceId": "furuno.fcv588.cv588e",
+  "profileRevision": "F1-public-reference-22",
+  "scenarioId": "fcv588-demo-depth-001",
+  "scenarioVersion": 7,
+  "meta": {
+    "schemaVersion": 5,
+    "coreVersion": "f1-core-7",
+    "prngVersion": "counter-mix32-v1",
+    "sensorModelVersion": "fcv588-sonar-illustrative-v1",
+    "tickDurationMs": 1000,
+    "phaseOrder": "input -> world -> sensor -> device",
+    "profileHash": "f0-fnv1a32-83ab0d53",
+    "scenarioHash": "f0-fnv1a32-5861e75e"
+  },
+  "events": [
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 1,
+      "kind": "down",
+      "control": "power"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 2,
+      "kind": "up",
+      "control": "power",
+      "durationMs": 100
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 3,
+      "kind": "tick",
+      "steps": 4
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 4,
+      "kind": "press",
+      "control": "menu"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 5,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 6,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 7,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 8,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 9,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    }
+  ],
+  "finalSessionHash": "f0-fnv1a32-a429fc78",
+  "contentFingerprint": "f0-fnv1a32-e4b18ddb"
+}

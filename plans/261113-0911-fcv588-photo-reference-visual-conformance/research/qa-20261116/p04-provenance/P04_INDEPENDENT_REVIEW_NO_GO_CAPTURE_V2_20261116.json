@@ -1,0 +1,36 @@
+{
+  "schema": "fcv588-p04-independent-review-no-go-capture-v1",
+  "capturedAt": "2026-11-16T08:51:36.2956526+07:00",
+  "reviewer": "worker-13",
+  "decision": "NO-GO",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "sourceReceiptSHA256": "2e30a4ee7cf8a1baafa0ac9dc819c465edbe54b15f1bfc017642a38b56ea7132",
+  "validated": [
+    "exact 4 runtime + 2 tests",
+    "targeted23/23",
+    "full Node559/559",
+    "Python13/13",
+    "compatibility PASS",
+    "BL raster BL bypass",
+    "BZ/MZ pixel identity"
+  ],
+  "blockers": [
+    {
+      "severity": "HIGH",
+      "code": "CROSS_SCENARIO_PROVENANCE_ACCEPTED",
+      "evidence": "Different source scenarioId/version provenance accepted for same tick/columns, BL pixels change; validation ignores producer scenario identity"
+    },
+    {
+      "severity": "HIGH",
+      "code": "DYNAMIC_BOTTOM_ROW_QUANTIZATION",
+      "evidence": "TRAINING_SCENARIO tick231 raw160x301->BL120, 41 of 160 historical bottom columns miss strong lower band; raw->display sampling mismatch"
+    },
+    {
+      "severity": "SECONDARY",
+      "code": "STOP_START_DEPTH_METADATA_DRIFT",
+      "evidence": "Stop pixels freeze but startDepthM metadata changes; not accepted as full source freeze"
+    }
+  ],
+  "canonicalApply": "BLOCKED",
+  "note": "QA-only capture of independent worker verdict; not reviewer-authored receipt; previous PASS files immutable"
+}

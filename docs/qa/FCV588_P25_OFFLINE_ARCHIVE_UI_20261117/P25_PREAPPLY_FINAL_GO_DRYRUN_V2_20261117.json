@@ -1,0 +1,39 @@
+{
+  "schema": "FCV588_P25_PREAPPLY_GO_V2",
+  "createdAt": "2026-11-17T08:46:08.331057+00:00",
+  "status": "GO_PINNED_FIVE_PATHS_ONLY",
+  "dryrunV1SHA256": "15572a5182176ff630bce1a0f93df7535459bc458bacae825cfdc428f9a3006b",
+  "preimageBackupZIPSHA256": "984ec99eb0f9314191c4da81629fe7a96c93fbe606b7b0af9f0dacae136425d0",
+  "sourceBeforeSHA256": {
+    "web/app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+    "web/styles.css": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb"
+  },
+  "sourceAfterExpectedSHA256": {
+    "web/app.mjs": "cc766a2e9afd54a3fa6509e4da542fe9ed674ebf945069b48fd5a05bc94c0e4d",
+    "web/index.html": "7dbb1d55f4c5fa372560d02a60ca36907ad0199d27964bec161d4e37cd0f2b97",
+    "web/styles.css": "eac4f828ad578e636f6a504359738df248228ab4b1ddfa10a1e74fe2bb02ebcf",
+    "web/fcv588-archive-import.mjs": "1ea213fbca888cd6ebc81d5ecd1877c262e11660155e01cd8ee2a74df5d8e0d0",
+    "test/fcv588-p25-archive-ui.test.mjs": "6ff892c3a64c09883afeaf0646565ca28acb197825eec51ac4e57945842eccc3"
+  },
+  "newPathsAbsent": [
+    "web/fcv588-archive-import.mjs",
+    "test/fcv588-p25-archive-ui.test.mjs"
+  ],
+  "stageBrowserV3SHA256": "360328dfbf078a403e2e43360e335a1af5b7f0db901029348fee8b467d5b7194",
+  "reviewers": [
+    "worker-35 BOUNDED_CANONICAL_APPLY_GO",
+    "worker-36 BOUNDED_CANONICAL_APPLY_GO"
+  ],
+  "P23runtime50Before": true,
+  "P24ModuleUnchanged": true,
+  "OEM8Before": true,
+  "protectedListenerBefore": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 4173,
+      "OwningProcess": 1204
+    }
+  ],
+  "releaseApproval": "HOLD"
+}

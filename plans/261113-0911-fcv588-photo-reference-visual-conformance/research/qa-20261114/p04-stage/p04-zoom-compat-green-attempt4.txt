@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 1 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 3.3467
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+ok 2 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band
+  ---
+  duration_ms: 3.8392
+  type: 'test'
+  ...
+# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+ok 3 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract
+  ---
+  duration_ms: 1.0324
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 4 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.5652
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 5 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 0.9456
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 6 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 9.8695
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 154.6058

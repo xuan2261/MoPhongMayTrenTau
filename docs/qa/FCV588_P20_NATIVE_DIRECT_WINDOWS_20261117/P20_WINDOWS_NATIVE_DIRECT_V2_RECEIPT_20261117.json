@@ -1,0 +1,40 @@
+{
+  "schema": "FCV588_P20_NATIVE_WIN32_UIA_DIRECT_V2",
+  "createdAt": "2026-11-17T03:23:23.290771+00:00",
+  "port": 4220,
+  "status": "HARNESS_BLOCKED_CHROME_HWND_NOT_BOUND",
+  "gates": {
+    "uniqueChromeHwnd": false
+  },
+  "issues": [
+    "Chrome cleanup Error('Event loop is closed! Is Playwright already stopped?')"
+  ],
+  "scope": "WINDOWS_HEADED_CHROME_NATIVE_FOREGROUND_UIA_AUTOMATED_KEYBOARD_NOT_HUMAN_PHYSICAL_SPEECH",
+  "parentSHA256": {
+    "p19Final": "1fc1b43ced49b9c9d630218ee3c9211573b0e00474f207ba3aa5f0e864158f11",
+    "p19Post": "1824e63e7b54c88801a002adf2758203ea1c4ce750fed2f48c822f2ab9a3a83b"
+  },
+  "sourcePreimage": "50/50",
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "chromeWindowCandidates": [],
+  "originalForegroundRestoreAttempt": null,
+  "originalForegroundRestored": true,
+  "foregroundAtEnd": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "ownedPortClosed": true,
+  "protectedUserServerStillListening": true,
+  "canonicalRuntimeAfter": 50,
+  "parentP19Unchanged": true
+}

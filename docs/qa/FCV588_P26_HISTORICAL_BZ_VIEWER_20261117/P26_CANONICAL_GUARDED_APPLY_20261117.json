@@ -1,0 +1,41 @@
+{
+  "schema": "FCV588_P26_GUARDED_CANONICAL_APPLY_V1",
+  "createdAt": "2026-11-17T09:39:12.285640+00:00",
+  "status": "APPLIED_FIVE_PATHS_CANONICAL_POSTQA_PENDING",
+  "scope": "P26_D15_SYNTHETIC_HISTORIC_CONTRACT_BZ_CANVAS_ONLY",
+  "freshFinalGoSHA256": "d4542455ac79052d798660490d9a49bfd0a54df9173973c3bf2aa8b4005bfa19",
+  "preimageBackupZIPSHA256": "61ba402e32e07ef1a64c2d58b257ec3cec4aafca22b4e207ee5c802c87f9c96c",
+  "modifiedPreimageSHA256": {
+    "web/app.mjs": "cc766a2e9afd54a3fa6509e4da542fe9ed674ebf945069b48fd5a05bc94c0e4d",
+    "web/index.html": "7dbb1d55f4c5fa372560d02a60ca36907ad0199d27964bec161d4e37cd0f2b97",
+    "web/styles.css": "eac4f828ad578e636f6a504359738df248228ab4b1ddfa10a1e74fe2bb02ebcf"
+  },
+  "appliedFivePathsSHA256": {
+    "web/app.mjs": "48a6120fc1767e20e63e751c7227a86f8d23715bfbb7a75d6cd1a3ba63a208e2",
+    "web/index.html": "d71c7fd4ac9f5a297f4148594e25724b449e13903a4db3695f86d900f3fc7d6a",
+    "web/styles.css": "1718b38028a7c9d70dd8b67b8b3792c79ef0770acabbb7c72789da61a7de6ac6",
+    "web/fcv588-archive-bz-viewer.mjs": "d77fae273ba3a4357c9eff7758da71d8582b4464657099bd386a970fb037c976",
+    "test/fcv588-p26-archive-bz-viewer.test.mjs": "89d524f8177262ee351d3555f7f4e717daca8ffbcc3c27dcd4a0c14bfb8433d3"
+  },
+  "unmodifiedP25Runtime49Of52SHA": true,
+  "P25ArchiveImporterAndP24CoreUntouched": true,
+  "OEMReferenceOnly8SHA": true,
+  "userListenerBefore": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 4173,
+      "OwningProcess": 1204
+    }
+  ],
+  "userListenerAfter": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 4173,
+      "OwningProcess": 1204
+    }
+  ],
+  "stageQA": "Focused9_Node605_Python13_Chrome9_HTTP51",
+  "review": "worker36_and_worker38_BOUNDED_CANONICAL_APPLY_GO",
+  "historicalFullLCDPixelsReconstructed": false,
+  "releaseApproval": "HOLD"
+}

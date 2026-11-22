@@ -1,0 +1,93 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "screenshots": [
+    {
+      "name": "desktop",
+      "http": 200,
+      "metrics": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "documentWidth": 1440,
+        "documentHeight": 1023,
+        "workbenchTop": 143,
+        "selected": "d15-tab-session",
+        "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "h1": "FCV-588 Training Console"
+      },
+      "pageErrors": [],
+      "full": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-desktop-1440x900-full.png",
+      "viewport": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-desktop-1440x900-viewport.png"
+    },
+    {
+      "name": "tablet",
+      "http": 200,
+      "metrics": {
+        "viewport": [
+          768,
+          1024
+        ],
+        "documentWidth": 768,
+        "documentHeight": 1829,
+        "workbenchTop": 127,
+        "selected": "d15-tab-session",
+        "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "h1": "FCV-588 Training Console"
+      },
+      "pageErrors": [],
+      "full": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-tablet-768x1024-full.png",
+      "viewport": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-tablet-768x1024-viewport.png"
+    },
+    {
+      "name": "mobile",
+      "http": 200,
+      "metrics": {
+        "viewport": [
+          375,
+          812
+        ],
+        "documentWidth": 375,
+        "documentHeight": 2195,
+        "workbenchTop": 160.09375,
+        "selected": "d15-tab-session",
+        "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "h1": "FCV-588 Training Console"
+      },
+      "pageErrors": [],
+      "full": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-mobile-375x812-full.png",
+      "viewport": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-mobile-375x812-viewport.png"
+    },
+    {
+      "name": "small-mobile",
+      "http": 200,
+      "metrics": {
+        "viewport": [
+          320,
+          812
+        ],
+        "documentWidth": 320,
+        "documentHeight": 2165,
+        "workbenchTop": 171.34375,
+        "selected": "d15-tab-session",
+        "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+        "h1": "FCV-588 Training Console"
+      },
+      "pageErrors": [],
+      "full": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-small-mobile-320x812-full.png",
+      "viewport": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\canonical-default-state\\default-small-mobile-320x812-viewport.png"
+    }
+  ],
+  "noJs": {
+    "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+    "role": "note",
+    "tablistHidden": true,
+    "panels": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  }
+}

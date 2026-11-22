@@ -1,0 +1,21 @@
+{
+  "schema": "FCV588_P23_STAGE_FULL_NODE_V2",
+  "stageOnly": true,
+  "nodeTests": 96,
+  "exitCode": 1,
+  "summary": {
+    "tests": "573",
+    "pass": "571",
+    "fail": "2",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "5004.7096"
+  },
+  "failedTests": [
+    "not ok 59 - test\\\\fcv588-public-replan.test.mjs",
+    "not ok 92 - test\\\\public-reference-plan.test.mjs"
+  ],
+  "stdoutLogSHA256": "96c07663199396bb6df8a30aae3473a5dde05df6545a0280c3b45ac1690c59c5",
+  "canonicalUnchanged": true
+}

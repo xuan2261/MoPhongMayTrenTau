@@ -1,0 +1,202 @@
+{
+  "schema": "fcv588-canonical-zoom-qa-v1",
+  "createdAt": "2026-11-14T09:49:09.173506+07:00",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  },
+  "browser": {
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "headless": false,
+    "version": "157.0.8103.78"
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 4180,
+    "url": "http://127.0.0.1:4180/"
+  },
+  "sourceManifestBefore": {
+    "files": 36,
+    "sha256": "f58b2bf1f4eec900b311f6be6bec3fb03498c09cfccf460a91e0faa129a5c491"
+  },
+  "cases": [
+    {
+      "label": "LF-ZOOM-Bottom-Lock",
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   BL-LF   x1', got 'AUTO_R G:AF BL-LF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   BL-LF   x1', got 'AUTO_R G:AF BL-LF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock"
+        ],
+        "committed": "Bottom Lock"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   BL-LF   x1', got 'AUTO_R G:AF BL-LF x1'"
+      ]
+    },
+    {
+      "label": "HF-ZOOM-Bottom-Lock",
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   BL-HF   x1', got 'AUTO_R G:AF BL-HF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   BL-HF   x1', got 'AUTO_R G:AF BL-HF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock"
+        ],
+        "committed": "Bottom Lock"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   BL-HF   x1', got 'AUTO_R G:AF BL-HF x1'"
+      ]
+    },
+    {
+      "label": "LF-ZOOM-Bottom-Zoom",
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   BZ-LF   x1', got 'AUTO_R G:AF BZ-LF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   BZ-LF   x1', got 'AUTO_R G:AF BZ-LF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock",
+          "Bottom Zoom"
+        ],
+        "committed": "Bottom Zoom"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   BZ-LF   x1', got 'AUTO_R G:AF BZ-LF x1'"
+      ]
+    },
+    {
+      "label": "HF-ZOOM-Bottom-Zoom",
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   BZ-HF   x1', got 'AUTO_R G:AF BZ-HF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   BZ-HF   x1', got 'AUTO_R G:AF BZ-HF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock",
+          "Bottom Zoom"
+        ],
+        "committed": "Bottom Zoom"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   BZ-HF   x1', got 'AUTO_R G:AF BZ-HF x1'"
+      ]
+    },
+    {
+      "label": "LF-ZOOM-Marker-Zoom",
+      "mode": "LF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   MZ-LF   x1', got 'AUTO_R G:AF MZ-LF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   MZ-LF   x1', got 'AUTO_R G:AF MZ-LF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock",
+          "Bottom Zoom",
+          "Marker Zoom"
+        ],
+        "committed": "Marker Zoom"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   MZ-LF   x1', got 'AUTO_R G:AF MZ-LF x1'"
+      ]
+    },
+    {
+      "label": "HF-ZOOM-Marker-Zoom",
+      "mode": "HF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "status": "FAILED",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": [],
+      "loadedBodies": [],
+      "failure": {
+        "error": "header expected 'AUTO_R   G:AF   MZ-HF   x1', got 'AUTO_R G:AF MZ-HF x1'",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\canonical-browser-zoom\\canonical_zoom_worker10.py\", line 284, in run_case\n    raise AssertionError(f\"header expected {wanted!r}, got {header!r}\")\nAssertionError: header expected 'AUTO_R   G:AF   MZ-HF   x1', got 'AUTO_R G:AF MZ-HF x1'\n"
+      },
+      "menuProof": {
+        "rowText": "▶ Zoom Mode",
+        "choiceSeen": [
+          "Bottom Lock",
+          "Bottom Zoom",
+          "Marker Zoom"
+        ],
+        "committed": "Marker Zoom"
+      },
+      "objectiveFailures": [
+        "header expected 'AUTO_R   G:AF   MZ-HF   x1', got 'AUTO_R G:AF MZ-HF x1'"
+      ]
+    }
+  ],
+  "sourceTreeStable": true,
+  "objectiveFailures": [
+    "LF-ZOOM/Bottom Lock: header expected 'AUTO_R   G:AF   BL-LF   x1', got 'AUTO_R G:AF BL-LF x1'",
+    "HF-ZOOM/Bottom Lock: header expected 'AUTO_R   G:AF   BL-HF   x1', got 'AUTO_R G:AF BL-HF x1'",
+    "LF-ZOOM/Bottom Zoom: header expected 'AUTO_R   G:AF   BZ-LF   x1', got 'AUTO_R G:AF BZ-LF x1'",
+    "HF-ZOOM/Bottom Zoom: header expected 'AUTO_R   G:AF   BZ-HF   x1', got 'AUTO_R G:AF BZ-HF x1'",
+    "LF-ZOOM/Marker Zoom: header expected 'AUTO_R   G:AF   MZ-LF   x1', got 'AUTO_R G:AF MZ-LF x1'",
+    "HF-ZOOM/Marker Zoom: header expected 'AUTO_R   G:AF   MZ-HF   x1', got 'AUTO_R G:AF MZ-HF x1'"
+  ],
+  "overallStatus": "FAILED",
+  "sourceManifestAfter": {
+    "files": 36,
+    "sha256": "f58b2bf1f4eec900b311f6be6bec3fb03498c09cfccf460a91e0faa129a5c491"
+  },
+  "finishedAt": "2026-11-14T09:50:04.018468+07:00"
+}

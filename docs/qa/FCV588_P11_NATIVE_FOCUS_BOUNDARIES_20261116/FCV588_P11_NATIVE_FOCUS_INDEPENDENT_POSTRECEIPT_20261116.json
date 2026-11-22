@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-11-16T16:11:46.029493+07:00",
+  "finalPath": "docs/qa/FCV588_P11_NATIVE_FOCUS_BOUNDARIES_20261116/FCV588_P11_NATIVE_FOCUS_FINAL_INTEGRITY_20261116.json",
+  "finalSHA256": "845b4fe9cf9b184a74ddba91783362e9446c1219d38362c16166d4b3d6a44c87",
+  "freshReadback": {
+    "evidenceFiles": 9,
+    "originalPhotos": "8/8",
+    "qaPorts": "4207_4208_4209_4211_4212_9225_CLOSED",
+    "runtime": "39/39",
+    "server4173": "HTTP200"
+  },
+  "note": "Independent reviewer plus fresh local byte rehash; never a native browser blur or Narrator certification.",
+  "schema": "fcv588-p11-native-focus-independent-postreceipt-v1",
+  "status": "PASS_INTEGRITY_READBACK_P11_NATIVE_BLUR_NOT_VERIFIED"
+}

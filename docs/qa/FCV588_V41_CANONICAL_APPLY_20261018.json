@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-18T14:49:00.3165451Z",
+  "status": "V41_CANONICAL_SINGLE_SOUNDER_MENU_ATLAS_APPLY_SHA_MATCH",
+  "previousV40ReceiptSHA": "d92a84f5d97d455a569fc137fdb83f96457048c8608ce66c72e648da31482388",
+  "stageManifestSHA": "191e70052d0bd3fa71f5450ee61708e9f1f49b0bcf6f2340d8414f4dda28a82d",
+  "supervisorGoSHA": "a5b04615a7a30cf1036218d9b940d93816dfb28aa879e4d295c7f966088abbf3",
+  "oneChangedRuntimeFile": "src/devices/fcv588/menu-atlas.mjs",
+  "unchangedRuntimeFiles": 36,
+  "runtimeSourceAssetsSHA": 37,
+  "menuAtlasSourceSHA": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+  "menuAtlasEvidenceSHA": "c97ef9cedfee1f9aa32a450cb7f1908b489b00b27b48c71e2682720091277a22",
+  "testPath": "test\\fcv588-v41-oem-sounder-labels.test.mjs",
+  "testSHA": "ae58a2cba5f07e40e5c73aee73da57a083a9d99509d5f2fb6ffa14fee8dafcf7",
+  "hardwareValidated": false,
+  "phase6": "OPEN",
+  "firmwareInstalled": "UNKNOWN",
+  "releaseApproval": "HOLD"
+}

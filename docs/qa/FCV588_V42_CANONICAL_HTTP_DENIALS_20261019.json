@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-19T01:19:57.5070818Z",
+  "status": "V42_CANONICAL_HTTP_SECURITY_AND_DENIALS_PASS",
+  "server": "http://127.0.0.1:4224/",
+  "rootHTTP200": true,
+  "cspConnectNone": true,
+  "nosniff": true,
+  "negativeRouteResults": [
+    {
+      "method": "GET",
+      "status": 404,
+      "denied": true,
+      "path": "/docs/qa/FCV588_V42_CANONICAL_APPLY_20261019.json"
+    },
+    {
+      "method": "GET",
+      "status": 404,
+      "denied": true,
+      "path": "/sources/manuals/MANIFEST.json"
+    },
+    {
+      "method": "GET",
+      "status": 404,
+      "denied": true,
+      "path": "/web/%2e%2e/docs/F0-AUDIT.md"
+    },
+    {
+      "method": "POST",
+      "status": 405,
+      "denied": true,
+      "path": "/"
+    }
+  ],
+  "deniedCount": 4,
+  "releaseApproval": "HOLD"
+}

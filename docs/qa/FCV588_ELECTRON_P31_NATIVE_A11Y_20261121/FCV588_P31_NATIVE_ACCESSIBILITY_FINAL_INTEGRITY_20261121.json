@@ -1,0 +1,97 @@
+{
+  "schema": "FCV588_P31_NATIVE_ACCESSIBILITY_FINAL_INTEGRITY_V1",
+  "status": "P31_HOST_NATIVE_A11Y_BOUNDED_PASS",
+  "version": "0.0.3",
+  "host": "REAL_WINDOWS_NOT_VM",
+  "sourceChange": [
+    "desktop/main.cjs",
+    "package.json"
+  ],
+  "asarLeaves": 58,
+  "fuseReadback": "9_OF_9_PASS",
+  "defaultUIA": "3_OF_3_BUTTONS_PASS_NO_FORCE_FLAG",
+  "realTabOrder": "GAIN_MODE_POWER_PASS",
+  "actualWin32BlurPower": "PASS_DOWN_PLUS_CANCEL",
+  "nativeFocusScreenshots": "2_WITH_SHA",
+  "settingsPersistence": "PASS_SHA_EXACT",
+  "hardwareValidated": false,
+  "physicalAirgapValidated": false,
+  "narratorSpeechValidated": false,
+  "releaseApproval": "HOLD",
+  "phase6": "OPEN",
+  "installed": {
+    "exeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+    "asarSHA256": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190"
+  },
+  "shaParents": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30_FINAL": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30_POST": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5"
+  },
+  "receipts": {
+    "stageAudit": {
+      "path": "P31_STAGE_FUSES_ASAR_SOURCE_AUDIT_V1_20261121.json",
+      "sha256": "00f1fa79549dc5d179e9319507b5d3d0b6d83a516c5f12e4f5eccb3d1af8e5fe",
+      "bytes": 628
+    },
+    "unpackedDefault": {
+      "path": "P31_UNPACKED_NATIVE_DEFAULT_UIA_V1_20261121.json",
+      "sha256": "16e98cc6d191b5a2a314f8538d3d90b88a44b064854d40bd2ef12159ccb3419e",
+      "bytes": 1080
+    },
+    "upgrade": {
+      "path": "P31_HOST_REAL_UPGRADE_FROM_P30_001_TO_003_V1_20261121.json",
+      "sha256": "4d815e7838df58c111a98fe82b49711f408b87387451ca414e5f9c76c1c133a5",
+      "bytes": 560
+    },
+    "preSettings": {
+      "path": "P31_HOST_PROFILE_VERIFY_pre-p31_20261121.json",
+      "sha256": "29e760834d31ef95431ce7c981684fc09d31ecd01f9c88338ff51c0d37a180c9",
+      "bytes": 460
+    },
+    "postSettings": {
+      "path": "P31_HOST_PROFILE_VERIFY_post-p31_20261121.json",
+      "sha256": "4631aa4e2bdb7c15f310a268f92e5c2b4e1a27b9c008222684971d612d04e71b",
+      "bytes": 461
+    },
+    "win32PowerBlur": {
+      "path": "P31_NATIVE_POWER_WIN32_FOCUS_BLUR_V1_20261121.json",
+      "sha256": "006dd0829a33f44d320e559bf4382f79ff70e182cac56bdd0ed7feb491ff14d7",
+      "bytes": 898
+    },
+    "tabVisual": {
+      "path": "P31_NATIVE_TAB_FOCUS_VISUAL_V1_20261121.json",
+      "sha256": "7f7c2b4d9a285abb3fac64939497b7e414d07078c45623bd7e02dcc74960babb",
+      "bytes": 668
+    },
+    "egress": {
+      "path": "P31_NATIVE_APP_SCOPED_OFFLINE_FIREWALL_V1_20261121.json",
+      "sha256": "2934eec28a677a9b8c255025127e9bfa0ee709b1b135f4f135487fc10ae16d06",
+      "bytes": 427
+    },
+    "settingsUnit": {
+      "path": "P31_SETTINGS_UNIT_V1_20261121.txt",
+      "sha256": "306f5e720063e19fd40632ab01b253129ea153d88f3fe255c5facf2de50e528e",
+      "bytes": 560
+    },
+    "focusedReplay": {
+      "path": "P31_P28_FOCUSED_V1_20261121.txt",
+      "sha256": "6eff3b5f006b40312528d72005590882254051e23ad93e0d101f1ff710628482",
+      "bytes": 1150
+    },
+    "modeScreenshot": {
+      "path": "P31_NATIVE_MODE_FOCUS_V1_20261121.png",
+      "sha256": "eaeb29378bb57743855d882eecc98e4803710aadf12af01ee91c289ce60d7620",
+      "bytes": 403373
+    },
+    "powerScreenshot": {
+      "path": "P31_NATIVE_POWER_FOCUS_V1_20261121.png",
+      "sha256": "5f3a268235367baef91f238ef770ecea517421249852c5b6c7abac09d1c83cc7",
+      "bytes": 403766
+    }
+  },
+  "reportSHA256": "995bb1dc307f3b45e850bd9f72aa26168f2fe2fcaaa8d6722f3de674b3425ffe"
+}

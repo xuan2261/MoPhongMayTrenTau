@@ -1,0 +1,114 @@
+{
+  "schema": "fcv588-p11-independent-evidence-review-v1",
+  "createdAt": "2026-11-16T16:10:32.8421977+07:00",
+  "reviewerId": "worker-18",
+  "scope": "READ_ONLY_INDEPENDENT_REVIEW_OF_IMMUTABLE_P11_EVIDENCE_WITH_ONE_WRITE_ONCE_REVIEW_RECEIPT",
+  "evidenceIntegrityStatus": "GO_IMMUTABLE_EVIDENCE_MATCH",
+  "nativeStatus": "NOT_VERIFIED",
+  "browserBlurPass": false,
+  "sourceValidProductDefect": "NOT_ESTABLISHED",
+  "classification": "ENVIRONMENT_OR_BROWSER_RUNTIME_FOCUS_OBSERVATION_GAP",
+  "evidence": {
+    "p11Method": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-method/P11_WIN32_FOREGROUND_BLUR_METHOD_20261116.json",
+      "sha256": "b9d3586df5bbb1459ee68a478ce70652cd1a99e618edb5bc14c73161f4ef73b9",
+      "freshHashMatch": true
+    },
+    "p11Baseline": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-baseline/P11_INDEPENDENT_BASELINE_20261116.json",
+      "sha256": "2474185023238fa8f707896f75783a0c11d2e8b1f92f0e36761f59f98e0a00d6",
+      "freshHashMatch": true
+    },
+    "fieldTests": [
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_20261116.json",
+        "sha256": "278ce6ea6ee9cbb08019b06d7c298a7e274502ec92a57934feada2acbf676f68",
+        "freshHashMatch": true,
+        "outcome": "FAILED_OR_BLOCKED_NO_NATIVE_ACCEPTANCE_CHROME_FOREGROUND_NOT_ACQUIRED"
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V2_20261116.json",
+        "sha256": "6da4ac654775d18f4baff20a76c4dd6bedfee8ed67924c1d3c0a6d08e7f59c2c",
+        "freshHashMatch": true,
+        "outcome": "FAILED_OR_BLOCKED_NO_NATIVE_ACCEPTANCE_WITNESS_FOREGROUND_NOT_ACQUIRED_AFTER_POWER_DOWN"
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V3_20261116.json",
+        "sha256": "11e6cebec18c12ff63b34eee1644d30a6bdbeebe53034b2b0204d2073e0f2669",
+        "freshHashMatch": true,
+        "outcome": "VALID_WIN32_FOREGROUND_SWITCH_BUT_NO_BROWSER_BLUR_DOCUMENT_STILL_FOCUSED_POWER_HOLD_PERSISTS"
+      },
+      {
+        "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p11-os-focus/P11_GENUINE_WIN32_FOREGROUND_POWER_V4_20261116.json",
+        "sha256": "908948ccc7dc5d48b5c4025dfc79571cb3e238ac49ddf09a120febcbde3832d2",
+        "freshHashMatch": true,
+        "outcome": "STANDALONE_CHROME_AND_WIN32_KEYDOWN_WITH_VALID_FOREGROUND_SWITCH_BUT_NO_BROWSER_BLUR_DOCUMENT_STILL_FOCUSED_POWER_HOLD_PERSISTS"
+      }
+    ],
+    "p10Final": {
+      "path": "docs/qa/FCV588_P10_A11Y_BOUNDARIES_20261116/FCV588_P10_A11Y_BOUNDARIES_FINAL_INTEGRITY_20261116.json",
+      "sha256": "414c0151053bec55271032170e0fba2139fd1627e5fee7524cdf6c1bcf490655",
+      "freshHashMatch": true
+    },
+    "p10Post": {
+      "path": "docs/qa/FCV588_P10_A11Y_BOUNDARIES_20261116/FCV588_P10_A11Y_BOUNDARIES_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "df2cb60996da7f3f557642f329d794198aea9a85ac8fe5084429bee1931c12dc",
+      "freshHashMatch": true
+    },
+    "p07Runtime39": {
+      "manifestPath": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "manifestSHA256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+      "freshSourceHashMatches": "39/39",
+      "mismatches": []
+    },
+    "sourceBindings": [
+      {"path": "web/hold-input.mjs", "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"},
+      {"path": "web/app.mjs", "sha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee"},
+      {"path": "web/keyboard-shortcuts.mjs", "sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"},
+      {"path": "web/instructor-tabs.mjs", "sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"},
+      {"path": "test/hold-input.test.mjs", "sha256": "22387a216648038f06f2174a0621b0058d3696fc1f05ecb2aa1cd0e87ce00bc4"}
+    ],
+    "referencePhotos": {
+      "path": "sources/FCV588_GiaoDienThucTeMay2016",
+      "freshHashMatches": "8/8",
+      "classification": "REFERENCE_ONLY",
+      "mismatches": []
+    },
+    "portsAndProcesses": {
+      "userServer4173": {"state": "LISTEN", "localAddress": "127.0.0.1", "pid": 1204, "process": "node"},
+      "ownedPort4211": "CLOSED",
+      "ownedPort4212": "CLOSED",
+      "cdpPort9225": "CLOSED"
+    }
+  },
+  "findings": [
+    "V3 and V4 establish a real GetForegroundWindow transition from the bound Google Chrome HWND to the owned Python witness HWND.",
+    "After that valid native transition, the page still reports document.hasFocus()==true, records no post-POWER browser blur event, and leaves the POWER hold active.",
+    "The product source registers windowTarget blur to finish the active hold with cancel, and the static/synthetic source contract covers that handler when a blur event is delivered.",
+    "Because the required browser blur event was not observed, current evidence does not show the product blur handler receiving an event and failing to cancel. A source-valid product defect is therefore not established by P11.",
+    "The unresolved boundary is between valid Win32 foreground ownership transfer and Chromium/browser document focus observation under the tested automation/runtime conditions."
+  ],
+  "acceptance": {
+    "evidenceIntegrity": "GO",
+    "nativePowerHoldBlurCancellation": "NOT_VERIFIED",
+    "browserBlurPass": "NO",
+    "productDefect": "NOT_ESTABLISHED",
+    "historicFailReceipts": "PRESERVE_IMMUTABLY"
+  },
+  "recommendations": [
+    "STOP_REPEATING_P11_NATIVE_FOCUS_RUNS_WITH_THE_CURRENT_HARNESS_AND_ACCEPTANCE_PATH.",
+    "Keep V1 through V4 as immutable FAIL/BLOCKED evidence and do not promote any run to browser-blur PASS.",
+    "Keep native status NOT_VERIFIED until a materially different, independently justified native focus method can demonstrate an actual browser blur event after a valid Win32 foreground transfer.",
+    "Do not change runtime, source, Windows focus settings, user server4173, or original reference JPGs to force a PASS."
+  ],
+  "operations": {
+    "browserLaunchedOrInteracted": false,
+    "desktopOrOsFocusActionPerformed": false,
+    "serverStartedStoppedOrRestarted": false,
+    "runtimeEdited": false,
+    "sourceEdited": false,
+    "originalJpgEdited": false,
+    "historicP11ReceiptOverwritten": false,
+    "reviewReceiptWriteOnce": true
+  }
+}

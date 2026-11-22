@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: photo-reference header renders MAN.R and integer G:10 without inventing voltage
+ok 1 - photo-reference header renders MAN.R and integer G:10 without inventing voltage
+  ---
+  duration_ms: 3.0797
+  type: 'test'
+  ...
+# Subtest: source-backed labels distinguish DUAL and zoom mode without changing selector state
+ok 2 - source-backed labels distinguish DUAL and zoom mode without changing selector state
+  ---
+  duration_ms: 0.4477
+  type: 'test'
+  ...
+# Subtest: NAV photo displays its data-region labels, not an invented global range/gain header
+ok 3 - NAV photo displays its data-region labels, not an invented global range/gain header
+  ---
+  duration_ms: 0.2734
+  type: 'test'
+  ...
+# Subtest: photo-body sonar canvas does not invent per-pane 50/200 kHz text or NAV title
+ok 4 - photo-body sonar canvas does not invent per-pane 50/200 kHz text or NAV title
+  ---
+  duration_ms: 9.1351
+  type: 'test'
+  ...
+# Subtest: photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+ok 5 - photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+  ---
+  duration_ms: 1.979
+  type: 'test'
+  ...
+# Subtest: NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+ok 6 - NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+  ---
+  duration_ms: 0.27
+  type: 'test'
+  ...
+# Subtest: P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+ok 7 - P04 photo BL axis is relative 5-to-0 while normal panel remains absolute
+  ---
+  duration_ms: 3.308
+  type: 'test'
+  ...
+# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+ok 8 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios
+  ---
+  duration_ms: 0.6619
+  type: 'test'
+  ...
+# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+ok 9 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy
+  ---
+  duration_ms: 1.2042
+  type: 'test'
+  ...
+# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend
+ok 10 - P04 web renderer consumes presentation plans and removes the invented zoom legend
+  ---
+  duration_ms: 10.0667
+  type: 'test'
+  ...
+# Subtest: B18 supplemental Display controls have source-graded options and no orphan editable switches
+ok 11 - B18 supplemental Display controls have source-graded options and no orphan editable switches
+  ---
+  duration_ms: 8.2219
+  type: 'test'
+  ...
+# Subtest: B18 Temp Graph only draws typed instructor water temperature, with NO DATA otherwise
+ok 12 - B18 Temp Graph only draws typed instructor water temperature, with NO DATA otherwise
+  ---
+  duration_ms: 4.6955
+  type: 'test'
+  ...
+# Subtest: B18 supplemental graph cannot promote an out-of-range synthetic position into a live Own source
+ok 13 - B18 supplemental graph cannot promote an out-of-range synthetic position into a live Own source
+  ---
+  duration_ms: 7.6914
+  type: 'test'
+  ...
+# Subtest: B18 Nav Data and Battery widgets display source status without inventing position or voltage
+ok 14 - B18 Nav Data and Battery widgets display source status without inventing position or voltage
+  ---
+  duration_ms: 2.4757
+  type: 'test'
+  ...
+# Subtest: B18 supplemental Temp Graph and NAV speed honor §1.21 source selection instead of leaking Own data into NMEA
+ok 15 - B18 supplemental Temp Graph and NAV speed honor §1.21 source selection instead of leaking Own data into NMEA
+  ---
+  duration_ms: 5.6251
+  type: 'test'
+  ...
+# Subtest: B18 supplemental NAV speed follows configured §2.5 units without changing sensor truth
+ok 16 - B18 supplemental NAV speed follows configured §2.5 units without changing sensor truth
+  ---
+  duration_ms: 4.6866
+  type: 'test'
+  ...
+# Subtest: B18 expanded NAV widget masks invalid negative synthetic speed without hiding valid position
+ok 17 - B18 expanded NAV widget masks invalid negative synthetic speed without hiding valid position
+  ---
+  duration_ms: 1.3437
+  type: 'test'
+  ...
+# Subtest: B18 Zoom Marker brackets the actual active zoom window and does not exist on NAV/single views
+ok 18 - B18 Zoom Marker brackets the actual active zoom window and does not exist on NAV/single views
+  ---
+  duration_ms: 1.3988
+  type: 'test'
+  ...
+# Subtest: B18 Window Size acts only on split display, with staged TrackPad edit/cancel/replay
+ok 19 - B18 Window Size acts only on split display, with staged TrackPad edit/cancel/replay
+  ---
+  duration_ms: 13.1871
+  type: 'test'
+  ...
+# Subtest: B13 Zoom Range and B/L Range alter synthetic depth windows without mutating raw sonar
+ok 20 - B13 Zoom Range and B/L Range alter synthetic depth windows without mutating raw sonar
+  ---
+  duration_ms: 16.2491
+  type: 'test'
+  ...
+# Subtest: supplemental LCD features are actually consumed by Canvas/DOM rendering
+ok 21 - supplemental LCD features are actually consumed by Canvas/DOM rendering
+  ---
+  duration_ms: 11.2148
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 229.661

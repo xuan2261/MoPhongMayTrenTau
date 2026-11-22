@@ -1,0 +1,18 @@
+{
+  "schema": "P23_STAGE_FULL_NODE_V3",
+  "stageOnly": true,
+  "testFiles": 96,
+  "exitCode": 0,
+  "summary": {
+    "tests": "582",
+    "pass": "582",
+    "fail": "0",
+    "cancelled": "0",
+    "skipped": "0",
+    "todo": "0",
+    "duration_ms": "4276.775"
+  },
+  "failed": [],
+  "logSHA256": "6e8265d1936bbe4a8dcd8a05545cf47a0028bc23e7a7ef09846632daa7e93118",
+  "canonicalRuntimeUnchanged": true
+}

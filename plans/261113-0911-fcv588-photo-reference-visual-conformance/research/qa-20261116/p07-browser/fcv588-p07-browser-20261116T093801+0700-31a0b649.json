@@ -1,0 +1,2611 @@
+{
+  "schema": "fcv588-p07-independent-visual-browser-v1",
+  "createdAt": "2026-11-16T09:38:01.028106+07:00",
+  "scope": "P07_CANONICAL_BROWSER_SOFTWARE_QA_ONLY_NOT_OEM_VISUAL_COMPLIANCE",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "p04FinalPath": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P04_PROVENANCE_20261116\\FCV588_P04_PROVENANCE_FINAL_INTEGRITY_20261116.json",
+  "p04FinalSHA256": "94d9bf997408d8fb51140b723319ea59faefb8122f66233839ad5a8f39b243d2",
+  "sealedRuntimeCount": 39,
+  "sourceManifestBefore": {
+    "files": 39,
+    "sha256": "f8e436396874b49c47f39b37a7d51a62f372e57d20cd6b8b30a11de713ee3786"
+  },
+  "ownedPort": 4207,
+  "userOwnedPort4173": {
+    "beforeListening": true,
+    "operation": "NONE",
+    "afterListening": true,
+    "preservedListeningState": true
+  },
+  "matrix": {
+    "viewports": [
+      "375x812",
+      "1366x768",
+      "1920x1080"
+    ],
+    "statesPerViewport": 13,
+    "expectedTotalStates": 39,
+    "displayStatesPerViewport": 11,
+    "rationale": "5 non-zoom modes + LF/HF x BL/BZ/MZ + MENU + D15 = 13; avoids redundant 63-way Cartesian product"
+  },
+  "photoDeny": {
+    "status": "PASS",
+    "paths": [
+      {
+        "name": "giaoDien.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "lf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "hf.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "dual.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "zoom2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav1.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      },
+      {
+        "name": "nav2.jpg",
+        "statusCode": 404,
+        "status": "PASS"
+      }
+    ]
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS",
+      "stateCount": 13,
+      "states": [
+        {
+          "ordinal": 1,
+          "name": "LF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF",
+            "steps": 0
+          },
+          "geometry": {
+            "name": "LF",
+            "mode": "LF",
+            "header": "AUTO_R   G:AF   LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -1094.125,
+              "bottom": -679.984375,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -1090.125,
+              "bottom": -683.984375,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": -721.984375,
+              "bottom": -693.984375,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-01-375x812-LF.png",
+            "bytes": 54495,
+            "sha256": "8022813c2dfd49f7dc62aa5d06c9d669a3c8d30036d395063a1dde39514c792b"
+          }
+        },
+        {
+          "ordinal": 2,
+          "name": "LF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF-ZOOM",
+            "steps": -1,
+            "actual": "LF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BL",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -57.125,
+              "bottom": 357.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -53.125,
+              "bottom": 353.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 315.015625,
+              "bottom": 343.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-02-375x812-LF-ZOOM-BL.png",
+            "bytes": 54939,
+            "sha256": "b11c2e9608243a14345ac1db922b8576de6b0f681f648bf803360bf92610d838"
+          }
+        },
+        {
+          "ordinal": 3,
+          "name": "LF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -57.125,
+              "bottom": 357.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -53.125,
+              "bottom": 353.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 315.015625,
+              "bottom": 343.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-03-375x812-LF-ZOOM-BZ.png",
+            "bytes": 57527,
+            "sha256": "698eb8f255fc05443976b16af68bc8748bf51badb312afeb17b7fffa9c20fd3f"
+          }
+        },
+        {
+          "ordinal": 4,
+          "name": "LF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-MZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -57.125,
+              "bottom": 357.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -53.125,
+              "bottom": 353.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 315.015625,
+              "bottom": 343.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-04-375x812-LF-ZOOM-MZ.png",
+            "bytes": 53101,
+            "sha256": "1af89d81b6ed02dc1917ffec31d38b5e53d6d754bd4664032abf86b427e65ca7"
+          }
+        },
+        {
+          "ordinal": 5,
+          "name": "NAV1",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "NAV1",
+            "steps": -1,
+            "actual": "NAV1"
+          },
+          "geometry": {
+            "name": "NAV1",
+            "mode": "NAV1",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -554.734375,
+              "bottom": -140.59375,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -550.734375,
+              "bottom": -144.59375,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-05-375x812-NAV1.png",
+            "bytes": 58465,
+            "sha256": "f3a7f4c538ed93de2fc8e286eb339ed6794481bba2565c2acfa236cb092f89b5"
+          }
+        },
+        {
+          "ordinal": 6,
+          "name": "NAV2",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV1",
+            "target": "NAV2",
+            "steps": -1,
+            "actual": "NAV2"
+          },
+          "geometry": {
+            "name": "NAV2",
+            "mode": "NAV2",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -267.734375,
+              "bottom": 146.40625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -263.734375,
+              "bottom": 142.40625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-06-375x812-NAV2.png",
+            "bytes": 59742,
+            "sha256": "f40d7df508100637b1b4f4f0d6be7e79720cb61de124e54ea6e7bf68e5fe1b64"
+          }
+        },
+        {
+          "ordinal": 7,
+          "name": "HF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV2",
+            "target": "HF-ZOOM",
+            "steps": -1,
+            "actual": "HF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Marker Zoom",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BL",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -268.125,
+              "bottom": 146.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -264.125,
+              "bottom": 142.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 104.015625,
+              "bottom": 132.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-07-375x812-HF-ZOOM-BL.png",
+            "bytes": 61996,
+            "sha256": "3bb58f763f063b987826052ac3553393e67450588846d442f20f5436cde09bcc"
+          }
+        },
+        {
+          "ordinal": 8,
+          "name": "HF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -268.125,
+              "bottom": 146.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -264.125,
+              "bottom": 142.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 104.015625,
+              "bottom": 132.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-08-375x812-HF-ZOOM-BZ.png",
+            "bytes": 61085,
+            "sha256": "af6ff64f6b9f83028b2ccf19f5143649d4eac9561908f5719b644354c17e7263"
+          }
+        },
+        {
+          "ordinal": 9,
+          "name": "HF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-MZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -268.125,
+              "bottom": 146.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -264.125,
+              "bottom": 142.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 104.015625,
+              "bottom": 132.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-09-375x812-HF-ZOOM-MZ.png",
+            "bytes": 60175,
+            "sha256": "e5014c3a858ffb1b67d76ecc46f275400f645a4aa5dba02963ad35d5a61f2b1d"
+          }
+        },
+        {
+          "ordinal": 10,
+          "name": "HF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF",
+            "steps": -1,
+            "actual": "HF"
+          },
+          "geometry": {
+            "name": "HF",
+            "mode": "HF",
+            "header": "AUTO_R   G:AF   HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -268.125,
+              "bottom": 146.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -264.125,
+              "bottom": 142.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 40,
+              "right": 96.28125,
+              "top": 104.015625,
+              "bottom": 132.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-10-375x812-HF.png",
+            "bytes": 61080,
+            "sha256": "bf9eeb36ca5c436092bfffa67e58cd9555e7164dfd14a1fc03ce5ede2d760cd2"
+          }
+        },
+        {
+          "ordinal": 11,
+          "name": "DUAL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF",
+            "target": "DUAL",
+            "steps": -1,
+            "actual": "DUAL"
+          },
+          "geometry": {
+            "name": "DUAL",
+            "mode": "DUAL",
+            "header": "AUTO_R   G:AF   LF/HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 25,
+              "right": 335,
+              "top": -268.125,
+              "bottom": 146.015625,
+              "width": 310,
+              "height": 414.140625
+            },
+            "canvasRect": {
+              "left": 29,
+              "right": 331,
+              "top": -264.125,
+              "bottom": 142.015625,
+              "width": 302,
+              "height": 406.140625
+            },
+            "depthRect": {
+              "left": 151.859375,
+              "right": 208.140625,
+              "top": 104.015625,
+              "bottom": 132.015625,
+              "width": 56.28125,
+              "height": 28
+            },
+            "dualAnchorPercent": 50,
+            "dividerX": 180,
+            "depthIntersectsDivider": true,
+            "scrollWidth": 360,
+            "viewportWidth": 375,
+            "viewportHeight": 812,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-11-375x812-DUAL.png",
+            "bytes": 61326,
+            "sha256": "7ddc14204421d00c7f94147e0c443273cb5621b9053de5b619bcd077f8eee908"
+          }
+        },
+        {
+          "ordinal": 12,
+          "name": "MENU-P05-WORKFLOW",
+          "kind": "menu",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "pictureAdvance": {
+            "before": "▶ Pic. Advance\n: 1x",
+            "staged": "1/2",
+            "canceled": "▶ Pic. Advance\n: 1x",
+            "committed": "▶ Pic. Advance\n: 1/2"
+          },
+          "battery": {
+            "entryId": "display.battery",
+            "before": "▶ Battery\n: Off",
+            "target": "On",
+            "after": "▶ Battery\n: On"
+          },
+          "headerBeforeBattery": "AUTO_R G:AF LF/HF 1/2",
+          "headerAfterBattery": "AUTO_R G:AF LF/HF",
+          "brill": {
+            "beforeFilter": "brightness(1)",
+            "first": {
+              "current": "9",
+              "draft": "9"
+            },
+            "second": {
+              "current": "9",
+              "draft": "8"
+            },
+            "afterFilter": "brightness(0.917)",
+            "committedBrightness": 8
+          },
+          "geometry": {
+            "layout": "main-menu",
+            "lcd": {
+              "left": 25,
+              "right": 335,
+              "top": -267.828125,
+              "bottom": 146.3125,
+              "width": 310,
+              "height": 414.140625
+            },
+            "overlay": {
+              "left": 35.03125,
+              "right": 324.9375,
+              "top": -235.40625,
+              "bottom": 57,
+              "width": 289.90625,
+              "height": 292.40625
+            },
+            "categories": {
+              "left": 37.03125,
+              "right": 108.5,
+              "top": -210.40625,
+              "bottom": 31.40625,
+              "width": 71.46875,
+              "height": 241.8125
+            },
+            "content": {
+              "left": 108.5,
+              "right": 322.9375,
+              "top": -210.40625,
+              "bottom": 31.40625,
+              "width": 214.4375,
+              "height": 241.8125
+            },
+            "categoryCount": 5,
+            "selectedEntry": "sounder.pictureAdvance",
+            "selectedText": "▶ Pic. Advance: 1/2",
+            "rowOverflow": false,
+            "contentOverflowX": false,
+            "overlayInsideLcd": true,
+            "scrollWidth": 360,
+            "viewportWidth": 375
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-12-375x812-MENU-P05-WORKFLOW.png",
+            "bytes": 61648,
+            "sha256": "3c2e200c70e46f0dd671e709e241b5a3906ab7e733b0e0c9adfce911687d371c"
+          }
+        },
+        {
+          "ordinal": 13,
+          "name": "D15-FOCUS-FIVE-TABS",
+          "kind": "d15",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "proof": {
+            "sequence": [
+              "d15-tab-session",
+              "d15-tab-help",
+              "d15-tab-fixtures",
+              "d15-tab-lessons",
+              "d15-tab-sources"
+            ],
+            "focusMode": {
+              "cssDisplay": "none",
+              "applicable": false,
+              "status": "NOT_APPLICABLE_CSS_MAX700"
+            },
+            "geometry": {
+              "scrollWidth": 360,
+              "viewportWidth": 375,
+              "tabCount": 5,
+              "selected": "d15-tab-sources",
+              "ready": "true"
+            }
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-13-375x812-D15-FOCUS-FIVE-TABS.png",
+            "bytes": 53510,
+            "sha256": "338603945b92db6bd8c5c1a950ac51b3357daaec74b6bd9406a03ec3c101faff"
+          }
+        }
+      ],
+      "loadedBodyCount": 36,
+      "loadedBodyPaths": [
+        "src/core/lessons.mjs",
+        "src/core/protocol.mjs",
+        "src/core/scenario.mjs",
+        "src/core/session.mjs",
+        "src/devices/fcv588/adapter.mjs",
+        "src/devices/fcv588/alarms.mjs",
+        "src/devices/fcv588/calibration.mjs",
+        "src/devices/fcv588/capabilities.mjs",
+        "src/devices/fcv588/display-layout.mjs",
+        "src/devices/fcv588/display-palette.mjs",
+        "src/devices/fcv588/display-widgets.mjs",
+        "src/devices/fcv588/echo-projection.mjs",
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/model.mjs",
+        "src/devices/fcv588/navigation.mjs",
+        "src/devices/fcv588/profile-version.mjs",
+        "src/devices/fcv588/receiver-status.mjs",
+        "src/devices/fcv588/settings.mjs",
+        "src/devices/fcv588/tankenmaru-status.mjs",
+        "src/devices/fcv588/training-faults.mjs",
+        "src/devices/fcv588/units.mjs",
+        "web/app.mjs",
+        "web/fcv588-echo-rasterizer.mjs",
+        "web/fcv588-training-source-matrix.mjs",
+        "web/hold-input.mjs",
+        "web/index.html",
+        "web/instructor-tabs.mjs",
+        "web/key-feedback.mjs",
+        "web/keyboard-shortcuts.mjs",
+        "web/lcd-config-presentation.mjs",
+        "web/lcd-control-presentation.mjs",
+        "web/lcd-instructor-meta.mjs",
+        "web/lcd-presentation.mjs",
+        "web/pad-repeat.mjs",
+        "web/rotary-input.mjs",
+        "web/styles.css"
+      ],
+      "loadedBodyAggregateSha256": "00436fbf14977125c338f527610e3f5c853a6cb9025edec1830b5a8e5ddccd0c",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      },
+      "objectiveFailures": []
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "PASS",
+      "stateCount": 13,
+      "states": [
+        {
+          "ordinal": 14,
+          "name": "LF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF",
+            "steps": 0
+          },
+          "geometry": {
+            "name": "LF",
+            "mode": "LF",
+            "header": "AUTO_R   G:AF   LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 282.921875,
+              "bottom": 786.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 286.921875,
+              "bottom": 782.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 722.953125,
+              "bottom": 772.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-14-1366x768-LF.png",
+            "bytes": 264431,
+            "sha256": "8c0f6bff1788731f09ed5653cb2f485e5d34c90c29a03ea3c7b00df544d65107"
+          }
+        },
+        {
+          "ordinal": 15,
+          "name": "LF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF-ZOOM",
+            "steps": -1,
+            "actual": "LF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BL",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-15-1366x768-LF-ZOOM-BL.png",
+            "bytes": 267099,
+            "sha256": "925809c39f78a6c9c30518c79d942fa464d12e1fc2d0dcc9c9183b4f280283f6"
+          }
+        },
+        {
+          "ordinal": 16,
+          "name": "LF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-16-1366x768-LF-ZOOM-BZ.png",
+            "bytes": 270564,
+            "sha256": "e914a1321e643d92878229198fbfe9ba3716323e38df405c8784646125484dcb"
+          }
+        },
+        {
+          "ordinal": 17,
+          "name": "LF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-MZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-17-1366x768-LF-ZOOM-MZ.png",
+            "bytes": 265082,
+            "sha256": "1cbd75a35d1e4240b0c59da329d5809fc34aa04d75d4046878f6412206d80e50"
+          }
+        },
+        {
+          "ordinal": 18,
+          "name": "NAV1",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "NAV1",
+            "steps": -1,
+            "actual": "NAV1"
+          },
+          "geometry": {
+            "name": "NAV1",
+            "mode": "NAV1",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-18-1366x768-NAV1.png",
+            "bytes": 259463,
+            "sha256": "40d7f12b64715f218454f5b8d2795f8d296e39ed95fc10d83aea5d0c9659a092"
+          }
+        },
+        {
+          "ordinal": 19,
+          "name": "NAV2",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV1",
+            "target": "NAV2",
+            "steps": -1,
+            "actual": "NAV2"
+          },
+          "geometry": {
+            "name": "NAV2",
+            "mode": "NAV2",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-19-1366x768-NAV2.png",
+            "bytes": 263497,
+            "sha256": "ffc0c15e41412fa3f0bad353c9c9ca054fd13a0aae3eba811a5723a59bec6bed"
+          }
+        },
+        {
+          "ordinal": 20,
+          "name": "HF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV2",
+            "target": "HF-ZOOM",
+            "steps": -1,
+            "actual": "HF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Marker Zoom",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BL",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-20-1366x768-HF-ZOOM-BL.png",
+            "bytes": 262302,
+            "sha256": "4e9dc587d933f9ebf427af140f4d3833aa9657f925e10cb8033a757422b548fc"
+          }
+        },
+        {
+          "ordinal": 21,
+          "name": "HF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-21-1366x768-HF-ZOOM-BZ.png",
+            "bytes": 265862,
+            "sha256": "6e074bf1b2c38d81be355b723f8e417de31e8a146b1ec9b913f53e114fb53cd7"
+          }
+        },
+        {
+          "ordinal": 22,
+          "name": "HF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-MZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-22-1366x768-HF-ZOOM-MZ.png",
+            "bytes": 258995,
+            "sha256": "f7aad2982045bad7e15c83ffe3bbe7532c77be16a7b93f7c2616a62c445ed808"
+          }
+        },
+        {
+          "ordinal": 23,
+          "name": "HF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF",
+            "steps": -1,
+            "actual": "HF"
+          },
+          "geometry": {
+            "name": "HF",
+            "mode": "HF",
+            "header": "AUTO_R   G:AF   HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 233.84375,
+              "right": 325.765625,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-23-1366x768-HF.png",
+            "bytes": 258181,
+            "sha256": "7bd3fd4143bfbdc9753d4b8ed848dc91a3731c1d137ce8e1746ffec76b762bcc"
+          }
+        },
+        {
+          "ordinal": 24,
+          "name": "DUAL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF",
+            "target": "DUAL",
+            "steps": -1,
+            "actual": "DUAL"
+          },
+          "geometry": {
+            "name": "DUAL",
+            "mode": "DUAL",
+            "header": "AUTO_R   G:AF   LF/HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 222.84375,
+              "right": 592.140625,
+              "top": 76.921875,
+              "bottom": 572.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 361.5234375,
+              "right": 453.4453125,
+              "top": 512.953125,
+              "bottom": 562.953125,
+              "width": 91.921875,
+              "height": 50
+            },
+            "dualAnchorPercent": 50,
+            "dividerX": 407.4921875,
+            "depthIntersectsDivider": true,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366,
+            "viewportHeight": 768,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-24-1366x768-DUAL.png",
+            "bytes": 266858,
+            "sha256": "01e9900ef33bccf5343097c597f7f21a5ccd21d92382cabdf730f59305c7481a"
+          }
+        },
+        {
+          "ordinal": 25,
+          "name": "MENU-P05-WORKFLOW",
+          "kind": "menu",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "pictureAdvance": {
+            "before": "▶ Pic. Advance\n: 1x",
+            "staged": "1/2",
+            "canceled": "▶ Pic. Advance\n: 1x",
+            "committed": "▶ Pic. Advance\n: 1/2"
+          },
+          "battery": {
+            "entryId": "display.battery",
+            "before": "▶ Battery\n: Off",
+            "target": "On",
+            "after": "▶ Battery\n: On"
+          },
+          "headerBeforeBattery": "AUTO_R G:AF LF/HF 1/2",
+          "headerAfterBattery": "AUTO_R G:AF LF/HF",
+          "brill": {
+            "beforeFilter": "brightness(1)",
+            "first": {
+              "current": "9",
+              "draft": "9"
+            },
+            "second": {
+              "current": "9",
+              "draft": "8"
+            },
+            "afterFilter": "brightness(0.917)",
+            "committedBrightness": 8
+          },
+          "geometry": {
+            "layout": "main-menu",
+            "lcd": {
+              "left": 218.84375,
+              "right": 596.140625,
+              "top": 72.921875,
+              "bottom": 576.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "overlay": {
+              "left": 230.21875,
+              "right": 584.734375,
+              "top": 111.640625,
+              "bottom": 468.78125,
+              "width": 354.515625,
+              "height": 357.140625
+            },
+            "categories": {
+              "left": 232.21875,
+              "right": 319.84375,
+              "top": 137.640625,
+              "bottom": 443.1875,
+              "width": 87.625,
+              "height": 305.546875
+            },
+            "content": {
+              "left": 319.84375,
+              "right": 582.734375,
+              "top": 137.640625,
+              "bottom": 443.1875,
+              "width": 262.890625,
+              "height": 305.546875
+            },
+            "categoryCount": 5,
+            "selectedEntry": "sounder.pictureAdvance",
+            "selectedText": "▶ Pic. Advance: 1/2",
+            "rowOverflow": false,
+            "contentOverflowX": false,
+            "overlayInsideLcd": true,
+            "scrollWidth": 1351,
+            "viewportWidth": 1366
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-25-1366x768-MENU-P05-WORKFLOW.png",
+            "bytes": 269441,
+            "sha256": "68947f71fdeb02245d69155612d56b939d61c83f778564553589e351420339b5"
+          }
+        },
+        {
+          "ordinal": 26,
+          "name": "D15-FOCUS-FIVE-TABS",
+          "kind": "d15",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "proof": {
+            "sequence": [
+              "d15-tab-session",
+              "d15-tab-help",
+              "d15-tab-fixtures",
+              "d15-tab-lessons",
+              "d15-tab-sources"
+            ],
+            "focusMode": {
+              "cssDisplay": "flex",
+              "applicable": true,
+              "checked": true,
+              "dimOpacity": 0.72,
+              "focusWithinOpacity": 1.0
+            },
+            "geometry": {
+              "scrollWidth": 1351,
+              "viewportWidth": 1366,
+              "tabCount": 5,
+              "selected": "d15-tab-sources",
+              "ready": "true"
+            }
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-26-1366x768-D15-FOCUS-FIVE-TABS.png",
+            "bytes": 289108,
+            "sha256": "e51eb631f92d52d6d8991000476b8f1233e3ade29f6d2352ae2826fbd3fc0680"
+          }
+        }
+      ],
+      "loadedBodyCount": 36,
+      "loadedBodyPaths": [
+        "src/core/lessons.mjs",
+        "src/core/protocol.mjs",
+        "src/core/scenario.mjs",
+        "src/core/session.mjs",
+        "src/devices/fcv588/adapter.mjs",
+        "src/devices/fcv588/alarms.mjs",
+        "src/devices/fcv588/calibration.mjs",
+        "src/devices/fcv588/capabilities.mjs",
+        "src/devices/fcv588/display-layout.mjs",
+        "src/devices/fcv588/display-palette.mjs",
+        "src/devices/fcv588/display-widgets.mjs",
+        "src/devices/fcv588/echo-projection.mjs",
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/model.mjs",
+        "src/devices/fcv588/navigation.mjs",
+        "src/devices/fcv588/profile-version.mjs",
+        "src/devices/fcv588/receiver-status.mjs",
+        "src/devices/fcv588/settings.mjs",
+        "src/devices/fcv588/tankenmaru-status.mjs",
+        "src/devices/fcv588/training-faults.mjs",
+        "src/devices/fcv588/units.mjs",
+        "web/app.mjs",
+        "web/fcv588-echo-rasterizer.mjs",
+        "web/fcv588-training-source-matrix.mjs",
+        "web/hold-input.mjs",
+        "web/index.html",
+        "web/instructor-tabs.mjs",
+        "web/key-feedback.mjs",
+        "web/keyboard-shortcuts.mjs",
+        "web/lcd-config-presentation.mjs",
+        "web/lcd-control-presentation.mjs",
+        "web/lcd-instructor-meta.mjs",
+        "web/lcd-presentation.mjs",
+        "web/pad-repeat.mjs",
+        "web/rotary-input.mjs",
+        "web/styles.css"
+      ],
+      "loadedBodyAggregateSha256": "00436fbf14977125c338f527610e3f5c853a6cb9025edec1830b5a8e5ddccd0c",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      },
+      "objectiveFailures": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": "PASS",
+      "stateCount": 13,
+      "states": [
+        {
+          "ordinal": 27,
+          "name": "LF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF",
+            "steps": 0
+          },
+          "geometry": {
+            "name": "LF",
+            "mode": "LF",
+            "header": "AUTO_R   G:AF   LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-27-1920x1080-LF.png",
+            "bytes": 472686,
+            "sha256": "94f6e1f755ce6ebec76194d4981d0a2d88d4ded1c4a0a3a9b3989c4a77272124"
+          }
+        },
+        {
+          "ordinal": 28,
+          "name": "LF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF",
+            "target": "LF-ZOOM",
+            "steps": -1,
+            "actual": "LF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BL",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-28-1920x1080-LF-ZOOM-BL.png",
+            "bytes": 475163,
+            "sha256": "ac0eb0e89719a493882f51c7e2c3f7e193eb59b788cca137ef34cd6556d6855b"
+          }
+        },
+        {
+          "ordinal": 29,
+          "name": "LF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-BZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-29-1920x1080-LF-ZOOM-BZ.png",
+            "bytes": 479437,
+            "sha256": "429f3e170ef446d1295c8332a3c95612a47097d20d48919b062a87c01c118cf9"
+          }
+        },
+        {
+          "ordinal": 30,
+          "name": "LF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "LF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "LF-ZOOM-MZ",
+            "mode": "LF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-LF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-30-1920x1080-LF-ZOOM-MZ.png",
+            "bytes": 473092,
+            "sha256": "a239be20286b3724d17eb93d1bf5a5ba8cd35564e10207be170bd4e1ba8b0127"
+          }
+        },
+        {
+          "ordinal": 31,
+          "name": "NAV1",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "LF-ZOOM",
+            "target": "NAV1",
+            "steps": -1,
+            "actual": "NAV1"
+          },
+          "geometry": {
+            "name": "NAV1",
+            "mode": "NAV1",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-31-1920x1080-NAV1.png",
+            "bytes": 468476,
+            "sha256": "9dad5013f3803babd5e3820aff317f07e4d66eb069d79a059670707545e018c8"
+          }
+        },
+        {
+          "ordinal": 32,
+          "name": "NAV2",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV1",
+            "target": "NAV2",
+            "steps": -1,
+            "actual": "NAV2"
+          },
+          "geometry": {
+            "name": "NAV2",
+            "mode": "NAV2",
+            "header": "",
+            "depthHidden": true,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-32-1920x1080-NAV2.png",
+            "bytes": 472566,
+            "sha256": "4d4f6056821aacf817bdcae8f70982ca4642992f7485efeb5a2b24b1ed41b1ee"
+          }
+        },
+        {
+          "ordinal": 33,
+          "name": "HF-ZOOM-BL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "NAV2",
+            "target": "HF-ZOOM",
+            "steps": -1,
+            "actual": "HF-ZOOM"
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Marker Zoom",
+            "target": "Bottom Lock",
+            "after": "▶ Zoom Mode\n: Bottom Lock"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BL",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BL-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-33-1920x1080-HF-ZOOM-BL.png",
+            "bytes": 470822,
+            "sha256": "68fcc176014f499d3728d89dcd20a503bf97e8233a43a8946433ad40897752c1"
+          }
+        },
+        {
+          "ordinal": 34,
+          "name": "HF-ZOOM-BZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Lock",
+            "target": "Bottom Zoom",
+            "after": "▶ Zoom Mode\n: Bottom Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-BZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   BZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-34-1920x1080-HF-ZOOM-BZ.png",
+            "bytes": 475027,
+            "sha256": "870cd0a14c4af5fe30380814cbc65f0cc1a9487386336d40a34719120f4f8de6"
+          }
+        },
+        {
+          "ordinal": 35,
+          "name": "HF-ZOOM-MZ",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF-ZOOM",
+            "steps": 0
+          },
+          "zoomChoice": {
+            "entryId": "sounder.zoomMode",
+            "before": "▶ Zoom Mode\n: Bottom Zoom",
+            "target": "Marker Zoom",
+            "after": "▶ Zoom Mode\n: Marker Zoom"
+          },
+          "geometry": {
+            "name": "HF-ZOOM-MZ",
+            "mode": "HF-ZOOM",
+            "header": "AUTO_R   G:AF   MZ-HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-35-1920x1080-HF-ZOOM-MZ.png",
+            "bytes": 467186,
+            "sha256": "afa07559f4a9599cba28c2ab9c586df1a611e79d624fa522a15adc9f429b8b99"
+          }
+        },
+        {
+          "ordinal": 36,
+          "name": "HF",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF-ZOOM",
+            "target": "HF",
+            "steps": -1,
+            "actual": "HF"
+          },
+          "geometry": {
+            "name": "HF",
+            "mode": "HF",
+            "header": "AUTO_R   G:AF   HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 510.84375,
+              "right": 604.21875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": null,
+            "dividerX": null,
+            "depthIntersectsDivider": null,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-36-1920x1080-HF.png",
+            "bytes": 466473,
+            "sha256": "deb3e61dfaa4035a989fe231735efae43e4f620b4e15bdf996836cc764a4e593"
+          }
+        },
+        {
+          "ordinal": 37,
+          "name": "DUAL",
+          "kind": "display",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "modeTransition": {
+            "before": "HF",
+            "target": "DUAL",
+            "steps": -1,
+            "actual": "DUAL"
+          },
+          "geometry": {
+            "name": "DUAL",
+            "mode": "DUAL",
+            "header": "AUTO_R   G:AF   LF/HF   x1",
+            "depthHidden": false,
+            "depthText": "52.0",
+            "depthUnit": "m",
+            "lcdRect": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "canvasRect": {
+              "left": 499.84375,
+              "right": 869.140625,
+              "top": 320.921875,
+              "bottom": 816.953125,
+              "width": 369.296875,
+              "height": 496.03125
+            },
+            "depthRect": {
+              "left": 637.796875,
+              "right": 731.171875,
+              "top": 755.953125,
+              "bottom": 806.953125,
+              "width": 93.375,
+              "height": 51
+            },
+            "dualAnchorPercent": 50,
+            "dividerX": 684.4921875,
+            "depthIntersectsDivider": true,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920,
+            "viewportHeight": 1080,
+            "canvasInsideLcd": true
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-37-1920x1080-DUAL.png",
+            "bytes": 475190,
+            "sha256": "9fab91b01a887e3bffff62324b387e2d922bcaca5d76716d86e6c72412523c56"
+          }
+        },
+        {
+          "ordinal": 38,
+          "name": "MENU-P05-WORKFLOW",
+          "kind": "menu",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "pictureAdvance": {
+            "before": "▶ Pic. Advance\n: 1x",
+            "staged": "1/2",
+            "canceled": "▶ Pic. Advance\n: 1x",
+            "committed": "▶ Pic. Advance\n: 1/2"
+          },
+          "battery": {
+            "entryId": "display.battery",
+            "before": "▶ Battery\n: Off",
+            "target": "On",
+            "after": "▶ Battery\n: On"
+          },
+          "headerBeforeBattery": "AUTO_R G:AF LF/HF 1/2",
+          "headerAfterBattery": "AUTO_R G:AF LF/HF",
+          "brill": {
+            "beforeFilter": "brightness(1)",
+            "first": {
+              "current": "9",
+              "draft": "9"
+            },
+            "second": {
+              "current": "9",
+              "draft": "8"
+            },
+            "afterFilter": "brightness(0.917)",
+            "committedBrightness": 8
+          },
+          "geometry": {
+            "layout": "main-menu",
+            "lcd": {
+              "left": 495.84375,
+              "right": 873.140625,
+              "top": 316.921875,
+              "bottom": 820.953125,
+              "width": 377.296875,
+              "height": 504.03125
+            },
+            "overlay": {
+              "left": 507.21875,
+              "right": 861.734375,
+              "top": 355.640625,
+              "bottom": 712.78125,
+              "width": 354.515625,
+              "height": 357.140625
+            },
+            "categories": {
+              "left": 509.21875,
+              "right": 596.84375,
+              "top": 381.640625,
+              "bottom": 687.1875,
+              "width": 87.625,
+              "height": 305.546875
+            },
+            "content": {
+              "left": 596.84375,
+              "right": 859.734375,
+              "top": 381.640625,
+              "bottom": 687.1875,
+              "width": 262.890625,
+              "height": 305.546875
+            },
+            "categoryCount": 5,
+            "selectedEntry": "sounder.pictureAdvance",
+            "selectedText": "▶ Pic. Advance: 1/2",
+            "rowOverflow": false,
+            "contentOverflowX": false,
+            "overlayInsideLcd": true,
+            "scrollWidth": 1905,
+            "viewportWidth": 1920
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-38-1920x1080-MENU-P05-WORKFLOW.png",
+            "bytes": 477689,
+            "sha256": "450b8d8bf50af8844ad797926c3872cab563bc9c5138e69a0b6d288ab53beae9"
+          }
+        },
+        {
+          "ordinal": 39,
+          "name": "D15-FOCUS-FIVE-TABS",
+          "kind": "d15",
+          "status": "PASS",
+          "objectiveFailures": [],
+          "proof": {
+            "sequence": [
+              "d15-tab-session",
+              "d15-tab-help",
+              "d15-tab-fixtures",
+              "d15-tab-lessons",
+              "d15-tab-sources"
+            ],
+            "focusMode": {
+              "cssDisplay": "flex",
+              "applicable": true,
+              "checked": true,
+              "dimOpacity": 0.72,
+              "focusWithinOpacity": 1.0
+            },
+            "geometry": {
+              "scrollWidth": 1905,
+              "viewportWidth": 1920,
+              "tabCount": 5,
+              "selected": "d15-tab-sources",
+              "ready": "true"
+            }
+          },
+          "screenshot": {
+            "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p07-browser\\fcv588-p07-browser-20261116T093801+0700-31a0b649-39-1920x1080-D15-FOCUS-FIVE-TABS.png",
+            "bytes": 494842,
+            "sha256": "e85e402e269239066860a8571df132156ce1918cd56070e729c649c69d72996d"
+          }
+        }
+      ],
+      "loadedBodyCount": 36,
+      "loadedBodyPaths": [
+        "src/core/lessons.mjs",
+        "src/core/protocol.mjs",
+        "src/core/scenario.mjs",
+        "src/core/session.mjs",
+        "src/devices/fcv588/adapter.mjs",
+        "src/devices/fcv588/alarms.mjs",
+        "src/devices/fcv588/calibration.mjs",
+        "src/devices/fcv588/capabilities.mjs",
+        "src/devices/fcv588/display-layout.mjs",
+        "src/devices/fcv588/display-palette.mjs",
+        "src/devices/fcv588/display-widgets.mjs",
+        "src/devices/fcv588/echo-projection.mjs",
+        "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/model.mjs",
+        "src/devices/fcv588/navigation.mjs",
+        "src/devices/fcv588/profile-version.mjs",
+        "src/devices/fcv588/receiver-status.mjs",
+        "src/devices/fcv588/settings.mjs",
+        "src/devices/fcv588/tankenmaru-status.mjs",
+        "src/devices/fcv588/training-faults.mjs",
+        "src/devices/fcv588/units.mjs",
+        "web/app.mjs",
+        "web/fcv588-echo-rasterizer.mjs",
+        "web/fcv588-training-source-matrix.mjs",
+        "web/hold-input.mjs",
+        "web/index.html",
+        "web/instructor-tabs.mjs",
+        "web/key-feedback.mjs",
+        "web/keyboard-shortcuts.mjs",
+        "web/lcd-config-presentation.mjs",
+        "web/lcd-control-presentation.mjs",
+        "web/lcd-instructor-meta.mjs",
+        "web/lcd-presentation.mjs",
+        "web/pad-repeat.mjs",
+        "web/rotary-input.mjs",
+        "web/styles.css"
+      ],
+      "loadedBodyAggregateSha256": "00436fbf14977125c338f527610e3f5c853a6cb9025edec1830b5a8e5ddccd0c",
+      "errorCounts": {
+        "console": 0,
+        "page": 0,
+        "requestFailed": 0,
+        "external": 0,
+        "body": 0
+      },
+      "objectiveFailures": []
+    }
+  ],
+  "objectiveFailures": [],
+  "overallStatus": "PASS",
+  "serverCleanup": "PASS",
+  "limitations": [
+    "Chrome PASS is bounded software/browser QA, not OEM visual compliance",
+    "No camera-image RMSE/OEM glyph/RGB/detent claim",
+    "No installed firmware, physical hardware, Narrator/NVDA, rights or release approval",
+    "375px device-focus toggle is CSS-hidden; D15 five-tab keyboard behavior is still tested"
+  ],
+  "holds": {
+    "phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD"
+  },
+  "server": {
+    "path": "C:\\Work\\MoPhongMayTrenTau\\tools\\server.mjs",
+    "sha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+    "node": "C:\\nvm4w\\nodejs\\node.exe",
+    "pid": 13588,
+    "base": "http://127.0.0.1:4207/"
+  },
+  "browser": {
+    "version": "157.0.8103.78",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "instances": 1
+  },
+  "sourceManifestAfter": {
+    "files": 39,
+    "sha256": "f8e436396874b49c47f39b37a7d51a62f372e57d20cd6b8b30a11de713ee3786"
+  },
+  "sourceTreeStable": true,
+  "actualTotalStates": 39,
+  "finishedAt": "2026-11-16T09:40:43.994743+07:00"
+}

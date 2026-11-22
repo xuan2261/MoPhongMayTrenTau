@@ -1,0 +1,28 @@
+{
+  "atUtc": "2026-10-19T03:50:14.1490896Z",
+  "status": "V44_CANONICAL_TEST_ONLY_TWO_FILES_SOURCE_SHA_APPLIED",
+  "v43FinalSHA": "13e713bf6397561a0d42219462fd7c0c5bfb02d0e2aff16b0b8280ca50e8336e",
+  "v43PostSHA": "7abfc97db2816e24a41cc3980e66b08340e407f6954e3ff032cc260ae9e03d14",
+  "stageManifestSHA": "953e2c3761ce1ad383b1a3a08fd4c27c77a9f6921918194fdf22c93c20b9fa4e",
+  "stageGPT6GOsha": "89f6d830c4036e93a9c9c997b18fd7ce8987df7e4f56b9dee6737a55241eae8f",
+  "newCanonicalFiles": [
+    {
+      "expectedSHA": "a52825b11fc8ae0b5b03ac54dd1ccacf6133c1d7cf2d3595491c2194531dc335",
+      "actualSHA": "a52825b11fc8ae0b5b03ac54dd1ccacf6133c1d7cf2d3595491c2194531dc335",
+      "path": "test/fcv588-v44-brill-pad-contract.test.mjs"
+    },
+    {
+      "expectedSHA": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2",
+      "actualSHA": "8cc42ae3425048d0247a488afca2aaccbf95a001b06d4d90920d6d8067be22d2",
+      "path": "docs/research/FCV588_V44_BRILL_PAD_SOURCE_ATLAS_20261019.md"
+    }
+  ],
+  "newCanonicalFileCount": 2,
+  "runtimeSourceSHA": 37,
+  "runtimeSourceChanged": 0,
+  "canonicalProfile": "F1-public-reference-21",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false
+}

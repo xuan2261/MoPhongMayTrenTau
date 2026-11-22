@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "timestampUtc": "2026-10-22T03:53:20.8713397Z",
+  "status": "V51_ATTACHED_EXACT_PARTIAL_POSTREADBACK_PASS_NOT_FINAL_OR_RELEASE",
+  "sourceRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "scope": "WINDOWS_C_ONLY_TEST_AND_EVIDENCE",
+  "v50LockedAndPlanSha": "4_OF_4_MATCH",
+  "v50FinalSha256": "88b6633a7bd8b68e0e3f048319095eb4d1d783e7f91d74fefad05e59770fd36a",
+  "v50IndependentPostSha256": "1c95c486994004457f16f71fb75f885449f9b3ba00ea75ca348275016fcbb31b",
+  "runtimeSha": "37_OF_37_MATCH",
+  "verifiedBrowserBodySha": "32_OF_35_MATCH_THREE_NOT_RUN",
+  "attachedGeometry": [
+    "1366x768_GEOMETRY_PASS",
+    "1920x1080_GEOMETRY_PASS"
+  ],
+  "nativeScreenshotFilesVerified": 5,
+  "browserAfterReloadHttp": "35_OF_35_LOCALHOST_200",
+  "browserConsoleErrorsObserved": 0,
+  "postreportNodeTests": "511_OF_511_PASS",
+  "postreportPythonTests": "13_OF_13_PASS",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": "14/50",
+  "namedTasks": "6/22",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "firmwareInstalled": "UNKNOWN",
+  "standaloneVmSpeechQa": "NOT_RUN",
+  "realOsBlurUnderPowerHold": "NOT_RUN",
+  "threeLargeLoadedBodies": "NOT_RUN",
+  "note": "Evidence post-readback only; NOT V51 final seal, firmware/hardware/rights conformance or public lesson release.",
+  "qaTabClosedByOwner": true,
+  "qaWindowClosedByOwner": true,
+  "localServerPort4173ListenerCount": 0,
+  "sourceFilesChanged": false,
+  "filesHashReadback": [
+    {
+      "name": "V51_ATTACHED_1366x768_POWERED_REAL_SCROLL.png",
+      "lengthBytes": 312176,
+      "sha256": "c4102249db911f575c03133dfaad62ce45a0c1c55ac5eb0e25b2c782edca29d9"
+    },
+    {
+      "name": "V51_ATTACHED_1920x1080_PHYSICAL_FULL_SCREEN.png",
+      "lengthBytes": 627846,
+      "sha256": "c39055d9915a254c0aa8ac6b846214a4c85099f7852dce06f119558dafdc8b17"
+    },
+    {
+      "name": "V51_ATTACHED_1920x1080_POWERED_MENU.png",
+      "lengthBytes": 556303,
+      "sha256": "4b6306556df6b9d042b16683177873fffb7d5212734afc6c74b8da0c8daec81b"
+    },
+    {
+      "name": "V51_ATTACHED_EXACT_PARTIAL_OBSERVATION_20261022.json",
+      "lengthBytes": 5093,
+      "sha256": "299c7c76597510a63d729486000dabfa07e9a022b8f622dd00ae1f8c16f6c0b8"
+    },
+    {
+      "name": "V51_ATTACHED_EXACT_PARTIAL_REPORT_20261022.md",
+      "lengthBytes": 5556,
+      "sha256": "907834cf2fa98888f094940527c31918884ca147dbb69f3a570660b76cd3839b"
+    },
+    {
+      "name": "V51_ATTACHED_NETWORK_FULL_BODY_SHA_PARTIAL_20261022.json",
+      "lengthBytes": 13959,
+      "sha256": "71695e32ad0e12ddba07ccda4030667149b0dd546d43c5de246eedb494fdf981"
+    },
+    {
+      "name": "V51_ATTACHED_POSTBROWSER_FULL_NODE_20261022.log",
+      "lengthBytes": 122393,
+      "sha256": "a753502a40bc5690f6e09e3e7d6c4248c7d3cd455e67bd8fe5192fc5fac171bc"
+    },
+    {
+      "name": "V51_ATTACHED_POSTBROWSER_PYTHON_20261022.log",
+      "lengthBytes": 2527,
+      "sha256": "669e577dc2de4ac522c81f2938f908238b8ddd93b14daf9ff6c9ff112a3c79b1"
+    },
+    {
+      "name": "V51_ATTACHED_POSTREPORT_NODE_20261022.log",
+      "lengthBytes": 122385,
+      "sha256": "b66e0ec569fabd3a96d74ed2bff897a8ae45fc2e0af6d2a956586060d2174eb1"
+    },
+    {
+      "name": "V51_ATTACHED_POSTREPORT_PYTHON_20261022.log",
+      "lengthBytes": 2527,
+      "sha256": "eec8e9c36aa301be47fecf518c07e335f4b2b8fbc68b752f097ad2725c01b178"
+    },
+    {
+      "name": "V51_BROWSER_BODY_SHA_TRANSFER_VERIFY_ORIGINAL_STOP_20261022.txt",
+      "lengthBytes": 871,
+      "sha256": "f971030bb78b2096a08d74b1cdf47eca2833e5df8b62e0697ee5982ae0ae4f3f"
+    },
+    {
+      "name": "V51_NATIVE_1366x768_CHROME_WINDOW.png",
+      "lengthBytes": 421496,
+      "sha256": "1dbfc7a520eb10f458a7150f491b508453a168c6e2d22b74f4dd419fb73208ed"
+    },
+    {
+      "name": "V51_NATIVE_1366x768_CLIENT_CROP_PRELIMINARY.png",
+      "lengthBytes": 396088,
+      "sha256": "402cbb096ea79e4681ff745874003a31399b723ca873719b68df5cbde5076942"
+    }
+  ]
+}

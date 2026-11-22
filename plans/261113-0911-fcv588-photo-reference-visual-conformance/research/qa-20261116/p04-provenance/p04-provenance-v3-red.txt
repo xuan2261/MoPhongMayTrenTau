@@ -1,0 +1,56 @@
+TAP version 13
+# Subtest: P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+not ok 1 - P04 provenance v3 Stop bottom-zone overlay follows frozen frame bottom metadata
+  ---
+  duration_ms: 91.4241
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116\\test\\fcv588-p04-bottom-provenance-v3.test.mjs:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    drawOverlays must use each history-qualified frame.bottomDepthM, not current observation depth
+    + actual - expected
+    
+    + [
+    +   'drawOverlays(normal,sounderPane.x,0,\n' +
+    +     '          sounderPane.width,height,o.bottomDepthM)',
+    +   'drawOverlays(lf,0,0,leftWidth,height,o.bottomDepthM)',
+    +   'drawOverlays(hf,leftWidth,0,width-leftWidth,height,o.bottomDepthM)',
+    +   'drawOverlays(zoom,layout.panes.zoom.x,0,leftWidth,height,\n' +
+    +     '          o.bottomDepthM)',
+    +   'drawOverlays(normal,layout.panes.normal.x,0,\n' +
+    +     '          layout.panes.normal.width,height,o.bottomDepthM)',
+    +   'drawOverlays(normal,0,0,width,height,o.bottomDepthM)'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: |-
+      drawOverlays(normal,sounderPane.x,0,
+                sounderPane.width,height,o.bottomDepthM)
+    1: 'drawOverlays(lf,0,0,leftWidth,height,o.bottomDepthM)'
+    2: 'drawOverlays(hf,leftWidth,0,width-leftWidth,height,o.bottomDepthM)'
+    3: |-
+      drawOverlays(zoom,layout.panes.zoom.x,0,leftWidth,height,
+                o.bottomDepthM)
+    4: |-
+      drawOverlays(normal,layout.panes.normal.x,0,
+                layout.panes.normal.width,height,o.bottomDepthM)
+    5: 'drawOverlays(normal,0,0,width,height,o.bottomDepthM)'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p04-bottom-provenance-20261116/test/fcv588-p04-bottom-provenance-v3.test.mjs:52:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 227.9223

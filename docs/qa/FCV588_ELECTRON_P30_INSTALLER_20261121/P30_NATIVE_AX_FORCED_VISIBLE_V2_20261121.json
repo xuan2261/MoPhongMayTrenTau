@@ -1,0 +1,77 @@
+{
+  "schema": "P30_NATIVE_ACCESSIBILITY_FORCED_VISIBLE_V2",
+  "status": "PASS",
+  "forceRendererAccessibility": "complete",
+  "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P30_INSTALLER_20261121\\profile-native-a11y-visible-v2-20261121",
+  "windowFound": true,
+  "descendants": 90,
+  "controls": [
+    {
+      "type": "ControlType.Group",
+      "name": "Mặt trước FCV-588 minh họa theo nguồn công khai",
+      "hasFocus": false,
+      "focusable": false,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Text",
+      "name": "GAIN",
+      "hasFocus": false,
+      "focusable": false,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Button",
+      "name": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "hasFocus": false,
+      "focusable": true,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Text",
+      "name": "MODE",
+      "hasFocus": false,
+      "focusable": false,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Button",
+      "name": "MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "hasFocus": false,
+      "focusable": true,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Button",
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "hasFocus": false,
+      "focusable": true,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Text",
+      "name": "Hình vẽ độc lập theo nguồn công khai · Chưa xác nhận hình học/phần cứng OEM",
+      "hasFocus": false,
+      "focusable": false,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.TabItem",
+      "name": "Nguồn & QA",
+      "hasFocus": false,
+      "focusable": true,
+      "offscreen": false
+    },
+    {
+      "type": "ControlType.Text",
+      "name": "Chọn cặp JSON envelope v7 và sidecar v1 từ máy tính. Chỉ đọc trong D15, không thay đổi LCD hoặc phiên đang chạy. Không xác thực nguồn gốc, ngày ghi hay độ chính xác OEM; checksum chỉ phát hiện thay đổi không đồng bộ.",
+      "hasFocus": false,
+      "focusable": false,
+      "offscreen": false
+    }
+  ],
+  "processMainPID": 25580,
+  "releaseApproval": "HOLD",
+  "windowName": "MoPhongMayTrenTau | FCV-588 Public Reference",
+  "windowPID": 25580
+}

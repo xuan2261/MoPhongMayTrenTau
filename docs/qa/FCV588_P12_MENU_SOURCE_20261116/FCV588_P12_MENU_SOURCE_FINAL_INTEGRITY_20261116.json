@@ -1,0 +1,122 @@
+{
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "checks": {
+    "canonicalMenuRegressionBeforeApply": "25/25 PASS",
+    "canonicalRuntime": "39/39 SHA MATCH, no product edit",
+    "implementedMenuCategories": 5,
+    "implementedMenuItems": 67,
+    "manualSourceAuditedRows": 35,
+    "manualSourceClasses": {
+      "DIRECT_SOURCE": 23,
+      "EXTRAPOLATION": 4,
+      "SOURCE_GAP": 8
+    },
+    "menuSourcePdf": "OME23890E 2025 page 59 printed AP-1",
+    "originalReferenceJpegs": "8/8 SHA MATCH",
+    "photoMenuOptionText": "13 legible rows in 1 of 8 photos",
+    "photoOrderDifferences": "12/13 ordinal differences, 21 inversion pairs",
+    "qaPorts": "4207,4208,4209,4211,4212,9225 CLOSED",
+    "sourceValidRED": "2/3 PASS,1 FAIL",
+    "stageFullNode": "499/526 PASS,27 FAIL",
+    "stageTargetedGREEN": "3/3 PASS",
+    "stagingRuntimeFileDiff": "1/39 menu-atlas.mjs only; other metadata and order-unrelated entries unchanged",
+    "userServer4173": "HTTP200 PID1204 UNTOUCHED"
+  },
+  "createdAt": "2026-11-16T16:47:34.589837+07:00",
+  "evidenceSHA256": {
+    "canonicalMenuSourceLedger": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-runtime-ledger/P12_CURRENT_MENU_SOURCE_TRACEABILITY_20261116.json",
+      "sha256": "7c44ea82784a64c08fbf05ac81d59b79da46816e0283d99a49205ae45c56fc9c"
+    },
+    "canonicalTargetedMenu25": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-runtime-ledger/P12_TARGETED_MENU_NODE_20261116.txt",
+      "sha256": "30e79694fa8f83f4b21f2d2db1bda9f344849d28fdfb8cbbd2ebf51f4fd1ef43"
+    },
+    "eightOriginalPhotoLexicon": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-photo-lexicon/P12_2016_PHOTO_LCD_LEXICON_20261116.json",
+      "sha256": "9c8c7397a42610005a9fed7535a722f951ab708273068301c44f49faf81b2e83"
+    },
+    "independentReview": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-review/P12_INDEPENDENT_REVIEW_20261116.json",
+      "sha256": "26bbcef289bf1b3663ac7a79766b87ff6431684632f07414aca4537d3bd29c6d"
+    },
+    "manualOrderCanonicalRED": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/P12_SOURCE_VALID_MANUAL_MENU_ORDER_RED_20261116.txt",
+      "sha256": "c228a4ea0f5d8c4feceedf57f9ea740d5a86164034654466b8a97f2fc141163e"
+    },
+    "manualOrderStagingGREEN": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/P12_STAGING_MANUAL_MENU_ORDER_GREEN_20261116.txt",
+      "sha256": "ed1fcf5cdac606cfa3350a92d4742dfcfc7f1622c9ba140982cfe972bed406e6"
+    },
+    "manufacturerManualSourceAudit": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-manual-source/P12_MANUAL_MENU_SOURCE_AUDIT_20261116.json",
+      "sha256": "c28b618cceca8380fa0be4cfdf514a2b12801b08dbccbea1b45255be0bf1c5b5"
+    },
+    "manufacturerSounderOrderAP1Supplement": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-manual-source/P12_MANUAL_SOUND_ORDER_SUPPLEMENT_20261116.md",
+      "sha256": "be84cf98525de66f4005550cf7c6bd381bf916b45c32d5e079c62a69c442b812"
+    },
+    "p11Final": {
+      "path": "docs/qa/FCV588_P11_NATIVE_FOCUS_BOUNDARIES_20261116/FCV588_P11_NATIVE_FOCUS_FINAL_INTEGRITY_20261116.json",
+      "sha256": "845b4fe9cf9b184a74ddba91783362e9446c1219d38362c16166d4b3d6a44c87"
+    },
+    "p11Post": {
+      "path": "docs/qa/FCV588_P11_NATIVE_FOCUS_BOUNDARIES_20261116/FCV588_P11_NATIVE_FOCUS_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "392220f62ae29c2f1bf77b73c90d016b1a3a40e115a8c04612ce59a728b09f98"
+    },
+    "photoCurrentMenuCrosswalk": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-runtime-ledger/P12_PHOTO_2016_VI_MENU_ORDER_CROSSWALK_20261116.json",
+      "sha256": "994290762fa2d19c0b491007af559a4c9a437701c4f7e4de71732e582fab2e9f"
+    },
+    "stageNoGoIntegrity": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/P12_SOUND_MENU_STAGING_NO_GO_20261116.json",
+      "sha256": "eb51e3bf3c9e4bf2b60ab62f81e4f72136bf55458aee43b8ce0d9799ca91a0cc"
+    },
+    "stageOrderOnlyEquivalence": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/P12_STAGE_ORDER_ONLY_EQUIVALENCE_20261116.txt",
+      "sha256": "5996df27237b43f92044c602127c88394db7b01df3a28dbcabe9c0cc9cbbcfb6"
+    },
+    "stagingFullNodeFAIL": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/P12_STAGING_FULL_NODE_20261116.txt",
+      "sha256": "079419aa1dbca42a688f0e1644d487bcc276ed14fcf98dc220a26af45a581f85"
+    }
+  },
+  "holds": {
+    "F1Phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "fullP07": "OPEN",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "photoRights": "HOLD",
+    "releaseApproval": "HOLD"
+  },
+  "operations": {
+    "OEMPhotoOrPDFServed": false,
+    "canonicalRuntimeEdited": false,
+    "historicalREDOrFAILOverwritten": false,
+    "releaseOrHardwareAction": false,
+    "serverRestarted": false,
+    "stagingCandidateCreated": true,
+    "testAssertionsWeakened": false
+  },
+  "releaseDecision": {
+    "canonicalGuardedApply": "NO_GO",
+    "independentReview": "SOURCE_AND_FAIL_RECEIPT_INTEGRITY_GO, STAGING_RELEASE_NO_GO",
+    "nextRequired": "Rebuild complete staging fixture (without copying OEM reference assets into served runtime), preserve old tests, update only source-authored position assumptions with stronger semantic oracles, rerun full 563/Python/Chrome and independent GO, guarded preimage ZIP/apply.",
+    "noRuntimePatch": true,
+    "reason": "Full stage QA FAIL; 5 existing selection-specific tests break from order change and stage lacks some docs/plans fixtures; must not overwrite canonical or retrofit tests merely to claim GREEN."
+  },
+  "schema": "fcv588-p12-source-menu-audit-final-integrity-v1",
+  "scope": "F1_PUBLIC_REFERENCE_V2_SYNTHETIC_OFFLINE_WINDOWS_RESTRICTED_SOURCE_QA",
+  "sourceLimits": {
+    "OEMFontsAndRights": "HOLD",
+    "installedFirmware": "UNKNOWN",
+    "manualEdition": "OME-23890-E 2025; not proof of photographed firmware",
+    "nativeNarrator": "BLOCKED_NOT_RUN",
+    "nativePOWERBlur": "NOT_VERIFIED",
+    "photoCollectionCaptureDate": "NOT_INDEPENDENTLY_VERIFIED",
+    "vietnameseMenuPhrases": "PHOTO_SPECIFIC_2016_COLLECTION_ONE_JPEG_NOT_FULL_FIRMWARE_LANGUAGE_ORACLE",
+    "whiteLineValueEnum": "PHOTO_AND_MANUAL_DIFFER_FROM_CURRENT_TRAINING_BOOLEAN; NOT_PATCHED"
+  },
+  "status": "P12_MENU_SOURCE_ORACLE_BOUNDED_PASS_STAGED_ORDER_RED_GREEN_FULL_QA_FAIL_CANONICAL_APPLY_NO_GO"
+}

@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-22",
+  "status": "ARCHIVED_AND_ORIGINAL_UNPACKED_REMOVED_AFTER_QA",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "quarantine": "C:\\Work\\MoPhongMayTrenTau\\staging\\github-prep-20261122\\_electron-unpacked-quarantine-20261122",
+  "p29ArchiveSha": "BB179F82B5DAAB38E4434C0BF8C6148FDF5D99BBE8540FD1CBD16946BDA7B061",
+  "p30p31ArchiveSha": "74C607FFA6CC693E645EEEED9F466EA59400D9E8FBA4CFC063B2D18D417D6987",
+  "restoreScript": "tools/restore_electron_unpacked_20261122.ps1",
+  "sources": [
+    {
+      "bytes": 374671413,
+      "path": "staging/fcv588-electron-poc-20261121/dist",
+      "count": 73
+    },
+    {
+      "bytes": 374787089,
+      "path": "staging/fcv588-electron-installer-p30-20261121/dist-p30/win-unpacked",
+      "count": 74
+    },
+    {
+      "bytes": 374786822,
+      "path": "staging/fcv588-electron-installer-p30-20261121/dist-p30-v2/win-unpacked",
+      "count": 73
+    },
+    {
+      "bytes": 374786856,
+      "path": "staging/fcv588-electron-installer-p30-20261121/dist-p30-host-upgrade-0.0.2/win-unpacked",
+      "count": 73
+    },
+    {
+      "bytes": 374786944,
+      "path": "staging/fcv588-native-accessibility-p31-20261121/dist-p31/win-unpacked",
+      "count": 73
+    }
+  ],
+  "nodeQa": "618/618 PASS",
+  "pythonQa": "13/13 PASS",
+  "restoration": "PowerShell tools/restore_electron_unpacked_20261122.ps1 [-P29 | -P30P31]; pinned SHA and per-file restoration check"
+}

@@ -1,0 +1,430 @@
+{
+  "url": "http://127.0.0.1:4287/",
+  "viewports": [
+    {
+      "name": "desktop",
+      "httpStatus": 200,
+      "initial": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "scrollWidth": 1440,
+          "scrollHeight": 1023,
+          "clientWidth": 1440
+        },
+        "masthead": {
+          "x": 36,
+          "y": 0,
+          "width": 1368,
+          "height": 59,
+          "bottom": 59,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 36,
+          "y": 10,
+          "width": 231.171875,
+          "height": 38,
+          "bottom": 48,
+          "display": "flex"
+        },
+        "notice": {
+          "x": 1080,
+          "y": 16.375,
+          "width": 324,
+          "height": 25.25,
+          "bottom": 41.625,
+          "display": "block"
+        },
+        "heading": {
+          "x": 36,
+          "y": 71,
+          "width": 1368,
+          "height": 56,
+          "bottom": 127,
+          "display": "flex"
+        },
+        "h1": {
+          "x": 36,
+          "y": 71,
+          "width": 435.5,
+          "height": 56,
+          "bottom": 127,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 489.5,
+          "y": 103,
+          "width": 212.21875,
+          "height": 16.796875,
+          "bottom": 119.796875,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 36,
+          "y": 143,
+          "width": 1368,
+          "height": 787.96875,
+          "bottom": 930.96875,
+          "display": "grid"
+        },
+        "deviceFrame": {
+          "x": 212.5,
+          "y": 143,
+          "width": 680,
+          "height": 787.96875,
+          "bottom": 930.96875,
+          "display": "block"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "headingText": "FCV-588 Training Console\n\nMô phỏng độc lập từ manual công khai.",
+        "mastheadText": "≈\nMoPhongMayTrenTau\nPUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY"
+      },
+      "tabCount": 5,
+      "helpSelected": "true",
+      "helpPanelHiddenAfterSelect": false,
+      "sessionSelectedAfterReturn": "true",
+      "after": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "viewportScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-desktop-1440x900-viewport.png",
+      "fullScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-desktop-1440x900-full.png"
+    },
+    {
+      "name": "tablet",
+      "httpStatus": 200,
+      "initial": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "document": {
+          "scrollWidth": 768,
+          "scrollHeight": 1829,
+          "clientWidth": 768
+        },
+        "masthead": {
+          "x": 36,
+          "y": 0,
+          "width": 696,
+          "height": 59,
+          "bottom": 59,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 36,
+          "y": 10,
+          "width": 231.171875,
+          "height": 38,
+          "bottom": 48,
+          "display": "flex"
+        },
+        "notice": {
+          "x": 408,
+          "y": 16.375,
+          "width": 324,
+          "height": 25.25,
+          "bottom": 41.625,
+          "display": "block"
+        },
+        "heading": {
+          "x": 36,
+          "y": 71,
+          "width": 696,
+          "height": 40,
+          "bottom": 111,
+          "display": "flex"
+        },
+        "h1": {
+          "x": 36,
+          "y": 71,
+          "width": 302.15625,
+          "height": 40,
+          "bottom": 111,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 356.15625,
+          "y": 90,
+          "width": 212.21875,
+          "height": 16.796875,
+          "bottom": 106.796875,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 36,
+          "y": 127,
+          "width": 696,
+          "height": 1592.96875,
+          "bottom": 1719.96875,
+          "display": "grid"
+        },
+        "deviceFrame": {
+          "x": 44,
+          "y": 127,
+          "width": 680,
+          "height": 787.96875,
+          "bottom": 914.96875,
+          "display": "block"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "headingText": "FCV-588 Training Console\n\nMô phỏng độc lập từ manual công khai.",
+        "mastheadText": "≈\nMoPhongMayTrenTau\nPUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY"
+      },
+      "tabCount": 5,
+      "helpSelected": "true",
+      "helpPanelHiddenAfterSelect": false,
+      "sessionSelectedAfterReturn": "true",
+      "after": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "viewportScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-tablet-768x1024-viewport.png",
+      "fullScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-tablet-768x1024-full.png"
+    },
+    {
+      "name": "mobile",
+      "httpStatus": 200,
+      "initial": {
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "document": {
+          "scrollWidth": 375,
+          "scrollHeight": 2195,
+          "clientWidth": 375
+        },
+        "masthead": {
+          "x": 9,
+          "y": 0,
+          "width": 357,
+          "height": 82.25,
+          "bottom": 82.25,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 9,
+          "y": 9,
+          "width": 227.171875,
+          "height": 34,
+          "bottom": 43,
+          "display": "flex"
+        },
+        "notice": {
+          "x": 9,
+          "y": 50,
+          "width": 357,
+          "height": 23.25,
+          "bottom": 73.25,
+          "display": "block"
+        },
+        "heading": {
+          "x": 18,
+          "y": 92.25,
+          "width": 339,
+          "height": 53.84375,
+          "bottom": 146.09375,
+          "display": "block"
+        },
+        "h1": {
+          "x": 18,
+          "y": 92.25,
+          "width": 339,
+          "height": 36,
+          "bottom": 128.25,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 18,
+          "y": 131.25,
+          "width": 339,
+          "height": 14.84375,
+          "bottom": 146.09375,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 9,
+          "y": 160.09375,
+          "width": 357,
+          "height": 1924.171875,
+          "bottom": 2084.265625,
+          "display": "grid"
+        },
+        "deviceFrame": {
+          "x": 9,
+          "y": 235.09375,
+          "width": 357,
+          "height": 1134.171875,
+          "bottom": 1369.265625,
+          "display": "block"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "headingText": "FCV-588 Training Console\n\nMô phỏng độc lập từ manual công khai.",
+        "mastheadText": "≈\nMoPhongMayTrenTau\nPUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY"
+      },
+      "tabCount": 5,
+      "helpSelected": "true",
+      "helpPanelHiddenAfterSelect": false,
+      "sessionSelectedAfterReturn": "true",
+      "after": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "viewportScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-mobile-375x812-viewport.png",
+      "fullScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-mobile-375x812-full.png"
+    },
+    {
+      "name": "small-mobile",
+      "httpStatus": 200,
+      "initial": {
+        "viewport": {
+          "width": 320,
+          "height": 812
+        },
+        "document": {
+          "scrollWidth": 320,
+          "scrollHeight": 2165,
+          "clientWidth": 320
+        },
+        "masthead": {
+          "x": 9,
+          "y": 0,
+          "width": 302,
+          "height": 93.5,
+          "bottom": 93.5,
+          "display": "flex"
+        },
+        "identity": {
+          "x": 9,
+          "y": 9,
+          "width": 227.171875,
+          "height": 34,
+          "bottom": 43,
+          "display": "flex"
+        },
+        "notice": {
+          "x": 9,
+          "y": 50,
+          "width": 302,
+          "height": 34.5,
+          "bottom": 84.5,
+          "display": "block"
+        },
+        "heading": {
+          "x": 18,
+          "y": 103.5,
+          "width": 284,
+          "height": 53.84375,
+          "bottom": 157.34375,
+          "display": "block"
+        },
+        "h1": {
+          "x": 18,
+          "y": 103.5,
+          "width": 284,
+          "height": 36,
+          "bottom": 139.5,
+          "display": "block"
+        },
+        "subtitle": {
+          "x": 18,
+          "y": 142.5,
+          "width": 284,
+          "height": 14.84375,
+          "bottom": 157.34375,
+          "display": "block"
+        },
+        "workbench": {
+          "x": 9,
+          "y": 171.34375,
+          "width": 302,
+          "height": 1865.703125,
+          "bottom": 2037.046875,
+          "display": "grid"
+        },
+        "deviceFrame": {
+          "x": 9,
+          "y": 261.34375,
+          "width": 302,
+          "height": 1060.703125,
+          "bottom": 1322.046875,
+          "display": "block"
+        },
+        "sourceCue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0,
+          "display": "none"
+        },
+        "headingText": "FCV-588 Training Console\n\nMô phỏng độc lập từ manual công khai.",
+        "mastheadText": "≈\nMoPhongMayTrenTau\nPUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY"
+      },
+      "tabCount": 5,
+      "helpSelected": "true",
+      "helpPanelHiddenAfterSelect": false,
+      "sessionSelectedAfterReturn": "true",
+      "after": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "pageErrors": [],
+      "failedRequests": [],
+      "externalRequests": [],
+      "viewportScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-small-mobile-320x812-viewport.png",
+      "fullScreenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-small-mobile-320x812-full.png"
+    }
+  ],
+  "noJs": {
+    "httpStatus": 200,
+    "fallback": {
+      "notice": "PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY",
+      "tablistHidden": true,
+      "panelHidden": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "scrollWidth": 375,
+      "clientWidth": 375
+    },
+    "screenshot": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_V57_HEADER_COMPACT_20261031\\attempt3-after-mobile-375x812-nojs.png"
+  }
+}

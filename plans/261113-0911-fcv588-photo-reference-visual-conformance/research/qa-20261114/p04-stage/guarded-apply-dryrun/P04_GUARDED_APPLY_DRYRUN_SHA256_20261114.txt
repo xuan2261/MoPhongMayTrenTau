@@ -1,0 +1,2 @@
+20b50cfafa639dd938b035ef3a7b5c2fba08f7975ccd5213e1dc2a0b4ee5d833 *C:\Work\MoPhongMayTrenTau\plans\261113-0911-fcv588-photo-reference-visual-conformance\research\qa-20261114\p04-stage\guarded-apply-dryrun\p04_guarded_apply.py
+3511c84a436f858ada86d8c6b1378768b66fe2e0dcfd924aec03f4e286e59587 *C:\Work\MoPhongMayTrenTau\plans\261113-0911-fcv588-photo-reference-visual-conformance\research\qa-20261114\p04-stage\guarded-apply-dryrun\P04_GUARDED_APPLY_DRYRUN_20261114.txt

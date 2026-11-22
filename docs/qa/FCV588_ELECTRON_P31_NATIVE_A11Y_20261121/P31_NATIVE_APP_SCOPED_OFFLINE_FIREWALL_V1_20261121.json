@@ -1,0 +1,13 @@
+{
+  "schema": "P31_APP_SCOPED_FIREWALL_OFFLINE_V1",
+  "status": "PASS",
+  "executableSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "ruleName": "P31_FCV588_QA_OUTBOUND_BLOCK_20261121",
+  "ruleProgramMatched": true,
+  "processAlive": true,
+  "nonLoopbackEstablishedTCP": 0,
+  "ruleRemoved": true,
+  "physicalAirgapValidated": false,
+  "releaseApproval": "HOLD",
+  "processCount": 4
+}

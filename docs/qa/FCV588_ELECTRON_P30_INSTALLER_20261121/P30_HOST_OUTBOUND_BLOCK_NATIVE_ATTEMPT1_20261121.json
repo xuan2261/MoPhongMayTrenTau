@@ -1,0 +1,20 @@
+{
+  "schema": "P30_HOST_PROCESS_SCOPED_EGRESS_DENY_V1",
+  "status": "PASS",
+  "firewallRule": "P30_FCV588_HOST_QA_BLOCK_OUT_20261121",
+  "scope": "Installed FCV588 executable only",
+  "observations": {
+    "action": "Block",
+    "processCount": 4,
+    "sampledNonlocalEstablished": 0,
+    "programExact": true,
+    "processAlive": true,
+    "direction": "Outbound",
+    "ruleEnabled": true
+  },
+  "firewallRuleRemoved": true,
+  "windowsNetworkAdapterNotDisabled": true,
+  "physicalAirgapValidated": false,
+  "error": null,
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: P06 device-focus toggle is external presentation state only
+ok 1 - P06 device-focus toggle is external presentation state only
+  ---
+  duration_ms: 1.5608
+  type: 'test'
+  ...
+# Subtest: P06 focus mode de-emphasizes D15 without hiding its five accessible tabs
+ok 2 - P06 focus mode de-emphasizes D15 without hiding its five accessible tabs
+  ---
+  duration_ms: 0.5606
+  type: 'test'
+  ...
+# Subtest: P06 face keeps the observed LCD-left / narrow-control-right relationship
+ok 3 - P06 face keeps the observed LCD-left / narrow-control-right relationship
+  ---
+  duration_ms: 1.7629
+  type: 'test'
+  ...
+# Subtest: P06 right-column pad, keys and rotary knobs use restrained photo-informed proportions
+ok 4 - P06 right-column pad, keys and rotary knobs use restrained photo-informed proportions
+  ---
+  duration_ms: 1.0403
+  type: 'test'
+  ...
+# Subtest: P06 original reference photos remain reference-only and are not served artwork
+ok 5 - P06 original reference photos remain reference-only and are not served artwork
+  ---
+  duration_ms: 0.5809
+  type: 'test'
+  ...
+# Subtest: TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+ok 6 - TrackPad pointerdown produces one edge, then bounded autorepeat; pointer identity/cancel stops it
+  ---
+  duration_ms: 3.7386
+  type: 'test'
+  ...
+# Subtest: TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+ok 7 - TrackPad native click is not double-dispatched after pointer input; accessibility click still works
+  ---
+  duration_ms: 0.9643
+  type: 'test'
+  ...
+# Subtest: TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+ok 8 - TrackPad keyboard hold repeats without keydown.repeat doubles and always releases off-button
+  ---
+  duration_ms: 1.4646
+  type: 'test'
+  ...
+# Subtest: TrackPad reset/dispose never strand timers or leak repeated events
+ok 9 - TrackPad reset/dispose never strand timers or leak repeated events
+  ---
+  duration_ms: 0.4431
+  type: 'test'
+  ...
+# Subtest: touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+ok 10 - touch/pen/mouse rotary drag emits bounded signed device detents, not UI-only paint
+  ---
+  duration_ms: 3.4395
+  type: 'test'
+  ...
+# Subtest: rotary capture cancel, blur and pointer identity never rotate an inactive knob
+ok 11 - rotary capture cancel, blur and pointer identity never rotate an inactive knob
+  ---
+  duration_ms: 0.8748
+  type: 'test'
+  ...
+# Subtest: GAIN short tap retains push semantics; a dragged knob must not accidentally push
+ok 12 - GAIN short tap retains push semantics; a dragged knob must not accidentally push
+  ---
+  duration_ms: 0.5341
+  type: 'test'
+  ...
+# Subtest: GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+ok 13 - GAIN rotation canceled by native lostpointercapture or pointercancel cannot leak a later click as push
+  ---
+  duration_ms: 0.5307
+  type: 'test'
+  ...
+# Subtest: rotary capture rejection and disposal fail closed
+ok 14 - rotary capture rejection and disposal fail closed
+  ---
+  duration_ms: 0.4012
+  type: 'test'
+  ...
+# Subtest: V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+ok 15 - V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+  ---
+  duration_ms: 1.6399
+  type: 'test'
+  ...
+# Subtest: V56: all existing instructor capabilities and live regions remain unique
+ok 16 - V56: all existing instructor capabilities and live regions remain unique
+  ---
+  duration_ms: 0.8524
+  type: 'test'
+  ...
+# Subtest: V56: tab selection is owned by a one-time UI binder, never reducer/replay
+ok 17 - V56: tab selection is owned by a one-time UI binder, never reducer/replay
+  ---
+  duration_ms: 0.2363
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 18 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 3.8043
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 19 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 1.705
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 20 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.6796
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 21 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.5118
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 22 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.3485
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 23 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.6621
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 24 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.4615
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 25 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.5126
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 26 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.5505
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 27 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.4575
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 28 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2042
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 29 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.4526
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 167.1654

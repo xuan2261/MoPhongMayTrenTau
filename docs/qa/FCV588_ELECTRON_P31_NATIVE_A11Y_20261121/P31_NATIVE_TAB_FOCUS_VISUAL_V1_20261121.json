@@ -1,0 +1,28 @@
+{
+  "schema": "P31_NATIVE_TAB_VISUAL_V1",
+  "status": "PASS",
+  "forceRendererAccessibilityUsed": false,
+  "checks": [
+    "GAIN_NATIVE_FOCUS",
+    "TAB_GAIN_TO_MODE",
+    "TAB_MODE_TO_POWER"
+  ],
+  "screenshots": {
+    "POWER": {
+      "sha256": "5f3a268235367baef91f238ef770ecea517421249852c5b6c7abac09d1c83cc7",
+      "bytes": 403766,
+      "width": 1450,
+      "height": 920
+    },
+    "MODE": {
+      "sha256": "eaeb29378bb57743855d882eecc98e4803710aadf12af01ee91c289ce60d7620",
+      "bytes": 403373,
+      "width": 1450,
+      "height": 920
+    }
+  },
+  "errors": [],
+  "releaseApproval": "HOLD",
+  "hwnd": 123145066,
+  "pid": 1552
+}

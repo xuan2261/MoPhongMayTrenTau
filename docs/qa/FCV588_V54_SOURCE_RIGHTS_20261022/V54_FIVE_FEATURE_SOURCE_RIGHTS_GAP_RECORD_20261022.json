@@ -1,0 +1,165 @@
+{
+  "purpose": "V54_C_READONLY_SOURCE_RIGHTS_GAP_REVIEW_NO_OWNERSHIP_OR_OEM_APPROVAL",
+  "generatedUtc": "2026-10-22T06:31:48.3539358Z",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "parentV53AuditSHA256": "73f81ef28356091069ea9606b47f6f7da0eeaf051dd2fc978f50acf637ef2dd5",
+  "sourceTraceSHA256": "0068b51cfb9516b1f8ed798d431f927c7bb40ac91b73286bb11666df0a88d332",
+  "implementationLedgerSHA256": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d",
+  "publicEvidenceLedgerSHA256": "ece7e8f78f09b5f074d19e995ebd0bddb9237b44d368d42b0b689acfdebe1a98",
+  "rightsPolicySHA256": "941a6b7a5f3ff15065268cfc1cd6830909bd575ea9b09af13296b573e58c4959",
+  "v47CuratedNotesSHA256": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6",
+  "actualManufacturerSourceBodiesProcessedForV54": 0,
+  "officialPublicHtmlNavigation": [
+    {
+      "url": "https://www.furunousa.com/en/support/FCV588",
+      "basis": "Public product/support HTML lists manuals and shared software history; does not identify installed firmware",
+      "rightsGrant": false
+    },
+    {
+      "url": "https://www.furunousa.com/en/terms_of_use",
+      "basis": "Site terms restrict public/business redistribution of copied material absent written permission; not a license to distribute manuals, images, fonts or firmware",
+      "rightsGrant": false
+    }
+  ],
+  "sourceProvenance": "Local curated notes and verified manufacturer public HTML; no new OEM PDF processing or hardware operation",
+  "features": [
+    {
+      "featureId": "C11",
+      "scope": "FCV_OPERATOR",
+      "manualRefs": [
+        "§1.22 Data tr.24–25"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "currentGuard": "DRAFT_DATA",
+      "sourceGrade": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "implementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "sourceAuditEvidence": [
+        "test/fcv588-public-nav-box-config.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "currentImplementationNote": "NAV training boxes and §1.21 Bearing True/Mag, Wind True/Apparent and Own/NMEA Trip/Temp/Speed Source selectors now have staged, persisted, replayable state; typed Own position/waypoint/speed projects TIME TO GO (SIM EST), with missing destination, stale/invalid position, negative/zero speed or unavailable NMEA => NO DATA. Course is angular-bounded; independent bearing/heading/SOG/pressure/XTE require explicit per-field synthetic provenance and bounded values, without inventing real ship observations. OEM ETA, Data Box and complete source availability remain partial",
+      "missingIndependentEvidence": "Reference-verified OEM NAV Data Boxes, NMEA/Own data provenance, ETA measurement and reviewers; synthetic TIME TO GO is not OEM ETA",
+      "nextPriority": "NEED_INSTALLED_OPTION_DATA_VALIDATION",
+      "firmwareNeeded": true,
+      "licenseDecisionNeeded": true,
+      "claimDecision": "HOLD",
+      "eligibleForRelease": false
+    },
+    {
+      "featureId": "D04",
+      "scope": "FCV_OPERATOR",
+      "manualRefs": [
+        "§2.4 tr.26"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "currentGuard": "DRAFT_FW",
+      "sourceGrade": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "implementationCheckpoint": "NOT_IMPLEMENTED",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "sourceAuditEvidence": [],
+      "currentImplementationNote": "Only English public-reference screen labels are available; language switching/reboot and licensed alternate text are unimplemented (RIGHTS_HOLD/SOURCE_GAP)",
+      "missingIndependentEvidence": "Licensed language strings and physical firmware menu/reboot observation; current alternate languages unimplemented",
+      "nextPriority": "RIGHTS_LANGUAGE_ASSETS_AND_REBOOT",
+      "firmwareNeeded": true,
+      "licenseDecisionNeeded": true,
+      "claimDecision": "HOLD",
+      "eligibleForRelease": false
+    },
+    {
+      "featureId": "D09",
+      "scope": "FCV_OPERATOR",
+      "manualRefs": [
+        "§2.9 tr.29"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "currentGuard": "DRAFT_OPT",
+      "sourceGrade": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "implementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "sourceAuditEvidence": [
+        "test/fcv588-public-system.test.mjs",
+        "test/fcv588-public-diagnostics.test.mjs"
+      ],
+      "currentImplementationNote": "Optional Tankenmaru is SOURCE_GAP/HOLD by default on unknown hardware. An explicitly enabled D15 virtual option permits On/Off and a read-only §2.9 reference panel for Output Off, Pic. Sync Yes and Sub Clutter 4, documented as manual defaults only. Virtual On suppresses NMEA setup in both System and Installation, and Off restores it; revocation restores MARK/NMEA. No editable OEM submenu/range, output, RF transport or partner display; real hardware/firmware behavior remains unimplemented",
+      "missingIndependentEvidence": "Documented installed Tankenmaru option, actual hardware settings/output and partner display; no RF or actual interface assumed",
+      "nextPriority": "OPTION_HARDWARE_SOURCE_GAP",
+      "firmwareNeeded": true,
+      "licenseDecisionNeeded": true,
+      "claimDecision": "HOLD",
+      "eligibleForRelease": false
+    },
+    {
+      "featureId": "D14",
+      "scope": "FCV_OPERATOR",
+      "manualRefs": [
+        "Menu System/NMEA, phần giao tiếp"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001"
+      ],
+      "currentGuard": "DRAFT_DATA",
+      "sourceGrade": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "implementationCheckpoint": "MENU_ONLY_PARTIAL",
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "sourceAuditEvidence": [
+        "test/fcv588-public-receiver-status.test.mjs",
+        "test/fcv588-public-data-source.test.mjs"
+      ],
+      "currentImplementationNote": "NMEA physical port remains Off; read-only status modal projects D15 synthetic fixture missing/fresh/stale with hemisphere-safe coordinates and rejects impossible/out-of-range fixes. Own Trip/Speed/Temperature availability requires a valid fresh typed synthetic position; negative Own speed and NMEA-selected speed cannot leak from internal sample, and Tankenmaru On suppresses receiver data. No real IEC/NMEA electrical port or vessel transport exists.",
+      "missingIndependentEvidence": "Independent real-port and NMEA sentence source evidence, installed device firmware/port setup and qualified safety review; virtual ownship fixture not hardware",
+      "nextPriority": "PHYSICAL_IEC_NMEA_SIGNAL_ORACLE",
+      "firmwareNeeded": true,
+      "licenseDecisionNeeded": true,
+      "claimDecision": "HOLD",
+      "eligibleForRelease": false
+    },
+    {
+      "featureId": "B07",
+      "scope": "FCV_OPERATOR",
+      "manualRefs": [
+        "§1.22 Sounder, software history"
+      ],
+      "publicSourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "currentGuard": "DRAFT_FW",
+      "sourceGrade": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
+      "rightsDecision": "CURATED_NOTES_ONLY",
+      "implementationCheckpoint": "OPERABLE_SYNTHETIC_SUBSET",
+      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
+      "sourceAuditEvidence": [
+        "test/fcv588-public-display.test.mjs",
+        "test/fcv588-public-advanced.test.mjs"
+      ],
+      "currentImplementationNote": "White Marker OEM §1.22 uses an echo-color bar, Up/Down and Off. Current Off/White/Gray choices are a simplified training preview: White/Gray are NOT verified OEM selection values. FURUNO v2.01 history changed White Marker settings, while actual installed firmware and colorimetry remain UNKNOWN; this is disclosed only in D15 outside LCD. Claim remains HOLD.",
+      "missingIndependentEvidence": "Installed unit firmware version and source-backed color-bar/White Marker menu enum/choices; current Off/White/Gray are training preview only",
+      "nextPriority": "FIRMWARE_SPECIFIC_WHITE_MARKER_ENUM",
+      "firmwareNeeded": true,
+      "licenseDecisionNeeded": true,
+      "claimDecision": "HOLD",
+      "eligibleForRelease": false
+    }
+  ],
+  "unavailableIndependentSourceOrRightsEvidence": 5,
+  "actualInstalledFirmware": "UNKNOWN",
+  "reviewerSignoff": "NOT_OBTAINED",
+  "approvedRightsForOemMedia": false,
+  "publicClaimsHold": 65,
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "FCV588_P23_BZ_MANUAL_SOURCE_RED_V1",
+  "scope": "ISOLATED_STAGING_NO_CANONICAL_CHANGE",
+  "manual": "OME-23890-E §1.4.3 PDF page12 / printed 4",
+  "sourcePreimageSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+    "test/fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "58ec6560ed1bcde72f864ae90630337adb597e1e9fad5bf837ab9121f3cd724f"
+  },
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p23-bz-lower-20261117",
+  "stageTestSHA256": "dc0b797a081002923042d3e2104561479164a28f7b65b7bf78f39165d31fbcc9",
+  "exitCode": 1,
+  "stdout": "TAP version 13\n# Subtest: P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\nnot ok 1 - P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\n  ---\n  duration_ms: 6.8737\n  type: 'test'\n  location: 'C:\\\\Work\\\\MoPhongMayTrenTau\\\\staging\\\\fcv588-p23-bz-lower-20261117\\\\test\\\\fcv588-p23-bottom-zoom-manual.test.mjs:15:1'\n  failureType: 'testCodeFailure'\n  error: 'BZ bottom must be in lower portion, got fraction 0.5'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: '=='\n  stack: |-\n    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-p23-bz-lower-20261117/test/fcv588-p23-bottom-zoom-manual.test.mjs:21:11)\n    Test.runInAsyncScope (node:async_hooks:214:14)\n    Test.run (node:internal/test_runner/test:1047:25)\n    Test.start (node:internal/test_runner/test:944:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)\n  ...\n# Subtest: P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\nok 2 - P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\n  ---\n  duration_ms: 2.177\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 1\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 563.7068\n",
+  "stderr": "",
+  "observedOldBottomFraction": 0.5,
+  "expectedManualRelation": "bottomFraction > 0.5 and <=1",
+  "canonicalMutated": false
+}

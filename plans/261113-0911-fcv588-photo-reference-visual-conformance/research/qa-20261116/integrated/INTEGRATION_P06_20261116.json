@@ -1,0 +1,13 @@
+{
+  "status": "P05_P06_COMBINED_IN_ISOLATED_STAGE_ONLY",
+  "canonicalApplied": false,
+  "parentP04Final": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+  "p05StageStylesSHA256": "a82ffe6b0fecd9cc356b888987db778c36c2498cb55381ca20a2509404fe460e",
+  "p06StageStylesSHA256": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c",
+  "mergedStageArtifactsSHA256": {
+    "web/styles.css": "591448a385d32c58bdc4ebdb5f976c2b1c812e298ae8665c21a37a4e760ba76f",
+    "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+    "test/fcv588-device-focus.test.mjs": "0082921e9167771c0c776664a6313d744ac3cdffd8869ae274fc12ed9e69778d",
+    "test/fcv588-photo-face-geometry.test.mjs": "d16145b935f0d1122dccd3a81ff75dcf7bb082ddabe53db25981bcd9e5f59adc"
+  }
+}

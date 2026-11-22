@@ -1,0 +1,361 @@
+{
+  "schema": "fcv588-p06-faceplate-stage-browser-v1",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p06face-20261116",
+  "runId": "20261116T073057-f105d0f9",
+  "testOwnedPort": 4193,
+  "overallStatus": "FAILED",
+  "sourceManifestBefore": {
+    "web/app.mjs": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+    "web/fcv588-echo-rasterizer.mjs": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+    "web/lcd-presentation.mjs": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c",
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+    "src/devices/fcv588/menu-atlas.mjs": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+  },
+  "sourceManifestAfter": {
+    "web/app.mjs": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+    "web/fcv588-echo-rasterizer.mjs": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+    "web/lcd-instructor-meta.mjs": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+    "web/lcd-presentation.mjs": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c",
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+    "src/devices/fcv588/menu-atlas.mjs": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+  },
+  "sourceStable": true,
+  "photoDeny": [
+    {
+      "name": "giaoDien.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "lf.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "hf.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "dual.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "zoom.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "zoom2.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "nav1.jpg",
+      "statusCode": 404
+    },
+    {
+      "name": "nav2.jpg",
+      "statusCode": 404
+    }
+  ],
+  "cases": [
+    {
+      "name": "20261116T073057-f105d0f9-375x812-focus.png",
+      "viewport": {
+        "w": 375,
+        "sw": 375
+      },
+      "status": "PASS",
+      "focusChecked": false,
+      "focusControlVisible": false,
+      "trainerOpacity": {
+        "before": "1",
+        "checked": "1",
+        "focused": "1"
+      },
+      "d15Tabs": 5,
+      "sourceBodies": 35,
+      "loaded": [
+        {
+          "path": "web/styles.css",
+          "status": 200,
+          "bodySHA256": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c",
+          "sourceSHA256": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c"
+        },
+        {
+          "path": "web/app.mjs",
+          "status": 200,
+          "bodySHA256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+          "sourceSHA256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c"
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "status": 200,
+          "bodySHA256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+          "sourceSHA256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+        },
+        {
+          "path": "src/core/session.mjs",
+          "status": 200,
+          "bodySHA256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSHA256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "status": 200,
+          "bodySHA256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSHA256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "status": 200,
+          "bodySHA256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSHA256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "status": 200,
+          "bodySHA256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSHA256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed"
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "status": 200,
+          "bodySHA256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSHA256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "status": 200,
+          "bodySHA256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSHA256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "status": 200,
+          "bodySHA256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSHA256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "status": 200,
+          "bodySHA256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+          "sourceSHA256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a"
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "status": 200,
+          "bodySHA256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSHA256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "status": 200,
+          "bodySHA256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSHA256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "status": 200,
+          "bodySHA256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSHA256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "status": 200,
+          "bodySHA256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSHA256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "status": 200,
+          "bodySHA256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSHA256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "status": 200,
+          "bodySHA256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSHA256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "status": 200,
+          "bodySHA256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSHA256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+        },
+        {
+          "path": "src/core/lessons.mjs",
+          "status": 200,
+          "bodySHA256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSHA256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "status": 200,
+          "bodySHA256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+          "sourceSHA256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c"
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "status": 200,
+          "bodySHA256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSHA256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "status": 200,
+          "bodySHA256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSHA256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "status": 200,
+          "bodySHA256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSHA256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "status": 200,
+          "bodySHA256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSHA256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "status": 200,
+          "bodySHA256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSHA256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "status": 200,
+          "bodySHA256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSHA256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800"
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "status": 200,
+          "bodySHA256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSHA256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38"
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "status": 200,
+          "bodySHA256": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+          "sourceSHA256": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70"
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "status": 200,
+          "bodySHA256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSHA256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675"
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "status": 200,
+          "bodySHA256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSHA256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd"
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "status": 200,
+          "bodySHA256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSHA256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07"
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "status": 200,
+          "bodySHA256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSHA256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "status": 200,
+          "bodySHA256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSHA256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "status": 200,
+          "bodySHA256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSHA256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "status": 200,
+          "bodySHA256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSHA256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+        }
+      ],
+      "consoleOrNetworkErrors": [],
+      "screenshot": {
+        "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p06-face\\browser-prime-v4\\20261116T073057-f105d0f9-375x812-focus.png",
+        "sha256": "e9d5ae77386f032287c83516ac2ca77909f47b8477cc20d09c875b0fce305a8b",
+        "bytes": 203476
+      }
+    }
+  ],
+  "errors": [
+    "focus CSS does not de-emphasize/recover D15"
+  ],
+  "serverCleanup": "PASS"
+}

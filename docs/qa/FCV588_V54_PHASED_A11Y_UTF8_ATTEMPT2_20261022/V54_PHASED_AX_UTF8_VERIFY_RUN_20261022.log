@@ -1,0 +1,5 @@
+V54_PHASED_DOM PASS_PHASE_SCOPED_DOM_ARIA_NOT_SPEECH
+MUTATIONS live_hold [{'field': 'live', 'phase': 'power-held', 't': 4387, 'text': 'Giữ POWER/BRILL', 'count': 1}] live_release [{'field': 'live', 'phase': 'power-released', 't': 5979.1, 'text': 'Brill — thao tác giảng viên', 'count': 1}]
+HOLD_COUNTDOWN [3.0, 2.75, 2.5, 2.25, 2.0, 1.75, 1.5, 1.25] BRILL_HELP_UNIQUE 7
+ASSERTIONS {"sourceBound37": true, "realTrustedPointerEdges": true, "ariaStructure": true, "oneHoldTitleTransition": true, "oneReleaseTitleTransition": true, "holdCountdownObserved": true, "brillVisualTimerObserved": true, "noRepeatedHoldSpokenTextOnUITicks": true, "noRepeatedReleaseSpokenTextOnUITicks": true, "noExternalRequests": true, "noBrowserExceptions": true, "noUnintendedShutdown": true, "noWindowBlurObserved": true}
+RAW_SHA256 b91f2264223923085ae7ac2f538614ae61af0ba2ec5e323c55e8883bdd9e89ea ASSESS_SHA256 259197b9fecf7a61f01ee877d30c15c6db4904233b5f64396477098684afbe23

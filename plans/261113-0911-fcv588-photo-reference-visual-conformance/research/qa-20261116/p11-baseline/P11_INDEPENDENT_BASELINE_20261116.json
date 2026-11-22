@@ -1,0 +1,106 @@
+{
+  "schema": "fcv588-p11-independent-baseline-v1",
+  "createdAt": "2026-11-16T15:52:00+07:00",
+  "status": "PASS_INDEPENDENT_BASELINE_READBACK_NATIVE_UI_NOT_RUN",
+  "scope": "READ_ONLY_BASELINE_RECHECK_NO_NODE_NO_BROWSER_NO_DESKTOP_ACTION",
+  "p10": {
+    "final": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-blur-oracle/P10_NATIVE_BLUR_ORACLE_FINAL_20261116.json",
+      "sha256": "ade2e5904bd6871a597c32d745a7c5bced416f65d5329e218447236676fbea28"
+    },
+    "postreceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-blur-oracle/P10_NATIVE_BLUR_ORACLE_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "935a9af7e117f48306181ca6d35aa27362cfe45ea47eb4803c19a43ce8bab7e2"
+    },
+    "validator": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-blur-oracle/p10_validate_native_blur_evidence.py",
+      "sha256": "4a8e577064d171b5bc8b0e99b513a79f3883f807ddfa84797da442b20abe2a99"
+    },
+    "nativeBlurRefocus": "NOT_RUN",
+    "nativeD15Keyboard": "NOT_RUN_BY_P10"
+  },
+  "p07Runtime": {
+    "finalIntegrityPath": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+    "finalIntegritySHA256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726",
+    "postreceiptPath": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_INDEPENDENT_POSTRECEIPT_20261116.json",
+    "postreceiptSHA256": "22fc21b744ebedbd5ac4a5998411c3e01f665697fa7fbb2a3726998909775ea6",
+    "manifestEntries": 39,
+    "liveMatchesSealed": "39/39",
+    "aggregateSHA256": "f8e436396874b49c47f39b37a7d51a62f372e57d20cd6b8b30a11de713ee3786",
+    "runtimeEditedByP11": false
+  },
+  "originalReferencePhotos": {
+    "count": 8,
+    "classification": "REFERENCE_ONLY",
+    "allHashesRechecked": true,
+    "rows": [
+      {"name":"dual.jpg","sha256":"4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b"},
+      {"name":"giaoDien.jpg","sha256":"e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c"},
+      {"name":"hf.jpg","sha256":"7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9"},
+      {"name":"lf.jpg","sha256":"c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef"},
+      {"name":"nav1.jpg","sha256":"b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e"},
+      {"name":"nav2.jpg","sha256":"9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6"},
+      {"name":"zoom.jpg","sha256":"ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52"},
+      {"name":"zoom2.jpg","sha256":"41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99"}
+    ],
+    "copiedOrModifiedByP11": false,
+    "rightsChanged": false
+  },
+  "portsAndProcesses": {
+    "userServer": {
+      "port": 4173,
+      "listen": true,
+      "localAddress": "127.0.0.1",
+      "pid": 1204,
+      "process": "node",
+      "operationByP11": "NONE"
+    },
+    "testPorts": [
+      {"port":4207,"state":"CLOSED"},
+      {"port":4208,"state":"CLOSED"},
+      {"port":4209,"state":"CLOSED"}
+    ]
+  },
+  "nativeFocusCancellationContract": {
+    "sourceBindings": [
+      {"path":"web/hold-input.mjs","sha256":"2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086","finding":"active POWER/FUNC hold is finished with cancel on window blur; keyboard focus loss also cancels keyboard hold"},
+      {"path":"web/keyboard-shortcuts.mjs","sha256":"f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb","finding":"keys originating inside .training-panel are not routed as FCV shortcuts"},
+      {"path":"web/instructor-tabs.mjs","sha256":"0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800","finding":"D15 ArrowRight/Left/Home/End owns tab focus and roving tabindex without dispatching simulator events"},
+      {"path":"test/hold-input.test.mjs","sha256":"22387a216648038f06f2174a0621b0058d3696fc1f05ecb2aa1cd0e87ce00bc4","finding":"synthetic fixture covers window blur down->cancel and no stranded held key"},
+      {"path":"test/fcv588-device-focus.test.mjs","sha256":"cfc5aff3ee1f835cceb2c91ff37dcd04f8097674acf2bf3803af398623856250","finding":"static contract keeps D15 accessible and outside replay/model state"}
+    ],
+    "independentInterpretation": [
+      "Current source is ready for a real OS blur/refocus proof, but source/tests alone do not prove native Windows provenance.",
+      "Synthetic EventTarget blur fixtures must not be promoted to native OS focus verification.",
+      "D15 keyboard ownership is source-grounded; actual trusted native key events remain a separate UI-run concern."
+    ]
+  },
+  "checksNotRun": [
+    "Node test matrix",
+    "Chrome browser matrix",
+    "real OS window blur/refocus",
+    "native D15 keyboard UI sequence",
+    "Narrator/NVDA spoken output",
+    "forced-colors/high-contrast",
+    "hardware/firmware validation"
+  ],
+  "holds": {
+    "phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemFidelityPercentClaim": null
+  },
+  "operations": {
+    "runtimeEdited": false,
+    "testsExecuted": false,
+    "browserStarted": false,
+    "desktopOrWindowControlled": false,
+    "serverOrPortChanged": false,
+    "windowsSettingsChanged": false,
+    "networkUsed": false,
+    "reportWriteOnce": true
+  }
+}

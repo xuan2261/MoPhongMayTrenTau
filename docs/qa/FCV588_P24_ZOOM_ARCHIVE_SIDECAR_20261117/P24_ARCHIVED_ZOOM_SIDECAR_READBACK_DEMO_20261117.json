@@ -1,0 +1,24 @@
+{
+  "schema": "FCV588_P24_ARCHIVED_ZOOM_SOURCE_PAIR_DEMO_V1",
+  "status": "PASS_ARCHIVED_SIDECAR_READBACK_NOT_OEM_PIXELS",
+  "originalFrozenPreP23SHA256": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d",
+  "originalFrozenPreP23Unmodified": true,
+  "oldProfileRevision": "F1-public-reference-22",
+  "oldContract": "P04_HISTORIC",
+  "oldSessionHash": "f0-fnv1a32-a429fc78",
+  "newProfileRevision": "F1-public-reference-22",
+  "newContract": "P23_LOWER_BOTTOM",
+  "newSessionHash": "f0-fnv1a32-1ed9e57e",
+  "newBZStartDepthM": 42.5,
+  "newBZBottomFraction": 0.75,
+  "saveFilesSHA256": {
+    "P24_FROZEN_PREP23_PROFILE22_LEGACY_SIDECAR_20261117.json": "1bf59a3428516ff820143a7d7e28b2159f24276a14660e6178cd7601c50dcd63",
+    "P24_SAMPLE_CURRENT_PROFILE22_BZ_ENVELOPE_20261117.json": "6124b4f896abbce80c6423253b264a88c07520cb1a57578c60383c2fbf8b84bd",
+    "P24_SAMPLE_CURRENT_PROFILE22_BZ_SIDECAR_20261117.json": "adaae5612562512bc7ca1fa325cd177ddff87eb43ca93839b27f433181099226"
+  },
+  "coreReplayEnvelopeVersion": 7,
+  "sidecarVersion": 1,
+  "authentication": "NONE_FINGERPRINT_IS_DRIFT_DETECTION_ONLY",
+  "uiArchiveLoader": "NOT_IMPLEMENTED",
+  "releaseApproval": "HOLD"
+}

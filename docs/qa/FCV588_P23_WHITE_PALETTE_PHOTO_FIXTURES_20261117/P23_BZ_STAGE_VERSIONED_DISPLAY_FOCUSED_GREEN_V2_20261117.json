@@ -1,0 +1,29 @@
+{
+  "schema": "FCV588_P23_BZ_VERSIONED_FOCUSED_GREEN_V2",
+  "canonicalUnchanged": true,
+  "stageSourceSHA256": {
+    "src\\devices\\fcv588\\echo-projection.mjs": "060feab89b38e13a3832af694f22752d26457b9d810400c4d887908fbe122253",
+    "web\\app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "test\\fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955",
+    "test\\fcv588-p04-bottom-provenance.test.mjs": "09d1269de69a1b6beb251720d9cd53625cbfe753a5604b827143cdb42c4889e9",
+    "test\\fcv588-p23-bottom-zoom-manual.test.mjs": "8c3b91c6914fded1788682800a55631f7627148d8b7c4b214e3e3e1c11be4f29"
+  },
+  "checks": {
+    "p23_manual": {
+      "exitCode": 0,
+      "tail": "TAP version 13\n# Subtest: P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\nok 1 - P23 Bottom Zoom keeps typed bottom below the midpoint, both frequencies\n  ---\n  duration_ms: 6.5459\n  type: 'test'\n  ...\n# Subtest: P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\nok 2 - P23 Marker Zoom remains VRM-centered; BL remains bottom-edge\n  ---\n  duration_ms: 1.2707\n  type: 'test'\n  ...\n# Subtest: P23 historic P04 display projection remains centered by default\nok 3 - P23 historic P04 display projection remains centered by default\n  ---\n  duration_ms: 0.5753\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 134.5937\n"
+    },
+    "p04_photo": {
+      "exitCode": 0,
+      "tail": "xis is relative 5-to-0 while normal panel remains absolute\n  ---\n  duration_ms: 3.037\n  type: 'test'\n  ...\n# Subtest: P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band\nok 2 - P04 Bottom Lock flattens different historical synthetic bottoms without promoting a mid-water band\n  ---\n  duration_ms: 5.3897\n  type: 'test'\n  ...\n# Subtest: P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract\nok 3 - P04 Bottom Zoom and Marker Zoom retain the pre-P04 absolute centered window contract\n  ---\n  duration_ms: 1.843\n  type: 'test'\n  ...\n# Subtest: P04 DUAL depth readout is anchored on the real split divider for all supported window ratios\nok 4 - P04 DUAL depth readout is anchored on the real split divider for all supported window ratios\n  ---\n  duration_ms: 0.6405\n  type: 'test'\n  ...\n# Subtest: P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy\nok 5 - P04 NAV row plan preserves source boxes but adds photo-grounded separators and value hierarchy\n  ---\n  duration_ms: 1.0193\n  type: 'test'\n  ...\n# Subtest: P04 web renderer consumes presentation plans and removes the invented zoom legend\nok 6 - P04 web renderer consumes presentation plans and removes the invented zoom legend\n  ---\n  duration_ms: 9.2993\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 159.194\n"
+    },
+    "p04_hash_and_provenance": {
+      "exitCode": 0,
+      "tail": "hored historical seabed is flattened from per-column source depth\nok 3 - P04 two-column authored historical seabed is flattened from per-column source depth\n  ---\n  duration_ms: 2.1238\n  type: 'test'\n  ...\n# Subtest: P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection\nok 4 - P04 BZ/MZ remain byte-identical to the sealed P05/P06 canonical projection\n  ---\n  duration_ms: 12.2782\n  type: 'test'\n  ...\n# Subtest: P04 BL picture Stop and slow history remain deterministic after source-authored flattening\nok 5 - P04 BL picture Stop and slow history remain deterministic after source-authored flattening\n  ---\n  duration_ms: 44.2305\n  type: 'test'\n  ...\n# Subtest: P04 BL rasterizer never reconstructs a seabed tail from global depth alone\nok 6 - P04 BL rasterizer never reconstructs a seabed tail from global depth alone\n  ---\n  duration_ms: 9.3085\n  type: 'test'\n  ...\n# Subtest: P04 companion provenance stays outside observation, replay and profile21 contracts\nok 7 - P04 companion provenance stays outside observation, replay and profile21 contracts\n  ---\n  duration_ms: 7.1077\n  type: 'test'\n  ...\n# Subtest: P04 runtime wires companion metadata beside, not into, the cached observation\nok 8 - P04 runtime wires companion metadata beside, not into, the cached observation\n  ---\n  duration_ms: 11.0511\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 264.8303\n"
+    }
+  },
+  "P04OriginalHistoricalHashTestRetained": true,
+  "manual": "OME-23890-E §1.4.3 PDF p12",
+  "activeContract": "P23_LOWER_BOTTOM",
+  "defaultHistoricContract": "P04_HISTORIC"
+}

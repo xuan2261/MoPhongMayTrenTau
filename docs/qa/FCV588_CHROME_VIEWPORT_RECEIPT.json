@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "collectedAtUtc": "2026-10-14T12:25:34.763501+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "engine": "actual Google Chrome via Python Playwright",
+  "chromeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v10_1366x768.png"
+      ],
+      "requestsCaptured": 56,
+      "postReloadRequestsCaptured": 28,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 9
+    },
+    {
+      "viewport": "1920x1080",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v10_1920x1080.png"
+      ],
+      "requestsCaptured": 56,
+      "postReloadRequestsCaptured": 28,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 9
+    }
+  ],
+  "sourceRights": "ORIGINAL_CANVAS_ONLY",
+  "limitations": [
+    "Headless Chrome viewport is exact; not physical monitor pixel geometry",
+    "No manufacturer asset or installed firmware conformance approval",
+    "Pointercancel/lostpointercapture must be exercised separately"
+  ],
+  "status": "PASS_OBSERVED_VIEWPORTS"
+}

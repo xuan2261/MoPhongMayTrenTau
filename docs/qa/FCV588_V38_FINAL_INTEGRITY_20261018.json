@@ -1,0 +1,149 @@
+{
+  "collectedAtUtc": "2026-10-18T12:10:22.826622+00:00",
+  "scope": "FCV588_PUBLIC_REFERENCE_V38_TEST_ONLY",
+  "status": "CANONICAL_V38_TEST_ONLY_QA_RECONCILED_PHASE6_HOLD",
+  "supervisor": "USER_APPROVED_GPT6_SELF_REVIEW",
+  "v36BaselineReceiptSha256": "d7d7c3eba806317d6690f2d4cb91cc15eed6c705b16ab1519ed4621f168ebafe",
+  "v37BaselineReceiptSha256": "e28f00a94840fecbd43a65967676638201a8729601910203362631efdb7139b1",
+  "runtimeCanonicalShaMatches": 37,
+  "runtimeStageShaMatches": 37,
+  "coreSrcUnmodified": 23,
+  "productSourceModified": false,
+  "newCanonicalTestFile": "test/fcv588-v38-waypoint-source-edge.test.mjs",
+  "newTestSha256": "4a49a44c667c951f9def14553fadb6ddaa9d2da629f5f25d42cf2a8d338dea4b",
+  "stagingTargetedPass": 7,
+  "deliberateStageMutationFailed": 1,
+  "stageRestoredTargetedPass": 7,
+  "canonicalTargetedNodePass": 7,
+  "canonicalFullNodePass": 462,
+  "canonicalPythonPass": 13,
+  "canonicalPostdocumentNodePass": 462,
+  "browserHarnessAttempt1": "FAILED_TEST_ORDER_PRESERVED",
+  "browserHarnessAttempt2": "PASS_EXACT_PLAYWRIGHT_VIEWPORTS_ONLY",
+  "chromeExactViewports": [
+    "1366x768",
+    "1920x1080"
+  ],
+  "chromeAssertionsPassed": 34,
+  "chromeActualResponsesShaVerified": 70,
+  "chromeServedAssetsShaVerified": 37,
+  "chromeScreenshotsShaVerified": 6,
+  "chromeScreenshots": [
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1366x768-initial.png",
+      "sha256": "b684d82193c67686d012c6bfc6816b071c5003ed522169a7ed22d3cc9f0bc628"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1366x768-running.png",
+      "sha256": "ce8dc8ed80a30894e08d7f536c7f4ba5230cb359992a71c168a9c167b0be909f"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1366x768-powered-off.png",
+      "sha256": "4d6665809b54d34b5a4233d456ba0fd78a378e906dd0a58a8ef608b8c347ca0a"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1920x1080-initial.png",
+      "sha256": "e704f21157677e54a622bdb3386c51d7497ff85dc5aa749fd06d1823442edcb9"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1920x1080-running.png",
+      "sha256": "b43e9121157d2c26ee8c96157ce1cd578d79edda86e2d3acbfe3ddc4d2def638"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/screenshots/v38-attempt2-1920x1080-powered-off.png",
+      "sha256": "68449bfb8aef39bd0cac25a38ce6bf1fcb4a80a7172b43fac83f3b42ec4cc2d9"
+    }
+  ],
+  "chromeSuccessReceiptSha256": "d0d009c4f4048a9a45fde64ad21b54853d0c21226e0312f7fa2d1f341d1ca119",
+  "v36HistoricalScreenshotsShaRechecked": 121,
+  "desktopActualViewport": "1912x970",
+  "desktopWindowResize": "TOOL_BLOCKED_BEFORE_EXECUTION",
+  "desktopExactViewports": "NOT_RUN",
+  "narratorNvdaSpeech": "NOT_RUN",
+  "osWindowBlurHold": "NOT_RUN",
+  "sourceRights": "HOLD",
+  "publicClaimsHold": 65,
+  "acceptanceChecklist": {
+    "checked": 14,
+    "total": 50
+  },
+  "tasksAccepted": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "temporaryQaPortsClosed": true,
+  "testLogDigests": [
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/V38_WAYPOINT_SOURCE_FIRST_20261018.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "sha256": "00eb3ffff78f88abaff32acb12d498bb5224364c54b5d74c48624b9c439afb1f"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/V38_DESTINATION_PROTECTION_MUTANT_RED_20261018.log",
+      "tests": 7,
+      "passed": 6,
+      "failed": 1,
+      "sha256": "8090e4b373037769eb4706798b3f0d07564d61ef6639696adc642be900d0e786"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/V38_WAYPOINT_SOURCE_RESTORED_20261018.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "sha256": "b5cc559016f84b6ac1ff8ead0269d951fcb28416056bd007d4e20ca10a2bd116"
+    },
+    {
+      "path": "docs/qa/FCV588_V38_CANONICAL_TARGETED_20261018.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "sha256": "b1c6eda6c51b70a1762c098296a4d0e500417d99e5726a2d6eef7562fa66cfb6"
+    },
+    {
+      "path": "docs/qa/FCV588_V38_CANONICAL_FULL_NODE_20261018.log",
+      "tests": 462,
+      "passed": 462,
+      "failed": 0,
+      "sha256": "84798ba39aa0b264f4d5ab75b518b8d192c28b7a302a0e4591138276f47d551d"
+    },
+    {
+      "path": "docs/qa/FCV588_V38_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "tests": 462,
+      "passed": 462,
+      "failed": 0,
+      "sha256": "5929b8a440e157de6e87bbc268f3b797511e5dfd7a48c2679ca97b17d5339036"
+    }
+  ],
+  "pythonLogSha256": "665b67025e12656e2f8ccf603021665394037f0464700bb7b493bc13b29989a4",
+  "documentationHashes": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "8f4b2ddb0db3db9f97ad17f8001fc5ee6c58c0cc68421dde453c38b3f959cbb9"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "de663318f292c75a70fe82e76af8ab4037c68d07bdbd50aaac8f0ac13bb28c45"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v38-integrated-waypoint-source-qa.md",
+      "sha256": "5369933477f47550bc855d5c05b682f04b381f52df4ab666a2196faee383d99a"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v38-gpt6-test-only-go.md",
+      "sha256": "929e2679cf2dd5573c52a8fb334f95ca22e23f9497acd4db01bed4f1b2afa4bf"
+    },
+    {
+      "path": "docs/qa/FCV588_V38_BROWSER_AND_A11Y_20261018.md",
+      "sha256": "0a1f654c0ac28688778e78f0a8c5000e864fb0d3f81981639f5d8ae1877abd8e"
+    },
+    {
+      "path": "staging/fcv588-v38-waypoints-source-browser/evidence/V38_CHROME_ATTEMPT1_GPT6_GO_20261018.md",
+      "sha256": "4dee1a775a9edd2bf20e8f7376862cacd0049afe3096f44ff3b5c435e938f786"
+    }
+  ],
+  "gitCommitsCreated": false
+}

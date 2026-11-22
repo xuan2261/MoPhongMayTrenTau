@@ -1,0 +1,280 @@
+TAP version 13
+# Subtest: Range shows current and pending mode/preset without persisting a phantom control value
+ok 1 - Range shows current and pending mode/preset without persisting a phantom control value
+  ---
+  duration_ms: 12.2508
+  type: 'test'
+  ...
+# Subtest: Range formatting reads existing configured meters and current depth unit without changing storage
+ok 2 - Range formatting reads existing configured meters and current depth unit without changing storage
+  ---
+  duration_ms: 2.582
+  type: 'test'
+  ...
+# Subtest: Gain exposes the pending mode and offset, while committed control values remain separate
+ok 3 - Gain exposes the pending mode and offset, while committed control values remain separate
+  ---
+  duration_ms: 3.8507
+  type: 'test'
+  ...
+# Subtest: BRILL selected level and existing idle timer are projected without a second clock
+ok 4 - BRILL selected level and existing idle timer are projected without a second clock
+  ---
+  duration_ms: 2.9475
+  type: 'test'
+  ...
+# Subtest: MODE displays all existing rotary positions and never advertises ENTER as commit
+ok 5 - MODE displays all existing rotary positions and never advertises ENTER as commit
+  ---
+  duration_ms: 1.8912
+  type: 'test'
+  ...
+# Subtest: basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+ok 6 - basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+  ---
+  duration_ms: 1.6664
+  type: 'test'
+  ...
+# Subtest: basic control renderer uses original inert DOM and has no independent state transitions
+ok 7 - basic control renderer uses original inert DOM and has no independent state transitions
+  ---
+  duration_ms: 9.4629
+  type: 'test'
+  ...
+# Subtest: B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+ok 8 - B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+  ---
+  duration_ms: 3.6858
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 9 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 11.7112
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 10 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 0.6975
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 11 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 10.958
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 12 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 10.5311
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 13 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.3845
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 14 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 11.6755
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 15 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 9.1653
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 16 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 0.5862
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 17 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 14.6181
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 18 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 4.5299
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 19 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 14.4404
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 20 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.2958
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 21 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 13.7141
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 22 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 15.2936
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 23 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 9.8255
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 24 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 5.8031
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 25 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.3877
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 26 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.564
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 27 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 6.295
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 28 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.2843
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 29 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 6.5921
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 30 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.2407
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 31 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 11.3904
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 32 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 22.1315
+  type: 'test'
+  ...
+# Subtest: Brill draft drives visible luminance before commit without mutating canonical state
+ok 33 - Brill draft drives visible luminance before commit without mutating canonical state
+  ---
+  duration_ms: 14.6947
+  type: 'test'
+  ...
+# Subtest: cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+ok 34 - cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+  ---
+  duration_ms: 2.7642
+  type: 'test'
+  ...
+# Subtest: LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+ok 35 - LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+  ---
+  duration_ms: 2.4662
+  type: 'test'
+  ...
+# Subtest: main menu projects five named categories and exactly the operator rows, without help-as-item
+ok 36 - main menu projects five named categories and exactly the operator rows, without help-as-item
+  ---
+  duration_ms: 4.214
+  type: 'test'
+  ...
+# Subtest: choice preview tracks real staged value and cancel restores committed value
+ok 37 - choice preview tracks real staged value and cancel restores committed value
+  ---
+  duration_ms: 1.9485
+  type: 'test'
+  ...
+# Subtest: large option lists are bounded while preserving the active value and original ordering
+ok 38 - large option lists are bounded while preserving the active value and original ordering
+  ---
+  duration_ms: 1.6397
+  type: 'test'
+  ...
+# Subtest: source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+ok 39 - source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+  ---
+  duration_ms: 3.0036
+  type: 'test'
+  ...
+# Subtest: V46 FURUNO v2.01 literal Display > Colors excludes instructor suffix on OEM-facing menu
+ok 40 - V46 FURUNO v2.01 literal Display > Colors excludes instructor suffix on OEM-facing menu
+  ---
+  duration_ms: 4.0412
+  type: 'test'
+  ...
+# Subtest: V46 Colors choice window and operator LCD label must not print SIM or training provenance
+ok 41 - V46 Colors choice window and operator LCD label must not print SIM or training provenance
+  ---
+  duration_ms: 1.7481
+  type: 'test'
+  ...
+# Subtest: V46 D15 outside the device explicitly discloses Colors preview and unknown firmware
+ok 42 - V46 D15 outside the device explicitly discloses Colors preview and unknown firmware
+  ---
+  duration_ms: 0.9114
+  type: 'test'
+  ...
+# Subtest: V46 System R&D Echo history is research evidence, not an invented exposed OEM menu
+ok 43 - V46 System R&D Echo history is research evidence, not an invented exposed OEM menu
+  ---
+  duration_ms: 1.235
+  type: 'test'
+  ...
+# Subtest: V46 original palette remains synthetic only, firmware/profile/replay unaffected
+ok 44 - V46 original palette remains synthetic only, firmware/profile/replay unaffected
+  ---
+  duration_ms: 3.1649
+  type: 'test'
+  ...
+# Subtest: V46 public menu atlas metadata mirrors OEM literal and retains firmware unknown grade
+ok 45 - V46 public menu atlas metadata mirrors OEM literal and retains firmware unknown grade
+  ---
+  duration_ms: 9.2904
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 357.8319

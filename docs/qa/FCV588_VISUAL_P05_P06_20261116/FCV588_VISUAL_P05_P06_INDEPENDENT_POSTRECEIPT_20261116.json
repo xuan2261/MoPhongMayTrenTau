@@ -1,0 +1,16 @@
+{
+  "schema": "fcv588-p05-p06-independent-postreceipt-v1",
+  "timestampUtc": "2026-11-16T00:43:31.859183+00:00",
+  "status": "PASS_BOUNDED_VISUAL_SOFTWARE_INTEGRITY_ONLY",
+  "finalIntegritySHA256": "ecdfb0bc680f35a6935bb11a4bbadd1f95e3441069b7074a0b68ab22506b4ee4",
+  "independentlyRereadRuntime": 39,
+  "independentlyRereadStageCanonicalScreenshots": 12,
+  "independentlyRereadOriginalPhotos": 8,
+  "independentlyRereadNewTests": 4,
+  "canonicalNode": 551,
+  "canonicalPython": 13,
+  "canonicalChromeCases": 6,
+  "stageChromeCases": 6,
+  "P04NearBottomRisk": "MEDIUM_NOT_FIXED_HOLD",
+  "rightsHardwareRelease": "HOLD"
+}

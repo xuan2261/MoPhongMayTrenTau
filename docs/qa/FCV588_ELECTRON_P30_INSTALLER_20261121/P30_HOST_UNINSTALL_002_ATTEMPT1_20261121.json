@@ -1,0 +1,14 @@
+{
+  "schema": "P30_HOST_REAL_NSIS_UNINSTALL_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "uninstallerSHA256": "f0fa28d05c65b4542d56bb136fefcb05c981a6f0ee60d35af14cacdf62122a75",
+  "registryEntryGone": true,
+  "appKeyGone": true,
+  "installFolderGone": true,
+  "shortcutGone": true,
+  "defaultUserDataPreserved": true,
+  "appProcessCount": 0,
+  "updaterCachePresent": true,
+  "releaseApproval": "HOLD"
+}

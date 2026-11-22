@@ -1,0 +1,109 @@
+{
+  "schema": "FCV588_P30_ELECTRON_INSTALLER_FINAL_INTEGRITY_V1",
+  "status": "P30_STAGING_INSTALLER_BOUNDED_PASS",
+  "independentReview": "worker-48 GO_BOUNDED; NO_GO_RELEASE",
+  "releaseApproval": "HOLD",
+  "phase6": "OPEN",
+  "claims": "65/65 HOLD",
+  "syntheticOnly": true,
+  "hardwareValidated": false,
+  "firmware": "UNKNOWN",
+  "actualInstallerExecuted": false,
+  "cleanAirgappedVMValidated": false,
+  "installerUpgradeValidated": false,
+  "nativeAccessibilityValidated": false,
+  "p28Runtime54SHAExact": true,
+  "oemReference8SHAExact": true,
+  "shaParents": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e"
+  },
+  "report": {
+    "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/FCV588_P30_ELECTRON_INSTALLER_FINAL_REPORT_20261121.md",
+    "sha256": "a436558e8e4a4fe429a763036cd4356c2b5cc55aac7d3eb5e4ff1e7d34b6abea"
+  },
+  "files": {
+    "installer": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/dist-p30-v2/P30-FCV588-Synthetic-Training-POC-UNRELEASED-0.0.1-win-x64.exe",
+      "sha256": "a09c0dbdf33231ee005beb8960c9ef243ec45415c6f8d1a11514394c4c04c982",
+      "bytes": 121310396
+    },
+    "executable": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/dist-p30-v2/win-unpacked/FCV588-Synthetic-POC.exe",
+      "sha256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "bytes": 249978880
+    },
+    "appAsar": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/dist-p30-v2/win-unpacked/resources/app.asar",
+      "sha256": "dbed2ac3ac0a1a4d5620c29cdf474d95e4dbd33b7040746dc3474010b00fccb0",
+      "bytes": 510112
+    },
+    "buildConfig": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/desktop/p30-builder-v2.config.cjs",
+      "sha256": "8063fe89e8a4f2a845b744d0573aae8838f5827bab555f21daa51fb37ab0245c",
+      "bytes": 2181
+    },
+    "packageJson": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/package.json",
+      "sha256": "b1b285cf32778cce4ce7bde56b550a2ad6e4620ef9b7da7043841ea8f7a8ed26",
+      "bytes": 633
+    },
+    "packageLock": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/package-lock.json",
+      "sha256": "d4c155ee5f1e6dbb489466b8c8702bb597ba9408eada7e8726616db783a810e5",
+      "bytes": 137236
+    },
+    "buildSource": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/desktop/p30-builder.config.cjs",
+      "sha256": "36786e3a227269829bb5aa13da999a681fba9647b00db791dfec079b53f34f54",
+      "bytes": 2177
+    },
+    "auditSource": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/desktop/p30-audit.mjs",
+      "sha256": "8bcce9472d7d77be026f5cc46c7f5bd65d253b1c1d7aa3504e0303a551d9a55a",
+      "bytes": 4078
+    },
+    "profileSource": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/desktop/p30-upgrade-profile.mjs",
+      "sha256": "0ce8ca18c8b02f51171fc84174d921d6cbadbd59206b315ba853a2a0e690779c",
+      "bytes": 4664
+    },
+    "audit": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_V2_ASAR_FUSES_SOURCE_AUDIT_ATTEMPT3_20261121.json",
+      "sha256": "a6c8426f487fd661be51dddd9c33f9b4eee6b615d8702e11aa08eefa419092b1",
+      "bytes": 10122
+    },
+    "settings": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_SETTINGS_TRANSFER_UNIT_FINAL_20261121.txt",
+      "sha256": "ff35d3a2cc42fb78303ffd600434bb2135ff886b88c04cd99a2e56b7067b4f18",
+      "bytes": 560
+    },
+    "replay": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_FOCUSED_P28_NODE_ATTEMPT1_20261121.txt",
+      "sha256": "933949b4c9806cd37101972fc625f566c25fb2978bd0ebb1b7cd1a4ef672da8b",
+      "bytes": 1150
+    },
+    "native": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_V2_NATIVE_PROCESS_SMOKE_V3_20261121.json",
+      "sha256": "46ff75f36bf8f898cf2530445ad2139f12ab747f144a277ef65d544fdf9e2ab1",
+      "bytes": 392
+    },
+    "profile": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_V2_NATIVE_P29_PROFILE_COMPAT_ATTEMPT1_20261121.json",
+      "sha256": "bba52df0922d35ab30d26e13c2f5e7730731f261a255d3aca6798fcd95e32f75",
+      "bytes": 567
+    },
+    "v1Failure": {
+      "relativePath": "docs/qa/FCV588_ELECTRON_P30_INSTALLER_20261121/P30_NATIVE_STDERR_ATTEMPT1.txt",
+      "sha256": "663aa66c834b7bce47f7f9e6054866da1889d1d7667b40d8d52228c1d5f7a082",
+      "bytes": 90
+    },
+    "v1Installer": {
+      "relativePath": "staging/fcv588-electron-installer-p30-20261121/dist-p30/P30-FCV588-Synthetic-Training-POC-UNRELEASED-0.0.1-win-x64.exe",
+      "sha256": "a2c8aa3bdc8e0615d698507604bb2bd7bcadbb350272f6f61218f13e93497a8a",
+      "bytes": 121310349
+    }
+  }
+}

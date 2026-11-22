@@ -1,0 +1,10 @@
+{
+  "schema": "FCV588_P24_SIDECAR_STAGE_FOCUSED_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "testSHA256": "098a558e08f30104e8abc1fcdc8ba6b1a1a565bc0c332a9744985dd4787ca964",
+  "moduleSHA256": "fc11f8151a6333a8c2d5916bd6e6517c02e7eda49092e68b6ebea3b2a6b03431",
+  "tests": 5,
+  "logSHA256": "fe55ceb94ac7c770139ff5154b899cc3d259620a1e2fae28ec0beab2e9ebf084",
+  "errors": []
+}

@@ -1,0 +1,35 @@
+{
+  "status": "APPLY_INTENT_CREATED_NOT_COMPLETION_PROOF",
+  "timestampUtc": "2026-11-16T00:42:00.269332+00:00",
+  "parentFinalSHA256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+  "parentPostreceiptSHA256": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90",
+  "backupSHA256": "555a8cc794f95a74bfe48c4df195e0e4c40759a0ac660d139670bffe67128404",
+  "copyPaths": [
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css",
+    "web/index.html",
+    "test/fcv588-photo-menu-layout.test.mjs",
+    "test/fcv588-photo-menu-actions.test.mjs",
+    "test/fcv588-photo-face-geometry.test.mjs",
+    "test/fcv588-device-focus.test.mjs"
+  ],
+  "preimageRuntimeSHA256": {
+    "web/app.mjs": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+    "web/lcd-presentation.mjs": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+    "web/styles.css": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+    "web/index.html": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b"
+  },
+  "expectedRuntimeSHA256": {
+    "web/app.mjs": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+    "web/lcd-presentation.mjs": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+    "web/styles.css": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+    "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847"
+  },
+  "expectedTestSHA256": {
+    "test/fcv588-photo-menu-layout.test.mjs": "8a3b9dd935b210f97474135d99bc42f282eca8c06f8b5e7a77225953b61ed189",
+    "test/fcv588-photo-menu-actions.test.mjs": "3d87129cb8262d066a7650ce1349d7cac95067bbde863c77761cf61cc44474bc",
+    "test/fcv588-photo-face-geometry.test.mjs": "d16145b935f0d1122dccd3a81ff75dcf7bb082ddabe53db25981bcd9e5f59adc",
+    "test/fcv588-device-focus.test.mjs": "cfc5aff3ee1f835cceb2c91ff37dcd04f8097674acf2bf3803af398623856250"
+  }
+}

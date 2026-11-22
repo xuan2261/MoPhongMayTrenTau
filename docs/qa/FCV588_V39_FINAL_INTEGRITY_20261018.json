@@ -1,0 +1,117 @@
+{
+  "collectedAtUtc": "2026-10-18T12:47:13.192617+00:00",
+  "scope": "FCV588_PUBLIC_REFERENCE_V39_C11_D09_D14_TDD",
+  "status": "CANONICAL_V39_TEST_ONLY_QA_RECONCILED_PHASE6_HOLD",
+  "supervisor": "USER_APPROVED_GPT6_SELF_REVIEW",
+  "canonicalV38ReceiptSHA256": "ac195d29a0d656c0faf652be3c0e321df7eed483ba78d3544206b02eee27b294",
+  "canonicalRuntimeShaMatches": 37,
+  "stagedRuntimeShaMatches": 37,
+  "coreSourceModulesUnchanged": 23,
+  "newCanonicalRuntimeFiles": 0,
+  "newCanonicalTestFile": "test/fcv588-v39-cross-session-negative.test.mjs",
+  "newTestSHA256": "b7f3c81ab44c8d27e72f5f2ea975f36dbadbc11776a9df2f7acf7aac2369dbcd",
+  "stageNewTestsPass": 7,
+  "stagePreviousAndCurrentTestsPass": 18,
+  "canonicalTargetedNodePass": 18,
+  "canonicalFullNodePass": 469,
+  "canonicalPythonPass": 13,
+  "canonicalPostdocumentFullNodePass": 469,
+  "mutationSensitivity": "NOT_EXECUTED_TOOL_BLOCKED_BEFORE_ACTION",
+  "stageCopyFailure": "ORIGINAL_EXIT1_REGEX_ERROR_PRESERVED_SCOPED_GO_RECOVERY",
+  "headlessTabSwitchFocus": "FAIL_INCONCLUSIVE_ENVIRONMENT_PREREQUISITE",
+  "headlessFocusReceiptSHA256": "7ed486844032695e688394cf96859a396b4da3d81f48325992634e3206130433",
+  "actualWindowsOsBlur": "NOT_RUN",
+  "realScreenReaderSpeech": "NOT_RUN",
+  "nativeCoSDesktopExactViewports": "NOT_RUN",
+  "v38HistoricalChromeAssertions": 34,
+  "v38HistoricalChromeResponsesSha": 70,
+  "v38HistoricalImagesShaRechecked": 6,
+  "v36HistoricalImagesShaRechecked": 121,
+  "v39ChromeAssertionPass": 0,
+  "v39NewScreenshots": 0,
+  "manualBrowserPhase6": "OPEN",
+  "oemFirmwareAndRights": "HOLD",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "operatorClaimsHold": 65,
+  "acceptanceChecklist": {
+    "checked": 14,
+    "total": 50
+  },
+  "tasksAccepted": {
+    "accepted": 6,
+    "total": 22
+  },
+  "temporaryQaPortsClosed": true,
+  "historicalFailedV31LogSha256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "nodeLogs": [
+    {
+      "path": "staging/fcv588-v39-options-navigation-import/evidence/V39_C11_D09_D14_FIRST_20261018.log",
+      "sha256": "407424b7ce7708021d56c17b159ee0b66fb9ddb5bcea07d7e34b8c10f082449d",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "path": "staging/fcv588-v39-options-navigation-import/evidence/V39_V37_V38_V39_TARGETED_20261018.log",
+      "sha256": "7ea4d77db83d0b0c8a36bb77dde29d8e9ff4059ae50650b13a393766e008a16e",
+      "tests": 18,
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V39_CANONICAL_TARGETED_20261018.log",
+      "sha256": "24122f620696d51f4796cf6ce78105a19c162f313d5f2d95de7188fec8a99df5",
+      "tests": 18,
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V39_CANONICAL_FULL_NODE_20261018.log",
+      "sha256": "f5f9110ffe9846e75f04c2b0b8bd4b3e458289bf551dce195180e31ecba34cfe",
+      "tests": 469,
+      "passed": 469,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V39_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "sha256": "cec4428449b417fdb2e7038802960b754f36426224aa3b8ba64ecb0031c82f6d",
+      "tests": 469,
+      "passed": 469,
+      "failed": 0
+    }
+  ],
+  "pythonLogSHA256": "92cde19aacc45944bd62fd66f79e7f2945a93b773c28be05a31f832a77f12d8d",
+  "focusFailedLogSHA256": "0f492576abbb2a88bd490a1c2f625b80d65bcf7e7959607e42fdbd74e10cbc17",
+  "documentHashes": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "917bb6379a02a6ecaa06410bdcfc77194e092f3ef401348ebe8547f597dc65fc"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "7b06c33e929b5af8f555c9e1716506f23b548eb7e169dd17bca1db6afbddd55b"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v39-integrated-cross-session-tdd.md",
+      "sha256": "1721d48f30ee9082bcf044d9fdba44219471d57fcaf61a7f953959b9a0ebfd87"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v39-gpt6-gates-go-no-go.md",
+      "sha256": "95a821f9f099859d51a26d54394145a525e06a2a9dd276ff539a2b409882de6c"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v39-furuno-source-rights-recheck.md",
+      "sha256": "58451c13f522feb9ec01aa39e3c3dfe289de3766ab84e230c6a30d5ebc0bf4cc"
+    },
+    {
+      "path": "docs/qa/FCV588_V39_PHASE6_BROWSER_SPEECH_20261018.md",
+      "sha256": "a0be0e98ace9965d2845ead6c33519008ef033fcf64a852d0d93741ed3a50ffa"
+    },
+    {
+      "path": "staging/fcv588-v39-options-navigation-import/evidence/V39_STAGING_PREFLIGHT_STOP_GPT6_GO_20261018.md",
+      "sha256": "298f9b1cfcc7d2119d0b5464c6f868da00316e4a1c0af679606721730de0d76f"
+    }
+  ],
+  "gitCommitted": false
+}

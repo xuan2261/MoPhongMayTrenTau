@@ -1,0 +1,22 @@
+{
+  "schema": "FCV588_P20_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "createdAt": "2026-11-17T03:32:46.4066639Z",
+  "status": "P20_POSTRECEIPT_PASS_NATIVE_UIA_5_5_POWER_OS_BLUR_FAILED",
+  "method": "SEPARATE_POWERSHELL_SHA_AND_NATIVE_RECEIPT_READBACK",
+  "p20FinalSHA256": "32e27b4e7f0d2b961ce35b0b176abe78385f663790563dd75f7a1ccdc7bc2759",
+  "p20ReportSHA256": "cf66b7c11f91e52e7f23b52b6826390a196e146319a9b3be02f9ca6267c524a1",
+  "p20UIAUnicodeReceiptSHA256": "93c37a014827692292e6ad9ed5f663d11930540bb0d3cb820b19f28d332e84e9",
+  "p20PowerNativeFailureReceiptSHA256": "197988e027f8953692214c342d986ddb21fbad7c7b1216a9ffbf6c09532c23ad",
+  "canonicalRuntimeSHA": "50/50",
+  "OEMReferencesSHA": "8/8",
+  "p20InputArtifactsSHA": "14/14",
+  "nativeUIATabs": "5/5",
+  "nativePOWERFUNCButtons": "2/2",
+  "nativeWindowForegroundSwitch": "VERIFIED",
+  "nativeWindowBlur": "FAILED_NOT_OBSERVED",
+  "nativePowerCancel": "NOT_ACCEPTED",
+  "browserAndServerCleanup": "PASS",
+  "protectedUserServer": "127.0.0.1:4173 PID1204",
+  "qaPorts4214to4220Listeners": 0,
+  "releaseApproval": "HOLD"
+}

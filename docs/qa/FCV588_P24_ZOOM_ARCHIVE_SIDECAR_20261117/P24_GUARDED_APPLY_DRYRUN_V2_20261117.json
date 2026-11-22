@@ -1,0 +1,26 @@
+{
+  "schema": "FCV588_P24_SECURITY_HARDENED_CANONICAL_DRYRUN_V2",
+  "status": "PREIMAGE_STAGE_GATES_GREEN_CANONICAL_NOT_YET_CHANGED",
+  "p23ParentFinalSHA256": "d5b1bfe16e82948c434c67682f04ba79ae939f89be61af88ede6e7021ec3c74a",
+  "p23PostSHA256": "9d94af354d4dffa7d6d8e10736955193f562f55feadc754229934a3eedceb095",
+  "runtimePreimage50Matched": true,
+  "OEMReferenceOnly8Matched": true,
+  "newPathsSHA256": {
+    "src/devices/fcv588/archive-compat.mjs": "cf56fbf1c78395fd8df8cb5a67d0d39b907fa464fa7187bf0203925c29b81d18",
+    "test/fcv588-p24-zoom-archive.test.mjs": "ec6ebf908acee166f861c8a52d2b44362a318b356979ad12ec217d586b681445",
+    "test/fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json": "a48c56d3856daebad17dedd919d99e80def1c515b9898d77c1c245ee9e69487d"
+  },
+  "originalPathsAbsent": true,
+  "fullStageReceiptSHA256": "2ee463e2da5085ead602de29cee263ae2df205347ca95337900f361569b0ca2b",
+  "stageNodeTests": "589/589",
+  "focusedStageReceiptSHA256": "ea123fe58e181b6c7ae65a10515adfce7c0cec10923a1688eb3c9465d5c5c466",
+  "focusTests": "7/7",
+  "hardenedFileReadbackSHA256": "7bd5cca4647868b3afb802ffa205862b7f2c0491b718669ed404b59e7c51977c",
+  "exploitRedReceiptSHA256": "0db097eb35d83ceec6b7a9af2935d9ba550c58edb2a0da74036493d15bb69187",
+  "sourceValidInitialRED_SHA256": "f4eeb550ca15b82bc6ef440410a3f9c0fd38cf345bb84ba1349b75ac78f642e4",
+  "existingRuntimeModulesUnchanged": 50,
+  "canonicalNoGit": true,
+  "browserNotRun": "PURE_API_UNREFERENCED_BY_WEB_APP",
+  "releaseApproval": "HOLD",
+  "independentReview": "PENDING"
+}

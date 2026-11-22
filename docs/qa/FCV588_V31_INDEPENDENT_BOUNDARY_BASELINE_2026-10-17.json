@@ -1,0 +1,732 @@
+{
+  "collectedAtUtc": "2026-10-17T06:03:11.986Z",
+  "scope": "INDEPENDENT_STATIC_SOURCE_AND_CONTRACT_AUDIT_NO_V31_PHASE2_VERIFY",
+  "toolFile": "tools/fcv588_lcd_boundary_audit.mjs",
+  "toolSha256": "86f47f6db81b7b320274897989e755f34a21b156396a2a75066f95585c451e92",
+  "contracts": {
+    "lcdBoundary": {
+      "path": "docs/research/FCV588_V31_LCD_BOUNDARY_ORACLE.json",
+      "sha256": "4499a2a6d21283158ca40d748e0a00b7287a53fb2a777623a3e6b1bcd0166aeb"
+    },
+    "featureVectors": {
+      "path": "docs/research/FCV588_V31_C11_D09_D14_D04_ACCEPTANCE_VECTORS.json",
+      "sha256": "a9719fadeec9316edb55a3860a220f1e920d553189ec6948c520af4bb4e6f71c"
+    }
+  },
+  "originalCheckpoint": {
+    "profileRevision": "F1-public-reference-20",
+    "runtimeExpectedSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+    "runtimeFilesChecked": 35,
+    "mismatchedRuntimeFiles": [],
+    "checklist": {
+      "checked": 14,
+      "total": 50,
+      "byPhase": [
+        {
+          "phase": "phase-01-start.md",
+          "total": 10,
+          "checked": 10
+        },
+        {
+          "phase": "phase-02-physical-panel-and-controls.md",
+          "total": 7,
+          "checked": 2
+        },
+        {
+          "phase": "phase-03-menu-atlas-and-configuration.md",
+          "total": 7,
+          "checked": 0
+        },
+        {
+          "phase": "phase-04-sonar-views-and-advanced.md",
+          "total": 7,
+          "checked": 0
+        },
+        {
+          "phase": "phase-05-alarms-nav-demo-diagnostics.md",
+          "total": 7,
+          "checked": 0
+        },
+        {
+          "phase": "phase-06-conformance-classroom-qa.md",
+          "total": 7,
+          "checked": 0
+        },
+        {
+          "phase": "phase-07-shared-world-and-future-devices.md",
+          "total": 5,
+          "checked": 2
+        }
+      ]
+    },
+    "operatorFunctions": 64,
+    "instructorFunctions": 1,
+    "claimsHold": 65,
+    "releaseDecision": "HOLD"
+  },
+  "lcdBoundary": {
+    "anchorCount": 53,
+    "sourceFiles": [
+      {
+        "file": "web/app.mjs",
+        "sha256": "91a0a09857821374d21f2fe5df0dc28a10c598516f8fb49337139e47f08fc673"
+      },
+      {
+        "file": "web/lcd-control-presentation.mjs",
+        "sha256": "a743494bf5828757879380faa8afcd0908fc62da60e94aa87745502859b8c8e6"
+      },
+      {
+        "file": "web/lcd-config-presentation.mjs",
+        "sha256": "e0d80f1b0d5495ec3d50a8c93d772964653c432afd0f2ecee54b4351f58aefa2"
+      },
+      {
+        "file": "web/lcd-presentation.mjs",
+        "sha256": "bf6d0c64ba99fdf71415d49f79bd5897d90d2d79523f21d041b8159aabfb6681"
+      },
+      {
+        "file": "web/index.html",
+        "sha256": "92bacc5ad24e2e6050b50c76af072a8fda001c91633194149ab3b2c82a9f2136"
+      }
+    ],
+    "relocationCandidates": 46,
+    "reviewRequired": 4,
+    "sourceBackedDemoExceptions": 1,
+    "unresolvedAnchors": [],
+    "sourceObservations": [
+      {
+        "id": "LCD-001",
+        "file": "web/app.mjs",
+        "lines": [
+          198
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-002",
+        "file": "web/app.mjs",
+        "lines": [
+          227
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-003",
+        "file": "web/app.mjs",
+        "lines": [
+          238
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-004",
+        "file": "web/app.mjs",
+        "lines": [
+          257
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "REVIEW_SIM_SUFFIX",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-005",
+        "file": "web/app.mjs",
+        "lines": [
+          266
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-006",
+        "file": "web/app.mjs",
+        "lines": [
+          282
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "REVIEW_SOURCE_STATUS",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-007",
+        "file": "web/app.mjs",
+        "lines": [
+          311
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-008",
+        "file": "web/app.mjs",
+        "lines": [
+          440
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-009",
+        "file": "web/app.mjs",
+        "lines": [
+          452
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-010",
+        "file": "web/app.mjs",
+        "lines": [
+          453
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-011",
+        "file": "web/app.mjs",
+        "lines": [
+          476
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "REVIEW_SIM_SUFFIX",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-012",
+        "file": "web/app.mjs",
+        "lines": [
+          546
+        ],
+        "surface": "LCD_CANVAS",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-013",
+        "file": "web/app.mjs",
+        "lines": [
+          690
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-014",
+        "file": "web/app.mjs",
+        "lines": [
+          691
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-015",
+        "file": "web/app.mjs",
+        "lines": [
+          694
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-016",
+        "file": "web/app.mjs",
+        "lines": [
+          645
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-017",
+        "file": "web/app.mjs",
+        "lines": [
+          646
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-018",
+        "file": "web/app.mjs",
+        "lines": [
+          718
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-019",
+        "file": "web/app.mjs",
+        "lines": [
+          759
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-020",
+        "file": "web/app.mjs",
+        "lines": [
+          765
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-021",
+        "file": "web/app.mjs",
+        "lines": [
+          780
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-022",
+        "file": "web/app.mjs",
+        "lines": [
+          804
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-023",
+        "file": "web/app.mjs",
+        "lines": [
+          817
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-024",
+        "file": "web/app.mjs",
+        "lines": [
+          822
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-025",
+        "file": "web/app.mjs",
+        "lines": [
+          846
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-026",
+        "file": "web/app.mjs",
+        "lines": [
+          864
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-027",
+        "file": "web/app.mjs",
+        "lines": [
+          872
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-028",
+        "file": "web/app.mjs",
+        "lines": [
+          557
+        ],
+        "surface": "LCD_HEADER",
+        "policy": "PRESERVE_MANUAL_INDICATOR",
+        "authority": "UI-13 D08",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-029",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          26
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-030",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          34
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-031",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          35
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-032",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          46
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-033",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          55
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-034",
+        "file": "web/lcd-control-presentation.mjs",
+        "lines": [
+          62
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-035",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          36
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-036",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          41
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-037",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          44
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-038",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          54
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-039",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          69
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-040",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          74
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-041",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          119
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-042",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          125
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-043",
+        "file": "web/lcd-config-presentation.mjs",
+        "lines": [
+          128
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-044",
+        "file": "web/lcd-presentation.mjs",
+        "lines": [
+          104
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-045",
+        "file": "web/lcd-presentation.mjs",
+        "lines": [
+          120
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-046",
+        "file": "web/lcd-presentation.mjs",
+        "lines": [
+          120
+        ],
+        "surface": "LCD_DOM",
+        "policy": "REVIEW_QUALIFICATION_LABEL",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-047",
+        "file": "web/lcd-presentation.mjs",
+        "lines": [
+          136
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-048",
+        "file": "web/lcd-presentation.mjs",
+        "lines": [
+          138
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-03",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-049",
+        "file": "web/index.html",
+        "lines": [
+          50
+        ],
+        "surface": "LCD_DOM",
+        "policy": "RELOCATE_TRAINING_COPY",
+        "authority": "FID-01",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-050",
+        "file": "web/index.html",
+        "lines": [
+          30
+        ],
+        "surface": "DEVICE_FRAME_OUTSIDE_EQUIPMENT",
+        "policy": "RELOCATE_EXTERNAL_HINT",
+        "authority": "FID-05",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-051",
+        "file": "web/index.html",
+        "lines": [
+          90
+        ],
+        "surface": "DEVICE_FRAME_OUTSIDE_EQUIPMENT",
+        "policy": "RELOCATE_EXTERNAL_HINT",
+        "authority": "FID-05",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-052",
+        "file": "web/app.mjs",
+        "lines": [
+          351
+        ],
+        "surface": "EXTERNAL_INSTRUCTOR",
+        "policy": "KEEP_EXTERNAL",
+        "authority": "FID-02",
+        "anchorPresent": true
+      },
+      {
+        "id": "LCD-053",
+        "file": "web/app.mjs",
+        "lines": [
+          362
+        ],
+        "surface": "HIDDEN_IN_LCD_TEST",
+        "policy": "NOT_VISIBLE_CHECK",
+        "authority": "FID-02",
+        "anchorPresent": true
+      }
+    ],
+    "interpretation": "Substring source locator, not live DOM or pixel Verify"
+  },
+  "featureReview": [
+    {
+      "featureId": "C11",
+      "implementationStatus": "MENU_ONLY_PARTIAL",
+      "releaseDecision": "HOLD",
+      "plannedVectors": 6,
+      "sourceIds": [
+        "PUB-FCV-001"
+      ],
+      "productTestsRun": "NONE_IN_THIS_AUDIT"
+    },
+    {
+      "featureId": "D09",
+      "implementationStatus": "MENU_ONLY_PARTIAL",
+      "releaseDecision": "HOLD",
+      "plannedVectors": 6,
+      "sourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-009"
+      ],
+      "productTestsRun": "NONE_IN_THIS_AUDIT"
+    },
+    {
+      "featureId": "D14",
+      "implementationStatus": "MENU_ONLY_PARTIAL",
+      "releaseDecision": "HOLD",
+      "plannedVectors": 6,
+      "sourceIds": [
+        "PUB-FCV-001"
+      ],
+      "productTestsRun": "NONE_IN_THIS_AUDIT"
+    },
+    {
+      "featureId": "D04",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "releaseDecision": "HOLD",
+      "plannedVectors": 4,
+      "sourceIds": [
+        "PUB-FCV-001",
+        "PUB-FCV-011"
+      ],
+      "productTestsRun": "NONE_IN_THIS_AUDIT"
+    }
+  ],
+  "plannedFutureVectors": 22,
+  "outcome": "BASELINE_RECORDED_LCD_REPAIRS_PENDING",
+  "productTestResults": "NOT_EXECUTED_BY_THIS_TOOL",
+  "phase2V31QA01": "STOP_KONGMING_COUNSEL_NOT_VERIFIED",
+  "releaseApproval": "HOLD",
+  "fidelityPercent": "UNMEASURED_HARDWARE_NOT_VALIDATED"
+}

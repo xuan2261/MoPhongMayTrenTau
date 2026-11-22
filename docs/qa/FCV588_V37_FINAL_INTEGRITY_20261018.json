@@ -1,0 +1,111 @@
+{
+  "collectedAtUtc": "2026-10-18T09:58:56.0024233Z",
+  "status": "CANONICAL_V37_TEST_ONLY_QA_RECONCILED_PHASE6_AND_RIGHTS_HOLD",
+  "canonicalV36ReceiptSha256": "d7d7c3eba806317d6690f2d4cb91cc15eed6c705b16ab1519ed4621f168ebafe",
+  "canonicalRuntimeSourceShaMatches": 37,
+  "stagedRuntimeSourceShaMatches": 37,
+  "srcUnchanged": 23,
+  "newCanonicalProductFiles": 0,
+  "canonicalV37NewTestPath": "test/fcv588-v37-negative-vectors.test.mjs",
+  "canonicalV37NewTestSHA256": "dd9bdfec132f84c67b88ec1f1a159b2248eec80526af09c58478f611a1f2b7eb",
+  "stageFirstNodePassed": 4,
+  "stageMutantExpectedNodeFail": 2,
+  "stageMutantLogSha256": "7c235c1cd0395a91663c253e2f0ae1f9ee80feed3ea8e2eedf952dd022b33774",
+  "stageRestoreNodePassed": 4,
+  "canonicalTargetedNodePassed": 4,
+  "canonicalFullNodePassed": 455,
+  "canonicalPythonPassed": 13,
+  "canonicalPostdocumentNodePassed": 455,
+  "v36HistoricalChromeResults": "639 assertions historical, not rerun as V37",
+  "v36HistoricalScreenshotsRechecked": 121,
+  "v36ScreenshotManifests": [
+    {
+      "manifest": "docs\\qa\\FCV588_V36_CANONICAL_A11Y_CHROME_20261018.json",
+      "matches": 21
+    },
+    {
+      "manifest": "docs\\qa\\FCV588_V36_COMPAT_CHROME_20261018.json",
+      "matches": 75
+    },
+    {
+      "manifest": "docs\\qa\\FCV588_V36_LEGACY_D15_CHROME_20261018.json",
+      "matches": 25
+    }
+  ],
+  "chromeNativeManual": "PARTIAL_ACTUAL_1912x970_OTHER_PHASE6_GATES_NOT_RUN",
+  "observedNativeReloadHttpRequests": 35,
+  "observedNativeReloadConsoleErrors": 0,
+  "nativeProofPath": "docs/qa/FCV588_V37_MANUAL_BROWSER_20261018.md",
+  "actualScreenReaderSpeech": "NOT_RUN",
+  "requiredLiveViewports": "NOT_RUN",
+  "oemSourceRights": "HOLD",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "claimsHold": 65,
+  "checklistChecked": 14,
+  "checklistTotal": 50,
+  "tasksAccepted": 6,
+  "tasksTotal": 22,
+  "v31OriginalFailLogSha256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "qaTempPortsClosed": true,
+  "nodeLogVerifications": [
+    {
+      "path": "docs\\qa\\FCV588_V37_CANONICAL_TARGETED_20261018.log",
+      "passes": 4,
+      "sha256": "5fcc0ed87bfc93284654f43e0a332423fe1b6a65b3d43b0d5bb827420e109e45"
+    },
+    {
+      "path": "docs\\qa\\FCV588_V37_CANONICAL_FULL_NODE_20261018.log",
+      "passes": 455,
+      "sha256": "d48ae870c83022a7db70dccc65f048418b4bb66d200bfc18741ed2ec70813fc0"
+    },
+    {
+      "path": "docs\\qa\\FCV588_V37_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "passes": 455,
+      "sha256": "ac72466b8f4e65daf8873d5b7fac015528cc05ffeefc333e43b49d574761f1de"
+    },
+    {
+      "path": "docs\\qa\\FCV588_V37_POSTREPORT_FULL_NODE_20261018.log",
+      "passes": 455,
+      "sha256": "111194f64590393884690a89cdd0d29bf129205c6f6e71d26d4242eb87c0ceb2"
+    }
+  ],
+  "pythonLogSha256": "f3b537c2ad31b144ab57a2488750c9ac70e7725ee1a72508b78aa7992cb1fc05",
+  "documentationSha256": [
+    {
+      "path": "docs\\qa\\FCV588_V37_MANUAL_BROWSER_20261018.md",
+      "sha256": "70be3e21c050862a1e2d35d4d3bf4bc958d835eb72fa6fe48ec089e92df96e7a"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\reports\\2026-10-18-v37-gpt6-test-only-go.md",
+      "sha256": "e8fac38e37d90690bfc6a77c46b0097bce68f43892b7e6b765f228f328a49994"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\reports\\2026-10-18-v37-c11-d09-d14-source-rights-review.md",
+      "sha256": "73c4f4144f99d6e2a4d087baf2986d1f46ad8610d9751b5f90ee5112d6a11d2a"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\reports\\2026-10-18-v37-negative-vectors-manual-browser-integrated.md",
+      "sha256": "bbd859335ba47383f40b997ad28afa5451620afa081f161716d1f9638ffd4e88"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\reports\\2026-10-18-v37-final-receipt-checker-stop-go.md",
+      "sha256": "4760c30e00e9853d5ad6839d74a0d3afb95ef559eced8e7b5e97fbc054f8f3ad"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\plan.md",
+      "sha256": "754d9c1155abd2cd356d661aeae985e99c39c36dcf632ef50eb2d2b458c084ef"
+    },
+    {
+      "path": "plans\\261013-2359-fcv588-public-reference-deep-tdd-advice-v2\\phase-06-conformance-classroom-qa.md",
+      "sha256": "fbf1b038e94b383383d8ef1c010ad2676fcd85a4db78b59b0434d0d6c5f7c8ca"
+    },
+    {
+      "path": "staging\\fcv588-v37-negative-vectors\\evidence\\V37_BASELINE_COPY_20261018.json",
+      "sha256": "45877af2faca62ca660f6e3581b377b749703a3e139bf7aa30fc09d5931e09e3"
+    }
+  ],
+  "receiptCheckerOriginalPreflightFailedAndPreserved": true,
+  "originalLogFilesModified": false,
+  "gitCommitted": false
+}

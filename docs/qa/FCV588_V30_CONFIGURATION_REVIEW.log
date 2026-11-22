@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "error": null,
+  "receipt": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_CONFIGURATION_V30_REVIEW_RECEIPT.json",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "checks": 66,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "1920x1080",
+      "checks": 66,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "360x800",
+      "checks": 66,
+      "failed": [],
+      "executionError": null
+    },
+    {
+      "viewport": "390x844",
+      "checks": 66,
+      "failed": [],
+      "executionError": null
+    }
+  ]
+}

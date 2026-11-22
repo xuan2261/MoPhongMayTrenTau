@@ -1,0 +1,69 @@
+{
+  "timestampUtc": "2026-10-19T09:48:32.425086+00:00",
+  "status": "V47_CANONICAL_WHITE_MARKER_SOURCE_GRADE_D15_SHA_APPLIED",
+  "parentV46FinalSHA": "b8080291f753a56aa428bf038de8e98f4f84f13686b415d941f7074fe66f809d",
+  "parentV46PostSHA": "7f8a00fb1be746655a6decffb5551c9019fa777a722c2301879512bcd01cb84c",
+  "stageManifestSHA": "c96ae28ad0f5035f180af47f4d00ae4faf203bc039af01c638faed209bcd89e4",
+  "GPT6GOsha": "8d86d05c5096492ffca3fb0579d15798cae0c938cc1d20bafff49565b6044b1e",
+  "approvedFiles": [
+    {
+      "path": "src/devices/fcv588/menu-atlas.mjs",
+      "preimageSHA": "47953dd718da59ff2f5b55681110c65c616b6949a2a28f6960513661c84d08bc",
+      "expectedSHA": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "actualSHA": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed"
+    },
+    {
+      "path": "web/lcd-instructor-meta.mjs",
+      "preimageSHA": "27616043b941751e299642bc6d16493cf1a5de6bf55c9b97eec9e3b36ce70b4e",
+      "expectedSHA": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3",
+      "actualSHA": "f344d523ea37dbd7e6faa08921ce472faa4e8978df8c3f9b0926106e100e8ac3"
+    },
+    {
+      "path": "test/fcv588-v47-white-marker-firmware-boundary.test.mjs",
+      "preimageSHA": null,
+      "expectedSHA": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773",
+      "actualSHA": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-menu-atlas.json",
+      "preimageSHA": "fe178a91438167507673b0e18f57fc2d4fab71bc2fc2b5198aa84a1e7d43b192",
+      "expectedSHA": "2e2b1918207dfa55a80a024e7f5f9ec2248bdad9e43cbc661bdeadb6564677cf",
+      "actualSHA": "2e2b1918207dfa55a80a024e7f5f9ec2248bdad9e43cbc661bdeadb6564677cf"
+    },
+    {
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "preimageSHA": "3f6c0bb48eacdde598ca267c56c3efc83a5977999d160629619e14b9764c009b",
+      "expectedSHA": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d",
+      "actualSHA": "e2104b0ff01fecfb64e4e9ce1cc248538f9562e06d07a2306391fe47fcad103d"
+    },
+    {
+      "path": "docs/research/FCV588_V47_WHITE_MARKER_FIRMWARE_SOURCE_ATLAS_20261019.md",
+      "preimageSHA": null,
+      "expectedSHA": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6",
+      "actualSHA": "91b08edf3efaf23fcafce280deeb1063380711c1c70e2bf523d0aa9e91da3aa6"
+    }
+  ],
+  "approvedFilesCount": 6,
+  "previousRuntimeSHA": 37,
+  "postRuntimeSHA": 37,
+  "changedRuntimePaths": [
+    "src/devices/fcv588/menu-atlas.mjs",
+    "web/lcd-instructor-meta.mjs"
+  ],
+  "runtimeUnchanged": 35,
+  "B07OnlyMetadataChange": true,
+  "profileRevision": "F1-public-reference-21",
+  "installedFirmware": "UNKNOWN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

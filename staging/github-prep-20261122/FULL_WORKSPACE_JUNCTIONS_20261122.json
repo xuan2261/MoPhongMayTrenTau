@@ -1,0 +1,152 @@
+{
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "count": 24,
+  "kind": "Windows junctions (not duplicate folders)",
+  "status": "LOCAL_PREUPLOAD_REFERENCE_ONLY",
+  "items": [
+    {
+      "relative": "staging/fcv588-p04-bottom-provenance-20261116/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-p04-bottom-provenance-20261116/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-p04-bottom-provenance-20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-echo-20261114/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-echo-20261114/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-echo-20261114/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-integrated-20261116/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-integrated-20261116/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-integrated-20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-modes-20261114/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-modes-20261114/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-modes-20261114/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p05menu-20261116/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p05menu-20261116/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p05menu-20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p06face-20261116/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p06face-20261116/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-p06face-20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-visual-20261114/docs",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\docs",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-visual-20261114/plans",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\plans",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "staging/fcv588-photo-visual-20261114/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "_p13_stage_20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "_p14_stage_20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    },
+    {
+      "relative": "_p15_stage_20261116/sources",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "targetExists": true,
+      "kind": "Junction"
+    }
+  ]
+}

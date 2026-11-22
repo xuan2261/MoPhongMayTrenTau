@@ -1,0 +1,258 @@
+:root {
+  /* Public overall envelope and effective LCD, NOT a measured bare head.
+     The separate head/bracket contours below are original estimates. */
+  --reference-face-width-mm: 233;
+  --reference-face-height-mm: 270;
+  --reference-lcd-width-mm: 128;
+  --reference-lcd-height-mm: 171;
+  --panel-ink: #e1e3e3;
+  --panel-dark: #242a2e;
+  --panel-mid: #434a4e;
+  --panel-rim: #697075;
+  --key-top: #5d6366;
+  --key-bottom: #343b40;
+  --panel-font: Arial, sans-serif;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+  color: #ecf3f7;
+  background: #08141e;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 11% 0%, #1a3542 0, #091723 42%, #08121d 80%); }
+button { font: inherit; cursor: pointer; color: inherit; user-select: none; touch-action: manipulation; }
+button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #ffc564; outline-offset: 3px; }
+button:active { transform: translateY(1px); }
+.app { max-width: 1570px; margin: auto; padding: 0 36px 40px; }
+.masthead { min-height: 90px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #263d4a; }
+.identity { display: flex; align-items: center; gap: 12px; }
+.identity .mark { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 13px; background: #237f91; color: white; font-size: 32px; font-weight: 600; }
+.identity strong { display: block; font-size: 20px; letter-spacing: -.35px; }
+.identity small { display: block; font-size: 9px; letter-spacing: 2.5px; color: #87a6b7; padding-top: 3px; }
+.state-chip { border: 1px solid #46636d; padding: 8px 13px; border-radius: 99px; color: #a9dce8; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; }
+.public-reference-banner { margin-top: 14px; padding: 9px 13px; border: 1px solid #6d7b86; color: #f5e6ba; background: #273039; text-align: center; font: 800 11px Consolas, monospace; letter-spacing: .6px; }
+.heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin: 28px 0 26px; }
+.eyebrow { color: #65bacd; font-size: 11px; letter-spacing: 2.2px; font-weight: 800; margin: 0 0 9px; }
+h1 { margin: 0; font-size: clamp(32px, 3vw, 45px); letter-spacing: -1.5px; }
+h1 span { color: #88a8b9; font-weight: 300; }
+.subtitle { color: #a6b9c3; max-width: 730px; font-size: 13px; line-height: 1.6; }
+.live-chip { padding: 10px 14px; white-space: nowrap; border: 1px solid #2f6872; background: #0c2833; border-radius: 9px; color: #8bd6b7; letter-spacing: 1px; font-size: 11px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #5fc797; margin-right: 8px; box-shadow: 0 0 7px #58c39c; }
+.workbench { display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: start; gap: 25px; }
+.device-frame {
+  position: relative;
+  /* Center the original-sized teaching bezel in the wide desktop device
+     column; the right-hand D15 trainer remains outside the physical face.
+     This is workspace composition, not an OEM bezel measurement. */
+  justify-self: center;
+  width: 100%;
+  isolation: isolate;
+  aspect-ratio: 233 / 270;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: 680px;
+}
+.device-frame::before, .device-frame::after {
+  /* Independently drawn support, not a measured bracket or OEM image. */
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+.device-frame::before { left: 4%; right: 4%; top: 40%; bottom: 5%; border: 13px solid #30383e; border-top: 0; border-radius: 0 0 24px 24px; box-shadow: inset 0 -3px #5f686d, 0 6px 10px #02090e; }
+.device-frame::after { left: 23%; right: 23%; bottom: 4%; height: 14px; border-radius: 5px; background: linear-gradient(#535c62,#252d33); box-shadow: 0 5px 8px #02090e; }
+.bezel-header { position: absolute; z-index: 2; left: 6%; width: 57%; top: 4%; display: flex; justify-content: space-between; align-items: center; color: var(--panel-ink); font-family: var(--panel-font); }
+.bezel-header strong { font-size: 17px; letter-spacing: .3px; }
+.manufacturer-name { font-size: 25px; letter-spacing: 2.5px; font-weight: 750; }
+.equipment {
+  /* The near-square head contour is a photo-informed estimate, not an
+     accepted 233 x 233 mm hardware measurement. Check the LCD numerically. */
+  position: relative; width: 100%; aspect-ratio: 1;
+  border: 6px solid #293136; border-bottom-width: 10px;
+  border-radius: 23px; background: linear-gradient(115deg,#4c5357,var(--panel-mid) 30%,#373e42 77%,#2c3338);
+  box-shadow: inset 0 1px 2px #8a9296, inset 0 -5px 9px #1a2228, 0 16px 28px #020b1280;
+}
+.display-housing { position: absolute; left: 5%; top: 12%; width: 59%; min-width: 0; background: #20282d; padding: 7px; border-radius: 7px; border: 2px solid #252d32; box-shadow: inset 0 0 0 1px #7b8184, 0 2px 7px #101820; }
+.lcd { position: relative; aspect-ratio: 128 / 171; overflow: hidden; border: 4px solid #101b22; border-radius: 3px; background: #031735; box-shadow: inset 0 0 35px #09233f, 0 0 0 1px #8d979b; }
+.lcd canvas { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.screen-top { position: absolute; top: 5px; left: 9px; right: 9px; color: var(--fcv-lcd-foreground, #ffffff); text-shadow: 1px 1px var(--fcv-lcd-shadow, #061724); font: 700 clamp(9px, .9vw, 15px) Consolas, monospace; white-space: nowrap; pointer-events: none; }
+.screen-top[hidden] { display: none; }
+.depth-indicator { position: absolute; right: 11px; bottom: 10px; display: flex; gap: 2px; align-items: baseline; color: var(--fcv-lcd-foreground, #ffffff); text-shadow: 1px 1px var(--fcv-lcd-shadow, #09283b); font-family: Consolas, monospace; }
+.depth-indicator[hidden] { display: none; }
+.depth-indicator strong { font-size: clamp(28px, 3.7vw, 55px); letter-spacing: -3px; }
+.depth-indicator[data-size="Small"] strong { font-size: clamp(18px, 2.2vw, 28px); }
+.depth-indicator[data-size="Medium"] strong { font-size: clamp(24px, 3.1vw, 43px); }
+.depth-indicator[data-size="Large"] strong { font-size: clamp(30px, 4.2vw, 60px); }
+.depth-indicator span { font-size: 16px; }
+.vrm-indicator { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); background: #0a3350cc; border: 1px solid #7ec5db; padding: 3px 8px; color: #eaf7ff; font: 700 12px Consolas, monospace; pointer-events: none; }
+.vrm-indicator[hidden] { display: none; }
+.lcd-overlay { position: absolute; z-index: 2; min-width: 200px; width: 59%; left: 19%; top: 18%; display: flex; flex-direction: column; max-height: 78%; background: #eff3f6; border: 2px solid #1f263a; box-shadow: 3px 5px 0 #071622a0; color: #192531; font-family: Consolas, monospace; font-size: 12px; }
+.lcd-overlay[hidden] { display: none; }
+.lcd-overlay-title { color: white; background: #164ca0; padding: 8px 11px; font-weight: 700; }
+.lcd-overlay-content { position: relative; padding: 13px 12px; white-space: pre-line; line-height: 1.5; min-height: 0; overflow-y: auto; overflow-wrap: anywhere; flex: 1 1 auto; }
+.lcd-menu-row { white-space: pre-wrap; padding: 1px 3px; border-radius: 2px; min-height: 1.5em; }
+.lcd-menu-row[aria-current="true"] { background: #cbd8e7; color: #103362; font-weight: 800; box-shadow: inset 3px 0 0 #2155a2; }
+.lcd-overlay-footer { font-size: 9px; color: #394b59; border-top: 1px solid #c8d3dd; padding: 8px; }
+.lcd-menu-body { display: flex; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.lcd-menu-main { display: flex; flex-direction: column; flex: 1; min-width: 0; min-height: 0; }
+.lcd-menu-categories { flex: 0 0 25%; min-width: 0; padding: 6px 3px; border-right: 1px solid #687486; background: #e0e5ea; font-size: 11px; }
+.lcd-menu-categories > div { padding: 7px 3px; overflow-wrap: anywhere; }
+.lcd-menu-categories [aria-current="true"],
+.lcd-overlay[data-layout="main-menu"] .lcd-menu-row[aria-current="true"],
+.lcd-menu-options [aria-current="true"] { background: #f5dd74; color: #1d2735; font-weight: 700; }
+.lcd-overlay[data-layout="main-menu"] { width: 96%; left: 2%; top: 7%; max-height: 90%; min-width: 0; }
+.lcd-overlay[data-layout="main-menu"] .lcd-overlay-content { padding: 6px; }
+.lcd-overlay[data-layout="main-menu"] .lcd-overlay-footer { white-space: pre-line; overflow-wrap: anywhere; font-size: 9px; line-height: 1.4; padding: 5px 7px; }
+.lcd-menu-options { flex: 0 1 auto; max-height: 130px; overflow-y: auto; border-top: 2px solid #50647e; background: #f7f8fa; padding: 5px 8px; font-size: 11px; }
+.lcd-menu-options > div { padding: 2px 4px; }
+.lcd-options-title { font-weight: 700; border-bottom: 1px solid #aebac7; }
+.lcd-menu-categories[hidden], .lcd-menu-options[hidden] { display: none; }
+.off-screen { position: absolute; inset: 0; display: grid; place-content: center; gap: 13px; text-align: center; background: radial-gradient(circle, #132633, #060d13 72%); }
+.off-screen span { color: #91a5ad; letter-spacing: 4px; font-size: 23px; }
+.off-screen small { color: #748c98; font-size: 11px; }
+.off-screen[hidden] { display: none; }
+.instructor-telemetry { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 13px; padding: 10px 9px; margin: 9px 0; border: 1px solid #355769; border-radius: 6px; background: #091b27; color: #a5d0df; font: 600 10px Consolas, monospace; }
+.controls { position: absolute; left: 71.5%; width: 23%; top: 6.5%; bottom: 7%; min-width: 0; font-family: var(--panel-font); }
+.hardware-key { min-height: 31px; border: 1px solid #797f82; border-bottom: 3px solid #20272c; border-radius: 9px; background: linear-gradient(var(--key-top),var(--key-bottom)); color: var(--panel-ink); text-shadow: 0 1px #18232c; font: 700 11px var(--panel-font); letter-spacing: .5px; box-shadow: inset 0 1px #8a9296, 0 2px 4px #182128; }
+.hardware-key span { font-size: 9px; font-weight: 400; }
+.hardware-key:active { border-bottom-width: 2px; }
+.controls > #key-menu { position: absolute; top: 0; left: 21%; width: 58%; height: 34px; line-height: 1.1; border-radius: 48% 48% 16% 16%; }
+.key-row { position: absolute; top: 33%; left: 20%; width: 60%; display: grid; grid-template-columns: 1fr; gap: 8px; }
+.pad { position: absolute; top: 7%; left: 50%; transform: translateX(-50%); height: 96px; width: 96px; border-radius: 50%; border: 3px solid #232a2f; background: radial-gradient(circle at 35% 25%,#60676b,#3c444a 65%,#2d353b); box-shadow: inset 0 2px 3px #85909780, inset 0 -4px 5px #172027, 0 1px #727d82; }
+.pad::after { content: ""; position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; transform: translate(-50%,-50%); border-radius: 50%; background: radial-gradient(circle at 35% 28%,#596168,#363e44); pointer-events: none; }
+.pad button { position: absolute; border: 0; background: transparent; color: var(--panel-ink); font-size: 15px; padding: 0; }
+.pad button.pressing { background: #25333c; }
+.pad .pad-up { width: 32px; height: 26px; top: 0; left: 29px; border-radius: 40% 40% 10% 10%; }
+.pad .pad-down { width: 32px; height: 26px; bottom: 0; left: 29px; border-radius: 10% 10% 40% 40%; }
+.pad .pad-left { width: 26px; height: 32px; left: 0; top: 29px; border-radius: 40% 10% 10% 40%; }
+.pad .pad-right { width: 26px; height: 32px; right: 0; top: 29px; border-radius: 10% 40% 40% 10%; }
+.enter-key { position: absolute; top: 25%; left: 21%; width: 58%; border-radius: 16% 16% 48% 48%; }
+.knob-wrap { position: absolute; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.gain-wrap { top: 54%; }
+.mode-wrap { top: 73%; }
+.knob-label { color: #f0f5f7; font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+.knob-label small { display: block; font-size: 8px; font-weight: 500; color: #bfced5; letter-spacing: .3px; text-align: center; }
+.knob-group { position: relative; display: flex; align-items: center; justify-content: center; }
+.knob { position: relative; width: 65px; height: 65px; border-radius: 50%; display: grid; place-content: center; border: 4px solid #aeb5b8; background: repeating-conic-gradient(#363d42 0deg 8deg, #646d72 8deg 12deg); box-shadow: inset 0 0 0 8px #3b4349, inset 0 0 0 23px #2a3239, 0 3px 7px #152129; color: var(--panel-ink); touch-action: none; padding: 0; }
+.knob::before { content: ""; position: absolute; inset: 3px; border-radius: 50%; transform: rotate(var(--dial-angle, 0deg)); background: linear-gradient(#f1f3f2,#d2d8d8) center top / 3px 11px no-repeat; pointer-events: none; }
+.knob-mode { outline: 1px solid #1b252a; }
+.knob:active { transform: scale(.98); }
+.mode-scale { position: absolute; inset: 0; pointer-events: none; color: #d6dcdf; font-size: 7px; line-height: 1; font-weight: 650; }
+.mode-scale span { position: absolute; white-space: nowrap; }
+.mode-scale [data-mode="NAV1"] { right: 100%; bottom: 3px; margin-right: 5px; }
+.mode-scale [data-mode="LF-ZOOM"] { right: 100%; top: 26px; margin-right: 5px; }
+.mode-scale [data-mode="LF"] { right: 100%; top: 3px; margin-right: 5px; }
+.mode-scale [data-mode="DUAL"] { left: 50%; top: -11px; transform: translateX(-50%); }
+.mode-scale [data-mode="HF"] { left: 100%; top: 3px; margin-left: 5px; }
+.mode-scale [data-mode="HF-ZOOM"] { left: 100%; top: 26px; margin-left: 5px; }
+.mode-scale [data-mode="NAV2"] { left: 100%; bottom: 3px; margin-left: 5px; }
+.mode-scale [data-selected="true"] { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; }
+.mode-wrap .knob-label { margin-bottom: 9px; }
+.detent { width: 24px; height: 30px; border: 1px solid #a1adb3; background: #44535e; border-radius: 5px; font-size: 19px; }
+.rotary-assist { padding: 10px; border: 1px solid #375366; background: #102735; border-radius: 10px; }
+.rotary-assist h3 { margin: 3px 0 5px; }
+.rotary-assist .hint { margin: 0 0 10px; font-size: 11px; }
+.rotary-assist-row { display: grid; grid-template-columns: 1fr 48px 48px; align-items: center; gap: 9px; padding: 6px 3px; font-size: 12px; font-weight: 750; }
+.trainer-rotate { min-height: 34px; border: 1px solid #7195a2; border-radius: 6px; background: #243e4d; color: #d9f3fa; font-weight: 750; font-size: 19px; }
+.power-button { position: absolute; top: 93%; left: calc(50% - 20px); width: 40px; height: 37px; border-radius: 44%; border: 1px solid #83a9bf; background: linear-gradient(#588cb0,#246189); box-shadow: inset 0 1px #a3becd, 0 3px 4px #1a2730; font-weight: 800; padding: 0; }
+.power-button span { position: absolute; left: calc(100% + 8px); top: 11px; letter-spacing: .5px; font: 700 10px var(--panel-font); }
+.power-glyph { position: relative; display: block; width: 17px; height: 17px; margin: auto; border: 2px solid #e5eef1; border-top-color: transparent; border-radius: 50%; }
+.power-glyph::before { content: ""; position: absolute; width: 2px; height: 9px; left: 5.5px; top: -3px; background: #e5eef1; }
+.power-button.pressing { background: linear-gradient(#96bbd9, #2c7bb4); }
+.device-footer { position: absolute; bottom: 0; left: 0; right: 0; color: #a9bac3; font-size: 10px; letter-spacing: .2px; text-align: center; }
+.mobile-training-note { display: none; }
+.training-panel { border: 1px solid #2c4451; background: linear-gradient(#102331, #0e1d29); border-radius: 16px; padding: 23px; box-shadow: 0 15px 30px #05101955; }
+.panel-head h2 { margin: 2px 0 18px; font-size: 22px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; }
+.stats div { background: #0b1722; border: 1px solid #294355; padding: 11px 7px; border-radius: 8px; text-align: center; }
+.stats small { display: block; color: #7693a3; letter-spacing: 1px; font-size: 9px; }
+.stats strong { display: block; margin-top: 5px; font: 700 20px Consolas, monospace; color: #e6f4fb; }
+.trainer-buttons { display: grid; gap: 8px; margin: 17px 0; }
+.trainer-buttons button { border: 1px solid #406273; padding: 11px; border-radius: 7px; background: #172d3c; color: #d6e8f2; font-size: 13px; }
+.trainer-buttons button.primary { background: #0e6479; border-color: #2696a6; color: #fff; font-weight: 700; }
+.validation-status { padding: 12px; border-radius: 8px; border: 1px solid #405562; background: #102531; font-size: 11px; line-height: 1.6; color: #9fc1d0; min-height: 61px; }
+.lesson-panel { border: 1px solid #365b67; background: #132a39; border-radius: 9px; padding: 12px; display: grid; gap: 8px; }
+.lesson-panel label { color: #d5e5f0; font-size: 12px; font-weight: 650; }
+.lesson-panel select, .lesson-panel button { min-height: 38px; max-width: 100%; border: 1px solid #507485; border-radius: 6px; color: #eef8ff; background: #173d53; padding: 8px; font: 600 12px system-ui,sans-serif; }
+.lesson-panel button { background: #126579; cursor: pointer; }
+.lesson-panel #lesson-result { color: #a8d9e7; font-size: 12px; line-height: 1.5; }
+.training-panel h3 { font-size: 12px; color: #9dcbd3; text-transform: uppercase; letter-spacing: 1.1px; margin: 24px 0 8px; }
+.hint { font-size: 12px; line-height: 1.6; color: #b3c4cf; }
+.shortcut-line { color: #92a9b9; font-size: 11px; line-height: 2.5; }
+kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-radius: 3px; font-family: Consolas, monospace; }
+.device-roadmap { display: grid; gap: 3px; }
+.device-roadmap div { display: flex; flex-wrap: wrap; gap: 7px; font-size: 11px; color: #628494; padding: 8px 0; border-bottom: 1px solid #254050; }
+.device-roadmap strong { color: #bdd7e3; }
+.device-roadmap em { font-style: normal; margin-left: auto; color: #829fac; font-size: 10px; }
+.disclaimer { padding: 12px 0 0; font-size: 11px; color: #91aab6; text-align: center; line-height: 1.6; }
+@media (max-width: 1240px) {
+  .workbench { grid-template-columns: minmax(0, 1fr); }
+  .device-frame { width: 100%; margin: auto; }
+  .training-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; }
+  .training-panel > .panel-head, .training-panel > .stats,
+  .training-panel > .trainer-buttons, .training-panel > .validation-status,
+  .training-panel > .rotary-assist { grid-column: span 1; }
+  .training-panel > .instructor-telemetry { grid-column: span 2; }
+  /* Direct children only: targeting every nested h3 created a phantom second
+     CSS Grid column inside D15 lesson forms, squeezing action buttons. */
+  .training-panel > h3, .training-panel > .device-roadmap { grid-column: span 2; }
+  .trainer-buttons { margin: 0; }
+}
+@media (max-width: 700px) {
+  .app { padding: 0 9px 24px; }
+  .masthead { min-height: 70px; }
+  .state-chip { display: none; }
+  .heading { margin: 22px 9px; display: block; }
+  .live-chip { display: inline-block; margin-top: 7px; }
+  /* Phone: a deliberately RE-FLOWED training face, not the OEM bezel map.
+     Preserve the entire portrait LCD and enlarged physical-input hit areas;
+     never imply that this stacked view matches the hardware geometry. */
+  .device-frame { aspect-ratio: auto; border: 3px solid #293136; padding: 10px 8px; border-radius: 12px; background: #343d43; }
+  .device-frame::before, .device-frame::after { display: none; }
+  .bezel-header { position: static; width: auto; justify-content: space-between; padding: 1px 6px 8px; }
+  .manufacturer-name { font-size: 19px; }
+  .equipment { display: grid; grid-template-columns: minmax(0, 1fr); aspect-ratio: auto; gap: 12px; padding-inline: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .display-housing { position: relative; left: auto; top: auto; width: 100%; padding: 4px; border-width: 1px; }
+  .instructor-telemetry { font-size: 11px; }
+  .controls { position: static; width: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch; align-items: center; gap: 16px 12px; padding: 8px 4px; }
+  .hardware-key { min-height: 44px; font-size: 12px; }
+  .controls > #key-menu, .controls > #key-func,
+  .controls > #key-enter, .controls > .key-row,
+  .controls > .pad, .controls > #key-power { grid-column: 1 / -1; }
+  .controls > #key-menu, .enter-key, .key-row, .knob-wrap, .power-button { position: static; width: 100%; }
+  .controls > #key-menu { height: 48px; border-radius: 8px; }
+  .pad { width: 160px; height: 160px; margin: 0 auto; position: relative; left: auto; top: auto; transform: none; }
+  .pad::after { width: 32px; height: 32px; }
+  .pad .pad-up { width: 44px; height: 44px; left: 55px; top: 3px; font-size: 17px; }
+  .pad .pad-down { width: 44px; height: 44px; left: 55px; bottom: 3px; font-size: 17px; }
+  .pad .pad-left { width: 44px; height: 44px; left: 3px; top: 55px; font-size: 17px; }
+  .pad .pad-right { width: 44px; height: 44px; right: 3px; top: 55px; font-size: 17px; }
+  .enter-key { width: 100%; margin-top: 0; border-radius: 8px; }
+  .key-row { gap: 12px; grid-template-columns: 1fr; }
+  .knob-label { font-size: 10px; }
+  .knob-label small { display: none; }
+  .knob { width: 64px; height: 64px; border-width: 5px; font-size: 11px; }
+  .mode-scale { display: none; }
+  .mode-wrap .knob-label { margin-bottom: 0; }
+  .power-button { width: 100%; max-width: 250px; height: 50px; font-size: 12px; border-radius: 9px; margin: auto; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .power-glyph { margin: 0; }
+  .power-button span { position: static; font-size: 11px; }
+  .device-footer { position: static; font-size: 9px; margin-top: 12px; }
+  .mobile-training-note { display: block; font-size: 10px; line-height: 1.5;
+    color: #c9dfe7; text-align: center; margin: 7px 0 0; }
+  .lcd-overlay { width: 83%; left: 9%; top: 12%; max-height: 84%; min-width: 0; font-size: 11px; }
+  .lcd-overlay-content { padding: 8px; line-height: 1.5; }
+  .lcd-overlay-title { padding: 5px; }
+  .lcd-overlay-footer { display: none; }
+  .lcd-overlay[data-layout="main-menu"] .lcd-overlay-footer { display: block; }
+  .lcd-menu-categories { font-size: 10px; }
+  .lcd-menu-options { max-height: 105px; }
+  .training-panel { display: block; padding: 14px; }
+  .trainer-rotate { min-height: 44px; min-width: 44px; }
+  .trainer-buttons button { min-height: 44px; }
+  .lesson-panel select, .lesson-panel button { width: 100%; min-height: 44px; }
+  .trainer-buttons { margin: 13px 0; }
+  .depth-indicator strong { font-size: 25px; letter-spacing: -1px; }
+  .depth-indicator span { font-size: 10px; }
+}

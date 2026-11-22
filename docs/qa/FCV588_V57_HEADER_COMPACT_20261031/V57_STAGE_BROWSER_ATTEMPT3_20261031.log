@@ -1,0 +1,6 @@
+STAGE_BROWSER_VIEWPORTS=4/3 PASS
+desktop 1440x900 HTTP=200 masthead=59.0px heading=56.0px workbenchY=143.0px doc=1440x1023 tabs=5 errors=0
+tablet 768x1024 HTTP=200 masthead=59.0px heading=40.0px workbenchY=127.0px doc=768x1829 tabs=5 errors=0
+mobile 375x812 HTTP=200 masthead=82.2px heading=53.8px workbenchY=160.1px doc=375x2195 tabs=5 errors=0
+small-mobile 320x812 HTTP=200 masthead=93.5px heading=53.8px workbenchY=171.3px doc=320x2165 tabs=5 errors=0
+NO_JS_FALLBACK=PASS

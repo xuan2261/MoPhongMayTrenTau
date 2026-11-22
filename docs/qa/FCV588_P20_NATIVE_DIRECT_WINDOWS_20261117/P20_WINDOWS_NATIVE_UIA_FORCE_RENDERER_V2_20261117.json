@@ -1,0 +1,162 @@
+{
+  "schema": "FCV588_P20_WINDOWS_NATIVE_UIA_FORCE_RENDERER_V2",
+  "createdAt": "2026-11-17T03:30:03.428158+00:00",
+  "scope": "WINDOWS_UIAUTOMATION_FROM_REAL_CHROME_HWND_NOT_NARRATOR_SPEECH",
+  "status": "NATIVE_UIA_OBSERVED",
+  "port": 4220,
+  "forceRendererAccessibility": true,
+  "errors": [],
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "dom": {
+    "enhanced": "true",
+    "tabNames": [
+      "Phiên",
+      "Trợ giúp",
+      "Tình huống",
+      "Bài học",
+      "Nguồn & QA"
+    ],
+    "powerLabel": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+    "funcLabel": "FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng"
+  },
+  "windowCandidates": [
+    {
+      "hwnd": 2952418,
+      "pid": 29928,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+      "foreground": false
+    }
+  ],
+  "targetWindow": {
+    "hwnd": 2952418,
+    "pid": 29928,
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+    "foreground": false
+  },
+  "nativeUIAutomation": {
+    "status": "OBSERVED",
+    "data": {
+      "rootName": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+      "rootControlType": "ControlType.Window",
+      "descendants": 115,
+      "scanned": 115,
+      "matches": [
+        {
+          "name": "FUNC: nh?n ng?n d? g?i ch?c nang, nh?n gi? d? g�n ch?c nang",
+          "controlType": "ControlType.Button",
+          "automationId": "key-func",
+          "isEnabled": true
+        },
+        {
+          "name": "GAIN",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "GAIN: Auto fishing � Offset 0. Nh?n d? ch?n ch? d?; k�o d?c, cu?n chu?t ho?c d�ng ph�m mui t�n d? xoay.",
+          "controlType": "ControlType.Button",
+          "automationId": "gain-knob",
+          "isEnabled": true
+        },
+        {
+          "name": "MODE",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "MODE: LF dang ch?n. K�o d?c, cu?n chu?t ho?c d�ng ph�m mui t�n d? xoay.",
+          "controlType": "ControlType.Button",
+          "automationId": "mode-knob",
+          "isEnabled": true
+        },
+        {
+          "name": "Ngu?n v� d? s�ng; nh?n gi? hon 3 gi�y m� ph?ng d? t?t",
+          "controlType": "ControlType.Button",
+          "automationId": "key-power",
+          "isEnabled": true
+        },
+        {
+          "name": "Phi�n th?c h�nh",
+          "controlType": "ControlType.Text",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "Nh�m c�ng c? gi?ng vi�n D15",
+          "controlType": "ControlType.Tab",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "Phi�n",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-session",
+          "isEnabled": true
+        },
+        {
+          "name": "Tr? gi�p",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-help",
+          "isEnabled": true
+        },
+        {
+          "name": "T�nh hu?ng",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-fixtures",
+          "isEnabled": true
+        },
+        {
+          "name": "B�i h?c",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-lessons",
+          "isEnabled": true
+        },
+        {
+          "name": "Ngu?n & QA",
+          "controlType": "ControlType.TabItem",
+          "automationId": "d15-tab-sources",
+          "isEnabled": true
+        },
+        {
+          "name": "Phi�n",
+          "controlType": "ControlType.Pane",
+          "automationId": "d15-panel-session",
+          "isEnabled": true
+        },
+        {
+          "name": "FCV588-P20-NATIVE-UIA-20261117",
+          "controlType": "ControlType.TabItem",
+          "automationId": "view_20",
+          "isEnabled": true
+        },
+        {
+          "name": "Vietnamese",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        },
+        {
+          "name": "English",
+          "controlType": "ControlType.TabItem",
+          "automationId": "",
+          "isEnabled": true
+        }
+      ]
+    }
+  },
+  "qaPortClosed": true,
+  "protected4173StillListening": true,
+  "sourcePostSHAcount": 50,
+  "originalForegroundUnchanged": true
+}

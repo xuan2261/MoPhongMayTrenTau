@@ -1,0 +1,11 @@
+{
+  "schema": "P31_HOST_AFTER_NATIVE_AT_QA_POSTCHECK_V1",
+  "status": "PASS",
+  "newATInvokeReceiptSHA256": "c9bd7b3eb09128e49b24ec11105e06079d852c0ad465ad1cd2fe343bdb674610",
+  "installedVersion": "0.0.3",
+  "installedEXESHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "appProcessCount": 0,
+  "qaFirewallRuleCount": 0,
+  "server4173PID": 1204,
+  "releaseApproval": "HOLD"
+}

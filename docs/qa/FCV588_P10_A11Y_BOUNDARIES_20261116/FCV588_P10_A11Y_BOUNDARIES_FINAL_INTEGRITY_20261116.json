@@ -1,0 +1,81 @@
+{
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "checks": {
+    "NVDA": "BLOCKED_NOT_INSTALLED",
+    "chromeForcedColors": "EMULATION_ONLY_BOUNDED_PASS_ONE_VIEWPORT",
+    "nativeNarratorSpeech": "BLOCKED_NOT_RUN",
+    "realOSPowerHoldBlur": "NOT_VERIFIED_TWO_FAILURES_PRESERVED",
+    "realWindowsHighContrast": "NOT_RUN",
+    "runtime": "39/39 SHA MATCH",
+    "server4173": "HTTP200_UNTOUCHED",
+    "simulatorScreenshot": "1 PNG SHA MATCH",
+    "sourceReferencePhotos": "8/8 SHA MATCH",
+    "targetedInputUnitTests": "17/17 PASS",
+    "testPorts4207_4208": "CLOSED"
+  },
+  "createdAt": "2026-11-16T13:47:43.748242+07:00",
+  "evidence": {
+    "emulatedForcedColors": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-forced-colors/P10_CHROME_EMULATED_FORCED_COLORS_20261116.json",
+      "sha256": "410ef2b20c936b5e292cd2d15c69ad322badb05904044e7cb96796ab2a08e97d"
+    },
+    "emulatedPNG": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-forced-colors/P10_CHROME_EMULATED_FORCED_COLORS_1366x768_20261116.png",
+      "sha256": "a1e86d366f71c82f84f07b3c7de2de51fde5eb54570ee4adcc25efa83282a991"
+    },
+    "independentEvidenceReview": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-review/P10_INDEPENDENT_EVIDENCE_REVIEW_WORKER1_20261116.json",
+      "sha256": "dc7a8d07f9002bb61a28c7528d2b29c0bd9bf194ed208dec8a50fd66d07dffee"
+    },
+    "narratorFeasibility": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-narrator-feasibility/P10_NARRATOR_FEASIBILITY_20261116.json",
+      "sha256": "6313be94b65c4c3d658ce92b566592511acf69707205d445f7c68c82b86e3544"
+    },
+    "nativeBlurFirstFailure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_RECEIPT_20261116.json",
+      "sha256": "61252852a5ec83870264f48a64d41b01c56e07b111f2cbfdfa8f32e11c14c114"
+    },
+    "nativeBlurSecondFailure": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_V2_RECEIPT_20261116.json",
+      "sha256": "ce6963391c930130a817eeffe8f6f83c33ccc429020c4825ae0963f0d5826687"
+    },
+    "parentP09": {
+      "path": "docs/qa/FCV588_P09_ROI_BOUNDARY_20261116/FCV588_P09_ROI_BOUNDARY_FINAL_INTEGRITY_20261116.json",
+      "sha256": "759f146c349c2ad348fc5b98e21fbc79d1d857623253811f0a01d3b9408995b9"
+    },
+    "parentP09Post": {
+      "path": "docs/qa/FCV588_P09_ROI_BOUNDARY_20261116/FCV588_P09_ROI_BOUNDARY_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "cc3888a17c34271ba9163b86cfe4427442a1e6b5a847e4ac714661565657a26e"
+    },
+    "targetedNode17": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/p10-targeted-input-regression-20261116.txt",
+      "sha256": "b560330ec543e94c31f3a5ac58de7802eab87c4bd9d019e34369e5f3d7f3e249"
+    }
+  },
+  "failureInterpretation": {
+    "doNotUpgrade": "Javascript event dispatch, DOM focus, and Chrome forced-colors emulation do not establish actual Narrator speech, OS blur or Windows High Contrast.",
+    "initialTrial": "Chrome document reported focused but real Win32 foreground did not switch away successfully; not a valid native blur acceptance.",
+    "secondTrial": "Win32 foreground remained Helium; test browser never owned Win32 foreground as required; harness/environment blocker, not source-valid app bug."
+  },
+  "holds": {
+    "F1Phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "fullP07": "OPEN",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "releaseApproval": "HOLD",
+    "rights": "HOLD"
+  },
+  "operations": {
+    "historicalFailureReceiptOverwritten": false,
+    "nativeScreenReaderLaunched": false,
+    "photoOriginalEdited": false,
+    "sourceRuntimeEdited": false,
+    "testServerOwnedAndCleaned": true,
+    "userServerRestarted": false,
+    "windowsAccessibilitySettingChanged": false
+  },
+  "schema": "fcv588-p10-bounded-a11y-boundaries-final-integrity-v1",
+  "scope": "F1_PUBLIC_REFERENCE_V2_OFFLINE_WINDOWS_QA_ONLY_NO_PRODUCT_EDIT",
+  "status": "P10_TARGETED_SOFTWARE_AND_EMULATED_FORCED_COLORS_PASS_NATIVE_SPEECH_AND_OS_BLUR_BLOCKED"
+}

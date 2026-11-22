@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+ok 1 - V47 White Marker OEM operator label remains exact but training choice/source grade is explicit
+  ---
+  duration_ms: 3.9067
+  type: 'test'
+  ...
+# Subtest: V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+ok 2 - V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices
+  ---
+  duration_ms: 1.3017
+  type: 'test'
+  ...
+# Subtest: V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+ok 3 - V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading
+  ---
+  duration_ms: 1.4589
+  type: 'test'
+  ...
+# Subtest: V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+ok 4 - V47 White Marker notice is selection-scoped, does not leak into another Sounder entry
+  ---
+  duration_ms: 1.112
+  type: 'test'
+  ...
+# Subtest: V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+ok 5 - V47 independently authored White/Gray visual mock never changes raw sensor or physical firmware
+  ---
+  duration_ms: 16.016
+  type: 'test'
+  ...
+# Subtest: V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+ok 6 - V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded
+  ---
+  duration_ms: 2.6106
+  type: 'test'
+  ...
+# Subtest: V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+ok 7 - V47 live menu atlas source grade and B07 claim HOLD match runtime training-only contract
+  ---
+  duration_ms: 10.6396
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+ok 8 - V48 Phase6 total feature identity reconciles three ledgers without merging D15 into the OEM 64
+  ---
+  duration_ms: 2.5912
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+ok 9 - V48 Phase6 every implementation claim retains its matching trace source, rights and scope
+  ---
+  duration_ms: 1.1938
+  type: 'test'
+  ...
+# Subtest: V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+ok 10 - V48 Phase6 no source grade, domain smoke, training palette or citation promotes a released claim
+  ---
+  duration_ms: 0.9066
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 11 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.6261
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 12 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.3944
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 13 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.4009
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 14 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 2.684
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 170.2037

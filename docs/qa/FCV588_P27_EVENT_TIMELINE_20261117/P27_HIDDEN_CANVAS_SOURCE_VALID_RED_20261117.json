@@ -1,0 +1,9 @@
+{
+  "schema": "FCV588_P27_HIDDEN_CANVAS_SOURCE_VALID_RED_V1",
+  "status": "SOURCE_VALID_RED_FIRST_FRAME_RENDERED_WHILE_PARENT_HIDDEN",
+  "exitCode": 1,
+  "testSHA256": "af8d360843d49e06ef9d99acafcc5c88c76b5dbe99219f65721a590cd2042673",
+  "logSHA256": "52c8f15c028fe6beba440239f16d6edb2aead30b417d0cfce3ba58e946275591",
+  "reason": "Initial timeline frame drawn while parent hidden, unlike subsequent visible seeks; browser raw pixels were not idempotent, and invalid import left nonuniform canvas bytes",
+  "canonicalTouched": false
+}

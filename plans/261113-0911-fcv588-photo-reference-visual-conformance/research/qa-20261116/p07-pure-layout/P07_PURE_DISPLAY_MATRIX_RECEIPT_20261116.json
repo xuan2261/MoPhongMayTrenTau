@@ -1,0 +1,971 @@
+{
+  "schema": "fcv588-p07-pure-display-matrix-v1",
+  "date": "2026-11-16",
+  "runOn": "WINDOWS_CANONICAL_READ_ONLY",
+  "logicalLCD": {
+    "width": 480,
+    "height": 640
+  },
+  "externalViewports": [
+    {
+      "width": 375,
+      "height": 812
+    },
+    {
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "modeCount": 7,
+  "zoomCount": 3,
+  "caseCount": 63,
+  "checks": 447,
+  "status": "PASS",
+  "failures": [],
+  "trackedSourceSha256": {
+    "src/devices/fcv588/display-layout.mjs": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "web/lcd-presentation.mjs": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "web/app.mjs": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee"
+  },
+  "sourceStable": true,
+  "cases": [
+    {
+      "id": "375x812/LF/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/LF/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/LF/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/DUAL/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/DUAL/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/DUAL/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "DUAL",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/LF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/LF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/LF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/HF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV1/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV1/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV1/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV1",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV2/Bottom Lock",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV2/Bottom Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "375x812/NAV2/Marker Zoom",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "NAV2",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/DUAL/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/DUAL/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/DUAL/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "DUAL",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/LF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/HF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV1/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV1/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV1/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV1",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV2/Bottom Lock",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV2/Bottom Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1366x768/NAV2/Marker Zoom",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "NAV2",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/DUAL/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/DUAL/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "DUAL",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/DUAL/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "DUAL",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "lf",
+        "hf"
+      ],
+      "header": "AUTO_R   G:AF   LF/HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/LF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "LF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-LF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF-ZOOM/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BL-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF-ZOOM/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   BZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/HF-ZOOM/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "HF-ZOOM",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "zoom",
+        "normal"
+      ],
+      "header": "AUTO_R   G:AF   MZ-HF   x1",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV1/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV1/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV1",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV1/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV1",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV2/Bottom Lock",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Lock",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV2/Bottom Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV2",
+      "zoomMode": "Bottom Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    },
+    {
+      "id": "1920x1080/NAV2/Marker Zoom",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "mode": "NAV2",
+      "zoomMode": "Marker Zoom",
+      "paneKeys": [
+        "nav",
+        "sonar"
+      ],
+      "header": "",
+      "checks": 7
+    }
+  ],
+  "limits": [
+    "Geometry projector is 480x640 logical and repeated under external viewport labels; real CSS/Chrome viewport acceptance is separate",
+    "No OEM photometric/physical/firmware/rights claim",
+    "The 3 zoom choices are inert for non-ZOOM modes"
+  ]
+}

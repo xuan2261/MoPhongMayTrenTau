@@ -1,0 +1,9 @@
+{
+  "schema": "FCV588_P26_POWER_OFF_RED_V1",
+  "status": "SOURCE_VALID_RED_POWER_OFF_LF_ZOOM_NOT_VISIBLE",
+  "exitCode": 1,
+  "testSHA256": "89d524f8177262ee351d3555f7f4e717daca8ffbcc3c27dcd4a0c14bfb8433d3",
+  "logSHA256": "7aa5a5f82aa4b258e1b3dcde242c9240c27825713e86b12308bb32110dcd25d7",
+  "rootCause": "mode LF-ZOOM retained after physical power-off, viewer must also require state.power on before synthesizing LCD",
+  "canonicalTouched": false
+}

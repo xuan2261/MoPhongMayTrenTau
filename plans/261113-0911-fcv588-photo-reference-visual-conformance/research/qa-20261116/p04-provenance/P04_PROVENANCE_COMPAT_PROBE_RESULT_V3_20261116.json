@@ -1,0 +1,90 @@
+{
+  "schema": "fcv588-p04-provenance-compat-probe-v1",
+  "status": "PASS",
+  "node": "v22.22.0",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "profileRevision": "F1-public-reference-21",
+  "sessions": [
+    {
+      "name": "off-world-four-ticks",
+      "eventCount": 1,
+      "sessionHash": "f0-fnv1a32-d9a5ae66",
+      "contentFingerprint": "f0-fnv1a32-a7985037",
+      "finalSessionHash": "f0-fnv1a32-d9a5ae66"
+    },
+    {
+      "name": "boot-mode-range",
+      "eventCount": 8,
+      "sessionHash": "f0-fnv1a32-027f1f5a",
+      "contentFingerprint": "f0-fnv1a32-0693ef10",
+      "finalSessionHash": "f0-fnv1a32-027f1f5a"
+    }
+  ],
+  "observation": {
+    "options": {
+      "columns": 48,
+      "rows": 151
+    },
+    "simTick": 17,
+    "canonicalKeys": [
+      "bottomDepthM",
+      "channels",
+      "columns",
+      "maxDepthM",
+      "modelVersion",
+      "recommendedAutoRangeM",
+      "rows",
+      "simTick",
+      "syntheticTargets"
+    ],
+    "stageKeys": [
+      "bottomDepthM",
+      "channels",
+      "columns",
+      "maxDepthM",
+      "modelVersion",
+      "recommendedAutoRangeM",
+      "rows",
+      "simTick",
+      "syntheticTargets"
+    ],
+    "additiveStageKeys": [],
+    "existingFieldsIdentical": true,
+    "rawChannelsIdentical": true,
+    "raw": {
+      "50": {
+        "bytes": 7248,
+        "sha256": "2bffc150364ad95bb4a9275c4c769394aa4514d95dd752b36c3a3264a59dc4d9",
+        "protocolFingerprint": "f0-fnv1a32-e40754d6"
+      },
+      "200": {
+        "bytes": 7248,
+        "sha256": "8e8e265dd269d6ce80be96b7832b8b75fd2ea3bb3444e78294c12dd740959643",
+        "protocolFingerprint": "f0-fnv1a32-d7d5a503"
+      }
+    }
+  },
+  "sourceSha256": {
+    "src/core/scenario.mjs": {
+      "canonical": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+      "stage": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a"
+    },
+    "src/core/session.mjs": {
+      "canonical": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "stage": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+    },
+    "src/core/protocol.mjs": {
+      "canonical": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "stage": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+    },
+    "src/devices/fcv588/adapter.mjs": {
+      "canonical": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "stage": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+    },
+    "src/devices/fcv588/profile-version.mjs": {
+      "canonical": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "stage": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+    }
+  }
+}

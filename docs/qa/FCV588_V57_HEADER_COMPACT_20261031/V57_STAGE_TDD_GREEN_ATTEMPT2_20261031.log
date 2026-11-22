@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: V57 keeps one canonical public-reference notice in the masthead
+ok 1 - V57 keeps one canonical public-reference notice in the masthead
+  ---
+  duration_ms: 1.4315
+  type: 'test'
+  ...
+# Subtest: V57 removes repeated eyebrow and keeps a concise, truthful console heading
+ok 2 - V57 removes repeated eyebrow and keeps a concise, truthful console heading
+  ---
+  duration_ms: 0.229
+  type: 'test'
+  ...
+# Subtest: V57 preserves live MODE state and concise synthetic-echo source cue
+ok 3 - V57 preserves live MODE state and concise synthetic-echo source cue
+  ---
+  duration_ms: 0.2277
+  type: 'test'
+  ...
+# Subtest: V57 retains explicit no-hardware and no-navigation safety disclaimer
+ok 4 - V57 retains explicit no-hardware and no-navigation safety disclaimer
+  ---
+  duration_ms: 0.1862
+  type: 'test'
+  ...
+# Subtest: V57 compact masthead remains visible and responsive at phone width
+ok 5 - V57 compact masthead remains visible and responsive at phone width
+  ---
+  duration_ms: 0.3089
+  type: 'test'
+  ...
+# Subtest: V57 runtime MODE cue keeps its live mode and short synthetic-source label
+ok 6 - V57 runtime MODE cue keeps its live mode and short synthetic-source label
+  ---
+  duration_ms: 0.4845
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 299.1411

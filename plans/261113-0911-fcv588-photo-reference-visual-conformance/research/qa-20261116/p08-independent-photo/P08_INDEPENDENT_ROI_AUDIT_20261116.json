@@ -1,0 +1,245 @@
+{
+  "schema": "fcv588-p08-independent-photo-lcd-roi-audit-v1",
+  "createdAt": "2026-11-16T10:39:30.9759137+07:00",
+  "reviewerId": "worker-1",
+  "scope": "READ_ONLY_SOURCE_PHOTO_LCD_PLANE_ROI_CALIBRATION_AUDIT",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "decision": "GO_BOUNDED_LCD_PLANE_NORMALIZATION_ONLY",
+  "decisionMeaning": {
+    "go": [
+      "record tentative four-corner LCD-plane ROI metadata for all eight reference photos",
+      "use a per-image four-point projective homography in memory for normalized intra-LCD landmark comparison",
+      "use the coordinates only with the stated uncertainty and source-photo identity bindings"
+    ],
+    "hold": [
+      "physical millimetre calibration or device-face metrology",
+      "OEM framebuffer/pixel coordinate conformity",
+      "OEM RGB, glyph, font, detent or bezel/control geometry conformity",
+      "saved or redistributed cropped/warped OEM-reference derivatives",
+      "any claim that a homography-to-480x640 proves the source LCD is exactly a 480x640 framebuffer",
+      "hardware, firmware, rights or release approval"
+    ]
+  },
+  "authority": {
+    "p01PhotoAtlas": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/2026-11-14-photo-mode-atlas.md",
+      "sha256": "eb005af84b63e09450f2009dec809ab5e6098262f7645e7cd09f9ab75e1ef6c4"
+    },
+    "p07PhotoA11yReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-photo-a11y/P07_VISUAL_REFERENCE_A11Y_RECEIPT_20261116.json",
+      "sha256": "e7ffaf820926d0999f7b7359b9781c4fd1a002673e07f2f374ad24ff08a2d819",
+      "decision": "PASS_WITH_SOURCE_GAPS"
+    },
+    "rights": {
+      "classification": "REFERENCE_ONLY",
+      "rightsOwner": "UNKNOWN",
+      "licenseOrGrant": "NOT_PROVIDED",
+      "internalObservation": "project_user_supplied_reference",
+      "derivativesForRedistribution": "HOLD",
+      "distributableRuntimeUse": "DENIED_UNTIL_CLEARANCE",
+      "proprietaryFontFirmwareUse": "DENIED"
+    }
+  },
+  "coordinateDiscipline": {
+    "imageSizePx": [590, 1280],
+    "origin": "top-left",
+    "xDirection": "right",
+    "yDirection": "down",
+    "cornerOrder": ["TL", "TR", "BR", "BL"],
+    "cornerDefinition": "intersection of locally fitted visible inner LCD aperture/active-display boundary lines; not hidden manufacturing glass/panel corners",
+    "coordinateStatus": "TENTATIVE_IMAGE_SPACE_METADATA_NOT_OEM_CONSTANTS",
+    "uncertaintyMeaning": "conservative approximate radial pixel uncertainty around each listed corner; includes rounded aperture ambiguity, glare/moiré and local edge-fit spread",
+    "noMillimetreConversion": true,
+    "noFramebufferConformityInference": true
+  },
+  "method": {
+    "directImageViewing": "ALL_8_VIEWED_WITH_LOCAL_IMAGE_VIEWER",
+    "sourceHashing": "SHA256_REHASHED_FROM_ORIGINAL_FILES",
+    "edgeCrossCheck": "read-only Scharr/Canny/Hough-style edge inspection plus robust local line fitting in narrow boundary bands seeded from direct visual inspection",
+    "warpedImageCreated": false,
+    "cropCreated": false,
+    "referenceImageModified": false,
+    "networkUsed": false,
+    "browserUsed": false,
+    "server4173Touched": false
+  },
+  "photos": [
+    {
+      "name": "giaoDien.jpg",
+      "sha256": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "bytes": 201715,
+      "mode": "MENU",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[98,423],"TR":[424,418],"BR":[422,884],"BL":[99,897]},
+      "uncertaintyPx": 10,
+      "confidence": "MEDIUM_HIGH",
+      "occlusion": "no LCD corner fully occluded; rounded inner aperture and dark top header make exact active-plane boundary non-singular",
+      "cameraPerspective": "mild projective skew; top/bottom widths are similar but right/left heights and bottom edge differ slightly",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    },
+    {
+      "name": "lf.jpg",
+      "sha256": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "bytes": 192510,
+      "mode": "LF",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[89,357],"TR":[467,341],"BR":[480,920],"BL":[95,904]},
+      "uncertaintyPx": 14,
+      "confidence": "MEDIUM",
+      "occlusion": "no LCD corner fully occluded; strong sonar texture and rounded aperture reduce edge uniqueness near top/left",
+      "cameraPerspective": "moderate; right visible side is longer than left and the top/bottom edges are not parallel in raw image space",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    },
+    {
+      "name": "hf.jpg",
+      "sha256": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "bytes": 172515,
+      "mode": "HF",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[93,383],"TR":[491,366],"BR":[490,953],"BL":[82,948]},
+      "uncertaintyPx": 8,
+      "confidence": "HIGH_FOR_IMAGE_SPACE_MEDIUM_FOR_PHYSICAL_PLANE",
+      "occlusion": "no LCD corner fully occluded; lower and side boundaries are visually strong, top boundary still affected by rounded/dark aperture",
+      "cameraPerspective": "moderate projective skew",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    },
+    {
+      "name": "dual.jpg",
+      "sha256": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "bytes": 195647,
+      "mode": "DUAL",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[80,389],"TR":[458,370],"BR":[451,934],"BL":[71,922]},
+      "uncertaintyPx": 10,
+      "confidence": "MEDIUM_HIGH",
+      "occlusion": "no LCD corner fully occluded; active content reaches near borders and causes local competing edges",
+      "cameraPerspective": "moderate; left/right side lengths differ measurably in raw image space",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    },
+    {
+      "name": "zoom.jpg",
+      "sha256": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "bytes": 186315,
+      "mode": "BL-LF",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[59,295],"TR":[473,270],"BR":[456,878],"BL":[56,877]},
+      "uncertaintyPx": 12,
+      "confidence": "MEDIUM",
+      "occlusion": "no LCD corner fully occluded; strong oblique top edge and bottom content/bloom make exact inner-plane edge moderately ambiguous",
+      "cameraPerspective": "moderate; top edge is visibly oblique and right side longer than left",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    },
+    {
+      "name": "zoom2.jpg",
+      "sha256": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99",
+      "bytes": 170297,
+      "mode": "BL-HF",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[85,390],"TR":[493,366],"BR":[475,936],"BL":[87,973]},
+      "uncertaintyPx": 15,
+      "confidence": "MEDIUM_LOW",
+      "occlusion": "no LCD corner fully occluded, but lower-left/lower edge has the largest local boundary ambiguity in this set due to perspective, rounded aperture and bright content",
+      "cameraPerspective": "moderate; top/bottom widths and bottom-edge slope differ enough that rectification is useful",
+      "homographyUse": "HELPFUL_BUT_SENSITIVE_TO_CORNER_UNCERTAINTY"
+    },
+    {
+      "name": "nav1.jpg",
+      "sha256": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "bytes": 177079,
+      "mode": "NAV1",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[69,431],"TR":[444,409],"BR":[439,961],"BL":[68,937]},
+      "uncertaintyPx": 15,
+      "confidence": "MEDIUM_LOW",
+      "occlusion": "no LCD corner fully occluded; right-side sonar strip and lower border create competing vertical/horizontal transitions",
+      "cameraPerspective": "strongest left/right side-length asymmetry among the audited images; projective correction is useful but uncertainty must remain explicit",
+      "homographyUse": "HELPFUL_BUT_SENSITIVE_TO_CORNER_UNCERTAINTY"
+    },
+    {
+      "name": "nav2.jpg",
+      "sha256": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "bytes": 167246,
+      "mode": "NAV2",
+      "imageViewed": true,
+      "fourInnerLcdCornersGroundable": "YES_TENTATIVE_NOT_CALIBRATION_GRADE",
+      "cornersPx": {"TL":[94,369],"TR":[439,348],"BR":[422,825],"BL":[100,826]},
+      "uncertaintyPx": 9,
+      "confidence": "MEDIUM_HIGH",
+      "occlusion": "no LCD corner fully occluded; visible boundaries are relatively strong, with the main ambiguity at the rounded top aperture",
+      "cameraPerspective": "moderate-to-strong top/bottom width change; per-image homography would materially normalize the LCD plane",
+      "homographyUse": "HELPFUL_FOR_LCD_PLANE_NORMALIZATION_ONLY"
+    }
+  ],
+  "perspectiveCrossCheck": {
+    "purpose": "show why per-image rectification helps without converting the JPEG into a physical calibration oracle",
+    "rawSideLengthObservationsPxApprox": {
+      "giaoDien.jpg": {"top":326.4,"bottom":323.5,"left":473.6,"right":466.4},
+      "lf.jpg": {"top":377.6,"bottom":384.9,"left":547.3,"right":578.7},
+      "hf.jpg": {"top":398.1,"bottom":408.3,"left":565.3,"right":586.6},
+      "dual.jpg": {"top":378.0,"bottom":380.1,"left":533.4,"right":564.0},
+      "zoom.jpg": {"top":414.5,"bottom":399.3,"left":581.6,"right":607.4},
+      "zoom2.jpg": {"top":409.0,"bottom":389.3,"left":582.2,"right":570.6},
+      "nav1.jpg": {"top":375.8,"bottom":372.1,"left":505.9,"right":552.7},
+      "nav2.jpg": {"top":345.6,"bottom":322.0,"left":457.5,"right":477.3}
+    },
+    "interpretation": "non-equal opposite side lengths and oblique edges are consistent with camera perspective; these are image-space observations, not physical dimensions"
+  },
+  "homographyAssessment": {
+    "fourPointHomographyHelps": true,
+    "validUse": "rectify each visible LCD quadrilateral into an arbitrary normalized unit rectangle for comparing intra-LCD topology such as pane split, header bands, depth/readout placement and menu regions",
+    "invalidUses": [
+      "mapping to 480x640 and then treating exact 480x640 agreement as independent evidence",
+      "converting normalized coordinates to millimetres without a coplanar calibrated scale",
+      "applying the LCD-plane homography to non-planar bezel, keys, pad or knobs",
+      "claiming lens distortion removal without camera calibration",
+      "claiming OEM pixel/RGB/font fidelity from a phone-camera photograph"
+    ],
+    "lensDistortion": "UNKNOWN_UNCORRECTED",
+    "cameraIntrinsics": "UNKNOWN",
+    "coplanarScaleTarget": "ABSENT",
+    "destinationAspectRatio": "MUST_BE_DECLARED_AS_ANALYST_CHOICE_UNLESS_INDEPENDENTLY_SOURCED"
+  },
+  "evidenceLimitations": [
+    "all four listed points are visible-image aperture/active-plane line intersections, not hidden physical panel manufacturing corners",
+    "rounded aperture and protective cover/glass can shift the apparent boundary by several pixels",
+    "moiré, glare, exposure and sonar/menu content create competing edges",
+    "camera pose changes across the eight photos; there is no shared camera calibration",
+    "no checkerboard, AprilTag, ruler or other coplanar scale target is present",
+    "a four-point projective transform does not model radial/tangential lens distortion",
+    "rights permit internal observation only; no saved crop/warp/derived OEM image is authorized for redistribution or served runtime"
+  ],
+  "requiredBlockersForStrongerClaims": [
+    "for physical/mm calibration: acquire a lawful photo with calibrated intrinsics and a known coplanar scale/target",
+    "for lower corner uncertainty: obtain a second independent blind point-pick or repeat capture with square-on camera and unoccluded sharp LCD boundary",
+    "for OEM framebuffer conformity: obtain lawful source-native framebuffer/reference data rather than camera JPEG",
+    "for distributable derived images: obtain explicit rights clearance"
+  ],
+  "holds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemFidelityPercentClaim": null
+  },
+  "operations": {
+    "sourceEdited": false,
+    "canonicalEdited": false,
+    "originalPhotoEdited": false,
+    "otherReportEdited": false,
+    "browserLaunched": false,
+    "server4173Touched": false,
+    "networkUsed": false,
+    "oemMediaCopiedIntoServedRuntime": false,
+    "savedPhotoDerivativeCreated": false,
+    "reportWriteOnce": true
+  }
+}

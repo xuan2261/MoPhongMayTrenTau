@@ -1,0 +1,27 @@
+{
+  "schema": "FCV588_P31_NATIVE_POWER_BLUR_V1",
+  "status": "PASS",
+  "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P31_NATIVE_A11Y_20261121\\profile-native-power-blur-v1",
+  "test": "POWER SpaceDown, true OS foreground switch, SpaceUp",
+  "events": [],
+  "checks": [
+    "APP_PAUSED_WITH_NATIVE_UIA",
+    "POWER_APP_WIN32_FOREGROUND",
+    "REAL_HELPER_WIN32_FOREGROUND",
+    "EXACT_DOWN_PLUS_BLUR_CANCEL_TWO_EVENTS",
+    "POWER_REMAINS_OFF_AFTER_HELPER_KEYUP"
+  ],
+  "errors": [],
+  "releaseApproval": "HOLD",
+  "sourceBoundEventCount": true,
+  "appWindowHWND": 255855612,
+  "appPID": 27628,
+  "eventCountBefore": 4,
+  "foregroundBefore": 255855612,
+  "eventCountAfterSpaceDown": 5,
+  "helperWindowHWND": 212928176,
+  "foregroundHelper": 212928176,
+  "foregroundAfter": 255855612,
+  "eventCountAfterBlurAndKeyUp": 6,
+  "powerOffAfterBlur": true
+}

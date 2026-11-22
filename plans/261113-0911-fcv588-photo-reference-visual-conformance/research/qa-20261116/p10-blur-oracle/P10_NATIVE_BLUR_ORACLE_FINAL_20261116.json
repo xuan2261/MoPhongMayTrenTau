@@ -1,0 +1,163 @@
+{
+  "schema": "fcv588-p10-native-blur-oracle-final-v1",
+  "createdAt": "2026-11-16T15:51:00+07:00",
+  "status": "READY_SOURCE_BOUND_NATIVE_UI_NOT_RUN",
+  "scope": "NON_UI_SOURCE_BOUND_ORACLE_FOR_REAL_OS_CHROME_BLUR_REFOCUS_AND_D15_KEYBOARD",
+  "actualNativeVerification": "NOT_RUN",
+  "authority": {
+    "p09": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p09-geometry-qa/P09_DETERMINISTIC_HOMOGRAPHY_QA_20261116.json",
+      "sha256": "7e41f688ba684df7aa9720745d665bec323f1f96c7d3a512901563d600571aab",
+      "boundary": "mathematicalHomographyQA PASS; physical truth/ROI/OEM remain HOLD"
+    },
+    "p07Final": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "sha256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726"
+    }
+  },
+  "sourceBindings": [
+    {"path":"web/hold-input.mjs","sha256":"2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086","lines":"14-30,32-77,87-109"},
+    {"path":"web/pad-repeat.mjs","sha256":"92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad","lines":"19-41,57-79,80-103"},
+    {"path":"web/rotary-input.mjs","sha256":"cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc","lines":"9-17,18-55,64-73"},
+    {"path":"web/keyboard-shortcuts.mjs","sha256":"f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb","lines":"1-19"},
+    {"path":"web/instructor-tabs.mjs","sha256":"0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800","lines":"14-23,26-85"},
+    {"path":"test/hold-input.test.mjs","sha256":"22387a216648038f06f2174a0621b0058d3696fc1f05ecb2aa1cd0e87ce00bc4","lines":"98-121,139-157"},
+    {"path":"test/fcv588-public-pad-repeat.test.mjs","sha256":"1ea324d2162e4a11627e8b37183ac4d334e320b1a6411a55392afe6e59a47283","lines":"91-107"},
+    {"path":"test/fcv588-public-rotary-input.test.mjs","sha256":"ca97631c6fee008c23bfe0985394ca41daba5dbc5491d9eed82bfb352940cd9a","lines":"47-65,83-104"},
+    {"path":"test/fcv588-device-focus.test.mjs","sha256":"cfc5aff3ee1f835cceb2c91ff37dcd04f8097674acf2bf3803af398623856250","lines":"9-38"}
+  ],
+  "powerBlurOracle": {
+    "purpose": "prove a genuine Windows foreground loss/refocus while a real POWER hold is active, without accepting synthetic DOM blur as native evidence",
+    "preconditions": [
+      "exact current canonical source hashes match sourceBindings",
+      "QA Chrome PID and foreground HWND recorded before interaction",
+      "device is powered on and simulation/world is paused or otherwise event baseline is frozen",
+      "sessionBeforeCount recorded before POWER interaction",
+      "browser instrumentation is observation-only and does not dispatch input/focus events"
+    ],
+    "requiredNativeProvenance": {
+      "browser": [
+        "POWER activation event is trusted pointerdown or keydown on #key-power",
+        "exactly one trusted window blur is observed with document.hasFocus()==false",
+        "exactly one trusted window focus is observed later with document.hasFocus()==true"
+      ],
+      "windows": [
+        "foreground PID/HWND before blur belongs to QA Chrome",
+        "foreground PID/HWND during blur belongs to a different process/window",
+        "foreground PID/HWND after refocus belongs to the same QA Chrome PID again"
+      ],
+      "explicitlyInsufficient": [
+        "window.dispatchEvent(new Event('blur'))",
+        "Playwright page.dispatchEvent/locator.dispatchEvent blur",
+        "page-side window.blur() without Windows foreground transition",
+        "unit-test EventTarget dispatch alone",
+        "Event.isTrusted alone without independent Windows foreground evidence"
+      ]
+    },
+    "timingOracle": {
+      "activationToBlurMs": "50 <= delta < 3000",
+      "order": "POWER activation < trusted window.blur < trusted window.focus",
+      "reason": "bounded active hold before 3000 ms long-hold threshold; no release classification should occur"
+    },
+    "canonicalSessionOracle": {
+      "eventsSinceBaseline": [
+        {"offset":1,"kind":"down","control":"power"},
+        {"offset":2,"kind":"cancel","control":"power"}
+      ],
+      "forbidden": [
+        "POWER up event during blur cancellation",
+        "POWER press/short or press/long derived action",
+        "extra simulator event caused solely by window refocus"
+      ],
+      "sourceBasis": "hold-input.mjs finish('cancel') + session.mjs heldControls cancel semantics + model.mjs power-hold cancel restoration"
+    },
+    "stateOracle": {
+      "preBlur": {
+        "pressingClass": true,
+        "heldControlsPower": true,
+        "devicePower": "on",
+        "overlayKind": "power-hold"
+      },
+      "postBlur": {
+        "pressingClass": false,
+        "heldControlsPower": false,
+        "devicePower": "on",
+        "notice": "POWER HOLD CANCELLED",
+        "overlay": "prior overlay restored; no forced power-off"
+      },
+      "postRefocus": {
+        "documentHasFocus": true,
+        "pressingClass": false,
+        "heldControlsPower": false,
+        "devicePower": "on",
+        "sessionEventCountDelta": 2,
+        "freshPowerInteraction": "must work once after refocus, proving no stranded adapter state"
+      }
+    },
+    "nativeBrowserOrderingAllowance": "trusted pointercancel/lostpointercapture may occur before or around window.blur; this is acceptable only if the canonical session still contains exactly one down and one cancel, never duplicate cancel/up"
+  },
+  "d15KeyboardOracle": {
+    "purpose": "prove keyboard ownership stays inside D15 and does not leak FCV operator events",
+    "initial": {
+      "tabCount": 5,
+      "tabsReady": true,
+      "focusedSelectedTab": "d15-tab-session",
+      "sessionEventCount": "baseline"
+    },
+    "trustedKeySequence": [
+      {"key":"ArrowRight","target":"d15-tab-session","result":"d15-tab-help"},
+      {"key":"ArrowRight","target":"d15-tab-help","result":"d15-tab-fixtures"},
+      {"key":"ArrowRight","target":"d15-tab-fixtures","result":"d15-tab-lessons"},
+      {"key":"ArrowRight","target":"d15-tab-lessons","result":"d15-tab-sources"}
+    ],
+    "perTransition": [
+      "keydown isTrusted==true and repeat==false",
+      "instructor-tabs handler owns ArrowRight and preventDefault is observed after handler",
+      "activeElement becomes resulting tab",
+      "exactly one aria-selected=true tab",
+      "selected tab tabindex=0 and all other D15 tabs tabindex=-1",
+      "exactly one matching tabpanel is visible",
+      "shouldRouteFcvShortcut(...) is false because target is inside .training-panel"
+    ],
+    "final": {
+      "selectedFocusedTab": "d15-tab-sources",
+      "visiblePanel": "d15-panel-sources",
+      "operatorEventDelta": 0,
+      "sessionEventCountDelta": 0
+    }
+  },
+  "validator": {
+    "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-blur-oracle/p10_validate_native_blur_evidence.py",
+    "sha256": "4a8e577064d171b5bc8b0e99b513a79f3883f807ddfa84797da442b20abe2a99",
+    "inputSchema": "fcv588-p10-native-os-event-evidence-v1",
+    "outputSchema": "fcv588-p10-native-os-event-validation-v1",
+    "executedAgainstNativeEvidence": false
+  },
+  "limits": [
+    "P10 did not operate desktop/window/browser and therefore does not itself verify native blur/refocus.",
+    "Synthetic dispatch tests prove adapter contracts only; they are not evidence of Windows foreground provenance.",
+    "The validator depends on truthful OS foreground PID/HWND observations captured by the UI owner; it cannot independently reconstruct missing native provenance after the fact.",
+    "D15 trusted key provenance does not imply Narrator/NVDA spoken-output verification.",
+    "No OEM physical, firmware, rights, release or accessibility-conformance claim follows from this oracle."
+  ],
+  "holds": {
+    "nativePowerBlurRefocus": "NOT_RUN",
+    "nativeD15Keyboard": "NOT_RUN_BY_P10",
+    "narratorNvda": "NOT_RUN",
+    "forcedColors": "NOT_RUN",
+    "phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD"
+  },
+  "operations": {
+    "browserStarted": false,
+    "desktopOrWindowControlled": false,
+    "serverOrPortChanged": false,
+    "runtimeEdited": false,
+    "windowsSettingsChanged": false,
+    "qaFilesOnly": true
+  }
+}

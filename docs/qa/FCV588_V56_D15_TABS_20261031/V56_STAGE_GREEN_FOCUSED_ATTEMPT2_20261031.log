@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: V36: source changes are discrete; first render is silent
+ok 1 - V36: source changes are discrete; first render is silent
+  ---
+  duration_ms: 2.9236
+  type: 'test'
+  ...
+# Subtest: V36: world tick changes age but not announcement or stored state
+ok 2 - V36: world tick changes age but not announcement or stored state
+  ---
+  duration_ms: 1.442
+  type: 'test'
+  ...
+# Subtest: V36: revoke emits a single human-readable D14 status change
+ok 3 - V36: revoke emits a single human-readable D14 status change
+  ---
+  duration_ms: 0.636
+  type: 'test'
+  ...
+# Subtest: V36: stale threshold notifies once, never on every expired tick
+ok 4 - V36: stale threshold notifies once, never on every expired tick
+  ---
+  duration_ms: 0.5066
+  type: 'test'
+  ...
+# Subtest: V36: D09 grant/revoke and D14 exclusion combine into one announcement
+ok 5 - V36: D09 grant/revoke and D14 exclusion combine into one announcement
+  ---
+  duration_ms: 0.6875
+  type: 'test'
+  ...
+# Subtest: V36: malformed previous rows fail closed instead of announcing
+ok 6 - V36: malformed previous rows fail closed instead of announcing
+  ---
+  duration_ms: 0.3753
+  type: 'test'
+  ...
+# Subtest: V36: three named h4 articles and one off-device polite live status
+ok 7 - V36: three named h4 articles and one off-device polite live status
+  ---
+  duration_ms: 10.6863
+  type: 'test'
+  ...
+# Subtest: V36: D15 typography is rem-based without editing OEM LCD CSS
+ok 8 - V36: D15 typography is rem-based without editing OEM LCD CSS
+  ---
+  duration_ms: 1.5281
+  type: 'test'
+  ...
+# Subtest: V36: app announces only semantic changes, without timers or FCV input
+ok 9 - V36: app announces only semantic changes, without timers or FCV input
+  ---
+  duration_ms: 2.4444
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 10 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.6742
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 11 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.3886
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 12 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.387
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 13 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 2.9198
+  type: 'test'
+  ...
+# Subtest: V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+ok 14 - V56: D15 provides actual tablist/tabpanel structure instead of a 3230px stack
+  ---
+  duration_ms: 1.7141
+  type: 'test'
+  ...
+# Subtest: V56: all existing instructor capabilities and live regions remain unique
+ok 15 - V56: all existing instructor capabilities and live regions remain unique
+  ---
+  duration_ms: 0.8817
+  type: 'test'
+  ...
+# Subtest: V56: tab selection is owned by a one-time UI binder, never reducer/replay
+ok 16 - V56: tab selection is owned by a one-time UI binder, never reducer/replay
+  ---
+  duration_ms: 0.2519
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 17 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.6067
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 18 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.4703
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 19 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2091
+  type: 'test'
+  ...
+# Subtest: NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+ok 20 - NAV shows synthetic/no-data truth and Zoom is explicitly illustrative
+  ---
+  duration_ms: 0.4431
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 155.4615

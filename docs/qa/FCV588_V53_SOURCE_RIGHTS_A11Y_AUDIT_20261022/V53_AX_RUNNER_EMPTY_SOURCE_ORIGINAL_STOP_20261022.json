@@ -1,0 +1,11 @@
+{
+  "timestampUtc": "2026-10-22T05:17:31.5344664Z",
+  "scope": "QA helper only",
+  "failedArtifact": "v53_browser_ax_dom_bounded_qa.py",
+  "observedLengthBytes": 0,
+  "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "originalCommandReported": "PYTHON_AST_PASS_AND_EMPTY_SHA",
+  "disposition": "DO_NOT_EXECUTE_EMPTY_SOURCE; preserve original artifact",
+  "rootCause": "NOT_DETERMINED; here-string and long command separately tested; no product defect established",
+  "allowedNext": "create distinct v2 helper with minimum-length and real AST/sanity check"
+}

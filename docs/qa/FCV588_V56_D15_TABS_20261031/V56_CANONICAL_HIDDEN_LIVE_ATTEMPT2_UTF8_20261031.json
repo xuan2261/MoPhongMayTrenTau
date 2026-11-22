@@ -1,0 +1,17 @@
+{
+  "scope": "REAL_CHROME_DOM_NOT_SPOKEN_OUTPUT",
+  "status": "CHROME_DOM_LIVE_PRESERVED_PASS",
+  "noTabEventCountChange": true,
+  "semanticLive": {
+    "guidanceTitle": "Trạng thái mô phỏng",
+    "liveText": "Trạng thái mô phỏng",
+    "sourceLiveHiddenAncestor": false,
+    "guidanceLiveHiddenAncestor": false,
+    "liveChanges": [
+      "Sounder / MENU",
+      "Trạng thái mô phỏng"
+    ],
+    "activeTab": "d15-tab-sources"
+  },
+  "browserPageErrors": []
+}

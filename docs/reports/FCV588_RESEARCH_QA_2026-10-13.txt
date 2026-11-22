@@ -1,0 +1,285 @@
+F0 + F1-RESEARCH VALIDATION RECEIPT
+workspace=
+C:\Work\MoPhongMayTrenTau
+timestamp=
+2026-10-13T20:53:39.0781201+07:00
+=== npm run check ===
+
+> mophongmaytrentau-f0@0.1.0 check
+> node --check src/core/session.mjs && node --check src/core/scenario.mjs && node --check src/devices/fcv588/model.mjs && node --check web/hold-input.mjs && node --check web/app.mjs && npm test
+
+
+> mophongmaytrentau-f0@0.1.0 test
+> node --test test/*.test.mjs
+
+TAP version 13
+# Subtest: F0 defaults are offline, pinned, and powered off
+ok 1 - F0 defaults are offline, pinned, and powered off
+  ---
+  duration_ms: 3.2973
+  type: 'test'
+  ...
+# Subtest: world clock advances with FCV off, while device remains off
+ok 2 - world clock advances with FCV off, while device remains off
+  ---
+  duration_ms: 54.3972
+  type: 'test'
+  ...
+# Subtest: physical long/short press comes from integer tick edges
+ok 3 - physical long/short press comes from integer tick edges
+  ---
+  duration_ms: 1.3642
+  type: 'test'
+  ...
+# Subtest: captured POWER hold duration works independently of paused sim time
+ok 4 - captured POWER hold duration works independently of paused sim time
+  ---
+  duration_ms: 3.1703
+  type: 'test'
+  ...
+# Subtest: boot completes on simulated ticks only
+ok 5 - boot completes on simulated ticks only
+  ---
+  duration_ms: 0.7323
+  type: 'test'
+  ...
+# Subtest: replay reproduces all session hashes and prefix checkpoints
+ok 6 - replay reproduces all session hashes and prefix checkpoints
+  ---
+  duration_ms: 14.2762
+  type: 'test'
+  ...
+# Subtest: reset clears held keys, sequence and all independent states
+ok 7 - reset clears held keys, sequence and all independent states
+  ---
+  duration_ms: 0.9748
+  type: 'test'
+  ...
+# Subtest: replay fails closed on header, scenario, profile, sequence or tick drift
+ok 8 - replay fails closed on header, scenario, profile, sequence or tick drift
+  ---
+  duration_ms: 2.0274
+  type: 'test'
+  ...
+# Subtest: swapped metadata and logs reject before any replay state updates
+ok 9 - swapped metadata and logs reject before any replay state updates
+  ---
+  duration_ms: 1.9581
+  type: 'test'
+  ...
+# Subtest: illegal control, reserved fields and edge errors reject
+ok 10 - illegal control, reserved fields and edge errors reject
+  ---
+  duration_ms: 1.7765
+  type: 'test'
+  ...
+# Subtest: stable named noise streams are independent of other device instances
+ok 11 - stable named noise streams are independent of other device instances
+  ---
+  duration_ms: 1.586
+  type: 'test'
+  ...
+# Subtest: device inputs never mutate or advance world until explicit tick
+ok 12 - device inputs never mutate or advance world until explicit tick
+  ---
+  duration_ms: 0.7974
+  type: 'test'
+  ...
+# Subtest: FCV mode knob cycles seven modes in order and wraps
+ok 13 - FCV mode knob cycles seven modes in order and wraps
+  ---
+  duration_ms: 5.2267
+  type: 'test'
+  ...
+# Subtest: range selection stages edits and only ENTER commits
+ok 14 - range selection stages edits and only ENTER commits
+  ---
+  duration_ms: 1.3919
+  type: 'test'
+  ...
+# Subtest: GAIN push selects manual mode and rotary changes 0..10
+ok 15 - GAIN push selects manual mode and rotary changes 0..10
+  ---
+  duration_ms: 2.9655
+  type: 'test'
+  ...
+# Subtest: GAIN knob in automatic mode displays guidance but does not alter gain
+ok 16 - GAIN knob in automatic mode displays guidance but does not alter gain
+  ---
+  duration_ms: 0.7676
+  type: 'test'
+  ...
+# Subtest: brilliance can be adjusted in dialog and committed with MENU/ESC
+ok 17 - brilliance can be adjusted in dialog and committed with MENU/ESC
+  ---
+  duration_ms: 1.0525
+  type: 'test'
+  ...
+# Subtest: free TrackPad adjusts VRM depth while sonar mode is active, not NAV
+ok 18 - free TrackPad adjusts VRM depth while sonar mode is active, not NAV
+  ---
+  duration_ms: 0.8285
+  type: 'test'
+  ...
+# Subtest: unsupported MARK and FUNC report unimplemented rather than fake success
+ok 19 - unsupported MARK and FUNC report unimplemented rather than fake success
+  ---
+  duration_ms: 0.9721
+  type: 'test'
+  ...
+# Subtest: observation remains identical under manual Range and Gain, display reacts
+ok 20 - observation remains identical under manual Range and Gain, display reacts
+  ---
+  duration_ms: 29.5032
+  type: 'test'
+  ...
+# Subtest: AgentKit F1 plan has seven non-empty planned phases and no fake completion
+ok 21 - AgentKit F1 plan has seven non-empty planned phases and no fake completion
+  ---
+  duration_ms: 10.0684
+  type: 'test'
+  ...
+# Subtest: all local markdown plan references resolve in the intended workspace
+ok 22 - all local markdown plan references resolve in the intended workspace
+  ---
+  duration_ms: 8.7269
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 23 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 3.5955
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 24 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 0.8561
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 25 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.6916
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 26 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.3882
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 27 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.4698
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 28 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.577
+  type: 'test'
+  ...
+# Subtest: evidence register is explicit about 6 devices and rejects unsupported release
+ok 29 - evidence register is explicit about 6 devices and rejects unsupported release
+  ---
+  duration_ms: 1.5151
+  type: 'test'
+  ...
+# Subtest: model and evidence registration cannot drift silently
+ok 30 - model and evidence registration cannot drift silently
+  ---
+  duration_ms: 0.6646
+  type: 'test'
+  ...
+# Subtest: other variants are held until model, hardware and version resolved
+ok 31 - other variants are held until model, hardware and version resolved
+  ---
+  duration_ms: 0.303
+  type: 'test'
+  ...
+# Subtest: FCV-588 research inventory tracks all 65 unique tasks by domain
+ok 32 - FCV-588 research inventory tracks all 65 unique tasks by domain
+  ---
+  duration_ms: 2.0202
+  type: 'test'
+  ...
+# Subtest: feature register explicitly keeps all research behaviors unapproved
+ok 33 - feature register explicitly keeps all research behaviors unapproved
+  ---
+  duration_ms: 0.4793
+  type: 'test'
+  ...
+# Subtest: research does not label provisional device behavior as validated
+ok 34 - research does not label provisional device behavior as validated
+  ---
+  duration_ms: 0.4969
+  type: 'test'
+  ...
+# Subtest: manual references stay rights-restricted and provenance-marked
+ok 35 - manual references stay rights-restricted and provenance-marked
+  ---
+  duration_ms: 0.5851
+  type: 'test'
+  ...
+# Subtest: manual archive accounts for every named device without inventing missing versions
+ok 36 - manual archive accounts for every named device without inventing missing versions
+  ---
+  duration_ms: 0.5164
+  type: 'test'
+  ...
+# Subtest: local server serves only UI and source, not transcript or private documents
+ok 37 - local server serves only UI and source, not transcript or private documents
+  ---
+  duration_ms: 222.0882
+  type: 'test'
+  ...
+# Subtest: FCV-588 mock uses native 480x640 portrait screen proportions
+ok 38 - FCV-588 mock uses native 480x640 portrait screen proportions
+  ---
+  duration_ms: 1.5042
+  type: 'test'
+  ...
+# Subtest: physical controls are not contaminated by desktop assistive plus/minus buttons
+ok 39 - physical controls are not contaminated by desktop assistive plus/minus buttons
+  ---
+  duration_ms: 0.4534
+  type: 'test'
+  ...
+# Subtest: ENTER is a distinct physical key, not embedded inside TrackPad
+ok 40 - ENTER is a distinct physical key, not embedded inside TrackPad
+  ---
+  duration_ms: 0.2052
+  type: 'test'
+  ...
+# Subtest: unimplemented views are visibly declared provisional
+ok 41 - unimplemented views are visibly declared provisional
+  ---
+  duration_ms: 0.1966
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 465.6169
+npm_check_exit=0
+=== ak plan validate ===
+{
+  "schema_version": 1,
+  "kind": "plan.validate",
+  "data": {
+    "valid": true,
+    "dir": "C:\\Work\\MoPhongMayTrenTau\\plans\\261013-1319-fcv588-full-fidelity-simulator",
+    "errors": null
+  }
+}
+ak_plan_validate_exit=0
+=== feature register check ===
+PASS: 65-feature research register matches current inventory
+feature_register_check_exit=0

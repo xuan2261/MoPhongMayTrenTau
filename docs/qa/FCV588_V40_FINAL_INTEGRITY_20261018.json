@@ -1,0 +1,252 @@
+{
+  "atUtc": "2026-10-18T14:10:22.242626+00:00",
+  "scope": "F1_PUBLIC_REFERENCE_V40_MENU_ESC_SOURCE_BOUND_ONLY",
+  "status": "CANONICAL_V40_ONE_HTML_AND_NEW_TEST_QA_RECONCILED_PHASE6_HOLD",
+  "supervisor": "USER_AUTHORIZED_GPT6_SELF_REVIEW_NOT_INDEPENDENT_OEM",
+  "v39ReceiptSha256": "35d2f106c60186d29f89fc159945b6530084a0822d2f3ea98fec0fa261600bce",
+  "v40StageManifestSha256": "a5d2de2778ec76e49ea955b1fd962aaf35d2ddee40290ba14b68314ded114eef",
+  "v40CanonicalApplyReceiptSha256": "1cd4fd908d8c2c19d4cd7bca519e964de5f02b104ffa3f992b94ce632081ed9c",
+  "runtimeFilesShaVerified": 37,
+  "runtimeFilesDifferentFromV39": [
+    "web/index.html"
+  ],
+  "runtimeFilesUnchangedFromV39": 36,
+  "srcCoreModulesUnchanged": 23,
+  "webCssUnchanged": true,
+  "canonicalHtmlSHA": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+  "canonicalNewTest": "test/fcv588-v40-oem-menu-label.test.mjs",
+  "canonicalNewTestSHA": "05a0f65efc116961f775c95d66e84c08d3f9da0b0bd223baf343358e9f178ec3",
+  "testOriginalMalformedMatcherRedPreserved": true,
+  "testCorrectedProductMismatchRedPreserved": true,
+  "stageNodeGreen": 2,
+  "canonicalTargetedNodeGreen": 28,
+  "canonicalFullNodeGreen": 471,
+  "canonicalPythonGreen": 13,
+  "postdocumentFullNodeGreen": 471,
+  "canonicalChromeAssertionPass": 84,
+  "canonicalChromeBodyShaMatched": 210,
+  "canonicalChromeScreenshotShaMatched": 12,
+  "stagingChromeAssertionPass": 84,
+  "stagingChromeBodyShaMatched": 210,
+  "stagingChromeScreenshotShaMatched": 12,
+  "newV40ScreenshotsShaVerified": 24,
+  "historicalV36V38ScreenshotsShaRechecked": 127,
+  "chromeStage": {
+    "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_MENU_OEM_CHROME_20261018.json",
+    "sha256": "7862d1c6c95b677da93b4ff57534c6db1a29c9f64c7001e1e64efe8ea1b80dd5",
+    "assertions": 84,
+    "browserResponseShaMatches": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-320x720-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-320x720-menu-open.png",
+        "sha256": "377366ab076b7d487b7b6db007a8ebb6c67030994c8c9366ffbc038f21ff3a3a"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-375x812-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-375x812-menu-open.png",
+        "sha256": "f98519add53840f742d2de4dd60905143e9f915055e1980dce833e61e2940b0e"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-768x1024-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-768x1024-menu-open.png",
+        "sha256": "05b82a2a0088b2de44b3868f849699417e7b960aab6da6534e2f660c2cfa8bda"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1366x768-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1366x768-menu-open.png",
+        "sha256": "2205b2304e007d0c6d9e7fae4d613437ecfb18c797a1fd82553e597b7edccefd"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1440x900-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1440x900-menu-open.png",
+        "sha256": "15c391d8ed46c8febf27d3a1dd3d305d24ebb2116892653c9eb687ebebad1980"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1920x1080-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-oem-menu-1920x1080-menu-open.png",
+        "sha256": "7f6272024c4b0156d652384b22ed34e9312dff7c15680e5071656b2833bc9143"
+      }
+    ]
+  },
+  "chromeCanonical": {
+    "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_CANONICAL_MENU_OEM_CHROME_20261018.json",
+    "sha256": "5818a86bedd4d82a742b453d2081a79297b7a018d86efbf0e3e09d6f75da9bc2",
+    "assertions": 84,
+    "browserResponseShaMatches": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-320x720-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-320x720-menu-open.png",
+        "sha256": "377366ab076b7d487b7b6db007a8ebb6c67030994c8c9366ffbc038f21ff3a3a"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-375x812-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-375x812-menu-open.png",
+        "sha256": "f98519add53840f742d2de4dd60905143e9f915055e1980dce833e61e2940b0e"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-768x1024-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-768x1024-menu-open.png",
+        "sha256": "05b82a2a0088b2de44b3868f849699417e7b960aab6da6534e2f660c2cfa8bda"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1366x768-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1366x768-menu-open.png",
+        "sha256": "2205b2304e007d0c6d9e7fae4d613437ecfb18c797a1fd82553e597b7edccefd"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1440x900-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1440x900-menu-open.png",
+        "sha256": "15c391d8ed46c8febf27d3a1dd3d305d24ebb2116892653c9eb687ebebad1980"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1920x1080-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v40-oem-source-audit/evidence/screenshots/v40-canonical-oem-menu-1920x1080-menu-open.png",
+        "sha256": "7f6272024c4b0156d652384b22ed34e9312dff7c15680e5071656b2833bc9143"
+      }
+    ]
+  },
+  "httpNegativeRoutesDenied": 4,
+  "httpReceiptSha256": "8c447f102e6634af988878f2b24516c9ce77f222c347a5b6062e657b08857c4e",
+  "desktopManualActualViewport": "1912x970",
+  "desktopManualHttpRequestsLocal200": 35,
+  "desktopConsoleErrors": 0,
+  "desktopScreenshotSavedInWorkspace": false,
+  "nativeDesktopExact1366And1920": "NOT_RUN",
+  "realNarratorNvdaSpeech": "NOT_RUN",
+  "genuineOsWindowBlurDuringHold": "NOT_RUN",
+  "firmwareInstalled": "UNKNOWN",
+  "oemPixelEquivalence": "NOT_MEASURED",
+  "oemMediaReuseRights": "HOLD",
+  "phase6": "OPEN",
+  "operatorClaimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "gitCommitted": false,
+  "qaTempPortsClosed": true,
+  "historicalV31FailedLogUnchangedSHA": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+  "testLogProofs": [
+    {
+      "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_OEM_MENU_LABEL_RED_20261018.log",
+      "sha256": "2f5e18b1c6d10fec57fc2d7fbec94efb47f4a1b2c059b347c817864e528fe9d3",
+      "tests": 2,
+      "pass": 1,
+      "fail": 1
+    },
+    {
+      "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_OEM_MENU_LABEL_CORRECTED_RED_20261018.log",
+      "sha256": "5051181f149787623b576b2b6cff5dbaff7c8fd61364ac018ed1df3bea4a7f82",
+      "tests": 2,
+      "pass": 1,
+      "fail": 1
+    },
+    {
+      "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_OEM_MENU_LABEL_GREEN_20261018.log",
+      "sha256": "e4ee8fa083be69254e958aa2f01dfdb362566f9beb121b06489f70285ecd5844",
+      "tests": 2,
+      "pass": 2,
+      "fail": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V40_CANONICAL_TARGETED_NODE_20261018.log",
+      "sha256": "2a1d7146feb8fc06cd9c2d4fd2be98e9322ef1326199052a1b8159408ce38020",
+      "tests": 28,
+      "pass": 28,
+      "fail": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V40_CANONICAL_FULL_NODE_20261018.log",
+      "sha256": "49581feb1758c7c516b7f665e52c3c71a5108858df013cfdc984e860efbf5f1a",
+      "tests": 471,
+      "pass": 471,
+      "fail": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V40_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "sha256": "71a74993d19366f43b435902af51f2a70e5cb3e432ef6a18ee052d2538cf714e",
+      "tests": 471,
+      "pass": 471,
+      "fail": 0
+    }
+  ],
+  "pythonLogSha256": "b2b19cec872513393ca032b36e053cab839696ebeb34800b7c864f27bae15099",
+  "documentHashes": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "a16300d13df36f3ae60b752b5f64ebe3a4bf77482c1db3bce2b6848594e9bcb2"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "4d8aae04a736c3658264008c6a252ee134098aece75cfc46df5e38173a1ac9f0"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v40-integrated-oem-menu-esc.md",
+      "sha256": "a8efb41634a8c4b2fdebf018f49682aba567ecc0d3eb77202d914c2dc8653023"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v40-gpt6-oem-menu-esc-go.md",
+      "sha256": "b94212fe0c6bd7c6630922299dda0b8360b311c8270ae1c472c07b9f5987f749"
+    },
+    {
+      "path": "docs/qa/FCV588_V40_DESKTOP_MANUAL_PARTIAL_20261018.md",
+      "sha256": "ef412f481e258334ce9a842533000362413524dddd941a4aa3123d7217366e30"
+    },
+    {
+      "path": "docs/research/FCV588_V40_OEM_FRONT_PANEL_SOURCE_ATLAS_20261018.md",
+      "sha256": "f922a3f5896a38dfc6452b507670bac93be9d810f14646ae41427e689fe46389"
+    },
+    {
+      "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_ORIGINAL_RED_CHECKER_STOP_GPT6_GO_20261018.md",
+      "sha256": "9f226ea068a7df13ec9d7591391cd3566df84641cfe640451d5a83421394aaef"
+    },
+    {
+      "path": "staging/fcv588-v40-oem-source-audit/evidence/V40_OEM_MENU_LABEL_CORRECTED_RED_GPT6_GO_20261018.md",
+      "sha256": "be4f39384c3c9c60afd233c4559fae6be267a909f7021a269a565f1d4fe90c51"
+    }
+  ]
+}

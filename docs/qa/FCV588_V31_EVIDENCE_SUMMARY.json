@@ -1,0 +1,790 @@
+{
+  "recordedAtUtc": "2026-10-16T01:44:58.916332+00:00",
+  "status": "SCOPED_BROWSER_PASS_NODE_FIXTURE_FAILURE_FULL_QA_HOLD",
+  "scope": "LIVE_LOOPBACK_SOURCE_AND_COMPLETED_TARGETED_RECEIPTS_RECONCILIATION_NOT_NEW_BROWSER_RUN",
+  "liveSource": {
+    "status": "PASS",
+    "profileRevision": "F1-public-reference-20",
+    "filesCompared": 35,
+    "sourceManifestSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+    "fileDigests": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "sha256": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "sha256": "207f14a9ebb17d1fe565ececa29c5cb3756bcca9b98236ec83f6aac51e6f603c"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "83928dbe14a446cab48f4652e27ef20ad8afb45e0bd31760975aa72b71380b5a"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "sha256": "723b3981b508c54b391e16e7f0a8c220faddc57b5d9d1c5bdf4cece9ad4690de"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "sha256": "bed6c0af1297adb681071165ee6d8283b13959aa0ce53c343fc67efb839a9e72"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3"
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      },
+      {
+        "path": "web/app.mjs",
+        "sha256": "91a0a09857821374d21f2fe5df0dc28a10c598516f8fb49337139e47f08fc673"
+      },
+      {
+        "path": "web/favicon.svg",
+        "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "92bacc5ad24e2e6050b50c76af072a8fda001c91633194149ab3b2c82a9f2136"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "sha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856"
+      },
+      {
+        "path": "web/lcd-config-presentation.mjs",
+        "sha256": "e0d80f1b0d5495ec3d50a8c93d772964653c432afd0f2ecee54b4351f58aefa2"
+      },
+      {
+        "path": "web/lcd-control-presentation.mjs",
+        "sha256": "a743494bf5828757879380faa8afcd0908fc62da60e94aa87745502859b8c8e6"
+      },
+      {
+        "path": "web/lcd-presentation.mjs",
+        "sha256": "bf6d0c64ba99fdf71415d49f79bd5897d90d2d79523f21d041b8159aabfb6681"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "sha256": "ff864dd4f99ab8f7177c49e4561f726c788d1c5845e57c6d5d5f44f6fd1c565c"
+      }
+    ]
+  },
+  "deltaFromV30": {
+    "changed": [
+      "src/devices/fcv588/model.mjs",
+      "src/devices/fcv588/profile-version.mjs",
+      "src/devices/fcv588/settings.mjs",
+      "web/app.mjs",
+      "web/index.html",
+      "web/styles.css"
+    ],
+    "added": [
+      "web/lcd-control-presentation.mjs"
+    ],
+    "removed": []
+  },
+  "protectedUnchangedPaths": [
+    "src/core/device-runtime.mjs",
+    "src/core/lessons.mjs",
+    "src/core/protocol.mjs",
+    "src/core/scenario.mjs",
+    "src/core/session.mjs",
+    "src/devices/fcv588/alarms.mjs",
+    "src/devices/fcv588/capabilities.mjs",
+    "src/devices/fcv588/echo-projection.mjs",
+    "src/devices/fcv588/menu-atlas.mjs",
+    "src/devices/fcv588/navigation.mjs",
+    "web/hold-input.mjs",
+    "web/lcd-config-presentation.mjs",
+    "web/lcd-presentation.mjs",
+    "web/pad-repeat.mjs",
+    "web/rotary-input.mjs"
+  ],
+  "browserRuns": [
+    {
+      "path": "docs/qa/FCV588_OPERATOR_V31_RED_RECEIPT.json",
+      "sha256": "90aef87f2ab5781e800a08d220bdf4bec3b75bdcc22be2385d6aac495532c9a5",
+      "status": "FAIL",
+      "chromeVersion": "155.0.8059.41",
+      "runtimeManifestSha256": "a4bb8331a9fb88d62f275a3eb34d7e3ed346df7627713a700e597347a99bd8d8",
+      "harnessSha256": {
+        "tools/fcv588_v31_operator_regression.py": "bb6fc0c590022c11941ee91d62cdc97e21994f6bfcf91bf6cab52b2c04f809d8",
+        "tools/fcv588_chrome_viewport_acceptance.py": "e4f9fb7c890eb9075829930494ff4c1e98ebbf33fcb5b8b797576dd787abd76e",
+        "test/fixtures/fcv588-v30-profile19-settings.json": "f14235c481a35c5e2af2118729dcfd51c3eb2039bdec739047ba9e5b7e00f111"
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "checks": 71,
+          "passed": 59,
+          "failed": [
+            "SYSTEM_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "INSTALLATION_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "RANGE_SEMANTIC_CHOICE_VISIBLE",
+            "RANGE_CURRENT_AND_PENDING_VISIBLE",
+            "GAIN_SEMANTIC_CHOICE_VISIBLE",
+            "GAIN_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_SEMANTIC_CHOICE_VISIBLE",
+            "BRILL_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_HELP_STATES_MENU_COMMIT_NOT_CANCEL",
+            "MODE_SEMANTIC_CHOICE_VISIBLE",
+            "MODE_CURRENT_AND_PENDING_VISIBLE",
+            "MODE_HELP_DOES_NOT_ADVERTISE_INERT_ENTER"
+          ],
+          "status": "FAIL",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 128,
+            "verifiedUniquePaths": 32,
+            "browserLoadedResponsesSha256": "bfb52969766fb935aed542a3a8d23836e761e557698f494d8b93474a625a6da7",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "checks": 71,
+          "passed": 59,
+          "failed": [
+            "SYSTEM_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "INSTALLATION_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "RANGE_SEMANTIC_CHOICE_VISIBLE",
+            "RANGE_CURRENT_AND_PENDING_VISIBLE",
+            "GAIN_SEMANTIC_CHOICE_VISIBLE",
+            "GAIN_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_SEMANTIC_CHOICE_VISIBLE",
+            "BRILL_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_HELP_STATES_MENU_COMMIT_NOT_CANCEL",
+            "MODE_SEMANTIC_CHOICE_VISIBLE",
+            "MODE_CURRENT_AND_PENDING_VISIBLE",
+            "MODE_HELP_DOES_NOT_ADVERTISE_INERT_ENTER"
+          ],
+          "status": "FAIL",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 128,
+            "verifiedUniquePaths": 32,
+            "browserLoadedResponsesSha256": "fb1545ab9e66610756942432148fa7c8e4371bc3db83e20e2634b7e5ace97921",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "360x800",
+          "checks": 71,
+          "passed": 55,
+          "failed": [
+            "SYSTEM_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "INSTALLATION_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "RANGE_SEMANTIC_CHOICE_VISIBLE",
+            "RANGE_CURRENT_AND_PENDING_VISIBLE",
+            "RANGE_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "GAIN_SEMANTIC_CHOICE_VISIBLE",
+            "GAIN_CURRENT_AND_PENDING_VISIBLE",
+            "GAIN_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "BRILL_SEMANTIC_CHOICE_VISIBLE",
+            "BRILL_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "BRILL_HELP_STATES_MENU_COMMIT_NOT_CANCEL",
+            "MODE_SEMANTIC_CHOICE_VISIBLE",
+            "MODE_CURRENT_AND_PENDING_VISIBLE",
+            "MODE_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "MODE_HELP_DOES_NOT_ADVERTISE_INERT_ENTER"
+          ],
+          "status": "FAIL",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 128,
+            "verifiedUniquePaths": 32,
+            "browserLoadedResponsesSha256": "665522dc4a3d0fb4283e15c2d0380caca61f4d37c6921b3cc3b472df56ce8b61",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "checks": 71,
+          "passed": 55,
+          "failed": [
+            "SYSTEM_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "INSTALLATION_RESET_NOOP_INPUT_PRESERVES_STORED_PREFERENCES",
+            "RANGE_SEMANTIC_CHOICE_VISIBLE",
+            "RANGE_CURRENT_AND_PENDING_VISIBLE",
+            "RANGE_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "GAIN_SEMANTIC_CHOICE_VISIBLE",
+            "GAIN_CURRENT_AND_PENDING_VISIBLE",
+            "GAIN_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "BRILL_SEMANTIC_CHOICE_VISIBLE",
+            "BRILL_CURRENT_AND_PENDING_VISIBLE",
+            "BRILL_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "BRILL_HELP_STATES_MENU_COMMIT_NOT_CANCEL",
+            "MODE_SEMANTIC_CHOICE_VISIBLE",
+            "MODE_CURRENT_AND_PENDING_VISIBLE",
+            "MODE_HELP_VISIBLE_WITHOUT_OLD_CONFIG_DATA",
+            "MODE_HELP_DOES_NOT_ADVERTISE_INERT_ENTER"
+          ],
+          "status": "FAIL",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 128,
+            "verifiedUniquePaths": 32,
+            "browserLoadedResponsesSha256": "a08f958fdd29face405f95bac723771ef9b46a539e63547bf194a230bc0d18bd",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ],
+      "sourceStable": true,
+      "harnessStable": true
+    },
+    {
+      "path": "docs/qa/FCV588_OPERATOR_V31_GREEN_RECEIPT.json",
+      "sha256": "a99ba9173406cce964bcfb3d54c1d531431e575187f8ad29f83dfd30103e3b20",
+      "status": "PASS",
+      "chromeVersion": "155.0.8059.41",
+      "runtimeManifestSha256": "eed901f4d12c4f7e61ff1825b3898c412428cd8c4210c1f2d5b14050503dbe36",
+      "harnessSha256": {
+        "tools/fcv588_v31_operator_regression.py": "bb6fc0c590022c11941ee91d62cdc97e21994f6bfcf91bf6cab52b2c04f809d8",
+        "tools/fcv588_chrome_viewport_acceptance.py": "e4f9fb7c890eb9075829930494ff4c1e98ebbf33fcb5b8b797576dd787abd76e",
+        "test/fixtures/fcv588-v30-profile19-settings.json": "f14235c481a35c5e2af2118729dcfd51c3eb2039bdec739047ba9e5b7e00f111"
+      },
+      "contexts": [
+        {
+          "viewport": "1366x768",
+          "checks": 71,
+          "passed": 71,
+          "failed": [],
+          "status": "PASS",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 132,
+            "verifiedUniquePaths": 33,
+            "browserLoadedResponsesSha256": "cf29602dd65e93347fb13fe64e78a4c01386b4d04e4c5c0ba2b3d304b7ff03d3",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-control-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "1920x1080",
+          "checks": 71,
+          "passed": 71,
+          "failed": [],
+          "status": "PASS",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 132,
+            "verifiedUniquePaths": 33,
+            "browserLoadedResponsesSha256": "da925da7bcecc91b033a3c10dd7e51be7eee2ba557a55016e61c83220a899e10",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-control-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "360x800",
+          "checks": 71,
+          "passed": 71,
+          "failed": [],
+          "status": "PASS",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 132,
+            "verifiedUniquePaths": 33,
+            "browserLoadedResponsesSha256": "3f0445d43408f0028ee761a279e7bd912131e11e33b5d35110dd56020d127992",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-control-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        },
+        {
+          "viewport": "390x844",
+          "checks": 71,
+          "passed": 71,
+          "failed": [],
+          "status": "PASS",
+          "browserLoadedSourceIdentity": {
+            "status": "PASS",
+            "verifiedResponses": 132,
+            "verifiedUniquePaths": 33,
+            "browserLoadedResponsesSha256": "71382c4fb083bb8fe873201c92420ee05a1c09c26e7871946fba9ce1e937c42c",
+            "verifiedPaths": [
+              "/",
+              "/src/core/lessons.mjs",
+              "/src/core/protocol.mjs",
+              "/src/core/scenario.mjs",
+              "/src/core/session.mjs",
+              "/src/devices/fcv588/adapter.mjs",
+              "/src/devices/fcv588/alarms.mjs",
+              "/src/devices/fcv588/calibration.mjs",
+              "/src/devices/fcv588/capabilities.mjs",
+              "/src/devices/fcv588/display-layout.mjs",
+              "/src/devices/fcv588/display-palette.mjs",
+              "/src/devices/fcv588/display-widgets.mjs",
+              "/src/devices/fcv588/echo-projection.mjs",
+              "/src/devices/fcv588/menu-atlas.mjs",
+              "/src/devices/fcv588/model.mjs",
+              "/src/devices/fcv588/navigation.mjs",
+              "/src/devices/fcv588/profile-version.mjs",
+              "/src/devices/fcv588/receiver-status.mjs",
+              "/src/devices/fcv588/settings.mjs",
+              "/src/devices/fcv588/tankenmaru-status.mjs",
+              "/src/devices/fcv588/training-faults.mjs",
+              "/src/devices/fcv588/units.mjs",
+              "/web/app.mjs",
+              "/web/favicon.svg",
+              "/web/hold-input.mjs",
+              "/web/key-feedback.mjs",
+              "/web/keyboard-shortcuts.mjs",
+              "/web/lcd-config-presentation.mjs",
+              "/web/lcd-control-presentation.mjs",
+              "/web/lcd-presentation.mjs",
+              "/web/pad-repeat.mjs",
+              "/web/rotary-input.mjs",
+              "/web/styles.css"
+            ]
+          }
+        }
+      ],
+      "sourceStable": true,
+      "harnessStable": true
+    }
+  ],
+  "nodeRuns": [
+    {
+      "path": "docs/qa/FCV588_V31_STATE_COMPAT_RED.log",
+      "sha256": "1874179e59043dcc61fa0104a04f889070d0e483815639e408372ca8dd6df3a3",
+      "tests": 27,
+      "pass": 7,
+      "fail": 20,
+      "skipped": 0,
+      "role": "EXPECTED_PRE_FIX_RED"
+    },
+    {
+      "path": "docs/qa/FCV588_V31_STATE_COMPAT_GREEN.log",
+      "sha256": "eb9d2b3c7169208b7a00bb3e749550a1894e314d494dea4bfdcef2b347ef51e4",
+      "tests": 42,
+      "pass": 42,
+      "fail": 0,
+      "skipped": 0,
+      "role": "TARGETED_GREEN"
+    },
+    {
+      "path": "docs/qa/FCV588_V31_CONTROL_UNIT_GREEN.log",
+      "sha256": "93cf5389a6f3fad2dc4c5f420ea2f0943f3e7d85e3831a39589a8a938064f4c9",
+      "tests": 53,
+      "pass": 52,
+      "fail": 1,
+      "skipped": 0,
+      "role": "UNEXPECTED_FIXTURE_FAILURE_GATE_OPEN"
+    }
+  ],
+  "openedCurrentScreenshots": [
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_range_pending.png",
+      "sha256": "65e53a6c3ecb0880231f1fa1db3489ada92d7d31b3921743707d1862e972f390",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_brill_pending.png",
+      "sha256": "f64245205dd318abf1299af035650865a3f3ce10bda07c24a2521e2d0db7ec28",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1366x768_mode_pending.png",
+      "sha256": "9d2d53b5ef0a99e7f2c314f70e3b929c5f79ed28056c7cd455030de7d4addce1",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_range_pending.png",
+      "sha256": "d75b1403b82b4e25d92fbb04722e5070dea5aeff53a35007d6c05083bd903378",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_brill_pending.png",
+      "sha256": "ec086e35851c58468a8fc682b414d70a9408acd1700266d6587a61743b13bce0",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_1920x1080_mode_pending.png",
+      "sha256": "335c7cf18563930527e438cb28f845af6ca49ccab6803c92c5fcf2dc5ea0d703",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_360x800_range_pending.png",
+      "sha256": "42b8db329cdfd34464fab778556f1773b1671fe026c1d85dd47703f8479b648b",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_360x800_brill_pending.png",
+      "sha256": "798821c904e833e2d617b835705e7ce2105d1564bf97d0f631ad2372256e00b5",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_360x800_mode_pending.png",
+      "sha256": "28679a64856e73bcaf3deba3556a564cca5739729fa105b05fbd7901469ab5f4",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_390x844_range_pending.png",
+      "sha256": "b650d205307bd71b7d6a46b443bfd3971d92927f33f9312883b4bd474d86a1fc",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_390x844_brill_pending.png",
+      "sha256": "8702b711554ff3ee0bd77859e7504b940c7e97a2b6738399d97e782ea9166df4",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    },
+    {
+      "path": "docs/qa/screenshots/fcv588_operator_v31_green_390x844_mode_pending.png",
+      "sha256": "79eed5a2150fe7bb91b6e8c87377ce1c30543893f6a273b09cce80b1927f31e3",
+      "review": "OPENED_NATIVE_VISION_IN_THIS_V31_CONTINUATION"
+    }
+  ],
+  "v30MissingDocumentationWrite": {
+    "status": "COMPLETED_BY_NEW_AUTHORIZED_V31_WRITE",
+    "ledgerContainsV30": true,
+    "correctedLinks": [
+      {
+        "link": "../../../docs/qa/FCV588_V30_EVIDENCE_SUMMARY.json",
+        "resolvedPath": "docs/qa/FCV588_V30_EVIDENCE_SUMMARY.json",
+        "exists": true
+      },
+      {
+        "link": "../../../docs/qa/FCV588_V29_RECONCILIATION_2026-10-16.json",
+        "resolvedPath": "docs/qa/FCV588_V29_RECONCILIATION_2026-10-16.json",
+        "exists": true
+      }
+    ],
+    "originalBlockedWrite": "NOT_EXECUTED_UNCHANGED"
+  },
+  "openVerificationGate": {
+    "id": "V31-QA-01",
+    "test": "test/fcv588-public-control-presentation.test.mjs:31-35",
+    "expected": "/656 ft/",
+    "observed": "Auto (thang tu dong)",
+    "diagnosis": "INDEPENDENT_STATIC_REVIEW_CONFIRMS_AUTO_FIXTURE_DID_NOT_STAGE_MANUAL",
+    "testCorrectionApplied": false,
+    "kongmingInvocation": "NOT_EXECUTED",
+    "fullNode": "NOT_EXECUTED_AFTER_PROFILE20_CHANGE",
+    "fullChromeSuites": "NOT_EXECUTED_ON_V31",
+    "pythonIntegrityAndAtlas": "NOT_EXECUTED_ON_V31"
+  },
+  "canonicalAcceptance": {
+    "checked": 14,
+    "entries": 50,
+    "acceptedNamedTasks": 6,
+    "namedTasks": 22,
+    "phasesDone": 1,
+    "phases": 7,
+    "featureClaimsHold": 65
+  },
+  "hardwareValidated": false,
+  "firmwareInstalled": null,
+  "releaseApproval": "HOLD"
+}

@@ -1,0 +1,342 @@
+{
+  "atUtc": "2026-10-18T15:12:01.236152+00:00",
+  "scope": "F1_PUBLIC_REFERENCE_V41_TWO_SOUNDER_LABELS_ONLY",
+  "status": "CANONICAL_V41_SOUNDER_TWO_LABELS_SINGLE_RUNTIME_QA_RECONCILED_PHASE6_HOLD",
+  "supervisor": "USER_AUTHORIZED_GPT6_SELF_REVIEW_NOT_INDEPENDENT_OEM",
+  "previousV40FinalReceiptSHA": "d92a84f5d97d455a569fc137fdb83f96457048c8608ce66c72e648da31482388",
+  "stagePatchManifestSHA": "191e70052d0bd3fa71f5450ee61708e9f1f49b0bcf6f2340d8414f4dda28a82d",
+  "canonicalApplyReceiptSHA": "d1d5a6f1b43fa031918cdabd279dd7735a3079bd26b0d1329124c2af3e3fef7b",
+  "runtimeFileHashes": {
+    "src/core/device-runtime.mjs": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+    "src/core/lessons.mjs": "207f14a9ebb17d1fe565ececa29c5cb3756bcca9b98236ec83f6aac51e6f603c",
+    "src/core/protocol.mjs": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/devices/fcv588/adapter.mjs": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+    "src/devices/fcv588/alarms.mjs": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+    "src/devices/fcv588/calibration.mjs": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+    "src/devices/fcv588/capabilities.mjs": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+    "src/devices/fcv588/claim-gate.mjs": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+    "src/devices/fcv588/display-layout.mjs": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b",
+    "src/devices/fcv588/display-palette.mjs": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+    "src/devices/fcv588/display-widgets.mjs": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+    "src/devices/fcv588/echo-projection.mjs": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07",
+    "src/devices/fcv588/menu-atlas.mjs": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+    "src/devices/fcv588/model.mjs": "723b3981b508c54b391e16e7f0a8c220faddc57b5d9d1c5bdf4cece9ad4690de",
+    "src/devices/fcv588/navigation.mjs": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+    "src/devices/fcv588/profile-version.mjs": "bed6c0af1297adb681071165ee6d8283b13959aa0ce53c343fc67efb839a9e72",
+    "src/devices/fcv588/receiver-status.mjs": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+    "src/devices/fcv588/settings.mjs": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+    "src/devices/fcv588/tankenmaru-status.mjs": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+    "src/devices/fcv588/training-faults.mjs": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+    "src/devices/fcv588/units.mjs": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+    "web/app.mjs": "a77f165f77fb3a0e898df489bccf1c6f559adbcc15bbc0da1df12b4fda53adb1",
+    "web/favicon.svg": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+    "web/fcv588-training-source-matrix.mjs": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/index.html": "cb9b5c40f61c5d1da9fa2e6b96a60f2210556b9e0af211ef33a6b443ef44d5b2",
+    "web/key-feedback.mjs": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+    "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+    "web/lcd-config-presentation.mjs": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+    "web/lcd-control-presentation.mjs": "0881d0567d7921a98085a7914ebc2628e9b2f6d2c23d9a5894e7f97f3bba808f",
+    "web/lcd-instructor-meta.mjs": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/styles.css": "b5284e11f3649652e70211acb9119d74384c9372bba0b986f37108e902105cee"
+  },
+  "runtimeSourceFilesSHA": 37,
+  "runtimeFilesChangedFromV40": [
+    "src/devices/fcv588/menu-atlas.mjs"
+  ],
+  "runtimeFilesUnchangedFromV40": 36,
+  "sourceMenuAtlasSHA": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+  "evidenceMenuAtlasSHA": "c97ef9cedfee1f9aa32a450cb7f1908b489b00b27b48c71e2682720091277a22",
+  "newCanonicalTestSHA": "ae58a2cba5f07e40e5c73aee73da57a083a9d99509d5f2fb6ffa14fee8dafcf7",
+  "canonicalTargetedNodePassed": 18,
+  "canonicalFullNodePassed": 475,
+  "postdocumentNodePassed": 475,
+  "canonicalPythonPassed": 13,
+  "stageNodePassed": 475,
+  "stagePythonPassed": 13,
+  "canonicalChromeAssertionsPassed": 90,
+  "canonicalBrowserResponseSHA": 210,
+  "stageChromeAssertionsPassed": 90,
+  "stageBrowserResponseSHA": 210,
+  "newV41ScreenshotsSHA": 24,
+  "previousV40ScreenshotsRecheckedSHA": 24,
+  "historicalV36V38ScreenshotsRecheckedSHA": 127,
+  "httpNegativeRoutesDenied": 4,
+  "httpReceiptSHA": "d4d055384f3966ee83db55e1aff8f7ec7c52ba5e315cabba29f2c6629136ad32",
+  "stageChrome": {
+    "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_STAGE_SOUNDER_CHROME_20261018.json",
+    "sha256": "0dc8cbb97d301892b727d012ae76bc4fafab7abcca4131d34a7e2fb654dcc123",
+    "assertions": 90,
+    "responseBodySHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-320x720-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-320x720-menu-open.png",
+        "sha256": "c6618cc68919d117b3438bb47d56bc40b6eabb73ecec981b6b4fc663c2eecea3"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-375x812-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-375x812-menu-open.png",
+        "sha256": "84f3355328bb5118db3162dbdc51158c14993c4db32fb16b4536b529e51c9b73"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-768x1024-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-768x1024-menu-open.png",
+        "sha256": "bf3e8cc0600ed343b4c11591949bec2e7efbbe0a288aa8631ea58bb804cda92b"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1366x768-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1366x768-menu-open.png",
+        "sha256": "8c2fe804fa9e05e27475c06a1e003d1f81af0e605be1c3ec8f6b542d7844e3b7"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1440x900-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1440x900-menu-open.png",
+        "sha256": "38853767a2ebea2acea83b2356d7a11a253ffc624de5e2096a65137277ad328b"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1920x1080-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-stage-sounder-1920x1080-menu-open.png",
+        "sha256": "1bb3b1f631fc1800b0781d16d204b3f89ae4b933596d16bb2bd25f579d33594c"
+      }
+    ]
+  },
+  "canonicalChrome": {
+    "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_CANONICAL_SOUNDER_CHROME_20261018.json",
+    "sha256": "a08e865ecbedc2760b83ef5df07e39d953b910906dc805069d4846e02ba9de93",
+    "assertions": 90,
+    "responseBodySHA": 210,
+    "screenshots": [
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-320x720-off.png",
+        "sha256": "35ce3bfda4a68520f3cd41c87bccbd0dbf7e89b8e0a23bacf977890deb64eae2"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-320x720-menu-open.png",
+        "sha256": "c6618cc68919d117b3438bb47d56bc40b6eabb73ecec981b6b4fc663c2eecea3"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-375x812-off.png",
+        "sha256": "59e30d4a934278029b3df51e61ae207f9a589283af716e506b1f7a84933daf33"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-375x812-menu-open.png",
+        "sha256": "84f3355328bb5118db3162dbdc51158c14993c4db32fb16b4536b529e51c9b73"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-768x1024-off.png",
+        "sha256": "e49d09720a94072aae7eb1e37789fbeafe91ac126970f472d8207d569e8ccd7f"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-768x1024-menu-open.png",
+        "sha256": "bf3e8cc0600ed343b4c11591949bec2e7efbbe0a288aa8631ea58bb804cda92b"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1366x768-off.png",
+        "sha256": "54ede5819e4209b28ec7078954925cf32b2cd827d9c4ef057449fbd5204e27bb"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1366x768-menu-open.png",
+        "sha256": "8c2fe804fa9e05e27475c06a1e003d1f81af0e605be1c3ec8f6b542d7844e3b7"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1440x900-off.png",
+        "sha256": "634d5e224146dca40a43e8a384fd6e530147a26775124471e77f822317bee096"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1440x900-menu-open.png",
+        "sha256": "38853767a2ebea2acea83b2356d7a11a253ffc624de5e2096a65137277ad328b"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1920x1080-off.png",
+        "sha256": "e8cdb5ab01d53cf88ea85d8fa5fa4214a168276015c34d0bec2fcc4a9b9eafcf"
+      },
+      {
+        "path": "staging/fcv588-v41-oem-sounder-labels/evidence/screenshots/v41-canonical-sounder-1920x1080-menu-open.png",
+        "sha256": "1bb3b1f631fc1800b0781d16d204b3f89ae4b933596d16bb2bd25f579d33594c"
+      }
+    ]
+  },
+  "stageTestLogs": [
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_SOUNDER_LABELS_RED_20261018.log",
+      "sha256": "53b61b8db02d05a3d34fcc99c809e8d9ddc9b77bb5e49e4a60d3899620dc3a89",
+      "tests": 4,
+      "passed": 2,
+      "failed": 2,
+      "exitCode": 1
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_SOUNDER_LABELS_GREEN_20261018.log",
+      "sha256": "8277354b68b6604c8d98544e4bf6abbf57f3b0c976d478b8947fec3039a7112b",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_STAGE_FULL_NODE_20261018.log",
+      "sha256": "ef536ddec18301cb924d848f10b7952b83f5ada9a9f90e33a2f1471b30c54025",
+      "tests": 475,
+      "passed": 472,
+      "failed": 3,
+      "exitCode": 1
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_STAGE_FULL_NODE_AFTER_DEPS_20261018.log",
+      "sha256": "b4d33ec63500f80c8f7d07576619464a59263036bff0ee51873ce29ddf0a736c",
+      "tests": 475,
+      "passed": 473,
+      "failed": 2,
+      "exitCode": 1
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_DOC_LINKS_AFTER_FIX_20261018.log",
+      "sha256": "8d0fe71f24cf36f5b605f96246a04dce1b1692979688d3a3d858052ad64db141",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_STAGE_FULL_NODE_GREEN_20261018.log",
+      "sha256": "c6aa4e991cce1f36293c60a71520ce672528888e2b03b8ca72b850fbd1fbee42",
+      "tests": 475,
+      "passed": 475,
+      "failed": 0,
+      "exitCode": 0
+    }
+  ],
+  "canonicalTestLogs": [
+    {
+      "path": "docs/qa/FCV588_V41_CANONICAL_TARGETED_NODE_20261018.log",
+      "sha256": "5f548698594d72d9c66b2339e04f1b9a350ff30d60747eb9a92d6c7cab628454",
+      "tests": 18,
+      "passed": 18,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V41_CANONICAL_FULL_NODE_20261018.log",
+      "sha256": "a4d77988580153aa4aa81c2996684dfdab447c03e190bea177a7e83adb4a2898",
+      "tests": 475,
+      "passed": 475,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "path": "docs/qa/FCV588_V41_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "sha256": "bd13cd7affececc7a8c81782260988467e8d6367403379d59dc016266ea7b88c",
+      "tests": 475,
+      "passed": 475,
+      "failed": 0,
+      "exitCode": 0
+    }
+  ],
+  "stagePythonLog": {
+    "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_STAGE_PYTHON_20261018.log",
+    "sha256": "dfcfb8d7087702438208c63ce7d6bf659f3933266b5f07b3fd631b05d4b319b6",
+    "testsPassed": 13
+  },
+  "canonicalPythonLog": {
+    "path": "docs/qa/FCV588_V41_CANONICAL_PYTHON_20261018.log",
+    "sha256": "a1c79e22212e869a0410e71907b08c5a38a02d1d1a38d61d4e78f1164a3ee516",
+    "testsPassed": 13
+  },
+  "documentHashes": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "sha256": "2cbc9a0b2e163180882f50406dbe90a0945041fe23ece38d5f426d1ab419b153"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-06-conformance-classroom-qa.md",
+      "sha256": "5fc57498fb8ffcc859f881ce7ec64bae8831f397411b44a2be6872c52107dc05"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v41-integrated-sounder-labels.md",
+      "sha256": "7eed4ec2e9d01b95def4ce53b465941219bc7e894183b73d17374a0b6985c772"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v41-gpt6-sounder-labels-go.md",
+      "sha256": "a5b04615a7a30cf1036218d9b940d93816dfb28aa879e4d295c7f966088abbf3"
+    },
+    {
+      "path": "docs/qa/FCV588_V41_DESKTOP_MANUAL_PARTIAL_20261018.md",
+      "sha256": "15cfc0e7b2f1b4fe0c311fecdc3275cf5edf6a129b5ffe2a1f94cbe8384f6e83"
+    },
+    {
+      "path": "docs/research/FCV588_V41_SOUNDER_MENU_SOURCE_ATLAS_20261018.md",
+      "sha256": "eae9f12db6250a11a9cf2c210be3ce3bd4eae2f99bdf570892c02fedfffca1b3"
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_RED_ROOT_CAUSE_GPT6_SCOPED_GO_20261018.md",
+      "sha256": "90b769fab235a99d9c530794f297e631c87c299b290ca4af257e029968e3e495"
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_FIRST_FULL_NODE_STOP_AND_SCOPED_GO_20261018.md",
+      "sha256": "ff7bcd6fccb4068b4f28c815738804c0bd9f25a6d0f722c9e51bfea841551f39"
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_SECOND_FULL_NODE_STOP_AND_SCOPED_GO_20261018.md",
+      "sha256": "1e0e7b2ffb90502d6696a46f0adb6ebb3650722d80093f2f52cb5325a2899cf9"
+    },
+    {
+      "path": "staging/fcv588-v41-oem-sounder-labels/evidence/V41_FINAL_PREFLIGHT_PATH_STOP_GPT6_GO_20261018.md",
+      "sha256": "dfd856814fa658bb8bbb3b05f6c6d08da23308c20990c8cce37f4ca469c94e20"
+    }
+  ],
+  "desktopAttachedActualViewport": "1912x970",
+  "desktopActualMenuLabelsObserved": [
+    "Pic. Advance",
+    "Interference"
+  ],
+  "desktopHttp200LocalRequests": 35,
+  "desktopConsoleErrors": 0,
+  "desktopScreenshotSavedWithWorkspaceSHA": false,
+  "desktopNativeExact1366And1920": "NOT_RUN",
+  "narratorNvdaActualSpeech": "NOT_RUN",
+  "genuineOsWindowBlurWhileHeld": "NOT_RUN",
+  "firmwareInstalled": "UNKNOWN",
+  "oemMediaReuseRights": "HOLD",
+  "oemPixelEquivalence": "NOT_MEASURED",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "gitCommitted": false,
+  "ownedQaPortsClosed": {
+    "4221": true,
+    "4222": true
+  }
+}

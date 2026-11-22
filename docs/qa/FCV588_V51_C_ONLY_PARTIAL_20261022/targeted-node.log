@@ -1,0 +1,196 @@
+TAP version 13
+# Subtest: lesson picker and score action are labeled and instructor-only
+ok 1 - lesson picker and score action are labeled and instructor-only
+  ---
+  duration_ms: 2.3302
+  type: 'test'
+  ...
+# Subtest: physical keyboard, responsive portrait, focus and training warning are still explicit
+ok 2 - physical keyboard, responsive portrait, focus and training warning are still explicit
+  ---
+  duration_ms: 0.2779
+  type: 'test'
+  ...
+# Subtest: BRILL changes the entire LCD luminance and depth units are display-only
+ok 3 - BRILL changes the entire LCD luminance and depth units are display-only
+  ---
+  duration_ms: 0.2518
+  type: 'test'
+  ...
+# Subtest: Demo Off never draws a fictitious live sonar trace without a virtual fixture
+ok 4 - Demo Off never draws a fictitious live sonar trace without a virtual fixture
+  ---
+  duration_ms: 0.2178
+  type: 'test'
+  ...
+# Subtest: Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+ok 5 - Depth Size has a real LCD readout-size projection instead of a saved-only menu choice
+  ---
+  duration_ms: 0.485
+  type: 'test'
+  ...
+# Subtest: runtime remains localhost only and cannot statically expose documents
+ok 6 - runtime remains localhost only and cannot statically expose documents
+  ---
+  duration_ms: 0.3642
+  type: 'test'
+  ...
+# Subtest: Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+ok 7 - Chrome QA runner explicitly exercises native touchcancel and lostpointercapture during a real hold
+  ---
+  duration_ms: 10.3591
+  type: 'test'
+  ...
+# Subtest: Chrome acceptance refuses stale served source and attests clean isolated storage
+ok 8 - Chrome acceptance refuses stale served source and attests clean isolated storage
+  ---
+  duration_ms: 1.3351
+  type: 'test'
+  ...
+# Subtest: Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+ok 9 - Chrome QA binds bytes actually loaded by the browser, not just pre/post HEAD checks
+  ---
+  duration_ms: 1.787
+  type: 'test'
+  ...
+# Subtest: long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+ok 10 - long FCV menus expose the selected item and scroll within the LCD without unsafe HTML
+  ---
+  duration_ms: 0.9965
+  type: 'test'
+  ...
+# Subtest: LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+ok 11 - LCD modal stays bounded by its screen, so a long menu can scroll at narrow viewports
+  ---
+  duration_ms: 0.5217
+  type: 'test'
+  ...
+# Subtest: menu conveys source and rights HOLD separately from an unavailable capability
+ok 12 - menu conveys source and rights HOLD separately from an unavailable capability
+  ---
+  duration_ms: 0.2796
+  type: 'test'
+  ...
+# Subtest: phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+ok 13 - phone training reflow explicitly avoids OEM geometry and protects large physical/D15 touch targets
+  ---
+  duration_ms: 3.1445
+  type: 'test'
+  ...
+# Subtest: Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+ok 14 - Chrome covers long-menu cursor visibility and source-dependent §1.21 Data choices
+  ---
+  duration_ms: 1.4718
+  type: 'test'
+  ...
+# Subtest: low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+ok 15 - low-height desktop browser verifies every physical key is vertically scroll-reachable without squashing source-based face ratio
+  ---
+  duration_ms: 1.54
+  type: 'test'
+  ...
+# Subtest: phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+ok 16 - phone Chrome covers the optional D09 details and MENU/ESC return using native touch
+  ---
+  duration_ms: 1.1386
+  type: 'test'
+  ...
+# Subtest: V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+ok 17 - V22 real Chrome verifies D15 receiver-absence scoring, B19 light-palette readability and actual centered desktop bezel
+  ---
+  duration_ms: 2.7756
+  type: 'test'
+  ...
+# Subtest: V49 live D15 announcement is separate from per-250ms guidance countdown
+ok 18 - V49 live D15 announcement is separate from per-250ms guidance countdown
+  ---
+  duration_ms: 1.792
+  type: 'test'
+  ...
+# Subtest: V49 D15 status announcements depend on semantic heading, never timer-countdown text
+ok 19 - V49 D15 status announcements depend on semantic heading, never timer-countdown text
+  ---
+  duration_ms: 0.4065
+  type: 'test'
+  ...
+# Subtest: V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+ok 20 - V49 LCD remains outside ARIA instructor statuses, with exact physical UI label
+  ---
+  duration_ms: 0.3932
+  type: 'test'
+  ...
+# Subtest: V49 White Marker remains a firmware-unknown classroom enum in profile21
+ok 21 - V49 White Marker remains a firmware-unknown classroom enum in profile21
+  ---
+  duration_ms: 3.1282
+  type: 'test'
+  ...
+# Subtest: pointer hold is paired only by the originating pointer id
+ok 22 - pointer hold is paired only by the originating pointer id
+  ---
+  duration_ms: 4.0542
+  type: 'test'
+  ...
+# Subtest: secondary pointer and mouse button never steal the active hold
+ok 23 - secondary pointer and mouse button never steal the active hold
+  ---
+  duration_ms: 1.939
+  type: 'test'
+  ...
+# Subtest: keyboard hold clears when focus shifts before keyup
+ok 24 - keyboard hold clears when focus shifts before keyup
+  ---
+  duration_ms: 0.7311
+  type: 'test'
+  ...
+# Subtest: global keyup catches keys released off the originating button
+ok 25 - global keyup catches keys released off the originating button
+  ---
+  duration_ms: 0.537
+  type: 'test'
+  ...
+# Subtest: physical press records real hold duration even with simulator clock paused
+ok 26 - physical press records real hold duration even with simulator clock paused
+  ---
+  duration_ms: 0.405
+  type: 'test'
+  ...
+# Subtest: window blur, reset cancel and disposal never strand a held key
+ok 27 - window blur, reset cancel and disposal never strand a held key
+  ---
+  duration_ms: 0.7041
+  type: 'test'
+  ...
+# Subtest: pointer capture denial never emits a stray cancel without a matching down
+ok 28 - pointer capture denial never emits a stray cancel without a matching down
+  ---
+  duration_ms: 0.4876
+  type: 'test'
+  ...
+# Subtest: screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+ok 29 - screen-reader button activation emits one canonical short POWER/FUNC edge pair without duplicate key clicks
+  ---
+  duration_ms: 0.5852
+  type: 'test'
+  ...
+# Subtest: local server serves only UI and source, not transcript or private documents
+ok 30 - local server serves only UI and source, not transcript or private documents
+  ---
+  duration_ms: 225.8228
+  type: 'test'
+  ...
+# Subtest: runtime server fails closed on binary/media extensions even inside public source roots
+ok 31 - runtime server fails closed on binary/media extensions even inside public source roots
+  ---
+  duration_ms: 8.1169
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 439.4666

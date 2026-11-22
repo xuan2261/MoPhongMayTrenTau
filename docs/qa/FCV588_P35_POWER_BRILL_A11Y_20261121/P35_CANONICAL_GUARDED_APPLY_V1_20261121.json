@@ -1,0 +1,20 @@
+{
+  "schema": "P35_POWER_BRILL_A11Y_GUARDED_APPLY_V1",
+  "timestampUtc": "2026-11-21T15:41:53.8813591Z",
+  "decision": "BOUNDED_SOURCE_AND_ACCESSIBLE_NAME_CORRECTION_ONLY",
+  "allowlist": [
+    "web/index.html",
+    "test/fcv588-p35-power-brill-a11y.test.mjs"
+  ],
+  "beforeWebIndexSha256": "64f37f967439cf8e82cdcee48094083c1fed4347464753782ec62bda52573e87",
+  "afterWebIndexSha256": "45a22ae65ea13f68a836f6dc7515b4d2718b7d528044cdc50ac81ba51caa2763",
+  "newTestSha256": "a521cbb82aef1ba176d5c6589040484c8685a41db717c38be76a7a48011963eb",
+  "canonicalPreimageBackupSha256": "64f37f967439cf8e82cdcee48094083c1fed4347464753782ec62bda52573e87",
+  "oneLiteralExactDiffVerified": true,
+  "preimageParentP33Sha256": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630",
+  "preimageParentP34Sha256": "a1db29e8aaf1b94b7ae1de54263eee6b1cef182a1002278aed46d15fa1dc17f0",
+  "server4173Pid": 1204,
+  "releaseApproval": "HOLD",
+  "narratorSpokenVerified": false,
+  "noInstallerRebuild": true
+}

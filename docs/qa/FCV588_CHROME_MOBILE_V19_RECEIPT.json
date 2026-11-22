@@ -1,0 +1,577 @@
+{
+  "schemaVersion": 1,
+  "collectedAtUtc": "2026-10-15T00:26:11.781055+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "browser": "Google Chrome",
+  "preflight": "SOURCE_TREE_IDENTITY_PASS",
+  "postflight": "SOURCE_TREE_STABLE_PASS",
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "status": "PASS",
+      "metrics": {
+        "width": 360,
+        "height": 800,
+        "scrollWidth": 360,
+        "frame": {
+          "x": 9,
+          "y": 352.59375,
+          "width": 342,
+          "height": 1151.328125,
+          "right": 351,
+          "bottom": 1503.921875
+        },
+        "lcd": {
+          "x": 25,
+          "y": 405.59375,
+          "width": 310,
+          "height": 413.328125,
+          "right": 335,
+          "bottom": 818.921875
+        },
+        "pad": {
+          "x": 100,
+          "y": 918.921875,
+          "width": 160,
+          "height": 160,
+          "right": 260,
+          "bottom": 1078.921875
+        },
+        "teacherLesson": {
+          "x": 24,
+          "y": 2575.859375,
+          "width": 312,
+          "height": 369.5625,
+          "right": 336,
+          "bottom": 2945.421875
+        },
+        "lessonControls": {
+          "lesson-picker": {
+            "x": 37,
+            "y": 2668.859375,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2712.859375
+          },
+          "btn-start-lesson": {
+            "x": 37,
+            "y": 2810.421875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2854.421875
+          },
+          "btn-score": {
+            "x": 37,
+            "y": 2862.421875,
+            "width": 286,
+            "height": 44,
+            "right": 323,
+            "bottom": 2906.421875
+          }
+        },
+        "controls": {
+          "key-menu": {
+            "x": 24,
+            "y": 862.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 906.921875
+          },
+          "pad-up": {
+            "x": 158,
+            "y": 924.921875,
+            "width": 44,
+            "height": 44,
+            "right": 202,
+            "bottom": 968.921875
+          },
+          "pad-down": {
+            "x": 158,
+            "y": 1028.921875,
+            "width": 44,
+            "height": 44,
+            "right": 202,
+            "bottom": 1072.921875
+          },
+          "pad-left": {
+            "x": 106,
+            "y": 976.921875,
+            "width": 44,
+            "height": 44,
+            "right": 150,
+            "bottom": 1020.921875
+          },
+          "pad-right": {
+            "x": 210,
+            "y": 976.921875,
+            "width": 44,
+            "height": 44,
+            "right": 254,
+            "bottom": 1020.921875
+          },
+          "key-enter": {
+            "x": 24,
+            "y": 1090.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 1134.921875
+          },
+          "key-range": {
+            "x": 24,
+            "y": 1146.921875,
+            "width": 150,
+            "height": 44,
+            "right": 174,
+            "bottom": 1190.921875
+          },
+          "key-mark": {
+            "x": 186,
+            "y": 1146.921875,
+            "width": 150,
+            "height": 44,
+            "right": 336,
+            "bottom": 1190.921875
+          },
+          "key-func": {
+            "x": 24,
+            "y": 1202.921875,
+            "width": 312,
+            "height": 44,
+            "right": 336,
+            "bottom": 1246.921875
+          },
+          "gain-knob": {
+            "x": 67,
+            "y": 1277.921875,
+            "width": 64,
+            "height": 64,
+            "right": 131,
+            "bottom": 1341.921875
+          },
+          "mode-knob": {
+            "x": 229,
+            "y": 1277.921875,
+            "width": 64,
+            "height": 64,
+            "right": 293,
+            "bottom": 1341.921875
+          },
+          "key-power": {
+            "x": 55,
+            "y": 1354.921875,
+            "width": 250,
+            "height": 50,
+            "right": 305,
+            "bottom": 1404.921875
+          }
+        }
+      },
+      "touchMinCssPx": 44,
+      "steps": [
+        "ACTUAL_PHONE_TOUCH_TARGETS_PASS",
+        "ACTUAL_PHONE_TRACKPAD_NO_DUPLICATE_PASS",
+        "ACTUAL_PHONE_LAST_SYSTEM_MENU_IN_LCD_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v19_mobile_360x800.png"
+      ],
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 29,
+        "verifiedUniquePaths": 29,
+        "browserLoadedResponsesSha256": "93846510b4d6f352e84696f8fcff2a49ae9257ac722e2cdb6ffe00f967db8422",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    {
+      "viewport": "390x844",
+      "status": "PASS",
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "frame": {
+          "x": 9,
+          "y": 352.59375,
+          "width": 372,
+          "height": 1191.328125,
+          "right": 381,
+          "bottom": 1543.921875
+        },
+        "lcd": {
+          "x": 25,
+          "y": 405.59375,
+          "width": 340,
+          "height": 453.328125,
+          "right": 365,
+          "bottom": 858.921875
+        },
+        "pad": {
+          "x": 115,
+          "y": 958.921875,
+          "width": 160,
+          "height": 160,
+          "right": 275,
+          "bottom": 1118.921875
+        },
+        "teacherLesson": {
+          "x": 24,
+          "y": 2596.671875,
+          "width": 342,
+          "height": 369.5625,
+          "right": 366,
+          "bottom": 2966.234375
+        },
+        "lessonControls": {
+          "lesson-picker": {
+            "x": 37,
+            "y": 2689.671875,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2733.671875
+          },
+          "btn-start-lesson": {
+            "x": 37,
+            "y": 2831.234375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2875.234375
+          },
+          "btn-score": {
+            "x": 37,
+            "y": 2883.234375,
+            "width": 316,
+            "height": 44,
+            "right": 353,
+            "bottom": 2927.234375
+          }
+        },
+        "controls": {
+          "key-menu": {
+            "x": 24,
+            "y": 902.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 946.921875
+          },
+          "pad-up": {
+            "x": 173,
+            "y": 964.921875,
+            "width": 44,
+            "height": 44,
+            "right": 217,
+            "bottom": 1008.921875
+          },
+          "pad-down": {
+            "x": 173,
+            "y": 1068.921875,
+            "width": 44,
+            "height": 44,
+            "right": 217,
+            "bottom": 1112.921875
+          },
+          "pad-left": {
+            "x": 121,
+            "y": 1016.921875,
+            "width": 44,
+            "height": 44,
+            "right": 165,
+            "bottom": 1060.921875
+          },
+          "pad-right": {
+            "x": 225,
+            "y": 1016.921875,
+            "width": 44,
+            "height": 44,
+            "right": 269,
+            "bottom": 1060.921875
+          },
+          "key-enter": {
+            "x": 24,
+            "y": 1130.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 1174.921875
+          },
+          "key-range": {
+            "x": 24,
+            "y": 1186.921875,
+            "width": 165,
+            "height": 44,
+            "right": 189,
+            "bottom": 1230.921875
+          },
+          "key-mark": {
+            "x": 201,
+            "y": 1186.921875,
+            "width": 165,
+            "height": 44,
+            "right": 366,
+            "bottom": 1230.921875
+          },
+          "key-func": {
+            "x": 24,
+            "y": 1242.921875,
+            "width": 342,
+            "height": 44,
+            "right": 366,
+            "bottom": 1286.921875
+          },
+          "gain-knob": {
+            "x": 74.5,
+            "y": 1317.921875,
+            "width": 64,
+            "height": 64,
+            "right": 138.5,
+            "bottom": 1381.921875
+          },
+          "mode-knob": {
+            "x": 251.5,
+            "y": 1317.921875,
+            "width": 64,
+            "height": 64,
+            "right": 315.5,
+            "bottom": 1381.921875
+          },
+          "key-power": {
+            "x": 70,
+            "y": 1394.921875,
+            "width": 250,
+            "height": 50,
+            "right": 320,
+            "bottom": 1444.921875
+          }
+        }
+      },
+      "touchMinCssPx": 44,
+      "steps": [
+        "ACTUAL_PHONE_TOUCH_TARGETS_PASS",
+        "ACTUAL_PHONE_TRACKPAD_NO_DUPLICATE_PASS",
+        "ACTUAL_PHONE_LAST_SYSTEM_MENU_IN_LCD_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v19_mobile_390x844.png"
+      ],
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 29,
+        "verifiedUniquePaths": 29,
+        "browserLoadedResponsesSha256": "d365a3eaa8463eddaed15ead0a497fcba3be42f9d2cc5909e84d033620efb217",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    }
+  ],
+  "limitations": [
+    "This is a responsive classroom reflow, not OEM face geometry",
+    "Phone/touch simulation is Chrome emulation, not measured physical hardware"
+  ],
+  "servedSourceIdentity": {
+    "status": "PASS",
+    "profileRevision": "F1-public-reference-14",
+    "filesCompared": 31,
+    "sourceManifestSha256": "7e6538fd92f2f02fa0dc517b5b729fa75dd523be7bc71e5a00393bd5d7bdf590",
+    "fileDigests": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "sha256": "45b0303d2ec3119880b46a91f39b64206710b024a14f7bb922c5686516a0448d"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "sha256": "046e3f8eb3b228ce6010c51fa884751ebff6ad9d5e3416a427260d6b8f39442d"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "sha256": "a389d01092ffdfe815843f67cbffe3b24520f7239bb7229e524e4148fef06d9f"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "sha256": "2fde5d5261e75b81ca023fc31a7ef51f26bccde8c3a386e111b860dcb1aa51a6"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "sha256": "de238620474c278b3ade7d2cb6b870b002dd0140cbee028faa375ba99419cd45"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "sha256": "bbbee943cc2d6e557de46c101b606a0b0f47314843b5deb7a8bbb4f20f536dd4"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "sha256": "42784551215afd775c087e76cbcf8f6801f1b19b69c76c52ee5486aa90976a5e"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "sha256": "c63e93cbb4c4fb208a08618c7da0328d275cd896c32959aa02aba2d8091caa91"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "bec066aa282d695f5a284ee0ec09ee3dd0dee37c651c9cb111b0469cb673e9e0"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "sha256": "08ed5be9c944d8ab39c94df4a11131e884ef7db7d30a8609191b7f92c254058e"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "sha256": "bae5536b3bddadf55b701008de4c8a094b5f923e61034c4897a3f97f70716767"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "sha256": "27305e7210ba3057be08dd287f64767a12467dd87f24b64ec20c6c27af1feb6f"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "sha256": "eda5cef488387a3caf38c79982fce6bd3975821450e325320bc34b90c72c07ec"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "sha256": "d4fa0525ae4573339a1f32c26b9f94847c0d10271d7bb5a1a437b7103c5f7caf"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      },
+      {
+        "path": "web/app.mjs",
+        "sha256": "ac176e26c2a8b7a64fa192e84d0f2a5c241bce42e7fd13b617a1f94bf1016c3f"
+      },
+      {
+        "path": "web/favicon.svg",
+        "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "7dfe2ca97fd35a5ca467ffd4cd9c4f25ca03ee1b074ebfcabcff3f093c42eb4b"
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "c59d41fbab76568d62c2a09815d3bd2de6c83df2a5c37b5f5ba1d41dcbcae8ac"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "sha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "sha256": "9bfc72c0f5a3d54d5729302210a8725b44aac1e669d1638d8c2d358d2633e350"
+      }
+    ]
+  },
+  "status": "PASS_OBSERVED_PHONE_VIEWPORTS"
+}

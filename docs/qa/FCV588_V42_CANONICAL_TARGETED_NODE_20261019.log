@@ -1,0 +1,107 @@
+TAP version 13
+# Subtest: Range shows current and pending mode/preset without persisting a phantom control value
+ok 1 - Range shows current and pending mode/preset without persisting a phantom control value
+  ---
+  duration_ms: 12.0892
+  type: 'test'
+  ...
+# Subtest: Range formatting reads existing configured meters and current depth unit without changing storage
+ok 2 - Range formatting reads existing configured meters and current depth unit without changing storage
+  ---
+  duration_ms: 2.5401
+  type: 'test'
+  ...
+# Subtest: Gain exposes the pending mode and offset, while committed control values remain separate
+ok 3 - Gain exposes the pending mode and offset, while committed control values remain separate
+  ---
+  duration_ms: 3.8545
+  type: 'test'
+  ...
+# Subtest: BRILL selected level and existing idle timer are projected without a second clock
+ok 4 - BRILL selected level and existing idle timer are projected without a second clock
+  ---
+  duration_ms: 2.8983
+  type: 'test'
+  ...
+# Subtest: MODE displays all existing rotary positions and never advertises ENTER as commit
+ok 5 - MODE displays all existing rotary positions and never advertises ENTER as commit
+  ---
+  duration_ms: 2.1983
+  type: 'test'
+  ...
+# Subtest: basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+ok 6 - basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+  ---
+  duration_ms: 1.6908
+  type: 'test'
+  ...
+# Subtest: basic control renderer uses original inert DOM and has no independent state transitions
+ok 7 - basic control renderer uses original inert DOM and has no independent state transitions
+  ---
+  duration_ms: 10.8061
+  type: 'test'
+  ...
+# Subtest: V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+ok 8 - V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+  ---
+  duration_ms: 1.7925
+  type: 'test'
+  ...
+# Subtest: V40 label-only correction preserves all nine OEM §1.1 operator controls
+ok 9 - V40 label-only correction preserves all nine OEM §1.1 operator controls
+  ---
+  duration_ms: 0.7466
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+ok 10 - V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+  ---
+  duration_ms: 3.1841
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+ok 11 - V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+  ---
+  duration_ms: 0.382
+  type: 'test'
+  ...
+# Subtest: V41 versioned public-reference atlas agrees with the two runtime menu labels
+ok 12 - V41 versioned public-reference atlas agrees with the two runtime menu labels
+  ---
+  duration_ms: 8.9893
+  type: 'test'
+  ...
+# Subtest: V41 label scope leaves five menu roots and training metadata outside display
+ok 13 - V41 label scope leaves five menu roots and training metadata outside display
+  ---
+  duration_ms: 0.5362
+  type: 'test'
+  ...
+# Subtest: V42 OEM §1.4 MODE dialog heading is exactly MODE, without invented SELECT
+ok 14 - V42 OEM §1.4 MODE dialog heading is exactly MODE, without invented SELECT
+  ---
+  duration_ms: 9.0227
+  type: 'test'
+  ...
+# Subtest: V42 selected MODE projector retains timeout, cancellation and seven choices
+ok 15 - V42 selected MODE projector retains timeout, cancellation and seven choices
+  ---
+  duration_ms: 2.618
+  type: 'test'
+  ...
+# Subtest: V42 change must not alter RANGE, BRILL and Auto Gain dialog names
+ok 16 - V42 change must not alter RANGE, BRILL and Auto Gain dialog names
+  ---
+  duration_ms: 1.6448
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 178.2748
+VERIFY_EXIT_CODE=0

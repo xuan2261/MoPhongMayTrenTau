@@ -1,0 +1,32 @@
+{
+  "schema": "FCV588_P28_MODE_VISUAL_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "createdUTC": "2026-11-17T14:35:50.3608931+00:00",
+  "status": "P28_INDEPENDENT_SHA_POSTAPPLY_PASS_TEST_ONLY",
+  "method": "PowerShell Get-FileHash readback; independent of Python final writer",
+  "finalIntegritySHA256": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+  "finalReportSHA256": "62b8965e870266ea8df0ec6f188ba356bb3a7f7440b3eb4bdc1a3820767fff96",
+  "stageCanonicalTestSHA256": "9dfc11c1e7dda977b82333066bf57aa9be73975b30d106b1cee2af53db77c5c1",
+  "parentP27FinalSHA256": "97232cffc3ad6906beb08022c9c49bc39b6776fe7623bda193ec23605ab5ce3a",
+  "parentP27PostSHA256": "2a8ece9b2a2dda1f0e60b4ed0f3a9d459b4661c79d275e3dfc3a74f343f4578a",
+  "P28DryrunSHA256": "89e6a9faa23b4427900eac2299098fcc00a7281423234ddc319849b403b7fc8d",
+  "P28GuardedApplySHA256": "51278cd1b4b5dd7c480b7b2919da4562f943f95fba7528670460a44f60e6ba4a",
+  "runtimeUntouchedSHA256Count": 54,
+  "OEMReferenceOnlySHA256Count": 8,
+  "stageCanonicalTestReceiptCount": 6,
+  "syntheticFixtureCount": 6,
+  "chromeCases": 20,
+  "actualChromeHTTPSourceBodySHA256Count": 208,
+  "screenshotsSHA256Count": 18,
+  "userServer4173PID": 1204,
+  "qaPortsClosed": [
+    4231,
+    4233,
+    4234,
+    4235
+  ],
+  "hardwareValidated": false,
+  "firmware": "UNKNOWN",
+  "phase6": "OPEN",
+  "claims": "65/65 HOLD",
+  "releaseApproval": "HOLD"
+}

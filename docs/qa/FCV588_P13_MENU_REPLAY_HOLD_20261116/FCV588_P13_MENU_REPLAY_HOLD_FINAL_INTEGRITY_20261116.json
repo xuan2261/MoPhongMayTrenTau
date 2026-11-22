@@ -1,0 +1,172 @@
+{
+  "browserScreenshotSHA256": [
+    {
+      "bytes": 56803,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_00_AP1_FIRST.png",
+      "sha256": "4958186034e7cbbf67d44e14f8ee767aa1b2ee73d517eb7503906330d98e80be"
+    },
+    {
+      "bytes": 56917,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_02_shift.png",
+      "sha256": "64eb9010290d557bb8bfcfaf6cf83e58ea8d05275019979c1f7a8361e6cafd26"
+    },
+    {
+      "bytes": 57003,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_07_whiteMarker.png",
+      "sha256": "b966714a3d9a46a6a9e531467cbae37ce671ac10d73e90399c42185b22cfb345"
+    },
+    {
+      "bytes": 58887,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_375x812_07_WhiteMarker_Editing.png",
+      "sha256": "d7144898c659daeae6b938161883f862bcc4d473ce9e701bbd47e19d81e3d881"
+    },
+    {
+      "bytes": 284114,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_00_AP1_FIRST.png",
+      "sha256": "868250860ee2dc09df4781d241e87238944574489d5896401fdf8425b98e367b"
+    },
+    {
+      "bytes": 284545,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_02_shift.png",
+      "sha256": "db6d83f2f42655a4a31956c3b91279d440f5ce80c29e69bb0750be1651b2c15b"
+    },
+    {
+      "bytes": 286594,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_07_whiteMarker.png",
+      "sha256": "40bc6c14975f12d67cd264e33f334cd90f045e300423c1144b0f1951c5ed6113"
+    },
+    {
+      "bytes": 288847,
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGE_1366x768_07_WhiteMarker_Editing.png",
+      "sha256": "6882428855615d782c607784da0da3862b6038c4e90fb35625ec672dbb7e8155"
+    }
+  ],
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "createdAt": "2026-11-16T17:19:45.048364+07:00",
+  "evidenceSHA256": {
+    "p13ChromeEvidence": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-browser/P13_STAGING_REAL_CHROME_MENU_AP1_20261116.json",
+      "sha256": "b6e9adfabcd7ed3d8104270df166346c5f2d50ce8101e87070a6a49097f38b08"
+    },
+    "p13FixtureAndSourceFreeze": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-fixture/P13_FIXTURE_AND_SOURCE_FREEZE_20261116.json",
+      "sha256": "3f3110bc0e4cfa4e55c09cc8beb1d1da0b80f1d3c5ad8af353132edce591d306"
+    },
+    "p13FixtureRequirements": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-fixture/P13_FIXTURE_REQUIREMENTS_20261116.md",
+      "sha256": "ef700d07816f4d4b74cdb726f3ecec3a71140b65bdfe157b7fe67d47891d5423"
+    },
+    "p13FullNodeGREEN": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_NODE_GREEN_20261116.txt",
+      "sha256": "bf85e4685e87607b89ff4c7c7612d0a1cad580d24172e9097dcd36c55b3d4873"
+    },
+    "p13FullPythonGREEN": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_PYTHON_20261116.txt",
+      "sha256": "746832750e3d5891c799514347539900311238c22d5a669e8af9963267c3df00"
+    },
+    "p13IndependentBrowserReview": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-review/P13_BROWSER_EVIDENCE_INDEPENDENT_20261116.json",
+      "sha256": "41a9a0e07c41b33d0d71dcd99ba6b7bb331f6539ddafd1de12bda857299b9ea0"
+    },
+    "p13IndependentGateReview": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-review/P13_GATE_REVIEW_20261116.json",
+      "sha256": "c1a99846aff873ccfa28db81670f5904f966426b957e87e4542cece8fb4ae1d4"
+    },
+    "p13InitialFixtureFullRED": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FULL_FIXTURE_INITIAL_RED_20261116.txt",
+      "sha256": "d5c502134a80c5cbea046befc3866674c0da857461c74d40e999ee650d856137"
+    },
+    "p13ReplaySemanticDrift": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json",
+      "sha256": "479909adb7475c8d9b02dd195b6abb1943593a78f575c2857b6585a1d4336f8c"
+    },
+    "p13SemanticAudit": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_SEMANTIC_REBASELINE_AUDIT_20261116.md",
+      "sha256": "fbc3b8d9769613ab2d09d5cb73081788a1b0846f0e1c9002a0dc4cd527c8f0a8"
+    },
+    "p13SourceCandidateMenu": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p12-stage/worktree/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca"
+    },
+    "parentP12Final": {
+      "path": "docs/qa/FCV588_P12_MENU_SOURCE_20261116/FCV588_P12_MENU_SOURCE_FINAL_INTEGRITY_20261116.json",
+      "sha256": "5afe2663a1d0d3dff6e213fc537fad3b7dfe5817d7aa776ee4a769e580780855"
+    },
+    "parentP12Post": {
+      "path": "docs/qa/FCV588_P12_MENU_SOURCE_20261116/FCV588_P12_MENU_SOURCE_INDEPENDENT_POSTRECEIPT_20261116.json",
+      "sha256": "538ff2a5e518ed663274958c3a2c9c69e7458a7caa5317f868ae67fe4e184792"
+    }
+  },
+  "holds": {
+    "F1Phase6": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "fullP07": "OPEN",
+    "fullVietnameseLocaleOracle": "SOURCE_GAP",
+    "hardwareValidated": false,
+    "installedFirmware": "UNKNOWN",
+    "narratorNvdaSpeech": "NOT_RUN",
+    "nativePowerWindowBlur": "NOT_VERIFIED",
+    "oemMediaRights": "REFERENCE_ONLY_HOLD",
+    "releaseApproval": "HOLD"
+  },
+  "operations": {
+    "canonicalProductRuntimeEdited": false,
+    "canonicalTestFilesEdited": false,
+    "historicalRED_FAILOverwritten": false,
+    "installerOrDeployment": false,
+    "oemPhotoMediaCopiedIntoServedWeb": false,
+    "preimageGuardedApplyAttempted": false,
+    "stageCandidateCreated": true,
+    "userServerRestartedOrKilled": false
+  },
+  "replayBlocker": {
+    "guardedApply": "NO_GO_DO_NOT_SILENTLY_REINTERPRET_HISTORIC_SESSIONS",
+    "newSelectedEntry": "sounder.clutter",
+    "nextRequired": "Version-bound menu ordering / new profile revision with backward-compatible legacy profile21 replay and migration policy; old session semantics preserved, then re-run full QA and independent GO.",
+    "oldSelectedEntry": "sounder.whiteMarker",
+    "oldSelectionOnlyReplayAcceptedUnderNewCode": true,
+    "profileRevision": "F1-public-reference-21",
+    "sameOldEventLogAndSessionHash": true
+  },
+  "schema": "fcv588-p13-menu-order-replay-guard-final-integrity-v1",
+  "scope": "F1_PUBLIC_REFERENCE_V2_SYNTHETIC_TRAINING_STAGE_ONLY_WINDOWS_OFFLINE",
+  "stagingCodeDiff39": {
+    "src/devices/fcv588/menu-atlas.mjs": {
+      "canonicalSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+      "stagingSha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca"
+    }
+  },
+  "stagingRoot": "C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116",
+  "stagingSemanticTestDiff3": {
+    "test/fcv588-public-lcd-presentation.test.mjs": {
+      "original": "53cf6b172020ca63170e03f94389d421c7155e1106c4ed6f2b00d5700e2e29be",
+      "staging": "8ef4e1d40671e809d38ba117185ec5ca2f9dc1d21019707572b2c843b204f092"
+    },
+    "test/fcv588-v47-white-marker-firmware-boundary.test.mjs": {
+      "original": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773",
+      "staging": "24a008dce2dc55c382c96a3a60853a3a44e9971738ac06e4da7933aba3e62ea8"
+    },
+    "test/fcv588-v49-a11y-boundary.test.mjs": {
+      "original": "f5f068450d1a3826fd01f4a28873dcfe17329a7a18d5f2d6a45dadf3ddea41b2",
+      "staging": "b649bad4164b09cda3ce44ac96b8275360a858d5592d3c11d24e70eba9ed9867"
+    }
+  },
+  "status": "P13_FIXTURE_COMPLETE_NODE_PYTHON_CHROME_PASS_PROFILE21_LEGACY_REPLAY_APPLY_NO_GO",
+  "verification": {
+    "canonicalApply": "NO_GO",
+    "canonicalRuntime": "39/39 EXACT P07 UNCHANGED",
+    "independentBrowserEvidenceGate": "GO_EVIDENCE_ONLY",
+    "independentUnitGate": "GO",
+    "menuOrder": "13/13 EXACT 2025 MANUAL AP-1",
+    "prechangeP13SourceRed": "558/563 PASS_5_SOURCE_ORDER_REBASELINE_FAIL",
+    "profile21HistoricalReplay": "FAILED_COMPATIBILITY_SAME_HASH_SILENT_MENU_SEMANTIC_DRIFT",
+    "semanticTests": "3 TEST FILES STRICT_ASSERTIONS_NO_WEAKENING",
+    "sourceReferences": "8/8 ORIGINAL JPG SHA_REFERENCE_ONLY",
+    "stageChrome": "2 REAL VIEWPORTS_8 PNG_72 LOADED BODY EXACT SHA_PASS",
+    "stageFinalNode": "563/563 PASS",
+    "stageFinalPython": "13/13 PASS",
+    "stageRuntime": "38/39 P07 PLUS 1 EXPECTED MENU ORDER ONLY",
+    "testPorts": "4207_4208_4209_4211_4212_4213_9225_CLOSED",
+    "userServer": "127.0.0.1:4173 PID1204 HTTP200 UNTOUCHED"
+  }
+}

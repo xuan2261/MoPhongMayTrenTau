@@ -1,0 +1,39 @@
+{
+  "schema": "FCV588_P30_HOST_WINDOWS_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "status": "PASS",
+  "checkedSHA": [
+    {
+      "relative": "FCV588_P30_HOST_WINDOWS_FINAL_REPORT_20261121.md",
+      "sha256": "d98c8803f4894254d3bb9cbad0faaa7020a018830bfae6ea7a09cc5f13f2a91f",
+      "bytes": 3357
+    },
+    {
+      "relative": "FCV588_P30_HOST_WINDOWS_FINAL_INTEGRITY_20261121.json",
+      "sha256": "38f7ffd01b4ab345349f0b8aec739dba4e7e779a243d559d089aa27aaaeaf1d5",
+      "bytes": 3716
+    },
+    {
+      "relative": "P30-FCV588-Synthetic-Training-POC-UNRELEASED-0.0.1-win-x64.exe",
+      "sha256": "a09c0dbdf33231ee005beb8960c9ef243ec45415c6f8d1a11514394c4c04c982",
+      "bytes": 121310396
+    },
+    {
+      "relative": "P30-FCV588-Synthetic-Training-POC-UNRELEASED-0.0.2-win-x64.exe",
+      "sha256": "f08bbebe0f209a5fe3df54c66b46fef55704ee181297aac41100eecf8b85aa24",
+      "bytes": 121310459
+    },
+    {
+      "relative": "FCV588-Synthetic-POC.exe",
+      "sha256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "bytes": 249978880
+    }
+  ],
+  "receiptCount": 13,
+  "registryVersion": "0.0.1",
+  "firewallQARuleCount": 0,
+  "FCV588ProcessCount": 0,
+  "userServer4173PID": 1204,
+  "releaseApproval": "HOLD",
+  "physicalAirgapValidated": false,
+  "signature": "NotSigned"
+}

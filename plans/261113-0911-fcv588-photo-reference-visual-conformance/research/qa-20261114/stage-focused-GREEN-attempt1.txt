@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: photo-reference header renders MAN.R and integer G:10 without inventing voltage
+ok 1 - photo-reference header renders MAN.R and integer G:10 without inventing voltage
+  ---
+  duration_ms: 2.6024
+  type: 'test'
+  ...
+# Subtest: source-backed labels distinguish DUAL and zoom mode without changing selector state
+ok 2 - source-backed labels distinguish DUAL and zoom mode without changing selector state
+  ---
+  duration_ms: 0.3669
+  type: 'test'
+  ...
+# Subtest: photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+ok 3 - photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+  ---
+  duration_ms: 1.3402
+  type: 'test'
+  ...
+# Subtest: NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+ok 4 - NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+  ---
+  duration_ms: 0.2627
+  type: 'test'
+  ...
+# Subtest: each sonar pane keeps its first depth-scale label below frequency and header
+ok 5 - each sonar pane keeps its first depth-scale label below frequency and header
+  ---
+  duration_ms: 4.4178
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 144.4477

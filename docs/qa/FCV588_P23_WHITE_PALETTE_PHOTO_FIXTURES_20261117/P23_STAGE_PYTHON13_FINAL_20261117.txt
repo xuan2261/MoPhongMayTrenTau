@@ -1,0 +1,48 @@
+
+test_fcv588_chrome_harness_identity (unittest.loader._FailedTest.test_fcv588_chrome_harness_identity) ... ERROR
+test_fcv588_chrome_response_integrity (unittest.loader._FailedTest.test_fcv588_chrome_response_integrity) ... ERROR
+test_all_measured_viewports_retain_unverified_hardware_boundary (test_fcv588_visual_atlas.VisualAtlasTests.test_all_measured_viewports_retain_unverified_hardware_boundary) ... ok
+test_invalid_rectangles_and_empty_sizes_are_rejected (test_fcv588_visual_atlas.VisualAtlasTests.test_invalid_rectangles_and_empty_sizes_are_rejected) ... ok
+test_simulator_geometry_cannot_be_promoted_to_hardware_measurement (test_fcv588_visual_atlas.VisualAtlasTests.test_simulator_geometry_cannot_be_promoted_to_hardware_measurement) ... ok
+test_unknown_checkpoint_is_rejected_before_any_receipt_lookup (test_fcv588_visual_atlas.VisualAtlasTests.test_unknown_checkpoint_is_rejected_before_any_receipt_lookup) ... ok
+test_v28_selection_keeps_historical_v27_and_qualitative_evidence_distinct (test_fcv588_visual_atlas.VisualAtlasTests.test_v28_selection_keeps_historical_v27_and_qualitative_evidence_distinct) ... ok
+test_viewport_identity_and_logical_lcd_must_match_receipt (test_fcv588_visual_atlas.VisualAtlasTests.test_viewport_identity_and_logical_lcd_must_match_receipt) ... ok
+
+======================================================================
+ERROR: test_fcv588_chrome_harness_identity (unittest.loader._FailedTest.test_fcv588_chrome_harness_identity)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_fcv588_chrome_harness_identity
+Traceback (most recent call last):
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
+    __import__(name)
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\test\test_fcv588_chrome_harness_identity.py", line 15, in <module>
+    import fcv588_mobile_viewport_acceptance as mobile
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\tools\fcv588_mobile_viewport_acceptance.py", line 17, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+
+======================================================================
+ERROR: test_fcv588_chrome_response_integrity (unittest.loader._FailedTest.test_fcv588_chrome_response_integrity)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_fcv588_chrome_response_integrity
+Traceback (most recent call last):
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
+    __import__(name)
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\test\test_fcv588_chrome_response_integrity.py", line 12, in <module>
+    import fcv588_chrome_viewport_acceptance as runner
+  File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\tools\fcv588_chrome_viewport_acceptance.py", line 21, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.017s
+
+FAILED (errors=2)

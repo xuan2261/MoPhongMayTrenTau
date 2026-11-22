@@ -1,0 +1,62 @@
+{
+  "cleanup": {
+    "qaPortClosed": true,
+    "userPort4173Open": true
+  },
+  "createdAt": "2026-11-16T13:40:38.775407+07:00",
+  "diagnostics": {
+    "beforeHwnd": 5769834,
+    "beforeTitle": "Tiếp tục kiểm thử P07 - Helium",
+    "blurred": {
+      "eventCount": 3,
+      "events": [
+        {
+          "eventCount": "000",
+          "hasFocus": true,
+          "ms": 248.89999985694885,
+          "powerPressing": false,
+          "trusted": true,
+          "type": "focus"
+        }
+      ],
+      "focus": true,
+      "powerPressing": true,
+      "screen": "POWER OFF",
+      "status": "POWER OFF"
+    },
+    "during": {
+      "eventCount": 1,
+      "events": [
+        {
+          "eventCount": "000",
+          "hasFocus": true,
+          "ms": 248.89999985694885,
+          "powerPressing": false,
+          "trusted": true,
+          "type": "focus"
+        }
+      ],
+      "focus": true,
+      "powerPressing": true,
+      "screen": "POWER OFF",
+      "status": "POWER OFF"
+    },
+    "duringHwnd": 5769834,
+    "duringTitle": "Tiếp tục kiểm thử P07 - Helium"
+  },
+  "eventProvenance": "real Win32 foreground change, browser window native Event.isTrusted",
+  "failure": "AssertionError('foreground HWND unchanged')",
+  "failureStage": "real keyboard held and helper Win32 foreground steal",
+  "limitations": [
+    "OS process activation proven, but no Narrator spoken output or NVDA tested",
+    "Test uses Chrome in a dedicated QA browser with isolated state, not user-owned browser"
+  ],
+  "ownedPort": 4208,
+  "p09Unchanged": true,
+  "port4173Unowned": true,
+  "runtimeAfter": true,
+  "runtimeSourceCount": 39,
+  "schema": "p10-windows-power-blur-v1",
+  "sourceP09FinalSHA256": "759f146c349c2ad348fc5b98e21fbc79d1d857623253811f0a01d3b9408995b9",
+  "status": "FAILED_OR_BLOCKED"
+}

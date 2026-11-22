@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED_LOCAL_HISTORICAL_STAGING_CLEANUP",
+  "date": "2026-11-22",
+  "rootsRetired": 40,
+  "retainedFileRecords": 19502,
+  "originalBytes": 1657539303,
+  "archiveBytes": 253397889,
+  "archiveSHA256": "1f9979b58f8282aa39385b8027b3e013f81a2dda733d499c2456d38dd522b94a",
+  "uniqueBlobs": 2950,
+  "verifiedJunctionRecords": 24,
+  "oldP13ArchiveSHA": "E9237CE81139F9E4CBC52CCE5C9292F5411135BA86215ABEF5A43BC7584C4FA1",
+  "oldP13ArchiveRemoved": true,
+  "restorationProof": "Full 19,502/19,502 files in isolated restore plus live back-compare, P13/P14/P15 + 3 junctions restored via PowerShell",
+  "canonicalSHAUnchanged": true,
+  "gitPushed": false,
+  "manualsOrCanonicalDeleted": false
+}

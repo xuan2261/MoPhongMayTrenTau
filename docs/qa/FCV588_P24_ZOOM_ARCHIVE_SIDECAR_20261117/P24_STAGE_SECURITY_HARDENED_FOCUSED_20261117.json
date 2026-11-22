@@ -1,0 +1,21 @@
+{
+  "schema": "FCV588_P24_STAGE_STRICT_DATA_AND_VALIDATED_REPLAY_API_V1",
+  "status": "PASS",
+  "exitCode": 0,
+  "moduleSHA256": "cf56fbf1c78395fd8df8cb5a67d0d39b907fa464fa7187bf0203925c29b81d18",
+  "testSHA256": "ec6ebf908acee166f861c8a52d2b44362a318b356979ad12ec217d586b681445",
+  "logSHA256": "65fad6b67ccf2dcfccaf60c85b79beb3657e822fa452074779e87ac6641feb96",
+  "summary": [
+    "# Subtest: P24 no public partial resolver can declare a display contract without replay",
+    "# tests 7",
+    "# suites 0",
+    "# pass 7",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0",
+    "# duration_ms 238.3506"
+  ],
+  "errors": [],
+  "securityRedSHA256": "0db097eb35d83ceec6b7a9af2935d9ba550c58edb2a0da74036493d15bb69187"
+}

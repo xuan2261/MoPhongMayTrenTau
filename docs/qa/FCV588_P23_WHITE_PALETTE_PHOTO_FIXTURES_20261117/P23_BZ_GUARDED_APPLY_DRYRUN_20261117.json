@@ -1,0 +1,36 @@
+{
+  "schema": "P23_BZ_GUARDED_APPLY_DRYRUN_V1",
+  "status": "PREIMAGE_AND_STAGING_GATES_GREEN_APPLY_NOT_EXECUTED",
+  "parentP22SHA256": "3f0af32087e021eba9b360d7591b8909df2c0515c59b435e9a531829ba6655a3",
+  "runtime50PreimageMatched": true,
+  "originalOEMReferenceOnly8Matched": true,
+  "preimageExistingSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+    "web/app.mjs": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "58ec6560ed1bcde72f864ae90630337adb597e1e9fad5bf837ab9121f3cd724f"
+  },
+  "expectedStageSHA256": {
+    "src/devices/fcv588/echo-projection.mjs": "060feab89b38e13a3832af694f22752d26457b9d810400c4d887908fbe122253",
+    "web/app.mjs": "71419bf93cd436915bc3e92ad4b13030ca197f5bfdfa9e8831ada692091dbafe",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "09d1269de69a1b6beb251720d9cd53625cbfe753a5604b827143cdb42c4889e9",
+    "test/fcv588-p23-bottom-zoom-manual.test.mjs": "8c3b91c6914fded1788682800a55631f7627148d8b7c4b214e3e3e1c11be4f29"
+  },
+  "addedTestMustBeAbsent": "test/fcv588-p23-bottom-zoom-manual.test.mjs",
+  "backupZipSHA256": "b93646679b5c9bbcf66ca01974a7380942e0dd1c6f43a0234f7bfcac153d6aa8",
+  "backupZipMembers": [
+    "src/devices/fcv588/echo-projection.mjs",
+    "web/app.mjs",
+    "test/fcv588-p04-bottom-provenance.test.mjs"
+  ],
+  "stagingGateReceiptsSHA256": {
+    "fullNode": "23b0a713caff73f7d121ce2c15ed4a34530197cb4f6ab885ee6df3837e8c24cc",
+    "python": "c4613fce64e90e284224d6700816c1f1c114c7d7455416960604c158258bc6a5",
+    "chrome": "ef9eeab124b69be378eb13dff7ea0a0317402a110b7a8ad20e81feae405e3ec6",
+    "focused": "4af949779ca41bf04258c8727e0d55e433f378730706da2a8fe48313624e3f63"
+  },
+  "manual": "OME23890-E PDF page12 / printed 4, Bottom Zoom lower part",
+  "historicalBZHashPreserved": "efe712c15b072f07da63487ad630ef8d5bf060ebc04db0491b925c07623132e3",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p23-bz-lower-20261117",
+  "canonicalChanged": false,
+  "applyRequires": "FRESH_INDEPENDENT_BOUNDED_GO"
+}

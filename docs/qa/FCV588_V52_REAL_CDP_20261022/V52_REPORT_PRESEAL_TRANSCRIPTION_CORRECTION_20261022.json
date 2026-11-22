@@ -1,0 +1,12 @@
+{
+  "type": "PRESEAL_REPORT_DRAFT_MANUAL_SHA_TRANSCRIPTION_CORRECTION",
+  "dateUtc": "2026-10-22T04:14:29.9742572Z",
+  "previousDraft": "2026-10-22-v52-cdp-loaded-source-integrated-qa.md",
+  "previousDraftSHA256": "58cb0c268ce127a545b05631ad08fee199902c7e7cd24a99e5f78ff26f89387b",
+  "correctedAuthoritativeReport": "2026-10-22-v52-cdp-loaded-source-integrated-qa-v2.md",
+  "correctedReportSHA256": "a13faacec93629aabded78cc8615354614e21b2ff6e825c89f87aba8b4940cf6",
+  "oldErroneousManualHash": "87da3d688560a7846516056c294e7c6c294e8e67706c3ad3effdb686a",
+  "actualReceiptHash": "87da3d688560a7846516056c294e7b05c9f6845a0258e67706c3ad3effdb686a",
+  "reason": "Manual transcription error in draft Markdown; actual V52 CDP receipt untouched; no runtime code edited.",
+  "originalDraftRetained": true
+}

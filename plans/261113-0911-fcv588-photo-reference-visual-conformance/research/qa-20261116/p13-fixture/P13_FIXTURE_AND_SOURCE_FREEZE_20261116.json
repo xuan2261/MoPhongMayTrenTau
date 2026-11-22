@@ -1,0 +1,216 @@
+{
+  "schema": "fcv588-p13-fixture-and-source-freeze-v1",
+  "createdAt": "2026-11-16T17:11:44.7558354+07:00",
+  "scope": "Read-only final verification of C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116 containment, runtime freeze, semantic test rebaseline strictness, original8 references, canonical runtime39, and user port 4173.",
+  "verdict": "PASS_FIXTURE_AND_SOURCE_FREEZE__NO_GO_CANONICAL_APPLY_PROFILE21_SEMANTIC_DRIFT",
+  "operations": {
+    "browserRun": false,
+    "testsRunByThisReview": false,
+    "runtimeEdited": false,
+    "canonicalEdited": false,
+    "stageEdited": false,
+    "userPortRestartedOrKilled": false,
+    "onlyNewFile": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-fixture/P13_FIXTURE_AND_SOURCE_FREEZE_20261116.json"
+  },
+  "stage": {
+    "root": "C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116",
+    "sources": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116\\sources",
+      "linkType": "Junction",
+      "target": "C:\\Work\\MoPhongMayTrenTau\\sources",
+      "classification": "REFERENCE_ONLY_CANONICAL_SOURCE_JUNCTION"
+    },
+    "treeComparison": {
+      "docs": {
+        "canonicalFiles": 1197,
+        "stageFiles": 1197,
+        "missing": 0,
+        "extra": 0,
+        "hashDifferences": 0,
+        "status": "EXACT"
+      },
+      "plansPreReceipt": {
+        "canonicalFiles": 1037,
+        "stageFiles": 1031,
+        "missing": 6,
+        "extra": 0,
+        "hashDifferencesAmongSharedFiles": 0,
+        "status": "ALL_PRE_STAGE_SHARED_FILES_EXACT__SIX_LATER_P13_ARTIFACTS_NOT_STAGED",
+        "missingLaterArtifacts": [
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-fixture/P13_FIXTURE_REQUIREMENTS_20261116.md",
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json",
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/p13_profile21_replay_compatibility_probe_20261116.mjs",
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_NODE_GREEN_20261116.txt",
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_PYTHON_20261116.txt",
+          "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FULL_FIXTURE_INITIAL_RED_20261116.txt"
+        ],
+        "impact": "NONE_ON_EXISTING_563_TEST_FIXTURE_CLOSURE"
+      }
+    }
+  },
+  "runtime39": {
+    "p07ManifestSource": {
+      "path": "docs/qa/FCV588_P07_BOUNDED_20261116/FCV588_P07_BOUNDED_FINAL_INTEGRITY_20261116.json",
+      "sha256": "024dd1d75c7879fe0df88f939739d854a40aa819a459b6e1fbebd186aca91726"
+    },
+    "manifestRows": 39,
+    "canonical": {
+      "matchingRows": 39,
+      "missingRows": 0,
+      "mismatchedRows": 0,
+      "aggregateSha256OfSortedPathNullShaRows": "097e26f2e6dae8ff9a86ea4c0fa2ec23e4ed92ea5f6e0c5f80f0ff75ddd259fc",
+      "status": "39_OF_39_EXACT_P07"
+    },
+    "stage": {
+      "matchingP07Rows": 38,
+      "missingRows": 0,
+      "mismatchedRows": 1,
+      "aggregateSha256OfSortedPathNullShaRows": "77293b164074c4ade69ef9dae1e62a0b4b8d6dd7eeae4ba84c873074f9a8fe6c",
+      "onlyExpectedDifference": {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "p07CanonicalSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+        "stageSha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca"
+      },
+      "status": "38_OF_39_P07_EXACT_PLUS_ONE_EXPECTED_MENU_ATLAS_CANDIDATE"
+    },
+    "treeCrossCheck": {
+      "src": "23 canonical / 23 stage; one hash difference = menu-atlas.mjs only",
+      "web": "16 canonical / 16 stage; zero hash differences",
+      "tools": "42 canonical / 42 stage; zero hash differences"
+    }
+  },
+  "semanticRebaseline": {
+    "stageTestTree": {
+      "canonicalFiles": 98,
+      "stageFiles": 98,
+      "missing": 0,
+      "extra": 0,
+      "hashDifferences": 3
+    },
+    "aggregateStageRebaseline3Sha256": "4c263176be8ccaa7ebbe2d5cb2a85ddf46eb4048d158c20090d6dd1823b8e4cc",
+    "files": [
+      {
+        "path": "test/fcv588-public-lcd-presentation.test.mjs",
+        "canonicalSha256": "53cf6b172020ca63170e03f94389d421c7155e1106c4ed6f2b00d5700e2e29be",
+        "stageSha256": "8ef4e1d40671e809d38ba117185ec5ca2f9dc1d21019707572b2c843b204f092",
+        "assertCallsCanonical": 46,
+        "assertCallsStage": 52,
+        "review": "Replaces fixed Sounder ordinals with findIndex by sounder.clutter and sounder.shift; adds existence, selected-ID, editEntryId and selected-state assertions while preserving editor bounds, disabled state and SHIFT_UNAVAILABLE_IN_AUTO_RANGE assertions.",
+        "strictness": "PRESERVED_OR_INCREASED"
+      },
+      {
+        "path": "test/fcv588-v47-white-marker-firmware-boundary.test.mjs",
+        "canonicalSha256": "993afb020bd01f05f8cf6f2fb9803d484cab6f1861f5f8e440c3505cd3755773",
+        "stageSha256": "24a008dce2dc55c382c96a3a60853a3a44e9971738ac06e4da7933aba3e62ea8",
+        "assertCallsCanonical": 43,
+        "assertCallsStage": 46,
+        "review": "Derives White Marker and unrelated Color Erase positions by stable entry IDs; adds presence/identity assertions and retains exact White Marker sourceStatus, choice, selected-row and non-leakage assertions.",
+        "strictness": "PRESERVED_OR_INCREASED"
+      },
+      {
+        "path": "test/fcv588-v49-a11y-boundary.test.mjs",
+        "canonicalSha256": "f5f068450d1a3826fd01f4a28873dcfe17329a7a18d5f2d6a45dadf3ddea41b2",
+        "stageSha256": "b649bad4164b09cda3ce44ac96b8275360a858d5592d3c11d24e70eba9ed9867",
+        "assertCallsCanonical": 24,
+        "assertCallsStage": 26,
+        "review": "Derives White Marker position by stable entry ID and adds exact cue.status assertion while retaining exact label, choices, sourceStatus, visibility and profile21 checks.",
+        "strictness": "PRESERVED_OR_INCREASED"
+      }
+    ],
+    "reviewVerdict": "PASS_SEMANTIC_ID_REBASELINE_NO_ASSERTION_WEAKENING"
+  },
+  "existingP13EvidenceReviewedNotRerun": {
+    "initialFixtureCompleteNode": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FULL_FIXTURE_INITIAL_RED_20261116.txt",
+      "sha256": "d5c502134a80c5cbea046befc3866674c0da857461c74d40e999ee650d856137",
+      "result": "563 tests, 558 pass, 5 fail"
+    },
+    "postRebaselineNode": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_NODE_GREEN_20261116.txt",
+      "sha256": "bf85e4685e87607b89ff4c7c7612d0a1cad580d24172e9097dcd36c55b3d4873",
+      "result": "563 tests, 563 pass, 0 fail"
+    },
+    "python": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_PYTHON_20261116.txt",
+      "sha256": "746832750e3d5891c799514347539900311238c22d5a669e8af9963267c3df00",
+      "result": "13 tests, OK"
+    }
+  },
+  "semanticCompatibilityBlocker": {
+    "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json",
+    "sha256": "479909adb7475c8d9b02dd195b6abb1943593a78f575c2857b6585a1d4336f8c",
+    "status": "VERIFIED_PROFILE21_SELECTION_ONLY_REPLAY_SILENT_SEMANTIC_DRIFT_APPLY_BLOCKER",
+    "sampleOldSelection": "sounder.whiteMarker",
+    "sampleReorderedSelection": "sounder.clutter",
+    "sameSessionHashDespiteDifferentSelectedMenuItem": true,
+    "decision": "NO_GO_SAME_PROFILE_REVISION_MENU_REORDER",
+    "requiredBeforeApply": "Explicit semantic menu-order revision plus supported backward-compatible profile21 replay path, or equivalent source-valid version binding."
+  },
+  "referenceOnlyOriginal8": {
+    "sourceDirectory": "sources/FCV588_GiaoDienThucTeMay2016",
+    "p07AggregateSha256OfSortedFilenameNullShaRows": "80796f074ad8493ca75f95604c46e00aba3f2a0018595589436386ab54f70c62",
+    "canonicalMatchesP07": "8/8",
+    "stageViaSourcesJunctionMatchesP07": "8/8",
+    "files": {
+      "dual.jpg": "4d88fe11cda8a9107f97e44a392103cc68eb8ab8e685b7b5e7408a556a2bc37b",
+      "giaoDien.jpg": "e7b78466fa582dc0cc50aec8e2fc264f8b3ee187d93a53cace1e88d1e156c99c",
+      "hf.jpg": "7f1a69504fd703988750729ee38b4964229480a4c55b20ae0f0bb4815f6ea2a9",
+      "lf.jpg": "c3ef46a27fc965c95d2df33981b0c66775b848ae96aa8efdcad932b91a50c3ef",
+      "nav1.jpg": "b90de3afeb18730e10e4ac897fb20bbde36155e25cc344abed259ba1de0d030e",
+      "nav2.jpg": "9f225c6834efe86c76fd8a86bbfaa8f6d276f1e055a815efc91087a832397de6",
+      "zoom.jpg": "ecc7af35e30aafb8f0e9cfe9f05f94c8d529d6d410a2e523053286149d330b52",
+      "zoom2.jpg": "41eaa80b42450b36c3b0f547b9276e26703ce1b74d2f85b1393255fda42bcd99"
+    },
+    "status": "UNCHANGED_REFERENCE_ONLY"
+  },
+  "containmentAndPortSecurity": {
+    "stageServer": {
+      "canonicalServerSha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+      "stageServerSha256": "cb24f7a1835f4db264220285546a88810088d1a354208f594886684dfa17a19c",
+      "hostLiteral": "127.0.0.1",
+      "servedRoots": [
+        "/web/* -> web/",
+        "/src/* -> src/"
+      ],
+      "otherTopLevelPaths": "404",
+      "realpathContainment": true,
+      "allowedSrcExtensions": [".mjs", ".js"],
+      "allowedWebExtensions": [".html", ".mjs", ".js", ".css", ".svg"],
+      "sourcesRoutePresent": false,
+      "docsRoutePresent": false,
+      "plansRoutePresent": false
+    },
+    "servedTreeInspection": {
+      "reparsePointsUnderStageSrcOrWeb": 0,
+      "oemBinaryExtensionsUnderStageSrcOrWeb": 0,
+      "sourceOrManualRuntimeReferences": "No active /sources/ or sources/manuals path; only a CSS comment mentions dual.jpg.",
+      "sourcesManualsServed": false,
+      "basis": "Static route/realpath/extension review; no browser or HTTP probe was run in this P13 review."
+    },
+    "userServer": {
+      "localAddress": "127.0.0.1",
+      "localPort": 4173,
+      "owningProcess": 1204,
+      "processName": "node",
+      "executable": "C:\\nvm4w\\nodejs\\node.exe",
+      "commandLine": "\"C:\\nvm4w\\nodejs\\node.exe\" tools/server.mjs",
+      "otherListeningNodeServersObserved": 0,
+      "status": "UNCHANGED_LOOPBACK_PID1204"
+    }
+  },
+  "sourceFreeze": {
+    "p12FinalIntegrity": {
+      "path": "docs/qa/FCV588_P12_MENU_SOURCE_20261116/FCV588_P12_MENU_SOURCE_FINAL_INTEGRITY_20261116.json",
+      "sha256": "5afe2663a1d0d3dff6e213fc537fad3b7dfe5817d7aa776ee4a769e580780855"
+    },
+    "p13Requirements": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-fixture/P13_FIXTURE_REQUIREMENTS_20261116.md",
+      "sha256": "ef700d07816f4d4b74cdb726f3ecec3a71140b65bdfe157b7fe67d47891d5423"
+    },
+    "canonicalRuntime39": "UNCHANGED_39_OF_39_P07",
+    "original8": "UNCHANGED_8_OF_8_P07",
+    "stageRuntime": "ONLY_EXPECTED_MENU_ATLAS_E2BA214C_DIFF",
+    "testRebaseline": "ONLY_THREE_EXPECTED_SEMANTIC_ID_FILES_DIFFER",
+    "releaseEffect": "NONE; firmware, hardware, rights and release HOLD remain."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "timestampUtc": "2026-10-22T05:23:35.2128050Z",
+  "status": "QA_FIXTURE_BOOT_PREREQUISITE_NOT_PRODUCT_DEFECT",
+  "priorV2RunnerSha256": "72b3e2714dc346cde5d7f1b99ae62ca18fa11bd396d64ac0969967bbbe9eb3fd",
+  "priorV2ObservedResultSha256": "ae7349ad98ff19c718eae97c733782ec8f2dd3b4461a4596a6bd6134555e5c33",
+  "observation": "V2 screenshot displayed STARTUP INITIALIZING 2/4, meaning the second POWER press was made before four synthetic startup ticks finished",
+  "sourceContract": "web/app.mjs lines 550-555: screen-top is STARTUP during booting, normal AUTO_R after deviceState.power on",
+  "v3Runner": "v53_browser_ax_dom_bounded_qa_v3.py",
+  "v3SourceSha256": "ab5144724f72013e6cee26088ebcb09f0f513919a2ea22a6f4258a794ef9046d",
+  "changedScope": "Add wait for actual RUNNING AUTO_R after POWER ON before sampling BRILL and require >=2 visual countdown mutations; preserved all source and V2 original results",
+  "olderObservationsStill": "STATIC_AX_SEMANTICS_ONLY_NOT_DYNAMIC_BRILL_TIMER",
+  "productCodeChanged": false
+}

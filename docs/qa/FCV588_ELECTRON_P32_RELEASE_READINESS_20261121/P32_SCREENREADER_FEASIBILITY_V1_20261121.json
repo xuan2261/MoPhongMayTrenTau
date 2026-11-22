@@ -1,0 +1,17 @@
+{
+  "schema": "FCV588_P32_NARRATOR_NVDA_FEASIBILITY_V1",
+  "status": "BLOCKED_HUMAN_SPEECH_CONFIRMATION",
+  "narratorExePresent": true,
+  "narratorBinaryVersion": "10.0.18362.1",
+  "nvdaDetectedInStandardPaths": false,
+  "nvdaUninstallEntryCount": 0,
+  "currentNarratorNvdaProcessCount": 0,
+  "p31DefaultUiAReceiptSHA256": "16e98cc6d191b5a2a314f8538d3d90b88a44b064854d40bd2ef12159ccb3419e",
+  "p31DefaultUiAControlsVisible": 3,
+  "actualSpokenWordsHeardByHuman": false,
+  "humanSpeechVerificationPerformed": false,
+  "audioRecordingAttempted": false,
+  "NarratorSettingsChanged": false,
+  "NVDAInstalledByQA": false,
+  "releaseApproval": "HOLD"
+}

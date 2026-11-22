@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "status": "V51_ATTACHED_GEOMETRY_PASS_SOFTWARE_QA_PASS_PHASE6_PARTIAL",
+  "recordTimeUtc": "2026-10-22T03:51:17.9134372Z",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "sourceCheckpoint": "V50_FINAL_AND_INDEPENDENT_POSTRECEIPT",
+  "v50FinalSha256": "88b6633a7bd8b68e0e3f048319095eb4d1d783e7f91d74fefad05e59770fd36a",
+  "v50PostreceiptSha256": "1c95c486994004457f16f71fb75f885449f9b3ba00ea75ca348275016fcbb31b",
+  "runtimeShaMatch": "37/37",
+  "sourceCodeChanged": false,
+  "qaTechnique": "Windows headed Helium separate test window + CoS Desktop attached tab + readback and screenshots",
+  "viewportResults": [
+    {
+      "cssViewport": "1366x768",
+      "nativeAttached": true,
+      "dpr": 1,
+      "cosScreenshotPixels": "1366x768",
+      "cosScreenshotScale": 1,
+      "scrollToPower": 360,
+      "horizontalOverflowPixels": 0,
+      "result": "GEOMETRY_PASS_AND_POWER_SCROLL_REACHABLE"
+    },
+    {
+      "cssViewport": "1920x1080",
+      "nativeAttached": true,
+      "dpr": 1,
+      "cosScreenshotPreviewPixels": "1600x900",
+      "cosScreenshotPreviewScale": 0.8333333333333334,
+      "nativeSavedScreenshotPixels": "1920x1080",
+      "result": "GEOMETRY_PASS"
+    }
+  ],
+  "browser": {
+    "tabId": "4f8fd0a6-a42a-46b6-831a-07a5a1d764d3:1626497062",
+    "attachedBeforeReload": true,
+    "postReload200Localhost": "35/35",
+    "postReloadNonlocalRequests": 0,
+    "postReloadConsoleErrors": 0,
+    "bodyHashesMatched": "32/35",
+    "largeBodyHashesNotRun": [
+      "/web/styles.css",
+      "/web/app.mjs",
+      "/src/devices/fcv588/model.mjs"
+    ],
+    "menuOpenedWithRealClick": true,
+    "labelsObserved": [
+      "MENU/ESC",
+      "Pic. Advance",
+      "Interference",
+      "White Marker"
+    ],
+    "powerOnViaRealClick": true,
+    "escClosesMenu": true,
+    "tabToTrackPad": true,
+    "shiftTabReturnsMenu": true,
+    "d15OutsideLcd": true,
+    "menuScreenReadoutIsSynthetic": true
+  },
+  "testLogResults": {
+    "postBrowserNode": "511/511_PASS",
+    "postBrowserPython": "13/13_PASS",
+    "sourceEvidenceSha256": {
+      "V51_ATTACHED_NETWORK_FULL_BODY_SHA_PARTIAL_20261022.json": "71695e32ad0e12ddba07ccda4030667149b0dd546d43c5de246eedb494fdf981",
+      "V51_BROWSER_BODY_SHA_TRANSFER_VERIFY_ORIGINAL_STOP_20261022.txt": "f971030bb78b2096a08d74b1cdf47eca2833e5df8b62e0697ee5982ae0ae4f3f",
+      "V51_ATTACHED_POSTBROWSER_FULL_NODE_20261022.log": "a753502a40bc5690f6e09e3e7d6c4248c7d3cd455e67bd8fe5192fc5fac171bc",
+      "V51_ATTACHED_POSTBROWSER_PYTHON_20261022.log": "669e577dc2de4ac522c81f2938f908238b8ddd93b14daf9ff6c9ff112a3c79b1"
+    }
+  },
+  "screenShotEvidence": [
+    {
+      "path": "V51_ATTACHED_1366x768_POWERED_REAL_SCROLL.png",
+      "width": 1366,
+      "height": 768,
+      "sha256": "c4102249db911f575c03133dfaad62ce45a0c1c55ac5eb0e25b2c782edca29d9",
+      "evidenceRole": "1366x768 content with actual page scroll showing POWER fully"
+    },
+    {
+      "path": "V51_ATTACHED_1920x1080_PHYSICAL_FULL_SCREEN.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "c39055d9915a254c0aa8ac6b846214a4c85099f7852dce06f119558dafdc8b17",
+      "evidenceRole": "1920x1080 physical fullscreen screenshot"
+    },
+    {
+      "path": "V51_ATTACHED_1920x1080_POWERED_MENU.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "4b6306556df6b9d042b16683177873fffb7d5212734afc6c74b8da0c8daec81b",
+      "evidenceRole": "1920x1080 powered Sounder menu"
+    },
+    {
+      "path": "V51_NATIVE_1366x768_CHROME_WINDOW.png",
+      "width": 1390,
+      "height": 847,
+      "sha256": "1dbfc7a520eb10f458a7150f491b508453a168c6e2d22b74f4dd419fb73208ed",
+      "evidenceRole": "1366x768 browser content with Chrome window UI"
+    },
+    {
+      "path": "V51_NATIVE_1366x768_CLIENT_CROP_PRELIMINARY.png",
+      "width": 1366,
+      "height": 768,
+      "sha256": "402cbb096ea79e4681ff745874003a31399b723ca873719b68df5cbde5076942",
+      "evidenceRole": "preliminary physical crop, not primary viewport proof"
+    }
+  ],
+  "notRun": [
+    {
+      "gate": "NARRATOR_NVDA_REAL_SPOKEN_OUTPUT",
+      "reason": "Dedicated isolated Windows speech-verification environment absent; Narrator binary present but not activated and NVDA not confirmed installed"
+    },
+    {
+      "gate": "GENUINE_OS_WINDOW_BLUR_UNDER_POWER_HOLD",
+      "reason": "No distinct natural Chrome window.blur observed while POWER hold; synthetic blur is not acceptable"
+    },
+    {
+      "gate": "THREE_LARGE_BROWSER_LOADED_BODY_SHA",
+      "reason": "CoS Desktop browser_network body view truncated large responses at 20000 chars"
+    }
+  ],
+  "cleanup": {
+    "ownedBrowserTabClosed": true,
+    "ownedLocalServerStopped": true,
+    "tcp4173ListenerCount": 0,
+    "originalUserWindowWasNotResized": true
+  },
+  "phase6": "OPEN",
+  "checklist": "14/50",
+  "namedTasks": "6/22",
+  "claimsHold": 65,
+  "firmwareInstalled": "UNKNOWN",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "milestoneSeal": "NOT_ISSUED"
+}

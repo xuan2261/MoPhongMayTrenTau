@@ -1,0 +1,67 @@
+{
+  "envelopeVersion": 7,
+  "deviceId": "furuno.fcv588.cv588e",
+  "profileRevision": "F1-public-reference-21",
+  "scenarioId": "fcv588-demo-depth-001",
+  "scenarioVersion": 7,
+  "meta": {
+    "schemaVersion": 5,
+    "coreVersion": "f1-core-7",
+    "prngVersion": "counter-mix32-v1",
+    "sensorModelVersion": "fcv588-sonar-illustrative-v1",
+    "tickDurationMs": 1000,
+    "phaseOrder": "input -> world -> sensor -> device",
+    "profileHash": "f0-fnv1a32-f2d5289b",
+    "scenarioHash": "f0-fnv1a32-5861e75e"
+  },
+  "events": [
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 1,
+      "kind": "restore-settings",
+      "settings": {
+        "zoomMode": "Bottom Zoom",
+        "zoomRange": "10"
+      }
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 2,
+      "kind": "down",
+      "control": "power"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 3,
+      "kind": "up",
+      "control": "power"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 4,
+      "kind": "tick",
+      "steps": 4
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 5,
+      "kind": "rotate",
+      "control": "mode",
+      "steps": 1
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 6,
+      "kind": "ui-tick",
+      "elapsedMs": 6000
+    }
+  ],
+  "finalSessionHash": "f0-fnv1a32-1c11dba1",
+  "contentFingerprint": "f0-fnv1a32-15df0a2c"
+}

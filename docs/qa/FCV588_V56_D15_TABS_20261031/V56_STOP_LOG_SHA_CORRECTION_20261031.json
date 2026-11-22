@@ -1,0 +1,8 @@
+{
+  "status": "CORRECTED_MANUAL_SHA_TRANSCRIPTION_IN_STOP_RECORD_NO_SOURCE_EDITS",
+  "originalIncidentSHA256": "38c45105830db9ff7c34351dbade8ae40697e046d1ffd6df70a989e08c9a5d47",
+  "field": "failedStageFocusedLogSHA256",
+  "originalRecorded": "afeb5b56f314718169164d36821f10a9ecb410d7102fae1d38da80e9c4e43044",
+  "verifiedActual": "afeb5b56f314718169164d36821f10a9ecb410d7102fae1d38da80e9c4c43044",
+  "originalRecordPreserved": true
+}

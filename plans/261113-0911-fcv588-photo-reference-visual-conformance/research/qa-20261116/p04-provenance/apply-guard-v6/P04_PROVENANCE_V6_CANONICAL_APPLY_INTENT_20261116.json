@@ -1,0 +1,55 @@
+{
+  "status": "APPLY_INTENT_CREATED_NOT_COMPLETION_PROOF",
+  "timestampUtc": "2026-11-16T02:21:45.656643+00:00",
+  "parentFinalSHA256": "ecdfb0bc680f35a6935bb11a4bbadd1f95e3441069b7074a0b68ab22506b4ee4",
+  "parentPostSHA256": "9befe64829bf9c79fb7e0505fe1db83a5edf676ce1f4c22a7073ca3cd7a6160e",
+  "stageReceiptSHA256": "7599509a0bb6332b147df47226a8b2640c44b577d0e65ae4981fcceace1f9129",
+  "compatibilityReceiptSHA256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6",
+  "chromeReceiptSHA256": "71937c3649c3eda5090e5399eb8d023034100492bee6037c76fd76fd724c3623",
+  "chromeEventsSHA256": "07025fe6792808ad0f87a455b44bd96f0dc72473cf8489ac247dcb5327811027",
+  "reviewerReceiptSHA256": "a1d802f9bc5af0004828914bf5f929f835aa00b38a637275dfca73cba00a605c",
+  "approvedDryRunReceiptSHA256": "1294f0af8cdaa59219797c359d35ff69154ca31868f4b71986aa3dee9960fc1f",
+  "backupSHA256": "1b917047e7391d6ef60fa964f9e8c8bde945da789ab5a594b2008ad528137d85",
+  "copyPaths": [
+    "src/core/scenario.mjs",
+    "src/devices/fcv588/echo-projection.mjs",
+    "web/app.mjs",
+    "web/fcv588-echo-rasterizer.mjs",
+    "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+    "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+    "test/fcv588-p04-bottom-provenance.test.mjs",
+    "test/fcv588-photo-modes.test.mjs"
+  ],
+  "copyPathCount": 8,
+  "backupExistingPathCount": 5,
+  "absentNewTestPaths": [
+    "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+    "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+    "test/fcv588-p04-bottom-provenance.test.mjs"
+  ],
+  "strictPreimageSHA256": {
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/devices/fcv588/echo-projection.mjs": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+    "web/app.mjs": "7a995c2089b9eed90158c67ed1fed751dc2ded37e8130d5dbd727767175c62c7",
+    "web/fcv588-echo-rasterizer.mjs": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+    "test/fcv588-photo-modes.test.mjs": "85f201ba3697b6ae408f0bf64c6fcbdf81aed44553f3dfa47862eb4ca4fe2f7c"
+  },
+  "expectedPostimageSHA256": {
+    "src/core/scenario.mjs": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+    "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+    "web/app.mjs": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+    "web/fcv588-echo-rasterizer.mjs": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+    "test/fcv588-p04-bottom-provenance-v2.test.mjs": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212",
+    "test/fcv588-p04-bottom-provenance-v3.test.mjs": "69b33a2f4646e97535ecd33e5a182e3318cbf757d0baddfef0a4c5e7a440bfa1",
+    "test/fcv588-p04-bottom-provenance.test.mjs": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd",
+    "test/fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955"
+  },
+  "holds": {
+    "rights": "HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "release": "HOLD",
+    "featureClaims": "65/65 HOLD",
+    "phase6": "OPEN"
+  }
+}

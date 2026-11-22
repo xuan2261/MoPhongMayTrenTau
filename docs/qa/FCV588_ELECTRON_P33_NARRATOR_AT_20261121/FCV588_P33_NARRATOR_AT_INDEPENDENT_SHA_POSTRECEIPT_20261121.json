@@ -1,0 +1,49 @@
+{
+  "schema": "P33_INDEPENDENT_SHA_POSTRECEIPT_V1",
+  "phase": "P33",
+  "timestampUtc": "2026-11-21T14:39:21.9263427Z",
+  "decision": "PASS_BOUNDED_NATIVE_UIA_EVIDENCE_ONLY",
+  "releaseApproval": "HOLD",
+  "method": "Fresh separate read-only PowerShell process, JSON semantic checks, independent disk SHA, subsequent immutable CreateNew receipt",
+  "p33ArtifactSha256": {
+    "finalIntegrity": "4a880c71f503078e20dd4a585d408947b8830cc8f7fcac59fb1c52eca30a0478",
+    "finalReport": "dc490c0abddaad52870489c624b0ba9761f02ba8e1cf96d4999e2bebf0b054f3",
+    "scriptV1": "e2a73f0389f6f33e5681fea03a672a6cf11ad0f7ed0e3452a7164af6cd834495",
+    "scriptV2": "1c012f1f3d13d3acab601b57443a99f759c40454baf5be9bd26297d35fe4888b",
+    "receiptV1": "32b56805ea2e67a751cd5b7e87402acc9d15f20e6c51f1744d1cd913ac435ee0",
+    "receiptV2": "2c5944177e55002b7077e97061910da5045c3d1326956f02176527377943e340",
+    "exe": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+    "asar": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190"
+  },
+  "p28ToP32ParentSha256": {
+    "P28_FINAL": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28_POST": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29_FINAL": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29_POST": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30_FINAL": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30_POST": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5",
+    "P31_FINAL": "27dc44249a425f01b6848f58467a88fc02fd90aaa0aa3ec4ad7cc61e8eb60a36",
+    "P31_POST": "3b535d1eee65b25a91f7f8c542577ffbb3f287af2bc4630ba6b247310728c32c",
+    "P32_FINAL": "1146a3b48d3afe7f1ce1744d5ed78a3f78567b30184284e36a01df501afbe0b1",
+    "P32_POST": "83c0e68a372dc137ddf7608b5b5448961720b97875db4c87a5876133eedbcbad"
+  },
+  "verified": {
+    "sourceHashesMatchFinal": true,
+    "parentHashCount": 10,
+    "v1FailedCleanupPreserved": true,
+    "v2Actions": 4,
+    "v2FocusEvents": 5,
+    "v2FocusSequenceVerified": true,
+    "v2LiveRegionEvents": 0,
+    "v2ProcessCleanupRemaining": 0,
+    "hostFCVProcesses": 0,
+    "hostNarratorProcesses": 0,
+    "serverPid4173": 1204,
+    "spokenAudioVerified": false,
+    "spokenStatus": "BLOCKED_HUMAN_SPEECH_CONFIRMATION"
+  },
+  "notes": [
+    "Final report has a literal trailing backslash-n; cosmetic text-only, preserved by SHA, not silently edited.",
+    "No change to canonical product, P28-P32 seals, Windows Narrator settings, installer or user HTTP listener by this verification."
+  ]
+}

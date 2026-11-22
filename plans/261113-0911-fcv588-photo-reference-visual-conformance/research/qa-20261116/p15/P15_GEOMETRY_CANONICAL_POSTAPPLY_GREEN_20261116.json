@@ -1,0 +1,272 @@
+{
+  "schema": "P15_REAL_CHROME_CSS_GEOMETRY_V1",
+  "label": "CANONICAL_POSTAPPLY_GREEN",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "views": [
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "lcd": {
+        "w": 325,
+        "h": 434.171875
+      },
+      "canvas": {
+        "w": 317,
+        "h": 422.65625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 10.5561,
+      "depthFont": 36.2965,
+      "depthW": 75.8125,
+      "depthH": 42,
+      "depthX": 40,
+      "headerW": 299,
+      "headerH": 13,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500184842883549,
+      "canvasRatioError": 1.8484288354936318e-05
+    },
+    {
+      "viewport": [
+        700,
+        900
+      ],
+      "lcd": {
+        "w": 648,
+        "h": 865.6875
+      },
+      "canvas": {
+        "w": 640,
+        "h": 853.328125,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 15,
+      "depthFont": 43,
+      "depthW": 90.578125,
+      "depthH": 51,
+      "depthX": 41,
+      "headerW": 622,
+      "headerH": 18,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500045776646586,
+      "canvasRatioError": 4.577664658556024e-06
+    },
+    {
+      "viewport": [
+        701,
+        900
+      ],
+      "lcd": {
+        "w": 347.203125,
+        "h": 463.828125
+      },
+      "canvas": {
+        "w": 339.203125,
+        "h": 452.265625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 11.2955,
+      "depthFont": 38.8388,
+      "depthW": 73.40625,
+      "depthH": 46,
+      "depthX": 99.03125,
+      "headerW": 321.203125,
+      "headerH": 13,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500086370703057,
+      "canvasRatioError": 8.637070305739236e-06
+    },
+    {
+      "viewport": [
+        900,
+        900
+      ],
+      "lcd": {
+        "w": 377.296875,
+        "h": 504.03125
+      },
+      "canvas": {
+        "w": 369.296875,
+        "h": 492.390625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 12.2976,
+      "depthFont": 42.2845,
+      "depthW": 80.984375,
+      "depthH": 50,
+      "depthX": 175.84375,
+      "headerW": 351.296875,
+      "headerH": 14,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500079332339035,
+      "canvasRatioError": 7.933233903467674e-06
+    },
+    {
+      "viewport": [
+        1240,
+        900
+      ],
+      "lcd": {
+        "w": 377.296875,
+        "h": 504.03125
+      },
+      "canvas": {
+        "w": 369.296875,
+        "h": 492.390625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 12.2976,
+      "depthFont": 42.2845,
+      "depthW": 80.984375,
+      "depthH": 50,
+      "depthX": 345.84375,
+      "headerW": 351.296875,
+      "headerH": 14,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500079332339035,
+      "canvasRatioError": 7.933233903467674e-06
+    },
+    {
+      "viewport": [
+        1241,
+        900
+      ],
+      "lcd": {
+        "w": 377.296875,
+        "h": 504.03125
+      },
+      "canvas": {
+        "w": 369.296875,
+        "h": 492.390625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 12.2976,
+      "depthFont": 42.2845,
+      "depthW": 80.984375,
+      "depthH": 50,
+      "depthX": 178.84375,
+      "headerW": 351.296875,
+      "headerH": 14,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500079332339035,
+      "canvasRatioError": 7.933233903467674e-06
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "lcd": {
+        "w": 377.296875,
+        "h": 504.03125
+      },
+      "canvas": {
+        "w": 369.296875,
+        "h": 492.390625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 12.2976,
+      "depthFont": 42.2845,
+      "depthW": 80.984375,
+      "depthH": 50,
+      "depthX": 241.34375,
+      "headerW": 351.296875,
+      "headerH": 14,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500079332339035,
+      "canvasRatioError": 7.933233903467674e-06
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "lcd": {
+        "w": 377.296875,
+        "h": 504.03125
+      },
+      "canvas": {
+        "w": 369.296875,
+        "h": 492.390625,
+        "intrinsicW": 480,
+        "intrinsicH": 640
+      },
+      "headerFont": 12.2976,
+      "depthFont": 42.2845,
+      "depthW": 80.984375,
+      "depthH": 50,
+      "depthX": 518.34375,
+      "headerW": 351.296875,
+      "headerH": 14,
+      "contentStatus": "RUN · DEMO DATA",
+      "canvasAspect": 0.7500079332339035,
+      "canvasRatioError": 7.933233903467674e-06
+    }
+  ],
+  "checks": [
+    {
+      "name": "375x812 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "700x900 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "701x900 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "900x900 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "1240x900 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "1241x900 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "1366x768 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "1920x1080 canvas preserves 480:640 intrinsic aspect <=0.00075",
+      "pass": true
+    },
+    {
+      "name": "desktop1366/1920 LCD has fixed-size design witness",
+      "pass": true
+    },
+    {
+      "name": "G2 header font fixed for same LCD width",
+      "pass": true
+    },
+    {
+      "name": "G2 depth font fixed for same LCD width",
+      "pass": true
+    },
+    {
+      "name": "G2 depth glyph width fixed for same LCD width",
+      "pass": true
+    },
+    {
+      "name": "owned server4216 exited",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "ownedServerPid": 11588,
+  "ownedServerExited": true
+}

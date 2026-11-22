@@ -1,0 +1,10 @@
+{
+  "performed": [
+    "test/fcv588-photo-echo-render.test.mjs",
+    "test/fcv588-public-channel-labels.test.mjs",
+    "web/app.mjs",
+    "web/fcv588-echo-rasterizer.mjs"
+  ],
+  "complete": true,
+  "timestampUtc": "2026-11-14T03:35:57.670396+00:00"
+}

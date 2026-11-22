@@ -1,0 +1,38 @@
+{
+  "dateUtc": "2026-10-18T04:19:23.559119+00:00",
+  "scope": "FCV588_F1_V35_D15_PREAPPLY_STAGING_EVIDENCE",
+  "supervision": "USER_APPROVED_GPT6_GO",
+  "status": "V35_FOUR_WEB_FILE_CANDIDATE_READY_FOR_INTEGRATION",
+  "v34CanonicalSourceFilesVerified": 36,
+  "v35StagedRuntimeFilesVerified": 37,
+  "changedWebFiles": [
+    "web/app.mjs",
+    "web/index.html",
+    "web/styles.css",
+    "web/fcv588-training-source-matrix.mjs"
+  ],
+  "candidatePatchSha256": "66a98472daeee684479670da40e04f075c3af2dbc6421c63d8c76ace17d9d832",
+  "manifestSha256": "cf1522e48043c12227711e71bca518070274731e9d510c1f8d187e7c1d1377f6",
+  "nodeTestsPassed": 37,
+  "browserAssertionsPassed": 115,
+  "browserViewports": [
+    "1366x768",
+    "1920x1080",
+    "360x800",
+    "390x844",
+    "320x720"
+  ],
+  "screenshotsShaVerified": 25,
+  "servedFilesVerified": 37,
+  "deniedRoutes": 4,
+  "evidenceSha256": {
+    "node": "8eaaf929e1a10cf031f615f0393143a13a96adeda024411171452d58b1ca2afd",
+    "chrome": "3a9652e8e31cb6029945f7c5426b55c6d37e8f9f22a76012852189dfe7a9108e",
+    "served": "f38a169ef40e4a7ce5a4ce39b5d6d8afe1e112e2301d097b833ae32b9f979fb4",
+    "dryCheck": "e3a8caf098d7fe5f991393ddb2b9594f5fda5da0e338cc1b6ee8d2a230bbde4e"
+  },
+  "runtimeIntegrated": false,
+  "sourceSemanticsChanged": false,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

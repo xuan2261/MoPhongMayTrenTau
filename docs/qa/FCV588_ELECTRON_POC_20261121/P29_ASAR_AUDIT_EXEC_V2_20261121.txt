@@ -1,0 +1,17 @@
+file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-electron-poc-20261121/node_modules/@electron/asar/lib/filesystem.js:237
+            throw new Error(`"${p}" was not found in this archive`);
+            ^
+
+Error: "src/core/device-runtime.mjs" was not found in this archive
+    at Filesystem.getFile (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-electron-poc-20261121/node_modules/@electron/asar/lib/filesystem.js:237:19)
+    at Module.extractFile (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-electron-poc-20261121/node_modules/@electron/asar/lib/asar.js:226:33)
+    at Object.<anonymous> (C:\Work\MoPhongMayTrenTau\staging\fcv588-electron-poc-20261121\desktop\audit-package.cjs:46:22)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+Node.js v22.22.0

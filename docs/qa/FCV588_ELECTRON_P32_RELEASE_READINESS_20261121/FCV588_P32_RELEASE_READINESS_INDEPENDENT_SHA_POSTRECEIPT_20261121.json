@@ -1,0 +1,20 @@
+{
+  "schema": "P32_INDEPENDENT_POWERSHELL_SHA_POSTRECEIPT_V1",
+  "status": "PASS",
+  "P32FinalSHA256": "1146a3b48d3afe7f1ce1744d5ed78a3f78567b30184284e36a01df501afbe0b1",
+  "P32ReportSHA256": "96ed7e42d4da7e587fa0323bb93a54df82bdc6b6456bd20cfce3666e0e734b41",
+  "P32ReceiptCountChecked": 6,
+  "parentFinalPostSHAExact": 8,
+  "canonicalRuntimeSHAExact": 54,
+  "oemJPEGReferenceSHAExact": 8,
+  "installedVersion": "0.0.3",
+  "installedExeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "installedAsarSHA256": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+  "installedSignature": "NotSigned",
+  "FCV588RunningProcessCount": 0,
+  "QAOutboundFirewallRulesRemaining": 0,
+  "userPort4173PID": 1204,
+  "NarratorSpeechHumanChecked": false,
+  "signedDistributionApproved": false,
+  "releaseApproval": "HOLD"
+}

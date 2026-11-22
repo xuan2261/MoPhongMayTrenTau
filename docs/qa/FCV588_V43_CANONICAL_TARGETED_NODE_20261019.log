@@ -1,0 +1,406 @@
+TAP version 13
+# Subtest: first MODE detent opens selection without immediate effective mode switch
+ok 1 - first MODE detent opens selection without immediate effective mode switch
+  ---
+  duration_ms: 7.3
+  type: 'test'
+  ...
+# Subtest: UI clock expires MODE independently of paused world and is replay-deterministic
+ok 2 - UI clock expires MODE independently of paused world and is replay-deterministic
+  ---
+  duration_ms: 8.3824
+  type: 'test'
+  ...
+# Subtest: public reducer revision rejects replay envelopes bound to F0 semantics
+ok 3 - public reducer revision rejects replay envelopes bound to F0 semantics
+  ---
+  duration_ms: 2.5549
+  type: 'test'
+  ...
+# Subtest: brilliance key cycles levels and an independent UI timeout commits the preview
+ok 4 - brilliance key cycles levels and an independent UI timeout commits the preview
+  ---
+  duration_ms: 3.3378
+  type: 'test'
+  ...
+# Subtest: POWER hold boundary is greater than 3000ms and F0 remains isolated
+ok 5 - POWER hold boundary is greater than 3000ms and F0 remains isolated
+  ---
+  duration_ms: 1.7955
+  type: 'test'
+  ...
+# Subtest: POWER hold shows a replayable countdown and cancelled input does not shut down
+ok 6 - POWER hold shows a replayable countdown and cancelled input does not shut down
+  ---
+  duration_ms: 3.5616
+  type: 'test'
+  ...
+# Subtest: RANGE repeated press in manual mode stages next preset until ENTER
+ok 7 - RANGE repeated press in manual mode stages next preset until ENTER
+  ---
+  duration_ms: 2.6768
+  type: 'test'
+  ...
+# Subtest: GAIN Auto Offset is bounded independently from manual gain
+ok 8 - GAIN Auto Offset is bounded independently from manual gain
+  ---
+  duration_ms: 1.6474
+  type: 'test'
+  ...
+# Subtest: free VRM is disabled in NAV after MODE selection commits
+ok 9 - free VRM is disabled in NAV after MODE selection commits
+  ---
+  duration_ms: 1.5079
+  type: 'test'
+  ...
+# Subtest: Range shows current and pending mode/preset without persisting a phantom control value
+ok 10 - Range shows current and pending mode/preset without persisting a phantom control value
+  ---
+  duration_ms: 12.1014
+  type: 'test'
+  ...
+# Subtest: Range formatting reads existing configured meters and current depth unit without changing storage
+ok 11 - Range formatting reads existing configured meters and current depth unit without changing storage
+  ---
+  duration_ms: 2.4912
+  type: 'test'
+  ...
+# Subtest: Gain exposes the pending mode and offset, while committed control values remain separate
+ok 12 - Gain exposes the pending mode and offset, while committed control values remain separate
+  ---
+  duration_ms: 3.8329
+  type: 'test'
+  ...
+# Subtest: BRILL selected level and existing idle timer are projected without a second clock
+ok 13 - BRILL selected level and existing idle timer are projected without a second clock
+  ---
+  duration_ms: 2.8831
+  type: 'test'
+  ...
+# Subtest: MODE displays all existing rotary positions and never advertises ENTER as commit
+ok 14 - MODE displays all existing rotary positions and never advertises ENTER as commit
+  ---
+  duration_ms: 1.9702
+  type: 'test'
+  ...
+# Subtest: basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+ok 15 - basic-control projection fails closed on missing, foreign, powered-off and invalid pending values
+  ---
+  duration_ms: 1.6178
+  type: 'test'
+  ...
+# Subtest: basic control renderer uses original inert DOM and has no independent state transitions
+ok 16 - basic control renderer uses original inert DOM and has no independent state transitions
+  ---
+  duration_ms: 9.6786
+  type: 'test'
+  ...
+# Subtest: every available lesson is explicitly training-only and source referenced
+ok 17 - every available lesson is explicitly training-only and source referenced
+  ---
+  duration_ms: 2.134
+  type: 'test'
+  ...
+# Subtest: MODE lesson passes on actual deterministic recorded transitions and replay
+ok 18 - MODE lesson passes on actual deterministic recorded transitions and replay
+  ---
+  duration_ms: 18.2756
+  type: 'test'
+  ...
+# Subtest: missing required action is not graded PASS even if mode field happens to match
+ok 19 - missing required action is not graded PASS even if mode field happens to match
+  ---
+  duration_ms: 5.3112
+  type: 'test'
+  ...
+# Subtest: teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+ok 20 - teacher assessment is a semantic probe, not browser pixel or anti-cheat attestation
+  ---
+  duration_ms: 6.2077
+  type: 'test'
+  ...
+# Subtest: scoring a new lesson attempt cannot credit actions or UI time from before start
+ok 21 - scoring a new lesson attempt cannot credit actions or UI time from before start
+  ---
+  duration_ms: 9.3294
+  type: 'test'
+  ...
+# Subtest: a fresh lesson attempt with new events passes from its own recorded sequence
+ok 22 - a fresh lesson attempt with new events passes from its own recorded sequence
+  ---
+  duration_ms: 8.261
+  type: 'test'
+  ...
+# Subtest: waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+ok 23 - waypoint lesson does not credit an earlier MARK when a later MARK has NO POSITION
+  ---
+  duration_ms: 10.414
+  type: 'test'
+  ...
+# Subtest: D15 training score refuses forged device state or altered event sequence, even when probes match
+ok 24 - D15 training score refuses forged device state or altered event sequence, even when probes match
+  ---
+  duration_ms: 6.0626
+  type: 'test'
+  ...
+# Subtest: D15 scoring ignores inherited lesson state without a new event in the current attempt
+ok 25 - D15 scoring ignores inherited lesson state without a new event in the current attempt
+  ---
+  duration_ms: 5.1007
+  type: 'test'
+  ...
+# Subtest: D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+ok 26 - D15 rejects unrelated physical inputs even if final range probe matches; legitimate action retries are allowed
+  ---
+  duration_ms: 8.4651
+  type: 'test'
+  ...
+# Subtest: D15 rejects a stale lesson-start fingerprint from another session with the same event count
+ok 27 - D15 rejects a stale lesson-start fingerprint from another session with the same event count
+  ---
+  duration_ms: 5.3711
+  type: 'test'
+  ...
+# Subtest: D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+ok 28 - D15 nonzero lesson boundary cannot be scored without a verified start-session fingerprint
+  ---
+  duration_ms: 4.7031
+  type: 'test'
+  ...
+# Subtest: D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+ok 29 - D15 cannot credit a RANGE exercise where its physical actions occurred while powered off
+  ---
+  duration_ms: 7.0138
+  type: 'test'
+  ...
+# Subtest: D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+ok 30 - D15 §1.21 Data Source lesson has a complete physical-key workflow, replay and new-attempt boundary
+  ---
+  duration_ms: 19.8957
+  type: 'test'
+  ...
+# Subtest: D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+ok 31 - D15 Data Source lesson does not give credit when MENU/ESC cancels the NMEA edit
+  ---
+  duration_ms: 7.8827
+  type: 'test'
+  ...
+# Subtest: D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+ok 32 - D15 C11/D14 receiver-absence lesson grades a real System menu workflow, not just a saved setting
+  ---
+  duration_ms: 20.8254
+  type: 'test'
+  ...
+# Subtest: D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+ok 33 - D15 receiver-absence lesson rejects a genuine synthetic NAV fixture instead of calling it no data
+  ---
+  duration_ms: 11.0985
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+ok 34 - D15 LEARN-05 rejects temporary fixture enable-then-disable during the scored attempt
+  ---
+  duration_ms: 22.1461
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+ok 35 - D15 LEARN-06 scores a committed §2.3 Key Beep change, not a canceled or historical menu edit
+  ---
+  duration_ms: 29.9453
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+ok 36 - D15 LEARN-06 rejects unrelated FUNC hold-and-cancel before a valid menu procedure
+  ---
+  duration_ms: 13.7759
+  type: 'test'
+  ...
+# Subtest: D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+ok 37 - D15 LEARN-07 grades two SHORT BRILL holds and ENTER from an initial level 9
+  ---
+  duration_ms: 12.9119
+  type: 'test'
+  ...
+# Subtest: Brill draft drives visible luminance before commit without mutating canonical state
+ok 38 - Brill draft drives visible luminance before commit without mutating canonical state
+  ---
+  duration_ms: 14.8218
+  type: 'test'
+  ...
+# Subtest: cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+ok 39 - cancelled POWER hold keeps the prior Brill preview; timeout commits that same projection
+  ---
+  duration_ms: 2.9553
+  type: 'test'
+  ...
+# Subtest: LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+ok 40 - LCD diagnostic projection consumes each existing color index and rejects invalid or powered-off patterns
+  ---
+  duration_ms: 2.3864
+  type: 'test'
+  ...
+# Subtest: main menu projects five named categories and exactly the operator rows, without help-as-item
+ok 41 - main menu projects five named categories and exactly the operator rows, without help-as-item
+  ---
+  duration_ms: 4.3839
+  type: 'test'
+  ...
+# Subtest: choice preview tracks real staged value and cancel restores committed value
+ok 42 - choice preview tracks real staged value and cancel restores committed value
+  ---
+  duration_ms: 1.9781
+  type: 'test'
+  ...
+# Subtest: large option lists are bounded while preserving the active value and original ordering
+ok 43 - large option lists are bounded while preserving the active value and original ordering
+  ---
+  duration_ms: 1.6191
+  type: 'test'
+  ...
+# Subtest: source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+ok 44 - source HOLD, capability N/A and optional row filtering stay distinct in visible projection
+  ---
+  duration_ms: 3.0904
+  type: 'test'
+  ...
+# Subtest: local training settings roundtrip is schema-versioned, bounded and never includes serials
+ok 45 - local training settings roundtrip is schema-versioned, bounded and never includes serials
+  ---
+  duration_ms: 5.63
+  type: 'test'
+  ...
+# Subtest: stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+ok 46 - stored settings reject old schema and same-schema foreign profile even if checksum is recomputed
+  ---
+  duration_ms: 1.87
+  type: 'test'
+  ...
+# Subtest: reloaded settings are applied only through a canonical logged replay event
+ok 47 - reloaded settings are applied only through a canonical logged replay event
+  ---
+  duration_ms: 8.6852
+  type: 'test'
+  ...
+# Subtest: new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+ok 48 - new profile never treats a stored Tankenmaru On preference as proof of optional hardware
+  ---
+  duration_ms: 5.4952
+  type: 'test'
+  ...
+# Subtest: malformed settings and prototype-pollution keys are rejected, not executed
+ok 49 - malformed settings and prototype-pollution keys are rejected, not executed
+  ---
+  duration_ms: 1.6987
+  type: 'test'
+  ...
+# Subtest: browser reload explicitly replays vetted local settings, not an unlogged state mutation
+ok 50 - browser reload explicitly replays vetted local settings, not an unlogged state mutation
+  ---
+  duration_ms: 8.9542
+  type: 'test'
+  ...
+# Subtest: V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+ok 51 - V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history
+  ---
+  duration_ms: 4.8791
+  type: 'test'
+  ...
+# Subtest: explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+ok 52 - explicit profile19 migration preserves all validated committed settings but does not weaken normal decode
+  ---
+  duration_ms: 13.1775
+  type: 'test'
+  ...
+# Subtest: legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+ok 53 - legacy migration rejects wrong shape, profile, schema, digest and unsupported settings
+  ---
+  duration_ms: 6.3452
+  type: 'test'
+  ...
+# Subtest: migration retains legitimate ship draft while rejecting transaction draftValue
+ok 54 - migration retains legitimate ship draft while rejecting transaction draftValue
+  ---
+  duration_ms: 1.6123
+  type: 'test'
+  ...
+# Subtest: A04 BRILL left restarts the existing training inactivity interval
+ok 55 - A04 BRILL left restarts the existing training inactivity interval
+  ---
+  duration_ms: 14.4878
+  type: 'test'
+  ...
+# Subtest: A04 BRILL down restarts the existing training inactivity interval
+ok 56 - A04 BRILL down restarts the existing training inactivity interval
+  ---
+  duration_ms: 5.7251
+  type: 'test'
+  ...
+# Subtest: A04 BRILL right restarts the existing training inactivity interval
+ok 57 - A04 BRILL right restarts the existing training inactivity interval
+  ---
+  duration_ms: 4.652
+  type: 'test'
+  ...
+# Subtest: A04 BRILL up restarts the existing training inactivity interval
+ok 58 - A04 BRILL up restarts the existing training inactivity interval
+  ---
+  duration_ms: 3.6408
+  type: 'test'
+  ...
+# Subtest: BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+ok 59 - BRILL MENU/ESC keeps its existing commit semantics; cancelled POWER hold retains preview
+  ---
+  duration_ms: 2.2699
+  type: 'test'
+  ...
+# Subtest: MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+ok 60 - MODE ENTER remains non-committing; rotary resets timeout and MENU cancels
+  ---
+  duration_ms: 1.3762
+  type: 'test'
+  ...
+# Subtest: V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+ok 61 - V43 OEM §1.3 initial BRILL opens at 9 and next SHORT previews 8
+  ---
+  duration_ms: 13.9439
+  type: 'test'
+  ...
+# Subtest: V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+ok 62 - V43 repeated BRILL follows OEM rise/fall at BOTH endpoints deterministically
+  ---
+  duration_ms: 16.8296
+  type: 'test'
+  ...
+# Subtest: V43 independent six-second UI clock and ENTER/MENU commits keep preview
+ok 63 - V43 independent six-second UI clock and ENTER/MENU commits keep preview
+  ---
+  duration_ms: 4.6024
+  type: 'test'
+  ...
+# Subtest: V43 cancelled POWER hold preserves BRILL preview and descending progression
+ok 64 - V43 cancelled POWER hold preserves BRILL preview and descending progression
+  ---
+  duration_ms: 4.4223
+  type: 'test'
+  ...
+# Subtest: V43 behavior profile separates legacy replay/settings without schema trickery
+ok 65 - V43 behavior profile separates legacy replay/settings without schema trickery
+  ---
+  duration_ms: 5.0376
+  type: 'test'
+  ...
+# Subtest: V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+ok 66 - V43 instructor LEARN-07 corresponds to the OEM 9→8 step outside the LCD
+  ---
+  duration_ms: 6.414
+  type: 'test'
+  ...
+1..66
+# tests 66
+# suites 0
+# pass 66
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 400.9482

@@ -1,0 +1,49 @@
+{
+  "timestampUtc": "2026-10-19T08:32:16.530047+00:00",
+  "status": "V46_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptPath": "docs/qa/FCV588_V46_FINAL_INTEGRITY_20261019.json",
+  "finalReceiptSHA": "b8080291f753a56aa428bf038de8e98f4f84f13686b415d941f7074fe66f809d",
+  "originalFinalRunLogSHA": "e41a50def6a402dd78d098847614e601318fe6c2d11ad26589916604ac830e97",
+  "finalIntegrityCheckerSHA": "0f509ec04096296cb83c2a4c0794d13997490ad727607058881cb632b8c18885",
+  "V45FinalSHA": "ac7bacb04eff3baaf9455bb9ff97d89bb5fa79ad4c331264b8acb9b970a48861",
+  "V45PostreceiptSHA": "13af7c3798397f9ba6aaa6bf293f5e58bcde0b22a6a19f489d6af052b31e7543",
+  "runtimeSourceStageCanonicalSHA": 37,
+  "runtimeSourceChangedFromV45": 2,
+  "runtimeSourceUnchangedFromV45": 35,
+  "profileRevision": "F1-public-reference-21",
+  "canonicalApprovedFilesSHA": 7,
+  "documentSHA": 5,
+  "stageAndCanonicalNodePASS": 497,
+  "canonicalPostdocumentNodePASS": 497,
+  "canonicalTargetedNodePASS": 45,
+  "stageAndCanonicalPythonPASS": 13,
+  "stageChromeAssertions": 126,
+  "canonicalChromeAssertions": 126,
+  "stageLoadedBrowserBodySHA": 210,
+  "canonicalLoadedBrowserBodySHA": 210,
+  "newV46ScreenshotsSHA": 24,
+  "historicalScreenshotSHA": 239,
+  "historicalOriginalTrainingFixturesSHA": 16,
+  "httpNegativeRoutesDenied": 4,
+  "ownedQAportsClosed": {
+    "4231": true,
+    "4232": true
+  },
+  "installedFirmware": "UNKNOWN",
+  "oemRights": "HOLD",
+  "narratorNvdaSpokenOutput": "NOT_RUN",
+  "genuineOsWindowBlur": "NOT_RUN",
+  "nativeCoSDesktopExactViewport": "NOT_RUN",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "checklist": {
+    "accepted": 14,
+    "total": 50
+  },
+  "namedTasks": {
+    "accepted": 6,
+    "total": 22
+  },
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

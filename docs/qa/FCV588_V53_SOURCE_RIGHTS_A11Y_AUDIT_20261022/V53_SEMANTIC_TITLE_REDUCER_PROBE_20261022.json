@@ -1,0 +1,87 @@
+{
+  "status": "MODEL_SEMANTIC_TITLES_STABLE_PER_UI_TICK_NOT_BROWSER_SPEECH",
+  "recordedUtc": "2026-10-22T05:30:25.380Z",
+  "source": "Canonical V52 runtime; synthetic reducer and instructor projection",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "sourceShaPinned": true,
+  "phase6": "OPEN",
+  "publicClaimsHold": 65,
+  "noRealNarratorNvdaSpeech": true,
+  "noGenuineOsWindowBlur": true,
+  "titleTransitionCount": 2,
+  "transitions": [
+    {
+      "stage": "physical-down",
+      "title": "Giữ POWER/BRILL"
+    },
+    {
+      "stage": "physical-up-brill",
+      "title": "Giá trị điều khiển không hợp lệ"
+    }
+  ],
+  "powerHoldTitleStable": true,
+  "holdVisualCountdownChanged": true,
+  "brillTitleStableUnderUiTick": true,
+  "snapshots": [
+    {
+      "label": "ready",
+      "power": "on",
+      "overlay": null,
+      "uiElapsedMs": 0,
+      "remainingMs": null,
+      "title": "Trạng thái mô phỏng",
+      "summary": "Màn hình vận hành đang bật.",
+      "help": "Hướng dẫn và nguồn dữ liệu hiển thị tại đây, không đặt trong LCD."
+    },
+    {
+      "label": "physical-down",
+      "power": "on",
+      "overlay": "power-hold",
+      "uiElapsedMs": 0,
+      "remainingMs": 3000,
+      "title": "Giữ POWER/BRILL",
+      "summary": "Còn 3.00 s (đồng hồ UI).",
+      "help": "Nhả phím sớm sẽ không tắt máy. Thời gian này vẫn là khoảng mô phỏng."
+    },
+    {
+      "label": "held-250ms",
+      "power": "on",
+      "overlay": "power-hold",
+      "uiElapsedMs": 250,
+      "remainingMs": 2750,
+      "title": "Giữ POWER/BRILL",
+      "summary": "Còn 2.75 s (đồng hồ UI).",
+      "help": "Nhả phím sớm sẽ không tắt máy. Thời gian này vẫn là khoảng mô phỏng."
+    },
+    {
+      "label": "held-500ms",
+      "power": "on",
+      "overlay": "power-hold",
+      "uiElapsedMs": 500,
+      "remainingMs": 2500,
+      "title": "Giữ POWER/BRILL",
+      "summary": "Còn 2.50 s (đồng hồ UI).",
+      "help": "Nhả phím sớm sẽ không tắt máy. Thời gian này vẫn là khoảng mô phỏng."
+    },
+    {
+      "label": "physical-up-brill",
+      "power": "on",
+      "overlay": "brill",
+      "uiElapsedMs": 500,
+      "remainingMs": null,
+      "title": "Giá trị điều khiển không hợp lệ",
+      "summary": "Dữ liệu lựa chọn không thể hiển thị/lưu, không phải lỗi thiết bị thật.",
+      "help": "MENU/ESC quay lại. Các giá trị và hành vi chưa xác minh giữ trạng thái HOLD."
+    },
+    {
+      "label": "brill-250ms",
+      "power": "on",
+      "overlay": "brill",
+      "uiElapsedMs": 750,
+      "remainingMs": null,
+      "title": "Giá trị điều khiển không hợp lệ",
+      "summary": "Dữ liệu lựa chọn không thể hiển thị/lưu, không phải lỗi thiết bị thật.",
+      "help": "MENU/ESC quay lại. Các giá trị và hành vi chưa xác minh giữ trạng thái HOLD."
+    }
+  ]
+}

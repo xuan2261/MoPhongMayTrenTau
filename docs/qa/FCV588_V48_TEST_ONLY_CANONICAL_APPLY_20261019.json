@@ -1,0 +1,26 @@
+{
+  "timestampUtc": "2026-10-19T10:39:53.084294+00:00",
+  "status": "V48_CANONICAL_TEST_ONLY_SOURCE_SHA_APPLIED_PHASE6_HOLD",
+  "parentV47FinalSHA": "4b039b74b393a62d8aaa05658fd2aa5b124e7551e5f28546a67383331291517c",
+  "parentV47PostreceiptSHA": "b51aa2babcc86757a63dfb4dee77e475a30463750c410f11b64328aafa36c7ea",
+  "appliedPaths": [
+    "test/fcv588-v48-phase6-cross-ledger-claims.test.mjs"
+  ],
+  "approvedFileSHA": {
+    "test/fcv588-v48-phase6-cross-ledger-claims.test.mjs": "b2876f5f70d13df231a80ba01f06c506740144a4497207d86be4284a378c6d5d"
+  },
+  "actualCanonicalFileSHA": {
+    "test/fcv588-v48-phase6-cross-ledger-claims.test.mjs": "b2876f5f70d13df231a80ba01f06c506740144a4497207d86be4284a378c6d5d"
+  },
+  "runtimeSHA": 37,
+  "stageTestSHA": "b2876f5f70d13df231a80ba01f06c506740144a4497207d86be4284a378c6d5d",
+  "goNoteSHA": "99d7c50c728ee8731cbc18c26c26a9050d42a68994206a31af4b31a5ad2f01fa",
+  "stageGreenLogSHA": "ae92985f4f7a43ca5219bd77ea770b957c921b5a72dacd3e4afaf32ed6820bc2",
+  "sourceRuntimeChanged": 0,
+  "runtimeSourceSHA": 37,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "genuineOsWindowBlur": "NOT_RUN"
+}

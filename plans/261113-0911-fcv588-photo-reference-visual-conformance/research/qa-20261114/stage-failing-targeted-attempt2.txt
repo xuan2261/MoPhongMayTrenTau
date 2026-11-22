@@ -1,0 +1,268 @@
+TAP version 13
+# Subtest: photo-reference header renders MAN.R and integer G:10 without inventing voltage
+ok 1 - photo-reference header renders MAN.R and integer G:10 without inventing voltage
+  ---
+  duration_ms: 2.8825
+  type: 'test'
+  ...
+# Subtest: source-backed labels distinguish DUAL and zoom mode without changing selector state
+ok 2 - source-backed labels distinguish DUAL and zoom mode without changing selector state
+  ---
+  duration_ms: 0.4309
+  type: 'test'
+  ...
+# Subtest: photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+ok 3 - photo-like depth ticks include all 0/5/10/15/20 and respect viewport bounds
+  ---
+  duration_ms: 1.5664
+  type: 'test'
+  ...
+# Subtest: NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+ok 4 - NAV has exactly one large depth indicator in left pane, not duplicated over sonar
+  ---
+  duration_ms: 0.2955
+  type: 'test'
+  ...
+# Subtest: each sonar pane keeps its first depth-scale label below frequency and header
+ok 5 - each sonar pane keeps its first depth-scale label below frequency and header
+  ---
+  duration_ms: 4.1145
+  type: 'test'
+  ...
+# Subtest: B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+ok 6 - B19 operator Colors label is OEM literal while D15 discloses synthetic firmware-unknown preview
+  ---
+  duration_ms: 3.896
+  type: 'test'
+  ...
+# Subtest: display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+ok 7 - display palette 8/16 choices and Blue/Black/White backgrounds render original color entries
+  ---
+  duration_ms: 12.0213
+  type: 'test'
+  ...
+# Subtest: B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+ok 8 - B19 documented Palette White/Blue/Black/Mono/Night visibly changes original LCD color samples
+  ---
+  duration_ms: 0.8427
+  type: 'test'
+  ...
+# Subtest: B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+ok 9 - B19 VRM/ZOOM/NAV operator ink obeys original light/dark palette contrast without training footer
+  ---
+  duration_ms: 10.7964
+  type: 'test'
+  ...
+# Subtest: B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+ok 10 - B19 palettes retain legible annotated depth, frequency, and NAV LCD text on White and dark backgrounds
+  ---
+  duration_ms: 10.7171
+  type: 'test'
+  ...
+# Subtest: White Marker selections visibly alter only the independently authored color palette
+ok 11 - White Marker selections visibly alter only the independently authored color palette
+  ---
+  duration_ms: 0.3577
+  type: 'test'
+  ...
+# Subtest: Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+ok 12 - Bottom Zone Narrow/Standard/Wide affects screen window only, not world or raw sensor
+  ---
+  duration_ms: 10.7383
+  type: 'test'
+  ...
+# Subtest: System Units projects display-only metric, feet and fathoms without altering meters
+ok 13 - System Units projects display-only metric, feet and fathoms without altering meters
+  ---
+  duration_ms: 8.9855
+  type: 'test'
+  ...
+# Subtest: Demo Off without a matching virtual sounder fixture does not claim live echoes
+ok 14 - Demo Off without a matching virtual sounder fixture does not claim live echoes
+  ---
+  duration_ms: 0.5224
+  type: 'test'
+  ...
+# Subtest: LF/HF display projections are repeatable and never mutate sensor observations
+ok 15 - LF/HF display projections are repeatable and never mutate sensor observations
+  ---
+  duration_ms: 14.4349
+  type: 'test'
+  ...
+# Subtest: sounder processing changes illustrative display, not raw LF data
+ok 16 - sounder processing changes illustrative display, not raw LF data
+  ---
+  duration_ms: 4.2614
+  type: 'test'
+  ...
+# Subtest: Sounder Shift moves only the manual-range display window, never sonar truth
+ok 17 - Sounder Shift moves only the manual-range display window, never sonar truth
+  ---
+  duration_ms: 12.8415
+  type: 'test'
+  ...
+# Subtest: VRM and White Line positions share the shifted/zoomed visible depth window
+ok 18 - VRM and White Line positions share the shifted/zoomed visible depth window
+  ---
+  duration_ms: 0.2446
+  type: 'test'
+  ...
+# Subtest: Smoothing On applies a deterministic display filter, not a raw observation mutation
+ok 19 - Smoothing On applies a deterministic display filter, not a raw observation mutation
+  ---
+  duration_ms: 11.3364
+  type: 'test'
+  ...
+# Subtest: TX Power changes synthetic presentation energy only, never actual transmitter state
+ok 20 - TX Power changes synthetic presentation energy only, never actual transmitter state
+  ---
+  duration_ms: 13.6137
+  type: 'test'
+  ...
+# Subtest: TX Rate adjusts deterministic picture sampling cadence without advancing world
+ok 21 - TX Rate adjusts deterministic picture sampling cadence without advancing world
+  ---
+  duration_ms: 9.2253
+  type: 'test'
+  ...
+# Subtest: Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+ok 22 - Display > A-Scope Off/Normal/Peak renders HF only when DUAL, retaining mode
+  ---
+  duration_ms: 5.8943
+  type: 'test'
+  ...
+# Subtest: A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+ok 23 - A-Scope Peak retains strongest recent synthetic return, while Normal tracks latest column
+  ---
+  duration_ms: 0.3279
+  type: 'test'
+  ...
+# Subtest: Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+ok 24 - Bottom Discrimination Graphic/Probability only visualize explicit typed synthetic class fixture
+  ---
+  duration_ms: 0.4814
+  type: 'test'
+  ...
+# Subtest: ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+ok 25 - ACCU-FISH synthetic size annotations track authored targets, never derive real sonar sizes
+  ---
+  duration_ms: 6.0462
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes synthetic fish markers with history pixels
+ok 26 - Picture Advance Stop freezes synthetic fish markers with history pixels
+  ---
+  duration_ms: 0.2991
+  type: 'test'
+  ...
+# Subtest: Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+ok 27 - Bottom Lock/Zoom/Marker Zoom resamples the visual depth window
+  ---
+  duration_ms: 6.151
+  type: 'test'
+  ...
+# Subtest: Picture Advance Stop freezes displayed history but never the shared world
+ok 28 - Picture Advance Stop freezes displayed history but never the shared world
+  ---
+  duration_ms: 0.2404
+  type: 'test'
+  ...
+# Subtest: Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+ok 29 - Picture Advance rate changes temporal cadence, not spatial shape of a single ping frame
+  ---
+  duration_ms: 11.4996
+  type: 'test'
+  ...
+# Subtest: picture scroll integrates fractional speeds over world ticks and stops without freezing world
+ok 30 - picture scroll integrates fractional speeds over world ticks and stops without freezing world
+  ---
+  duration_ms: 20.2496
+  type: 'test'
+  ...
+# Subtest: reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+ok 31 - reference-oriented echo legend uses original 8/16 colors strongest first, not copied image pixels
+  ---
+  duration_ms: 10.1687
+  type: 'test'
+  ...
+# Subtest: legend honors palette and White Marker settings without owning or mutating source colors
+ok 32 - legend honors palette and White Marker settings without owning or mutating source colors
+  ---
+  duration_ms: 1.944
+  type: 'test'
+  ...
+# Subtest: legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+ok 33 - legend is absent on power-off, diagnostic field, disabled color bar or unavailable sonar
+  ---
+  duration_ms: 1.5321
+  type: 'test'
+  ...
+# Subtest: legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+ok 34 - legend scales in the logical Canvas space and respects an explicit NAV sonar offset
+  ---
+  duration_ms: 1.6809
+  type: 'test'
+  ...
+# Subtest: invalid legend bounds are rejected rather than drawing outside the screen
+ok 35 - invalid legend bounds are rejected rather than drawing outside the screen
+  ---
+  duration_ms: 8.7183
+  type: 'test'
+  ...
+# Subtest: picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+ok 36 - picture-rate header covers the existing eight choices and does not fabricate an unknown rate
+  ---
+  duration_ms: 0.3398
+  type: 'test'
+  ...
+# Subtest: picture-rate label follows commit and cancel without advancing the world or rewriting replay
+ok 37 - picture-rate label follows commit and cancel without advancing the world or rewriting replay
+  ---
+  duration_ms: 7.3815
+  type: 'test'
+  ...
+# Subtest: the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+ok 38 - the live renderer consumes one global legend and lifts depth only for a painted BDS panel
+  ---
+  duration_ms: 10.333
+  type: 'test'
+  ...
+# Subtest: FCV-588 research inventory tracks all 65 unique tasks by domain
+ok 39 - FCV-588 research inventory tracks all 65 unique tasks by domain
+  ---
+  duration_ms: 1.9416
+  type: 'test'
+  ...
+# Subtest: feature register explicitly keeps all research behaviors unapproved
+ok 40 - feature register explicitly keeps all research behaviors unapproved
+  ---
+  duration_ms: 0.4604
+  type: 'test'
+  ...
+# Subtest: research does not label provisional device behavior as validated
+ok 41 - research does not label provisional device behavior as validated
+  ---
+  duration_ms: 0.5301
+  type: 'test'
+  ...
+# Subtest: manual references stay rights-restricted and provenance-marked
+ok 42 - manual references stay rights-restricted and provenance-marked
+  ---
+  duration_ms: 0.5642
+  type: 'test'
+  ...
+# Subtest: manual archive accounts for every named device without inventing missing versions
+ok 43 - manual archive accounts for every named device without inventing missing versions
+  ---
+  duration_ms: 0.535
+  type: 'test'
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 354.9827

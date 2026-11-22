@@ -1,0 +1,189 @@
+{
+  "schema": "fcv588-p08-native-a11y-readiness-v1",
+  "timestampLocal": "2026-11-16T10:34:00+07:00",
+  "status": "READINESS_ASSESSED_ACTUAL_NATIVE_VERIFICATION_NOT_RUN",
+  "scope": "READ_ONLY_WINDOWS_NATIVE_A11Y_READINESS_ONLY",
+  "operations": {
+    "screenReaderStartedOrEnabled": false,
+    "osFocusChanged": false,
+    "browserStarted": false,
+    "port4173Operation": "NONE",
+    "settingsChanged": false,
+    "runtimeModified": false,
+    "testsExecutedByP08": false
+  },
+  "windows": {
+    "caption": "Microsoft Windows 10 Pro for Workstations",
+    "version": "10.0.18363",
+    "buildNumber": "18363",
+    "architecture": "64-bit",
+    "chrome": {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "productVersion": "157.0.8103.78",
+      "startedByP08": false
+    },
+    "highContrast": {
+      "registryPath": "HKCU:\\Control Panel\\Accessibility\\HighContrast",
+      "flagsDecimal": 126,
+      "flagsHex": "0x7E",
+      "highContrastOnBit": 0,
+      "availableBit": 2,
+      "observedState": "OFF_READ_ONLY_REGISTRY_OBSERVATION",
+      "settingChangedByP08": false
+    }
+  },
+  "narrator": {
+    "readiness": "READY_FOR_AUTHORIZED_NATIVE_MANUAL_RUN",
+    "actualVerification": "NOT_RUN",
+    "processObserved": false,
+    "commandFound": true,
+    "path": "C:\\Windows\\System32\\Narrator.exe",
+    "fileVersion": "10.0.18362.1 (WinBuild.160101.0800)",
+    "sha256": "85ce3785d41289c9648efa06c7d2fe69f295b590ca6aec722efb97138ca71ed4",
+    "registryKeyPresent": "HKCU:\\Software\\Microsoft\\Narrator",
+    "spokenOutputCaptured": false,
+    "blocker": "Narrator was intentionally not started/enabled; no auditable spoken-label/order transcript exists."
+  },
+  "nvda": {
+    "readiness": "BLOCKED_NOT_DISCOVERABLE_ON_STANDARD_INSTALL_PATHS_OR_REGISTRY",
+    "actualVerification": "NOT_RUN",
+    "processObserved": false,
+    "commandFound": false,
+    "standardPathsChecked": [
+      "C:\\Program Files\\NVDA\\nvda.exe",
+      "C:\\Program Files (x86)\\NVDA\\nvda.exe",
+      "%APPDATA%\\nvda\\nvda.exe",
+      "%LOCALAPPDATA%\\Programs\\NVDA\\nvda.exe"
+    ],
+    "standardPathsFound": [],
+    "uninstallRegistryMatch": false,
+    "spokenOutputCaptured": false,
+    "blocker": "No NVDA executable/command/uninstall entry was found by the bounded read-only checks; native speech/browse/focus-mode QA cannot be run until an approved NVDA installation or known portable path exists."
+  },
+  "osBlurRefocus": {
+    "readiness": "READY_FOR_AUTHORIZED_NATIVE_DESKTOP_RUN",
+    "actualVerification": "NOT_RUN",
+    "codeEvidence": [
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+        "lines": "69-76, 87-109",
+        "finding": "Keyboard focus loss cancels keyboard hold; window blur calls finish('cancel'); listener is registered and disposed."
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+        "lines": "37-41, 72-88, 91-103",
+        "finding": "TrackPad repeat cancel clears active state/timer; native window blur calls cancel()."
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+        "finding": "Current canonical rotary adapter is source-pinned by P07; existing unit fixture includes synthetic blur cancellation coverage."
+      }
+    ],
+    "testContractEvidence": [
+      {
+        "path": "test/hold-input.test.mjs",
+        "sha256": "22387a216648038f06f2174a0621b0058d3696fc1f05ecb2aa1cd0e87ce00bc4",
+        "lines": "107-121",
+        "finding": "Synthetic window blur fixture expects POWER hold down -> cancel and no stranded hold."
+      },
+      {
+        "path": "test/fcv588-public-pad-repeat.test.mjs",
+        "sha256": "1ea324d2162e4a11627e8b37183ac4d334e320b1a6411a55392afe6e59a47283",
+        "lines": "91-107",
+        "finding": "Synthetic window blur fixture clears TrackPad repeat timer."
+      },
+      {
+        "path": "test/fcv588-public-rotary-input.test.mjs",
+        "sha256": "ca97631c6fee008c23bfe0985394ca41daba5dbc5491d9eed82bfb352940cd9a",
+        "lines": "47-65",
+        "finding": "Synthetic window blur fixture cancels active rotary capture."
+      }
+    ],
+    "blocker": "DOM/unit blur fixtures are not true Windows window deactivation/refocus. P08 intentionally did not switch OS focus or start a browser."
+  },
+  "forcedColors": {
+    "readiness": "PARTIAL_STATIC_READINESS_NATIVE_VISUAL_QA_REQUIRED",
+    "actualVerification": "NOT_RUN",
+    "cssPath": "web/styles.css",
+    "cssSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+    "explicitForcedColorsRuleFound": false,
+    "explicitPrefersContrastRuleFound": false,
+    "existingFocusVisibleRules": true,
+    "existingFocusWithinRestore": true,
+    "deviceFocusTestPath": "test/fcv588-device-focus.test.mjs",
+    "deviceFocusTestSha256": "cfc5aff3ee1f835cceb2c91ff37dcd04f8097674acf2bf3803af398623856250",
+    "blocker": "Windows High Contrast is currently off and no browser/native forced-colors rendering was exercised. Current CSS has generic focus-visible/focus-within support but no explicit forced-colors/prefers-contrast rule."
+  },
+  "spokenOutputStaticReadiness": {
+    "actualSpeechVerification": "NOT_RUN",
+    "indexHtmlPath": "web/index.html",
+    "indexHtmlSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+    "staticEvidence": [
+      "Dedicated off-device role=status / aria-live=polite / aria-atomic=true regions exist.",
+      "The LCD itself is intentionally not a global aria-live surface.",
+      "Hold/TrackPad adapters explicitly accept detail=0 assistive/native button activation without duplicating pointer/keyboard actions."
+    ],
+    "boundary": "Static DOM/ARIA and click semantics establish readiness only; they do not predict exact Narrator/NVDA utterances, ordering, verbosity or browse/focus-mode behavior."
+  },
+  "p07Boundary": {
+    "browserReceiptPath": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-browser/fcv588-p07-browser-20261116T093801+0700-31a0b649.json",
+    "browserReceiptSHA256": "16a7c5261b3e50a03055059e21cd54c4512c5e5acc839548f585a386e73733d7",
+    "reviewPath": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p07-review/P07_INDEPENDENT_FINAL_REVIEW_WORKER1_GO_20261116.json",
+    "reviewSHA256": "ed6238165799e3094f0c7fa211b296cc7431fd4be3b302262ff6fcfeff5d6933",
+    "currentP07Milestone": "BOUNDED_BROWSER_AND_SOFTWARE_PASS_FULL_P07_OPEN",
+    "nativeItemsStillOpen": [
+      "Narrator spoken output",
+      "NVDA spoken/browse/focus-mode output",
+      "true OS window blur/refocus under POWER hold",
+      "forced-colors/high-contrast native rendering"
+    ],
+    "holds": {
+      "phase6": "OPEN",
+      "featureClaims": "65/65 HOLD",
+      "hardware": "HOLD",
+      "firmware": "HOLD",
+      "rights": "HOLD",
+      "release": "HOLD"
+    }
+  },
+  "targetedNextSteps": [
+    {
+      "id": "NARRATOR-1",
+      "precondition": "Explicit authorized interactive Windows QA session; owned loopback QA port, never user port 4173.",
+      "action": "Operator starts Narrator, traverses device controls/menu/D15 by keyboard, records exact spoken labels/order/live-region changes and verifies no duplicate activation.",
+      "passEvidence": "Auditable transcript or screen/audio capture bound to exact canonical source SHA and viewport/browser version.",
+      "currentStatus": "NOT_RUN"
+    },
+    {
+      "id": "NVDA-1",
+      "precondition": "Approved NVDA installation or known portable executable path first.",
+      "action": "Use NVDA Speech Viewer to capture focus-mode and browse-mode labels/order, D15 tabs/live regions and detail=0 button activation.",
+      "passEvidence": "Speech Viewer transcript bound to exact canonical SHA and NVDA version/configuration.",
+      "currentStatus": "BLOCKED"
+    },
+    {
+      "id": "OS-BLUR-1",
+      "precondition": "Authorized interactive desktop with current canonical on a QA-owned loopback port.",
+      "action": "Begin a POWER hold, cause true OS window deactivation before the long-hold threshold, refocus Chrome, verify cancel/no power-off/no stranded pressing state, then prove a fresh hold works. Repeat bounded checks for TrackPad repeat and one rotary drag if desired.",
+      "passEvidence": "Video/event receipt showing native blur/refocus timing and post-refocus clean input state.",
+      "currentStatus": "NOT_RUN"
+    },
+    {
+      "id": "FORCED-COLORS-1",
+      "precondition": "Authorized temporary Windows High Contrast/forced-colors session with settings restoration plan.",
+      "action": "Enable native High Contrast, inspect keyboard focus indicators, selected D15 tabs, menu selected/disabled rows, device-focus control, buttons and text/background legibility at the three P07 viewports; restore OS setting afterward.",
+      "passEvidence": "Before/after OS mode state plus screenshots and keyboard traversal notes bound to exact source SHA.",
+      "currentStatus": "NOT_RUN"
+    }
+  ],
+  "claims": {
+    "narratorSpokenOutputVerified": false,
+    "nvdaSpokenOutputVerified": false,
+    "trueOsBlurRefocusVerified": false,
+    "forcedColorsVerified": false,
+    "nativeAccessibilityPass": false
+  }
+}

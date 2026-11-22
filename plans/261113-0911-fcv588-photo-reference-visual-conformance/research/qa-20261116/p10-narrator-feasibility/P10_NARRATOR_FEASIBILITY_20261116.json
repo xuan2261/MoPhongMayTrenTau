@@ -1,0 +1,191 @@
+{
+  "schema": "fcv588-p10-windows10-narrator-feasibility-v1",
+  "createdAt": "2026-11-16T11:27:47.1360494+07:00",
+  "reviewerId": "worker-1",
+  "scope": "READ_ONLY_WINDOWS10_NARRATOR_REAL_SPOKEN_OUTPUT_FEASIBILITY",
+  "decision": "BLOCKED_RELIABLE_AUTOMATIC_NARRATOR_TRANSCRIPT_WITHOUT_INTERACTIVE_AUDIO_SESSION",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "binding": {
+    "p08Readiness": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p08-a11y-readiness/P08_NATIVE_A11Y_READINESS_20261116.json",
+      "sha256": "e50f405cdbc2507afe58ba4fdf2bdd3e1676cfaeb4016710214918e56c8e720c",
+      "status": "READINESS_ASSESSED_ACTUAL_NATIVE_VERIFICATION_NOT_RUN"
+    },
+    "currentAccessibilitySource": {
+      "web/index.html": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "web/keyboard-shortcuts.mjs": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb"
+    }
+  },
+  "windows": {
+    "caption": "Microsoft Windows 10 Pro for Workstations",
+    "version": "10.0.18363",
+    "buildNumber": "18363",
+    "architecture": "64-bit"
+  },
+  "processState": {
+    "narratorRunning": false,
+    "nvdaRunning": false,
+    "chromeAlreadyRunning": true,
+    "chromeStartedByP10": false,
+    "audiodgRunning": true,
+    "note": "P10 did not attach to, focus, navigate or alter the already-running browser."
+  },
+  "narrator": {
+    "path": "C:\\Windows\\System32\\Narrator.exe",
+    "exists": true,
+    "fileVersion": "10.0.18362.1 (WinBuild.160101.0800)",
+    "sha256": "85ce3785d41289c9648efa06c7d2fe69f295b590ca6aec722efb97138ca71ed4",
+    "authenticodeSignature": "Valid",
+    "hkcuNoRoamRunningState": 0,
+    "startedByP10": false,
+    "spokenOutputCaptured": false,
+    "supportedTranscriptChannelFound": false,
+    "finding": "No reliable Narrator utterance stream or speech-viewer/transcript interface was discovered in the bounded local inspection. Narrator is not running, so there is no real speech output to capture in this session."
+  },
+  "uiaAutomation": {
+    "uiAutomationClientAssemblyLoads": true,
+    "uiAutomationTypesAssemblyLoads": true,
+    "rootElementReadableWithoutFocusChange": true,
+    "rootControlType": "ControlType.Pane",
+    "pywinautoVersion": "0.6.9",
+    "pywinautoUiaBackendConstructible": true,
+    "automationEventApis": [
+      "AddAutomationEventHandler",
+      "AddAutomationPropertyChangedEventHandler",
+      "AddAutomationFocusChangedEventHandler"
+    ],
+    "speechOrNarratorTypesFoundInUiAutomationAssembly": 0,
+    "capabilityBoundary": "UIA can observe accessibility names, roles, states, focus/property/structure events and support synchronized semantic evidence. It does not prove or expose the exact sentence Narrator actually speaks, its ordering, verbosity, pronunciation or interruption behavior."
+  },
+  "audioCaptureReadiness": {
+    "services": {
+      "AudioEndpointBuilder": "Running",
+      "Audiosrv": "Running"
+    },
+    "systemDlls": {
+      "MMDevAPI.dll": true,
+      "AudioSes.dll": true,
+      "avrt.dll": true
+    },
+    "activePnpAudioEndpointsObserved": [
+      "HDP-V104 (NVIDIA High Definition Audio) [render]",
+      "skyPC Virtual Microphone (skyPC Virtual Camera) [capture]"
+    ],
+    "endpointCaution": "The observed virtual microphone was not tested and must not be assumed to be a Narrator/system-audio loopback endpoint. WASAPI render-loopback capability is conceptually available through Windows Core Audio even when no loopback capture endpoint is listed, but it was not exercised by P10.",
+    "readyMadeCaptureTools": {
+      "ffmpeg": false,
+      "sox": false,
+      "obs": false,
+      "pythonSounddevice": false,
+      "pythonPyAudio": false,
+      "pythonPycaw": false
+    },
+    "readyMadeAsrTools": {
+      "whisper": false,
+      "fasterWhisper": false,
+      "speechRecognition": false
+    },
+    "builtInObservations": {
+      "System32SoundRecorderExe": false,
+      "SndVolExe": true,
+      "oneCoreVoices": ["MSTTS_V110_enUS_DavidM","MSTTS_V110_enUS_MarkM","MSTTS_V110_enUS_ZiraM"],
+      "sapiVoices": ["TTS_MS_EN-US_DAVID_11.0","TTS_MS_EN-US_ZIRA_11.0"]
+    },
+    "finding": "Real audio waveform capture could be engineered later with an authorized WASAPI loopback helper, but no ready local capture+transcription chain exists now. Audio alone would still require authoritative transcription/verification and synchronized interaction evidence."
+  },
+  "d15StaticReadiness": {
+    "status": "READY_STATIC_NOT_SPOKEN_VERIFIED",
+    "findings": [
+      "D15 uses a role=tablist with five role=tab elements and five role=tabpanel elements.",
+      "aria-controls and aria-labelledby pair tabs and panels; the selected tab has aria-selected=true and roving tabindex=0 while inactive tabs use -1.",
+      "ArrowLeft, ArrowRight, Home and End are owned by the D15 tab binder and move focus to the newly selected tab.",
+      "Instructor-panel focus prevents global FCV keyboard shortcut routing.",
+      "Native Enter/Space button activation is not duplicated by FCV shortcut routing.",
+      "Off-device semantic changes use polite atomic role=status live regions; the LCD is intentionally not a global aria-live surface."
+    ],
+    "claimBoundary": "These source semantics make a native Narrator run meaningful but do not predict exact spoken text, speech order, verbosity, pronunciation or timing."
+  },
+  "feasibilityAnalysis": {
+    "canAutomaticallyProduceReliableNarratorTranscriptNow": false,
+    "whyBlocked": [
+      "Narrator is intentionally not running and P10 is prohibited from launching it.",
+      "A valid spoken-output test requires interactive keyboard/focus traversal; P10 is prohibited from changing desktop focus.",
+      "UI Automation exposes semantic accessibility data and focus/property events, not Narrator's actual utterance stream.",
+      "No local Narrator speech-viewer/transcript facility was found in the bounded environment.",
+      "No ready system-audio recorder/loopback CLI or Python audio capture stack was found; Core Audio loopback would require a future helper and explicit run authorization.",
+      "No local ASR stack was found; even if installed later, ASR output alone would not be authoritative evidence of exact Narrator speech because recognition errors can differ from emitted speech.",
+      "The page is Vietnamese while locally enumerated OneCore/SAPI voices are en-US; exact pronunciation/utterance must therefore be observed, not inferred."
+    ],
+    "forbiddenFallback": "Do not convert DOM text, aria-labels, UIA Name properties or live-region source strings into a claimed Narrator transcript. Those are expected semantics, not observed speech."
+  },
+  "safeFutureAcquisitionStrategy": {
+    "status": "REQUIRES_SEPARATE_EXPLICIT_INTERACTIVE_AUTHORIZATION",
+    "principles": [
+      "Use an isolated QA desktop session and a QA-owned loopback web port; never reuse or alter user port 4173.",
+      "Bind the run to exact canonical source hashes, Windows build, Narrator binary hash/version, browser version and Narrator configuration/voice observed before traversal.",
+      "Start Narrator manually or by an explicitly authorized operator action; do not silently alter Narrator/Windows accessibility settings.",
+      "Traverse a short predetermined keyboard path: D15 five tabs using Tab/ArrowLeft/ArrowRight/Home/End, representative live-region transitions, and selected device buttons whose accessible labels are already source-defined.",
+      "Capture synchronized UIA FocusChanged/property events with timestamps to prove which accessible object had focus when speech occurred; UIA remains corroborating evidence, not the transcript source.",
+      "Capture Narrator/system render audio through a dedicated WASAPI loopback recorder if a future helper is approved; write to an isolated QA evidence path and keep unrelated application audio silent to reduce privacy/attribution ambiguity.",
+      "Create the transcript from the captured audio and human-verify it against the waveform/screen interaction. ASR may assist but must not be the sole acceptance oracle.",
+      "Record duplicate/missing announcements, interruption behavior and live-region timing explicitly; a source-label match alone is insufficient.",
+      "If loopback audio cannot be isolated without changing user audio settings, stop and return BLOCKED rather than changing endpoints or using microphone audio without authorization."
+    ],
+    "minimumPassEvidence": [
+      "actual audio file containing Narrator output",
+      "human-verified transcript with timestamps",
+      "synchronized UIA focus/property event log or equivalent interaction timeline",
+      "exact source/OS/Narrator/browser bindings",
+      "operator path and expected-versus-observed utterance table",
+      "explicit statement that no DOM-derived text was substituted for missing speech"
+    ]
+  },
+  "noninvasiveNextSteps": [
+    {
+      "step": 1,
+      "action": "Keep Narrator spoken-output status BLOCKED/NOT_RUN and retain current static DOM/UIA evidence only.",
+      "requiresSettingsChange": false,
+      "requiresFocusChange": false
+    },
+    {
+      "step": 2,
+      "action": "If a future native run is approved, first prepare and independently review a small write-once WASAPI-loopback + UIA-event capture helper without executing it; the helper must not change endpoints, volume, accessibility settings or browser focus by itself.",
+      "requiresSettingsChange": false,
+      "requiresFocusChange": false
+    },
+    {
+      "step": 3,
+      "action": "Only after explicit interactive authorization, have the operator start Narrator and perform the bounded keyboard traversal while the approved helper records system-render audio and UIA events.",
+      "requiresSettingsChange": false,
+      "requiresFocusChange": true
+    },
+    {
+      "step": 4,
+      "action": "Human-verify the transcript from actual captured audio; if audio isolation, capture or transcript verification fails, preserve BLOCKED instead of inferring speech from the accessibility tree.",
+      "requiresSettingsChange": false,
+      "requiresFocusChange": false
+    }
+  ],
+  "claims": {
+    "narratorSpokenOutputVerified": false,
+    "reliableNarratorTranscriptCaptured": false,
+    "nativeNarratorAccessibilityPass": false,
+    "d15StaticAccessibilityReadiness": true,
+    "uiaSemanticInspectionAvailable": true,
+    "automaticTranscriptFeasibleWithoutInteractiveSession": false
+  },
+  "operations": {
+    "narratorLaunched": false,
+    "nvdaInstalledOrLaunched": false,
+    "desktopFocusChanged": false,
+    "windowsSettingsChanged": false,
+    "browserStarted": false,
+    "browserInteractedWith": false,
+    "runtimeEdited": false,
+    "sourceEdited": false,
+    "port4173Touched": false,
+    "audioCaptured": false,
+    "reportWriteOnce": true
+  }
+}

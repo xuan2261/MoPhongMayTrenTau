@@ -1,0 +1,28 @@
+{
+  "timestampUtc": "2026-10-31T03:46:36.3388453Z",
+  "status": "V56_SCOPED_UI_APPLIED_FROM_SHA_VERIFIED_STAGE",
+  "precheckSHA256": "8162c7a423b701b903a6c77cc3cb81f84b7752f950a4c5f14a90448236c24fd9",
+  "changedExistingRuntime": [
+    "web/app.mjs",
+    "web/index.html",
+    "web/styles.css"
+  ],
+  "newRuntime": "web/instructor-tabs.mjs",
+  "newTest": "test/fcv588-v56-d15-tabs.test.mjs",
+  "stagedSourceSHA": {
+    "web/index.html": "19f280d4e726e78bd155ed657554feb9c79db5c745c5cada90f00ac84b43e243",
+    "web/app.mjs": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7",
+    "web/instructor-tabs.mjs": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+    "web/styles.css": "7a1f18e7de54a71f9b7ac5297baad9b209920b6026a14287a728805a4331bfef"
+  },
+  "appliedTestSHA256": "4f87fbbea569df5e780064f53fc3179f74dd2091ea5af5ce9a94b7224ef505e8",
+  "oldRuntime37Unchanged": 34,
+  "oldRuntime37Changed": 3,
+  "newRuntimeCount": 38,
+  "earlyCSSIncidentPreserved": true,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "diskD": "NOT_ACCESSED",
+  "backup": "NOT_ATTEMPTED"
+}

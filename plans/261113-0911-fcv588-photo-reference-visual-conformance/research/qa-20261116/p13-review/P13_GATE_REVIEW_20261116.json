@@ -1,0 +1,135 @@
+{
+  "schema": "fcv588-p13-independent-gate-review-v1",
+  "createdAt": "2026-11-16T17:10:38.2434639+07:00",
+  "reviewerId": "worker-21",
+  "scope": "READ_ONLY_INDEPENDENT_P13_FIXTURE_COMPLETE_SEMANTIC_REBASELINE_AND_REPLAY_GATE",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\_p13_stage_20261116",
+  "decision": {
+    "sourceValidMenuOrder": "GO",
+    "semanticTestRebaseline": "GO",
+    "fixtureCompleteUnitQa": "GO_563_OF_563_NODE_AND_13_OF_13_PYTHON",
+    "historicalReplayCompatibility": "NO_GO_PROFILE21_SEMANTIC_BREACH",
+    "canonicalApply": "NO_GO",
+    "release": "NO_GO_HOLD",
+    "reason": "The fixture-complete stage is fully green after strict source-ID test rebaseline, but selection-only historical profile21 replay is accepted under the reordered menu while silently changing the selected semantic entry from White Marker to Clutter with the same event log and final session hash. The menu-order behavior change therefore cannot be applied under unchanged profile21 semantics."
+  },
+  "independentRehash": {
+    "fullNodeBaselineRed": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FULL_FIXTURE_INITIAL_RED_20261116.txt",
+      "sha256": "d5c502134a80c5cbea046befc3866674c0da857461c74d40e999ee650d856137",
+      "result": "558/563_PASS_5_FAIL"
+    },
+    "fullNodeGreen": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_NODE_GREEN_20261116.txt",
+      "sha256": "bf85e4685e87607b89ff4c7c7612d0a1cad580d24172e9097dcd36c55b3d4873",
+      "result": "563/563_PASS"
+    },
+    "pythonGreen": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-stage/P13_FIXTURE_COMPLETE_PYTHON_20261116.txt",
+      "sha256": "746832750e3d5891c799514347539900311238c22d5a669e8af9963267c3df00",
+      "result": "13/13_PASS"
+    },
+    "profile21SemanticDriftProbe": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p13-semantic/P13_PROFILE21_REPLAY_SEMANTIC_DRIFT_20261116.json",
+      "sha256": "479909adb7475c8d9b02dd195b6abb1943593a78f575c2857b6585a1d4336f8c",
+      "result": "VERIFIED_PROFILE21_SELECTION_ONLY_REPLAY_SILENT_SEMANTIC_DRIFT_APPLY_BLOCKER"
+    }
+  },
+  "baselineRedFailures": [
+    "large option lists are bounded while preserving the active value and original ordering",
+    "source HOLD, capability N/A and optional row filtering stay distinct in visible projection",
+    "V47 firmware-dependent White Marker D15 cue correctly distinguishes OEM color-bar versus training choices",
+    "V47 LCD menu projector remains OEM-label only and pure while D15 keeps source grading",
+    "V47 White Marker notice is selection-scoped, does not leak into another Sounder entry"
+  ],
+  "stageTestReview": {
+    "test/fcv588-public-lcd-presentation.test.mjs": {
+      "sha256": "8ef4e1d40671e809d38ba117185ec5ca2f9dc1d21019707572b2c843b204f092",
+      "finding": "PASS_STRICT_SEMANTIC_REBASELINE",
+      "details": "Clutter and Shift are selected through getFcvMenuItems(...).findIndex by stable source ID; exact active-entry identity, selected row, disabled state, reason, choice count and ordered choice window assertions remain strict."
+    },
+    "test/fcv588-v47-white-marker-firmware-boundary.test.mjs": {
+      "sha256": "24a008dce2dc55c382c96a3a60853a3a44e9971738ac06e4da7933aba3e62ea8",
+      "finding": "PASS_STRICT_SEMANTIC_REBASELINE",
+      "details": "White Marker fixture derives its cursor from sounder.whiteMarker; unrelated selection derives from sounder.colorErase. Exact firmware-unknown status, source cue text boundaries, LCD purity and selection-scoped non-leak assertions remain intact."
+    },
+    "test/fcv588-v49-a11y-boundary.test.mjs": {
+      "sha256": "b649bad4164b09cda3ce44ac96b8275360a858d5592d3c11d24e70eba9ed9867",
+      "finding": "PASS_HIDDEN_INDEX_FIXED_AND_CUE_STRENGTHENED",
+      "details": "White Marker cursor is ID-derived and the previously broad visible-only cue assertion now also requires exact TRAINING_WHITE_MARKER_PREVIEW_FIRMWARE_UNKNOWN status."
+    }
+  },
+  "sourceReview": {
+    "candidateMenuAtlas": {
+      "path": "_p13_stage_20261116/src/devices/fcv588/menu-atlas.mjs",
+      "sha256": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "sounderOrder": [
+        "sounder.pictureAdvance",
+        "sounder.zoomMode",
+        "sounder.shift",
+        "sounder.interference",
+        "sounder.colorErase",
+        "sounder.clutter",
+        "sounder.whiteLine",
+        "sounder.whiteMarker",
+        "sounder.tvg",
+        "sounder.smoothing",
+        "sounder.bottomZone",
+        "sounder.txPower",
+        "sounder.txRate"
+      ],
+      "sourceBasis": "OME-23890-E PDF page 59 printed AP-1 and P12 giaoDien.jpg 13-row lexicon"
+    },
+    "profileVersion": {
+      "path": "_p13_stage_20261116/src/devices/fcv588/profile-version.mjs",
+      "sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "revision": "F1-public-reference-21",
+      "finding": "UNCHANGED_AND_INCOMPATIBLE_WITH_SILENT_MENU_SEMANTIC_CHANGE"
+    },
+    "session": {
+      "path": "_p13_stage_20261116/src/core/session.mjs",
+      "sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "finding": "Replay binds profile revision/profile hash/events/final state hash, but the adapter profile hash does not include menu-atlas order or reducer implementation."
+    },
+    "model": {
+      "path": "_p13_stage_20261116/src/devices/fcv588/model.mjs",
+      "sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "finding": "Main-menu selection is represented by numeric overlay.itemIndex and moveMenu resolves entries[o.itemIndex]; editEntryId only protects an active edit transaction, not a selection-only historical replay."
+    }
+  },
+  "replaySemanticBreach": {
+    "profileRevisionOld": "F1-public-reference-21",
+    "profileRevisionCandidate": "F1-public-reference-21",
+    "operatorEventCount": 9,
+    "selectionItemIndex": 5,
+    "oldSelectedEntry": "sounder.whiteMarker",
+    "candidateSelectedEntry": "sounder.clutter",
+    "oldSessionHash": "f0-fnv1a32-b7e35e70",
+    "candidateSessionHash": "f0-fnv1a32-b7e35e70",
+    "historicalSelectionOnlyEnvelopeAcceptedByCandidate": true,
+    "editingCommittedReplayRejectedByFinalHash": true,
+    "gateInterpretation": "BLOCKER: finalSessionHash detects the committed/editing case but does not protect selection-only semantic identity when the numeric state is unchanged."
+  },
+  "canonicalReadback": {
+    "menuAtlasSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+    "profileVersionSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+    "sessionSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "modelSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+    "canonicalApplyDetected": false
+  },
+  "requiredBeforeCanonicalApply": [
+    "Introduce an explicit new semantic/profile revision for the reordered Sounder menu, or an equivalently strong version binding that prevents profile21 reinterpretation.",
+    "Define and test a backward-compatible profile21 replay strategy: preserve frozen profile21 semantics for historical replay or explicitly reject old replay at a version boundary with a supported compatibility path; do not silently reinterpret numeric itemIndex.",
+    "Add a selection-only historical replay regression proving White Marker cannot be accepted as Clutter under the changed code.",
+    "Keep the existing editing/committed replay rejection regression and fresh new-revision deterministic replay/hash equality.",
+    "Retain the 563/563 Node and 13/13 Python fixture-complete gates after the versioned replay solution, followed by independent integrity seals before guarded canonical apply."
+  ],
+  "operations": {
+    "stageModifiedByReviewer": false,
+    "canonicalSourceEdited": false,
+    "canonicalTestsEdited": false,
+    "browserRun": false,
+    "existingReceiptsModified": false,
+    "newReviewerReceiptFilesWritten": 1
+  }
+}

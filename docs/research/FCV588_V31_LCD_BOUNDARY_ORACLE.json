@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "id": "FCV588-V31-LCD-BOUNDARY-ORACLE",
+  "createdDate": "2026-10-17",
+  "scope": "INDEPENDENT_STATIC_READ_ONLY_GATE_ARTIFACT_NOT_PRODUCT_IMPLEMENTATION",
+  "sourceProfile": "F1-public-reference-20",
+  "publicReferenceManual": "OME-23890-E (Aug 2025)",
+  "authority": [
+    {
+      "id": "UI-13",
+      "ref": "docs/research/FCV588_PUBLIC_UI_REFERENCE_MATRIX_2026-10-14.md",
+      "sections": [
+        "§2.8"
+      ],
+      "meaning": "[DEMO] is a documented FCV-588 operator indicator; rendering style/placement not verified"
+    },
+    {
+      "id": "FID-01..05",
+      "ref": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/continuation-2026-10-17-v31-gated-fidelity-audit.md",
+      "meaning": "Source/visual inspection of training copy crossing device LCD boundary"
+    },
+    {
+      "id": "SOURCE_POLICY",
+      "ref": "docs/research/FCV588_PUBLIC_MEDIA_EVIDENCE_2026-10-13.md",
+      "meaning": "Original artwork only, source grade E1-E4, no OEM image/PDF redistribution"
+    }
+  ],
+  "zones": {
+    "deviceLcd": "#lcd; visible DOM and Canvas pixels only",
+    "deviceFace": ".equipment; original hardware legends",
+    "instructor": ".training-panel and public-reference banner outside equipment",
+    "auxiliaryExternal": ".mobile-training-note and .device-footer currently inside device-frame but outside equipment, proposed to move beyond frame"
+  },
+  "conventions": {
+    "relocatableCopy": "Remove training-only visible text from device LCD only after equivalent instructor-side guidance is integrated and independently verified.",
+    "noUnsubstantiatedOem": "Never invent OEM geometry, firmware, language menus, hardware measurements or additional functions.",
+    "demo": "PRESERVE [DEMO] while Demo is On as source-backed §2.8. Placement/font remain unverified.",
+    "worldReplay": "Canonical reducer, persistence, lesson scoring and replay remain bit/semantically invariant for presentation-only work.",
+    "hold": "Phase 2 Task 2.3 Verify remains STOP until verifiable Kongming counsel or explicit user-authorized supervisor requirement amendment.",
+    "visualAcceptance": "1366x768,1920x1080,360x800,390x844. Real Chrome evidence and screenshots required after an authorized runtime change."
+  },
+  "anchorSemantics": "Exact source-code substring locator only, not AST or live DOM verification. Every anchor is evidence of a candidate visual emission location; classifications are source-directed plans, NOT observed UI after repair.",
+  "observations": [
+    {
+      "id": "LCD-001",
+      "file": "web/app.mjs",
+      "needle": "ctx.fillText(\"BOTTOM TYPE · SIMULATED ",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-002",
+      "file": "web/app.mjs",
+      "needle": "\" · SYNTHETIC FIXTURE\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-003",
+      "file": "web/app.mjs",
+      "needle": "\"FISH SIZE · SYNTHETIC\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-004",
+      "file": "web/app.mjs",
+      "needle": "\" SIM\",",
+      "surface": "LCD_CANVAS",
+      "policy": "REVIEW_SIM_SUFFIX",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-005",
+      "file": "web/app.mjs",
+      "needle": "\"REZBOOST · TRAINING\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-006",
+      "file": "web/app.mjs",
+      "needle": "\"NAV DATA · \"+navData.status",
+      "surface": "LCD_CANVAS",
+      "policy": "REVIEW_SOURCE_STATUS",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-007",
+      "file": "web/app.mjs",
+      "needle": "\"INSTRUCTOR FIXTURE ONLY\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-008",
+      "file": "web/app.mjs",
+      "needle": "\"SYNTHETIC · NO LIVE RECEIVER\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-009",
+      "file": "web/app.mjs",
+      "needle": "\"DEMO OFF · NO PHYSICAL TRANSDUCER\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-010",
+      "file": "web/app.mjs",
+      "needle": "\"TRAINING ONLY\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-011",
+      "file": "web/app.mjs",
+      "needle": "\"ZOOM: \" + zoom.zoomMode + \" · SIM\"",
+      "surface": "LCD_CANVAS",
+      "policy": "REVIEW_SIM_SUFFIX",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-012",
+      "file": "web/app.mjs",
+      "needle": "fault.label+\" · SIMULATED\"",
+      "surface": "LCD_CANVAS",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-013",
+      "file": "web/app.mjs",
+      "needle": "current.textContent=\"Hiện tại: \"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-014",
+      "file": "web/app.mjs",
+      "needle": "pending.textContent=\"Đang chọn: \"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-015",
+      "file": "web/app.mjs",
+      "needle": "\" s (đồng hồ mô phỏng)\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-016",
+      "file": "web/app.mjs",
+      "needle": "stored.textContent=\"Đã lưu: \"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-017",
+      "file": "web/app.mjs",
+      "needle": "draft.textContent=\"Chưa lưu: \"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-018",
+      "file": "web/app.mjs",
+      "needle": "\"▲ ▼ ◀ ▶ · ENTER xác nhận · MENU/ESC quay lại\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-019",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"WINDOW SIZE · SIMULATED\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-020",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"RECEIVER STATUS · SIMULATED\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-021",
+      "file": "web/app.mjs",
+      "needle": "\"TANKENMARU · MANUAL §2.9 · SIM ONLY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-022",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"DIAGNOSTICS · TRAINING ONLY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-023",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"RESTORE TRAINING SETTINGS\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-024",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"TRIP / ODOMETER · SIMULATED\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-025",
+      "file": "web/app.mjs",
+      "needle": "\"GO TO WPT · SYNTHETIC\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-026",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"WPT NAME · SIMULATED KEY ENTRY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-027",
+      "file": "web/app.mjs",
+      "needle": "title.textContent=\"ERASE WPT? · SYNTHETIC\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-028",
+      "file": "web/app.mjs",
+      "needle": "(state.demoOn ? \"[DEMO]  \" : \"\")",
+      "surface": "LCD_HEADER",
+      "policy": "PRESERVE_MANUAL_INDICATOR",
+      "authority": "UI-13 D08"
+    },
+    {
+      "id": "LCD-029",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "\"Auto (thang tự động)\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-030",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "\"◀/▶ Auto/Manual · ▲/▼ preset khi Manual",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-031",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "note:\"§1.5 · Preset chỉ chọn khi Manual",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-032",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "\"▲/▼ chế độ · ◀/▶ offset",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-033",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "\"◀/▶ độ sáng · POWER/BRILL",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-034",
+      "file": "web/lcd-control-presentation.mjs",
+      "needle": "\"Xoay MODE chọn",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-035",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "return {title:\"RANGE BANK · TRAINING ONLY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-036",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "return {title:\"UNITS · MANUAL §2.5 · TRAINING\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-037",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "return {title:\"CALIBRATION · SYNTHETIC ONLY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-038",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "return {title:o.mode+\" DATA BOXES · TRAINING ONLY\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-039",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "\" · TRAINING PROFILE\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-040",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "return {title:\"INSTALLATION · PUBLIC REFERENCE\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-041",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "(field.disabled?\" [HOLD]\":\"\")",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-042",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "help:spec.selectionOnly?\"▲/▼ chọn",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-043",
+      "file": "web/lcd-config-presentation.mjs",
+      "needle": "note:reason?\"HOLD · \"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-044",
+      "file": "web/lcd-presentation.mjs",
+      "needle": "help:\"▲/▼ hoặc FUNC chọn",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-045",
+      "file": "web/lcd-presentation.mjs",
+      "needle": "\" [HOLD]\"",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-046",
+      "file": "web/lcd-presentation.mjs",
+      "needle": "\" [N/A]\"",
+      "surface": "LCD_DOM",
+      "policy": "REVIEW_QUALIFICATION_LABEL",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-047",
+      "file": "web/lcd-presentation.mjs",
+      "needle": "help:overlay.editing?\"◀/▶ chọn",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-048",
+      "file": "web/lcd-presentation.mjs",
+      "needle": "reason:reason?(isSourceHold(reason)?\"HOLD",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-03"
+    },
+    {
+      "id": "LCD-049",
+      "file": "web/index.html",
+      "needle": "<div class=\"lcd-overlay-footer\" id=\"dialog-footer\">▲ ▼ ◀ ▶ · ENTER xác nhận",
+      "surface": "LCD_DOM",
+      "policy": "RELOCATE_TRAINING_COPY",
+      "authority": "FID-01"
+    },
+    {
+      "id": "LCD-050",
+      "file": "web/index.html",
+      "needle": "<p class=\"mobile-training-note\">",
+      "surface": "DEVICE_FRAME_OUTSIDE_EQUIPMENT",
+      "policy": "RELOCATE_EXTERNAL_HINT",
+      "authority": "FID-05"
+    },
+    {
+      "id": "LCD-051",
+      "file": "web/index.html",
+      "needle": "<div class=\"device-footer\" role=\"note\">",
+      "surface": "DEVICE_FRAME_OUTSIDE_EQUIPMENT",
+      "policy": "RELOCATE_EXTERNAL_HINT",
+      "authority": "FID-05"
+    },
+    {
+      "id": "LCD-052",
+      "file": "web/app.mjs",
+      "needle": "const testMessage=testPattern?\"LCD TEST · SIMULATED · ",
+      "surface": "EXTERNAL_INSTRUCTOR",
+      "policy": "KEEP_EXTERNAL",
+      "authority": "FID-02"
+    },
+    {
+      "id": "LCD-053",
+      "file": "web/app.mjs",
+      "needle": "\"screen-top\").textContent=\"LCD TEST · SIMULATED · ",
+      "surface": "HIDDEN_IN_LCD_TEST",
+      "policy": "NOT_VISIBLE_CHECK",
+      "authority": "FID-02"
+    }
+  ],
+  "futureAcceptance": [
+    "For all reachable visible operator screens, only independently source-backed operator UI values and labels may appear inside #lcd/Canvas; Vietnamese instructional text and training-only metadata must reside outside .equipment.",
+    "Keep student PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY disclaimer and instructor source/fixture warnings visible; do not make synthetic data appear physically measured.",
+    "The [DEMO] operator indicator remains conditional on demoOn (§2.8), with actual pixel location and style still SOURCE_GAP.",
+    "Retain all keyboard, rotary, TrackPad, ENTER/MENU cancel/commit and timeout semantics, and assert before/after replay + settings fingerprint equality.",
+    "Do not import third-party imagery or protected fonts; respect original-art-only policy.",
+    "Do not promote 65 claims or whole-project acceptance without independently executed per-feature review."
+  ]
+}

@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: P25 D15 archive replay requires two offline JSON inputs and accessible result
+ok 1 - P25 D15 archive replay requires two offline JSON inputs and accessible result
+  ---
+  duration_ms: 1.5896
+  type: 'test'
+  ...
+# Subtest: P25 frozen historical profile22 replay remains offline and explicitly P04
+ok 2 - P25 frozen historical profile22 replay remains offline and explicitly P04
+  ---
+  duration_ms: 12.9099
+  type: 'test'
+  ...
+# Subtest: P25 same valid current envelope selects deterministic P04/P23 synthetic BZ without changing source
+ok 3 - P25 same valid current envelope selects deterministic P04/P23 synthetic BZ without changing source
+  ---
+  duration_ms: 23.5236
+  type: 'test'
+  ...
+# Subtest: P25 rejects missing, corrupt, swapped, or tampered sidecars without a silent fallback
+ok 4 - P25 rejects missing, corrupt, swapped, or tampered sidecars without a silent fallback
+  ---
+  duration_ms: 3.8064
+  type: 'test'
+  ...
+# Subtest: P25 size and event-count caps reject hostile classroom files
+ok 5 - P25 size and event-count caps reject hostile classroom files
+  ---
+  duration_ms: 3.9037
+  type: 'test'
+  ...
+# Subtest: P25 reserved JSON keys and excessive nesting rejected before core replay
+ok 6 - P25 reserved JSON keys and excessive nesting rejected before core replay
+  ---
+  duration_ms: 0.537
+  type: 'test'
+  ...
+# Subtest: P25 UI remains separate from OEM LCD and uses local File API only
+ok 7 - P25 UI remains separate from OEM LCD and uses local File API only
+  ---
+  duration_ms: 1.4426
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 201.9043

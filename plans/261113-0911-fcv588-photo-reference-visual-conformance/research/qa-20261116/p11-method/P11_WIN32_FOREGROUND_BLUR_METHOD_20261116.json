@@ -1,0 +1,227 @@
+{
+  "schema": "fcv588-p11-win32-foreground-blur-method-v1",
+  "createdAt": "2026-11-16T15:54:33.8750147+07:00",
+  "reviewerId": "worker-1",
+  "scope": "READ_ONLY_METHOD_AUDIT_FOR_GENUINE_WIN32_FOREGROUND_BLUR_AND_POWER_HOLD_CANCELLATION",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "verdict": "GO_FAIL_CLOSED_METHOD_ONLY_NO_NATIVE_PASS_EXECUTED",
+  "sourceBindings": {
+    "p10BlurInitialScript": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/p10_native_os_blur_20261116.py",
+      "sha256": "e8b7137b7711aadd4773d675a254345b23dc0020e7a8ccf51fbd0e1c03578ed1"
+    },
+    "p10BlurV2Script": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/p10_native_os_blur_v2_20261116.py",
+      "sha256": "1c4ea23d53b38be27d06e434fcf3aece67e578a6ecc8a1b3ab79de2d9d4ab4f1"
+    },
+    "p10BlurInitialReceipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_RECEIPT_20261116.json",
+      "sha256": "61252852a5ec83870264f48a64d41b01c56e07b111f2cbfdfa8f32e11c14c114",
+      "status": "FAILED_OR_BLOCKED",
+      "exactFailure": "AssertionError('Chrome remained document-focused')"
+    },
+    "p10BlurV2Receipt": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-native-blur/P10_GENUINE_WINDOWS_POWER_BLUR_V2_RECEIPT_20261116.json",
+      "sha256": "ce6963391c930130a817eeffe8f6f83c33ccc429020c4825ae0963f0d5826687",
+      "status": "FAILED_OR_BLOCKED",
+      "exactFailure": "AssertionError('foreground HWND unchanged')"
+    },
+    "p10IndependentReview": {
+      "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p10-review/P10_INDEPENDENT_EVIDENCE_REVIEW_WORKER1_20261116.json",
+      "sha256": "dc7a8d07f9002bb61a28c7528d2b29c0bd9bf194ed208dec8a50fd66d07dffee"
+    },
+    "holdInput": {
+      "path": "web/hold-input.mjs",
+      "sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086"
+    },
+    "app": {
+      "path": "web/app.mjs",
+      "sha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee"
+    },
+    "holdInputTests": {
+      "path": "test/hold-input.test.mjs",
+      "sha256": "NOT_REHASHED_IN_P11_RECEIPT_SOURCE_BINDING",
+      "note": "Read-only inspected; executable test file was not modified or run by P11."
+    }
+  },
+  "observedP10FailureSemantics": {
+    "v2BeforeHwnd": 5769834,
+    "v2DuringHwnd": 5769834,
+    "v2BeforeTitle": "Tiếp tục kiểm thử P07 - Helium",
+    "v2DuringTitle": "Tiếp tục kiểm thử P07 - Helium",
+    "readOnlyCurrentForegroundObservation": {
+      "hwnd": 5769834,
+      "pid": 25584,
+      "windowClass": "Chrome_WidgetWin_1",
+      "title": "Tiếp tục kiểm thử P07 - Helium",
+      "processName": "chrome.exe",
+      "processExecutable": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe"
+    },
+    "conclusion": "P10 V2 never proved the dedicated Google Chrome test window was the Win32 foreground window before the attempted switch, and the foreground HWND did not change during the attempted helper activation. The prior native-blur PASS condition was therefore never reached."
+  },
+  "semanticDistinctions": {
+    "documentHasFocus": {
+      "meaning": "DOM/browser-context focus predicate for the document",
+      "canProveNativeForeground": false,
+      "requiredRole": "corroborating page-state check only after HWND/PID foreground identity is independently proven"
+    },
+    "hwnd": {
+      "meaning": "native Win32 top-level window handle",
+      "canProveNativeForeground": "only when compared to GetForegroundWindow and mapped to the expected process identity",
+      "requiredRole": "primary native window identity"
+    },
+    "getForegroundWindowPid": {
+      "meaning": "GetForegroundWindow returns the current native foreground HWND; GetWindowThreadProcessId maps that HWND to an owning PID",
+      "requiredRole": "authoritative foreground-switch gate at the sampled instant",
+      "warning": "title or Chrome_WidgetWin_1 class alone is insufficient because Helium and Google Chrome are both Chromium-based"
+    },
+    "eventIsTrusted": {
+      "meaning": "browser reports the event as user-agent generated rather than script dispatchEvent",
+      "canProvePhysicalHumanInput": false,
+      "canProveWin32ForegroundChange": false,
+      "requiredRole": "supporting browser-event provenance only; CDP/browser automation may still yield trusted events"
+    },
+    "powerEventCount": {
+      "meaning": "DOM display of canonical session event count",
+      "expectedSequence": "baseline N; POWER keydown => N+1; blur cancellation => N+2 exactly; later keyup after cancellation => remains N+2",
+      "requiredRole": "detect duplicate/orphan/stray input edges in the bounded integration test",
+      "warning": "eventCount alone does not prove which Win32 window owned foreground; it must be combined with native HWND/PID and blur evidence"
+    }
+  },
+  "rootCauseInP10Harness": [
+    "page.bring_to_front() activates the Playwright page/tab but was treated as if it established native Win32 foreground ownership; no HWND/PID ownership precondition was checked before keydown.",
+    "focus_start.document.hasFocus()==true was used as a proxy for 'Chrome actually in foreground'; V2 evidence demonstrates that this proxy was insufficient because the Win32 foreground remained the existing Helium window.",
+    "The helper activation path used Tk lift/focus_force, SetForegroundWindow and then cursor/mouse injection, but the harness did not first prove the test Chrome native HWND, nor did it require the helper HWND/PID to become GetForegroundWindow before reading DOM blur state.",
+    "The static eventProvenance text claimed a real Win32 foreground change before the foreground-change assertion had actually passed, permitting misleading receipt wording even on FAIL."
+  ],
+  "portableNativeWindowIdentification": {
+    "preferredMethod": [
+      "Before launching a future dedicated test browser, snapshot all visible top-level HWND/PID/executable tuples.",
+      "Give the test page a unique QA-only window title token, e.g. FCV588-P11-QA-<run-id>, so the native browser top-level window can be found without relying on generic Chrome_WidgetWin_1 class alone.",
+      "Enumerate visible top-level windows with EnumWindows; for candidate title token use GetWindowThreadProcessId(hwnd) and verify the owning executable resolves to the exact intended Google Chrome binary, not Helium or another Chromium shell.",
+      "Require exactly one matching visible top-level HWND. If zero or multiple candidates remain after executable/path and unique-title filtering, return HARNESS_BLOCKED_AMBIGUOUS_CHROME_HWND.",
+      "Optionally bind the candidate PID to the dedicated browser process family using a unique QA profile/user-data-dir or a pre/post process snapshot. This is corroboration; HWND+PID+exact executable+unique title are the minimum native identity gates."
+    ],
+    "notPortableEnough": [
+      "window title without PID/executable verification",
+      "Chrome_WidgetWin_1 class alone",
+      "Playwright page.bring_to_front() alone",
+      "document.hasFocus() alone",
+      "Event.isTrusted alone"
+    ]
+  },
+  "onePassGates": {
+    "gate0Preflight": {
+      "accept": [
+        "P07/P09/runtime source hashes match their sealed authorities",
+        "QA port is closed before run; user-owned port4173 remains untouched",
+        "original user foreground HWND/PID/title are captured for cleanup only",
+        "test Chrome native HWND is uniquely identified and bound to expected Google Chrome executable/PID",
+        "helper native HWND is uniquely identified and bound to the harness/helper PID"
+      ],
+      "failure": "Any missing or ambiguous HWND/PID/executable binding => HARNESS_BLOCKED before POWER input"
+    },
+    "gate1EstablishTestChromeForeground": {
+      "actionForFutureAuthorizedRun": "request activation of the identified test-Chrome HWND, then bounded-poll GetForegroundWindow",
+      "accept": [
+        "GetForegroundWindow() == testChromeHwnd",
+        "GetWindowThreadProcessId(testChromeHwnd).pid == bound test-Chrome top-level PID",
+        "foreground process executable is the expected Google Chrome binary",
+        "document.hasFocus() == true",
+        "document.activeElement is #key-power"
+      ],
+      "failure": "If native foreground cannot be established within bounded polling, return HARNESS_BLOCKED_CHROME_NOT_FOREGROUND; do not send POWER keydown"
+    },
+    "gate2EnterSinglePowerHold": {
+      "inputClassification": "Playwright page.keyboard.down is browser automation input; even if resulting DOM KeyboardEvent.isTrusted is true it must not be described as a physical human keyboard event",
+      "accept": [
+        "eventCount baseline N recorded immediately before keydown",
+        "after one Space keydown, powerPressing == true",
+        "eventCount == N+1 exactly",
+        "test Chrome HWND remains GetForegroundWindow before initiating helper switch"
+      ],
+      "failure": "Any duplicate count, missing pressing state or foreground drift => FAIL_INPUT_PRECONDITION"
+    },
+    "gate3ProveNativeForegroundSwitch": {
+      "preferredAutomaticActionForFutureRun": "Show/restore helper window if necessary, call SetForegroundWindow(helperHwnd), then bounded-poll GetForegroundWindow without moving the user's cursor or synthesizing a mouse click by default",
+      "accept": [
+        "GetForegroundWindow() == helperHwnd",
+        "GetWindowThreadProcessId(helperHwnd).pid == helperPid",
+        "GetForegroundWindow() != testChromeHwnd",
+        "foreground PID is not the bound test-Chrome top-level PID"
+      ],
+      "failure": "If Windows foreground-lock rules reject SetForegroundWindow, return HARNESS_BLOCKED_FOREGROUND_SWITCH. Do not call this a product FAIL and do not force success with cursor movement, AttachThreadInput, settings changes or undocumented hacks.",
+      "portableManualFallback": "In a separately authorized interactive run, an operator click on the already-visible QA helper window is the most portable way to satisfy Windows foreground policy; acceptance still depends on the same GetForegroundWindow/HWND/PID gates."
+    },
+    "gate4CorroborateBrowserBlurAndCancellation": {
+      "accept": [
+        "only after Gate3 native switch passed: document.hasFocus() == false",
+        "at least one window blur event was recorded after keydown; isTrusted may be retained only as supporting metadata",
+        "powerPressing == false",
+        "eventCount == N+2 exactly, proving exactly one canonical post-down edge",
+        "status/power state remains equal to pre-hold baseline so the short/cancelled hold did not power-toggle the device"
+      ],
+      "failure": [
+        "document.hasFocus() remains true => FAIL_BROWSER_BLUR_NOT_OBSERVED",
+        "eventCount < N+2 => FAIL_CANCEL_MISSING",
+        "eventCount > N+2 => FAIL_DUPLICATE_OR_FOREIGN_EVENT",
+        "powerPressing remains true => FAIL_STRANDED_HOLD",
+        "device power/status changed => FAIL_CANCEL_SEMANTICS"
+      ]
+    },
+    "gate5ReleaseWithoutStrayEdge": {
+      "actionForFutureAuthorizedRun": "release the Playwright Space key while the page is still backgrounded, before restoring user foreground",
+      "accept": [
+        "eventCount remains N+2 after keyup",
+        "powerPressing remains false"
+      ],
+      "failure": "Any N+3 event or renewed pressing state => FAIL_STRAY_KEYUP_AFTER_CANCEL"
+    },
+    "gate6CleanupAndRestore": {
+      "safeRestoreOrder": [
+        "close/destroy QA helper after keyup and final cancellation snapshot",
+        "if the original pre-test foreground HWND still exists, request SetForegroundWindow(originalForegroundHwnd) and bounded-poll for equality",
+        "if the original HWND is gone, do not guess another user window; record CLEANUP_ORIGINAL_WINDOW_GONE",
+        "if Windows denies restoration, record CLEANUP_FOREGROUND_RESTORE_BLOCKED and ask the operator to click their original window; do not move the cursor or inject clicks silently",
+        "close QA browser/server and verify QA port closed; verify user-owned 4173 owner/PID unchanged"
+      ],
+      "accept": "Functional native-blur result may only be published together with a successful or explicitly acknowledged cleanup status; user foreground restoration failure must be visible in the receipt, never silently hidden."
+    }
+  },
+  "receiptRequirementsForFutureRun": {
+    "mustRecord": [
+      "original foreground HWND/PID/title/executable",
+      "test Chrome HWND/PID/title/executable and exact browser binary path",
+      "helper HWND/PID/title/executable or process identity",
+      "GetForegroundWindow snapshots before keydown, immediately before switch, after switch, and during cleanup restore",
+      "document.hasFocus, activeElement id, powerPressing, eventCount and status at baseline/down/blur/keyup stages",
+      "blur/focus event timestamps and isTrusted as supporting metadata",
+      "exact failure gate and error when any native transition cannot be proven",
+      "source/runtime hashes and port ownership before/after"
+    ],
+    "mustNotPredeclare": [
+      "real Win32 foreground change",
+      "native OS blur PASS",
+      "physical keyboard input"
+    ],
+    "rule": "Only set PASS_GENUINE_WIN32_BLUR_CANCELS_POWER_HOLD after all Gate0-Gate5 acceptance conditions pass in order; derive eventProvenance text from observed gates after the fact rather than hard-coding it before execution."
+  },
+  "acceptanceRecommendation": {
+    "method": "GO",
+    "p10ExistingNativeBlurEvidence": "RETAIN_AS_FAILED_OR_BLOCKED",
+    "productNativeBlurClaim": "NOT_VERIFIED",
+    "nextRun": "Use the fail-closed HWND/PID-identified sequence above in one authorized interactive/native run. If test Chrome cannot be made native foreground or helper cannot become foreground, stop as HARNESS_BLOCKED rather than modifying Windows settings or forcing focus with invasive workarounds."
+  },
+  "operations": {
+    "desktopActionPerformed": false,
+    "browserLaunchedOrInteracted": false,
+    "foregroundChanged": false,
+    "serverStartedOrStopped": false,
+    "runtimeEdited": false,
+    "sourceEdited": false,
+    "windowsSettingsChanged": false,
+    "port4173Touched": false,
+    "writesOutsideP11MethodFolder": false,
+    "reportWriteOnce": true
+  }
+}

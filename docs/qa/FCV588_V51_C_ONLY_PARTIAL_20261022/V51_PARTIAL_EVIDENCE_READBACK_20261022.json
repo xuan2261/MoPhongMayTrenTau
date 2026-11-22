@@ -1,0 +1,26 @@
+{
+  "timestampUtc": "2026-10-22T02:45:54.2747118Z",
+  "status": "V51_PARTIAL_EVIDENCE_POSTREADBACK_MATCH_NOT_FINAL_SEAL",
+  "v50LockedFilesAndPhase6PlanSha": "4/4_MATCH",
+  "v50Runtime37Sha": "37/37_MATCH",
+  "v51BrowserObservation": "ATTACHED_1912x970_PARTIAL",
+  "v51SoftwareLogsSha": "4/4_MATCH",
+  "reportSHA256": "2076a4b492ab192c96e7aa82f4a8b05917caf7c1bbba90ac56080d3f548b0578",
+  "observationSHA256": "822297f641ab040e3215a8b15bb969f055a86b437b56e3f22b41352cc48f2492",
+  "backupReceiptSHA256": "4db477e3f103d32cd51f8d28ee52daa1b6462819ba6d49a38980931a7f51ed35",
+  "browserTabClosed": true,
+  "localServerPort4173Closed": true,
+  "robocopyProcessCount": 0,
+  "prohibitedDriveTouchedAfterUserCorrection": false,
+  "independentBackupVerified": false,
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "releaseApproval": "HOLD",
+  "explicitNotRun": [
+    "native_attached_1366x768",
+    "native_attached_1920x1080",
+    "Narrator_Nvda_real_speech",
+    "genuine_os_blur_power_hold",
+    "OEM_or_hardware_validation"
+  ]
+}

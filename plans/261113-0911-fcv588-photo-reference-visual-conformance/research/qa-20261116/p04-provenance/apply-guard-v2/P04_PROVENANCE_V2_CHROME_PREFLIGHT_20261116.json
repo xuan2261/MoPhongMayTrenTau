@@ -1,0 +1,31 @@
+{
+  "schema": "fcv588-p04-provenance-guarded-apply-dry-run-v2",
+  "timestampUtc": "2026-11-16T01:59:49.614961+00:00",
+  "status": "DRY_RUN_BLOCKED_VERIFICATION_FAILED",
+  "canonicalApplied": false,
+  "verificationError": "stage receipt is not bound to exact P05/P06 parent seals",
+  "stageReceipt": "plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V2_STAGE_RECEIPT_20261116.json",
+  "stageReceiptSHA256": "55cc91d9d872def97bbb353f266b68365410aa71d193c116fe21dc47351bb206",
+  "compatibilityReceipt": "plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V2_COMPAT_PROBE_RESULT_20261116.json",
+  "compatibilityReceiptSHA256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6",
+  "chromeReceipt": "plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser\\fcv588-p04-provenance-browser-20261116T085811+0700-d571dc50.json",
+  "chromeReceiptSHA256": "282150a37bb9ffc998f1962c8a544d36d144b7e61108f3ac0b23550c916d0418",
+  "reviewerReceipt": null,
+  "reviewerReceiptSHA256": null,
+  "applyArtifactsPreexisting": {
+    "backup": false,
+    "intent": false,
+    "journal": false,
+    "receipt": false
+  },
+  "primeGoRequired": true,
+  "primeGoTokenNotConsumed": true,
+  "holds": {
+    "rights": "HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "release": "HOLD",
+    "featureClaims": "65/65 HOLD",
+    "phase6": "OPEN"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "FCV588_P32_RELEASE_READINESS_FINAL_INTEGRITY_V1",
+  "status": "P32_QA_INVESTIGATION_SEALED",
+  "signingStatus": "BLOCKED_NO_LOCAL_CODE_SIGNING_CREDENTIAL",
+  "spokenNarratorStatus": "BLOCKED_HUMAN_SPEECH_CONFIRMATION",
+  "benchmarkStatus": "PASS_RAW_DATA",
+  "benchmarkEffectVerdict": "INCONCLUSIVE",
+  "goRelease": false,
+  "releaseApproval": "HOLD",
+  "phase6": "OPEN",
+  "hardwareValidated": false,
+  "signedDistributionValidated": false,
+  "installedVersion": "0.0.3",
+  "installedExeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "installedASARSHA256": "eb35c1a385fa468c6b2db27b51f8ec2c33032a03098ad51f8d6bb5e1edb99190",
+  "parents": {
+    "P28Final": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+    "P28Post": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+    "P29Final": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+    "P29Post": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+    "P30Final": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+    "P30Post": "bf1f7b322e795e6ddb83070048ebfc10f3356626a72d224a6026a92dcdeee4a5",
+    "P31Final": "27dc44249a425f01b6848f58467a88fc02fd90aaa0aa3ec4ad7cc61e8eb60a36",
+    "P31Post": "3b535d1eee65b25a91f7f8c542577ffbb3f287af2bc4630ba6b247310728c32c"
+  },
+  "receipts": {
+    "rawBenchmark": {
+      "name": "P32_P30_VS_P31_WINDOWS_CPU_PRIVATE_MEMORY_V1_20261121.json",
+      "sha256": "4503005aae0155d71709b89cc857629bc9f39570912cfdd1ff5ebce856f074ae",
+      "bytes": 5234
+    },
+    "analyzedBenchmark": {
+      "name": "P32_P30_VS_P31_RESOURCE_ANALYSIS_V1_20261121.json",
+      "sha256": "d860ca174e6b0a52a5b45d1ddcd56ad5d8e8af9d2e394ce29f76ea07dcd5c1d1",
+      "bytes": 2008
+    },
+    "signing": {
+      "name": "P32_SIGNING_READINESS_V1_20261121.json",
+      "sha256": "de6718b05323a8205067310eb2ce2eb4f3882356abea650194c94ea2b5427b6f",
+      "bytes": 1523
+    },
+    "screenreader": {
+      "name": "P32_SCREENREADER_FEASIBILITY_V1_20261121.json",
+      "sha256": "f655d25a34af6f266288c117a6ed5960f424f060d143de6dba4466e2b23d4838",
+      "bytes": 663
+    },
+    "humanChecklist": {
+      "name": "P32_NARRATOR_HUMAN_ACCEPTANCE_20261121.md",
+      "sha256": "a5244867ff3f079850eda8bbd51e870f86dbe7040c4fa789962414947794ce3b",
+      "bytes": 2081
+    },
+    "analysisAttempt1Failure": {
+      "name": "P32_RESOURCE_ANALYSIS_ATTEMPT1_FAILED_20261121.txt",
+      "sha256": "9aca291aa59090b80c2672a08f7a4c85399b4f1a0afe4ae3e6440e6448a05d1e",
+      "bytes": 584
+    }
+  },
+  "reportSHA256": "96ed7e42d4da7e587fa0323bb93a54df82bdc6b6456bd20cfce3666e0e734b41"
+}

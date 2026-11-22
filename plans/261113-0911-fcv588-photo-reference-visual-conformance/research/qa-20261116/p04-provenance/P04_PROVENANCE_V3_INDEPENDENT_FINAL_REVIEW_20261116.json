@@ -1,0 +1,265 @@
+{
+  "schema": "fcv588-p04-provenance-v3-independent-final-review-v1",
+  "createdAt": "2026-11-16T09:10:47.968164+07:00",
+  "reviewer": "worker-13",
+  "decision": "NO-GO",
+  "decisionReason": "SOURCE_SIDE_REVIEW_PASS_BUT_REQUIRED_SOURCE_BOUND_BROWSER_V3_STOP_GATE_FAILED",
+  "scope": "READ_ONLY_INDEPENDENT_REVIEW_P04_BL_SAFE_SYNTHETIC_DISPLAY_TRAINING_V3",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+  "bindings": {
+    "sourceStageReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_V3_STAGE_RECEIPT_20261116.json",
+      "sha256": "7599509a0bb6332b147df47226a8b2640c44b577d0e65ae4981fcceace1f9129"
+    },
+    "compatibilityReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance\\P04_PROVENANCE_COMPAT_PROBE_RESULT_V3_20261116.json",
+      "sha256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6"
+    },
+    "browserReceipt": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop\\fcv588-p04-provenance-v3-stop-browser-20261116T090811+0700-83f212d1.json",
+      "sha256": "7b9c144ffbfcc7dedc214a315dfc46e4e26f508ab7ec6273b9e6066967e5032a"
+    },
+    "browserEvents": {
+      "path": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop\\fcv588-p04-provenance-v3-stop-browser-20261116T090811+0700-83f212d1-events.json",
+      "sha256": "1937fd1294423a2e88674c08e6ab49929227835a8be7d3126c537ba31a5b79ab"
+    }
+  },
+  "expectedBindings": {
+    "sourceStageReceiptSha256": "7599509a0bb6332b147df47226a8b2640c44b577d0e65ae4981fcceace1f9129",
+    "compatibilityReceiptSha256": "a4bc2f6f55b171dd38f54f503103607eacf3e34a7fb6c46d9a3874dd0fc99cd6",
+    "browserReceiptSha256": "7b9c144ffbfcc7dedc214a315dfc46e4e26f508ab7ec6273b9e6066967e5032a"
+  },
+  "bindingMatches": {
+    "sourceStageReceipt": true,
+    "compatibilityReceipt": true,
+    "browserReceipt": true
+  },
+  "frozenSource": {
+    "canonicalDiffStatus": "EXACT_8_PATHS_4_RUNTIME_4_TESTS",
+    "runtimePaths": [
+      "src/core/scenario.mjs",
+      "src/devices/fcv588/echo-projection.mjs",
+      "web/app.mjs",
+      "web/fcv588-echo-rasterizer.mjs"
+    ],
+    "testPaths": [
+      "test/fcv588-p04-bottom-provenance-v2.test.mjs",
+      "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+      "test/fcv588-p04-bottom-provenance.test.mjs",
+      "test/fcv588-photo-modes.test.mjs"
+    ],
+    "sourceSha256": {
+      "src/core/scenario.mjs": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "src/devices/fcv588/echo-projection.mjs": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "test/fcv588-p04-bottom-provenance-v2.test.mjs": "c8487c0faf07fd60d8672ba35c7ec57466b025e3ceafdc23604017e38d9b7212",
+      "test/fcv588-p04-bottom-provenance-v3.test.mjs": "69b33a2f4646e97535ecd33e5a182e3318cbf757d0baddfef0a4c5e7a440bfa1",
+      "test/fcv588-p04-bottom-provenance.test.mjs": "897cb8380a356cc23fd165e33b39ea47800c47ddb28dcfccd4a0716d7063accd",
+      "test/fcv588-photo-modes.test.mjs": "b07516afc7b410a4dec6783eef4c729b565e842a15b5c32a0ea5f62a953be955",
+      "web/app.mjs": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+      "web/fcv588-echo-rasterizer.mjs": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699"
+    },
+    "deltaFromFrozenV2": {
+      "status": "EXACT_2_PATHS",
+      "expected": [
+        "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+        "web/app.mjs"
+      ],
+      "actual": [
+        "test/fcv588-p04-bottom-provenance-v3.test.mjs",
+        "web/app.mjs"
+      ]
+    },
+    "protectedCanonicalEquivalence": [
+      {
+        "path": "src/core/session.mjs",
+        "canonicalSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+        "stageSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+        "match": true
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "canonicalSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+        "stageSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "canonicalSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+        "stageSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "canonicalSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+        "stageSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "canonicalSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+        "stageSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "canonicalSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+        "stageSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+        "match": true
+      }
+    ]
+  },
+  "sourceReview": {
+    "overall": "PASS_SOURCE_SIDE",
+    "scenarioIdentityBinding": "PASS: foreign scenario provenance rejects against authoritative source identity; own-source remains eligible",
+    "worldConsistency": "PASS: provenance/source-identity producer rejects world bottom inconsistent with authored scenario at simTick",
+    "rawDisplayMapping": "PASS: TRAINING_SCENARIO tick231, 160x301 raw -> 120-row BL gives 160/160 lower-band strong columns",
+    "pictureStopFrameSnapshot": "PASS: pixels,startDepthM,bottomDepthM remain frozen while sourceTick advances",
+    "stopOverlaySource": "PASS_STATIC_AND_SOURCE_PROBE: all six NAV/DUAL/ZOOM/normal drawOverlays sites use exact history-qualified frame.bottomDepthM; no stale drawOverlays(...o.bottomDepthM) call remains",
+    "stopOverlaySemanticProbe": {
+      "frozenTick": 231,
+      "currentTick": 241,
+      "frozenBottomDepthM": 43.425751760434835,
+      "currentBottomDepthM": 46.508297394017724,
+      "zoneUsingFrozenFrameBottom": {
+        "widthM": 10,
+        "topFraction": 0,
+        "bottomFraction": 1,
+        "sourceClass": "SYNTHETIC_DISPLAY_ONLY"
+      },
+      "zoneUsingCurrentObservationBottom": null
+    },
+    "blRaster": "PASS: Bottom Lock bypasses legacy coherentBottom decorative bottom inference",
+    "bzMzByteEquivalence": {
+      "Bottom Zoom": "efe712c15b072f07da63487ad630ef8d5bf060ebc04db0491b925c07623132e3",
+      "Marker Zoom": "3959bbf444817583042348fe3f26275c342e47c18bc3babedadb3c2394597f2a"
+    },
+    "replayProfileObservation": "PASS via compatibility receipt: observation keyset/raw channels/session hashes unchanged; protected session/protocol/profile/model/settings/adapter byte-identical"
+  },
+  "tests": {
+    "v3Red": {
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "sha256": "909079c841218504f038421cff33b645e4408e96f3ebbfcef49aa8f8699932b2"
+    },
+    "targetedFinal": {
+      "tests": 52,
+      "pass": 52,
+      "fail": 0,
+      "sha256": "391f817de955fe3e482458727ac271525e450f8b014054deca3c9fd506c6ffc4"
+    },
+    "fullNode": {
+      "tests": 563,
+      "pass": 563,
+      "fail": 0,
+      "sha256": "74fe8101e67e5e8ecd764200e8d70c0c42aec0dd3c8f69b44973fe6c17174bd3"
+    },
+    "python": {
+      "tests": 13,
+      "status": "OK",
+      "sha256": "a398c27f29db3ed0c60bc6d0c259c15347ac30fb09fc43b8594b3222d4e2f27d"
+    }
+  },
+  "browserReview": {
+    "overallStatus": "FAILED",
+    "port": 4197,
+    "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p04-bottom-provenance-20261116",
+    "caseStatuses": [
+      {
+        "name": "BL-LF-Blue",
+        "status": "PASS",
+        "objectiveFailures": []
+      },
+      {
+        "name": "BL-HF-Blue",
+        "status": "PASS",
+        "objectiveFailures": []
+      },
+      {
+        "name": "BZ-LF-Blue",
+        "status": "PASS",
+        "objectiveFailures": []
+      },
+      {
+        "name": "MZ-LF-Blue",
+        "status": "PASS",
+        "objectiveFailures": []
+      },
+      {
+        "name": "STOP-BL-LF-Blue-BZ-Standard",
+        "status": "FAILED",
+        "objectiveFailures": [
+          "Stop changed rendered canvas while synthetic world advanced; frozen pixels/Bottom Zone overlay metadata drifted"
+        ]
+      },
+      {
+        "name": "BL-LF-Blue-MOBILE-MENU-D15",
+        "status": "PASS",
+        "objectiveFailures": []
+      }
+    ],
+    "objectiveFailures": [
+      "1366x768 STOP-BL-LF-Blue-BZ-Standard: Stop changed rendered canvas while synthetic world advanced; frozen pixels/Bottom Zone overlay metadata drifted"
+    ],
+    "sourceManifestBefore": {
+      "files": 38,
+      "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040"
+    },
+    "sourceManifestAfter": {
+      "files": 38,
+      "sha256": "ffbe54b1df8281bb932db1fa979b11085bd34796d605e69ff0ad399b04c66040"
+    },
+    "sourceTreeStable": true,
+    "currentSourceManifestMatchesBrowser": true,
+    "reviewedLoadedBodyRows": 180,
+    "loadedBodyMismatchCount": 0,
+    "reviewedScreenshotCount": 5,
+    "screenshotMismatchCount": 0,
+    "photo404Count": 8,
+    "serverCleanup": "PASS",
+    "stopCase": {
+      "name": "STOP-BL-LF-Blue-BZ-Standard",
+      "status": "FAILED",
+      "objectiveFailures": [
+        "Stop changed rendered canvas while synthetic world advanced; frozen pixels/Bottom Zone overlay metadata drifted"
+      ],
+      "setupProof": {
+        "zoomMode": "Bottom Lock",
+        "bottomZone": "Narrow",
+        "header": "AUTO_R   G:AF   BL-LF   x1"
+      },
+      "failure": {
+        "error": "Stop changed rendered canvas while synthetic world advanced; frozen pixels/Bottom Zone overlay metadata drifted",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop\\p04_provenance_v3_stop_browser_qa_worker7.py\", line 428, in run_case\n    result[\"stopBottomZoneProof\"] = stop_bottom_zone_proof(page)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p04-provenance-browser-v3-stop\\p04_provenance_v3_stop_browser_qa_worker7.py\", line 342, in stop_bottom_zone_proof\n    raise AssertionError(\nAssertionError: Stop changed rendered canvas while synthetic world advanced; frozen pixels/Bottom Zone overlay metadata drifted\n"
+      }
+    },
+    "attribution": "NOT_YET_VERIFIED",
+    "attributionRationale": "Harness compares whole #echo-canvas PNG before/after advancing 10 synthetic ticks and raises before persisting localized before/after image hashes or pixel diff. Source-side frozen frame and frame-bottom overlay binding pass independently, so current browser evidence proves a gate failure but does not by itself localize whether the changed pixels are the Bottom Zone/sonar picture or another volatile canvas element/compositor effect."
+  },
+  "blockingFindings": [
+    {
+      "severity": "BLOCKING_GATE_FAILURE",
+      "id": "V3_SOURCE_BOUND_BROWSER_STOP_FAILED",
+      "finding": "Required source-bound browser v3 Stop case failed: rendered canvas changed while synthetic world advanced under Picture Advance Stop.",
+      "runtimeAttribution": "NOT_YET_VERIFIED",
+      "requiredForGo": "Produce a source-bound browser Stop proof that localizes the frozen sonar/Bottom Zone region and passes against the exact frozen v3 source, or identify and fix a real remaining runtime canvas drift; then issue a new immutable browser receipt and independent re-review."
+    }
+  ],
+  "holds": {
+    "phase6F1": "OPEN",
+    "featureClaims": "65/65 HOLD",
+    "hardware": "HOLD",
+    "firmware": "HOLD",
+    "rights": "HOLD",
+    "release": "HOLD",
+    "oemPercentClaim": null
+  },
+  "operations": {
+    "runtimeEditedByReviewer": false,
+    "canonicalAppliedByReviewer": false,
+    "browserStartedByReviewer": false,
+    "serverStartedOrKilledByReviewer": false,
+    "port4173Operation": "NONE",
+    "reviewReceiptWriteOnce": true
+  }
+}

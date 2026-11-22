@@ -1,0 +1,1384 @@
+{
+  "cases": [
+    {
+      "name": "BL-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    },
+    {
+      "name": "BL-HF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    },
+    {
+      "name": "BZ-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    },
+    {
+      "name": "MZ-LF-Blue",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    },
+    {
+      "name": "STOP-BL-LF-Blue-BZ-Standard",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    },
+    {
+      "name": "BL-LF-Blue-MOBILE-MENU-D15",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "loadedBodies": [
+        {
+          "path": "src/core/lessons.mjs",
+          "bodySha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "sourceSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+          "matches": true
+        },
+        {
+          "path": "src/core/protocol.mjs",
+          "bodySha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "sourceSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+          "matches": true
+        },
+        {
+          "path": "src/core/scenario.mjs",
+          "bodySha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "sourceSha256": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+          "matches": true
+        },
+        {
+          "path": "src/core/session.mjs",
+          "bodySha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "sourceSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/adapter.mjs",
+          "bodySha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "sourceSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/alarms.mjs",
+          "bodySha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "sourceSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/calibration.mjs",
+          "bodySha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "sourceSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/capabilities.mjs",
+          "bodySha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "sourceSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-layout.mjs",
+          "bodySha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "sourceSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-palette.mjs",
+          "bodySha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "sourceSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/display-widgets.mjs",
+          "bodySha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "sourceSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/echo-projection.mjs",
+          "bodySha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "sourceSha256": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/menu-atlas.mjs",
+          "bodySha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "sourceSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/model.mjs",
+          "bodySha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "sourceSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/navigation.mjs",
+          "bodySha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "sourceSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/profile-version.mjs",
+          "bodySha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "sourceSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/receiver-status.mjs",
+          "bodySha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "sourceSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/settings.mjs",
+          "bodySha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "sourceSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/tankenmaru-status.mjs",
+          "bodySha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "sourceSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/training-faults.mjs",
+          "bodySha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "sourceSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+          "matches": true
+        },
+        {
+          "path": "src/devices/fcv588/units.mjs",
+          "bodySha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "sourceSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+          "matches": true
+        },
+        {
+          "path": "web/app.mjs",
+          "bodySha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "sourceSha256": "272f422019d2d075fe907705973c2d99d8db0f5cd96597011586c15684d265ee",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-echo-rasterizer.mjs",
+          "bodySha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "sourceSha256": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+          "matches": true
+        },
+        {
+          "path": "web/fcv588-training-source-matrix.mjs",
+          "bodySha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "sourceSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+          "matches": true
+        },
+        {
+          "path": "web/hold-input.mjs",
+          "bodySha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "sourceSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+          "matches": true
+        },
+        {
+          "path": "web/index.html",
+          "bodySha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "sourceSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+          "matches": true
+        },
+        {
+          "path": "web/instructor-tabs.mjs",
+          "bodySha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "sourceSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+          "matches": true
+        },
+        {
+          "path": "web/key-feedback.mjs",
+          "bodySha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "sourceSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+          "matches": true
+        },
+        {
+          "path": "web/keyboard-shortcuts.mjs",
+          "bodySha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "sourceSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-config-presentation.mjs",
+          "bodySha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "sourceSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-control-presentation.mjs",
+          "bodySha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "sourceSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-instructor-meta.mjs",
+          "bodySha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "sourceSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+          "matches": true
+        },
+        {
+          "path": "web/lcd-presentation.mjs",
+          "bodySha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "sourceSha256": "aaff1c8b7970e06c23f41e58e2a384b68a07c8f8ccc3ca9eb7975f2d186f66ef",
+          "matches": true
+        },
+        {
+          "path": "web/pad-repeat.mjs",
+          "bodySha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "sourceSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+          "matches": true
+        },
+        {
+          "path": "web/rotary-input.mjs",
+          "bodySha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "sourceSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+          "matches": true
+        },
+        {
+          "path": "web/styles.css",
+          "bodySha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "sourceSha256": "2925f129251caf72a71c846484d2f4facbb1d02d6480309b98d8399e800f4660",
+          "matches": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "externalRequests": [],
+      "bodyErrors": []
+    }
+  ]
+}

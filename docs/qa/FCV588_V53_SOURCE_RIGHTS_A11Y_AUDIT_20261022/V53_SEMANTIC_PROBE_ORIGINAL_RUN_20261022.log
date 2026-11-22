@@ -1,0 +1,4 @@
+PROBE_RESULT MODEL_SEMANTIC_TITLES_STABLE_PER_UI_TICK_NOT_BROWSER_SPEECH
+TRANSITION_COUNT 2 [{"stage":"physical-down","title":"Giữ POWER/BRILL"},{"stage":"physical-up-brill","title":"Giá trị điều khiển không hợp lệ"}]
+POWER_HOLD_TICK_SUMMARIES Còn 2.75 s (đồng hồ UI). Còn 2.50 s (đồng hồ UI).
+RESULT_SHA256 89071107a8e9cc0bc5cdf290985c1ab8c2702def60150d3c726cc3477a6c97fb

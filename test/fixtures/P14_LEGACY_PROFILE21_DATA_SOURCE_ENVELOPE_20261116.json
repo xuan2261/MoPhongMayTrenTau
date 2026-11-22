@@ -1,0 +1,153 @@
+{
+  "envelopeVersion": 7,
+  "deviceId": "furuno.fcv588.cv588e",
+  "profileRevision": "F1-public-reference-21",
+  "scenarioId": "fcv588-demo-depth-001",
+  "scenarioVersion": 7,
+  "meta": {
+    "schemaVersion": 5,
+    "coreVersion": "f1-core-7",
+    "prngVersion": "counter-mix32-v1",
+    "sensorModelVersion": "fcv588-sonar-illustrative-v1",
+    "tickDurationMs": 1000,
+    "phaseOrder": "input -> world -> sensor -> device",
+    "profileHash": "f0-fnv1a32-f2d5289b",
+    "scenarioHash": "f0-fnv1a32-5861e75e"
+  },
+  "events": [
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 1,
+      "kind": "down",
+      "control": "power"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 2,
+      "kind": "up",
+      "control": "power",
+      "durationMs": 100
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 0,
+      "seq": 3,
+      "kind": "tick",
+      "steps": 4
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 4,
+      "kind": "press",
+      "control": "menu"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 5,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "right"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 6,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "right"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 7,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "right"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 8,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 9,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 10,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 11,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 12,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 13,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 14,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 15,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 16,
+      "kind": "pad",
+      "control": "trackpad",
+      "direction": "down"
+    },
+    {
+      "schemaVersion": 5,
+      "tick": 4,
+      "seq": 17,
+      "kind": "press",
+      "control": "enter"
+    }
+  ],
+  "finalSessionHash": "f0-fnv1a32-ecc515d3",
+  "contentFingerprint": "f0-fnv1a32-df56c9d2"
+}

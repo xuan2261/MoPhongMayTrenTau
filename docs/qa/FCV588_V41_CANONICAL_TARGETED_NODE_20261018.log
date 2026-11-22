@@ -1,0 +1,119 @@
+TAP version 13
+# Subtest: manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+ok 1 - manual §1.19 enumerates exactly 11 operator-programmable FUNC targets
+  ---
+  duration_ms: 2.8881
+  type: 'test'
+  ...
+# Subtest: FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+ok 2 - FUNC short key opens staged assignment setting, MENU cancels and ENTER commits
+  ---
+  duration_ms: 15.5417
+  type: 'test'
+  ...
+# Subtest: FUNC long key configures target; assignment persists and second short key uses it
+ok 3 - FUNC long key configures target; assignment persists and second short key uses it
+  ---
+  duration_ms: 8.9272
+  type: 'test'
+  ...
+# Subtest: all five authentic main menu headings expose public annotated entries
+ok 4 - all five authentic main menu headings expose public annotated entries
+  ---
+  duration_ms: 3.5831
+  type: 'test'
+  ...
+# Subtest: manual Appendix 1 menu branches and System sections are attributed to their actual roots
+ok 5 - manual Appendix 1 menu branches and System sections are attributed to their actual roots
+  ---
+  duration_ms: 0.4032
+  type: 'test'
+  ...
+# Subtest: §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+ok 6 - §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+  ---
+  duration_ms: 0.3744
+  type: 'test'
+  ...
+# Subtest: §4.10 Installation is a different fixture from normal System
+ok 7 - §4.10 Installation is a different fixture from normal System
+  ---
+  duration_ms: 0.5294
+  type: 'test'
+  ...
+# Subtest: §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+ok 8 - §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+  ---
+  duration_ms: 0.5614
+  type: 'test'
+  ...
+# Subtest: D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+ok 9 - D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+  ---
+  duration_ms: 0.303
+  type: 'test'
+  ...
+# Subtest: MENU opens a navigable category, arrows move focus and ESC closes
+ok 10 - MENU opens a navigable category, arrows move focus and ESC closes
+  ---
+  duration_ms: 8.3302
+  type: 'test'
+  ...
+# Subtest: menu edit stages then commits or cancels and survives power cycling
+ok 11 - menu edit stages then commits or cancels and survives power cycling
+  ---
+  duration_ms: 5.2905
+  type: 'test'
+  ...
+# Subtest: menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+ok 12 - menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+  ---
+  duration_ms: 1.073
+  type: 'test'
+  ...
+# Subtest: V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+ok 13 - V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+  ---
+  duration_ms: 1.8071
+  type: 'test'
+  ...
+# Subtest: V40 label-only correction preserves all nine OEM §1.1 operator controls
+ok 14 - V40 label-only correction preserves all nine OEM §1.1 operator controls
+  ---
+  duration_ms: 0.8388
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+ok 15 - V41 FCV-588 Sounder shows Pic. Advance, retaining setting ID and value
+  ---
+  duration_ms: 3.3517
+  type: 'test'
+  ...
+# Subtest: V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+ok 16 - V41 FCV-588 Sounder shows Interference, not a classroom-expanded name
+  ---
+  duration_ms: 0.3909
+  type: 'test'
+  ...
+# Subtest: V41 versioned public-reference atlas agrees with the two runtime menu labels
+ok 17 - V41 versioned public-reference atlas agrees with the two runtime menu labels
+  ---
+  duration_ms: 9.3975
+  type: 'test'
+  ...
+# Subtest: V41 label scope leaves five menu roots and training metadata outside display
+ok 18 - V41 label scope leaves five menu roots and training metadata outside display
+  ---
+  duration_ms: 0.5417
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 175.1559
+VERIFY_EXIT_CODE=0

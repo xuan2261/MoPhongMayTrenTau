@@ -1,0 +1,16 @@
+{
+  "status": "P05_MERGED_INTO_ISOLATED_INTEGRATION_STAGE_ONLY",
+  "timeUtc": "2026-11-16T00:06:37.9927934Z",
+  "parentP04FinalSHA256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+  "P05StageReceiptSHA256": "b00a17575b505896c8895355464eab14afcf667d16668cd7ea012c1ead44619d",
+  "copyPaths": [
+    "test/fcv588-photo-menu-actions.test.mjs",
+    "test/fcv588-photo-menu-layout.test.mjs",
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "codeCount": 3,
+  "testCount": 2,
+  "canonicalApplied": false
+}

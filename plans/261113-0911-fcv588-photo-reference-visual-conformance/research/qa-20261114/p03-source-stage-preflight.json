@@ -1,0 +1,14 @@
+{
+  "source": "P02_FINAL_INTEGRITY_20261114",
+  "sourceSealSha256": "15ff0baab0b8bbe213c52857b630341a426305a7cf64eae9c07d1ac55f447d53",
+  "stagePath": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-echo-20261114",
+  "runtimeFiles": 38,
+  "match": true,
+  "createdAt": "2026-11-14T03:09:13.3172643Z",
+  "plannedScope": [
+    "web/app.mjs",
+    "web/fcv588-echo-rasterizer.mjs",
+    "test/fcv588-photo-echo-render.test.mjs"
+  ],
+  "productModified": false
+}

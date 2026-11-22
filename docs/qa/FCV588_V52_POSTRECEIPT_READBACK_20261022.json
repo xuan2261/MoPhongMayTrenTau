@@ -1,0 +1,31 @@
+{
+  "timestampUtc": "2026-10-22T04:18:12.2545044Z",
+  "status": "V52_INDEPENDENT_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "originalV52FinalSHA256": "4650306d6c088fc19eaa09b66922faaf29712015ae9a2f8fdf5795d2e780107f",
+  "v50FinalSHA256": "88b6633a7bd8b68e0e3f048319095eb4d1d783e7f91d74fefad05e59770fd36a",
+  "v50IndependentPostSHA256": "1c95c486994004457f16f71fb75f885449f9b3ba00ea75ca348275016fcbb31b",
+  "v51AttachedPartialPostSHA256": "eba3ab285b843566550cdfa27e067e1f29a6dacd9cd34663d76b115c78757ffc",
+  "originalV52EvidenceFilesSHA": "14/14_MATCH",
+  "originalV52RuntimeFilesSHA": "37/37_MATCH",
+  "chromeActualResponseBodyShaCDP": "70/70_MATCH",
+  "chromeActualResponseBodyShaPlaywright": "70/70_MATCH",
+  "verifiedPageContexts": [
+    "1366x768_AUTOMATED",
+    "1920x1080_AUTOMATED"
+  ],
+  "postdocumentNodeTests": 511,
+  "postdocumentPythonTests": 13,
+  "qaOwnedServerPort4261": "CLOSED",
+  "sourceCodeEdited": false,
+  "actualNarratorNvdaUtterances": "NOT_RUN",
+  "genuineOsWindowBlurDuringPowerHold": "NOT_RUN",
+  "hardwareValidated": false,
+  "oemRights": "HOLD",
+  "installedFirmware": "UNKNOWN",
+  "phase6": "OPEN",
+  "checklist": "14/50",
+  "namedTasks": "6/22",
+  "publicClaimsHold": 65,
+  "releaseApproval": "HOLD",
+  "auditorKind": "INDEPENDENT_READBACK_OF_EXISTING_SHA_AND_BYTES_NOT_INDEPENDENT_OEM_REVIEW"
+}

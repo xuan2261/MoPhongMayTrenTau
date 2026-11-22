@@ -1,0 +1,56 @@
+{
+  "atUtc": "2026-10-19T07:58:58.2738116Z",
+  "status": "V46_CANONICAL_TWO_OEM_COLORS_TEXT_D15_SOURCE_FILES_APPLIED_WITH_SHA",
+  "parentV45FinalSHA": "ac7bacb04eff3baaf9455bb9ff97d89bb5fa79ad4c331264b8acb9b970a48861",
+  "parentV45PostSHA": "13af7c3798397f9ba6aaa6bf293f5e58bcde0b22a6a19f489d6af052b31e7543",
+  "stagedManifestSHA": "25b680418cac304f8cdfc042c3af70c2d448f181692c5cde423ae9fb73dd6cfa",
+  "GPT6GoSHA": "5695d96c694a1318c44c78d35c71b0937ae137308186e8a3ceef07a8668867a0",
+  "canonicalPreimageRuntimeSHA": 37,
+  "copiedFiles": [
+    {
+      "preimageSHA": "dce8c5394eca75fd160c6298ff567744dd9196add9b62e15339abfa8d2f6bc40",
+      "path": "src/devices/fcv588/menu-atlas.mjs",
+      "sourceSHA": "47953dd718da59ff2f5b55681110c65c616b6949a2a28f6960513661c84d08bc"
+    },
+    {
+      "preimageSHA": "602500237b92884338e4e4ea92c39781e5b97ff6cd2f65dc7cb4d7a30a557e74",
+      "path": "web/lcd-instructor-meta.mjs",
+      "sourceSHA": "27616043b941751e299642bc6d16493cf1a5de6bf55c9b97eec9e3b36ce70b4e"
+    },
+    {
+      "preimageSHA": null,
+      "path": "test/fcv588-v46-colors-oem-firmware-boundary.test.mjs",
+      "sourceSHA": "38ecaa45f575f5b64dbe538dba740b52661a3a1692d129f328b8398d07857971"
+    },
+    {
+      "preimageSHA": "895d1499425d4a4eced8191c9af4608cf2636adb6d88fb16097e8be7a1fdb3c5",
+      "path": "test/fcv588-public-display.test.mjs",
+      "sourceSHA": "c33e4049f13c2d81b0c9a6c586dfe551701e37c5df2004f6eba8ea271a12cc91"
+    },
+    {
+      "preimageSHA": "c97ef9cedfee1f9aa32a450cb7f1908b489b00b27b48c71e2682720091277a22",
+      "path": "docs/evidence/fcv588-public-menu-atlas.json",
+      "sourceSHA": "fe178a91438167507673b0e18f57fc2d4fab71bc2fc2b5198aa84a1e7d43b192"
+    },
+    {
+      "preimageSHA": "4deb62b6364ceee234df1f2260c5be1472596461f6c84683844ec6ea991d0c97",
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "sourceSHA": "3f6c0bb48eacdde598ca267c56c3efc83a5977999d160629619e14b9764c009b"
+    },
+    {
+      "preimageSHA": null,
+      "path": "docs/research/FCV588_V46_COLORS_FIRMWARE_SOURCE_ATLAS_20261019.md",
+      "sourceSHA": "2ccb67e741b6d805d01bb6b4ee5763a21aa91215e98ee89864cae9be321d9823"
+    }
+  ],
+  "copiedFilesCount": 7,
+  "postRuntimeSourceSHA": 37,
+  "runtimeSourceChanged": 2,
+  "unchangedFromV45": 35,
+  "firmwareInstalled": "UNKNOWN",
+  "profileRevision": "F1-public-reference-21",
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

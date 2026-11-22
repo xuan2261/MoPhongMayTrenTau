@@ -1,0 +1,188 @@
+{
+  "schema": "FCV588_P32_WINDOWS_P30_P31_RESOURCE_COMPARISON_V1",
+  "status": "PASS_RAW_DATA",
+  "host": "REAL_WINDOWS_NOT_VM",
+  "method": "serial paired ABBA-like ordering, 3 pairs, 5s warmup + 5s per run, 1s polling, same power-off idle synthetic world",
+  "metricCpu": "Sum CPU seconds for exact executable path across Electron child processes divided by sampled wall seconds (percent of one logical core)",
+  "metricMemory": "Sum PrivateMemorySize64 across exact executable path; median sample MiB; per-process private bytes avoids double-counting shared working set",
+  "sampleSeconds": 5,
+  "warmupSeconds": 5,
+  "repetitionsPerVariant": 3,
+  "comparisonScope": "Idle POWER OFF synthetic app only, not loaded LCD / Narrator spoken output",
+  "cores": 56,
+  "runs": [
+    {
+      "index": 1,
+      "pair": 1,
+      "variant": "P30",
+      "exeSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P30",
+      "wallSeconds": 5.544,
+      "cpuSeconds": 0.0,
+      "cpuPercentOneCore": 0.0,
+      "medianPrivateMiB": 275.076,
+      "medianWorkingSetMiB": 288.973,
+      "privateMiBSamples": [
+        274.984,
+        275.168,
+        275.203,
+        275.293,
+        271.035,
+        258.387
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 2,
+      "pair": 1,
+      "variant": "P31",
+      "exeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P31",
+      "wallSeconds": 6.006,
+      "cpuSeconds": 0.0312,
+      "cpuPercentOneCore": 0.52,
+      "medianPrivateMiB": 261.629,
+      "medianWorkingSetMiB": 283.611,
+      "privateMiBSamples": [
+        261.5,
+        261.477,
+        261.758,
+        261.863,
+        262.082,
+        255.516
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 3,
+      "pair": 2,
+      "variant": "P31",
+      "exeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P31",
+      "wallSeconds": 5.779,
+      "cpuSeconds": 0.2344,
+      "cpuPercentOneCore": 4.056,
+      "medianPrivateMiB": 260.453,
+      "medianWorkingSetMiB": 286.775,
+      "privateMiBSamples": [
+        262.375,
+        262.418,
+        262.555,
+        258.531,
+        247.852,
+        242.977
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 4,
+      "pair": 2,
+      "variant": "P30",
+      "exeSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P30",
+      "wallSeconds": 6.041,
+      "cpuSeconds": 0.125,
+      "cpuPercentOneCore": 2.069,
+      "medianPrivateMiB": 260.82,
+      "medianWorkingSetMiB": 280.662,
+      "privateMiBSamples": [
+        262.777,
+        262.984,
+        263.121,
+        258.863,
+        249.395,
+        243.738
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "pair": 3,
+      "variant": "P30",
+      "exeSHA256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P30",
+      "wallSeconds": 5.958,
+      "cpuSeconds": 0.1094,
+      "cpuPercentOneCore": 1.836,
+      "medianPrivateMiB": 263.408,
+      "medianWorkingSetMiB": 282.459,
+      "privateMiBSamples": [
+        265.336,
+        265.492,
+        265.613,
+        261.48,
+        252.09,
+        246.125
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "pair": 3,
+      "variant": "P31",
+      "exeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+      "qaProfile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P32_RELEASE_READINESS_20261121\\benchmark-profile-P31",
+      "wallSeconds": 5.451,
+      "cpuSeconds": 0.2656,
+      "cpuPercentOneCore": 4.873,
+      "medianPrivateMiB": 264.158,
+      "medianWorkingSetMiB": 286.307,
+      "privateMiBSamples": [
+        266.098,
+        266.406,
+        266.473,
+        262.219,
+        253.102,
+        247.129
+      ],
+      "processCounts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "releaseApproval": "HOLD",
+  "physicalAirgapVerified": false,
+  "profileCount": 2,
+  "freeDiskGBAtEnd": 2.388,
+  "appProcessesAfter": 0
+}

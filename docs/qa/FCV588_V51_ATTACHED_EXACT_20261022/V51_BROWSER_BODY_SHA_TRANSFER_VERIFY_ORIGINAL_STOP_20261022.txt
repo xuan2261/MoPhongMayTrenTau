@@ -1,0 +1,9 @@
+2026-10-22 V51 browser-network source-bound SHA readback, attempt 1.
+Command exit: 1. Gated operation stopped before writing new receipt.
+Failure: manually transcribed /src/devices/fcv588/units.mjs entry:
+  supplied SHA: 287cab7b52fc296d64af41bed1601e65ef232e9890bdfd3b554ed7ab4bf5f21
+  V50 pinned SHA: 287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21
+  Live canonical source SHA: 287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21
+Original source-transport browser body read in group B had the pinned form including 0d3b.
+Root cause: manual transfer of evidence string accidentally dropped one 0; no source file was altered.
+Scoped GPT-6 QA decision: GO for correcting only the evidence input string with full original body hash, then rerun strict whole-group comparison. No weakening of integrity gate, no overwrite original STOP record.

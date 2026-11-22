@@ -1,0 +1,19 @@
+{
+  "timestampUtc": "2026-10-31T04:40:44.7034243Z",
+  "status": "V57_CANONICAL_EXPLICIT_TRANSDUCER_NOTICE_COPY_SHA_MATCH",
+  "changedFiles": [
+    "web/lcd-instructor-meta.mjs",
+    "test/fcv588-v57-header-compact.test.mjs"
+  ],
+  "canonicalPreimageSHA256": {
+    "web/lcd-instructor-meta.mjs": "55347c1f70df83907296b599b4e4bbc59df411d17c0f36d3655a7272a89b3ebb",
+    "test/fcv588-v57-header-compact.test.mjs": "b5f6f6472cb4525526db5e50fdb8a5f1ba591279a2c90bb366f63a6a385f2fd6"
+  },
+  "canonicalPostimageSHA256": {
+    "web/lcd-instructor-meta.mjs": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+    "test/fcv588-v57-header-compact.test.mjs": "8ef9b3d224381fcaebeccd7789e706500714bad80408912fbdf12d5467ff26c8"
+  },
+  "visibleSourceCue": "Hồi âm mô phỏng. Không kết nối đầu dò.",
+  "legacyNoHardwareAssertionsPreserved": true,
+  "previousFailedRunsPreserved": true
+}

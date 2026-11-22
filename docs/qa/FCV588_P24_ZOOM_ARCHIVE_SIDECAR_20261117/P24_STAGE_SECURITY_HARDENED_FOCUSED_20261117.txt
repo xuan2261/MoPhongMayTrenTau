@@ -1,0 +1,54 @@
+TAP version 13
+# Subtest: P24 immutable pre-P23 profile22 envelope fixture remains a state-only replay artifact
+ok 1 - P24 immutable pre-P23 profile22 envelope fixture remains a state-only replay artifact
+  ---
+  duration_ms: 12.8901
+  type: 'test'
+  ...
+# Subtest: P24 old and current profile22 cannot be distinguished without explicit sidecar
+ok 2 - P24 old and current profile22 cannot be distinguished without explicit sidecar
+  ---
+  duration_ms: 7.6054
+  type: 'test'
+  ...
+# Subtest: P24 source-bound legacy sidecar replays frozen profile22 without rewriting envelope
+ok 3 - P24 source-bound legacy sidecar replays frozen profile22 without rewriting envelope
+  ---
+  duration_ms: 6.3689
+  type: 'test'
+  ...
+# Subtest: P24 identical profile22 state bytes select historical or current BZ by explicit bound sidecar
+ok 4 - P24 identical profile22 state bytes select historical or current BZ by explicit bound sidecar
+  ---
+  duration_ms: 12.1885
+  type: 'test'
+  ...
+# Subtest: P24 mismatched, tampered, spoofed or ambiguous metadata fails closed
+ok 5 - P24 mismatched, tampered, spoofed or ambiguous metadata fails closed
+  ---
+  duration_ms: 4.5043
+  type: 'test'
+  ...
+# Subtest: P24 hidden non-enumerable contract may not escape the sidecar fingerprint
+ok 6 - P24 hidden non-enumerable contract may not escape the sidecar fingerprint
+  ---
+  duration_ms: 2.2456
+  type: 'test'
+  ...
+# Subtest: P24 no public partial resolver can declare a display contract without replay
+ok 7 - P24 no public partial resolver can declare a display contract without replay
+  ---
+  duration_ms: 0.4894
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 238.3506
+
+# STDERR

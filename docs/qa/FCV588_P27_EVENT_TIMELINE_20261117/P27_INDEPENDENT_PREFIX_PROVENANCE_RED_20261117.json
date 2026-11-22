@@ -1,0 +1,9 @@
+{
+  "schema": "FCV588_P27_PROVENANCE_SOURCE_VALID_RED_V1",
+  "status": "SOURCE_VALID_RED_PREFIX_ARCHIVE_REAUTHORING",
+  "exitCode": 1,
+  "testSHA256": "aa214cf266b91bdb56234329da9138dcd30453c44de606dc9b971221f492c758",
+  "logSHA256": "223be512c714e13a160635397492df2dc2f1b28404ecc580a9e0cde58b6f6f04",
+  "rootCause": "Initial P27 selected prefix re-created replay envelope+sidecar and could imply historical provenance; use session projection helper and original immutable contract instead",
+  "canonicalTouched": false
+}

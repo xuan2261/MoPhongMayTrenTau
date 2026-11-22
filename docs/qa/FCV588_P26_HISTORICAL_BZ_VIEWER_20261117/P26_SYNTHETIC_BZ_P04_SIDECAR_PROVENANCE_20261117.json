@@ -1,0 +1,12 @@
+{
+  "schema": "FCV588_P26_SYNTHETIC_CONTRACT_COMPARISON_ONLY_V1",
+  "sourceEnvelopeSHA256": "6124b4f896abbce80c6423253b264a88c07520cb1a57578c60383c2fbf8b84bd",
+  "sidecarSHA256": "5aa4656c77a5d9dbca2217bbfc5ccfa23b294fb66a621924cfc760ad37041c1f",
+  "sidecarContract": "P04_HISTORIC",
+  "sourceProfile": "F1-public-reference-22",
+  "status": "TEST_ONLY_P04_LABEL_FOR_CURRENT_SYNTHETIC_BZ_ENVELOPE",
+  "historicalProvenance": false,
+  "oemValidated": false,
+  "servedToBrowserByServer": false,
+  "purpose": "Compare P04 vs P23 projection for identical synthetic replay bytes only"
+}

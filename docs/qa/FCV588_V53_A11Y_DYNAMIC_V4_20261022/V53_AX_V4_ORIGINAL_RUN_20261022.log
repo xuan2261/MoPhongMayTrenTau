@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Work\MoPhongMayTrenTau\docs\qa\FCV588_V53_A11Y_DYNAMIC_V4_20261022\v53_browser_ax_dom_bounded_qa_v4.py", line 168, in <module>
+    try:sys.exit(execute())
+                 ^^^^^^^^^
+  File "C:\Work\MoPhongMayTrenTau\docs\qa\FCV588_V53_A11Y_DYNAMIC_V4_20261022\v53_browser_ax_dom_bounded_qa_v4.py", line 106, in execute
+    require(live['liveWrites']<=1,'D15 live ARIA region churn on UI timer')
+  File "C:\Work\MoPhongMayTrenTau\docs\qa\FCV588_V53_A11Y_DYNAMIC_V4_20261022\v53_browser_ax_dom_bounded_qa_v4.py", line 30, in require
+    if not value:raise RuntimeError(why)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: D15 live ARIA region churn on UI timer

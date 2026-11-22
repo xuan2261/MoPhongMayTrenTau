@@ -1,0 +1,23 @@
+{
+  "timestampUTC": "2026-10-18T15:14:05.4461287Z",
+  "status": "V41_POSTRECEIPT_SHA_READBACK_PASS_PHASE6_HOLD",
+  "finalReceiptPath": "docs\\qa\\FCV588_V41_FINAL_INTEGRITY_20261018.json",
+  "finalReceiptSHA256": "5d60b6c79b6ab7f3e2812e1e17f2226feba626ac60f7b91da78179f140c1f96d",
+  "canonicalRuntimeSourceHashesReadback": 37,
+  "documentHashesReadback": 10,
+  "testLogHashesReadback": 11,
+  "newV41ScreenshotHashesReadback": 24,
+  "historicalV40ScreenshotHashesReadback": 24,
+  "historicalV36V38ScreenshotHashesReadback": 127,
+  "fullNodePostdocumentPassed": 475,
+  "isolatedCanonicalBrowserAssertions": 90,
+  "browserResponseBodyHashes": 210,
+  "temporaryQaPortsClosed": [
+    "4221",
+    "4222"
+  ],
+  "phase6": "OPEN",
+  "releaseApproval": "HOLD",
+  "hardwareValidated": false,
+  "firmwareInstalled": "UNKNOWN"
+}

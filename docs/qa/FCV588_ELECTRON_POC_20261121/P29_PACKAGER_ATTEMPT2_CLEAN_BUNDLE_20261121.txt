@@ -1,0 +1,11 @@
+
+> fcv588-synthetic-electron-poc@0.0.1 package:win
+> npm run bundle:offline && electron-packager bundle FCV588-Synthetic-POC --electron-version=45.4.1 --platform=win32 --arch=x64 --out=dist --overwrite --asar
+
+
+> fcv588-synthetic-electron-poc@0.0.1 bundle:offline
+> node desktop/build-bundle.mjs
+
+{"status":"BUNDLE_ALLOWLIST_PASS","webSrcFiles":56,"packageFiles":58,"runtime54BaselineCount":54,"changedP28RuntimePaths":["web/index.html"],"addedDesktopUiPaths":["web/desktop-settings.mjs","web/desktop-settings-core.mjs"],"forbiddenOEMFilesPacked":0,"parentP28FinalSHA256":"313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95"}
+Packaging app for platform win32 x64 using electron v45.4.1
+Wrote new app to: dist\FCV588-Synthetic-POC-win32-x64

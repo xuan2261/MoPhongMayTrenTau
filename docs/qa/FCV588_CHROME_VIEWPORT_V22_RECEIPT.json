@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "collectedAtUtc": "2026-10-15T02:07:55.614030+00:00",
+  "profileClass": "PUBLIC_REFERENCE",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "engine": "actual Google Chrome via Python Playwright",
+  "chromeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "preflight": "SOURCE_TREE_IDENTITY_PASS",
+  "postflight": "SOURCE_TREE_STABLE_PASS",
+  "viewports": [
+    {
+      "viewport": "1366x768",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "ISOLATED_STORAGE_EMPTY_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "ACTUAL_POINTER_CANCEL_AND_CAPTURE_RELEASE_PASS",
+        "ACTUAL_ROTARY_LOSTCAPTURE_AFTER_DETENT_NO_PUSH_PASS",
+        "ACTUAL_FACEPLATE_MODE_GAIN_POINTER_ROTARY_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "ACTUAL_D15_LESSON_SCORING_PASS",
+        "ACTUAL_D15_C11_DATA_SOURCE_LESSON_PASS",
+        "ACTUAL_D15_D14_RECEIVER_ABSENCE_LESSON_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "ACTUAL_D09_READ_ONLY_MANUAL_DEFAULTS_NO_OUTPUT_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "ACTUAL_LONG_MENU_CURSOR_VISIBLE_PASS",
+        "ACTUAL_SOURCE_HOLD_AND_BOUNDED_LCD_MODAL_PASS",
+        "ACTUAL_D09_OPTION_HOLD_TEACHER_GRANT_AND_REVOKE_PASS",
+        "ACTUAL_D09_DYNAMIC_MENU_REINDEX_SAFE_EDIT_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_B19_WHITE_PALETTE_LEGIBILITY_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v22_1366x768.png",
+        "docs/qa/screenshots/fcv588_public_v22_1366x768_palette_white.png"
+      ],
+      "preScenarioStorageKeys": [],
+      "storageContext": "ISOLATED_NEW_BROWSER_CONTEXT",
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 60,
+        "verifiedUniquePaths": 30,
+        "browserLoadedResponsesSha256": "0ab634580cb0e70438b3c4a723de66464b62757837de4219cac1e48ca1b674fc",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/tankenmaru-status.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "requestsCaptured": 60,
+      "postReloadRequestsCaptured": 30,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 15
+    },
+    {
+      "viewport": "1920x1080",
+      "status": "PASS",
+      "pageId": "ISOLATED_PLAYWRIGHT_CHROME_CONTEXT",
+      "actualViewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920
+      },
+      "canvasLogical": [
+        480,
+        640
+      ],
+      "steps": [
+        "LOOPBACK_LOAD_AND_LAYOUT_PASS",
+        "ISOLATED_STORAGE_EMPTY_PASS",
+        "PHYSICAL_POWER_AND_BOOT_PASS",
+        "ACTUAL_KEYBOARD_HOLD_REPEAT_PASS",
+        "ACTUAL_POINTER_CANCEL_AND_CAPTURE_RELEASE_PASS",
+        "ACTUAL_ROTARY_LOSTCAPTURE_AFTER_DETENT_NO_PUSH_PASS",
+        "ACTUAL_FACEPLATE_MODE_GAIN_POINTER_ROTARY_PASS",
+        "MODE_SELECTOR_TIMER_WHILE_WORLD_PAUSED_PASS",
+        "ACTUAL_NAV2_BOX_CONFIGURED_AND_LIVE_LCD_PASS",
+        "ACTUAL_C11_DATA_SOURCE_SELECTION_PASS",
+        "D10_TEACHER_FAULT_ON_OFF_PASS",
+        "ACTUAL_D09_READ_ONLY_MANUAL_DEFAULTS_NO_OUTPUT_PASS",
+        "D02_COMMIT_AND_DETERMINISTIC_REPLAY_PASS",
+        "ACTUAL_LONG_MENU_CURSOR_VISIBLE_PASS",
+        "ACTUAL_SOURCE_HOLD_AND_BOUNDED_LCD_MODAL_PASS",
+        "ACTUAL_D09_OPTION_HOLD_TEACHER_GRANT_AND_REVOKE_PASS",
+        "ACTUAL_D09_DYNAMIC_MENU_REINDEX_SAFE_EDIT_PASS",
+        "TEACHER_RESET_RELOAD_AND_SETTINGS_PERSISTENCE_PASS",
+        "ACTUAL_B19_WHITE_PALETTE_LEGIBILITY_PASS",
+        "ACTUAL_POWER_LONG_HOLD_PASS",
+        "CHROME_CONSOLE_AND_LOOPBACK_NETWORK_PASS",
+        "BROWSER_LOADED_SOURCE_BYTES_PASS"
+      ],
+      "screenshots": [
+        "docs/qa/screenshots/fcv588_public_v22_1920x1080.png",
+        "docs/qa/screenshots/fcv588_public_v22_1920x1080_nav2_configured.png",
+        "docs/qa/screenshots/fcv588_public_v22_1920x1080_tankenmaru_details.png",
+        "docs/qa/screenshots/fcv588_public_v22_1920x1080_palette_white.png"
+      ],
+      "preScenarioStorageKeys": [],
+      "storageContext": "ISOLATED_NEW_BROWSER_CONTEXT",
+      "browserLoadedSourceIdentity": {
+        "status": "PASS",
+        "verifiedResponses": 60,
+        "verifiedUniquePaths": 30,
+        "browserLoadedResponsesSha256": "7439463cd047e17f7ea85a2147e38ecb079ff0f676c53d46852c550b2e2432a8",
+        "verifiedPaths": [
+          "/",
+          "/src/core/lessons.mjs",
+          "/src/core/protocol.mjs",
+          "/src/core/scenario.mjs",
+          "/src/core/session.mjs",
+          "/src/devices/fcv588/adapter.mjs",
+          "/src/devices/fcv588/alarms.mjs",
+          "/src/devices/fcv588/calibration.mjs",
+          "/src/devices/fcv588/capabilities.mjs",
+          "/src/devices/fcv588/display-layout.mjs",
+          "/src/devices/fcv588/display-palette.mjs",
+          "/src/devices/fcv588/display-widgets.mjs",
+          "/src/devices/fcv588/echo-projection.mjs",
+          "/src/devices/fcv588/menu-atlas.mjs",
+          "/src/devices/fcv588/model.mjs",
+          "/src/devices/fcv588/navigation.mjs",
+          "/src/devices/fcv588/profile-version.mjs",
+          "/src/devices/fcv588/receiver-status.mjs",
+          "/src/devices/fcv588/settings.mjs",
+          "/src/devices/fcv588/tankenmaru-status.mjs",
+          "/src/devices/fcv588/training-faults.mjs",
+          "/src/devices/fcv588/units.mjs",
+          "/web/app.mjs",
+          "/web/favicon.svg",
+          "/web/hold-input.mjs",
+          "/web/key-feedback.mjs",
+          "/web/keyboard-shortcuts.mjs",
+          "/web/pad-repeat.mjs",
+          "/web/rotary-input.mjs",
+          "/web/styles.css"
+        ]
+      },
+      "requestsCaptured": 60,
+      "postReloadRequestsCaptured": 30,
+      "consoleErrors": [],
+      "requestFailures": [],
+      "networkErrors": [],
+      "settingsSchema": 15
+    }
+  ],
+  "sourceRights": "ORIGINAL_CANVAS_ONLY",
+  "limitations": [
+    "Headless Chrome viewport is exact; not physical monitor pixel geometry",
+    "No manufacturer asset or installed firmware conformance approval",
+    "Long-duration pointer capture was tested by Chromium touchCancel and releasePointerCapture; physical touchscreen hardware remains unverified"
+  ],
+  "qaHarnessSourceIdentity": {
+    "status": "PASS_UNCHANGED",
+    "sourceDigestsSha256": {
+      "desktopRunner": "aa0534eaf7cdb1cda075b61dd64117fb409f33671ade5212a63a70852ab8f85d"
+    },
+    "sourcePaths": {
+      "desktopRunner": "tools/fcv588_chrome_viewport_acceptance.py"
+    }
+  },
+  "servedSourceIdentity": {
+    "status": "PASS",
+    "profileRevision": "F1-public-reference-16",
+    "filesCompared": 32,
+    "sourceManifestSha256": "56cffc8a30c09349b1d7ffa14410b2802d7463133bc0ecd7a3a48df7fc907aec",
+    "fileDigests": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "sha256": "45b0303d2ec3119880b46a91f39b64206710b024a14f7bb922c5686516a0448d"
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "sha256": "eb5ed1072404323bab54d31442916492eaaada4ce6a703eaca1da254b2bdef43"
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "sha256": "a389d01092ffdfe815843f67cbffe3b24520f7239bb7229e524e4148fef06d9f"
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4"
+      },
+      {
+        "path": "src/core/session.mjs",
+        "sha256": "2fde5d5261e75b81ca023fc31a7ef51f26bccde8c3a386e111b860dcb1aa51a6"
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309"
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "sha256": "de238620474c278b3ade7d2cb6b870b002dd0140cbee028faa375ba99419cd45"
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "sha256": "bbbee943cc2d6e557de46c101b606a0b0f47314843b5deb7a8bbb4f20f536dd4"
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db"
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58"
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "sha256": "d1306b89e5ae8476b2f25994db1ceb047715f3266675ddcd90dce4966314d65b"
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411"
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "sha256": "c63e93cbb4c4fb208a08618c7da0328d275cd896c32959aa02aba2d8091caa91"
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "sha256": "0ef230aff400c983720c2dea2228de89d47b8f5c0d7a524223e70b021e384f07"
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "sha256": "ec52a5d698250561803fd5d97f13316d85802f14b790aebe2e78d9f2a669525a"
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "sha256": "c7f847728d4c1ce087cffc395ff2fd7d71fdfdc90b54a6043e4554ff73233648"
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "sha256": "e0a210a8a062261b12bd0b138c796b940e64b84896d18a87d060f7b5053d9a17"
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "sha256": "38ab061a66e864abc66d9f0a1219b4d798a93f179363d7f8c02c4978acd350dc"
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "sha256": "e33ed1d7c4138323de8ff34564eec456826ec69e048dbf4f83a8c4a836a75256"
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "sha256": "6c4eeabe6c8f9e58183c2cd7e4b98a08974eb18a8c0661cf30daf746966a9893"
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491"
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7"
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21"
+      },
+      {
+        "path": "web/app.mjs",
+        "sha256": "182d36350d8414459c230c2de144fefc108d73c75f8da22bddee39a6157aafa7"
+      },
+      {
+        "path": "web/favicon.svg",
+        "sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a"
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "sha256": "7dfe2ca97fd35a5ca467ffd4cd9c4f25ca03ee1b074ebfcabcff3f093c42eb4b"
+      },
+      {
+        "path": "web/index.html",
+        "sha256": "c59d41fbab76568d62c2a09815d3bd2de6c83df2a5c37b5f5ba1d41dcbcae8ac"
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b"
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "sha256": "88db82f2bd00c6c30be02d2573459c68544dd5686e47b5428b4c32eae0935856"
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad"
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc"
+      },
+      {
+        "path": "web/styles.css",
+        "sha256": "7a8a4794a661c4a28ea4cef7246f9bb97c2a60810a8ec4a360c47a8468a6c901"
+      }
+    ]
+  },
+  "status": "PASS_OBSERVED_VIEWPORTS"
+}

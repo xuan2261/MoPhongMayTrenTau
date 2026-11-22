@@ -1,0 +1,22 @@
+{
+  "performed": [
+    "test/fcv588-photo-display.test.mjs",
+    "test/fcv588-public-channel-labels.test.mjs",
+    "test/fcv588-public-display.test.mjs",
+    "test/fcv588-public-reference-visual.test.mjs",
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "targetFiles": [
+    "test/fcv588-photo-display.test.mjs",
+    "test/fcv588-public-channel-labels.test.mjs",
+    "test/fcv588-public-display.test.mjs",
+    "test/fcv588-public-reference-visual.test.mjs",
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "complete": true,
+  "timestampUtc": "2026-11-14T02:43:25.442313+00:00"
+}

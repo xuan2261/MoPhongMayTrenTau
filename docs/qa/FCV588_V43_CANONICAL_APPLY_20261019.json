@@ -1,0 +1,89 @@
+{
+  "timestampUtc": "2026-10-19T02:49:39.4492828Z",
+  "status": "V43_CANONICAL_PROFILE21_OEM_BRILL_APPLIED_WITH_SHA",
+  "previousV42FinalSHA": "fc7b2559cf16eed934a173b246c363ecdc5686f0413be90eae8f61bf99dd57d9",
+  "previousV42PostSHA": "0d659c3dab920d6e8f6964e14522f1d23f0d80dfc4fcc215df6c9ecef70b5adc",
+  "stageManifestValidJsonSHA": "a3b2ab6420bce6c026025861888f2cebb03ab8435e293f49f385916359906d19",
+  "GPT6GOsha": "952f57f56146ee5f38b079331d62ab7b74bb072ad121f64217a2d17360f8a964",
+  "copiedFiles": [
+    {
+      "preimageSHA": "207f14a9ebb17d1fe565ececa29c5cb3756bcca9b98236ec83f6aac51e6f603c",
+      "path": "src/core/lessons.mjs",
+      "observedSHA": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "expectedSHA": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f"
+    },
+    {
+      "preimageSHA": "723b3981b508c54b391e16e7f0a8c220faddc57b5d9d1c5bdf4cece9ad4690de",
+      "path": "src/devices/fcv588/model.mjs",
+      "observedSHA": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+      "expectedSHA": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+    },
+    {
+      "preimageSHA": "bed6c0af1297adb681071165ee6d8283b13959aa0ce53c343fc67efb839a9e72",
+      "path": "src/devices/fcv588/profile-version.mjs",
+      "observedSHA": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+      "expectedSHA": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070"
+    },
+    {
+      "preimageSHA": "a77f165f77fb3a0e898df489bccf1c6f559adbcc15bbc0da1df12b4fda53adb1",
+      "path": "web/app.mjs",
+      "observedSHA": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673",
+      "expectedSHA": "0a96692b41cfd542180383a8e0e7108ab1978ca8868d9a22d4d66e69678bf673"
+    },
+    {
+      "preimageSHA": "d8d4c09c47c310beffeb992b4373ed8f590dbfc8fb0c2263a1a7228564e144c5",
+      "path": "docs/evidence/device-register.json",
+      "observedSHA": "1422b47350b062967eafb2d06e4d1c609bae99915e9720fafbdfb2673800f157",
+      "expectedSHA": "1422b47350b062967eafb2d06e4d1c609bae99915e9720fafbdfb2673800f157"
+    },
+    {
+      "preimageSHA": "75490ed8d0d1e0946d1f58b0107db3ddd94133af769fbf9be6e4c0c216c99292",
+      "path": "docs/evidence/fcv588-public-implementation-status.json",
+      "observedSHA": "4deb62b6364ceee234df1f2260c5be1472596461f6c84683844ec6ea991d0c97",
+      "expectedSHA": "4deb62b6364ceee234df1f2260c5be1472596461f6c84683844ec6ea991d0c97"
+    },
+    {
+      "preimageSHA": "034ca2299f340b99db305df592046fadc39c13a945542b3cc6321b9940a669db",
+      "path": "test/fcv588-public-basic.test.mjs",
+      "observedSHA": "aaffb217a20493d162dff92acf1fdb7cb259a7269630fcf1c340b43786c6cc1d",
+      "expectedSHA": "aaffb217a20493d162dff92acf1fdb7cb259a7269630fcf1c340b43786c6cc1d"
+    },
+    {
+      "preimageSHA": "fb53ec4993ce888e952e6e7af3b36bfb19d78c6a85854e15af52914ed15752ba",
+      "path": "test/fcv588-public-course.test.mjs",
+      "observedSHA": "8c69f203d4744ab2ae401c4d70903d737f1544e6f3e24ee25389341da4e5b776",
+      "expectedSHA": "8c69f203d4744ab2ae401c4d70903d737f1544e6f3e24ee25389341da4e5b776"
+    },
+    {
+      "preimageSHA": "188441e4cea9e56506f6a2140ee5c197270ddaeb128b7ed2dd2e7aa155a7bc5e",
+      "path": "test/fcv588-public-persistence.test.mjs",
+      "observedSHA": "306e5b20d1b788488183ecf8157dbfeebc0111b8aaab78c481eec186cd0d934b",
+      "expectedSHA": "306e5b20d1b788488183ecf8157dbfeebc0111b8aaab78c481eec186cd0d934b"
+    },
+    {
+      "preimageSHA": "bf15de301a5731abfa9f174d7029636d2c43d5831bc8225f79c0c1ad89f72414",
+      "path": "test/fcv588-public-v31-compatibility.test.mjs",
+      "observedSHA": "822c8242eedccc360e4c6eeff868ef6400642fa0cf827d815dc59951e77a03df",
+      "expectedSHA": "822c8242eedccc360e4c6eeff868ef6400642fa0cf827d815dc59951e77a03df"
+    },
+    {
+      "preimageSHA": null,
+      "path": "test/fcv588-v43-oem-brill-triangle.test.mjs",
+      "observedSHA": "8aef8285f5fd39f316eb6bd7ae16ee34e1e87ff3981116617f120e21ad24faa6",
+      "expectedSHA": "8aef8285f5fd39f316eb6bd7ae16ee34e1e87ff3981116617f120e21ad24faa6"
+    }
+  ],
+  "copiedFilesCount": 11,
+  "preimageRuntimeSourceSHA": 37,
+  "postimageRuntimeSourceSHA": 37,
+  "changedRuntimePaths": [
+    "src/core/lessons.mjs",
+    "src/devices/fcv588/model.mjs",
+    "src/devices/fcv588/profile-version.mjs",
+    "web/app.mjs"
+  ],
+  "phase6": "OPEN",
+  "claimsHold": 65,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

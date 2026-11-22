@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-19T01:17:54.6589217Z",
+  "status": "V42_CANONICAL_SINGLE_LCD_MODE_TITLE_SOURCE_SHA_APPLIED",
+  "baselineV41FinalReceiptSHA": "5d60b6c79b6ab7f3e2812e1e17f2226feba626ac60f7b91da78179f140c1f96d",
+  "stagedManifestSHA": "f091119619b5a881b3290922fb6241c19edf249c1ba0a3c02dcf6b8cc2fa4b63",
+  "GPT6GoSHA": "0ff41db51468baba508ba08c65b1a4af11a7b578c9d7f787684f0eee740e3552",
+  "changedSourcePath": "web/lcd-control-presentation.mjs",
+  "priorSourceSHA": "0881d0567d7921a98085a7914ebc2628e9b2f6d2c23d9a5894e7f97f3bba808f",
+  "appliedSourceSHA": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+  "unchangedSourceFiles": 36,
+  "sourceSHAReadback": 37,
+  "newTestPath": "test\\fcv588-v42-oem-mode-title.test.mjs",
+  "newTestSHA": "a00189f8aa106442970f01d5efc431827611008ac1e77dadd0b3badc3439952d",
+  "phase6": "OPEN",
+  "installedFirmware": "UNKNOWN",
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD"
+}

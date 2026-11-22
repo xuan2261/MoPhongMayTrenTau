@@ -1,0 +1,204 @@
+TAP version 13
+# Subtest: P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+not ok 1 - P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+  ---
+  duration_ms: 10.5323
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p05menu-20261116\\test\\fcv588-photo-menu-actions.test.mjs:18:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    undefined !== '1x'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '1x'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-photo-p05menu-20261116/test/fcv588-photo-menu-actions.test.mjs:24:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: P05 left/right category navigation preserves committed settings
+ok 2 - P05 left/right category navigation preserves committed settings
+  ---
+  duration_ms: 5.3514
+  type: 'test'
+  ...
+# Subtest: P05 menu projection exposes two-column label/value data without changing atlas labels
+not ok 3 - P05 menu projection exposes two-column label/value data without changing atlas labels
+  ---
+  duration_ms: 9.1374
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p05menu-20261116\\test\\fcv588-photo-menu-layout.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'HOLD'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'HOLD'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-photo-p05menu-20261116/test/fcv588-photo-menu-layout.test.mjs:20:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+not ok 4 - P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+  ---
+  duration_ms: 9.5549
+  type: 'test'
+  location: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p05menu-20261116\\test\\fcv588-photo-menu-layout.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /lcd-menu-label/. Input:
+    
+    'function renderMainMenuChrome(projected,title,content){\n' +
+      '  title.textContent=projected.category;\n' +
+      '  const categories=$("lcd-menu-categories");\n' +
+      '  categories.replaceChildren(...projected.categories.map(item=>{\n' +
+      '    const label=document.createElement("div");\n' +
+      '    label.textContent=item.label;\n' +
+      '    label.dataset.category=item.label;\n' +
+      '    label.setAttribute("role","listitem");\n' +
+      '    if(item.selected)label.setAttribute("aria-current","true");\n' +
+      '    return label;\n' +
+      '  }));\n' +
+      '  const rows=projected.rows.map(item=>{\n' +
+      '    const row=document.createElement("div");\n' +
+      '    row.className="lcd-menu-row";\n' +
+      '    row.textContent=displayOnlySyntheticValue(item.text);\n' +
+      '    row.dataset.entryId=item.id;\n' +
+      '    row.dataset.sourceGrade=item.sourceStatus||"UNKNOWN";\n' +
+      '    if(item.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED"){\n' +
+      '      row.dataset.trainingPath="unverified";\n' +
+      '    }\n' +
+      '    row.setAttribute("role","listitem");\n' +
+      '    if(item.selected)row.setAttribute("aria-current","true");\n' +
+      '    if(item.disabled)row.setAttribute("aria-disabled","true");\n' +
+      '    return row;\n' +
+      '  });\n' +
+      '  content.setAttribute("role","list");\n' +
+      '  content.setAttribute("aria-label",projected.category);\n' +
+      '  content.replaceChildren(...rows);\n' +
+      '  const active=projected.rows.find(row=>row.selected);\n' +
+      '  const sourceUnverified=active?.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED";\n' +
+      '  publishInstructorGuidance({\n' +
+      '    title:projected.title,\n' +
+      '    help:projected.help,\n' +
+      '    source:sourceUnverified\n' +
+      '      ? "SOURCE_GAP: mục thao tác được thêm cho giáo trình, chưa chứng minh là đường dẫn menu FCV-588 trên firmware thật."\n' +
+      '      :projected.reason\n' +
+      '      ? "Mục này chưa được phép dùng: "+explainFcvSourceReason(projected.reason)\n' +
+      '      : "Menu được dựng độc lập theo các mục có nguồn; độ chính xác firmware chưa xác nhận."\n' +
+      '  });\n' +
+      '  const options=$("lcd-menu-options");\n' +
+      '  options.replaceChildren();\n' +
+      '  if(projected.editor){\n' +
+      '    const heading=document.createElement("div");\n' +
+      '    heading.className="lcd-options-title";\n' +
+      '    heading.textContent=displayOnlySyntheticValue(projected.editor.title)+" · "+\n' +
+      '      (projected.editor.index+1)+"/"+projected.editor.total;\n' +
+      '    options.appendChild(heading);\n' +
+      '    for(const item of projected.editor.choices){\n' +
+      '      const choice=document.createElement("div");\n' +
+      '      choice.textContent=item.value;\n' +
+      '      choice.setAttribute("role","listitem");\n' +
+      '      if(item.selected)choice.setAttribute("aria-current","true");\n' +
+      '      options.appendChild(choice);\n' +
+      '    }\n' +
+      `    keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));\n` +
+      '  }\n' +
+      '  keepMenuSelectionVisible(content,rows[projected.rows.findIndex(row=>row.selected)]);\n' +
+      '}\n' +
+      '\n'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    function renderMainMenuChrome(projected,title,content){
+      title.textContent=projected.category;
+      const categories=$("lcd-menu-categories");
+      categories.replaceChildren(...projected.categories.map(item=>{
+        const label=document.createElement("div");
+        label.textContent=item.label;
+        label.dataset.category=item.label;
+        label.setAttribute("role","listitem");
+        if(item.selected)label.setAttribute("aria-current","true");
+        return label;
+      }));
+      const rows=projected.rows.map(item=>{
+        const row=document.createElement("div");
+        row.className="lcd-menu-row";
+        row.textContent=displayOnlySyntheticValue(item.text);
+        row.dataset.entryId=item.id;
+        row.dataset.sourceGrade=item.sourceStatus||"UNKNOWN";
+        if(item.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED"){
+          row.dataset.trainingPath="unverified";
+        }
+        row.setAttribute("role","listitem");
+        if(item.selected)row.setAttribute("aria-current","true");
+        if(item.disabled)row.setAttribute("aria-disabled","true");
+        return row;
+      });
+      content.setAttribute("role","list");
+      content.setAttribute("aria-label",projected.category);
+      content.replaceChildren(...rows);
+      const active=projected.rows.find(row=>row.selected);
+      const sourceUnverified=active?.sourceStatus==="SYNTHETIC_TRAINING_MENU_PATH_UNVERIFIED";
+      publishInstructorGuidance({
+        title:projected.title,
+        help:projected.help,
+        source:sourceUnverified
+          ? "SOURCE_GAP: mục thao tác được thêm cho giáo trình, chưa chứng minh là đường dẫn menu FCV-588 trên firmware thật."
+          :projected.reason
+          ? "Mục này chưa được phép dùng: "+explainFcvSourceReason(projected.reason)
+          : "Menu được dựng độc lập theo các mục có nguồn; độ chính xác firmware chưa xác nhận."
+      });
+      const options=$("lcd-menu-options");
+      options.replaceChildren();
+      if(projected.editor){
+        const heading=document.createElement("div");
+        heading.className="lcd-options-title";
+        heading.textContent=displayOnlySyntheticValue(projected.editor.title)+" · "+
+          (projected.editor.index+1)+"/"+projected.editor.total;
+        options.appendChild(heading);
+        for(const item of projected.editor.choices){
+          const choice=document.createElement("div");
+          choice.textContent=item.value;
+          choice.setAttribute("role","listitem");
+          if(item.selected)choice.setAttribute("aria-current","true");
+          options.appendChild(choice);
+        }
+        keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));
+      }
+      keepMenuSelectionVisible(content,rows[projected.rows.findIndex(row=>row.selected)]);
+    }
+    
+    
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Work/MoPhongMayTrenTau/staging/fcv588-photo-p05menu-20261116/test/fcv588-photo-menu-layout.test.mjs:37:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 1
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 383.3117

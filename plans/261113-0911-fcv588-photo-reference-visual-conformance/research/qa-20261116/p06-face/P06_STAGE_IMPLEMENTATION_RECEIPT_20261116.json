@@ -1,0 +1,393 @@
+{
+  "schema": "fcv588-p06-face-isolated-stage-implementation-v1",
+  "createdAt": "2026-11-16T07:21:44.7253654+07:00",
+  "scope": "P06_FACEPLATE_DEVICE_FOCUS_ISOLATED_STAGING_ONLY_NO_CANONICAL_APPLY",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-p06face-20261116",
+  "parentP04": {
+    "finalPath": "docs/qa/FCV588_VISUAL_P04_20261114/FCV588_VISUAL_P04_FINAL_INTEGRITY_20261114.json",
+    "finalSha256": "c3a292dc213e660fa855c453eaf324fd9014ddb163e4723cea141a4050a1382b",
+    "postreceiptPath": "docs/qa/FCV588_VISUAL_P04_20261114/FCV588_VISUAL_P04_INDEPENDENT_POSTRECEIPT_20261114.json",
+    "postreceiptSha256": "569e4b99a8e8de49502d74db30c0215eb61b238edf3ddaa4d93f6d7ed6b4ec90",
+    "runtimeBaseline": "39/39_MATCH_AT_STAGE_CREATION"
+  },
+  "baseline": {
+    "path": "plans/261113-0911-fcv588-photo-reference-visual-conformance/research/qa-20261116/p06-face/P06_STAGE_BASELINE_RUNTIME39_20261116.json",
+    "sha256": "47fc9cdddf0ff465fd0b53baf657ef81a007cd4610ad18920aba7d6c756b3a16"
+  },
+  "allowlist": {
+    "status": "EXACT_4_PATHS",
+    "runtimeCount": 2,
+    "testCount": 2,
+    "runtime": [
+      {
+        "path": "web/index.html",
+        "kind": "MODIFIED",
+        "canonicalPreimageSha256": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b",
+        "stagePostimageSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847"
+      },
+      {
+        "path": "web/styles.css",
+        "kind": "MODIFIED",
+        "canonicalPreimageSha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+        "stagePostimageSha256": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c"
+      }
+    ],
+    "tests": [
+      {
+        "path": "test/fcv588-photo-face-geometry.test.mjs",
+        "kind": "NEW",
+        "canonicalPreimageSha256": null,
+        "stagePostimageSha256": "d16145b935f0d1122dccd3a81ff75dcf7bb082ddabe53db25981bcd9e5f59adc"
+      },
+      {
+        "path": "test/fcv588-device-focus.test.mjs",
+        "kind": "NEW",
+        "canonicalPreimageSha256": null,
+        "stagePostimageSha256": "0082921e9167771c0c776664a6313d744ac3cdffd8869ae274fc12ed9e69778d"
+      }
+    ]
+  },
+  "runtimeComparison": {
+    "total": 39,
+    "unchanged": 37,
+    "changed": [
+      "web/index.html",
+      "web/styles.css"
+    ],
+    "rows": [
+      {
+        "path": "src/core/device-runtime.mjs",
+        "canonicalP04Sha256": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+        "stageSha256": "024bc8f27d37b70bc0d918d038bb46b2d8c80e235bf154d257268ab24bf2c0a1",
+        "match": true
+      },
+      {
+        "path": "src/core/lessons.mjs",
+        "canonicalP04Sha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+        "stageSha256": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+        "match": true
+      },
+      {
+        "path": "src/core/protocol.mjs",
+        "canonicalP04Sha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+        "stageSha256": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+        "match": true
+      },
+      {
+        "path": "src/core/scenario.mjs",
+        "canonicalP04Sha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+        "stageSha256": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+        "match": true
+      },
+      {
+        "path": "src/core/session.mjs",
+        "canonicalP04Sha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+        "stageSha256": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/adapter.mjs",
+        "canonicalP04Sha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+        "stageSha256": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/alarms.mjs",
+        "canonicalP04Sha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+        "stageSha256": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/calibration.mjs",
+        "canonicalP04Sha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+        "stageSha256": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/capabilities.mjs",
+        "canonicalP04Sha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+        "stageSha256": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/claim-gate.mjs",
+        "canonicalP04Sha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+        "stageSha256": "8c8f349587a942d9057d632551d86f56844416453466bf60beedd9fac8a1de58",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/display-layout.mjs",
+        "canonicalP04Sha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+        "stageSha256": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/display-palette.mjs",
+        "canonicalP04Sha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+        "stageSha256": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/display-widgets.mjs",
+        "canonicalP04Sha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+        "stageSha256": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/echo-projection.mjs",
+        "canonicalP04Sha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+        "stageSha256": "fffe1525832ba7776140d9e9a547789085d53848f5051d81b91561347b70e23a",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/menu-atlas.mjs",
+        "canonicalP04Sha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+        "stageSha256": "992d7a6e1f3a645680ea73f87ce2863a9e9f38eb16428a4581ad5e7e71a58aed",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/model.mjs",
+        "canonicalP04Sha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+        "stageSha256": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/navigation.mjs",
+        "canonicalP04Sha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+        "stageSha256": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/profile-version.mjs",
+        "canonicalP04Sha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+        "stageSha256": "8134470b379315ebc369a7b5922dacbdfcf47d3472d084832da5fff031e03070",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/receiver-status.mjs",
+        "canonicalP04Sha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+        "stageSha256": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/settings.mjs",
+        "canonicalP04Sha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+        "stageSha256": "2c5597271247c08128c2904a02fcc4cad672be70a4d2017837f76412ecb86aa3",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/tankenmaru-status.mjs",
+        "canonicalP04Sha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+        "stageSha256": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/training-faults.mjs",
+        "canonicalP04Sha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+        "stageSha256": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+        "match": true
+      },
+      {
+        "path": "src/devices/fcv588/units.mjs",
+        "canonicalP04Sha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+        "stageSha256": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+        "match": true
+      },
+      {
+        "path": "web/app.mjs",
+        "canonicalP04Sha256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+        "stageSha256": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+        "match": true
+      },
+      {
+        "path": "web/favicon.svg",
+        "canonicalP04Sha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+        "stageSha256": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+        "match": true
+      },
+      {
+        "path": "web/fcv588-echo-rasterizer.mjs",
+        "canonicalP04Sha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+        "stageSha256": "a3becfa9a14f194869e7917438cdd51a82dbd7904feaed55357d3f4fff0c0d4c",
+        "match": true
+      },
+      {
+        "path": "web/fcv588-training-source-matrix.mjs",
+        "canonicalP04Sha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+        "stageSha256": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+        "match": true
+      },
+      {
+        "path": "web/hold-input.mjs",
+        "canonicalP04Sha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+        "stageSha256": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+        "match": true
+      },
+      {
+        "path": "web/index.html",
+        "canonicalP04Sha256": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b",
+        "stageSha256": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+        "match": false
+      },
+      {
+        "path": "web/instructor-tabs.mjs",
+        "canonicalP04Sha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+        "stageSha256": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+        "match": true
+      },
+      {
+        "path": "web/key-feedback.mjs",
+        "canonicalP04Sha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+        "stageSha256": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+        "match": true
+      },
+      {
+        "path": "web/keyboard-shortcuts.mjs",
+        "canonicalP04Sha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+        "stageSha256": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+        "match": true
+      },
+      {
+        "path": "web/lcd-config-presentation.mjs",
+        "canonicalP04Sha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+        "stageSha256": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+        "match": true
+      },
+      {
+        "path": "web/lcd-control-presentation.mjs",
+        "canonicalP04Sha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+        "stageSha256": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+        "match": true
+      },
+      {
+        "path": "web/lcd-instructor-meta.mjs",
+        "canonicalP04Sha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+        "stageSha256": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+        "match": true
+      },
+      {
+        "path": "web/lcd-presentation.mjs",
+        "canonicalP04Sha256": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+        "stageSha256": "56aa27674dc5a8e5945c0e1e653a86554d459d82298b6a30137a630eb0910c70",
+        "match": true
+      },
+      {
+        "path": "web/pad-repeat.mjs",
+        "canonicalP04Sha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+        "stageSha256": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+        "match": true
+      },
+      {
+        "path": "web/rotary-input.mjs",
+        "canonicalP04Sha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+        "stageSha256": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+        "match": true
+      },
+      {
+        "path": "web/styles.css",
+        "canonicalP04Sha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825",
+        "stageSha256": "e375d2b7d8dbb070e488b6276f8b26640efb29973ab0753a22b859e1b6b3576c",
+        "match": false
+      }
+    ]
+  },
+  "protected": {
+    "web/app.mjs": "6dc6f6c7e306c43a648ee7fc21b733e59e69235906a4c735ed43d82c729a385c",
+    "web/hold-input.mjs": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+    "web/rotary-input.mjs": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+    "web/pad-repeat.mjs": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+    "src/core/session.mjs": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+    "src/core/scenario.mjs": "9608428d5c530991f87d103f04186a7445899b551ee2e9571fdf40cce44c6be4",
+    "src/devices/fcv588/model.mjs": "45ed40e44e0af6434ae3f17249d5f9c52081be77bd7302738b7ac39b37a8db11"
+  },
+  "implementation": {
+    "faceplate": "photo-grounded qualitative CSS contour/control-column refinement; no mm precision claim, no OEM assets",
+    "lcdAperture": "existing accepted 59% browser-measured allocation preserved after full-suite regression exposed attempted 61% change",
+    "controls": "narrower right column, restrained TrackPad/rotary/pill-key/power silhouettes; native button IDs and handlers unchanged",
+    "deviceFocus": "desktop-only native checkbox outside face; CSS :has de-emphasizes D15 but never display:none; :focus-within restores full emphasis; no app/reducer/session/replay event",
+    "mobile": "375 reflow preserved; device-focus toggle hidden below 1241px",
+    "rights": "8 JPG remain REFERENCE_ONLY; strict server serves only web/src; no image/font/firmware copied to runtime",
+    "sourceGap": "camera crop/perspective prevents physical mm/tactile/detent claim"
+  },
+  "validation": {
+    "redAttempt1": {
+      "path": "p06-face-red-v1.txt",
+      "sha256": "2f1bfc0908b24a8557de76699654ed366f10ccefd661b4259d9713d4cf758fcc",
+      "status": "PRESERVED_INVALID_ORACLE",
+      "note": "0/5; reference-only test incorrectly rejected a CSS comment naming dual.jpg; no runtime change followed from this oracle"
+    },
+    "redAttempt2": {
+      "path": "p06-face-red-v2.txt",
+      "sha256": "2eb66b9f9ddaf1a3482e3160c8f77cb461c36026c25d62550c43e5b871c61212",
+      "status": "SOURCE_VALID_RED",
+      "result": "1_PASS_4_FAIL"
+    },
+    "targetedGreen": {
+      "path": "p06-face-green-v2.txt",
+      "sha256": "48cfd992f4f1f16da3ded9dd5bfdd144705d1d40864b2ab123aabb9a21e9c9c7",
+      "result": "38/38_PASS"
+    },
+    "fullNodeInitial": {
+      "path": "p06-stage-node-prime-v1.txt",
+      "sha256": "dbc480964c694524955322df989d7e6a70d2ecec38234c0f59f59cb2de144ac1",
+      "result": "532/537_PASS_5_FAIL",
+      "note": "preserved: one real 61% LCD-aperture regression plus four staging-scaffold missing sources/manuals/MANIFEST failures"
+    },
+    "fullNodeFinal": {
+      "path": "p06-stage-node-prime-v2.txt",
+      "sha256": "2ee41753bf99a3be04589c2d3c37a132168956750afe06aec1eaa6f634bfb360",
+      "result": "546/546_PASS",
+      "node": "C:/nvm4w/nodejs/node.exe v22.22.0"
+    },
+    "fullNodeWorkerCrosscheck": {
+      "path": "p06-stage-node-worker6-v2.txt",
+      "sha256": "16b4aaa957ae7b80794f89ca27855191570e5470353f8816c63a527cc156376b",
+      "result": "546/546_PASS"
+    },
+    "python": {
+      "path": "p06-stage-python-prime-v2.txt",
+      "sha256": "aac6afe7be3ea5da832260b3615285680536faa36f4f13773c3ac0661209626c",
+      "result": "13/13_PASS"
+    },
+    "browser": {
+      "status": "PENDING_PRIME",
+      "owner": "prime",
+      "port": 4193,
+      "required": [
+        "375x812",
+        "1366x768",
+        "1920x1080",
+        "focus keyboard/toggle",
+        "screenshots SHA",
+        "actual loaded response body SHA",
+        "8/8 OEM photo URLs HTTP 404"
+      ],
+      "claim": "NO_BROWSER_PASS_CLAIM_IN_THIS_RECEIPT"
+    }
+  },
+  "stagingScaffold": {
+    "docs": "junction to canonical docs",
+    "plans": "junction to canonical plans",
+    "sources": "junction to canonical sources added only to satisfy plan/manual test fixtures; strict server cannot serve /sources",
+    "runtimeAllowlistUnaffected": true
+  },
+  "canonical": {
+    "applied": false,
+    "commit": false,
+    "deploy": false,
+    "port4173": "USER_OWNED_UNTOUCHED",
+    "indexSha256": "55c979854d9ab2b28b734cd89b61d157123199882b111ce8177988f845ef756b",
+    "stylesSha256": "78cfaa8af1f1ee92df142da722561309ce5cc6c419669009044024c1ddaee825"
+  },
+  "holds": [
+    "firmware",
+    "OEM rights",
+    "release",
+    "65 claims",
+    "hardware/tactile validation",
+    "exact faceplate mm geometry",
+    "camera-crop physical measurements"
+  ],
+  "status": "P06_STAGE_CODE_AND_NON_BROWSER_QA_PASS_BROWSER_PENDING_NO_CANONICAL_APPLY"
+}

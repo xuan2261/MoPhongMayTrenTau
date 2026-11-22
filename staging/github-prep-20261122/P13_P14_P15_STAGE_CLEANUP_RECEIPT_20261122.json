@@ -1,0 +1,31 @@
+{
+  "status": "ARCHIVED_VERIFIED_AND_LOOSE_STAGE_REMOVED",
+  "timestamp": "2026-11-22T20:44:16.5565178+07:00",
+  "root": "C:\\Work\\MoPhongMayTrenTau",
+  "archive": "C:\\Work\\MoPhongMayTrenTau\\staging\\github-prep-20261122\\P13_P14_P15_STAGE_SNAPSHOTS_20261122.zip",
+  "archiveSha256": "E9237CE81139F9E4CBC52CCE5C9292F5411135BA86215ABEF5A43BC7584C4FA1",
+  "manifestSha256": "DF59A932347EC9120E66E04D6CBB27171AFC343DCABD2A7D1E714B7A6C4DC38C",
+  "manifestFileCount": 7402,
+  "restoreScript": "tools/restore_p13_p15_stage_snapshots.ps1",
+  "stages": [
+    {
+      "physicalFiles": 2411,
+      "physicalBytes": 285588553.0,
+      "name": "_p13_stage_20261116"
+    },
+    {
+      "physicalFiles": 2432,
+      "physicalBytes": 285712108.0,
+      "name": "_p14_stage_20261116"
+    },
+    {
+      "physicalFiles": 2559,
+      "physicalBytes": 294448522.0,
+      "name": "_p15_stage_20261116"
+    }
+  ],
+  "canonicalSourceManifestUnchanged": true,
+  "canonicalSourceFileCount": 37,
+  "gitUploadPerformed": false,
+  "notes": "Three Windows junction links removed without following their targets. Canonical code/docs/sources untouched. Historic scripts require restore of stages."
+}

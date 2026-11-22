@@ -1,0 +1,9 @@
+{
+  "schema": "FCV588_P23_STAGE_PYTHON_UNITTTEST_FINAL_V1",
+  "stageOnly": true,
+  "exitCode": 1,
+  "total": 8,
+  "result": "FAIL",
+  "logSHA256": "05100203be1e1e633ae6e44683509afa27df8106c1c061ccde879b16c158e600",
+  "canonicalRuntimeUnchanged": true
+}

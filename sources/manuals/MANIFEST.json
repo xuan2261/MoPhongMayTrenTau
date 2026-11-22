@@ -1,0 +1,458 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-13T22:16:14.015148+00:00",
+  "scope": "Local historical/official reference manuals; not licensed simulator art.",
+  "identity_HOLD": [
+    "KODEN J2000 unverified model",
+    "AIS R5 actual SUPREME/SOLID",
+    "NS4000 actual installed version",
+    "FCV588 actual firmware/transducer"
+  ],
+  "not_obtained": [
+    {
+      "model": "KODEN J2000",
+      "reason": "Model unverified; no substitute manual downloaded"
+    },
+    {
+      "model": "NS4000 v3.02.350",
+      "url": "https://www.scribd.com/document/959959511/NS4000-v-3-02-350-UM-SEP2025",
+      "reason": "Viewer/publication only: PDF direct download and reproduction rights unverified"
+    }
+  ],
+  "entries": [
+    {
+      "id": "FCV588_OME23890E_2025",
+      "device": "FCV-588",
+      "source_tier": "manufacturer",
+      "file": "FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf",
+      "url": "https://www.furunousa.com/-/media/sites/furuno/document_library/documents/manuals/public_manuals/fcv628_fcv588_operators_manual.pdf",
+      "type": "operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890E_2025.pdf",
+      "file_bytes": 19384609,
+      "sha256": "3003e23b9d1eda509ceb968130249fe02aa279c2efb3cf900dde54ab9d709cd3",
+      "file_timestamp_utc": "2026-10-13T12:35:34.848057+00:00",
+      "pages": 88,
+      "first_eight_pages_probe": [
+        "FCV-588",
+        "FCV-628"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "FCV588_SOFTWARE_HISTORY",
+      "device": "FCV-588",
+      "source_tier": "manufacturer",
+      "file": "FCV-588/FURUNO_FCV588_FCV628_Software_History.pdf",
+      "url": "https://www.furunousa.com/-/media/sites/furuno/software_library/software/software/fcv588-628_software_history.pdf",
+      "type": "firmware_change_history",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/FCV-588/FURUNO_FCV588_FCV628_Software_History.pdf",
+      "file_bytes": 58225,
+      "sha256": "aa0d7b9e703d26d533a88cbaedff6a1d2e90ac3dbec923ca78d45fa2953dbbe4",
+      "file_timestamp_utc": "2026-10-13T13:28:55.986244+00:00",
+      "pages": 1,
+      "first_eight_pages_probe": [
+        "FCV",
+        "628",
+        "588"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "FCV588_OPERATORS_GUIDE_MULTILINGUAL",
+      "device": "FCV-588",
+      "source_tier": "manufacturer",
+      "file": "FCV-588/FURUNO_FCV628_FCV588_Operators_Guide_Multilingual.pdf",
+      "url": "https://www.furunousa.com/-/media/sites/furuno/document_library/documents/manuals/public_manuals/fcv628_fcv588_operators_guide.pdf",
+      "type": "operator_guide",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/FCV-588/FURUNO_FCV628_FCV588_Operators_Guide_Multilingual.pdf",
+      "file_bytes": 13723882,
+      "sha256": "46336e6562c7491a5406c06ed015bf5f3177143c90c4ddba3e8f6f4cedda77b4",
+      "file_timestamp_utc": "2026-10-13T13:44:29.354345+00:00",
+      "pages": 26,
+      "first_eight_pages_probe": [],
+      "model_text_found": false
+    },
+    {
+      "id": "FCV588_BROCHURE_FURUNO_USA",
+      "device": "FCV-588",
+      "source_tier": "manufacturer",
+      "file": "FCV-588/FURUNO_FCV588_Brochure_Manufacturer_Reference.pdf",
+      "url": "https://www.furunousa.com/-/media/sites/furuno/document_library/documents/brochures/brochures/fcv588_brochure.pdf",
+      "type": "brochure_nonmanual_reference",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "downloaded",
+      "local": "sources/manuals/FCV-588/FURUNO_FCV588_Brochure_Manufacturer_Reference.pdf",
+      "file_bytes": 1635693,
+      "sha256": "2f10fab1b47cfd9019ef2d1975e295a2edbcc5ecc4c4baeaa2eab76de7855498",
+      "file_timestamp_utc": "2026-10-13T22:15:59.783223+00:00",
+      "pages": 6,
+      "first_eight_pages_probe": [
+        "FCV-588",
+        "FISH FINDER"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "FCV588_OME23890B2_2018",
+      "device": "FCV-588",
+      "source_tier": "manufacturer",
+      "file": "FCV-588/FURUNO_FCV628_FCV588_Operators_Manual_OME23890B2_2018.pdf",
+      "url": "https://www.furuno.com/files/Manual/189/upload/OME23890B2_FCV628_588.pdf",
+      "type": "historical_operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "FAILED_OR_UNVERIFIED",
+      "error": "non-PDF response"
+    },
+    {
+      "id": "FAR2127_OME35190U5_2024",
+      "device": "FAR-2127",
+      "source_tier": "manufacturer",
+      "file": "FAR-2127/FURUNO_FAR2XX7_Operators_Manual_OME35190U5_2024.pdf",
+      "url": "https://furunousa.com/-/media/sites/furuno/document_library/documents/manuals/public_manuals/far2xx7_operators_manual.pdf",
+      "type": "operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Manual_OME35190U5_2024.pdf",
+      "file_bytes": 6243423,
+      "sha256": "f6a3111610a710b0128ebd5044ae0d70b6ee924e05f3df79c34889f139fa2d69",
+      "file_timestamp_utc": "2026-10-13T12:35:45.113908+00:00",
+      "pages": 325,
+      "first_eight_pages_probe": [
+        "FAR-",
+        "RADAR"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "FAR2127_OPERATORS_GUIDE",
+      "device": "FAR-2127",
+      "source_tier": "manufacturer",
+      "file": "FAR-2127/FURUNO_FAR2XX7_Operators_Guide.pdf",
+      "url": "https://www.furunousa.com/-/media/sites/furuno/document_library/documents/manuals/public_manuals/far2xx7_operators_guide.pdf",
+      "type": "operator_guide",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/FAR-2127/FURUNO_FAR2XX7_Operators_Guide.pdf",
+      "file_bytes": 282258,
+      "sha256": "e92801f729d6773833a270f3e805bb70e6d80b1857d104255504a820859cc23f",
+      "file_timestamp_utc": "2026-10-13T12:35:47.145501+00:00",
+      "pages": 4,
+      "first_eight_pages_probe": [
+        "FAR-",
+        "RADAR"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "MDC2060_REV14",
+      "device": "MDC-2060",
+      "source_tier": "manufacturer",
+      "file": "MDC-2060/KODEN_MDC2000_Operation_Manual_Rev14.pdf",
+      "url": "https://www.koden-electronics.co.jp/wp/wp-content/uploads/2025/10/MDC-2000_OME_Rev14.pdf",
+      "type": "historical_operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev14.pdf",
+      "file_bytes": 2586521,
+      "sha256": "4c70e4bf90cdbf1497d31646128d99cd61daf71cd6ec7ded3df9312f7fa2e151",
+      "file_timestamp_utc": "2026-10-13T12:35:49.022414+00:00",
+      "pages": 86,
+      "first_eight_pages_probe": [
+        "MDC-2060",
+        "MDC-2000"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "MDC2060_REV15",
+      "device": "MDC-2060",
+      "source_tier": "manufacturer",
+      "file": "MDC-2060/KODEN_MDC2000_Operation_Manual_Rev15.pdf",
+      "url": "https://www.koden-electronics.co.jp/wp/wp-content/uploads/2025/10/MDC-2000_OME_Rev15.pdf",
+      "type": "operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/MDC-2060/KODEN_MDC2000_Operation_Manual_Rev15.pdf",
+      "file_bytes": 3451154,
+      "sha256": "b8a89b3828110a5ded06c56e49cece0a885775cb7a59fb973df1e26d5fddb6b3",
+      "file_timestamp_utc": "2026-10-13T12:35:50.838102+00:00",
+      "pages": 88,
+      "first_eight_pages_probe": [
+        "MDC-2060",
+        "MDC-2000"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "MDC2060_QUICK_REF",
+      "device": "MDC-2060",
+      "source_tier": "manufacturer",
+      "file": "MDC-2060/KODEN_MDC2000_Quick_Reference_Rev00.pdf",
+      "url": "https://www.koden-electronics.co.jp/wp/wp-content/uploads/2025/10/MDC-2000_QRE_Rev00.pdf",
+      "type": "operator_quick_reference",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/MDC-2060/KODEN_MDC2000_Quick_Reference_Rev00.pdf",
+      "file_bytes": 363308,
+      "sha256": "46c462d80a674654ce522595b19f48965b938c26e493cbbba8d027577e8404ec",
+      "file_timestamp_utc": "2026-10-13T12:35:52.009162+00:00",
+      "pages": 2,
+      "first_eight_pages_probe": [
+        "MDC-2000"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "NS4000_V2_00_009",
+      "device": "NS4000",
+      "source_tier": "third_party_mirror",
+      "file": "NS4000/TRANSAS_NS4000_4100_User_Manual_v2.00.009_MIRROR.pdf",
+      "url": "https://aratmarine.com/wp-content/uploads/NS4000_4100_ECDIS_User_Guide_eng.pdf",
+      "type": "historical_operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "already_present",
+      "local": "sources/manuals/NS4000/TRANSAS_NS4000_4100_User_Manual_v2.00.009_MIRROR.pdf",
+      "file_bytes": 19292000,
+      "sha256": "85d725891e882cd486003359eafd1fd71b11d45e07bfc104bf6f4eb653b723f9",
+      "file_timestamp_utc": "2026-10-13T12:35:57.316790+00:00",
+      "pages": 311,
+      "first_eight_pages_probe": [
+        "NAVI-SAILOR",
+        "ECDIS"
+      ],
+      "model_text_found": true
+    },
+    {
+      "id": "AIS_R5_SUPREME_FCC_OLD",
+      "device": "AIS R5 SUPREME (candidate)",
+      "source_tier": "regulatory_mirror",
+      "file": "AIS-R5-SUPREME/R5_Supreme_Operation_Manual_FCC_older.pdf",
+      "url": "https://fccid.io/QWZR5-AIS/User-Manual/Manual-1980818.pdf",
+      "type": "historical_operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "FAILED_OR_UNVERIFIED",
+      "error": "403 Client Error: Forbidden for url: https://fccid.io/QWZR5-AIS/User-Manual/Manual-1980818.pdf"
+    },
+    {
+      "id": "AIS_R5_SOLID_FCC_OLD",
+      "device": "AIS R5 SOLID (candidate)",
+      "source_tier": "regulatory_mirror",
+      "file": "AIS-R5-SOLID/R5_Solid_Operation_Manual_FCC_older.pdf",
+      "url": "https://fccid.io/QWZR5-AIS/User-Manual/manual-1791683.pdf",
+      "type": "historical_operator_manual",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "status": "FAILED_OR_UNVERIFIED",
+      "error": "403 Client Error: Forbidden for url: https://fccid.io/QWZR5-AIS/User-Manual/manual-1791683.pdf"
+    },
+    {
+      "id": "AIS_R5_SUPREME_OFFICIAL_DOC_PACKAGE",
+      "device": "AIS R5 SUPREME (candidate)",
+      "source_tier": "manufacturer",
+      "file": "AIS-R5-SUPREME/R5_SUPREME_Documentation_Package_J1.zip",
+      "href_contains": "118-362",
+      "type": "official_documentation_bundle",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "url": "https://raymarine.canto.global/direct/other/1cksd838at11v3vr3qu2dh2d55/ZXV_xujCrLpTOfEDiG9-y3TGENo/original?content-type=application%2Fzip&name=7000-118-362-j1--r5-supreme-ais-and-nav-mkii-mkiii-documentation-cd.zip",
+      "status": "already_present",
+      "local": "sources/manuals/AIS-R5-SUPREME/R5_SUPREME_Documentation_Package_J1.zip",
+      "file_bytes": 68247956,
+      "sha256": "3f4e2e088492c26a3d22f35699c5701320b2dad30b652f6e8b719119a7aed65d",
+      "file_timestamp_utc": "2026-10-13T12:36:10.010714+00:00",
+      "manual_pdfs_extracted": [
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/7000 118-300, L1, R5 Supreme AIS Transponder System Manual.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-300_L1_R5_Supreme_AIS_Transponder_System_Manual.pdf",
+          "file_bytes": 9064912,
+          "sha256": "75abb3edeffb73e57ebbffe42eb516d2a5b9763caba980d8a7c31c4bf31b8798",
+          "pages": 145,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/7000 118-383, H1,R5 Supreme Navigation System MkII-MkIII Manual.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-383_H1_R5_Supreme_Navigation_System_MkII-MkIII_Manual.pdf",
+          "file_bytes": 13112864,
+          "sha256": "c45306c2e2bbd03ebfda6f5fef1e74376683940d3668dc23eee894d7faada93f",
+          "pages": 203,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/Quick Reference Material/7000 118-363,D2,R5 SUPREME AIS Installation Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-363_D2_R5_SUPREME_AIS_Installation_Short_Instruction.pdf",
+          "file_bytes": 426817,
+          "sha256": "6b240ce585a8877a11fe8cd93259fc38d9acc26c063e196869764c52c56884c0",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/Quick Reference Material/7000 118-364,E1,R5 SUPREME AIS Operator Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-364_E1_R5_SUPREME_AIS_Operator_Short_Instruction.pdf",
+          "file_bytes": 564238,
+          "sha256": "f2f8d9e3653ec1b0a0d21a1f1841beffaadcc39443f9781fe468721b93e6290e",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/Quick Reference Material/7000 118-385 ,C1,R5 Supreme Navigation System MkII-MkIII Installation Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-385_C1_R5_Supreme_Navigation_System_MkII-MkIII_Installation_Short_Instruction.pdf",
+          "file_bytes": 997972,
+          "sha256": "78a010f27b4922702d8c3cce409249d51caf621a67059587b83ccb6194eb3480",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-362, J1, R5 SUPREME AIS and Nav MkII-MkIII Documentation CD/Manuals/Quick Reference Material/7000 118-386, C1,R5 Supreme Navigation System MkII-MkII Operator Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SUPREME/manuals_extracted/7000_118-386_C1_R5_Supreme_Navigation_System_MkII-MkII_Operator_Short_Instruction.pdf",
+          "file_bytes": 1200418,
+          "sha256": "2864dced18c4c7dbd91362738b4ac0162ae228f881bfb452a542eb7c32b11643",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        }
+      ]
+    },
+    {
+      "id": "AIS_R5_SOLID_OFFICIAL_DOC_PACKAGE",
+      "device": "AIS R5 SOLID (candidate)",
+      "source_tier": "manufacturer",
+      "file": "AIS-R5-SOLID/R5_SOLID_Documentation_Package_J1.zip",
+      "href_contains": "118-331",
+      "type": "official_documentation_bundle",
+      "rights_status": "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution",
+      "simulator_asset": false,
+      "reference_role": "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL",
+      "url": "https://raymarine.canto.global/direct/other/4vfsoins2t7jh7ggmu2qhspp27/GaNGZrmmwSel7aIwDLz5S2icEks/original?content-type=application%2Fzip&name=7000-118-331j1-r5-solid-ais-documentation-cd.zip",
+      "status": "already_present",
+      "local": "sources/manuals/AIS-R5-SOLID/R5_SOLID_Documentation_Package_J1.zip",
+      "file_bytes": 22838197,
+      "sha256": "452fdaccdf0553d87bb55437e1d6e02d9e97fb759ce05bd8500bd92a4eff44cd",
+      "file_timestamp_utc": "2026-10-13T12:36:20.298498+00:00",
+      "manual_pdfs_extracted": [
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/English/7000 118-200,N1,R5 Solid AIS Transponder System Manual.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-200_N1_R5_Solid_AIS_Transponder_System_Manual.pdf",
+          "file_bytes": 5461224,
+          "sha256": "7142605ef19d69181f4dc6c52593a56968e1620b50f2598b2784bd3112b75258",
+          "pages": 107,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/English/7000 118-205,A2,R5 SOLID Flushmount Cutout.PDF",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF",
+          "file_bytes": 25536,
+          "sha256": "ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b",
+          "pages": 1,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/English/Quick Reference Material/7000 118-201,E1,R5 Solid Installation Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-201_E1_R5_Solid_Installation_Short_Instruction.pdf",
+          "file_bytes": 520828,
+          "sha256": "c891ca7a9f905eda8b8ab2d855576cf9f31638a823af93e375b737c2a36d5ae4",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/English/Quick Reference Material/7000 118-202,E1,R5 Solid Operator Short Instruction.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-202_E1_R5_Solid_Operator_Short_Instruction.pdf",
+          "file_bytes": 597707,
+          "sha256": "a66f0082f5a5df577434b6b8ba7bf223659df63c111b8c0d72d21c783f948918",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/German/7000 118-200,N1,R5 Solid AIS Transponder System Manual-DE.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-200_N1_R5_Solid_AIS_Transponder_System_Manual-DE.pdf",
+          "file_bytes": 5664856,
+          "sha256": "d4810cb85f9659c6456728704607619668e80f7f1fcb3922f8f39717c7937821",
+          "pages": 110,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/German/7000 118-205,A2,R5 SOLID Flushmount Cutout.PDF",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF",
+          "file_bytes": 25536,
+          "sha256": "ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b",
+          "pages": 1,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/German/Quick Reference Material/7000 118-201,E1,R5 Solid Installation Short Instruction-DE.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-201_E1_R5_Solid_Installation_Short_Instruction-DE.pdf",
+          "file_bytes": 593360,
+          "sha256": "3abd8bdfd77d5ed380988378586a1487af4f891bc92fedb9e6712ed72989eecd",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        },
+        {
+          "original_zip_path": "7000 118-331,J1, R5 SOLID AIS Documentation CD/Manuals/German/Quick Reference Material/7000 118-202,E1,R5 Solid Operator Short Instruction-DE.pdf",
+          "status": "already_present",
+          "local": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-202_E1_R5_Solid_Operator_Short_Instruction-DE.pdf",
+          "file_bytes": 807968,
+          "sha256": "5fd654eb6a7dbd9e0b047b1d7882772090a7c6f9fc0675bed2753b0a2d4ad522",
+          "pages": 4,
+          "first_eight_pages_probe": [],
+          "model_text_found": false
+        }
+      ]
+    }
+  ]
+}

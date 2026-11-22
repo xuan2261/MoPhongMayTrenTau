@@ -1,0 +1,3893 @@
+{
+  "schema": "FCV588_P15_CHROME_MODE_GEOMETRY_V1",
+  "scope": "BOUNDED_SYNTHETIC_NO_OEM_PIXEL_CLAIM",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "testOwnedPort": 4216,
+  "screenshots": [
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV1_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV1_375x812_20261116.png",
+      "sha256": "9cf923c56f7fd5ddcc35e0d598419921ff28df38391e115e0acd02a3a4ed851e",
+      "bytes": 61741,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_NAV1"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_ZOOM_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_375x812_20261116.png",
+      "sha256": "a718991e284551f86491f4f1da4a749633b158773a52bc8aeb4e2341120262a7",
+      "bytes": 70254,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_LF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_375x812_20261116.png",
+      "sha256": "840e045b21617ca0747109e6f2cce86466429ae88639e3d15cff3c4ea97b3f55",
+      "bytes": 67507,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_LF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_DUAL_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_DUAL_375x812_20261116.png",
+      "sha256": "202954db313dd3eaf327e8c469d677aebe8d0dcda95a049bdf14cf2f87edd81c",
+      "bytes": 67588,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_DUAL"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_375x812_20261116.png",
+      "sha256": "a27b8476449b8e7a181cfb5d0bcfda647b7edb0bfbb8b62dafd8f683de3fb95e",
+      "bytes": 62033,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_HF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_ZOOM_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_375x812_20261116.png",
+      "sha256": "e01161eb47af0204c1ef1be141088d49d71972116dc646eb6ded2e71a58161ac",
+      "bytes": 67021,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_HF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV2_375x812_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV2_375x812_20261116.png",
+      "sha256": "a40cc1f77d0e0dd2f01160007c1edcf865cec8f3eeaf0d22b5d0d2624d95b55b",
+      "bytes": 64153,
+      "viewport": [
+        375,
+        812
+      ],
+      "label": "MODE_NAV2"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV1_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV1_1366x768_20261116.png",
+      "sha256": "7dee61b668aa79e777d3555aca8c22eee31cbc4557ac361f8c4e569126130ced",
+      "bytes": 125326,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_NAV1"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1366x768_20261116.png",
+      "sha256": "12249875751b4d3c8a41f1db28249db7d62f3c9f04c4b4af17d362cfc3bc9c7d",
+      "bytes": 137318,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_LF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_1366x768_20261116.png",
+      "sha256": "8f8a67588c1ca1e7ff0662d563502dafdd4177ac13368a0f2fe1844861664781",
+      "bytes": 131077,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_LF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_DUAL_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_DUAL_1366x768_20261116.png",
+      "sha256": "fac9cf0b8d5bfba55f5f30d66f555c5f47f453f7dd9b0d2ca0a582c0718bf138",
+      "bytes": 132363,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_DUAL"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_1366x768_20261116.png",
+      "sha256": "9713d35e1ba092fc92ea5098aac9b7326cec36dd558a94018868b04cbf24537c",
+      "bytes": 124687,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_HF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1366x768_20261116.png",
+      "sha256": "32087d146d6743e0b2b077d67c57d957ea6211335687aaccb5b1bdc293f2ff66",
+      "bytes": 132638,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_HF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV2_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV2_1366x768_20261116.png",
+      "sha256": "7b966628eac0f60b7b1d44fb0dc98c25cf05ddff49abb144b74d4cbed83f301b",
+      "bytes": 128810,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "MODE_NAV2"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV1_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV1_1920x1080_20261116.png",
+      "sha256": "a5e80e3a817a7d73dc550bd93b27baa14babad2ff3bf994bbfe39f5af51fd245",
+      "bytes": 125155,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_NAV1"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_ZOOM_1920x1080_20261116.png",
+      "sha256": "7c948246abb69d0563fd692acdf284adb381c6b23d80c74b9e75ac656b703db8",
+      "bytes": 137983,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_LF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_LF_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_LF_1920x1080_20261116.png",
+      "sha256": "afdd751717557f92ade5c4af256da56e2ab09ae2f1098838d124dffe5fddc029",
+      "bytes": 131802,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_LF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_DUAL_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_DUAL_1920x1080_20261116.png",
+      "sha256": "846a69b2c50ed687ab18cb0315009ee4102df1de05046d2a566ad4b6e6b1c978",
+      "bytes": 132668,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_DUAL"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_1920x1080_20261116.png",
+      "sha256": "aed3b27d8781fc8ce7864f1eede96ab59e6f29b63e894fe46fd596d44c4c32d5",
+      "bytes": 125128,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_HF"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_HF_ZOOM_1920x1080_20261116.png",
+      "sha256": "22db42bae320cac60a95818331f19387a03f11a6c5a185e19b4f9d343e75d008",
+      "bytes": 133073,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_HF_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_MODE_NAV2_1920x1080_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_MODE_NAV2_1920x1080_20261116.png",
+      "sha256": "26ca9e5fa3facc08dbf455b286e5167391918c67aa114b82ac09921101d46a57",
+      "bytes": 129022,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "label": "MODE_NAV2"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_ZOOM_BOTTOM_LOCK_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_ZOOM_BOTTOM_LOCK_1366x768_20261116.png",
+      "sha256": "149d30891eb26c6b6339836b6c4454896144246305ff906ad3eb9666f1f571e6",
+      "bytes": 133360,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "ZOOM_BOTTOM_LOCK"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_ZOOM_BOTTOM_ZOOM_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_ZOOM_BOTTOM_ZOOM_1366x768_20261116.png",
+      "sha256": "923cae90ffe48cd5f6769e5ac9e72a3c2536051313631fe422e97f66292c434e",
+      "bytes": 138032,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "ZOOM_BOTTOM_ZOOM"
+    },
+    {
+      "file": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261116\\p15\\P15_CANONICAL_SEALV2_ZOOM_MARKER_ZOOM_1366x768_20261116.png",
+      "name": "P15_CANONICAL_SEALV2_ZOOM_MARKER_ZOOM_1366x768_20261116.png",
+      "sha256": "80b9678fba94fc5945f0ab12e87c80dfaed68d6ab2635ac3935da8705d9b0d41",
+      "bytes": 131675,
+      "viewport": [
+        1366,
+        768
+      ],
+      "label": "ZOOM_MARKER_ZOOM"
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "geometry": {
+        "frame": {
+          "x": 9,
+          "y": -1148.125,
+          "width": 357,
+          "height": 1134.172
+        },
+        "equipment": {
+          "x": 20,
+          "y": -1135.125,
+          "width": 335,
+          "height": 1108.172
+        },
+        "lcd": {
+          "x": 25,
+          "y": -1114.125,
+          "width": 325,
+          "height": 434.172
+        },
+        "housing": {
+          "x": 20,
+          "y": -1135.125,
+          "width": 335,
+          "height": 460.172
+        },
+        "controls": {
+          "x": 20,
+          "y": -662.953,
+          "width": 335,
+          "height": 636
+        },
+        "mobileTrainingNoteVisible": true,
+        "horizontalScrollPx": 0,
+        "canvasWidth": "480",
+        "canvasHeight": "640"
+      },
+      "modes": [
+        {
+          "mode": "NAV1",
+          "observed": "NAV1",
+          "header": "",
+          "screenshotSHA256": "9cf923c56f7fd5ddcc35e0d598419921ff28df38391e115e0acd02a3a4ed851e"
+        },
+        {
+          "mode": "LF-ZOOM",
+          "observed": "LF-ZOOM",
+          "header": "AUTO_R G:AF BZ-LF x1",
+          "screenshotSHA256": "a718991e284551f86491f4f1da4a749633b158773a52bc8aeb4e2341120262a7"
+        },
+        {
+          "mode": "LF",
+          "observed": "LF",
+          "header": "AUTO_R G:AF LF x1",
+          "screenshotSHA256": "840e045b21617ca0747109e6f2cce86466429ae88639e3d15cff3c4ea97b3f55"
+        },
+        {
+          "mode": "DUAL",
+          "observed": "DUAL",
+          "header": "AUTO_R G:AF LF/HF x1",
+          "screenshotSHA256": "202954db313dd3eaf327e8c469d677aebe8d0dcda95a049bdf14cf2f87edd81c"
+        },
+        {
+          "mode": "HF",
+          "observed": "HF",
+          "header": "AUTO_R G:AF HF x1",
+          "screenshotSHA256": "a27b8476449b8e7a181cfb5d0bcfda647b7edb0bfbb8b62dafd8f683de3fb95e"
+        },
+        {
+          "mode": "HF-ZOOM",
+          "observed": "HF-ZOOM",
+          "header": "AUTO_R G:AF BZ-HF x1",
+          "screenshotSHA256": "e01161eb47af0204c1ef1be141088d49d71972116dc646eb6ded2e71a58161ac"
+        },
+        {
+          "mode": "NAV2",
+          "observed": "NAV2",
+          "header": "",
+          "screenshotSHA256": "a40cc1f77d0e0dd2f01160007c1edcf865cec8f3eeaf0d22b5d0d2624d95b55b"
+        }
+      ],
+      "sourceCount": 39
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "geometry": {
+        "frame": {
+          "x": 175.5,
+          "y": 209.578,
+          "width": 680,
+          "height": 787.969
+        },
+        "equipment": {
+          "x": 175.5,
+          "y": 209.578,
+          "width": 680,
+          "height": 680
+        },
+        "lcd": {
+          "x": 226.344,
+          "y": 282.922,
+          "width": 377.297,
+          "height": 504.031
+        },
+        "housing": {
+          "x": 217.344,
+          "y": 257.922,
+          "width": 395.297,
+          "height": 538.031
+        },
+        "controls": {
+          "x": 669.594,
+          "y": 251.25,
+          "width": 140.688,
+          "height": 586.984
+        },
+        "mobileTrainingNoteVisible": false,
+        "horizontalScrollPx": 0,
+        "canvasWidth": "480",
+        "canvasHeight": "640"
+      },
+      "modes": [
+        {
+          "mode": "NAV1",
+          "observed": "NAV1",
+          "header": "",
+          "screenshotSHA256": "7dee61b668aa79e777d3555aca8c22eee31cbc4557ac361f8c4e569126130ced"
+        },
+        {
+          "mode": "LF-ZOOM",
+          "observed": "LF-ZOOM",
+          "header": "AUTO_R G:AF BZ-LF x1",
+          "screenshotSHA256": "12249875751b4d3c8a41f1db28249db7d62f3c9f04c4b4af17d362cfc3bc9c7d"
+        },
+        {
+          "mode": "LF",
+          "observed": "LF",
+          "header": "AUTO_R G:AF LF x1",
+          "screenshotSHA256": "8f8a67588c1ca1e7ff0662d563502dafdd4177ac13368a0f2fe1844861664781"
+        },
+        {
+          "mode": "DUAL",
+          "observed": "DUAL",
+          "header": "AUTO_R G:AF LF/HF x1",
+          "screenshotSHA256": "fac9cf0b8d5bfba55f5f30d66f555c5f47f453f7dd9b0d2ca0a582c0718bf138"
+        },
+        {
+          "mode": "HF",
+          "observed": "HF",
+          "header": "AUTO_R G:AF HF x1",
+          "screenshotSHA256": "9713d35e1ba092fc92ea5098aac9b7326cec36dd558a94018868b04cbf24537c"
+        },
+        {
+          "mode": "HF-ZOOM",
+          "observed": "HF-ZOOM",
+          "header": "AUTO_R G:AF BZ-HF x1",
+          "screenshotSHA256": "32087d146d6743e0b2b077d67c57d957ea6211335687aaccb5b1bdc293f2ff66"
+        },
+        {
+          "mode": "NAV2",
+          "observed": "NAV2",
+          "header": "",
+          "screenshotSHA256": "7b966628eac0f60b7b1d44fb0dc98c25cf05ddff49abb144b74d4cbed83f301b"
+        }
+      ],
+      "sourceCount": 39
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "geometry": {
+        "frame": {
+          "x": 452.5,
+          "y": 243.578,
+          "width": 680,
+          "height": 787.969
+        },
+        "equipment": {
+          "x": 452.5,
+          "y": 243.578,
+          "width": 680,
+          "height": 680
+        },
+        "lcd": {
+          "x": 503.344,
+          "y": 316.922,
+          "width": 377.297,
+          "height": 504.031
+        },
+        "housing": {
+          "x": 494.344,
+          "y": 291.922,
+          "width": 395.297,
+          "height": 538.031
+        },
+        "controls": {
+          "x": 946.594,
+          "y": 285.25,
+          "width": 140.688,
+          "height": 586.984
+        },
+        "mobileTrainingNoteVisible": false,
+        "horizontalScrollPx": 0,
+        "canvasWidth": "480",
+        "canvasHeight": "640"
+      },
+      "modes": [
+        {
+          "mode": "NAV1",
+          "observed": "NAV1",
+          "header": "",
+          "screenshotSHA256": "a5e80e3a817a7d73dc550bd93b27baa14babad2ff3bf994bbfe39f5af51fd245"
+        },
+        {
+          "mode": "LF-ZOOM",
+          "observed": "LF-ZOOM",
+          "header": "AUTO_R G:AF BZ-LF x1",
+          "screenshotSHA256": "7c948246abb69d0563fd692acdf284adb381c6b23d80c74b9e75ac656b703db8"
+        },
+        {
+          "mode": "LF",
+          "observed": "LF",
+          "header": "AUTO_R G:AF LF x1",
+          "screenshotSHA256": "afdd751717557f92ade5c4af256da56e2ab09ae2f1098838d124dffe5fddc029"
+        },
+        {
+          "mode": "DUAL",
+          "observed": "DUAL",
+          "header": "AUTO_R G:AF LF/HF x1",
+          "screenshotSHA256": "846a69b2c50ed687ab18cb0315009ee4102df1de05046d2a566ad4b6e6b1c978"
+        },
+        {
+          "mode": "HF",
+          "observed": "HF",
+          "header": "AUTO_R G:AF HF x1",
+          "screenshotSHA256": "aed3b27d8781fc8ce7864f1eede96ab59e6f29b63e894fe46fd596d44c4c32d5"
+        },
+        {
+          "mode": "HF-ZOOM",
+          "observed": "HF-ZOOM",
+          "header": "AUTO_R G:AF BZ-HF x1",
+          "screenshotSHA256": "22db42bae320cac60a95818331f19387a03f11a6c5a185e19b4f9d343e75d008"
+        },
+        {
+          "mode": "NAV2",
+          "observed": "NAV2",
+          "header": "",
+          "screenshotSHA256": "26ca9e5fa3facc08dbf455b286e5167391918c67aa114b82ac09921101d46a57"
+        }
+      ],
+      "sourceCount": 39
+    }
+  ],
+  "zoomCases": [
+    {
+      "zoomMode": "Bottom Lock",
+      "header": "AUTO_R G:AF BL-LF x1",
+      "screenshotSha": "149d30891eb26c6b6339836b6c4454896144246305ff906ad3eb9666f1f571e6"
+    },
+    {
+      "zoomMode": "Bottom Zoom",
+      "header": "AUTO_R G:AF BZ-LF x1",
+      "screenshotSha": "923cae90ffe48cd5f6769e5ac9e72a3c2536051313631fe422e97f66292c434e"
+    },
+    {
+      "zoomMode": "Marker Zoom",
+      "header": "AUTO_R G:AF MZ-LF x1",
+      "screenshotSha": "80b9678fba94fc5945f0ab12e87c80dfaed68d6ab2635ac3935da8705d9b0d41"
+    }
+  ],
+  "checks": [
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) physical DOM geometry exists",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) logical LCD canvas 480x640",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD screen design ratio 128:171",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) no unintended horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mobile non-OEM teaching-layout warning remains visible",
+      "pass": true
+    },
+    {
+      "name": "mode LF->NAV1 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity NAV1",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in NAV1",
+      "pass": true
+    },
+    {
+      "name": "mode NAV1->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode LF-ZOOM->LF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity LF",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in LF",
+      "pass": true
+    },
+    {
+      "name": "mode LF->DUAL commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity DUAL",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in DUAL",
+      "pass": true
+    },
+    {
+      "name": "mode DUAL->HF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity HF",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in HF",
+      "pass": true
+    },
+    {
+      "name": "mode HF->HF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode HF-ZOOM->NAV2 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) mode identity NAV2",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) LCD shows display in NAV2",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) seven modes yield distinct real display captures",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) exact preimage import URL set and HTTP SHA 39 match",
+      "pass": true
+    },
+    {
+      "name": "(375, 812) no external requests or JS exceptions",
+      "pass": true
+    },
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) physical DOM geometry exists",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) logical LCD canvas 480x640",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD screen design ratio 128:171",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) no unintended horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) desktop right controls do not overlap LCD housing",
+      "pass": true
+    },
+    {
+      "name": "mode LF->NAV1 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity NAV1",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in NAV1",
+      "pass": true
+    },
+    {
+      "name": "mode NAV1->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode LF-ZOOM->LF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity LF",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in LF",
+      "pass": true
+    },
+    {
+      "name": "mode LF->DUAL commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity DUAL",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in DUAL",
+      "pass": true
+    },
+    {
+      "name": "mode DUAL->HF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity HF",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in HF",
+      "pass": true
+    },
+    {
+      "name": "mode HF->HF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode HF-ZOOM->NAV2 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) mode identity NAV2",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) LCD shows display in NAV2",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) seven modes yield distinct real display captures",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) exact preimage import URL set and HTTP SHA 39 match",
+      "pass": true
+    },
+    {
+      "name": "(1366, 768) no external requests or JS exceptions",
+      "pass": true
+    },
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) physical DOM geometry exists",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) logical LCD canvas 480x640",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD screen design ratio 128:171",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) no unintended horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) desktop right controls do not overlap LCD housing",
+      "pass": true
+    },
+    {
+      "name": "mode LF->NAV1 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity NAV1",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in NAV1",
+      "pass": true
+    },
+    {
+      "name": "mode NAV1->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in LF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode LF-ZOOM->LF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity LF",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in LF",
+      "pass": true
+    },
+    {
+      "name": "mode LF->DUAL commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity DUAL",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in DUAL",
+      "pass": true
+    },
+    {
+      "name": "mode DUAL->HF commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity HF",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in HF",
+      "pass": true
+    },
+    {
+      "name": "mode HF->HF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in HF-ZOOM",
+      "pass": true
+    },
+    {
+      "name": "mode HF-ZOOM->NAV2 commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) mode identity NAV2",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) LCD shows display in NAV2",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) seven modes yield distinct real display captures",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) exact preimage import URL set and HTTP SHA 39 match",
+      "pass": true
+    },
+    {
+      "name": "(1920, 1080) no external requests or JS exceptions",
+      "pass": true
+    },
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "mode LF->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "zoom Bottom Lock LCD header BL-LF, no invented zoom label",
+      "pass": true
+    },
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "mode LF->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "zoom Bottom Zoom LCD header BZ-LF, no invented zoom label",
+      "pass": true
+    },
+    {
+      "name": "boot turns on synthetic training session",
+      "pass": true
+    },
+    {
+      "name": "mode LF->LF-ZOOM commits after UI timeout",
+      "pass": true
+    },
+    {
+      "name": "zoom Marker Zoom LCD header MZ-LF, no invented zoom label",
+      "pass": true
+    },
+    {
+      "name": "three zoom types visibly distinct",
+      "pass": true
+    },
+    {
+      "name": "zoom HTTP source bodies 156 exact",
+      "pass": true
+    },
+    {
+      "name": "eight OEM JPEG routes rejected as REFERENCE_ONLY",
+      "pass": true
+    },
+    {
+      "name": "only test-owned server 4216 cleaned",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "httpBodies": [
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/styles.css",
+      "httpStatus": 200,
+      "hash": "ce699bc88586fc0b883ba357661cda4ccb414069127d6ec23aa81a4300d6afeb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/",
+      "httpStatus": 200,
+      "hash": "6918d1b5e587034c5253977dd42dec87e8e47ae604bd26388b7389846cc74847",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/app.mjs",
+      "httpStatus": 200,
+      "hash": "59f2b0bea8e53097ca8302622557b3e5c53c661c7bf95d9ead62e179f2c60bb1",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/scenario.mjs",
+      "httpStatus": 200,
+      "hash": "986c0331fda7f2ee08d773241c929ec8b894645f515639a9bbd547e44117c63a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-widgets.mjs",
+      "httpStatus": 200,
+      "hash": "ccb359d5da28add43a8c871824fc449f908a42d63ca8a75d027053fc13ab4344",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-layout.mjs",
+      "httpStatus": 200,
+      "hash": "92c4c5fb6bb0d1f31e1c501bd112cebc6ea5c73453a8b6c519c0dccdc7652aed",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/adapter.mjs",
+      "httpStatus": 200,
+      "hash": "44187439f9365750896f47afae907296098fd6203f54e3ef4dc8bed9ef2b2309",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/receiver-status.mjs",
+      "httpStatus": 200,
+      "hash": "d0b4712c974d5b253d1ceb473ff91a9eb0fde5c731be66e5bfb427debd025513",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/navigation.mjs",
+      "httpStatus": 200,
+      "hash": "e2e91c0d1fb34eb9fb597f5870e75e73d3f35f8a8303eabae61859cf4aeccffa",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/calibration.mjs",
+      "httpStatus": 200,
+      "hash": "b62432a2ef05aee299d1bc95645b55377f6a424009dd1e701a60fc4901b13d06",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/session.mjs",
+      "httpStatus": 200,
+      "hash": "39783a274572af83ee382ad2d0caea94ecd968cf98377c3b9300f179fabdaa44",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/echo-projection.mjs",
+      "httpStatus": 200,
+      "hash": "0d1eee3ffaf48d94657f7bc127d83bc506ced721149988cf516550ddf6c9098b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas.mjs",
+      "httpStatus": 200,
+      "hash": "e2ba214cf81aa739452dc1ecd0ddfdcc7fad7814478a2d5e27e6925eda945aca",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/tankenmaru-status.mjs",
+      "httpStatus": 200,
+      "hash": "3777226a68e79b659661c66ca95a750e5457a0289afb8ff8f86190e9d8fc4491",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/model.mjs",
+      "httpStatus": 200,
+      "hash": "fdbf94e57e86928c6a6b68f6d012a37c50a62aac1ad1d4752340a0e28ea250a9",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/training-faults.mjs",
+      "httpStatus": 200,
+      "hash": "df3b5bc150c020676611c956fcf73ebe1a95e603a460cb03ecc07d31254c51e7",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/units.mjs",
+      "httpStatus": 200,
+      "hash": "287cab7b52fc296d64af41bed1601e65ef232e9890bdf0d3b554ed7ab4bf5f21",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-echo-rasterizer.mjs",
+      "httpStatus": 200,
+      "hash": "61a7be90bdc963586d405905b803d6abfcf08352a7ee7875b31166fce1bda699",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/display-palette.mjs",
+      "httpStatus": 200,
+      "hash": "89caf56d92b04eb173d01f769dc0ebbea07941191ba92404e75bbc6b292e6411",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/hold-input.mjs",
+      "httpStatus": 200,
+      "hash": "2d2f13800e77f1b01eadf3808c935d4bc0f3b78cf24f42aeb5cf14275de2d086",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/pad-repeat.mjs",
+      "httpStatus": 200,
+      "hash": "92b6ee102910dfb9f17430a0691b6f365412ddbe879ad2ed28508616f86568ad",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/rotary-input.mjs",
+      "httpStatus": 200,
+      "hash": "cb314d842ce046137892c66b5799b3b852786b33ceb354032511949c9be01ddc",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/key-feedback.mjs",
+      "httpStatus": 200,
+      "hash": "16f8431b1edaa4fe8e85a88e58b17dfa8f88b2fb14d5c8697b90a1a61a96294b",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/lessons.mjs",
+      "httpStatus": 200,
+      "hash": "bd7448afdf5e8dfa94c07fad96403abf55549f65f7225f13512af61dba96479f",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/settings.mjs",
+      "httpStatus": 200,
+      "hash": "705ed5380dbce9357380d0416edf1e137d896943479eeaf516048b6c7a1f117a",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/keyboard-shortcuts.mjs",
+      "httpStatus": 200,
+      "hash": "f80cb8558844703fa9ac0e9b4a4cf29a558164d3f738e083f36b9aa644052ddb",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/instructor-tabs.mjs",
+      "httpStatus": 200,
+      "hash": "0cb956f9b940f619468c3cf6c31e8d4fcad1758054c35ac1df839c2da26b5800",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-config-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "0dec36503c37bd3e3c672ce7e71586e58cafdaae2a86a8fd591632141da04e38",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-control-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "a03cd467b8809ac2f67bc4eed6146c9eb113c1dbbbe1d73493d68e8491c73675",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-presentation.mjs",
+      "httpStatus": 200,
+      "hash": "7bb97c1bc7d2ad6e57f8b8fb04ded916d0e1f575da4918645aeb038f171b98c6",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/fcv588-training-source-matrix.mjs",
+      "httpStatus": 200,
+      "hash": "a8d7365010e1aea19d533714d1fdf15e2fa8ff02e4ab95af5a218b60c46bbc07",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/core/protocol.mjs",
+      "httpStatus": 200,
+      "hash": "2f3294d0f3ad4bed5e85b6ee5e4328afaf2d8acc62d3112496de9a84876bf3d4",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/lcd-instructor-meta.mjs",
+      "httpStatus": 200,
+      "hash": "d6edb36224ec4f3fdf65b5f9d7421330c10b999b03cb662cc4f20538408c4fcd",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/alarms.mjs",
+      "httpStatus": 200,
+      "hash": "02a053d97ed6276c9d06cde4e269f722ff48cfbcdb4437e225ea420b3c95c648",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/profile-version.mjs",
+      "httpStatus": 200,
+      "hash": "a8a2650964bd6560c43ec7b3290a298e4a19d78169847e5a41adca7960345056",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/menu-atlas-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "958c0c9c0066fe5795d0ac47ac15b2e9f9f2a04c1f17491a82e0ba3dc422742c",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/src/devices/fcv588/capabilities-profile21.mjs",
+      "httpStatus": 200,
+      "hash": "589ff3e711277468465e4cbe45943be234be767a85ed4dfd5539a52a9b7182db",
+      "match": true
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "zoomSession": true,
+      "path": "/web/favicon.svg",
+      "httpStatus": 200,
+      "hash": "95d0393366850aacf989aa019484f558f1e6f3987b70fe26385c561b4ed7047a",
+      "match": true
+    }
+  ],
+  "jpegRoutes": [
+    {
+      "image": "dual.jpg",
+      "status": 404
+    },
+    {
+      "image": "giaoDien.jpg",
+      "status": 404
+    },
+    {
+      "image": "hf.jpg",
+      "status": 404
+    },
+    {
+      "image": "lf.jpg",
+      "status": 404
+    },
+    {
+      "image": "nav1.jpg",
+      "status": 404
+    },
+    {
+      "image": "nav2.jpg",
+      "status": 404
+    },
+    {
+      "image": "zoom.jpg",
+      "status": 404
+    },
+    {
+      "image": "zoom2.jpg",
+      "status": 404
+    }
+  ],
+  "pageErrors": [],
+  "networkExternal": [],
+  "ownedServerPid": 30108,
+  "ownedServerExited": true
+}

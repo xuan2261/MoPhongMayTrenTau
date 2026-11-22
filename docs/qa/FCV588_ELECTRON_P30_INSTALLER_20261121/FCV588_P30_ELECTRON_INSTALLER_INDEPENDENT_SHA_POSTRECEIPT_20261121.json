@@ -1,0 +1,51 @@
+{
+  "schema": "FCV588_P30_INDEPENDENT_POWERSHELL_SHA_POSTRECEIPT_V1",
+  "status": "PASS",
+  "checks": {
+    "P28_FINAL": {
+      "sha256": "313c323db96f706de07bd28cf3832d19cdcdb0ce7dc41baad0d726e09a27ca95",
+      "bytes": 12091
+    },
+    "P28_POST": {
+      "sha256": "bb533ff8a36084c579fa33a24a18b914ae61930cf14d0634dc46e10523c24bed",
+      "bytes": 1422
+    },
+    "P29_FINAL": {
+      "sha256": "3af7f84251e8c838d8db188f521f9b7592eced42a3cd21090e8e878dfccf420c",
+      "bytes": 3382
+    },
+    "P29_POST": {
+      "sha256": "d63cb400bb7633ac42ee76156af8669c4b967dc8d812cb06769faff4de25e81e",
+      "bytes": 1325
+    },
+    "P30_REPORT": {
+      "sha256": "a436558e8e4a4fe429a763036cd4356c2b5cc55aac7d3eb5e4ff1e7d34b6abea",
+      "bytes": 3761
+    },
+    "P30_FINAL": {
+      "sha256": "d3c8d4a1f1be4bb6ee24aa4ad1021e5fa93163b34bfd1bac7c55d0098f694cd2",
+      "bytes": 5068
+    },
+    "P30_INSTALLER": {
+      "sha256": "a09c0dbdf33231ee005beb8960c9ef243ec45415c6f8d1a11514394c4c04c982",
+      "bytes": 121310396
+    },
+    "P30_EXE": {
+      "sha256": "8db6a2dbe8b6f419a9a21acc5e3fab281585257bde313b940f0a0afd6bacf6c9",
+      "bytes": 249978880
+    },
+    "P30_ASAR": {
+      "sha256": "dbed2ac3ac0a1a4d5620c29cdf474d95e4dbd33b7040746dc3474010b00fccb0",
+      "bytes": 510112
+    }
+  },
+  "installerSignature": "NotSigned",
+  "appSignature": "NotSigned",
+  "server4173PID": [
+    1204
+  ],
+  "fcv588LiveProcessCount": 0,
+  "releaseApproval": "HOLD",
+  "installerExecuted": false,
+  "airgappedVMValidated": false
+}

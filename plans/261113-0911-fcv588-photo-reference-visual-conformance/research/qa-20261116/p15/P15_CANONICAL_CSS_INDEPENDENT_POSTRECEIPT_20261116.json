@@ -1,0 +1,30 @@
+{
+  "schema": "P15_INDEPENDENT_POSTRECEIPT_V1",
+  "status": "PASS",
+  "finalIntegrityFile": "P15_CANONICAL_CSS_FINAL_INTEGRITY_V3_20261116.json",
+  "finalIntegritySHA256": "f6286b9bdcae782ccf0aab1c129cff0e55ef6c8f63c66b58303a1429ed77259b",
+  "runtimeSHA256Exact": 50,
+  "originalOEMPhotoExact": 8,
+  "qaArtifactsExact": 13,
+  "canonicalChromeScreenshotsExact": 24,
+  "httpLoadedBodyExact": 273,
+  "nodePass": 579,
+  "pythonPass": 13,
+  "chromeModePass": 103,
+  "menuPass": 10,
+  "sockets": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 4173,
+      "OwningProcess": 1204
+    }
+  ],
+  "pendingNative": [
+    "Narrator actual speech",
+    "NVDA",
+    "Windows High Contrast",
+    "native POWER window.blur cancellation"
+  ],
+  "firmwareHardwareOEMRightsRelease": "HOLD",
+  "errors": []
+}

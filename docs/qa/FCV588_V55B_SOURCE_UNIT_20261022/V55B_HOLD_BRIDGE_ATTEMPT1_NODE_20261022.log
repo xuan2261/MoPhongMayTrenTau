@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: V55-B UNIT: simulated blur during POWER hold cancels exactly once and replays
+ok 1 - V55-B UNIT: simulated blur during POWER hold cancels exactly once and replays
+  ---
+  duration_ms: 15.3177
+  type: 'test'
+  ...
+# Subtest: V55-B UNIT: blur restores prior BRILL overlay and does not double-cancel
+ok 2 - V55-B UNIT: blur restores prior BRILL overlay and does not double-cancel
+  ---
+  duration_ms: 7.6347
+  type: 'test'
+  ...
+# Subtest: V55-B UNIT: button focus loss before document keyup is a single cancel
+ok 3 - V55-B UNIT: button focus loss before document keyup is a single cancel
+  ---
+  duration_ms: 5.3556
+  type: 'test'
+  ...
+# Subtest: V55-B UNIT: simulated assistive native activation is one replayable short pair
+ok 4 - V55-B UNIT: simulated assistive native activation is one replayable short pair
+  ---
+  duration_ms: 3.6151
+  type: 'test'
+  ...
+# Subtest: V55-B UNIT: non-cancelled >3000ms pointer hold powers down and replays
+ok 5 - V55-B UNIT: non-cancelled >3000ms pointer hold powers down and replays
+  ---
+  duration_ms: 3.783
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 173.8469

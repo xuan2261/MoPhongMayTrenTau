@@ -1,0 +1,55 @@
+{
+  "checkedAtUtc": "2026-10-18T04:40:20.6853832Z",
+  "status": "V35_POSTDOCUMENT_RUNTIME_AND_EVIDENCE_SHA_MATCH",
+  "scope": "PUBLIC_REFERENCE_FCV588_V35_DOCS_READBACK_ONLY",
+  "runtimeShaMatches": 37,
+  "documentsVerified": 8,
+  "postdocumentNodePassed": 442,
+  "browserChecksVerified": 450,
+  "chromeScreenshotsShaVerified": 100,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "sourceDocs": [
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md",
+      "bytes": 30804,
+      "sha256": "2e8a7d8af74602876b81663746b7a48152cb644485becb2765555e65db5eb5f8"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/phase-02-physical-panel-and-controls.md",
+      "bytes": 12775,
+      "sha256": "f26619e01f5d34bed59264a5f704726375f5298c6b3e3fea7285a7459adabcc1"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v35-integrated-c11-d09-d14-source-matrix.md",
+      "bytes": 6148,
+      "sha256": "8b1b0450407f7aa777e124841d8c43edc3d41fa46d9ca061c21cac36bc0abd1b"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v35-gpt6-supervision-integration.md",
+      "bytes": 4205,
+      "sha256": "8d2fa3dba322f2c2c7e4dba41a45536fdb523844b287b6c3cd1dc725952ef12e"
+    },
+    {
+      "path": "plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/reports/2026-10-18-v35-final-integrity-checker-counsel.md",
+      "bytes": 1669,
+      "sha256": "b954c448470532cdd1b5d5a7fa86190e65957ad063a7c6531084b8a1309e849f"
+    },
+    {
+      "path": "staging/fcv588-v35-c11-d09-d14-instructor/README.md",
+      "bytes": 2226,
+      "sha256": "cd281cc870cd5d224ca33ec17f5a98c3104c172509ffb4f21416c84df71204de"
+    },
+    {
+      "path": "docs/qa/FCV588_V35_FINAL_INTEGRITY_20261018.json",
+      "bytes": 6230,
+      "sha256": "d1fe1a1ccfe686bf77432e41edf857c19e4bceac530ef2eb372721119dc06b9d"
+    },
+    {
+      "path": "docs/qa/FCV588_V35_POSTDOCUMENT_FULL_NODE_20261018.log",
+      "bytes": 106170,
+      "sha256": "40f0b64960c629aba6303aec4389a806e581e63c5396d3170cf55bb9bedd3487"
+    }
+  ],
+  "finalIntegritySha256": "d1fe1a1ccfe686bf77432e41edf857c19e4bceac530ef2eb372721119dc06b9d"
+}

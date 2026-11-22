@@ -1,0 +1,48 @@
+{
+  "timestampUtc": "2026-11-14T02:43:25.291399+00:00",
+  "status": "PREIMAGE_GUARD_AND_STAGE_QA_MATCH",
+  "canonicalRoot": "C:\\Work\\MoPhongMayTrenTau",
+  "stageRoot": "C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-photo-visual-20261114",
+  "parentV57CurrentSealSHA256": "aaa6c3b37b106e5828fac430bdfb94472a27ab8497f0828deacce305b4cf99dc",
+  "newV57ReconciliationSHA256": "657eec86ce11445256fb042d53a851b89c476cd9c64aa78c46dc5f0c788ea17a",
+  "stageBrowserReceiptPath": "C:\\Work\\MoPhongMayTrenTau\\plans\\261113-0911-fcv588-photo-reference-visual-conformance\\research\\qa-20261114\\stage-browser-v2\\fcv588-stage-browser-v2-20261114T093925+0700-9dfb192e.json",
+  "stageBrowserReceiptSHA256": "6968ebee8896455bcad73eabb0d5b4683049d70c4e0c3efec3221134454bd89d",
+  "stageFullNodeLogSHA256": "c84010622f59d80a8db10811099b769ee279e6415a8ff241e4f719769b623afe",
+  "stagePythonLogSHA256": "3905d519dc109fe91267cb6f7aa273ec494b2d3c6fb1ee7551a5880a8bc63f16",
+  "runtimeChangedExactly": [
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "runtimeCanonicalPreimages": {
+    "web/app.mjs": "6f26975b5de4134956622853a828307c7a3a3928d9dc221e07821d86558aabd7",
+    "web/lcd-presentation.mjs": "a508088dd3b777744f493c7ffaa490310fbf26fd32d6ad3a33293e2621ee8ca2",
+    "web/styles.css": "6e59612e6883bcf6d5f288e683502d4b7cde3ddabb7572c160e444933a4a807f"
+  },
+  "runtimeStagePostimages": {
+    "web/app.mjs": "f8d37024a4f98b7a25fdf2916029510f255ff5b12d98d2a8870d2150100c4e19",
+    "web/lcd-presentation.mjs": "f11d47fc9aa11778719b8c8646d624b9c06064d27c35307b983c46abe49663db",
+    "web/styles.css": "bc2a88175361f37d15bf6371a871f895bfc26213a4edae167e361b7eeff5d4e4"
+  },
+  "existingTestCanonicalPreimages": {
+    "test/fcv588-public-display.test.mjs": "c33e4049f13c2d81b0c9a6c586dfe551701e37c5df2004f6eba8ea271a12cc91",
+    "test/fcv588-public-channel-labels.test.mjs": "6f7a1d4d8085cc5d33ecf7d2ed4d8174a70629192663629e5d5029d667438351",
+    "test/fcv588-public-reference-visual.test.mjs": "b9056c4136cbe566fca066c0e82ad8c74f195b17c5862a4333e450fc94b9da5b"
+  },
+  "newTest": "test/fcv588-photo-display.test.mjs",
+  "copyPaths": [
+    "test/fcv588-photo-display.test.mjs",
+    "test/fcv588-public-channel-labels.test.mjs",
+    "test/fcv588-public-display.test.mjs",
+    "test/fcv588-public-reference-visual.test.mjs",
+    "web/app.mjs",
+    "web/lcd-presentation.mjs",
+    "web/styles.css"
+  ],
+  "mode": "GUARDED_APPLY",
+  "sourceAndCoreUnchangedOutsideAllowlist": true,
+  "hardwareValidated": false,
+  "releaseApproval": "HOLD",
+  "featureClaims": "65/65_HOLD",
+  "beforeBackupSHA256": "1a39f54e9e1b1437cfa01569bea48bd858a6d1a55ec6b88cc7207b498c286654"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "P34_FEASIBILITY_INDEPENDENT_POSTRECEIPT_V1",
+  "timestampUtc": "2026-11-21T14:47:39.1963359Z",
+  "method": "Separate PowerShell readback of CreateNew P34 file, parent P33 and installed source SHA and host process checks",
+  "result": "PASS_INTEGRITY_FOR_BLOCKED_FEASIBILITY_ONLY",
+  "p34FeasibilitySHA256": "98afa49f87e3eee49a93357f95e795460135d045e9f0c1b07f213df8639ebb93",
+  "p33PostSHA256": "3bd413ae023e56703f3d128b56ad68de62c27d89b7733749f84de4655522f630",
+  "p31InstalledExeSHA256": "79512e2b520a590e19cd1893c19b0a6fd1c79abb56efcd9c5e83e7613a4fa5fd",
+  "narratorExeSHA256": "85ce3785d41289c9648efa06c7d2fe69f295b590ca6aec722efb97138ca71ed4",
+  "hostFCVProcessCount": 0,
+  "hostNarratorProcessCount": 0,
+  "hostNvdaProcessCount": 0,
+  "preservedServer4173Pid": 1204,
+  "speechStatus": "BLOCKED_HUMAN_SPEECH_CONFIRMATION",
+  "releaseApproval": "HOLD"
+}

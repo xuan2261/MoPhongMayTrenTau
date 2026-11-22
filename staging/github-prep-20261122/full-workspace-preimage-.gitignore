@@ -1,0 +1,76 @@
+# GitHub scope: source, tests, selected plans/docs only. Preserve local QA bytes.
+# Local isolated clones, historical stages and desktop binaries are NOT source.
+/staging/
+/_p*_stage_*/
+/apps/.fcv588-electron-p30-prep-*/
+/evidence/
+
+# Test receipts/profiles/screenshots remain on the local machine, not public Git.
+/docs/qa/*
+!/docs/qa/scenario-matrix.md
+# Minimal P28 SHA manifest required to rebuild the historical P30 Electron source.
+!/docs/qa/FCV588_P28_MODE_VISUAL_20261117/
+/docs/qa/FCV588_P28_MODE_VISUAL_20261117/*
+!/docs/qa/FCV588_P28_MODE_VISUAL_20261117/FCV588_P28_MODE_VISUAL_FINAL_INTEGRITY_20261117.json
+# Small source-bound test fixtures and plan-linked Markdown; never raw profiles.
+!/docs/qa/FCV588_PUBLIC_BROWSER_SMOKE.md
+!/docs/qa/FCV588_V*_MANUAL_BROWSER_*.md
+!/docs/qa/FCV588_V*_BROWSER_AND_A11Y_*.md
+!/docs/qa/FCV588_V*_PHASE6_BROWSER_SPEECH_*.md
+!/docs/qa/FCV588_V*_DESKTOP_MANUAL_PARTIAL_*.md
+!/docs/qa/FCV588_V*_WINDOWS_FOCUS_GATE_PARTIAL_*.md
+!/docs/qa/FCV588_V*_WINDOWS_NATIVE_VIEWPORT_PARTIAL_*.md
+!/docs/qa/FCV588_LCD_V2[78]_GREEN_RECEIPT.json
+!/docs/qa/FCV588_CHROME_VIEWPORT_V2[78]_RECEIPT.json
+!/docs/qa/FCV588_CHROME_MOBILE_V2[78]_RECEIPT.json
+!/docs/qa/screenshots/
+/docs/qa/screenshots/*
+!/docs/qa/screenshots/fcv588_lcd_v2[78]_green_*.png
+/plans/**/*.png
+/plans/**/*.jpg
+/plans/**/*.jpeg
+/plans/**/*.zip
+/plans/**/*.pyc
+# Temporary browser/QA runners, captured stderr, screenshots and local paths.
+/plans/**/research/qa-*/
+
+# Copyright/rights-restricted manufacturer files and private inherited chat.
+/sources/manuals/*
+!/sources/manuals/README.md
+!/sources/manuals/MANIFEST.json
+!/sources/manuals/ARCHIVE_COVERAGE.json
+# Retain historical explicit rights gates (also asserted by Node regression).
+sources/manuals/**/*.pdf
+sources/manuals/**/*.PDF
+sources/manuals/**/*.zip
+sources/manuals/**/*.ZIP
+/VietMoPhongChoTatCaCacMay.md
+
+# Generated files, installers and platform-specific caches.
+node_modules/
+dist/
+dist-*/
+bundle/
+coverage/
+build/
+*.log
+*.exe
+*.msi
+*.msix
+*.asar
+*.7z
+*.zip
+*.pdf
+*.p12
+*.pfx
+*.key
+*.pem
+*.pyc
+__pycache__/
+.cache/
+.tmp/
+.env
+.env.*
+!.env.example
+Thumbs.db
+Desktop.ini

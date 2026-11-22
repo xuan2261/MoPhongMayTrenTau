@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+ok 1 - P05 MENU ESC ENTER and pad keep draft separate, cancel old value, and commit selected value
+  ---
+  duration_ms: 18.3896
+  type: 'test'
+  ...
+# Subtest: P05 left/right category navigation preserves committed settings
+ok 2 - P05 left/right category navigation preserves committed settings
+  ---
+  duration_ms: 3.7245
+  type: 'test'
+  ...
+# Subtest: P05 menu projection exposes two-column label/value data without changing atlas labels
+ok 3 - P05 menu projection exposes two-column label/value data without changing atlas labels
+  ---
+  duration_ms: 8.7136
+  type: 'test'
+  ...
+# Subtest: P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+ok 4 - P05 live renderer owns separate label/value cells and a bounded main-menu overlay
+  ---
+  duration_ms: 7.6235
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+ok 5 - §1.18 ALARM1 ENTER opens Setting/Alarm menu rather than immediate checkbox
+  ---
+  duration_ms: 9.3761
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+ok 6 - §1.18 ALARM1 setting edit supports staged value/ESC cancellation and replay
+  ---
+  duration_ms: 13.1
+  type: 'test'
+  ...
+# Subtest: §1.18 ALARM1 enable remains independent of parameter editing
+ok 7 - §1.18 ALARM1 enable remains independent of parameter editing
+  ---
+  duration_ms: 2.2167
+  type: 'test'
+  ...
+# Subtest: independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+ok 8 - independent ALARM1–5 editable bottom thresholds alter live synthetic causes and persist
+  ---
+  duration_ms: 10.0781
+  type: 'test'
+  ...
+# Subtest: fish alarm Level and synthetic category govern detection, not merely the enabled switch
+ok 9 - fish alarm Level and synthetic category govern detection, not merely the enabled switch
+  ---
+  duration_ms: 7.2505
+  type: 'test'
+  ...
+# Subtest: ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+ok 10 - ALARM3 temperature Outside triggers only on valid instructor-enabled synthetic data
+  ---
+  duration_ms: 8.4375
+  type: 'test'
+  ...
+# Subtest: §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+ok 11 - §1.18 physical FUNC and POWER down silence the synthetic alarm immediately, preserving its active cause
+  ---
+  duration_ms: 18.9636
+  type: 'test'
+  ...
+# Subtest: FCV-588 manual §§1.15–1.17 places advanced echo modes in Display, not Sounder
+ok 12 - FCV-588 manual §§1.15–1.17 places advanced echo modes in Display, not Sounder
+  ---
+  duration_ms: 3.1106
+  type: 'test'
+  ...
+# Subtest: AUTO_R disables Shift, and RANGE key is inoperative when BDS is active
+ok 13 - AUTO_R disables Shift, and RANGE key is inoperative when BDS is active
+  ---
+  duration_ms: 22.0623
+  type: 'test'
+  ...
+# Subtest: §1.16 choosing Bottom Disc. under Manual Range automatically activates AUTO_R
+ok 14 - §1.16 choosing Bottom Disc. under Manual Range automatically activates AUTO_R
+  ---
+  duration_ms: 18.8324
+  type: 'test'
+  ...
+# Subtest: all five authentic main menu headings expose public annotated entries
+ok 15 - all five authentic main menu headings expose public annotated entries
+  ---
+  duration_ms: 3.7114
+  type: 'test'
+  ...
+# Subtest: manual Appendix 1 menu branches and System sections are attributed to their actual roots
+ok 16 - manual Appendix 1 menu branches and System sections are attributed to their actual roots
+  ---
+  duration_ms: 0.396
+  type: 'test'
+  ...
+# Subtest: §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+ok 17 - §1.22 Sounder TX Power and TX Rate expose the documented option ranges
+  ---
+  duration_ms: 0.3839
+  type: 'test'
+  ...
+# Subtest: §4.10 Installation is a different fixture from normal System
+ok 18 - §4.10 Installation is a different fixture from normal System
+  ---
+  duration_ms: 0.5058
+  type: 'test'
+  ...
+# Subtest: §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+ok 19 - §1.18 alarm controls expose real ALARM1-5, not independent no-op toggle duplicates
+  ---
+  duration_ms: 0.496
+  type: 'test'
+  ...
+# Subtest: D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+ok 20 - D04 Language is explicitly unavailable until licensed language resources and reboot semantics
+  ---
+  duration_ms: 0.2999
+  type: 'test'
+  ...
+# Subtest: MENU opens a navigable category, arrows move focus and ESC closes
+ok 21 - MENU opens a navigable category, arrows move focus and ESC closes
+  ---
+  duration_ms: 8.0958
+  type: 'test'
+  ...
+# Subtest: menu edit stages then commits or cancels and survives power cycling
+ok 22 - menu edit stages then commits or cancels and survives power cycling
+  ---
+  duration_ms: 5.8925
+  type: 'test'
+  ...
+# Subtest: menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+ok 23 - menu atlas evidence file separately traces five synthetic ALARM Setting profiles
+  ---
+  duration_ms: 1.6229
+  type: 'test'
+  ...
+# Subtest: V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+ok 24 - V40 OEM §1.1 control 1 prints the complete MENU/ESC name on the actual face
+  ---
+  duration_ms: 1.7792
+  type: 'test'
+  ...
+# Subtest: V40 label-only correction preserves all nine OEM §1.1 operator controls
+ok 25 - V40 label-only correction preserves all nine OEM §1.1 operator controls
+  ---
+  duration_ms: 0.8044
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 286.7933

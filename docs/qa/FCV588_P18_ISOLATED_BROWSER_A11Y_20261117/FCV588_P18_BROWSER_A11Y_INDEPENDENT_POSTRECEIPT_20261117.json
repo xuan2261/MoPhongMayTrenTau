@@ -1,0 +1,21 @@
+{
+  "schema": "FCV588_P18_QA_ONLY_INDEPENDENT_POSTRECEIPT_V1",
+  "createdAt": "2026-11-17T03:02:12.6149176Z",
+  "status": "P18_QA_ONLY_POSTRECEIPT_PASS_NATIVE_ACCEPTANCE_BLOCKED",
+  "sourceMethod": "SEPARATE_POWERSHELL_FILE_SHA256_READBACK",
+  "p18FinalSHA256": "57a6b279e76438373433160b56002f84edd401775b0f03eb4a8834b0240f02ee",
+  "p18ReportSHA256": "a16f7319936073fbb34d1c19dd7406eef14fbccdf7609bb6654d239692c04323",
+  "sourceSHA256Verified": "50/50",
+  "originalOEMReferenceOnlyVerified": "8/8",
+  "p18InputsSHA256Verified": "8/8",
+  "originalBrowserFailurePreserved": "22/23",
+  "finalChromeBrowserOnlyChecks": "23/23",
+  "finalChromeHTTPBodySHA": "39/39",
+  "pageErrors": 0,
+  "externalRequests": 0,
+  "protectedServer": "127.0.0.1:4173 PID1204",
+  "qaPorts4214to4218Listeners": 0,
+  "nativeAcceptance": "BLOCKED_NOT_ACCEPTED",
+  "canonicalRuntimeChanged": false,
+  "releaseApproval": "HOLD"
+}

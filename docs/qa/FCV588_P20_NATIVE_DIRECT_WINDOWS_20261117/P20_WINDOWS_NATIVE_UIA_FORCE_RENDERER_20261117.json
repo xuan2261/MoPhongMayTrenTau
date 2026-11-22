@@ -1,0 +1,52 @@
+{
+  "schema": "FCV588_P20_WINDOWS_NATIVE_UIA_FORCE_RENDERER_V1",
+  "createdAt": "2026-11-17T03:29:37.548801+00:00",
+  "scope": "WINDOWS_UIAUTOMATION_FROM_REAL_CHROME_HWND_NOT_NARRATOR_SPEECH",
+  "status": "HARNESS_ERROR",
+  "port": 4220,
+  "forceRendererAccessibility": true,
+  "errors": [
+    "TypeError(\"'NoneType' object is not subscriptable\")"
+  ],
+  "originalForeground": {
+    "hwnd": 8653244,
+    "pid": 18532,
+    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "title": "JeikCode Desktop",
+    "foreground": true
+  },
+  "browserVersion": "157.0.8103.79",
+  "dom": {
+    "enhanced": "true",
+    "tabNames": [
+      "Phiên",
+      "Trợ giúp",
+      "Tình huống",
+      "Bài học",
+      "Nguồn & QA"
+    ],
+    "powerLabel": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+    "funcLabel": "FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng"
+  },
+  "windowCandidates": [
+    {
+      "hwnd": 170527212,
+      "pid": 11956,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+      "foreground": false
+    }
+  ],
+  "targetWindow": {
+    "hwnd": 170527212,
+    "pid": 11956,
+    "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "title": "FCV588-P20-NATIVE-UIA-20261117 - Google Chrome",
+    "foreground": false
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P20_NATIVE_DIRECT_WINDOWS_20261117\\p20_windows_native_direct_probe_v4.py\", line 68, in read_uia\n    try:return {'status':'OBSERVED','data':json.loads(p.stdout)}\n                                           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py\", line 339, in loads\n    raise TypeError(f'the JSON object must be str, bytes or bytearray, '\nTypeError: the JSON object must be str, bytes or bytearray, not NoneType\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P20_NATIVE_DIRECT_WINDOWS_20261117\\p20_uia_force_renderer_probe.py\", line 48, in <module>\n    R['nativeUIAutomation']=mod.read_uia(ch[0]['hwnd'])\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_P20_NATIVE_DIRECT_WINDOWS_20261117\\p20_windows_native_direct_probe_v4.py\", line 69, in read_uia\n    except Exception as e:return {'status':'PARSE_ERROR','stdout':p.stdout[-1400:],'error':repr(e)}\n                                                                  ~~~~~~~~^^^^^^^^\nTypeError: 'NoneType' object is not subscriptable\n",
+  "qaPortClosed": true,
+  "protected4173StillListening": true,
+  "sourcePostSHAcount": 50,
+  "originalForegroundUnchanged": true
+}

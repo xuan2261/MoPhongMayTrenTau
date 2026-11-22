@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: P14 exposes active profile22 with manual AP-1 menu order bound into adapter profile hash
+ok 1 - P14 exposes active profile22 with manual AP-1 menu order bound into adapter profile hash
+  ---
+  duration_ms: 6.5377
+  type: 'test'
+  ...
+# Subtest: P14 archived profile21 menu/adapter preserves original selected row and byte-for-byte historic replay hashes
+ok 2 - P14 archived profile21 menu/adapter preserves original selected row and byte-for-byte historic replay hashes
+  ---
+  duration_ms: 15.048
+  type: 'test'
+  ...
+# Subtest: P14 historic profile21 committed White Marker editor also replays under its exact old hash
+ok 3 - P14 historic profile21 committed White Marker editor also replays under its exact old hash
+  ---
+  duration_ms: 5.5041
+  type: 'test'
+  ...
+# Subtest: P14 profile22 menu navigation and selection-only replay deterministic, no reinterpretation with old profile
+ok 4 - P14 profile22 menu navigation and selection-only replay deterministic, no reinterpretation with old profile
+  ---
+  duration_ms: 9.8136
+  type: 'test'
+  ...
+# Subtest: P14 legacy stored profile21 settings import explicitly, current22 decode rejects old without implicit rewrite
+ok 5 - P14 legacy stored profile21 settings import explicitly, current22 decode rejects old without implicit rewrite
+  ---
+  duration_ms: 1.0288
+  type: 'test'
+  ...
+# Subtest: P14 explicit legacy compatibility is reachable in app storage logic without replay migration or forced original storage rewrite
+ok 6 - P14 explicit legacy compatibility is reachable in app storage logic without replay migration or forced original storage rewrite
+  ---
+  duration_ms: 8.6239
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 175.9757

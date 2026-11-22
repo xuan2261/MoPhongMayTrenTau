@@ -1,0 +1,30 @@
+{
+  "schema": "P31_UNPACKED_DEFAULT_NATIVE_UIA_V1",
+  "status": "PASS",
+  "forcedAccessibilitySwitchUsed": false,
+  "profile": "C:\\Work\\MoPhongMayTrenTau\\docs\\qa\\FCV588_ELECTRON_P31_NATIVE_A11Y_20261121\\profile-p31-default-uia-v1",
+  "controls": [
+    {
+      "name": "GAIN: Auto fishing · Offset 0. Nhấn để chọn chế độ; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "offscreen": false,
+      "focusable": true,
+      "type": "ControlType.Button"
+    },
+    {
+      "name": "MODE: LF đang chọn. Kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay.",
+      "offscreen": false,
+      "focusable": true,
+      "type": "ControlType.Button"
+    },
+    {
+      "name": "Nguồn và độ sáng; nhấn giữ hơn 3 giây mô phỏng để tắt",
+      "offscreen": false,
+      "focusable": true,
+      "type": "ControlType.Button"
+    }
+  ],
+  "descendantCount": 90,
+  "appProcessAlive": true,
+  "releaseApproval": "HOLD",
+  "windowName": "MoPhongMayTrenTau | FCV-588 Public Reference"
+}

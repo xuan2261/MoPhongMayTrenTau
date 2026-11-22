@@ -1,0 +1,6 @@
+DEFAULT_STATE_VIEWPORTS=4/4
+desktop [1440, 900] workbenchTop=143.0 document=1440x1023 selected=d15-tab-session
+tablet [768, 1024] workbenchTop=127.0 document=768x1829 selected=d15-tab-session
+mobile [375, 812] workbenchTop=160.1 document=375x2195 selected=d15-tab-session
+small-mobile [320, 812] workbenchTop=171.3 document=320x2165 selected=d15-tab-session
+NO_JS=PASS
