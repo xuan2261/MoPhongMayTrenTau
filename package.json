@@ -8,7 +8,10 @@
   "scripts": {
     "start": "node tools/server.mjs",
     "test": "node --test test/*.test.mjs",
-    "check": "node -e \"const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>{const p=path.join(d,e.name);return e.isDirectory()?walk(p):p;});const files=[...walk('src'),...walk('web'),...fs.readdirSync('tools').map(n=>path.join('tools',n))].filter(f=>f.endsWith('.mjs')).sort();for(const f of files)cp.execFileSync(process.execPath,['--check',f],{stdio:'inherit'});\" && npm test"
+    "check": "node -e \"const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>{const p=path.join(d,e.name);return e.isDirectory()?walk(p):p;});const files=[...walk('src'),...walk('web'),...fs.readdirSync('tools').map(n=>path.join('tools',n))].filter(f=>f.endsWith('.mjs')).sort();for(const f of files)cp.execFileSync(process.execPath,['--check',f],{stdio:'inherit'});\" && npm test",
+    "build:standalone": "node tools/build_fcv588_standalone.mjs",
+    "sync:desktop": "node tools/sync_fcv588_electron.mjs",
+    "dist:win": "npm --prefix apps/fcv588-electron-p30 run package:win"
   },
   "engines": {"node": ">=22"}
 }

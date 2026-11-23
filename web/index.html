@@ -34,10 +34,13 @@
         </div>
         <p id="operator-selection-status" class="sr-only" role="status"
           aria-live="polite" aria-atomic="true"></p>
-        <label class="device-focus-control" for="device-focus-toggle">
-          <input id="device-focus-toggle" type="checkbox">
-          <span>Tập trung vào máy</span>
-        </label>
+        <div class="workspace-toolbar" role="toolbar" aria-label="Tùy chọn hiển thị không gian làm việc">
+          <label class="device-focus-control" for="device-focus-toggle">
+            <input id="device-focus-toggle" type="checkbox">
+            <span>Tập trung vào máy</span>
+          </label>
+          <button id="btn-fullscreen" class="workspace-action-btn" type="button" aria-pressed="false">Toàn màn hình</button>
+        </div>
         <div class="device-frame" data-panel-reference="FCV588_PUBLIC_REFERENCE_ESTIMATE" aria-label="Mặt trước FCV-588 minh họa theo nguồn công khai">
           <div class="equipment">
             <div class="display-housing">
@@ -193,11 +196,22 @@
               <button id="mode-plus" class="trainer-rotate" type="button" aria-label="Trợ xoay MODE tiến">+</button>
             </div>
           </section>
-          <div class="trainer-buttons">
+          <div id="trainer-buttons" class="trainer-buttons">
+            <button type="button" id="btn-quick-power" class="accent-action" aria-pressed="false">Bật / Tắt nguồn nhanh</button>
             <button type="button" id="btn-pause" class="primary">Tạm dừng thời gian</button>
             <button type="button" id="btn-step">+1 giây giả lập</button>
             <button type="button" id="btn-reset">Đặt lại bài</button>
             <button type="button" id="btn-replay">Kiểm tra replay</button>
+            <section id="settings-transfer-panel" class="settings-transfer-panel" aria-labelledby="settings-transfer-title">
+              <h3 id="settings-transfer-title">Cấu hình máy &amp; Xuất phiên</h3>
+              <p class="hint">Lưu cấu hình menu FCV-588 hiện tại, nạp tệp cấu hình (.json) tức thời, hoặc xuất cặp file phiên để kiểm chứng trong Archive replay offline.</p>
+              <button type="button" id="btn-export-settings">Lưu cấu hình máy (.json)</button>
+              <label for="import-settings-file">Chọn tệp cấu hình FCV-588 (.json)</label>
+              <input id="import-settings-file" type="file" accept=".json,application/json">
+              <button type="button" id="btn-import-settings">Nạp cấu hình máy (.json)</button>
+              <button type="button" id="btn-export-replay-pair">Xuất cặp file phiên Replay (.json)</button>
+              <p id="settings-transfer-status" role="status" aria-live="polite">Sẵn sàng lưu/nạp cấu hình hoặc xuất phiên replay.</p>
+            </section>
             <section id="archive-replay-panel" class="archive-replay-panel" aria-labelledby="archive-replay-title">
               <h3 id="archive-replay-title">Archive replay offline — D15</h3>
               <p class="hint">Chọn cặp JSON envelope v7 và sidecar v1 từ máy tính. Chỉ đọc trong D15, không thay đổi LCD hoặc phiên đang chạy. Không xác thực nguồn gốc, ngày ghi hay độ chính xác OEM; checksum chỉ phát hiện thay đổi không đồng bộ.</p>
@@ -255,17 +269,22 @@
           </section>
           <div id="validation-status" class="validation-status" role="status">Chưa có phiên kiểm thử tương tác.</div>
           <div class="d15-help">
-          <h3>Thao tác đang hỗ trợ</h3>
-          <p class="hint">Bật POWER, xoay MODE và chờ hết thời gian chọn; dùng MENU/ESC, ENTER, TrackPad và các núm để thay đổi cài đặt. Những dữ liệu trên màn hình đều tổng hợp; FUNC và một số lựa chọn tùy phiên bản còn giới hạn bằng chứng.</p>
-          <div class="shortcut-line"><kbd>←↑↓→</kbd> TrackPad <kbd>Enter</kbd> xác nhận <kbd>Esc</kbd> trở lại</div>
-          <h3>Thiết bị tiếp theo</h3>
-          <div class="device-roadmap"><div>01 <strong>FCV-588</strong><em>F1 PUBLIC_REFERENCE đang thực hiện</em></div>
-            <div>02 <strong>MDC-2060</strong><em>Hồ sơ chờ duyệt</em></div>
-            <div>03 <strong>AIS R5</strong><em>Chờ xác nhận biến thể</em></div>
-            <div>04 <strong>FAR-2127</strong><em>Chờ lựa chọn RCU</em></div>
-            <div>05 <strong>NS4000</strong><em>Chờ phiên bản</em></div>
-            <div>06 <strong>KODEN J2000</strong><em>HOLD nhận diện</em></div>
-          </div>
+            <h3>Bảng Phím Tắt &amp; Thao Tác FCV-588</h3>
+            <p class="hint">Nhấn trực tiếp phím/núm trên mặt máy (kể cả vạch chế độ quanh MODE và dấu − / + quanh GAIN) hoặc dùng bàn phím khi con trỏ ở ngoài bảng giảng viên:</p>
+            <div class="shortcut-grid" role="list" aria-label="Bảng phím tắt FCV-588">
+              <div class="shortcut-item" role="listitem"><kbd>B</kbd><span>Bật máy / Độ sáng BRILL</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>R</kbd><span>Thang đo RANGE</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>G</kbd><span>Auto / Manual GAIN</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>M</kbd><span>Đánh dấu tọa độ MARK</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>F</kbd><span>Phím chức năng FUNC</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>[</kbd> <kbd>]</kbd><span>Xoay núm MODE</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>-</kbd> <kbd>=</kbd><span>Xoay núm GAIN</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>←↑↓→</kbd><span>TrackPad 4 hướng</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>Enter</kbd><span>Xác nhận</span></div>
+              <div class="shortcut-item" role="listitem"><kbd>Esc</kbd><span>MENU/ESC</span></div>
+            </div>
+            <h3>Quy ước mặt máy FCV-588</h3>
+            <p class="hint">Xoay hoặc nhấp vạch MODE để chọn chế độ và chờ tự động áp dụng (không dùng ENTER để lưu MODE). Nhấn giữ POWER/BRILL trên 3 giây để tắt máy; nhấn giữ FUNC để gán chức năng nhanh.</p>
           </div>
         </aside>
       </section>

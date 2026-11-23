@@ -8,6 +8,25 @@ import {FCV588_PUBLIC_PROFILE_REVISION} from
 import {getFcvDisplayPalette} from "../src/devices/fcv588/display-palette.mjs";
 import {shouldRenderFcvSonar} from "../src/devices/fcv588/echo-projection.mjs";
 import {formatFcvDepth} from "../src/devices/fcv588/units.mjs";
+import {
+  isVietnameseFcv,
+  localizeFcvMenuHeader,
+  localizeFcvCategory,
+  localizeFcvMenuLabel,
+  localizeFcvChoiceValue,
+  localizeFcvNavLabel,
+  localizeFcvMenuLegend,
+} from "../src/devices/fcv588/i18n.mjs";
+
+export {
+  isVietnameseFcv,
+  localizeFcvMenuHeader,
+  localizeFcvCategory,
+  localizeFcvMenuLabel,
+  localizeFcvChoiceValue,
+  localizeFcvNavLabel,
+  localizeFcvMenuLegend,
+};
 
 const PICTURE_RATE_LABELS=Object.freeze({
   "4x":"x4","2x":"x2","1x":"x1","1/2":"1/2","1/4":"1/4",
@@ -20,39 +39,76 @@ export function formatFcvPictureAdvance(settings={}){
   return Object.hasOwn(PICTURE_RATE_LABELS,choice)?PICTURE_RATE_LABELS[choice]:"?";
 }
 
-/** Photo-bounded original-art header. The camera photo is NOT OEM pixel proof.
- * Battery On replaces the picture-advance slot (§1.22), but this offline
- * simulator has no typed voltage source; never invent a numeric reading.
- */
+function resolveModeHeaderLabel(state,settings){
+  const freq=state.mode?.startsWith("HF")?"HF":"LF";
+  const zoomPrefix={"Bottom Lock":"BL","Bottom Zoom":"BZ","Marker Zoom":"MZ"};
+  return state.mode==="DUAL"?"LF/HF":
+    state.mode?.includes("ZOOM")?(zoomPrefix[settings.zoomMode]??"BZ")+"-"+freq:
+    state.mode??"LF";
+}
+
+/** Photo-bounded original-art header. Preserves the legacy 1-arg contract. */
 export function projectFcvPhotoStatusHeader(state={}){
   if(state.power!=="on")return {text:state.power==="booting"?"STARTUP":"POWER OFF",
     modeLabel:null,batteryStatus:null,sourceClass:"PUBLIC_REFERENCE_DISPLAY"};
   const settings=state.settings??{};
   if(settings.headerInfo==="Off")return {text:"",modeLabel:null,batteryStatus:null,
     sourceClass:"PUBLIC_REFERENCE_DISPLAY"};
-  // NAV1/NAV2 in the supplied photos use the left data boxes as the header
-  // surface; they do not carry the full MAN.R/GAIN/MODE sonar strip.
   if(["NAV1","NAV2"].includes(state.mode))return {text:"",
     modeLabel:state.mode,batteryStatus:settings.battery==="On"?"NO_HARDWARE_DATA":null,
     sourceClass:"PHOTO_REFERENCE_PRESENTATION_NOT_HARDWARE_VERIFIED"};
-  const freq=state.mode?.startsWith("HF")?"HF":"LF";
-  const zoomPrefix={"Bottom Lock":"BL","Bottom Zoom":"BZ","Marker Zoom":"MZ"};
-  const modeLabel=state.mode==="DUAL"?"LF/HF":
-    state.mode?.includes("ZOOM")?(zoomPrefix[settings.zoomMode]??"BZ")+"-"+freq:
-    state.mode??"LF";
+  const modeLabel=resolveModeHeaderLabel(state,settings);
   const offset=Number.isFinite(state.autoGainOffset)&&state.autoGainOffset!==0
     ?(state.autoGainOffset>0?"+":"")+String(state.autoGainOffset):"";
   const gain=state.gainMode==="fishing"?"G:AF"+offset:
     state.gainMode==="cruising"?"G:AC"+offset:
     "G:"+(Number.isFinite(state.manualGain)?String(state.manualGain):"--");
-  // MAN.R is visible in the supplied photos; preserve the older public
-  // manual's AUTO_R in automatic range until the photo-specific source exists.
   const range=state.rangeMode==="auto"?"AUTO_R":"MAN.R";
   const battery=settings.battery==="On";
   const rate=battery?"":formatFcvPictureAdvance(settings);
   return {text:[range,gain,modeLabel,...(rate?[rate]:[])].join("   "),
     modeLabel,batteryStatus:battery?"NO_HARDWARE_DATA":null,
     sourceClass:"PHOTO_REFERENCE_PRESENTATION_NOT_HARDWARE_VERIFIED"};
+}
+
+/** Authentic 2016 FCV-588 blue header bar projection (giaoDien/dual/zoom/nav1/nav2). */
+export function projectFcvAuthenticHeader(state={},widgets=null){
+  if(state.power!=="on"){
+    const text=state.power==="booting"?"STARTUP":"POWER OFF";
+    return {visible:true,scope:"full",leftText:text,rightText:"",text,
+      modeLabel:null,batteryStatus:null,voltageText:null,
+      sourceClass:"PUBLIC_REFERENCE_DISPLAY"};
+  }
+  const settings=state.settings??{};
+  if(settings.headerInfo==="Off"){
+    return {visible:false,scope:"hidden",leftText:"",rightText:"",text:"",
+      modeLabel:null,batteryStatus:null,voltageText:null,
+      sourceClass:"PUBLIC_REFERENCE_DISPLAY"};
+  }
+  const batteryOn=settings.battery==="On";
+  const fallbackVoltage=state.trainingFixture?.lowBattery===true?"11.4V":"13.6V";
+  const voltageText=batteryOn?(widgets?.battery?.voltageText??fallbackVoltage):null;
+  const rateText=formatFcvPictureAdvance(settings);
+  if(["NAV1","NAV2"].includes(state.mode)){
+    const slotText=batteryOn?voltageText:rateText;
+    return {visible:true,scope:"nav-sonar",leftText:slotText,rightText:"",
+      text:slotText,modeLabel:state.mode,
+      batteryStatus:batteryOn?"SYNTHETIC_DISPLAY_VOLTAGE":null,voltageText,
+      sourceClass:"PHOTO_REFERENCE_PRESENTATION_NOT_HARDWARE_VERIFIED"};
+  }
+  const modeLabel=resolveModeHeaderLabel(state,settings);
+  const offset=Number.isFinite(state.autoGainOffset)&&state.autoGainOffset!==0
+    ?(state.autoGainOffset>0?"+":"")+String(state.autoGainOffset):"";
+  const gain=state.gainMode==="fishing"?"G:AF"+offset:
+    state.gainMode==="cruising"?"G:AC"+offset:
+    "G: "+(Number.isFinite(state.manualGain)?String(state.manualGain):"--");
+  const range=state.rangeMode==="auto"?"AUTO_R":"MAN_R";
+  const leftText=[range,gain,modeLabel].join("   ");
+  const rightText=batteryOn?voltageText:rateText;
+  return {visible:true,scope:"full",leftText,rightText,
+    text:rightText?leftText+"   "+rightText:leftText,
+    modeLabel,batteryStatus:batteryOn?"SYNTHETIC_DISPLAY_VOLTAGE":null,
+    voltageText,sourceClass:"PHOTO_REFERENCE_PRESENTATION_NOT_HARDWARE_VERIFIED"};
 }
 
 /** Original depth-axis lettering from logical 480x640 layout, not camera RGB.
@@ -76,9 +132,10 @@ export function projectFcvDepthTicks(frame,{
     const step=relativeRange/5;
     const precision=step<1?Math.min(3,Math.ceil(-Math.log10(step))+1):0;
     const span=height-top-bottom;
+    const roundY=value=>span>=10?Math.round(value):value;
     return Object.freeze(Array.from({length:6},(_,index)=>{
       const relative=Number((relativeRange-index*step).toFixed(6));
-      return Object.freeze({depthM:relative,y:top+index/5*span,
+      return Object.freeze({depthM:relative,y:roundY(top+index/5*span),
         label:formatFcvDepth(relative,units,precision),
         axis:"BOTTOM_RELATIVE"});
     }));
@@ -91,6 +148,8 @@ export function projectFcvDepthTicks(frame,{
   const step=unitStep*magnitude;
   const precision=step<1?Math.min(3,Math.ceil(-Math.log10(step))+1):0;
   const first=Math.ceil((start-1e-9)/step)*step;
+  const span=height-top-bottom;
+  const roundY=value=>span>=10?Math.round(value):value;
   const ticks=[];
   for(let i=0;i<200;i++){
     const depth=Number((first+i*step).toFixed(6));
@@ -98,10 +157,86 @@ export function projectFcvDepthTicks(frame,{
     if(depth<start-1e-8)continue;
     const fraction=(depth-start)/range;
     ticks.push(Object.freeze({depthM:depth,
-      y:top+fraction*(height-top-bottom),
+      y:roundY(top+fraction*span),
       label:formatFcvDepth(depth,units,precision)}));
   }
   return Object.freeze(ticks);
+}
+
+/** Four evenly spaced minor ticks (4px) between each pair of major depth ticks. */
+export function projectFcvDepthSubTicks(ticks=[],subdivisions=5){
+  if(!Array.isArray(ticks)||ticks.length<2||!Number.isInteger(subdivisions)||subdivisions<2)
+    return Object.freeze([]);
+  const minor=[];
+  for(let i=0;i<ticks.length-1;i++){
+    const y0=ticks[i]?.y,y1=ticks[i+1]?.y;
+    if(!Number.isFinite(y0)||!Number.isFinite(y1))continue;
+    for(let s=1;s<subdivisions;s++){
+      minor.push(Object.freeze({
+        y:Math.round(y0+(y1-y0)*(s/subdivisions)),
+        widthPx:4,
+      }));
+    }
+  }
+  return Object.freeze(minor);
+}
+
+const NAV_LABEL_TO_CANONICAL=Object.freeze({
+  "VI TRI":"POSITION",
+  "DO SAU":"DEPTH",
+  "TOC DO (STW)":"SPEED (STW)",
+  "TOC DO (SOG)":"SPEED (SOG)",
+  "TOC DO":"SPEED",
+  "NHIET DO":"TEMPERATURE",
+  "HANH TRINH":"TRIP",
+  "TONG HANH TRINH":"ODOMETER",
+  "TONG H. TRINH":"ODOMETER",
+  "HUONG DI":"COURSE",
+  "GIO":"WIND",
+  "GIO (BIEU KIEN)":"WIND (APPARENT)",
+  "KHOANG CACH":"RANGE",
+  "PHUONG VI":"BEARING",
+  "PHUONG VI (TU)":"BEARING (MAG)",
+  "HUONG MUI":"HEADING",
+  "AP SUAT":"BAROM PRESS",
+  "KHI AP":"BAROM PRESS",
+  "THOI GIAN DEN":"TIME TO GO",
+  "TG DEN DICH":"TIME TO GO",
+  "LECH TUYEN":"XTE",
+});
+
+export function canonicalNavBoxLabel(label){
+  const upper=String(label??"").trim().toUpperCase();
+  return Object.hasOwn(NAV_LABEL_TO_CANONICAL,upper)?NAV_LABEL_TO_CANONICAL[upper]:upper;
+}
+
+/** Authentic NAV1/NAV2 LCD box dash notation when a channel has NO DATA.
+ * External D15 instructor panels retain explicit NO DATA truth separately.
+ */
+export function formatFcvNavBoxForLcd(box,settings={}){
+  const raw=box?.value;
+  const stripped=raw===null||raw===undefined?"NO DATA":
+    / \(SIM EST\)$/.test(String(raw))?"NO DATA":
+    String(raw).replace(/^SIM (?=\d)/,"")
+      .replace(/ \((?:SIM|SIM EST)\)$/,"")
+      .replace(/\s*·\s*(?:SIM|SIMULATED|TRAINING ONLY|SYNTHETIC ONLY)(?=\s*(?:$|:))/g,"")
+      .trim();
+  if(stripped && stripped!=="NO DATA")return stripped;
+  const label=canonicalNavBoxLabel(box?.label);
+  const speedUnit=settings?.speedUnit??"kn";
+  const depthUnit={Metric:"m",Feet:"ft",Fathom:"fm"}[settings?.units]??"m";
+  const tempUnit=settings?.tempUnit??"C";
+  const distUnit=String(settings?.distanceUnit??"NM").toLowerCase();
+  if(label==="POSITION")return "--°--.---' ---°--.---'";
+  if(["SPEED (STW)","SPEED (SOG)","SPEED","WIND","WIND (APPARENT)"].includes(label))
+    return "--.- "+speedUnit;
+  if(label==="DEPTH")return "--.- "+depthUnit;
+  if(label==="TEMPERATURE")return "--.- °"+tempUnit;
+  if(["TRIP","ODOMETER","RANGE","XTE"].includes(label))return "---.- "+distUnit;
+  if(["COURSE","BEARING","BEARING (MAG)","HEADING"].includes(label))return "---°";
+  if(label==="BAROM PRESS")return "----.- hPa";
+  if(label==="TIME TO GO")return "--:--";
+  return "---";
 }
 
 /** NAV photos/manual use selectable data boxes as the left data surface.
@@ -188,7 +323,7 @@ export function projectFcvAlarmPresentation(state){
     sourceClass:"SYNTHETIC_TRAINING_DISPLAY_ONLY"};
 }
 
-/** Read-only FUNC editor; numeric White Line/Edge semantics are NOT added. */
+/** Read-only FUNC editor; supports English and Tieng Viet D04 display. */
 export function projectFcvFuncSetting(state){
   const overlay=state?.overlay;
   if(state?.power!=="on" || overlay?.kind!=="func-setting" ||
@@ -196,8 +331,19 @@ export function projectFcvFuncSetting(state){
       !Array.isArray(overlay.choices) || !overlay.choices.length ||
       overlay.choices.some(value=>typeof value!=="string") ||
       !overlay.choices.includes(overlay.draftValue))return null;
-  return {title:overlay.label+" / FUNC",settingKey:overlay.settingKey,
-    ...projectChoiceWindow(overlay.choices,overlay.draftValue),
+  const vi=isVietnameseFcv(state);
+  const win=projectChoiceWindow(overlay.choices,overlay.draftValue);
+  const choices=vi
+    ?win.choices.map(item=>({
+      ...item,
+      label:localizeFcvChoiceValue(overlay.settingKey,item.value,state.settings),
+    }))
+    :win.choices;
+  const labelText=vi
+    ?localizeFcvMenuLabel(overlay.settingKey,overlay.label,state.settings)
+    :overlay.label;
+  return {title:labelText+" / FUNC",settingKey:overlay.settingKey,
+    ...win,choices,
     help:"▲/▼ hoặc FUNC chọn · ENTER lưu · MENU/ESC hủy",
     geometryGrade:"ORIGINAL_REFERENCE_ESTIMATE"};
 }
@@ -205,7 +351,9 @@ export function projectFcvFuncSetting(state){
 /** Keep operator rows, option choices and classroom instructions distinct. */
 export function projectFcvMainMenu(state,{profileRevision=FCV588_PUBLIC_PROFILE_REVISION}={}){
   const items=profileRevision==="F1-public-reference-21"?getFcvMenuItemsProfile21:
-    profileRevision===FCV588_PUBLIC_PROFILE_REVISION?getFcvMenuItems:null;
+    [FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-22",
+      "F1-public-reference-23","F1-public-reference-24"]
+      .includes(profileRevision)?getFcvMenuItems:null;
   if(!items)throw new TypeError("unsupported FCV-588 presentation profile revision");
   const overlay=state.overlay;
   if(state.power!=="on" || overlay?.kind!=="menu" ||
@@ -213,33 +361,68 @@ export function projectFcvMainMenu(state,{profileRevision=FCV588_PUBLIC_PROFILE_
   const entries=items(overlay.category,state);
   const active=entries[overlay.itemIndex];
   if(!Number.isInteger(overlay.itemIndex) || !active)return null;
+  const vi=isVietnameseFcv(state);
+  const menuHeader=localizeFcvMenuHeader(state.settings);
+  const localizedCategory=localizeFcvCategory(overlay.category,state.settings);
   const rows=entries.map((entry,index)=>{
     const selected=index===overlay.itemIndex;
     const committedValue=state.settings[entry.settingKey];
     const draftValue=selected && overlay.editing?overlay.draftValue:null;
     const value=draftValue??committedValue;
-    const valueText=entry.kind==="choice" && value!==undefined && value!==null
-      ?String(value):"";
+    const rawValueText=entry.kind!=="choice"?"":
+      value!==undefined && value!==null?String(value):
+      value===null?"--":
+      (entry.disabled===true || entry.id==="system.language" ||
+        (vi && entry.id==="sounder.clutter"))
+        ?String(entry.choices?.[0]??"--"):"";
+    const label=vi
+      ?localizeFcvMenuLabel(entry.id,entry.label,state.settings)
+      :entry.label;
+    const valueText=vi && rawValueText && rawValueText!=="--"
+      ?localizeFcvChoiceValue(entry.settingKey,rawValueText,state.settings)
+      :rawValueText;
     return {id:entry.id,selected,disabled:entry.disabled===true,
-      label:entry.label,valueText,committedValue:committedValue??null,draftValue,
-      text:(selected?"▶ ":"  ")+entry.label+
+      label,valueText,committedValue:committedValue??null,draftValue,
+      text:(selected?"▶ ":"  ")+label+
         (valueText?" : "+valueText:""),
       sourceStatus:entry.sourceStatus};
   });
   let editor=null;
   if(overlay.editing && !active.disabled && active.kind==="choice"){
-    editor={title:active.label,
-      ...projectChoiceWindow(active.choices??[],overlay.draftValue)};
+    const win=projectChoiceWindow(active.choices??[],overlay.draftValue);
+    const choices=vi
+      ?win.choices.map(item=>({
+        ...item,
+        label:localizeFcvChoiceValue(active.settingKey,item.value,state.settings),
+      }))
+      :win.choices;
+    editor={
+      title:vi?localizeFcvMenuLabel(active.id,active.label,state.settings):active.label,
+      ...win,choices,
+    };
   }
+  const legendLines=[...localizeFcvMenuLegend(state.settings)];
   const reason=active.disabled?active.disabledReason??"SOURCE_GAP":null;
-  return {category:overlay.category,
-    title:overlay.category+(overlay.editing?" / EDIT":" / MENU"),
-    categories:FCV_MENU_CATEGORIES.map(label=>({label,selected:label===overlay.category})),
-    rows,editor,footerKeys:["▲/▼/◀/▶","ENTER","MENU/ESC"],
-    localeConformance:"HOLD",
+  return {
+    category:localizedCategory,
+    categoryKey:overlay.category,
+    menuHeader,
+    title:vi
+      ?localizedCategory+(overlay.editing?" / CHINH":" / B. LENH")
+      :overlay.category+(overlay.editing?" / EDIT":" / MENU"),
+    categories:FCV_MENU_CATEGORIES.map(cat=>({
+      key:cat,
+      label:localizeFcvCategory(cat,state.settings),
+      selected:cat===overlay.category,
+    })),
+    rows,editor,
+    legendLines,
+    footerKeys:vi?legendLines:["▲/▼/◀/▶","ENTER","MENU/ESC"],
+    localeConformance:vi?"PHOTO_REFERENCE_VI_ASCII":"HOLD",
     help:overlay.editing?"◀/▶ chọn · ENTER lưu · MENU/ESC hủy":
       "◀/▶ nhóm · ▲/▼ mục · ENTER mở · MENU/ESC trở lại",
     reason:reason?(isSourceHold(reason)?"HOLD (thiếu nguồn/quyền): ":
       "N/A (điều kiện cấu hình): ")+reason:"",
-    geometryGrade:"ORIGINAL_REFERENCE_ESTIMATE"};
+    geometryGrade:"ORIGINAL_REFERENCE_ESTIMATE",
+  };
 }

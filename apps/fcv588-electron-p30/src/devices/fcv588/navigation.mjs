@@ -2,6 +2,8 @@
 import {formatFcvDepth,formatFcvTemperature,formatFcvSpeed,
   formatFcvDistance} from "./units.mjs";
 import {FCV_NAV_BOX_DEFAULTS,FCV_NAV_BOX_OPTIONS} from "./menu-atlas.mjs";
+import {projectFcvCalibratedReadings} from "./calibration.mjs";
+import {isVietnameseFcv,localizeFcvNavLabel} from "./i18n.mjs";
 export const createNavigationState=()=>({
   waypoints:[],destinationId:null,nextWaypointNumber:1,
   tripNm:0,odometerNm:0,
@@ -91,26 +93,29 @@ export function projectFcvTravelValues(navState,settings){
   };
 }
 
-const noData=status=>({status,boxes:[
-  {label:"POSITION",value:"NO DATA"},{label:"SPEED",value:"NO DATA"},
+const noData=(status,langSettings)=>({status,boxes:[
+  {label:isVietnameseFcv(langSettings)?localizeFcvNavLabel("POSITION","POSITION",langSettings):"POSITION",value:"NO DATA"},
+  {label:isVietnameseFcv(langSettings)?localizeFcvNavLabel("SPEED","SPEED",langSettings):"SPEED",value:"NO DATA"},
 ],trainingOnly:true});
 
 export function projectNavData(sample,mode,{
-  simTick=0,staleAfterTicks=10,units="Metric",speedUnit="kn",
+  simTick=0,staleAfterTicks=10,units="Metric",speedUnit="kn",language="English",
 }={}) {
+  const langSettings={language};
+  const navLabel=raw=>isVietnameseFcv(langSettings)?localizeFcvNavLabel(raw,raw,langSettings):raw;
   if(!sample || !positionValid(sample.position) ||
-      !Number.isInteger(sample.observedAtTick)) return noData("NO_DATA");
+      !Number.isInteger(sample.observedAtTick)) return noData("NO_DATA",langSettings);
   if(simTick-sample.observedAtTick>staleAfterTicks ||
-      simTick<sample.observedAtTick) return noData("STALE_DATA");
+      simTick<sample.observedAtTick) return noData("STALE_DATA",langSettings);
   const pos=formatSyntheticPosition(sample.position);
   const boxes=mode==="NAV1"
-    ? [{label:"POSITION",value:pos},
-      {label:"DEPTH",value:Number.isFinite(sample.depthM)
+    ? [{label:navLabel("POSITION"),value:pos},
+      {label:navLabel("DEPTH"),value:Number.isFinite(sample.depthM)
         ? formatFcvDepth(sample.depthM,units)+" (SIM)":"NO DATA"}]
-    : [{label:"POSITION",value:pos},
-      {label:"SPEED",value:isValidSyntheticSpeed(sample.speedKn)
+    : [{label:navLabel("POSITION"),value:pos},
+      {label:navLabel("SPEED"),value:isValidSyntheticSpeed(sample.speedKn)
         ? formatFcvSpeed(sample.speedKn,speedUnit)+" (SIM)":"NO DATA"},
-      {label:"COURSE",value:validAngle(sample.courseDeg)
+      {label:navLabel("COURSE"),value:validAngle(sample.courseDeg)
         ? sample.courseDeg.toFixed(0)+"° (SIM)":"NO DATA"}];
   return {status:"SYNTHETIC_DATA",boxes,trainingOnly:true};
 }
@@ -122,28 +127,42 @@ export function projectNavData(sample,mode,{
  */
 export function projectFcvManualNavBoxes({
   mode="NAV1",simTick=0,sample=null,navState=null,settings=null,
-  sonarDepthM=null,units="Metric",tempUnit="C",speedUnit="kn",
-  distanceUnit="NM",staleAfterTicks=10,
+  sonarDepthM=null,units,tempUnit,speedUnit,
+  distanceUnit,staleAfterTicks=10,
 }={}){
   if(!["NAV1","NAV2"].includes(mode))throw new RangeError("unknown NAV view");
+  const effectiveUnits=units??settings?.units??"Metric";
+  const effectiveTempUnit=tempUnit??settings?.tempUnit??"C";
+  const effectiveSpeedUnit=speedUnit??settings?.speedUnit??"kn";
+  const effectiveDistanceUnit=distanceUnit??settings?.distanceUnit??"NM";
+  const effectiveWindUnit=settings?.windUnit??"kn";
+  const depthSuffix=effectiveUnits==="Feet"?"ft":effectiveUnits==="Fathom"?"fm":"m";
+  const tempSuffix=effectiveTempUnit==="F"?"°F":"°C";
+  const distSuffix=effectiveDistanceUnit==="NM"?"nm":effectiveDistanceUnit;
   const observed=sample?.observedAtTick;
   const valid=positionValid(sample?.position) && Number.isInteger(observed) &&
     Number.isInteger(simTick) && simTick>=observed &&
     simTick-observed<=staleAfterTicks;
   const stale=Number.isInteger(observed) && simTick-observed>staleAfterTicks;
+  const calibrated=projectFcvCalibratedReadings(settings,{
+    sourceClass:"SYNTHETIC_FIXTURE",
+    bottomDepthM:sonarDepthM,
+    speedKn:valid && isValidSyntheticSpeed(sample.speedKn)?sample.speedKn:null,
+    temperatureC:valid && Number.isFinite(sample.temperatureC)?sample.temperatureC:null,
+  });
   const sim=value=>value===null?"NO DATA":String(value)+" (SIM)";
-  const depth=Number.isFinite(sonarDepthM)
-    ?sim(formatFcvDepth(sonarDepthM,units)):"NO DATA";
+  const depth=Number.isFinite(calibrated.depthM)
+    ?sim(formatFcvDepth(calibrated.depthM,effectiveUnits)):"NO DATA";
   const speed=valid && settings?.speedSource!=="NMEA" &&
-      isValidSyntheticSpeed(sample.speedKn)
-    ?sim(formatFcvSpeed(sample.speedKn,speedUnit)):"NO DATA";
+      isValidSyntheticSpeed(calibrated.speedKn)
+    ?sim(formatFcvSpeed(calibrated.speedKn,effectiveSpeedUnit)):"NO DATA";
   const temp=valid && settings?.tempSource!=="NMEA" &&
-      Number.isFinite(sample.temperatureC)
-    ?sim(formatFcvTemperature(sample.temperatureC,tempUnit)):"NO DATA";
+      Number.isFinite(calibrated.temperatureC)
+    ?sim(formatFcvTemperature(calibrated.temperatureC,effectiveTempUnit)):"NO DATA";
   const travel=projectFcvTravelValues(navState,settings);
   const distance=field=>valid && Number.isFinite(travel[field])
-    ?sim(distanceUnit==="NM"?travel[field].toFixed(3)+" nm":
-      formatFcvDistance(travel[field],distanceUnit)):"NO DATA";
+    ?sim(effectiveDistanceUnit==="NM"?travel[field].toFixed(3)+" nm":
+      formatFcvDistance(travel[field],effectiveDistanceUnit)):"NO DATA";
   const position=valid?formatSyntheticPosition(sample.position):"NO DATA";
   const course=valid && validAngle(sample.courseDeg)
     ?sim(sample.courseDeg.toFixed(0)+"°"):"NO DATA";
@@ -155,7 +174,7 @@ export function projectFcvManualNavBoxes({
     sample.fieldSources[field]==="SYNTHETIC_FIXTURE";
   const sog=fieldIsTyped("speedOverGroundKn") &&
       isValidSyntheticSpeed(sample.speedOverGroundKn)
-    ?sim(formatFcvSpeed(sample.speedOverGroundKn,speedUnit)):"NO DATA";
+    ?sim(formatFcvSpeed(sample.speedOverGroundKn,effectiveSpeedUnit)):"NO DATA";
   const bearing=fieldIsTyped("bearingDeg") && validAngle(sample.bearingDeg)
     ?sim(sample.bearingDeg.toFixed(0)+"°"):"NO DATA";
   const heading=fieldIsTyped("headingDeg") && validAngle(sample.headingDeg)
@@ -165,7 +184,7 @@ export function projectFcvManualNavBoxes({
     ?sim(sample.barometerHPa.toFixed(1)+" hPa"):"NO DATA";
   const crossTrack=fieldIsTyped("crossTrackNm") &&
       Number.isFinite(sample.crossTrackNm)
-    ?sim(formatFcvDistance(sample.crossTrackNm,distanceUnit)):"NO DATA";
+    ?sim(formatFcvDistance(sample.crossTrackNm,effectiveDistanceUnit)):"NO DATA";
   // The Data > RANGE box is range TO the selected synthetic waypoint, not
   // the sounder's water-depth RANGE knob. Neither a waypoint nor a position
   // may be substituted from untyped/external ship data. The same deterministic
@@ -175,15 +194,15 @@ export function projectFcvManualNavBoxes({
   const rangeNm=valid && destination
     ?distanceNmBetween(sample.position,destination.position):null;
   const waypointRange=Number.isFinite(rangeNm)
-    ?sim(distanceUnit==="NM"?rangeNm.toFixed(2)+" nm":
-      formatFcvDistance(rangeNm,distanceUnit)):"NO DATA";
+    ?sim(effectiveDistanceUnit==="NM"?rangeNm.toFixed(2)+" nm":
+      formatFcvDistance(rangeNm,effectiveDistanceUnit)):"NO DATA";
   // §1.4.4 NAV indication: an OFFLINE teaching estimate based solely on the
   // same synthetic movement speed used by the one canonical world fixture
   // and a selected synthetic destination. It is NOT a receiver ETA, an OEM
   // predictor, or an assertion of heading/track to that waypoint. Selecting
   // an unavailable NMEA source or losing/staling either input must hide it.
   const ownSpeedKn=valid && settings?.speedSource!=="NMEA"
-    ?sample?.speedKn:null;
+    ?calibrated.speedKn:null;
   const minutes=Number.isFinite(rangeNm) && Number.isFinite(ownSpeedKn) &&
     ownSpeedKn>0 ?Math.ceil(rangeNm*60/ownSpeedKn):null;
   const timeToGo=Number.isSafeInteger(minutes) && minutes>=0 &&
@@ -198,18 +217,44 @@ export function projectFcvManualNavBoxes({
     POSITION:position,COURSE:course,"SPEED (SOG)":sog,
     RANGE:waypointRange,BEARING:bearing,HEADING:heading,
     "BAROM PRESS":pressure,"TIME TO GO":timeToGo,XTE:crossTrack};
+  const placeholders={
+    "SPEED (STW)":"--.- "+effectiveSpeedUnit,
+    "SPEED (SOG)":"--.- "+effectiveSpeedUnit,
+    WIND:"--.- "+effectiveWindUnit,
+    DEPTH:"--.- "+depthSuffix,
+    TEMPERATURE:"--.- "+tempSuffix,
+    TRIP:"--.- "+distSuffix,
+    ODOMETER:"--.- "+distSuffix,
+    RANGE:"--.- "+distSuffix,
+    XTE:"--.- "+distSuffix,
+    POSITION:"--°--.---'",
+    COURSE:"---°",
+    BEARING:"---°",
+    HEADING:"---°",
+    "BAROM PRESS":"----.- hPa",
+    "TIME TO GO":"--:--",
+  };
+  const vietnamese=isVietnameseFcv(settings);
   const defaults=FCV_NAV_BOX_DEFAULTS[mode];
-  const boxes=defaults.map((fallback,i)=>{
+  const boxes=defaults.flatMap((fallback,i)=>{
     const selected=settings?.[mode.toLowerCase()+"Box"+(i+1)];
     const label=FCV_NAV_BOX_OPTIONS.includes(selected) &&
       (i>=2 || selected!=="Off")?selected:fallback;
-    const labelled=label==="BEARING" && settings?.bearing==="Mag"
+    if(label==="Off")return [];
+    const englishLabel=label==="BEARING" && settings?.bearing==="Mag"
       ?"BEARING (MAG)"
       :label==="WIND" && settings?.windSpeedDirection==="Apparent"
         ?"WIND (APPARENT)"
         :label;
-    return {label:labelled,value:values[label]??"NO DATA"};
-  }).filter(item=>item.label!=="Off");
+    const outputLabel=vietnamese
+      ?localizeFcvNavLabel(englishLabel,englishLabel,settings)
+      :englishLabel;
+    return [{
+      label:outputLabel,
+      value:values[label]??"NO DATA",
+      placeholderValue:placeholders[label]??"--.-",
+    }];
+  });
   return {status:valid?"SYNTHETIC_DATA":stale?"STALE_DATA":"NO_DATA",
     boxes,trainingOnly:true,hardwareValidated:false,
     sourceClass:"SIMULATED_ONLY"};

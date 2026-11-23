@@ -22,39 +22,60 @@ body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 11% 
 button { font: inherit; cursor: pointer; color: inherit; user-select: none; touch-action: manipulation; }
 button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #ffc564; outline-offset: 3px; }
 button:active { transform: translateY(1px); }
-.app { max-width: 1570px; margin: auto; padding: 0 36px 40px; }
-.masthead { min-height: 0; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 10px 0; border-bottom: 1px solid #263d4a; }
-.identity { display: flex; align-items: center; gap: 12px; }
-.identity .mark { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 11px; background: #237f91; color: white; font-size: 28px; font-weight: 600; }
-.identity strong { display: block; font-size: 18px; letter-spacing: -.3px; }
-.public-reference-banner { flex: 0 1 auto; max-width: 100%; margin: 0; padding: 6px 10px; border: 1px solid #6d7b86; border-radius: 99px; color: #f5e6ba; background: #273039; text-align: center; font: 700 9px/1.25 Consolas, monospace; letter-spacing: .35px; }
-.heading { display: flex; align-items: baseline; gap: 18px; margin: 12px 0 16px; }
-h1 { flex: none; margin: 0; font-size: clamp(30px, 3vw, 42px); letter-spacing: -1.3px; }
-h1 span { color: #88a8b9; font-weight: 300; }
-.subtitle { margin: 0; color: #a6b9c3; max-width: 560px; font-size: 12px; line-height: 1.4; }
-.workbench { display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: start; gap: 25px; }
-.device-focus-control { grid-column: 1 / -1; justify-self: end; display: inline-flex;
-  align-items: center; gap: 8px; margin: -4px 0 -8px; padding: 6px 9px;
-  border: 1px solid #456271; border-radius: 999px; background: #102733;
-  color: #c9dce4; font: 650 11px/1.2 "Segoe UI",Arial,sans-serif; cursor: pointer; }
+.app { max-width: 1570px; margin: auto; padding: 0 28px 28px; }
+main { position: relative; }
+.masthead { min-height: 0; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 8px 0; border-bottom: 1px solid #223947; }
+.identity { display: flex; align-items: center; gap: 10px; }
+.identity .mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(160deg, #1f7b8e 0%, #135365 100%); border: 1px solid #3c98aa; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 2px 6px rgba(4, 14, 22, 0.5); color: #f4fbfe; font-size: 23px; font-weight: 700; }
+.identity strong { display: block; font-size: 16.5px; letter-spacing: -.25px; color: #f0f7fb; }
+.public-reference-banner { flex: 0 1 auto; max-width: 100%; margin: 0; padding: 5px 11px; border: 1px solid #596c79; border-radius: 99px; color: #f3e3b6; background: linear-gradient(180deg, #24303a 0%, #1b242d 100%); text-align: center; font: 700 9px/1.25 Consolas, monospace; letter-spacing: .4px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+.heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 10px; padding-right: 280px; }
+h1 { flex: none; margin: 0; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -.9px; color: #f4f9fc; }
+h1 span { color: #86a9bc; font-weight: 350; }
+.subtitle { margin: 0; color: #9fb7c4; max-width: 520px; font-size: 12px; line-height: 1.4; }
+.workbench { display: grid; grid-template-columns: minmax(0, 1fr) 332px; align-items: start; column-gap: 25px; row-gap: 10px; }
+.workspace-toolbar { position: absolute; top: 2px; right: 0; z-index: 3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; }
+.device-focus-control { display: inline-flex;
+  align-items: center; gap: 8px; padding: 6px 11px;
+  border: 1px solid #3c5c6c; border-radius: 999px; background: #0e2431;
+  color: #cfe2eb; font: 650 11px/1.2 "Segoe UI",Arial,sans-serif; cursor: pointer;
+  transition: border-color 140ms ease, background-color 140ms ease; }
+.device-focus-control:hover, .workspace-action-btn:hover { background: #143243; border-color: #5d8699; color: #eff8fc; }
 .device-focus-control input { margin: 0; accent-color: #2b8297; }
 .device-focus-control:has(input:focus-visible) { outline: 3px solid #ffc564; outline-offset: 2px; }
+.workspace-action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+  border: 1px solid #3c5c6c; border-radius: 999px; background: #0e2431;
+  color: #cfe2eb; font: 650 11px/1.2 "Segoe UI",Arial,sans-serif;
+  transition: border-color 140ms ease, background-color 140ms ease; }
+.workspace-action-btn[aria-pressed="true"] { background: #135466; border-color: #6cc0d0; color: #ffffff; }
 @media (min-width: 1241px) {
-  .workbench:has(#device-focus-toggle:checked) { grid-template-columns: minmax(0, 1fr) 248px; }
-  .workbench:has(#device-focus-toggle:checked) .device-frame { max-width: 720px; }
+  .workbench:has(#device-focus-toggle:checked) { grid-template-columns: minmax(0, 1fr) 256px; }
+  .workbench:has(#device-focus-toggle:checked) .device-frame,
+  .workbench:has(#device-focus-toggle:checked) .source-cue,
+  .workbench:has(#device-focus-toggle:checked) #operator-quick-guide-bottom { max-width: 720px; }
   .workbench:has(#device-focus-toggle:checked) .training-panel {
     opacity: .72; filter: saturate(.78); transition: opacity 120ms linear; }
   /* Restoring D15 on keyboard focus must beat the checked-state selector. */
   .workbench:has(#device-focus-toggle:checked) .training-panel:focus-within {
     opacity: 1; filter: none; }
+  .workbench > #operator-quick-guide-bottom:not([hidden]) {
+    grid-column: 1; grid-row: 2; justify-self: center; width: 100%; max-width: 680px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 4px 12px; padding: 6px 12px; border: 1px solid #3b697b; border-radius: 7px;
+    background: rgba(11, 38, 52, 0.92); color: #e8f6fb; font-size: 11.5px; line-height: 1.35;
+  }
+  .workbench > #operator-quick-guide-bottom strong { color: #b8e8f5; font-size: 11px; letter-spacing: .25px; }
 }
 .training-panel:focus-within { opacity: 1; filter: none; }
-.source-cue { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 5px 12px;
-  padding: 9px 12px; border-left: 3px solid #80b9c9; border-radius: 6px;
-  background: #102b38; color: #d9edf2; font-size: 12px; line-height: 1.45; }
+/* Docked below .device-frame in Column 1 so status/provenance updates never
+   push the hardware bezel or controls downward (0.00 px layout shift). */
+.source-cue { grid-column: 1; grid-row: 3; justify-self: center; width: 100%; max-width: 680px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  padding: 7px 12px; border: 1px solid #284757; border-left: 3px solid #6faac0; border-radius: 7px;
+  background: rgba(11, 31, 43, 0.88); color: #cfe5ee; font-size: 11.5px; line-height: 1.45; }
 .source-cue[hidden] { display: none !important; }
 .source-cue strong { flex: 0 0 auto; color: #c3e8f1; }
-.source-cue span { flex: 1 1 340px; overflow-wrap: anywhere; }
+.source-cue span { flex: 1 1 320px; overflow-wrap: anywhere; }
 .source-cue[data-source-state="STALE_TRAINING_DATA"],
 .source-cue[data-source-state="INACTIVE_TANKENMARU"],
 .source-cue[data-source-state="SOURCE_HOLD_DISABLED_MENU_OPTION"],
@@ -67,6 +88,8 @@ h1 span { color: #88a8b9; font-weight: 300; }
   white-space: nowrap; border: 0; }
 .device-frame {
   position: relative;
+  grid-column: 1;
+  grid-row: 1;
   /* Center the original-sized teaching bezel in the wide desktop device
      column; the right-hand D15 trainer remains outside the physical face.
      This is workspace composition, not an OEM bezel measurement. */
@@ -262,7 +285,7 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .lcd-control-summary { flex: 0 0 auto; padding: 7px 9px; border-top: 1px solid #c8d3dd; background: #e0e5ea; font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
 .lcd-control-summary > div:last-child { font-weight: 700; }
 .lcd-control-summary[hidden] { display: none; }
-.off-screen { position: absolute; inset: 0; display: grid; place-content: center; gap: 13px; text-align: center; background: radial-gradient(circle, #132633, #060d13 72%); }
+.off-screen { position: absolute; inset: 0; z-index: 5; display: grid; place-content: center; gap: 13px; text-align: center; background: linear-gradient(155deg, #050a11 0%, #09121e 45%, #04070d 100%); box-shadow: inset 0 2px 14px rgba(0, 0, 0, 0.88), inset 0 1px 0 rgba(164, 196, 224, 0.06); }
 .off-screen span { color: #91a5ad; letter-spacing: 4px; font-size: 23px; }
 .off-screen small { color: #748c98; font-size: 11px; }
 .off-screen[hidden] { display: none; }
@@ -379,11 +402,14 @@ h1 span { color: #88a8b9; font-weight: 300; }
 }
 .gain-scale-mark {
   position: absolute; top: 50%; transform: translateY(-50%);
-  color: #eef4f7; font: 800 12px/1 Consolas, monospace; pointer-events: none;
+  color: #eef4f7; font: 800 12px/1 Consolas, monospace;
+  pointer-events: auto; cursor: pointer; padding: 2px 4px; border-radius: 3px;
+  transition: color 120ms ease, background-color 120ms ease;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
-.gain-scale-minus { right: calc(100% + 7px); }
-.gain-scale-plus { left: calc(100% + 7px); }
+.gain-scale-mark:hover { color: #ffffff; background: rgba(255, 255, 255, 0.14); }
+.gain-scale-minus { right: calc(100% + 5px); }
+.gain-scale-plus { left: calc(100% + 5px); }
 .knob {
   position: relative; width: 58px; height: 58px; border-radius: 50%;
   display: grid; place-content: center;
@@ -397,19 +423,22 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .knob:active { transform: scale(.98); }
 .mode-scale { position: absolute; inset: 0; pointer-events: none; color: #e2e8ec; font-size: 6.8px; line-height: 1; font-weight: 700; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8); }
 .mode-scale span { position: absolute; white-space: nowrap; }
-.mode-scale [data-mode="NAV1"] { right: 100%; bottom: 4px; margin-right: 6px; }
-.mode-scale [data-mode="LF-ZOOM"] { right: 100%; top: 23px; margin-right: 7px; }
-.mode-scale [data-mode="LF"] { right: 100%; top: 2px; margin-right: 5px; }
-.mode-scale [data-mode="DUAL"] { left: 50%; top: -11px; transform: translateX(-50%); }
-.mode-scale [data-mode="HF"] { left: 100%; top: 2px; margin-left: 5px; }
-.mode-scale [data-mode="HF-ZOOM"] { left: 100%; top: 23px; margin-left: 7px; }
-.mode-scale [data-mode="NAV2"] { left: 100%; bottom: 4px; margin-left: 6px; }
+.mode-scale [data-mode] { pointer-events: auto; cursor: pointer; padding: 1px 2px; border-radius: 2px; transition: color 120ms ease, background-color 120ms ease; }
+.mode-scale [data-mode]:hover { color: #ffffff; background: rgba(255, 255, 255, 0.12); }
+.mode-scale [data-mode="NAV1"] { right: 100%; bottom: 4px; margin-right: 5px; }
+.mode-scale [data-mode="LF-ZOOM"] { right: 100%; top: 22px; margin-right: 6px; }
+.mode-scale [data-mode="LF"] { right: 100%; top: 1px; margin-right: 4px; }
+.mode-scale [data-mode="DUAL"] { left: 50%; top: -12px; transform: translateX(-50%); }
+.mode-scale [data-mode="HF"] { left: 100%; top: 1px; margin-left: 4px; }
+.mode-scale [data-mode="HF-ZOOM"] { left: 100%; top: 22px; margin-left: 6px; }
+.mode-scale [data-mode="NAV2"] { left: 100%; bottom: 4px; margin-left: 5px; }
 .mode-scale [data-selected="true"] { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; }
-.rotary-assist { padding: 10px; border: 1px solid #375366; background: #102735; border-radius: 10px; }
+.rotary-assist { padding: 11px; border: 1px solid #325062; background: #0e2432; border-radius: 10px; }
 .rotary-assist h3 { margin: 3px 0 5px; }
 .rotary-assist .hint { margin: 0 0 10px; font-size: 11px; }
 .rotary-assist-row { display: grid; grid-template-columns: 1fr 48px 48px; align-items: center; gap: 9px; padding: 6px 3px; font-size: 12px; font-weight: 750; }
-.trainer-rotate { min-height: 34px; border: 1px solid #7195a2; border-radius: 6px; background: #243e4d; color: #d9f3fa; font-weight: 750; font-size: 19px; }
+.trainer-rotate { min-height: 34px; border: 1px solid #688e9c; border-radius: 6px; background: #1e3847; color: #dcf4fb; font-weight: 750; font-size: 19px; }
+.trainer-rotate:hover { background: #274759; border-color: #88b2c2; }
 .power-button {
   position: absolute; top: 91.8%; left: calc(50% - 25px);
   width: 50px; height: 32px; border-radius: 999px;
@@ -427,40 +456,58 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .power-glyph { position: relative; display: block; width: 11px; height: 11px; margin: 1px 0 0; border: 1.8px solid #f4f9ff; border-top-color: transparent; border-radius: 50%; }
 .power-glyph::before { content: ""; position: absolute; width: 1.8px; height: 6px; left: 2.8px; top: -3px; background: #f4f9ff; border-radius: 1px; }
 .power-button.pressing { background: linear-gradient(180deg, #4f96f4 0%, #277ae3 45%, #1559ba 100%); }
-.device-footer { position: static; color: #a9bac3; font-size: 10px; letter-spacing: .2px; line-height: 1.5; }
+.device-footer { position: static; color: #9db2be; font-size: 10px; letter-spacing: .2px; line-height: 1.5; }
 .operator-quick-guide { display: none; }
 .operator-quick-guide[hidden] { display: none !important; }
 .mobile-training-note { display: none; }
-.training-panel { border: 1px solid #2c4451; background: linear-gradient(#102331, #0e1d29); border-radius: 16px; padding: 23px; box-shadow: 0 15px 30px #05101955; }
-.panel-head h2 { margin: 2px 0 18px; font-size: 22px; }
+.training-panel { grid-column: 2; grid-row: 1 / span 4; border: 1px solid #2b4554; background: linear-gradient(180deg, #0f2230 0%, #0b1924 100%); border-radius: 16px; padding: 20px; box-shadow: inset 0 1px 0 rgba(190, 225, 240, 0.08), 0 16px 34px rgba(3, 10, 17, 0.55); }
+.panel-head .eyebrow { margin: 0 0 2px; font: 700 9.5px/1.2 Consolas, monospace; letter-spacing: 1.2px; color: #79adbf; }
+.panel-head h2 { margin: 2px 0 14px; font-size: 20px; color: #eef7fb; letter-spacing: -.3px; }
 .stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; }
-.stats div { background: #0b1722; border: 1px solid #294355; padding: 11px 7px; border-radius: 8px; text-align: center; }
-.stats small { display: block; color: #7693a3; letter-spacing: 1px; font-size: 9px; }
-.stats strong { display: block; margin-top: 5px; font: 700 20px Consolas, monospace; color: #e6f4fb; }
-.trainer-buttons { display: grid; gap: 8px; margin: 17px 0; }
-.trainer-buttons button { border: 1px solid #406273; padding: 11px; border-radius: 7px; background: #172d3c; color: #d6e8f2; font-size: 13px; }
-.trainer-buttons button.primary { background: #0e6479; border-color: #2696a6; color: #fff; font-weight: 700; }
-.validation-status { padding: 12px; border-radius: 8px; border: 1px solid #405562; background: #102531; font-size: 11px; line-height: 1.6; color: #9fc1d0; min-height: 61px; }
-.lesson-panel { border: 1px solid #365b67; background: #132a39; border-radius: 9px; padding: 12px; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 8px; }
+.stats div { background: #091520; border: 1px solid #274254; padding: 10px 6px; border-radius: 8px; text-align: center; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04); }
+.stats small { display: block; color: #7898a8; letter-spacing: .9px; font-size: 9px; font-weight: 700; }
+.stats strong { display: block; margin-top: 4px; font: 700 19px Consolas, monospace; color: #e8f5fc; }
+.trainer-buttons { display: grid; gap: 8px; margin: 15px 0; }
+.trainer-buttons button { border: 1px solid #3c5f71; padding: 10px 11px; border-radius: 8px; background: #142a39; color: #daecf5; font-size: 12.5px; font-weight: 600; transition: background-color 120ms ease, border-color 120ms ease; }
+.trainer-buttons button:hover { background: #1b3648; border-color: #5b859a; }
+.trainer-buttons button.primary { background: #0f6277; border-color: #2c96ab; color: #fff; font-weight: 700; }
+.trainer-buttons button.primary:hover { background: #14748c; }
+.trainer-buttons button.accent-action { background: linear-gradient(180deg, #1b4f6e 0%, #133c56 100%); border-color: #4b87ad; color: #f2f9fd; font-weight: 700; }
+.trainer-buttons button.accent-action[aria-pressed="true"] { background: linear-gradient(180deg, #1d5d73 0%, #134659 100%); border-color: #6bc1d4; }
+.settings-transfer-panel { display: grid; gap: 8px; border: 1px solid #355868; border-radius: 9px; background: #0d212e; padding: 12px; min-width: 0; }
+.settings-transfer-panel h3 { margin: 0; font-size: 12px; color: #b4dce7; }
+.settings-transfer-panel label { font-size: 12px; font-weight: 600; color: #cbe6ef; }
+.settings-transfer-panel input[type=file] { display: block; width: 100%; max-width: 100%; min-width: 0; min-height: 44px; padding: 8px 6px; font-size: 12px; color: #d6e8f2; border: 1px dashed #3d6273; border-radius: 6px; background: #091823; }
+.settings-transfer-panel p { margin: 2px 0; font-size: 11.5px; line-height: 1.5; overflow-wrap: anywhere; }
+.settings-transfer-panel #settings-transfer-status { color: #a7cbd9; font-weight: 600; }
+.settings-transfer-panel #settings-transfer-status[data-state="pass"] { color: #94efcb; }
+.settings-transfer-panel #settings-transfer-status[data-state="rejected"] { color: #ffc4a8; }
+.validation-status { padding: 12px; border-radius: 8px; border: 1px solid #385160; background: #0d212d; font-size: 11px; line-height: 1.6; color: #a3c5d4; min-height: 61px; }
+.lesson-panel { border: 1px solid #345765; background: #102534; border-radius: 10px; padding: 12px; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 8px; }
 .lesson-panel > * { min-width: 0; }
 .lesson-panel label { color: #d5e5f0; font-size: 12px; font-weight: 650; }
-.lesson-panel select, .lesson-panel button { min-height: 38px; width: 100%; max-width: 100%; border: 1px solid #507485; border-radius: 6px; color: #eef8ff; background: #173d53; padding: 8px; font: 600 12px system-ui,sans-serif; }
-.lesson-panel button { background: #126579; cursor: pointer; }
+.lesson-panel select, .lesson-panel button { min-height: 40px; width: 100%; max-width: 100%; border: 1px solid #4c7182; border-radius: 7px; color: #eef8ff; background: #15384d; padding: 8px 10px; font: 600 12px system-ui,sans-serif; }
+.lesson-panel button { background: #126276; cursor: pointer; }
+.lesson-panel button:hover { background: #17758c; }
 .lesson-panel #lesson-result { color: #a8d9e7; font-size: 12px; line-height: 1.5; }
-.training-panel h3 { font-size: 12px; color: #9dcbd3; text-transform: uppercase; letter-spacing: 1.1px; margin: 24px 0 8px; }
-.hint { font-size: 12px; line-height: 1.6; color: #b3c4cf; }
-.shortcut-line { color: #92a9b9; font-size: 11px; line-height: 2.5; }
-kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-radius: 3px; font-family: Consolas, monospace; }
-.device-roadmap { display: grid; gap: 3px; }
-.device-roadmap div { display: flex; flex-wrap: wrap; gap: 7px; font-size: 11px; color: #628494; padding: 8px 0; border-bottom: 1px solid #254050; }
-.device-roadmap strong { color: #bdd7e3; }
-.device-roadmap em { font-style: normal; margin-left: auto; color: #829fac; font-size: 10px; }
-.disclaimer { padding: 12px 0 0; font-size: 11px; color: #91aab6; text-align: center; line-height: 1.6; }
+.training-panel h3 { font-size: 11.5px; color: #9ecbd5; text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 8px; }
+.hint { font-size: 12px; line-height: 1.58; color: #b2c5d0; }
+.shortcut-line { color: #92a9b9; font-size: 11px; line-height: 2.2; }
+.shortcut-grid { display: grid; gap: 6px; margin: 8px 0 12px; }
+.shortcut-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 8px; border: 1px solid #243e4d; border-radius: 6px; background: #0a1a25; font-size: 11.5px; color: #cfe2ec; }
+.shortcut-item span { text-align: right; color: #a9c3d1; font-size: 11px; }
+kbd { background: #1c3443; border: 1px solid #4d7082; box-shadow: inset 0 -1px 0 #0d1d27; padding: 2px 6px; border-radius: 4px; color: #eff8fc; font: 700 11px/1.3 Consolas, monospace; }
+.disclaimer { padding: 14px 0 0; font-size: 11px; color: #8ea8b5; text-align: center; line-height: 1.6; }
 @media (max-width: 1240px) {
+  .heading { padding-right: 132px; }
   .workbench { grid-template-columns: minmax(0, 1fr); }
+  .workbench > .mobile-training-note { order: 0; }
+  .workbench > #operator-quick-guide { order: 1; }
   .device-focus-control { display: none; }
-  .device-frame { width: 100%; margin: auto; }
-  .training-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; }
+  .device-frame { grid-column: 1 / -1; grid-row: auto; order: 2; width: 100%; margin: auto; }
+  .workbench > #operator-quick-guide-bottom { grid-column: 1 / -1; grid-row: auto; order: 3; }
+  .source-cue { grid-column: 1 / -1; grid-row: auto; order: 4; max-width: 700px; }
+  .training-panel { grid-column: 1 / -1; grid-row: auto; order: 5; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; }
   .training-panel > .panel-head, .training-panel > .stats,
   .training-panel > .trainer-buttons, .training-panel > .validation-status,
   .training-panel > .rotary-assist { grid-column: span 1; }
@@ -470,12 +517,12 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   .training-panel > .instructor-telemetry { grid-column: span 2; }
   /* Direct children only: targeting every nested h3 created a phantom second
      CSS Grid column inside D15 lesson forms, squeezing action buttons. */
-  .training-panel > h3, .training-panel > .device-roadmap { grid-column: span 2; }
+  .training-panel > h3 { grid-column: span 2; }
   .trainer-buttons { margin: 0; }
 }
 @media (max-width: 700px) {
   .app { padding: 0 9px 24px; }
-  .workbench > .mobile-training-note { grid-column: 1 / -1; display: block;
+  .workbench > .mobile-training-note { grid-column: 1 / -1; order: 0; display: block;
     margin: 0; padding: 9px 11px; border: 1px solid #49616d;
     border-radius: 6px; color: #c7e0e7; background: #132a37;
     font-size: 10px; line-height: 1.5; }
@@ -486,11 +533,13 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
     font-size: 11px; line-height: 1.3; }
   .operator-quick-guide strong { font-size: 10px; letter-spacing: .4px; }
   .operator-quick-guide span { white-space: normal; overflow-wrap: anywhere; }
+  .workspace-toolbar { position: static; grid-column: 1 / -1; order: 1; margin: 0; width: 100%; justify-content: flex-end; }
+  .workspace-action-btn { min-height: 44px; padding: 8px 14px; font-size: 12px; }
   .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 7px; padding: 9px 0 8px; }
   .identity .mark { width: 34px; height: 34px; border-radius: 10px; font-size: 25px; }
   .identity strong { font-size: 18px; }
   .public-reference-banner { width: 100%; max-width: 100%; padding: 5px 8px; border-radius: 5px; font-size: 9px; letter-spacing: .1px; text-align: left; white-space: normal; }
-  .heading { margin: 10px 9px 14px; display: block; }
+  .heading { margin: 10px 9px 14px; padding-right: 0; display: block; }
   h1 { font-size: clamp(27px, 7vw, 32px); }
   .subtitle { margin-top: 3px; font-size: 11px; line-height: 1.35; }
   /* Phone: a deliberately RE-FLOWED training face, not the OEM bezel map.
@@ -536,6 +585,7 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   .lcd-overlay-title { padding: 5px; }
   .lcd-overlay-footer { display: none; }
   .lcd-overlay[data-layout="main-menu"] .lcd-overlay-footer,
+  .lcd-overlay[data-layout="control"] .lcd-overlay-footer,
   .lcd-overlay[data-layout="func-setting"] .lcd-overlay-footer { display: block; }
   .lcd-menu-categories { font-size: 10px; }
   .lcd-menu-options { max-height: 105px; }
@@ -543,6 +593,7 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   .trainer-rotate { min-height: 44px; min-width: 44px; }
   .trainer-buttons button { min-height: 44px; }
   .lesson-panel select, .lesson-panel button { width: 100%; min-height: 44px; }
+  #import-settings-file,
   #archive-envelope-file, #archive-sidecar-file, #archive-timeline-range,
   .archive-timeline-controls button { min-height: 44px; }
   .trainer-buttons { margin: 13px 0; }
@@ -555,18 +606,20 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
    untouched. Without JS, .d15-enhanced is absent and all sections stay open. */
 .d15-tablist[hidden], .d15-tabpanel[hidden] { display: none !important; }
 .d15-tablist { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px; padding: 3px; }
+  gap: 5px; padding: 4px; background: #08151f; border: 1px solid #264152; border-radius: 10px; }
 .d15-tab { min-width: 0; min-height: 44px; padding: 6px 5px; border-radius: 7px;
-  border: 1px solid #4b7585; color: #dbeaf0; background: #152d3a;
-  font: 700 11px/1.25 "Segoe UI", Arial, sans-serif; text-align: center; }
+  border: 1px solid #355869; color: #d3e5ee; background: #112634;
+  font: 700 11px/1.25 "Segoe UI", Arial, sans-serif; text-align: center;
+  transition: background-color 120ms ease, border-color 120ms ease; }
+.d15-tab:hover { background: #173447; border-color: #558094; }
 .d15-tab:nth-child(5) { grid-column: span 2; }
-.d15-tab[aria-selected="true"] { background: #126477; color: #fff;
-  border-color: #80ccd9; box-shadow: inset 0 -3px 0 #9be1e6; }
+.d15-tab[aria-selected="true"] { background: linear-gradient(180deg, #156e83 0%, #0f5668 100%); color: #fff;
+  border-color: #7ccbd9; box-shadow: inset 0 -2px 0 #9fe3ea; }
 .d15-tab:focus-visible { outline: 3px solid #ffc564; outline-offset: 1px; }
 .training-panel.d15-enhanced { position: sticky; top: 12px;
   display: flex; flex-direction: column; gap: 8px; min-height: 0;
-  height: min(780px, calc(100dvh - 24px)); max-height: calc(100dvh - 24px);
-  padding: 13px; overflow: hidden; }
+  height: min(790px, calc(100dvh - 24px)); max-height: calc(100dvh - 24px);
+  padding: 14px; overflow: hidden; }
 .d15-enhanced .panel-head h2 { font-size: 18px; margin: 0; line-height: 1.25; }
 .d15-enhanced .device-footer { margin: 0; font-size: 10px; line-height: 1.3; }
 .d15-enhanced .d15-tabpanels { flex: 1 1 auto; min-height: 0; overflow: hidden; }
@@ -611,9 +664,10 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   button:active, .knob:active { transform: none; }
 }
 @media (forced-colors: active) {
-  .hardware-key, .power-button, .knob, .pad, .d15-tab,
+  .hardware-key, .power-button, .knob, .pad, .d15-tab, .workspace-action-btn,
   .trainer-buttons button, .lesson-panel button, .lesson-panel select,
-  .lcd-overlay, .source-cue, .operator-guidance, .source-matrix-item {
+  .lcd-overlay, .source-cue, .operator-guidance, .source-matrix-item,
+  .settings-transfer-panel {
     forced-color-adjust: auto;
     border: 1px solid ButtonText;
   }
@@ -627,7 +681,7 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
 }
 
 /* P25 archive is a D15-only source-bound replay schematic, outside OEM LCD. */
-.archive-replay-panel { display:grid; gap:8px; border:1px solid #3d6370; border-radius:8px; background:#102734; padding:12px; min-width:0; }
+.archive-replay-panel { display:grid; gap:8px; border:1px solid #355868; border-radius:9px; background:#0d212e; padding:12px; min-width:0; }
 .archive-replay-panel h3 { margin:0; }
 .archive-replay-panel label { font-size:12px; color:#cbe8ef; }
 .archive-replay-panel input[type=file] { display:block; width:100%; max-width:100%; min-width:0; min-height:44px; padding:9px 6px; font-size:12px; color:#d6e8f2; }

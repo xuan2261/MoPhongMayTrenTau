@@ -1,18 +1,24 @@
 /**
- * P14 exact-revision replay dispatch, not implicit replay migration.
+ * P14/P1 exact-revision replay dispatch, not implicit replay migration.
  *
- * Original profile21 sessions use their frozen reducer/menu/adapter. New AP-1
- * profile22 sessions use the active reducer. Core replay still verifies the
- * full schema, event metadata, source profile fingerprint and final hash.
- * Neither path invents an OEM firmware version or connects real hardware.
+ * Original profile21 and profile22 sessions use their frozen reducer/menu/adapter
+ * from legacy-profile-factory.mjs. Active profile23 sessions use the current
+ * reducer. Core replay still verifies the full schema, event metadata, source
+ * profile fingerprint and final hash.
  */
 import {replay} from "../../core/session.mjs";
 import {FCV588_ADAPTER} from "./adapter.mjs";
-import {FCV588_PROFILE21_ADAPTER} from "./adapter-profile21.mjs";
+import {
+  FCV588_PROFILE21_ADAPTER,
+  FCV588_PROFILE22_ADAPTER,
+  FCV588_PROFILE23_ADAPTER,
+} from "./legacy-profile-factory.mjs";
 
 const PROFILE_ADAPTERS=Object.freeze({
   "F1-public-reference-21":FCV588_PROFILE21_ADAPTER,
-  "F1-public-reference-22":FCV588_ADAPTER,
+  "F1-public-reference-22":FCV588_PROFILE22_ADAPTER,
+  "F1-public-reference-23":FCV588_PROFILE23_ADAPTER,
+  "F1-public-reference-24":FCV588_ADAPTER,
 });
 
 export function getFcvReplayAdapter(profileRevision){

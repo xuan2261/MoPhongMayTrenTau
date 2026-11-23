@@ -107,7 +107,7 @@ function registerSecurityPolicies(){
   });
   own.on("will-download",(event,item)=>{
     if(!item.getURL().startsWith("blob:"+ORIGIN+"/") ||
-       item.getFilename()!=="FCV588-settings-training-only.json")
+       !/^FCV588-[A-Za-z0-9._-]+\.json$/i.test(item.getFilename()))
       event.preventDefault();
   });
 }
@@ -131,7 +131,7 @@ function makeWindow(){
   const win=new BrowserWindow({
     width:1450,height:920,minWidth:850,minHeight:620,show:false,
     autoHideMenuBar:true,
-    title:"FCV-588 • SYNTHETIC TRAINING POC (NOT OEM)",
+    title:"FURUNO FCV-588 — Mô phỏng Máy Đo Sâu Dò Cá Độc Lập",
     webPreferences:{
       nodeIntegration:false,
       contextIsolation:true,
@@ -141,7 +141,14 @@ function makeWindow(){
       devTools:false,
     },
   });
+  win.on("page-title-updated",event=>event.preventDefault());
   win.webContents.setWindowOpenHandler(()=>({action:"deny"}));
+  win.webContents.on("before-input-event",(event,input)=>{
+    if(input.type==="keyDown" && input.key==="F11"){
+      win.setFullScreen(!win.isFullScreen());
+      event.preventDefault();
+    }
+  });
   win.webContents.on("will-navigate",(event,navigationURL)=>{
     if(navigationURL!==ORIGIN+"/" &&
        navigationURL!==ORIGIN+"/web/index.html")event.preventDefault();
@@ -169,15 +176,16 @@ if(!app.requestSingleInstanceLock()){
   });
   app.commandLine.appendSwitch("disable-background-networking");
   app.commandLine.appendSwitch("no-proxy-server");
-  app.setAppUserModelId("vn.mophongmaytrentau.fcv588.synthetic.poc");
+  app.setAppUserModelId("vn.mophongmaytrentau.fcv588.standalone");
   const privateRoot=process.env.FCV588_POC_PROFILE_DIR;
   if(privateRoot && path.isAbsolute(privateRoot)){
     app.setPath("userData",path.resolve(privateRoot));
   }else{
     app.setPath("userData",path.join(app.getPath("appData"),
-      "FCV588-Synthetic-POC-UNRELEASED"));
+      "FURUNO-FCV588-Simulator"));
   }
   app.whenReady().then(()=>{
+    app.setAccessibilitySupportEnabled(true);
     protocol.handle(SCHEME,serveLocal);
     registerSecurityPolicies();
     makeWindow();

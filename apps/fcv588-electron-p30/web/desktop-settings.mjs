@@ -6,7 +6,7 @@ import {exportDesktopSettingsText,importDesktopSettingsText,
   DESKTOP_SETTINGS_KEY} from "./desktop-settings-core.mjs";
 
 const root=document.querySelector(".app > main");
-if(root){
+if(root && !document.getElementById("btn-export-settings") && !document.getElementById("desktop-export-settings")){
   const block=document.createElement("section");
   block.id="desktop-transfer";
   block.setAttribute("aria-label","Chuyển cấu hình cục bộ của ứng dụng Windows");

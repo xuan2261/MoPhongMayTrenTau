@@ -48,6 +48,7 @@ node_modules/
 dist/
 dist-*/
 bundle/
+apps/fcv588-electron-p30/bundle/
 coverage/
 build/
 *.log

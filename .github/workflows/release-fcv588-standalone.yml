@@ -1,0 +1,69 @@
+name: Release FCV-588 Standalone
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  GIT_LFS_SKIP_SMUDGE: "1"
+  CSC_IDENTITY_AUTO_DISCOVERY: "false"
+
+jobs:
+  build-standalone-fcv588:
+    name: Build Standalone HTML & Windows Installers
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Configure Git longpaths and skip LFS smudge
+        run: |
+          git config --global core.longpaths true
+          git config --global filter.lfs.smudge "git-lfs smudge --skip -- %f"
+          git config --global filter.lfs.process "git-lfs filter-process --skip"
+
+      - name: Checkout repository (without LFS blobs)
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build & check single-file FCV-588 Standalone HTML
+        run: |
+          node tools/build_fcv588_standalone.mjs --check
+          node tools/build_fcv588_standalone.mjs
+
+      - name: Install Electron packager dependencies
+        working-directory: apps/fcv588-electron-p30
+        run: npm install --no-audit --no-fund
+
+      - name: Verify synced Electron unit & replay matrix tests
+        run: npm --prefix apps/fcv588-electron-p30 test
+
+      - name: Build Windows Portable (.exe) and NSIS Setup Installer (.exe)
+        run: npm --prefix apps/fcv588-electron-p30 run package:win
+
+      - name: Verify generated artifacts exist
+        run: |
+          test -f "dist/FCV-588-Standalone.html"
+          test -f "dist/electron/FCV-588-Portable-1.0.0-win-x64.exe"
+          test -f "dist/electron/FURUNO FCV-588 Simulator Setup 1.0.0.exe"
+          ls -lh dist/FCV-588-Standalone.html dist/electron/*.exe
+
+      - name: Upload Standalone HTML & Windows Installer Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FCV-588-Standalone-Windows-Installer-and-HTML
+          if-no-files-found: error
+          path: |
+            dist/FCV-588-Standalone.html
+            dist/electron/*.exe

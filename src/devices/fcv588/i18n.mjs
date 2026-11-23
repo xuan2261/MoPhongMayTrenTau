@@ -379,6 +379,8 @@ const CHOICE_VI = Object.freeze({
   Sound3: "Am 3",
   Stop: "Dung",
   Max: "Toi da",
+  Yes: "Co",
+  No: "Khong",
 });
 
 const PICTURE_ADVANCE_VI = Object.freeze({
@@ -510,4 +512,42 @@ export function localizeFcvChoiceValue(settingKey, value, settings) {
 
 export function localizeFcvMenuLegend(settings) {
   return isVietnameseFcv(settings) ? MENU_LEGEND_VI : MENU_LEGEND_EN;
+}
+
+const CONTROL_TITLE_EN = Object.freeze({
+  range: "Range",
+  gain: "Auto Gain",
+  brill: "Brill",
+  mode: "MODE",
+});
+
+const CONTROL_TITLE_VI = Object.freeze({
+  range: "Thang do",
+  gain: "Khuech dai TD",
+  brill: "Do sang",
+  mode: "Che do",
+});
+
+const CONTROL_LEGEND_EN = Object.freeze({
+  range: Object.freeze(["◀/▶: Mode  ▲/▼: Preset", "[ENTER]: Enter  [MENU]: Back"]),
+  gain: Object.freeze(["▲/▼: Mode  ◀/▶: Offset", "[ENTER]: Enter  [MENU]: Back"]),
+  brill: Object.freeze(["◀/▶: Level  [BRILL]: Step", "[ENTER] / [MENU]: Save"]),
+  mode: Object.freeze(["MODE: Select", "[MENU]: Cancel"]),
+});
+
+const CONTROL_LEGEND_VI = Object.freeze({
+  range: Object.freeze(["◀/▶: Che do  ▲/▼: Thang", "[ENTER]: Nhap vao  [MENU]: Quay lai"]),
+  gain: Object.freeze(["▲/▼: Che do  ◀/▶: Bu", "[ENTER]: Nhap vao  [MENU]: Quay lai"]),
+  brill: Object.freeze(["◀/▶: Muc  [BRILL]: Doi", "[ENTER] / [MENU]: Luu"]),
+  mode: Object.freeze(["MODE: Chon lua", "[MENU]: Huy"]),
+});
+
+export function localizeFcvControlTitle(kind, settings) {
+  const table = isVietnameseFcv(settings) ? CONTROL_TITLE_VI : CONTROL_TITLE_EN;
+  return Object.hasOwn(table, kind) ? table[kind] : String(kind ?? "");
+}
+
+export function localizeFcvControlLegend(kind, settings) {
+  const table = isVietnameseFcv(settings) ? CONTROL_LEGEND_VI : CONTROL_LEGEND_EN;
+  return Object.hasOwn(table, kind) ? table[kind] : MENU_LEGEND_EN;
 }
