@@ -77,9 +77,10 @@ export async function buildElectronBundle({
   };
 
   const sortedWebSrcPaths = Object.keys(hashes).sort();
+  const desktopShellFiles = ["desktop/main.cjs", "desktop/fcv588.ico"];
   const objects = [
     ...sortedWebSrcPaths,
-    "desktop/main.cjs",
+    ...desktopShellFiles,
   ];
 
   await rm(bundleDir, {recursive: true, force: true});
@@ -95,7 +96,7 @@ export async function buildElectronBundle({
     if (bytes.length > MAX_FILE_BYTES) {
       throw new Error("oversize bundle file: " + rel);
     }
-    if (rel === "desktop/main.cjs") {
+    if (desktopShellFiles.includes(rel)) {
       hashes[rel] = hash(bytes);
       totalBytes += bytes.length;
     }

@@ -95,8 +95,10 @@ async function serveLocal(request){
 
 function registerSecurityPolicies(){
   const own=session.defaultSession;
-  own.setPermissionRequestHandler((_webContents,_permission,callback)=>callback(false));
-  own.setPermissionCheckHandler(()=>false);
+  own.setPermissionRequestHandler((_webContents,permission,callback)=>
+    callback(permission==="fullscreen"));
+  own.setPermissionCheckHandler((_webContents,permission)=>
+    permission==="fullscreen");
   own.webRequest.onBeforeRequest((details,callback)=>{
     // Block HTTP(S), sockets and every external scheme at the network layer.
     // blob: downloads originate only from the local UI's explicit export action.
@@ -131,6 +133,7 @@ function makeWindow(){
   const win=new BrowserWindow({
     width:1450,height:920,minWidth:850,minHeight:620,show:false,
     autoHideMenuBar:true,
+    icon:path.join(__dirname,"fcv588.ico"),
     title:"FURUNO FCV-588 — Mô phỏng Máy Đo Sâu Dò Cá Độc Lập",
     webPreferences:{
       nodeIntegration:false,

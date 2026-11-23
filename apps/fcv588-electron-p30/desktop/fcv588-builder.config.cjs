@@ -19,6 +19,7 @@ module.exports = {
   publish: null,
   win: {
     target: ["nsis", "portable"],
+    icon: path.join(__dirname, "fcv588.ico"),
     signAndEditExecutable: true,
   },
   nsis: {
