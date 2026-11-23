@@ -104,7 +104,7 @@ def viewport(browser,w,h,expected):
 
     def metrics():
         return page.locator("#instructor-source-matrix").evaluate(
-            """(matrix,sels)=>{
+            r"""(matrix,sels)=>{
              const rgb=x=>(x.match(/\d+(?:\.\d+)?/g)||[]).slice(0,3).map(Number);
              const lum=x=>rgb(x).reduce((sum,v,i)=>{
                const n=v/255,c=n<=.04045?n/12.92:((n+.055)/1.055)**2.4;

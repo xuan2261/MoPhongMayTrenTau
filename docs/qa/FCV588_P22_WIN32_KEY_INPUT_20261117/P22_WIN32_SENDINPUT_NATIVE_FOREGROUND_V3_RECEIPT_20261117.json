@@ -32,7 +32,7 @@
     "hwnd": 5769834,
     "pid": 25584,
     "title": "Tiếp tục kiểm chứng P16 - Helium",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
     "foreground": true
   },
   "witnessCandidates": [
@@ -40,7 +40,7 @@
       "hwnd": 272697440,
       "pid": 30224,
       "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
-      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
       "foreground": false
     }
   ],
@@ -216,7 +216,7 @@
       "hwnd": 272697440,
       "pid": 30224,
       "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
-      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
       "foreground": true
     }
   },
@@ -225,7 +225,7 @@
     "hwnd": 272697440,
     "pid": 30224,
     "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "foreground": true
   },
   "afterNativeKeyUp": {
@@ -291,7 +291,7 @@
       "hwnd": 272697440,
       "pid": 30224,
       "title": "FCV588-P22-OWNED-KEYBOARD-WITNESS-20261117",
-      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
       "foreground": true
     }
   },
@@ -300,7 +300,7 @@
     "hwnd": 5769834,
     "pid": 25584,
     "title": "Tiếp tục kiểm chứng P16 - Helium",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
     "foreground": true
   },
   "portsClosed": {

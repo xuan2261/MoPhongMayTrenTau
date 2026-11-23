@@ -7,3 +7,8 @@
 *.pdf filter=lfs diff=lfs merge=lfs -text
 *.pak filter=lfs diff=lfs merge=lfs -text
 *.pdb filter=lfs diff=lfs merge=lfs -text
+
+# Preserve exact byte sequences (LF/CRLF/mixed-EOL) for SHA-256 sealed QA receipts and fixtures.
+docs/qa/*.json -text
+docs/qa/**/*.json -text
+test/fixtures/*.json -text

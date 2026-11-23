@@ -1,4 +1,4 @@
-> From: https://chatgpt.com/g/g-p-6acd837a22f48191aa4280a088d1834d-mophongmaytrentau/c/6acce448-bc64-83ec-99ae-fe71c26975b5
+> From: <REDACTED_PRIVATE_CHAT_URL>
 
 # you asked
 

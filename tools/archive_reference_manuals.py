@@ -3,7 +3,7 @@
 
 No executable archive members are extracted or executed. Existing files are
 verified rather than silently overwritten. See sources/manuals/MANIFEST.json.
-Requires Python 3 and requests/pypdf (already present on the host in 2026-10).
+Requires Python 3 and requests/pypdf for live downloads (not needed for --dry-run).
 """
 from __future__ import annotations
 
@@ -12,21 +12,26 @@ import hashlib
 import html
 import json
 import re
-import shutil
-import sys
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-import requests
-from pypdf import PdfReader
+try:
+    import requests
+except ImportError:  # pragma: no cover - optional in offline/dry-run environments
+    requests = None  # type: ignore[assignment]
+
+try:
+    from pypdf import PdfReader
+except ImportError:  # pragma: no cover - optional in offline/dry-run environments
+    PdfReader = None  # type: ignore[assignment]
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "sources" / "manuals"
 USER_AGENT = "MoPhongMayTrenTau-Documentation-Archiver/1.0 (training research)"
 MAX_DOWNLOAD_BYTES = 160 * 1024 * 1024
-MAX_EXTRACT_BYTES = 90 * 1024 * 1024
+MAX_EXTRACT_BYTES = 250 * 1024 * 1024
 
 PDF_SOURCES = [
     {
@@ -178,8 +183,33 @@ def checksum(path: Path) -> str:
     return sha.hexdigest()
 
 
+def copy_bounded_stream(src, dst, max_bytes: int = MAX_EXTRACT_BYTES) -> int:
+    """Copy bytes from src to dst while enforcing a strict uncompressed byte cap."""
+    written = 0
+    while True:
+        chunk = src.read(1024 * 1024)
+        if not chunk:
+            break
+        written += len(chunk)
+        if written > max_bytes:
+            raise ValueError(f"extracted stream exceeds {max_bytes} byte cap")
+        dst.write(chunk)
+    return written
+
+
+def is_allowed_canto_package_url(link: str, label: str) -> bool:
+    parsed = urlparse(link)
+    return (
+        parsed.scheme == "https"
+        and parsed.hostname == "raymarine.canto.global"
+        and label in link
+    )
+
+
 def direct_download(url: str, path: Path) -> tuple[str, int]:
-    if not url.lower().startswith("https://"):
+    if requests is None:
+        raise RuntimeError("requests package is required for live downloads")
+    if urlparse(url).scheme != "https":
         raise ValueError("HTTPS documentation source required")
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
@@ -205,7 +235,8 @@ def direct_download(url: str, path: Path) -> tuple[str, int]:
                     if size > MAX_DOWNLOAD_BYTES:
                         raise ValueError("download exceeds size cap")
                     out.write(chunk)
-        magic = part.open("rb").read(5)
+        with part.open("rb") as fh:
+            magic = fh.read(5)
         if path.suffix.lower() == ".pdf" and not magic.startswith(b"%PDF-"):
             raise ValueError("non-PDF response")
         if path.suffix.lower() == ".zip" and not magic.startswith(b"PK\x03\x04"):
@@ -221,7 +252,11 @@ def direct_download(url: str, path: Path) -> tuple[str, int]:
 
 
 def pdf_summary(path: Path, expected: list[str]) -> dict:
-    if path.open("rb").read(5) != b"%PDF-":
+    if PdfReader is None:
+        raise RuntimeError("pypdf package is required for PDF verification")
+    with path.open("rb") as fh:
+        signature = fh.read(5)
+    if signature != b"%PDF-":
         raise ValueError("invalid PDF signature")
     reader = PdfReader(str(path), strict=False)
     pages = len(reader.pages)
@@ -239,11 +274,13 @@ def pdf_summary(path: Path, expected: list[str]) -> dict:
 
 
 def archive_url_by_label(label: str) -> str:
+    if requests is None:
+        raise RuntimeError("requests package is required to resolve package URLs")
     r = requests.get("https://www.transpondertech.com/support", timeout=(15, 35),
                      headers={"User-Agent": USER_AGENT})
     r.raise_for_status()
     links = re.findall(r'href="([^"]+)"', html.unescape(r.text))
-    matches = [link for link in links if "raymarine.canto.global/" in link and label in link]
+    matches = [link for link in links if is_allowed_canto_package_url(link, label)]
     if not matches:
         raise ValueError("official documentation package link missing")
     return matches[0]
@@ -251,6 +288,7 @@ def archive_url_by_label(label: str) -> str:
 
 def extract_manual_pdfs(package_path: Path, dest_dir: Path) -> list[dict]:
     extracted = []
+    total_extracted_bytes = 0
     with zipfile.ZipFile(package_path) as archive:
         for member in archive.infolist():
             name = member.filename
@@ -275,8 +313,17 @@ def extract_manual_pdfs(package_path: Path, dest_dir: Path) -> list[dict]:
                 status = "already_present"
             else:
                 dest_dir.mkdir(parents=True, exist_ok=True)
-                with archive.open(member, "r") as src, path.open("xb") as target:
-                    shutil.copyfileobj(src, target, length=1024 * 1024)
+                remaining_budget = MAX_EXTRACT_BYTES - total_extracted_bytes
+                if remaining_budget <= 0:
+                    raise ValueError("archive extraction exceeds cumulative byte cap")
+                try:
+                    with archive.open(member, "r") as src, path.open("xb") as target:
+                        written = copy_bounded_stream(src, target, max_bytes=remaining_budget)
+                    total_extracted_bytes += written
+                except Exception:
+                    if path.exists():
+                        path.unlink()
+                    raise
                 status = "extracted"
             try:
                 verified = pdf_summary(path, [])
@@ -291,13 +338,23 @@ def extract_manual_pdfs(package_path: Path, dest_dir: Path) -> list[dict]:
 def run(dry_run: bool) -> None:
     if ROOT.name.lower() != "mophongmaytrentau":
         raise RuntimeError("refusing to archive outside the requested workspace")
-    DEST.mkdir(parents=True, exist_ok=True)
+    if not dry_run:
+        DEST.mkdir(parents=True, exist_ok=True)
     entries = []
     for spec in PDF_SOURCES + PACKAGES:
         item = {k: v for k, v in spec.items() if k != "expected"}
         item["rights_status"] = "RESTRICTED_REFERENCE_ONLY; check publisher terms and obtain permission before AI processing, republishing or classroom distribution"
         item["simulator_asset"] = False
         item["reference_role"] = "EVIDENCE_ONLY_NOT_HARDWARE_FIDELITY_APPROVAL"
+        if dry_run:
+            item["status"] = "DRY_RUN"
+            preview_url = item.get(
+                "url",
+                f"https://www.transpondertech.com/support [deferred lookup: raymarine.canto.global/{spec.get('href_contains', '')}]",
+            )
+            entries.append(item)
+            print(f'{spec["id"]}: DRY_RUN {preview_url}', flush=True)
+            continue
         if "url" not in item:
             try:
                 item["url"] = archive_url_by_label(spec["href_contains"])
@@ -306,11 +363,6 @@ def run(dry_run: bool) -> None:
                 entries.append(item)
                 print(f'{spec["id"]}: SOURCE_UNAVAILABLE {exc}', flush=True)
                 continue
-        if dry_run:
-            item["status"] = "DRY_RUN"
-            entries.append(item)
-            print(f'{spec["id"]}: DRY_RUN {item["url"]}', flush=True)
-            continue
         path = DEST / spec["file"]
         try:
             status, size = direct_download(item["url"], path)
@@ -345,8 +397,8 @@ def run(dry_run: bool) -> None:
         "entries": entries,
     }
     if not dry_run:
-        (DEST / "MANIFEST.json").write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        with (DEST / "MANIFEST.json").open("w", encoding="utf-8") as manifest_out:
+            manifest_out.write(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps({"entries": len(entries),
                       "pdf_ok": sum(1 for e in entries if "pages" in e),
                       "zip_ok": sum(1 for e in entries if e.get("manual_pdfs_extracted")),

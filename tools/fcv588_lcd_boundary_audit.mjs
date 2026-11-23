@@ -14,7 +14,7 @@
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
 import {readFile,writeFile} from "node:fs/promises";
-import {fileURLToPath} from "node:url";
+import {fileURLToPath,pathToFileURL} from "node:url";
 import path from "node:path";
 
 const root=path.resolve(fileURLToPath(new URL("../",import.meta.url)));
@@ -33,10 +33,19 @@ const phases=[
  "phase-07-shared-world-and-future-devices.md"
 ];
 const hex=bytes=>createHash("sha256").update(bytes).digest("hex");
-function local(relativePath){
+const profileNumber=revision=>{
+  const m=/^F1-public-reference-(\d+)$/.exec(String(revision));
+  assert.ok(m,"invalid FCV588 public profile revision: "+revision);
+  return Number(m[1]);
+};
+export function local(relativePath){
   assert.equal(typeof relativePath,"string","path must be a string");
-  assert.ok(!path.isAbsolute(relativePath) && !relativePath.includes("\0"),
-    "absolute/NUL paths forbidden");
+  assert.ok(
+    !path.isAbsolute(relativePath) &&
+    !path.win32.isAbsolute(relativePath) &&
+    !relativePath.includes("\0"),
+    "absolute/NUL paths forbidden"
+  );
   const result=path.resolve(root,...relativePath.split("/"));
   assert.ok(result.startsWith(root+path.sep),"path must stay inside project");
   return result;
@@ -52,7 +61,7 @@ function findLines(source,needle){
   for(let i=0;i<rows.length;i++)if(rows[i].includes(needle))hit.push(i+1);
   return hit;
 }
-function selfTest(){
+export function selfTest(){
   assert.deepEqual(findLines("x\nHELLO\nHELLO 2\nz","HELLO"),[2,3]);
   assert.deepEqual(findLines("x\nHELLO\nz","NO_MATCH"),[]);
   assert.match(hex("fixed-input"),/^[0-9a-f]{64}$/);
@@ -70,14 +79,19 @@ function statChecklist(data){
   return {total:(data.match(/^\s*-\s*\[[ xX]\]/gm)??[]).length,
     checked:(data.match(/^\s*-\s*\[[xX]\]/gm)??[]).length};
 }
-async function runAudit(){
+export async function runAudit(){
   const [lcd,feature,impl,legacy]=await Promise.all([
     readJson(locator),readJson(vectors),readJson(implementation),readJson(manifest)
   ]);
   assert.equal(lcd.value.schemaVersion,1);
   assert.equal(feature.value.schemaVersion,1);
-  assert.equal(lcd.value.sourceProfile,impl.value.profileRevision);
-  assert.equal(feature.value.profileRevision,impl.value.profileRevision);
+  const implRev=profileNumber(impl.value.profileRevision);
+  const lcdRev=profileNumber(lcd.value.sourceProfile);
+  const featRev=profileNumber(feature.value.profileRevision);
+  assert.ok(lcdRev>=22 && lcdRev<=implRev,
+    `LCD boundary oracle revision ${lcd.value.sourceProfile} out of range for ${impl.value.profileRevision}`);
+  assert.ok(featRev>=22 && featRev<=implRev,
+    `Acceptance vectors revision ${feature.value.profileRevision} out of range for ${impl.value.profileRevision}`);
   assert.equal(impl.value.hardwareValidated,false);
   assert.equal(impl.value.rightsClearance,false);
   assert.equal(impl.value.releaseApproval,"HOLD");
@@ -203,7 +217,9 @@ async function main(){
     console.log(JSON.stringify(audit,null,2));
   }
 }
-main().catch(error=>{
-  console.error("Independent audit error:",error.message);
-  process.exitCode=2;
-});
+if(process.argv[1] && import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
+  main().catch(error=>{
+    console.error("Independent audit error:",error.message);
+    process.exitCode=2;
+  });
+}

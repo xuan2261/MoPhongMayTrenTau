@@ -55,7 +55,7 @@
       "windowClass": "Chrome_WidgetWin_1",
       "title": "Tiếp tục kiểm thử P07 - Helium",
       "processName": "chrome.exe",
-      "processExecutable": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe"
+      "processExecutable": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe"
     },
     "conclusion": "P10 V2 never proved the dedicated Google Chrome test window was the Win32 foreground window before the attempted switch, and the foreground HWND did not change during the attempted helper activation. The prior native-blur PASS condition was therefore never reached."
   },

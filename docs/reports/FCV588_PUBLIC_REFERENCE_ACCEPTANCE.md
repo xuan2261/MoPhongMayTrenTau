@@ -1,6 +1,22 @@
 # FCV-588 PUBLIC_REFERENCE — implementation and conditional acceptance
 
-## Current implementation — V31, 2026-10-16
+## Current scoped checkpoint — P36 / F1-public-reference-22+ (2026-11-22; NOT RELEASED)
+
+**Decision: SCOPED SOFTWARE & LEDGER CHECKS PASS; WHOLE-PROJECT OEM, HARDWARE, RIGHTS, NARRATOR SPEECH, AND COURSE/PRODUCT RELEASE REMAIN HOLD (`NO_GO` FOR PUBLIC RELEASE).**
+
+Since historical V31 (`2026-10-16`, `35` runtime files, `F1-public-reference-20`), the simulator progressed through two major tracked waves without promoting any `HOLD` claim:
+
+1. **`V32`–`V57` (`2026-10-17` → `2026-10-31` — LCD/Trainer Boundary, OEM Labels, A11y & 5-Tab D15):** Separated operator LCD visuals from external D15 instructor provenance cues, added source-matrix disclosures for `C11`/`D09`/`D14` and firmware-unknown `Colors`/`White Marker` (`V46`–`V48`), enforced contrast/accessibility checks (`V36`, `V49`, `V53`–`V54`), and refactored the D15 instructor panel into five ARIA tabs (`V56`–`V57`).
+2. **`P01`–`P36` + P0 Hygiene (`2026-11-13` → `2026-11-22` — AP-1 Sounder Menu, Offline Archive & Desktop POC):** Reordered the 13-item `Sounder` menu to Appendix 1 order (`F1-public-reference-22`+) while freezing `10` `*-profile21.mjs` modules for deterministic legacy replay (`P14`), added White background palette (`P23`), offline archive sidecar v1, historical Bottom Zoom viewer, and event timeline (`P24`–`P28`), evaluated hardened Windows Electron POC bundles (`P29`–`P34`, release gate **`NO_GO`** in `P32`), refined `POWER/BRILL` accessible naming (`P35`), verified live Chrome `LF-ZOOM`/`HF-ZOOM` across `54` public runtime assets (`P36`), and synchronized repository licenses, `.gitignore`/`.gitattributes`, PII redaction, and cross-OS CLI `--check` tooling.
+
+Current invariant summary (see [fcv588-public-implementation-status.json](../evidence/fcv588-public-implementation-status.json), [fcv588-public-menu-atlas.json](../evidence/fcv588-public-menu-atlas.json), and [COMPREHENSIVE_PROJECT_REVIEW_AUDIT_EVAL_2026-11-22.md](./COMPREHENSIVE_PROJECT_REVIEW_AUDIT_EVAL_2026-11-22.md)):
+- **Runtime scope:** `54` original runtime files under `src/` (`35`) and `web/` (`19`) with `0` third-party runtime npm packages and `0` OEM media assets (`verify_public_runtime_assets.mjs` PASS).
+- **64 + D15 classification:** `60` FCV operator `OPERABLE_SYNTHETIC_SUBSET`, `3` `MENU_ONLY_PARTIAL` (`C11`, `D09`, `D14`), `1` `NOT_IMPLEMENTED` (`D04` language switching/reboot), plus `1` separate `INSTRUCTOR_PLATFORM` item (`D15` 7 scored lessons + offline archive review).
+- **Release & conformance gates:** Plan acceptance remains `14/50` checklist items and `6/22` named Tasks (Phase 1 complete; Phases 2–7 open). **All `65/65` claims remain `HOLD`** (`hardwareValidated: false`, `firmwareInstalled: null`, `rightsClearance: false`, `releaseApproval: "HOLD"`).
+
+---
+
+## Historical checkpoint — V31, 2026-10-16 (superseded)
 
 **Decision: IMPLEMENTED AND SCOPED-VERIFIED; ONE NODE FIXTURE FAILURE;
 FULL REGRESSION, REQUIRED COUNSEL, OEM/HARDWARE/COURSE/RELEASE HOLD.**

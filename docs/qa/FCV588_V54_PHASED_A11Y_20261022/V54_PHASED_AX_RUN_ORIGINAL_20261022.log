@@ -5,7 +5,7 @@ Traceback (most recent call last):
                  ^^^^^^^^^
   File "C:\Work\MoPhongMayTrenTau\docs\qa\FCV588_V54_PHASED_A11Y_20261022\v54_phased_power_aria_probe.py", line 256, in execute
     print("MUTATIONS live_hold",live_hold,"live_release",live_release)
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 UnicodeEncodeError: 'charmap' codec can't encode character '\u1eef' in position 66: character maps to <undefined>

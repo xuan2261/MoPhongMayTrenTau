@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  verify:
+    name: Verify (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout repository (without LFS blobs)
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Syntax & Node test suite
+        run: npm run check
+
+      - name: Python unit test suite
+        run: PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s test -v
+
+      - name: Verify public runtime assets
+        run: node tools/verify_public_runtime_assets.mjs
+
+      - name: Check public menu source atlas
+        run: node tools/build_fcv588_public_menu.mjs --check
+
+      - name: Check 64+D15 implementation status ledger
+        run: node tools/build_fcv588_public_acceptance.mjs --check
+
+      - name: Check public trace matrix
+        run: PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_public_trace.py --check
+
+      - name: Check feature register draft
+        run: PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_feature_register.py --check
+
+      - name: Run LCD boundary audit self-test & contract check
+        run: |
+          node tools/fcv588_lcd_boundary_audit.mjs --self-test
+          node tools/fcv588_lcd_boundary_audit.mjs >/dev/null
+
+      - name: Check V27 & V28 visual atlas derivations
+        run: |
+          PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_visual_atlas.py --check --checkpoint V27
+          PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_visual_atlas.py --check --checkpoint V28

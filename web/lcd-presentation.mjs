@@ -76,9 +76,10 @@ export function projectFcvDepthTicks(frame,{
     const step=relativeRange/5;
     const precision=step<1?Math.min(3,Math.ceil(-Math.log10(step))+1):0;
     const span=height-top-bottom;
+    const roundY=value=>span>=10?Math.round(value):value;
     return Object.freeze(Array.from({length:6},(_,index)=>{
       const relative=Number((relativeRange-index*step).toFixed(6));
-      return Object.freeze({depthM:relative,y:top+index/5*span,
+      return Object.freeze({depthM:relative,y:roundY(top+index/5*span),
         label:formatFcvDepth(relative,units,precision),
         axis:"BOTTOM_RELATIVE"});
     }));
@@ -91,6 +92,8 @@ export function projectFcvDepthTicks(frame,{
   const step=unitStep*magnitude;
   const precision=step<1?Math.min(3,Math.ceil(-Math.log10(step))+1):0;
   const first=Math.ceil((start-1e-9)/step)*step;
+  const span=height-top-bottom;
+  const roundY=value=>span>=10?Math.round(value):value;
   const ticks=[];
   for(let i=0;i<200;i++){
     const depth=Number((first+i*step).toFixed(6));
@@ -98,7 +101,7 @@ export function projectFcvDepthTicks(frame,{
     if(depth<start-1e-8)continue;
     const fraction=(depth-start)/range;
     ticks.push(Object.freeze({depthM:depth,
-      y:top+fraction*(height-top-bottom),
+      y:roundY(top+fraction*span),
       label:formatFcvDepth(depth,units,precision)}));
   }
   return Object.freeze(ticks);
@@ -205,7 +208,8 @@ export function projectFcvFuncSetting(state){
 /** Keep operator rows, option choices and classroom instructions distinct. */
 export function projectFcvMainMenu(state,{profileRevision=FCV588_PUBLIC_PROFILE_REVISION}={}){
   const items=profileRevision==="F1-public-reference-21"?getFcvMenuItemsProfile21:
-    profileRevision===FCV588_PUBLIC_PROFILE_REVISION?getFcvMenuItems:null;
+    [FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-22","F1-public-reference-23"]
+      .includes(profileRevision)?getFcvMenuItems:null;
   if(!items)throw new TypeError("unsupported FCV-588 presentation profile revision");
   const overlay=state.overlay;
   if(state.power!=="on" || overlay?.kind!=="menu" ||
@@ -218,8 +222,10 @@ export function projectFcvMainMenu(state,{profileRevision=FCV588_PUBLIC_PROFILE_
     const committedValue=state.settings[entry.settingKey];
     const draftValue=selected && overlay.editing?overlay.draftValue:null;
     const value=draftValue??committedValue;
-    const valueText=entry.kind==="choice" && value!==undefined && value!==null
-      ?String(value):"";
+    const valueText=entry.kind!=="choice"?"":
+      value!==undefined && value!==null?String(value):
+      value===null?"--":
+      entry.disabled===true?String(entry.choices?.[0]??"--"):"";
     return {id:entry.id,selected,disabled:entry.disabled===true,
       label:entry.label,valueText,committedValue:committedValue??null,draftValue,
       text:(selected?"▶ ":"  ")+entry.label+

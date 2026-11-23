@@ -1,7 +1,7 @@
 {
   "schema": "FCV588_P25_STAGE_PYTHON_V2",
   "status": "PASS",
-  "interpreter": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
+  "interpreter": "<USER_PROFILE>\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
   "exitCode": 0,
   "tests": "13",
   "logSHA256": "cb0a9416e805978d3379e6f3926ed3d9be46e13979678c7627e74d8b188b3a4b",

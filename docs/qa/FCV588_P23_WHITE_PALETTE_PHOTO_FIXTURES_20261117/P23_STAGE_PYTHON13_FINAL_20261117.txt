@@ -13,10 +13,10 @@ ERROR: test_fcv588_chrome_harness_identity (unittest.loader._FailedTest.test_fcv
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_fcv588_chrome_harness_identity
 Traceback (most recent call last):
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
     module = self._get_module_from_name(name)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
     __import__(name)
   File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\test\test_fcv588_chrome_harness_identity.py", line 15, in <module>
     import fcv588_mobile_viewport_acceptance as mobile
@@ -30,10 +30,10 @@ ERROR: test_fcv588_chrome_response_integrity (unittest.loader._FailedTest.test_f
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_fcv588_chrome_response_integrity
 Traceback (most recent call last):
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
     module = self._get_module_from_name(name)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
     __import__(name)
   File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\test\test_fcv588_chrome_response_integrity.py", line 12, in <module>
     import fcv588_chrome_viewport_acceptance as runner

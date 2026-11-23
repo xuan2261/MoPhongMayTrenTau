@@ -9,11 +9,44 @@ import {initialWorldState, advanceWorld, observeTrainingStatus, SENSOR_MODEL_VER
 // Hold thresholds and admitted physical gestures are executable semantics,
 // not just display metadata. Replaying against a same-revision adapter with
 // different thresholds could silently reinterpret FUNC LONG as SHORT.
-const adapterProfileHash=adapter=>fingerprint({
-  id:adapter.id,revision:adapter.revision,profile:adapter.profile,
-  controls:adapter.controls,gestures:adapter.gestures,
-  holdThresholdMs:adapter.holdThresholdMs,
+const ADAPTER_HASH_CACHE = new WeakMap();
+const SCENARIO_HASH_CACHE = new WeakMap();
+const isFrozenAdapter = adapter => Object.isFrozen(adapter) &&
+  Object.isFrozen(adapter.profile) && Object.isFrozen(adapter.controls) &&
+  Object.isFrozen(adapter.gestures) && Object.isFrozen(adapter.holdThresholdMs);
+const computeAdapterProfileHash = adapter => fingerprint({
+  id: adapter.id, revision: adapter.revision, profile: adapter.profile,
+  controls: adapter.controls, gestures: adapter.gestures,
+  holdThresholdMs: adapter.holdThresholdMs,
 });
+const adapterProfileHash = adapter => {
+  if (adapter && typeof adapter === "object" && isFrozenAdapter(adapter)) {
+    const cached = ADAPTER_HASH_CACHE.get(adapter);
+    if (cached !== undefined) return cached;
+    const computed = computeAdapterProfileHash(adapter);
+    ADAPTER_HASH_CACHE.set(adapter, computed);
+    return computed;
+  }
+  return computeAdapterProfileHash(adapter);
+};
+const isFrozenScenario = scenario => Object.isFrozen(scenario) &&
+  (scenario.syntheticOwnship === undefined || Object.isFrozen(scenario.syntheticOwnship)) &&
+  (scenario.bottomClassification === undefined || (
+    Object.isFrozen(scenario.bottomClassification) &&
+    (scenario.bottomClassification.classes === undefined ||
+      Object.isFrozen(scenario.bottomClassification.classes)))) &&
+  (!Array.isArray(scenario.fish) || (Object.isFrozen(scenario.fish) &&
+    scenario.fish.every(item => Object.isFrozen(item))));
+const scenarioFingerprint = scenario => {
+  if (scenario && typeof scenario === "object" && isFrozenScenario(scenario)) {
+    const cached = SCENARIO_HASH_CACHE.get(scenario);
+    if (cached !== undefined) return cached;
+    const computed = fingerprint(scenario);
+    SCENARIO_HASH_CACHE.set(scenario, computed);
+    return computed;
+  }
+  return fingerprint(scenario);
+};
 export function createSession(adapter, scenario) {
   if (!adapter?.id || !adapter.profile || !adapter.gestures ||
       typeof adapter.reduce !== "function" || typeof adapter.initial !== "function") {
@@ -31,7 +64,7 @@ export function createSession(adapter, scenario) {
       tickDurationMs: TICK_DURATION_MS,
       phaseOrder: "input -> world -> sensor -> device",
       profileHash: adapterProfileHash(adapter),
-      scenarioHash: fingerprint(scenario),
+      scenarioHash: scenarioFingerprint(scenario),
     }),
     deviceId: adapter.id,
     profileRevision: adapter.revision,
@@ -46,12 +79,22 @@ export function createSession(adapter, scenario) {
   };
 }
 
+function uiElapsedSinceLastDown(events, control) {
+  let uiMs = 0;
+  for (let i = events.length - 1; i >= 0; i--) {
+    const ev = events[i];
+    if (ev.kind === "down" && ev.control === control) return uiMs;
+    if (ev.kind === "ui-tick" && Number.isInteger(ev.elapsedMs)) uiMs += ev.elapsedMs;
+  }
+  return uiMs;
+}
+
 export function dispatch(session, adapter, input, scenario) {
   if (session.deviceId !== adapter.id || session.profileRevision !== adapter.revision ||
       session.meta.profileHash !== adapterProfileHash(adapter)) {
     throw new Error("device profile mismatch");
   }
-  if (!scenario || session.meta.scenarioHash !== fingerprint(scenario) ||
+  if (!scenario || session.meta.scenarioHash !== scenarioFingerprint(scenario) ||
       session.scenarioId !== scenario.id || session.scenarioVersion !== scenario.version) {
     throw new Error("scenario mismatch");
   }
@@ -101,9 +144,15 @@ export function dispatch(session, adapter, input, scenario) {
     const threshold = adapter.holdThresholdMs?.[event.control];
     if (!Number.isInteger(threshold)) throw new Error("missing device hold threshold");
     // Physical UI captures duration on release, while test scripts may rely
-    // on explicit simulated ticks. Both paths are stored in the event log.
+    // on explicit simulated ticks or UI ticks. Both paths are stored in the event log.
+    const fallbackDurationMs = Math.max(
+      (worldState.simTick - heldSinceTick) * TICK_DURATION_MS,
+      Math.min(120000, uiElapsedSinceLastDown(session.events, event.control)),
+    );
     const hold = event.durationMs === undefined
-      ? classifyHoldTicks(worldState.simTick - heldSinceTick, threshold)
+      ? (worldState.simTick - heldSinceTick < 0
+        ? classifyHoldTicks(worldState.simTick - heldSinceTick, threshold)
+        : classifyHoldDurationMs(Math.min(120000, fallbackDurationMs), threshold))
       : classifyHoldDurationMs(event.durationMs, threshold);
     deviceState = adapter.reduce(deviceState, withObservation({
       kind: "press", control: event.control, hold,

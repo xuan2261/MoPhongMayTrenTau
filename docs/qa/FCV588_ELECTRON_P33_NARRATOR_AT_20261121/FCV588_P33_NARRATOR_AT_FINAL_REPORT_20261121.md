@@ -20,4 +20,4 @@
 
 ## Next meaningful action
 
-For audible accessibility acceptance, a human listener can use the existing P32_NARRATOR_HUMAN_ACCEPTANCE_20261121.md on this real Windows host and record exactly heard GAIN/MODE/POWER speech. Without such evidence, do not upgrade the speech gate. If distribution is not planned, return to core simulator work rather than duplicating release tests.\n
+For audible accessibility acceptance, a human listener can use the existing P32_NARRATOR_HUMAN_ACCEPTANCE_20261121.md on this real Windows host and record exactly heard GAIN/MODE/POWER speech. Without such evidence, do not upgrade the speech gate. If distribution is not planned, return to core simulator work rather than duplicating release tests.

@@ -12,13 +12,13 @@ const WEB = resolve(ROOT, "web");
 const SRC = resolve(ROOT, "src");
 const HOST = "127.0.0.1";
 const PORT = Number(process.env.PORT ?? 4173);
+const MAX_SERVED_FILE_BYTES = 4 * 1024 * 1024;
 if (!Number.isInteger(PORT) || PORT < 1024 || PORT > 65535) throw new Error("invalid local port");
 const MIME = {
   ".html": "text/html; charset=utf-8",
   ".mjs": "text/javascript; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8",
-  ".json": "application/json; charset=utf-8",
   ".svg": "image/svg+xml",
 };
 // Public trees are not generic file-download endpoints. If an OEM/manual/media
@@ -29,10 +29,15 @@ const inside = (root, target) => {
   const rel = relative(root, target);
   return rel === "" || (rel !== ".." && !rel.startsWith(".." + sep) && !isAbsolute(rel));
 };
+const hasDotOrEmptySegment = relPath =>
+  relPath.split(/[\\/]/).some(segment => segment === "" || segment.startsWith("."));
 
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Security-Policy",
-    "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
+    "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'");
+  res.setHeader("Referrer-Policy", "no-referrer");
+  res.setHeader("Permissions-Policy",
+    "geolocation=(), microphone=(), camera=(), usb=(), serial=(), bluetooth=()");
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("Cache-Control", "no-store");
   if (!["GET", "HEAD"].includes(req.method)) {
@@ -52,13 +57,19 @@ const server = http.createServer(async (req, res) => {
     } else {
       res.writeHead(404); res.end("Not found"); return;
     }
+    if (hasDotOrEmptySegment(requestPath)) {
+      res.writeHead(403); res.end("Forbidden"); return;
+    }
     const path = resolve(base, requestPath);
     if (!inside(base, path)) {
       res.writeHead(403); res.end("Forbidden"); return;
     }
     const realBase = await realpath(base);
     const realFile = await realpath(path);
-    if (!inside(realBase, realFile) || !(await stat(realFile)).isFile()) {
+    const relReal = relative(realBase, realFile);
+    const info = await stat(realFile);
+    if (!inside(realBase, realFile) || hasDotOrEmptySegment(relReal) ||
+        !info.isFile() || info.size > MAX_SERVED_FILE_BYTES) {
       res.writeHead(403); res.end("Forbidden"); return;
     }
     const extension = extname(realFile).toLowerCase();
@@ -67,6 +78,9 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(403); res.end("Forbidden"); return;
     }
     const content = await readFile(realFile);
+    if (content.byteLength > MAX_SERVED_FILE_BYTES) {
+      res.writeHead(403); res.end("Forbidden"); return;
+    }
     res.writeHead(200, {"Content-Type": MIME[extension]});
     res.end(req.method === "HEAD" ? undefined : content);
   } catch {

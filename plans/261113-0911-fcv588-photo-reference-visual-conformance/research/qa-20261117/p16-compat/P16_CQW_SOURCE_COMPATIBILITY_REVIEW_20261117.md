@@ -75,7 +75,7 @@ Installed browser binaries:
 |---|---|---|---|
 | `C:\Program Files\Google\Chrome\Application\chrome.exe` | `157.0.8103.79` | `a527591d96df1f30bdabf5599d257b8b80c83d90c405ff997ddbc202ba5e9ada` | canonical project launcher target / current local Chrome |
 | `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe` | `157.0.4341.60` | `2497874639116d8edc3de34b3fd83f72fa099112a5d2a426e1f08fcf39a99612` | installed, but not the P15 acceptance target |
-| `C:\Users\Z10PAD8C_Xuan2261\AppData\Local\imput\Helium\Application\chrome.exe` | product `157.0.8103.78`; file `0.21.3.1` | `53b0ab0d7ada6806827551562a42983d7ec2895639a7a6f51cb8cda299ac591d` | registered per-user as a chrome.exe app path, but not project acceptance evidence |
+| `<USER_PROFILE>\AppData\Local\imput\Helium\Application\chrome.exe` | product `157.0.8103.78`; file `0.21.3.1` | `53b0ab0d7ada6806827551562a42983d7ec2895639a7a6f51cb8cda299ac591d` | registered per-user as a chrome.exe app path, but not project acceptance evidence |
 
 The generic project acceptance launcher pins `C:\Program Files\Google\Chrome\Application\chrome.exe` at `tools/fcv588_chrome_viewport_acceptance.py:24-27`, accepts an optional `--chrome` override at lines 990-1003, launches that exact executable at lines 1029-1032, and records `browser.version`.
 

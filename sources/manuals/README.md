@@ -14,7 +14,7 @@
 | NS4000 / Navi-Sailor 4000 | User Manual v2.00.009 (311 trang) | Tài liệu lưu tại đại lý, không phải link phát hành chính hãng hiện hành | v3.02.350 có tài liệu xem trực tuyến nhưng chưa xác minh tải trực tiếp |
 | KODEN J2000 | Không có PDF xác minh đúng mã | **HOLD — chưa xác định model** | Cần hình nhãn máy; tuyệt đối không lấy manual model khác thay |
 
-Tổng kiểm tra sau khi bổ sung brochure tham khảo hãng: **24 PDF + 2 ZIP**, với **197.171.462 byte** (tính cả ZIP gốc và các bản PDF trích ra nên không phải dung lượng dữ liệu duy nhất). Trong 24 PDF có **một brochure không phải user manual**. Ba đường nguồn phụ không lấy được được nêu trong manifest, không được coi là file đã tải.
+Tổng kiểm tra sau khi bổ sung brochure tham khảo hãng và khử trùng lặp: **23 PDF độc nhất + 2 ZIP**, với **197.145.926 byte (`188.01 MiB`)** (tính cả ZIP gốc và các bản PDF trích ra nên không phải dung lượng dữ liệu không nén độc lập; tệp `7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF` nặng `25.536 byte` trùng tên giữa hai nhánh EN/DE trong gói R5 SOLID đã được khử trùng lặp khỏi con số 24 mục / `197.171.462 byte` ban đầu). Trong 23 PDF có **một brochure không phải user manual**. Ba đường nguồn phụ không lấy được được nêu trong manifest, không được coi là file đã tải.
 
 ## Tập tin chứng cứ
 

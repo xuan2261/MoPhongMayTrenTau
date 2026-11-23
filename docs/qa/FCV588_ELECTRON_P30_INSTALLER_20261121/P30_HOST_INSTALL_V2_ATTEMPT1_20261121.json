@@ -11,8 +11,8 @@
       "DisplayName": "FCV588 Synthetic Training POC UNRELEASED 0.0.1",
       "DisplayVersion": "0.0.1",
       "InstallLocation": null,
-      "UninstallString": "\"C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser",
-      "QuietUninstallString": "\"C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser /S",
+      "UninstallString": "\"<USER_PROFILE>\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser",
+      "QuietUninstallString": "\"<USER_PROFILE>\\AppData\\Local\\Programs\\fcv588-synthetic-electron-poc\\Uninstall FCV588-Synthetic-POC.exe\" /currentuser /S",
       "PSPath": "Microsoft.PowerShell.Core\\Registry::HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\6edb0732-6c19-58a6-a4a5-896b67563531"
     }
   ],

@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "description": "Offline training-only maritime instrument simulation foundation",
   "scripts": {
     "start": "node tools/server.mjs",
     "test": "node --test test/*.test.mjs",
-    "check": "node --check src/core/session.mjs && node --check src/core/scenario.mjs && node --check src/devices/fcv588/model.mjs && node --check web/hold-input.mjs && node --check web/app.mjs && npm test"
+    "check": "node -e \"const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>{const p=path.join(d,e.name);return e.isDirectory()?walk(p):p;});const files=[...walk('src'),...walk('web'),...fs.readdirSync('tools').map(n=>path.join('tools',n))].filter(f=>f.endsWith('.mjs')).sort();for(const f of files)cp.execFileSync(process.execPath,['--check',f],{stdio:'inherit'});\" && npm test"
   },
   "engines": {"node": ">=22"}
 }

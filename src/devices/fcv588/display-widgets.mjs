@@ -29,6 +29,8 @@ export function projectFcvDisplayWidgets(state,navigationSample,simTick=0){
   let navData=null;
   if(["Basic","Expanded"].includes(settings.navData)){
     const projected=projectNavData(navValid?{...navigationSample,
+      bottomDepthM:navigationSample.depthM,
+      depthM:calibrated.depthM??navigationSample.depthM,
       speedKn:settings.speedSource==="NMEA"?null:calibrated.speedKn}:null,"NAV2",{
       simTick,units:settings.units??"Metric",
       speedUnit:settings.speedUnit??"kn",staleAfterTicks:10,

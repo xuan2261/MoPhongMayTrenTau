@@ -14,7 +14,7 @@
     "manualRevision": "OME-23890-E (Aug 2025)",
     "nonInterchangeableModels": "FCV-588 only; do not import FCV-38/600/800/1900 UI or glossary"
   },
-  "profileRevision": "F1-public-reference-20",
+  "profileRevision": "F1-public-reference-22",
   "allCurrentClaims": "HOLD",
   "currentPhase2Verify": "STOP_V31_QA_01",
   "executionPolicy": "FUTURE_TEST_VECTORS_ONLY; all cases NOT_EXECUTED. Do not edit/run affected Verify while Kongming gate remains unresolved.",

@@ -12,13 +12,13 @@ import {createNavigationState, addWaypoint, editWaypoint, deleteWaypoint,
   isValidSyntheticSpeed} from "./navigation.mjs";
 import {validateFcvSettings} from "./settings.mjs";
 import {FCV588_PUBLIC_PROFILE_REVISION} from "./profile-version.mjs";
-import {FCV_CALIBRATION_FIELDS} from "./calibration.mjs";
+import {FCV_CALIBRATION_FIELDS,projectFcvCalibratedReadings} from "./calibration.mjs";
 import {FCV_UNIT_FIELDS} from "./units.mjs";
 export const FCV588 = Object.freeze({
   id: "furuno.fcv588.cv588e",
   revision: FCV588_PUBLIC_PROFILE_REVISION,
-  // Profile22 checksum binds the exact semantic cursor order. A subsequent
-  // reorder must not pass existing profile22 replay as unchanged behavior.
+  // Profile22+ checksum binds the exact semantic cursor order. A subsequent
+  // reorder must not pass existing profile replay as unchanged behavior.
   menuEntryOrderIds: Object.freeze(FCV_MENU_ENTRIES.map(item=>item.id)),
   manufacturer: "FURUNO",
   model: "FCV-588",
@@ -65,14 +65,19 @@ const resetRangeBankOnDepthUnitChange=(before,next)=>
   before.units===next.units?next:{...next,...Object.fromEntries(
     FCV_RANGE_BANK_FIELDS.map(field=>[field.key,field.defaultValue]))};
 const initialSettings = () => ({
-  pictureAdvance: "1x", interference: "Auto", aScope: "Off",
-  shift:"0",smoothing:"On",tvg:"Medium",txPower:"Auto",txRate:"10",
+  pictureAdvance: "1x", zoomMode: "Bottom Lock", shift:"0",
+  interference: "Auto", colorErase: "0",
+  whiteLine: "Off",
+  tvg:"Medium", smoothing:"On", bottomZone: "Standard",
+  txPower:"Auto", txRate:"10",
+  aScope: "Off", depthSize: "Medium", zoomMarker: "Off",
   accuFish: "Off", bottomDiscrimination: "Off", rezBoost: "Off",
-  tankenmaru: "Off", nmea: "Off", transducer: "GENERIC_600W",
-  keySetup: "Pic. Advance",keyBeep:"Off",
+  fishSymbol: "Off", fishSize: "Small",
+  palette:"Blue", colorBar: "Off",
   tempGraph:"Off",navData:"Off",battery:"Off",headerInfo:"On",
   windowRatio:"50",zoomRange:"20",blRange:"5",
-  palette:"Blue",
+  tankenmaru: "Off", nmea: "Off", transducer: "GENERIC_600W",
+  keySetup: "Pic. Advance",keyBeep:"Off",
   ...Object.fromEntries(FCV_CALIBRATION_FIELDS.map(field=>
     [field.key,field.defaultValue])),
   draft: null, units: "Metric", demo: "On",
@@ -121,28 +126,95 @@ function alarmProfiles(settings) {
   return profiles;
 }
 
+function evaluateDeviceAlarms(state, observation, previousAlarms = state.alarms) {
+  if (state.power !== "on" || !observation) {
+    return evaluateFcvAlarms([], {});
+  }
+  const virtualSonar=state.trainingFixture.virtualMounting===true &&
+    state.settings.transducer==="525STID-PWD";
+  const sonarAvailable=state.demoOn===true || virtualSonar;
+  const sonarTransmitting=sonarAvailable && state.settings.txPower!=="Off";
+  const externalSyntheticData=state.trainingFixture.navigation===true;
+  const destination=state.navigation.waypoints.find(w=>
+    w.id===state.navigation.destinationId);
+  const navSample=observation.navigation ?? state.navigationObservation;
+  const arrivalDistanceNm=externalSyntheticData && destination
+    ?distanceNmBetween(navSample?.position,destination.position)
+    :null;
+  const calibrated=projectFcvCalibratedReadings(state.settings,{
+    sourceClass:"SYNTHETIC_FIXTURE",
+    ...observation,
+  });
+  const calibratedDepthM=state.settings?.draft===null
+    ?observation.bottomDepthM:calibrated.depthM;
+  const bottomFeature=getFcvMenuItems("Display",state)
+    .find(item=>item.id==="display.bottomDiscrimination");
+  const fishFeature=getFcvMenuItems("Display",state)
+    .find(item=>item.id==="display.accuFish");
+  const bottomTypeAvailable=sonarTransmitting && state.rangeMode==="auto" &&
+    ["Graphic","Probability"].includes(state.settings.bottomDiscrimination) &&
+    bottomFeature?.disabled===false;
+  const alarmObservation={
+    ...observation,
+    bottomDepthM:sonarTransmitting?calibratedDepthM:null,
+    // §1.18 bottom-type alarm cannot identify seabed without Bottom Disc.
+    bottomType:bottomTypeAvailable?observation.bottomType:null,
+    fishPresent:sonarTransmitting?observation.fishPresent:null,
+    fishStrength:sonarTransmitting?observation.fishStrength:null,
+    fishCategory:sonarTransmitting?observation.fishCategory:null,
+    accuFishAvailable:sonarTransmitting &&
+      state.settings.accuFish==="On" && fishFeature?.disabled===false,
+    arrivalDistanceNm,
+    speedKn:(virtualSonar || externalSyntheticData) &&
+      state.settings.speedSource!=="NMEA" &&
+      isValidSyntheticSpeed(calibrated.speedKn)?calibrated.speedKn:null,
+    temperatureC:(virtualSonar || externalSyntheticData) &&
+      state.settings.tempSource!=="NMEA"
+      ?calibrated.temperatureC:null,
+  };
+  return evaluateFcvAlarms(alarmProfiles(state.settings),
+    alarmObservation,previousAlarms);
+}
+
+const syncAlarmsIfObserved=(nextState,_event)=>nextState;
+
+const powerOffState=state=>({
+  ...state,
+  power:"off",
+  bootElapsed:0,
+  alarms:evaluateFcvAlarms([],{}),
+  overlay:null,
+  notice:"",
+});
+
 const modal = (kind, details = {}) => ({kind,...details});
 const WAYPOINT_CHARSET=" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
 function restoreSettings(state) {
   return {...state, settings:initialSettings(), demoOn:true,
+    mode:"LF",vrmVisible:false,vrmDepthM:15,
     rangeMode:"auto",rangeIndex:3,gainMode:"fishing",autoGainOffset:0,
     manualGain:5,brightness:9,
     alarms:evaluateFcvAlarms([],{}),
     overlay:menuOverlay(4),notice:"Khôi phục thiết lập đào tạo · SIMULATED"};
 }
 
+function exitWaypointOverlay(fromCategoryIndex){
+  return fromCategoryIndex===null?null:menuOverlay(fromCategoryIndex??3);
+}
+
 function moveWaypointWorkflow(state,event){
   const o=state.overlay;
+  const originCategory=o.fromCategoryIndex===undefined?3:o.fromCategoryIndex;
   if(event.kind==="press" && event.control==="menu"){
     if(["waypoint-name","confirm-waypoint-delete"].includes(o.kind)){
       return {...state,overlay:modal("waypoint-detail",
-        {itemIndex:o.itemIndex,fieldIndex:o.fieldIndex??0,fromCategoryIndex:3})};
+        {itemIndex:o.itemIndex,fieldIndex:o.fieldIndex??0,fromCategoryIndex:originCategory})};
     }
     if(o.kind==="waypoint-detail"){
       return {...state,overlay:modal("waypoints",
-        {purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:3,simulated:true})};
+        {purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:originCategory,simulated:true})};
     }
-    return {...state,overlay:menuOverlay(3),notice:""};
+    return {...state,overlay:exitWaypointOverlay(originCategory),notice:""};
   }
   if(o.kind==="waypoints"){
     if(event.kind==="pad" && event.control==="trackpad"){
@@ -155,20 +227,22 @@ function moveWaypointWorkflow(state,event){
       if(o.purpose==="destination"){
         const selected=o.itemIndex===0?null:state.navigation.waypoints[o.itemIndex-1]?.id;
         if(selected===undefined)return {...state,notice:"NO SYNTHETIC WAYPOINT"};
-        return {...state,navigation:setDestination(state.navigation,selected),
-          overlay:menuOverlay(3),notice:selected?"DESTINATION "+selected+" (SIM)":
-            "DESTINATION OFF (SIM)"};
+        return syncAlarmsIfObserved({...state,
+          navigation:setDestination(state.navigation,selected),
+          overlay:exitWaypointOverlay(originCategory),
+          notice:selected?"DESTINATION "+selected+" (SIM)":
+            "DESTINATION OFF (SIM)"},event);
       }
       const chosen=state.navigation.waypoints[o.itemIndex];
       if(!chosen)return {...state,notice:"WAYPOINTS EMPTY · SIM"};
       return {...state,overlay:modal("waypoint-detail",{
-        itemIndex:o.itemIndex,fieldIndex:0,fromCategoryIndex:3})};
+        itemIndex:o.itemIndex,fieldIndex:0,fromCategoryIndex:originCategory})};
     }
     return state;
   }
   if(o.kind==="waypoint-detail"){
     const waypoint=state.navigation.waypoints[o.itemIndex];
-    if(!waypoint)return {...state,overlay:menuOverlay(3),notice:"WAYPOINT MISSING"};
+    if(!waypoint)return {...state,overlay:exitWaypointOverlay(originCategory),notice:"WAYPOINT MISSING"};
     if(event.kind==="pad" && event.control==="trackpad"){
       return {...state,overlay:{...o,fieldIndex:wrap(o.fieldIndex+
         (["down","right"].includes(event.direction)?1:-1),2)}};
@@ -176,10 +250,10 @@ function moveWaypointWorkflow(state,event){
     if(event.kind==="press" && event.control==="enter"){
       if(o.fieldIndex===1)return {...state,overlay:modal("confirm-waypoint-delete",{
         itemIndex:o.itemIndex,waypointId:waypoint.id,confirm:false,
-        fieldIndex:1,fromCategoryIndex:3})};
+        fieldIndex:1,fromCategoryIndex:originCategory})};
       return {...state,overlay:modal("waypoint-name",{
         itemIndex:o.itemIndex,waypointId:waypoint.id,draftName:waypoint.name,
-        charIndex:0,fieldIndex:0,fromCategoryIndex:3})};
+        charIndex:0,fieldIndex:0,fromCategoryIndex:originCategory})};
     }
     return state;
   }
@@ -206,7 +280,7 @@ function moveWaypointWorkflow(state,event){
         const navigation=editWaypoint(state.navigation,o.waypointId,
           {name:o.draftName.trim()});
         return {...state,navigation,overlay:modal("waypoints",{
-          purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:3,simulated:true}),
+          purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:originCategory,simulated:true}),
           notice:"WPT NAME SAVED (SIM)"};
       }catch(error){return {...state,notice:"WAYPOINT NAME INVALID: "+error.message};}
     }
@@ -220,24 +294,24 @@ function moveWaypointWorkflow(state,event){
       if(!o.confirm)return {...state,overlay:
         o.kind==="confirm-waypoint-delete"
           ? modal("waypoints",{purpose:"edit",itemIndex:o.itemIndex,
-            fromCategoryIndex:3,simulated:true})
-          : menuOverlay(3),notice:"Erase cancelled"};
+            fromCategoryIndex:originCategory,simulated:true})
+          : exitWaypointOverlay(originCategory),notice:"Erase cancelled"};
       if(o.kind==="confirm-delete-all-waypoints"){
         if(state.navigation.destinationId!==null){
-          return {...state,overlay:menuOverlay(3),
+          return {...state,overlay:exitWaypointOverlay(originCategory),
             notice:"DESTINATION PROTECTED · CLEAR GO TO WPT FIRST"};
         }
         return {...state,navigation:{...state.navigation,waypoints:[]},
-          overlay:menuOverlay(3),notice:"ALL WPT ERASED · SIM"};
+          overlay:exitWaypointOverlay(originCategory),notice:"ALL WPT ERASED · SIM"};
       }
       try {
         const navigation=deleteWaypoint(state.navigation,o.waypointId);
         return {...state,navigation,overlay:modal("waypoints",{
           purpose:"edit",itemIndex:Math.max(0,Math.min(
-            o.itemIndex,navigation.waypoints.length-1)),fromCategoryIndex:3,
+            o.itemIndex,navigation.waypoints.length-1)),fromCategoryIndex:originCategory,
           simulated:true}),notice:"WPT "+o.waypointId+" ERASED · SIM"};
       }catch(error){
-        return {...state,overlay:menuOverlay(3),
+        return {...state,overlay:exitWaypointOverlay(originCategory),
           notice:"DESTINATION PROTECTED · "+error.message};
       }
     }
@@ -308,9 +382,10 @@ function moveSpecialOverlay(state,event) {
       if(!o.editing)return {...state,overlay:{...o,editing:true,
         draftValue:state.settings[field.key]??field.defaultValue}};
       if(!field.choices.includes(o.draftValue))return state;
-      return {...state,settings:{...state.settings,[field.key]:o.draftValue},
+      return syncAlarmsIfObserved({...state,
+        settings:{...state.settings,[field.key]:o.draftValue},
         overlay:{...o,editing:false,draftValue:null},
-        notice:"CALIB "+field.label+" = "+o.draftValue+" · SIM"};
+        notice:"CALIB "+field.label+" = "+o.draftValue+" · SIM"},event);
     }
     if(event.kind==="pad" && event.control==="trackpad"){
       const delta=["down","right"].includes(event.direction)?1:-1;
@@ -419,6 +494,20 @@ function reconcileCapabilityMenu(previous,next){
         next.settings?.tankenmaru!=="On")){
     return replace(menuOverlay(4)," · VIRTUAL TANKENMARU DETAILS CLOSED");
   }
+  if(overlay?.kind==="receiver-status" && next.settings?.tankenmaru==="On"){
+    return replace(menuOverlay(4)," · RECEIVER STATUS CLOSED");
+  }
+  if(overlay?.kind==="func-setting"){
+    const entryMeta=FCV_MENU_ENTRIES.find(item=>item.settingKey===overlay.settingKey);
+    const activeEntry=entryMeta
+      ?getFcvMenuItems(entryMeta.category,next).find(item=>item.id===entryMeta.id)
+      :null;
+    if(!activeEntry || activeEntry.disabled ||
+        !activeEntry.choices?.includes(overlay.draftValue)){
+      return replace(null," · FUNC EDIT CANCELLED");
+    }
+    return next;
+  }
   const installation=overlay?.kind==="installation";
   if(!installation && overlay?.kind!=="menu")return next;
   const entries=state=>installation?getInstallationMenu(state):
@@ -517,10 +606,10 @@ function moveMenu(state, event) {
     const demoOn = entry.id === "system.demo" ? o.draftValue === "On" : state.demoOn;
     const enableBds=entry.id==="display.bottomDiscrimination" &&
       ["Graphic","Probability"].includes(o.draftValue);
-    return {...state, settings, demoOn,
+    return syncAlarmsIfObserved({...state, settings, demoOn,
       rangeMode:enableBds?"auto":state.rangeMode,
       overlay: {...o, editing:false, draftValue:null,editEntryId:null},
-      notice:entry.label + " = " + o.draftValue};
+      notice:entry.label + " = " + o.draftValue},event);
   }
   if (event.kind !== "pad" || event.control !== "trackpad") return state;
   if (o.editing) {
@@ -569,8 +658,9 @@ function moveInstallation(state, event) {
     const settings=resetRangeBankOnDepthUnitChange(state.settings,
       {...state.settings,[item.settingKey]:o.draftValue});
     if(item.settingKey==="tankenmaru" && o.draftValue==="On") settings.nmea="Off";
-    return {...state,settings,demoOn:settings.demo==="On",
-      overlay:{...o,editing:false,draftValue:null,editEntryId:null},notice:"Installation: "+item.label};
+    return syncAlarmsIfObserved({...state,settings,demoOn:settings.demo==="On",
+      overlay:{...o,editing:false,draftValue:null,editEntryId:null},
+      notice:"Installation: "+item.label},event);
   }
   if(event.kind==="pad" && event.control==="trackpad") {
     const delta=["down","right"].includes(event.direction)?1:-1;
@@ -613,8 +703,17 @@ function moveFuncOverlay(state,event) {
         o.choices.indexOf(o.draftValue)+delta,o.choices.length)]}};
     }
     if(event.kind==="press" && event.control==="enter") {
-      return {...state,settings:{...state.settings,[o.settingKey]:o.draftValue},
-        overlay:null,notice:o.label+" = "+o.draftValue};
+      const entryMeta=FCV_MENU_ENTRIES.find(item=>item.settingKey===o.settingKey);
+      const activeEntry=entryMeta
+        ?getFcvMenuItems(entryMeta.category,state).find(item=>item.id===entryMeta.id)
+        :null;
+      if(!activeEntry || activeEntry.disabled || !activeEntry.choices?.includes(o.draftValue)){
+        return {...state,overlay:null,
+          notice:activeEntry?.disabledReason??"FUNC EDIT CANCELLED"};
+      }
+      return syncAlarmsIfObserved({...state,
+        settings:{...state.settings,[o.settingKey]:o.draftValue},
+        overlay:null,notice:o.label+" = "+o.draftValue},event);
     }
   }
   return state;
@@ -638,9 +737,10 @@ function moveFishAlarm(state,event){
   if(event.kind==="press" && event.control==="enter"){
     if(o.editing){
       if(!key || !choices.includes(o.draftValue))return state;
-      return {...state,settings:{...state.settings,[key]:o.draftValue},
+      return syncAlarmsIfObserved({...state,
+        settings:{...state.settings,[key]:o.draftValue},
         overlay:{...o,editing:false,draftValue:null},
-        notice:"ALARM"+index+" / "+(o.kind==="fish-alarm"?"Alarm":field.label)+" = "+o.draftValue};
+        notice:"ALARM"+index+" / "+(o.kind==="fish-alarm"?"Alarm":field.label)+" = "+o.draftValue},event);
     }
     if(o.kind==="fish-alarm" && o.itemIndex===0){
       return {...state,overlay:modal("fish-alarm-setting",{
@@ -725,15 +825,20 @@ export function reduceFcv588(state, event) {
     const typed=event.sensorObservation??{};
     const virtualSonar=trainingFixture.virtualMounting===true &&
       state.settings.transducer==="525STID-PWD";
+    const sonarAvailable=state.demoOn===true || virtualSonar;
+    const validSpeed=(virtualSonar || trainingFixture.navigation) &&
+      isValidSyntheticSpeed(typed.speedKn)?typed.speedKn:null;
     const syntheticConditions=event.fixture==="virtualMounting" ? {
       ...state.syntheticConditions,
-      depthM:state.demoOn || virtualSonar ? typed.bottomDepthM??null:null,
-      speedKn:virtualSonar || trainingFixture.navigation
-        ? typed.speedKn??null:null,
-      bottomClassification:state.demoOn || virtualSonar
+      depthM:sonarAvailable ? typed.bottomDepthM??null:null,
+      speedKn:validSpeed,
+      bottomClassification:sonarAvailable
         ? typed.bottomClassification??null:null,
       mountCompatible:event.enabled,
       mountAligned:event.enabled,
+    } : event.fixture==="navigation" ? {
+      ...state.syntheticConditions,
+      speedKn:validSpeed,
     } : state.syntheticConditions;
     const next={...state,trainingFixture,syntheticConditions,settings,
       notice:"INSTRUCTOR ONLY · "+event.fixture+" "+
@@ -742,8 +847,6 @@ export function reduceFcv588(state, event) {
   }
   // Operator manual §1.18: any physical key silences an audible alarm.
   // Keep the underlying visual cause and perform the key's normal action.
-  // Timers, synthetic world ticks and wheel-only detents do not represent
-  // a silencing keypress.
   const physicalKey=(event.kind==="down" &&
       ["power","func"].includes(event.control)) ||
     (event.kind==="press" &&
@@ -758,6 +861,9 @@ export function reduceFcv588(state, event) {
     const overlay = state.overlay;
     if(overlay?.kind==="power-hold"){
       const elapsedMs=overlay.elapsedMs+event.elapsedMs;
+      if(elapsedMs>3000){
+        return {...powerOffState(state),uiElapsedMs};
+      }
       return {...state,uiElapsedMs,
         overlay:{...overlay,elapsedMs,remainingMs:Math.max(0,3000-elapsedMs)}};
     }
@@ -787,7 +893,11 @@ export function reduceFcv588(state, event) {
     if (state.power === "off") return state;
     if (state.power === "booting") {
       const bootElapsed = state.bootElapsed + steps;
-      return {...state, bootElapsed, power: bootElapsed >= 4 ? "on" : "booting"};
+      if (bootElapsed < 4) return {...state, bootElapsed, power: "booting"};
+      const booted = {...state, bootElapsed, power: "on"};
+      return {...booted, alarms: event.sensorObservation
+        ? evaluateDeviceAlarms(booted, event.sensorObservation, evaluateFcvAlarms([], {}))
+        : evaluateFcvAlarms([], {})};
     }
     const observation=event.sensorObservation;
     if (!observation) return state;
@@ -796,11 +906,6 @@ export function reduceFcv588(state, event) {
       state.settings.transducer==="525STID-PWD";
     const sonarAvailable=state.demoOn===true || virtualSonar;
     const externalSyntheticData=state.trainingFixture.navigation===true;
-    const destination=state.navigation.waypoints.find(w=>
-      w.id===state.navigation.destinationId);
-    const arrivalDistanceNm=externalSyntheticData && destination
-      ?distanceNmBetween(observation.navigation?.position,destination.position)
-      :null;
     const syntheticConditions={
       depthM:sonarAvailable?observation.bottomDepthM:null,
       speedKn:(virtualSonar || externalSyntheticData) &&
@@ -817,46 +922,17 @@ export function reduceFcv588(state, event) {
         "FCV588_PUBLIC_FEATURE_525STID_PWD" &&
         observation.virtualMounting?.mountAligned===true),
     };
-    const bottomFeature=getFcvMenuItems("Display",{
-      ...state,syntheticConditions,
-    }).find(item=>item.id==="display.bottomDiscrimination");
-    const fishFeature=getFcvMenuItems("Display",{
-      ...state,syntheticConditions,
-    }).find(item=>item.id==="display.accuFish");
-    const bottomTypeAvailable=sonarAvailable && state.rangeMode==="auto" &&
-      ["Graphic","Probability"].includes(state.settings.bottomDiscrimination) &&
-      bottomFeature?.disabled===false;
-    // A disabled demo is not evidence of a real connected sounder or navigator.
-    // Mask unavailable sensor fields before computing safety-training alarms.
-    const alarmObservation={
-      ...observation,
-      bottomDepthM:sonarAvailable?observation.bottomDepthM:null,
-      // §1.18 bottom-type alarm cannot identify seabed without Bottom Disc.
-      bottomType:bottomTypeAvailable?observation.bottomType:null,
-      fishPresent:sonarAvailable?observation.fishPresent:null,
-      fishStrength:sonarAvailable?observation.fishStrength:null,
-      fishCategory:sonarAvailable?observation.fishCategory:null,
-      accuFishAvailable:sonarAvailable &&
-        state.settings.accuFish==="On" && fishFeature?.disabled===false,
-      arrivalDistanceNm,
-      speedKn:(virtualSonar || externalSyntheticData) &&
-        state.settings.speedSource!=="NMEA" &&
-        isValidSyntheticSpeed(observation.speedKn)?observation.speedKn:null,
-      temperatureC:(virtualSonar || externalSyntheticData) &&
-        state.settings.tempSource!=="NMEA"
-        ?observation.temperatureC:null,
-    };
-    const alarms=evaluateFcvAlarms(alarmProfiles(state.settings),
-      alarmObservation,state.alarms);
+    const nextWithConditions={...state,navigationObservation,syntheticConditions};
+    const alarms=evaluateDeviceAlarms(nextWithConditions,observation,state.alarms);
     const navigation=externalSyntheticData && state.settings.tripSource==="Own"
       ?advanceTrainingTrip(state.navigation,observation.speedKn,steps)
       :state.navigation;
     return reconcileCapabilityMenu(state,
-      {...state,navigation,navigationObservation,syntheticConditions,alarms});
+      {...nextWithConditions,navigation,alarms});
   }
 
   if (event.kind === "press" && event.control === "power") {
-    if (event.hold === "long") return {...state, power: "off", bootElapsed: 0, overlay: null, notice: ""};
+    if (event.hold === "long") return powerOffState(state);
     if (event.hold !== "short") throw new TypeError("power hold must be short or long");
     if (state.power === "off") return {...state, power: "booting", bootElapsed: 0, notice: ""};
     if (state.power !== "on") return state;
@@ -870,51 +946,139 @@ export function reduceFcv588(state, event) {
       stepDirection: state.brightness===9?-1:1, elapsedMs: 0}, notice: ""};
   }
   if (state.power !== "on") return state;
-  if(state.overlay && ["fish-alarm","fish-alarm-setting"].includes(state.overlay.kind) &&
-    (event.kind==="pad" || (event.kind==="press" &&
-    ["menu","enter"].includes(event.control)))){
-    return moveFishAlarm(state,event);
+  if (event.kind === "rotate" && (!Number.isInteger(event.steps) || Math.abs(event.steps) > 20)) {
+    throw new RangeError("invalid rotation");
   }
-  if(state.overlay && ["func-program","func-setting"].includes(state.overlay.kind) &&
-    (event.kind==="pad" || (event.kind==="press" &&
-    ["func","menu","enter"].includes(event.control)))) {
-    return moveFuncOverlay(state,event);
+
+  // Unified modal isolation across all 30 overlay states (BUG-04, BUG-10, BUG-11)
+  const activeKind = state.overlay?.kind;
+  if (activeKind === "power-hold") return state;
+  if (activeKind === "fish-alarm" || activeKind === "fish-alarm-setting") {
+    return (event.kind === "pad" || (event.kind === "press" &&
+      ["menu", "enter"].includes(event.control)))
+      ? moveFishAlarm(state, event) : state;
   }
-  if (state.overlay && ["diagnostics","lcd-test","confirm-restore",
+  if (activeKind === "func-program" || activeKind === "func-setting") {
+    return (event.kind === "pad" || (event.kind === "press" &&
+      ["func", "menu", "enter"].includes(event.control)))
+      ? moveFuncOverlay(state, event) : state;
+  }
+  if (activeKind && ["diagnostics","lcd-test","confirm-restore",
       "range-bank","window-size","calibration","units","nav-boxes",
       "receiver-status","tankenmaru-details",
       "trip-status","confirm-trip-reset","waypoints",
       "waypoint-detail","waypoint-name","confirm-waypoint-delete",
-      "confirm-delete-all-waypoints"]
-    .includes(state.overlay.kind)) return moveSpecialOverlay(state,event);
-  if (state.overlay?.kind === "installation" &&
-    (event.kind === "pad" || (event.kind === "press" &&
-    ["menu","enter"].includes(event.control)))) {
-    return moveInstallation(state,event);
+      "confirm-delete-all-waypoints"].includes(activeKind)) {
+    if (activeKind === "waypoints" && event.kind === "press" && event.control === "mark") {
+      // Allow MARK while viewing committed waypoint list (V39 C11) without closing list
+    } else {
+      return moveSpecialOverlay(state, event);
+    }
   }
-  if (state.overlay?.kind === "menu" && (
-    event.kind === "pad" || (event.kind === "press" &&
-    ["menu","enter"].includes(event.control)))) {
-    return moveMenu(state, event);
+  if (activeKind === "installation") {
+    return (event.kind === "pad" || (event.kind === "press" &&
+      ["menu", "enter"].includes(event.control)))
+      ? moveInstallation(state, event) : state;
+  }
+  if (activeKind === "menu") {
+    if (event.kind === "press" && event.control === "mark" && !state.overlay.editing) {
+      // Allow MARK while browsing non-editing menu (§1.1 / V37 D09), blocked while editing
+    } else {
+      return (event.kind === "pad" || (event.kind === "press" &&
+        ["menu", "enter"].includes(event.control)))
+        ? moveMenu(state, event) : state;
+    }
+  }
+  if (activeKind === "mode") {
+    if (event.kind === "rotate" && event.control === "mode") {
+      return {...state, overlay: {kind: "mode",
+        candidate: DISPLAY_MODES[wrap(DISPLAY_MODES.indexOf(state.overlay.candidate) + event.steps, DISPLAY_MODES.length)],
+        elapsedMs: 0}, notice: ""};
+    }
+    if (event.kind === "press" && event.control === "menu") {
+      return {...state, overlay: null, notice: ""};
+    }
+    return state;
+  }
+  if (activeKind === "brill") {
+    if (event.kind === "pad" && event.control === "trackpad") {
+      const delta = ["right", "up"].includes(event.direction) ? 1 : -1;
+      return {...state, overlay: {...state.overlay, value: clamp(state.overlay.value + delta, 0, 9), elapsedMs: 0}};
+    }
+    if (event.kind === "press" && ["menu", "enter"].includes(event.control)) {
+      return {...state, brightness: state.overlay.value, overlay: null, notice: ""};
+    }
+    return state;
+  }
+  if (activeKind === "gain") {
+    const o = state.overlay;
+    if (event.kind === "push" && event.control === "gain") {
+      return {...state, overlay: {...o, mode: cycleGainMode(o.mode)}};
+    }
+    if (event.kind === "rotate" && event.control === "gain") {
+      if (o.mode === "off") return state;
+      const offset = clamp(o.offset + event.steps, -5, 5);
+      return {...state, overlay: {...o, offset}, notice: "Auto Gain Offset: " + offset};
+    }
+    if (event.kind === "pad" && event.control === "trackpad") {
+      if (event.direction === "down") return {...state, overlay: {...o, mode: cycleGainMode(o.mode)}};
+      if (event.direction === "up") return {...state, overlay: {...o, mode: cycleGainMode(o.mode, -1)}};
+      const delta = event.direction === "right" ? 1 : -1;
+      return {...state, overlay: {...o, offset: clamp(o.offset + delta, -5, 5)}};
+    }
+    if (event.kind === "press" && event.control === "enter") {
+      return {...state, gainMode: o.mode, autoGainOffset: o.offset, overlay: null, notice: ""};
+    }
+    if (event.kind === "press" && event.control === "menu") {
+      return {...state, overlay: null, notice: ""};
+    }
+    return state;
+  }
+  if (activeKind === "range") {
+    const o = state.overlay;
+    if (event.kind === "press" && event.control === "range") {
+      const bds = getFcvMenuItems("Display", state).find(item =>
+        item.id === "display.bottomDiscrimination");
+      if (["Graphic", "Probability"].includes(state.settings.bottomDiscrimination) &&
+          bds && !bds.disabled) {
+        return {...state, notice: "RANGE DISABLED · BOTTOM DISCRIMINATION ACTIVE"};
+      }
+      return {...state, overlay: o.mode === "manual"
+        ? {...o, index: wrap(o.index + 1, MAX_RANGE_INDEX + 1)}
+        : {...o, mode: "manual"}, notice: ""};
+    }
+    if (event.kind === "pad" && event.control === "trackpad") {
+      if (event.direction === "left") return {...state, overlay: {...o, mode: "auto"}};
+      if (event.direction === "right") return {...state, overlay: {...o, mode: "manual"}};
+      if (o.mode !== "manual") return state;
+      const delta = event.direction === "down" ? 1 : -1;
+      return {...state, overlay: {...o, index: clamp(o.index + delta, 0, MAX_RANGE_INDEX)}};
+    }
+    if (event.kind === "press" && event.control === "enter") {
+      return syncAlarmsIfObserved(reconcileCapabilityMenu(state, {
+        ...state, rangeMode: o.mode, rangeIndex: o.index, overlay: null, notice: "",
+      }), event);
+    }
+    if (event.kind === "press" && event.control === "menu") {
+      return {...state, overlay: null, notice: ""};
+    }
+    return state;
   }
 
+  // Base sonar/NAV screen (no modal overlay active)
   if (event.kind === "rotate" && event.control === "mode") {
-    if (!Number.isInteger(event.steps) || Math.abs(event.steps) > 20) throw new RangeError("invalid rotation");
-    const prior = state.overlay?.kind === "mode" ? state.overlay.candidate : state.mode;
     return {...state, overlay: {kind: "mode",
-      candidate: DISPLAY_MODES[wrap(DISPLAY_MODES.indexOf(prior) + event.steps, DISPLAY_MODES.length)],
+      candidate: DISPLAY_MODES[wrap(DISPLAY_MODES.indexOf(state.mode) + event.steps, DISPLAY_MODES.length)],
       elapsedMs: 0}, notice: ""};
   }
   if (event.kind === "rotate" && event.control === "gain") {
-    if (!Number.isInteger(event.steps) || Math.abs(event.steps) > 20) throw new RangeError("invalid rotation");
-    if (state.gainMode !== "off") return {
-      ...state, autoGainOffset: clamp(state.autoGainOffset + event.steps, -5, 5),
-      notice: "Auto Gain Offset: " + clamp(state.autoGainOffset + event.steps, -5, 5),
-    };
+    if (state.gainMode !== "off") {
+      const offset = clamp(state.autoGainOffset + event.steps, -5, 5);
+      return {...state, autoGainOffset: offset, notice: "Auto Gain Offset: " + offset};
+    }
     return {...state, manualGain: Math.round(clamp(state.manualGain + event.steps * 0.5, 0, 10) * 10) / 10, notice: ""};
   }
   if (event.kind === "push" && event.control === "gain") {
-    if (state.overlay?.kind === "gain") return {...state, overlay: {...state.overlay, mode: cycleGainMode(state.overlay.mode)}};
     return openGain(state);
   }
   if (event.kind !== "press" && event.kind !== "pad") return state;
@@ -926,12 +1090,6 @@ export function reduceFcv588(state, event) {
     if (["Graphic","Probability"].includes(state.settings.bottomDiscrimination) &&
         bds && !bds.disabled) {
       return {...state,notice:"RANGE DISABLED · BOTTOM DISCRIMINATION ACTIVE"};
-    }
-    if (state.overlay?.kind === "range") {
-      const o = state.overlay;
-      return {...state, overlay: o.mode === "manual"
-        ? {...o, index: wrap(o.index + 1, MAX_RANGE_INDEX + 1)}
-        : {...o, mode: "manual"}, notice: ""};
     }
     return openRange(state);
   }
@@ -953,7 +1111,7 @@ export function reduceFcv588(state, event) {
     }
     if(entry.id==="data.waypoint"){
       return {...state,overlay:modal("waypoints",
-        {purpose:"edit",itemIndex:0,fromCategoryIndex:3,simulated:true}),notice:""};
+        {purpose:"edit",itemIndex:0,fromCategoryIndex:null,simulated:true}),notice:""};
     }
     if(entry.kind!=="choice" || !entry.choices?.length){
       return {...state,notice:"FUNC: SOURCE_GAP"};
@@ -963,24 +1121,10 @@ export function reduceFcv588(state, event) {
       draftValue:state.settings[entry.settingKey]??entry.choices[0]},notice:""};
   }
   if (control === "menu") {
-    if (state.overlay?.kind === "brill") {
-      return {...state, brightness: state.overlay.value, overlay: null, notice: ""};
-    }
-    if (state.overlay) return {...state, overlay: null, notice: ""}; // cancel other edits
     return {...state, overlay: menuOverlay(), notice: ""};
   }
   if (control === "enter") {
-    if (state.overlay?.kind === "range") {
-      return {...state, rangeMode: state.overlay.mode, rangeIndex: state.overlay.index, overlay: null, notice: ""};
-    }
-    if (state.overlay?.kind === "gain") {
-      return {...state, gainMode: state.overlay.mode, autoGainOffset: state.overlay.offset,
-        overlay: null, notice: ""};
-    }
-    if (state.overlay?.kind === "brill") {
-      return {...state, brightness: state.overlay.value, overlay: null, notice: ""};
-    }
-    if (!state.overlay && state.alarms.activeIds.length) {
+    if (state.alarms.activeIds.length) {
       return {...state,alarms:acknowledgeFcvAlarms(state.alarms),
         notice:"ALARM ACK · SOURCE CONDITION STILL PRESENT"};
     }
@@ -988,29 +1132,8 @@ export function reduceFcv588(state, event) {
   }
   if (event.kind === "pad" && control === "trackpad") {
     const direction = event.direction;
-    const o = state.overlay;
-    if (o?.kind === "range") {
-      if (direction === "left") return {...state, overlay: {...o, mode: "auto"}};
-      if (direction === "right") return {...state, overlay: {...o, mode: "manual"}};
-      if (o.mode !== "manual") return state;
-      const delta = direction === "down" ? 1 : -1;
-      return {...state, overlay: {...o, index: clamp(o.index + delta, 0, MAX_RANGE_INDEX)}};
-    }
-    if (o?.kind === "gain") {
-      if (direction === "down") return {...state, overlay: {...o, mode: cycleGainMode(o.mode)}};
-      if (direction === "up") return {...state, overlay: {...o, mode: cycleGainMode(o.mode, -1)}};
-      const delta = direction === "right" ? 1 : -1;
-      return {...state, overlay: {...o, offset: clamp(o.offset + delta, -5, 5)}};
-    }
-    if (o?.kind === "brill") {
-      // The existing six-second training timer measures inactivity, not the
-      // age of the first opening. A clamped adjustment is still an operation.
-      const delta=["right","up"].includes(direction)?1:-1;
-      return {...state,overlay:{...o,value:clamp(o.value+delta,0,9),elapsedMs:0}};
-    }
     // Manual §1.7: ▲/▼ move VRM outside menus; not active in NAV views.
-    // F0 step size is illustrative pending physical-device measurement.
-    if (!o && (direction === "up" || direction === "down") &&
+    if ((direction === "up" || direction === "down") &&
         !["NAV1", "NAV2"].includes(state.mode)) {
       const delta = direction === "down" ? 1 : -1;
       return {
@@ -1031,8 +1154,11 @@ export function reduceFcv588(state, event) {
       return {...state, notice:"MARK: NO POSITION · giảng viên bật D15 synthetic NAV fixture"};
     }
     try {
+      const wpNum=state.navigation.nextWaypointNumber;
+      const wpName=wpNum<=999?"MARK "+wpNum:
+        wpNum<=9999999?"M"+wpNum:"M"+String(wpNum).slice(-7);
       const navigation=addWaypoint(state.navigation,{
-        name:"MARK " + state.navigation.nextWaypointNumber,
+        name:wpName,
         position:event.sensorObservation.navigation.position,
       });
       return {...state,navigation,notice:"MARK "+

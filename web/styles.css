@@ -90,7 +90,7 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .device-frame::before { left: 37%; right: 37%; top: 83%; bottom: 5%; border: 0; border-radius: 30%; background: linear-gradient(100deg,#20272c,#434b50 45%,#252c31); box-shadow: inset 0 -4px #121b22, 0 5px 8px #02090e; }
 .device-frame::after { left: 18%; right: 18%; bottom: 4%; height: 48px; border-radius: 48% 48% 15% 15%; background: linear-gradient(#414a50,#20282e 46%,#30383e 52%,#181f25); box-shadow: inset 0 2px #596167, 0 7px 10px #02090e; }
 .bezel-header { display: flex; align-items: center; padding: 0 2px 4px; color: var(--panel-ink); font-family: var(--panel-font); line-height: 12px; }
-.manufacturer-name { font-size: 11px; letter-spacing: 1px; font-weight: 750; }
+.manufacturer-name { font-size: 10px; letter-spacing: .7px; font-weight: 750; }
 .equipment {
   /* The near-square head contour is a photo-informed estimate, not an
      accepted 233 x 233 mm hardware measurement. Check the LCD numerically. */
@@ -105,13 +105,18 @@ h1 span { color: #88a8b9; font-weight: 300; }
    Center its small letterbox rather than anisotropically stretching sonar pixels. */
 .lcd canvas { position: absolute; left: 0; top: 50%; transform: translateY(-50%);
   width: 100%; height: auto; display: block; image-rendering: pixelated; }
-.screen-top { position: absolute; top: 5px; left: 9px; right: 9px; color: var(--fcv-lcd-foreground, #ffffff); text-shadow: 1px 1px var(--fcv-lcd-shadow, #061724); font: 700 clamp(9px, 3.33cqw, 15px) Consolas, monospace; white-space: nowrap; pointer-events: none; }
+.screen-top { position: absolute; top: 0; left: 0; right: 0; z-index: 1; padding: 4px 9px; background: var(--fcv-lcd-header-bg, rgba(11, 58, 122, 0.92)); border-bottom: 1px solid var(--fcv-lcd-header-border, rgba(130, 185, 232, 0.35)); color: var(--fcv-lcd-foreground, #ffffff); text-shadow: 1px 1px var(--fcv-lcd-shadow, #061724); font: 700 clamp(9px, 3.33cqw, 15px) Consolas, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+.screen-top:empty { background: transparent; border-bottom: 0; padding: 0; }
+.lcd:has(#demo-indicator:not([hidden])) .screen-top:not(:empty) { padding-right: 62px; }
 .screen-top[hidden] { display: none; }
 .demo-indicator { position: absolute; right: 7px; bottom: 5px; z-index: 1;
   pointer-events: none; color: var(--fcv-lcd-foreground, #fff);
   text-shadow: 1px 1px var(--fcv-lcd-shadow, #061724);
   font: 700 clamp(9px, 3.33cqw, 13px) Consolas, monospace; }
-.demo-indicator[hidden] { display: none; }
+.lcd > #demo-indicator { top: 4px; right: 7px; bottom: auto; z-index: 2;
+  padding: 1px 4px; border-radius: 2px;
+  background: var(--fcv-lcd-header-bg, rgba(11, 58, 122, 0.88)); }
+.demo-indicator[hidden], .lcd > #demo-indicator[hidden] { display: none; }
 .depth-indicator { position: absolute; left: 11px; bottom: var(--depth-bottom, 10px); display: flex; gap: 2px; align-items: baseline; color: var(--fcv-lcd-foreground, #ffffff); text-shadow: 1px 1px var(--fcv-lcd-shadow, #09283b); font-family: Consolas, monospace; }
 /* dual.jpg places the dominant depth value across the LF/HF split. The
    divider itself comes from the existing windowRatio layout, not fixed OEM
@@ -148,7 +153,7 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .lcd-overlay-content { position: relative; padding: 13px 12px; white-space: pre-line; line-height: 1.5; min-height: 0; overflow-y: auto; overflow-wrap: anywhere; flex: 1 1 auto; }
 .lcd-menu-row { white-space: pre-wrap; padding: 1px 3px; border-radius: 2px; min-height: 1.5em; }
 .lcd-menu-row[aria-current="true"] { background: #cbd8e7; color: #103362; font-weight: 800; box-shadow: inset 3px 0 0 #2155a2; }
-.lcd-menu-row[aria-disabled="true"] { color: #65717f; opacity: .75; }
+.lcd-menu-row[aria-disabled="true"] { color: #465462; opacity: 1; }
 .lcd-overlay-footer { font-size: 9px; color: #394b59; border-top: 1px solid #c8d3dd; padding: 8px; }
 .lcd-overlay-footer[hidden] { display: none !important; }
 .lcd-menu-body { display: flex; flex: 1 1 auto; min-height: 0; overflow: hidden; }
@@ -164,16 +169,15 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .lcd-overlay[data-layout="main-menu"] .lcd-menu-main { position: relative; min-height: 0; }
 .lcd-overlay[data-layout="main-menu"] .lcd-overlay-content { padding: 4px 5px; overflow-y: auto; }
 .lcd-overlay[data-layout="main-menu"] .lcd-menu-row {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(38px, auto);
-  align-items: baseline; column-gap: 4px; min-height: 1.35em; padding: 1px 3px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline; column-gap: 6px; min-height: 1.35em; padding: 1px 3px;
   white-space: normal;
 }
 .lcd-overlay[data-layout="main-menu"] .lcd-menu-label {
   min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .lcd-overlay[data-layout="main-menu"] .lcd-menu-value {
-  justify-self: end; min-width: 0; max-width: 48%; overflow: hidden;
-  text-overflow: ellipsis; white-space: nowrap; text-align: right;
+  justify-self: end; white-space: nowrap; text-align: right;
 }
 .lcd-overlay[data-layout="main-menu"] .lcd-overlay-footer { white-space: pre-line; overflow-wrap: anywhere; font-size: 9px; line-height: 1.4; padding: 5px 7px; }
 .lcd-overlay[data-layout="main-menu"] .lcd-menu-options {
@@ -187,8 +191,8 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .lcd-options-title { font-weight: 700; border-bottom: 1px solid #aebac7; }
 .lcd-menu-categories[hidden], .lcd-menu-options[hidden] { display: none; }
 .lcd-overlay .lcd-menu-row[aria-disabled="true"][aria-current="true"] {
-  background: #d1d8dc; color: #596673; box-shadow: inset 3px 0 0 #8d9ba4;
-  opacity: .9;
+  background: #d1d8dc; color: #354351; box-shadow: inset 3px 0 0 #6c7c87;
+  opacity: 1;
 }
 /* Source-grade flags stay in inert DOM metadata and in the instructor UI.
    An invented dashed mark on the operator LCD would imply OEM pixels. */
@@ -301,7 +305,6 @@ h1 span { color: #88a8b9; font-weight: 300; }
 .mode-scale [data-mode="NAV2"] { left: 100%; bottom: 3px; margin-left: 5px; }
 .mode-scale [data-selected="true"] { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; }
 .mode-wrap .knob-label { margin-bottom: 9px; }
-.detent { width: 24px; height: 30px; border: 1px solid #a1adb3; background: #44535e; border-radius: 5px; font-size: 19px; }
 .rotary-assist { padding: 10px; border: 1px solid #375366; background: #102735; border-radius: 10px; }
 .rotary-assist h3 { margin: 3px 0 5px; }
 .rotary-assist .hint { margin: 0 0 10px; font-size: 11px; }
@@ -426,6 +429,8 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   .trainer-rotate { min-height: 44px; min-width: 44px; }
   .trainer-buttons button { min-height: 44px; }
   .lesson-panel select, .lesson-panel button { width: 100%; min-height: 44px; }
+  #archive-envelope-file, #archive-sidecar-file, #archive-timeline-range,
+  .archive-timeline-controls button { min-height: 44px; }
   .trainer-buttons { margin: 13px 0; }
   .depth-indicator strong { font-size: 25px; letter-spacing: -1px; }
   .depth-indicator span { font-size: 10px; }
@@ -482,11 +487,36 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
   .d15-tab:nth-child(5) { grid-column: span 2; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  button:active, .knob:active { transform: none; }
+}
+@media (forced-colors: active) {
+  .hardware-key, .power-button, .knob, .pad, .d15-tab,
+  .trainer-buttons button, .lesson-panel button, .lesson-panel select,
+  .lcd-overlay, .source-cue, .operator-guidance, .source-matrix-item {
+    forced-color-adjust: auto;
+    border: 1px solid ButtonText;
+  }
+  .lcd-menu-row[aria-current="true"],
+  .lcd-menu-categories [aria-current="true"],
+  .lcd-menu-options [aria-current="true"],
+  .d15-tab[aria-selected="true"] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+}
+
 /* P25 archive is a D15-only source-bound replay schematic, outside OEM LCD. */
 .archive-replay-panel { display:grid; gap:8px; border:1px solid #3d6370; border-radius:8px; background:#102734; padding:12px; min-width:0; }
 .archive-replay-panel h3 { margin:0; }
 .archive-replay-panel label { font-size:12px; color:#cbe8ef; }
-.archive-replay-panel input[type=file] { display:block; max-width:100%; min-width:0; font-size:12px; color:#d6e8f2; }
+.archive-replay-panel input[type=file] { display:block; width:100%; max-width:100%; min-width:0; min-height:44px; padding:9px 6px; font-size:12px; color:#d6e8f2; }
 .archive-replay-panel p { margin:3px 0; font-size:12px; line-height:1.55; overflow-wrap:anywhere; }
 .archive-replay-panel [hidden] { display:none !important; }
 .archive-replay-panel #archive-replay-status[data-state="rejected"] { color:#ffc4a8; }
@@ -512,7 +542,7 @@ kbd { background: #243d4c; border: 1px solid #507182; padding: 3px 5px; border-r
 .archive-timeline-controls { display:grid; grid-template-columns:auto minmax(70px,1fr) auto;
   gap:6px; align-items:center; }
 .archive-timeline-controls label { grid-column:1/-1; font-size:11px; }
-.archive-timeline-controls input[type=range] {width:100%; min-width:40px; }
-.archive-timeline-controls button {font-size:11px; padding:5px 7px; min-height:27px;}
+.archive-timeline-controls input[type=range] {width:100%; min-width:44px; min-height:44px; height:44px; margin:0; cursor:pointer; }
+.archive-timeline-controls button {font-size:11px; padding:5px 7px; min-height:36px;}
 .archive-timeline-panel canvas {display:block; max-width:100%; width:100%; height:auto;
   image-rendering:pixelated; background:#06182b; border:1px solid #557082;}

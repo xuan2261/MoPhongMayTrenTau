@@ -14,7 +14,7 @@
     "test/fcv588-p26-archive-bz-viewer.test.mjs": "ebd16c212b07941bf284d03abec5a9c19a0714ad5076c63486efe7528aee0424"
   },
   "command": [
-    "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
+    "<USER_PROFILE>\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
     "-m",
     "unittest",
     "discover",

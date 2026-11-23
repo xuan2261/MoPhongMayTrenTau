@@ -44,7 +44,7 @@ export function validateFcvSettings(settings) {
   if(keys.length===0 || keys.length>choices.size)throw new RangeError("invalid settings size");
   const clean={};
   for(const key of keys){
-    if(!Object.hasOwn(choices,key) && !choices.has(key))
+    if(!choices.has(key))
       throw new TypeError("unknown/unsafe settings key: "+key);
     if(["__proto__","prototype","constructor"].includes(key))
       throw new TypeError("unsafe settings key");
@@ -97,10 +97,20 @@ export function decodeFcvProfile19Settings(input){
   return decodeSettingsForProfile(input,"F1-public-reference-19");
 }
 
+/** Explicit settings-only import from archived profile20. */
+export function decodeFcvProfile20Settings(input){
+  return decodeSettingsForProfile(input,"F1-public-reference-20");
+}
+
 /** Explicit settings-only import from archived profile21.
  * Re-validates the exact legacy profile fingerprint and current allowed
  * setting values; never migrates a replay envelope or an in-progress editor.
  */
 export function decodeFcvProfile21Settings(input){
   return decodeSettingsForProfile(input,"F1-public-reference-21");
+}
+
+/** Explicit settings-only import from archived profile22. */
+export function decodeFcvProfile22Settings(input){
+  return decodeSettingsForProfile(input,"F1-public-reference-22");
 }

@@ -4,7 +4,7 @@ Traceback (most recent call last):
                      ^^^^^^
   File "C:\Work\MoPhongMayTrenTau\plans\261113-0911-fcv588-photo-reference-visual-conformance\research\qa-20261116\p05-menu\p05_browser_qa_worker12.py", line 376, in main
     print(json.dumps({"status": receipt["overallStatus"], "port": port,
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 UnicodeEncodeError: 'charmap' codec can't encode character '\u25b2' in position 3022: character maps to <undefined>

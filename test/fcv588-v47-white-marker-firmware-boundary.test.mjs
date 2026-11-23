@@ -97,7 +97,7 @@ test("V47 independently authored White/Gray visual mock never changes raw sensor
     initialWorldState(scenario),{columns:36,rows:80}).channels[50]]),
     before,"drawing a training palette may never change sensor observations");
   assert.equal(adapter.profile.firmware,null);
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-22");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
 });
 
 test("V47 manufacturer's R&D-only System Echo remains unexposed; Display Colors still source-graded",()=>{

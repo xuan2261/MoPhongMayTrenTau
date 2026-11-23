@@ -3,7 +3,7 @@
   "id": "FCV588-V31-LCD-BOUNDARY-ORACLE",
   "createdDate": "2026-10-17",
   "scope": "INDEPENDENT_STATIC_READ_ONLY_GATE_ARTIFACT_NOT_PRODUCT_IMPLEMENTATION",
-  "sourceProfile": "F1-public-reference-20",
+  "sourceProfile": "F1-public-reference-22",
   "publicReferenceManual": "OME-23890-E (Aug 2025)",
   "authority": [
     {

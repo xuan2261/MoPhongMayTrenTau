@@ -5,4 +5,4 @@ npm ERR! JSON.parse   "name": "fcv588-synthetic-electron-p'
 npm ERR! JSON.parse Failed to parse JSON data.
 npm ERR! JSON.parse Note: package.json must be actual JSON, not just JavaScript.
 
-npm ERR! A complete log of this run can be found in: C:\Users\Z10PAD8C_Xuan2261\AppData\Local\npm-cache\_logs\2026-11-21T07_54_43_659Z-debug-0.log
+npm ERR! A complete log of this run can be found in: <USER_PROFILE>\AppData\Local\npm-cache\_logs\2026-11-21T07_54_43_659Z-debug-0.log
