@@ -24,8 +24,9 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Disable global Git LFS smudge filter
+      - name: Configure Git longpaths and skip LFS smudge
         run: |
+          git config --global core.longpaths true
           git config --global filter.lfs.smudge "git-lfs smudge --skip -- %f"
           git config --global filter.lfs.process "git-lfs filter-process --skip"
 
@@ -43,6 +44,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: "requirements-dev.txt"
+
+      - name: Install Python test dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt
 
       - name: Syntax & Node test suite
         run: npm run check
