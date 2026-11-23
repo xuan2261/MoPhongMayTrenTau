@@ -10,6 +10,7 @@ permissions:
 
 env:
   PYTHONDONTWRITEBYTECODE: "1"
+  GIT_LFS_SKIP_SMUDGE: "1"
 
 jobs:
   verify:
@@ -23,6 +24,11 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Disable global Git LFS smudge filter
+        run: |
+          git config --global filter.lfs.smudge "git-lfs smudge --skip -- %f"
+          git config --global filter.lfs.process "git-lfs filter-process --skip"
+
       - name: Checkout repository (without LFS blobs)
         uses: actions/checkout@v4
         with:
