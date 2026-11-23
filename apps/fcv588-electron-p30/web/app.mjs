@@ -1,13 +1,13 @@
-import {TRAINING_SCENARIO, observeSounder, makeEchoFrame, effectiveRangeM,
+import {TRAINING_SCENARIO, observeSounder, effectiveRangeM,
   projectSyntheticSeabedProvenance,projectSyntheticSounderSourceIdentity} from
   "../src/core/scenario.mjs";
 import {createSession, dispatch, replay, createReplayEnvelope, reset, sessionHash} from "../src/core/session.mjs";
 import {FCV588_ADAPTER} from "../src/devices/fcv588/adapter.mjs";
 import {DISPLAY_MODES} from "../src/devices/fcv588/model.mjs";
-import {FCV_RANGE_BANK_FIELDS} from
-  "../src/devices/fcv588/menu-atlas.mjs";
+import {FCV_RANGE_BANK_FIELDS} from "../src/devices/fcv588/menu-atlas.mjs";
+if (FCV_RANGE_BANK_FIELDS.length !== 8) throw new Error("unexpected FCV range bank size");
 import {projectFcvEcho, projectFcvZoom, projectFcvAScope, projectFcvBottomDiscrimination, projectFcvBottomZone, advanceFcvPictureHistory, depthFractionOnFcvFrame, shouldRenderFcvSonar} from "../src/devices/fcv588/echo-projection.mjs";
-import {projectNavData,projectFcvManualNavBoxes,
+import {projectFcvManualNavBoxes,
   projectFcvTravelValues} from "../src/devices/fcv588/navigation.mjs";
 import {planFcvScreenLayout,planFcvDepthReadout,planFcvNavRows} from
   "../src/devices/fcv588/display-layout.mjs";
@@ -21,10 +21,8 @@ import {projectFcvTankenmaruTrainingStatus} from
   "../src/devices/fcv588/tankenmaru-status.mjs";
 import {projectFcvTrainingFaults} from "../src/devices/fcv588/training-faults.mjs";
 import {FCV588_TRAINING_LESSONS, assessFcvLesson} from "../src/core/lessons.mjs";
-import {FCV_SETTINGS_STORAGE_KEY, decodeFcvSettings, decodeFcvProfile19Settings,
-  decodeFcvProfile21Settings,
-  encodeFcvSettings} from "../src/devices/fcv588/settings.mjs";
-import {convertFcvDepth,formatFcvDepth,
+import * as fcvSettings from "../src/devices/fcv588/settings.mjs";
+import {convertFcvDepth,formatFcvDepth,formatFcvSpeed,
   formatFcvTemperature,formatFcvFishSize,formatFcvDistance} from
   "../src/devices/fcv588/units.mjs";
 import {getFcvDisplayPalette,getFcvLcdContrastTheme} from
@@ -41,8 +39,10 @@ import {projectFcv588ArchiveBZViewer,renderFcv588ArchiveBZViewer} from "./fcv588
 import {createFcv588ArchiveTimeline} from "./fcv588-archive-timeline.mjs";
 import {projectFcvLcdPresentation,projectFcvMainMenu,projectFcvFuncSetting,
   projectFcvEchoLegend,projectFcvAlarmPresentation,
-  projectFcvPhotoStatusHeader,projectFcvDepthTicks,
-  shouldShowFcvGlobalDepth} from "./lcd-presentation.mjs";
+  projectFcvPhotoStatusHeader,projectFcvAuthenticHeader,
+  projectFcvDepthTicks,formatFcvNavBoxForLcd,
+  canonicalNavBoxLabel,shouldShowFcvGlobalDepth,isVietnameseFcv,
+  localizeFcvNavLabel,localizeFcvChoiceValue} from "./lcd-presentation.mjs";
 import {projectFcvConfiguration} from "./lcd-config-presentation.mjs";
 import {projectFcvControl} from "./lcd-control-presentation.mjs";
 import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
@@ -51,7 +51,12 @@ import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
   "./lcd-instructor-meta.mjs";
 import {projectFcvInstructorSourceMatrix,projectFcvInstructorSourceTransition} from
   "./fcv588-training-source-matrix.mjs";
+import {FCV588_SETTINGS_FILE_NAME,FCV588_SETTINGS_TRANSFER_MAX_BYTES,
+  exportFcv588SettingsText,importFcv588SettingsText,
+  buildFcv588ReplayExportFiles} from "./fcv588-settings-transfer.mjs";
 
+const {FCV_SETTINGS_STORAGE_KEY, decodeFcvSettings, decodeFcvProfile19Settings,
+  decodeFcvProfile21Settings, encodeFcvSettings} = fcvSettings;
 const adapter = FCV588_ADAPTER;
 const playKeyTone=createFcvKeyTonePlayer();
 const $ = id => document.getElementById(id);
@@ -62,7 +67,8 @@ let cachedTick = -1;
 let cachedObservation;
 let cachedSeabedProvenance;
 let cachedSeabedSourceIdentity;
-let lastObservedSettings = encodeFcvSettings(session.deviceState.settings);
+let lastSettingsRef = session.deviceState.settings;
+let lastObservedSettings = encodeFcvSettings(lastSettingsRef);
 const frozenFrames = new Map();
 const canvas = $("echo-canvas");
 const ctx = canvas.getContext("2d", {alpha: false});
@@ -82,18 +88,29 @@ function restoreSettingsOnReload() {
   }
   if (raw === null) return "";
   const currentSettings=decodeFcvSettings(raw);
-  const oldProfile21Settings=currentSettings?null:decodeFcvProfile21Settings(raw);
-  const settings=currentSettings??oldProfile21Settings??decodeFcvProfile19Settings(raw);
+  const oldProfile23Settings=currentSettings?null:
+    fcvSettings.decodeFcvProfile23Settings?.(raw)??null;
+  const oldProfile22Settings=currentSettings||oldProfile23Settings?null:
+    fcvSettings.decodeFcvProfile22Settings?.(raw)??null;
+  const oldProfile21Settings=currentSettings||oldProfile23Settings||oldProfile22Settings?null:
+    decodeFcvProfile21Settings(raw);
+  const oldProfile20Settings=currentSettings||oldProfile23Settings||oldProfile22Settings||oldProfile21Settings?null:
+    fcvSettings.decodeFcvProfile20Settings?.(raw)??null;
+  const settings=currentSettings??oldProfile23Settings??oldProfile22Settings??
+    oldProfile21Settings??oldProfile20Settings??decodeFcvProfile19Settings(raw);
   if (!settings) {
     return "Cấu hình lưu không hợp lệ/khác phiên bản; đã bỏ qua, không dùng cấu hình cũ.";
   }
   try {
     session = dispatch(session, adapter, {kind: "restore-settings", settings}, scenario);
-    lastObservedSettings = encodeFcvSettings(session.deviceState.settings);
+    lastSettingsRef = session.deviceState.settings;
+    lastObservedSettings = encodeFcvSettings(lastSettingsRef);
     // Do not rewrite the original stored bytes during startup. Only a later
-    // committed setting change may persist a new profile22 envelope.
-    if(!currentSettings)return "Đã nhập cấu hình LOCAL profile"+(oldProfile21Settings?"21":"19")+
-      " sang profile22 qua sự kiện khôi phục; giữ nguyên bản lưu cũ tới lần thay đổi cấu hình. Không chuyển replay hoặc quyền tùy chọn.";
+    // committed setting change may persist a new profile envelope.
+    const legacyRev=oldProfile23Settings?"23":oldProfile22Settings?"22":
+      oldProfile21Settings?"21":oldProfile20Settings?"20":"19";
+    if(!currentSettings)return "Đã nhập cấu hình LOCAL profile"+legacyRev+
+      " sang "+adapter.revision+" qua sự kiện khôi phục; giữ nguyên bản lưu cũ tới lần thay đổi cấu hình. Không chuyển replay hoặc quyền tùy chọn.";
     return "Đã khôi phục cấu hình LOCAL qua sự kiện replay; thiết bị vẫn tắt.";
   } catch {
     return "Không thể khôi phục cấu hình LOCAL; đã giữ cấu hình mặc định.";
@@ -101,7 +118,9 @@ function restoreSettingsOnReload() {
 }
 
 function persistSettingsAfterChange() {
-  const encoded = encodeFcvSettings(session.deviceState.settings);
+  if (session.deviceState.settings === lastSettingsRef) return;
+  lastSettingsRef = session.deviceState.settings;
+  const encoded = encodeFcvSettings(lastSettingsRef);
   if (encoded === lastObservedSettings) return;
   // Avoid writing on every UI/world tick, including when storage is blocked.
   lastObservedSettings = encoded;
@@ -113,12 +132,12 @@ function persistSettingsAfterChange() {
   }
 }
 
-function observation() {
+function currentObservation() {
   if (cachedTick !== session.worldState.simTick) {
     cachedTick = session.worldState.simTick;
-    cachedObservation = observeSounder(scenario, session.worldState, {columns: 160, rows: 301});
+    cachedObservation = observeSounder(scenario, session.worldState, {columns: 160, rows: 301, columnSeconds: 1});
     cachedSeabedProvenance=projectSyntheticSeabedProvenance(
-      scenario,session.worldState,{columns:cachedObservation.columns});
+      scenario,session.worldState,{columns:cachedObservation.columns,columnSeconds:1});
     cachedSeabedSourceIdentity=projectSyntheticSounderSourceIdentity(
       scenario,session.worldState,{columns:cachedObservation.columns});
   }
@@ -130,7 +149,10 @@ function send(input) {
     const priorSonar=shouldRenderFcvSonar(session.deviceState);
     session = dispatch(session, adapter, input, scenario);
     if(shouldPlayFcvKeyTone(session.deviceState,input))playKeyTone();
-    if(priorSonar!==shouldRenderFcvSonar(session.deviceState))frozenFrames.clear();
+    if(priorSonar!==shouldRenderFcvSonar(session.deviceState)){
+      frozenFrames.clear();
+      drawChannel._paneCache?.clear();
+    }
     persistSettingsAfterChange();
     render();
   } catch (err) {
@@ -140,39 +162,105 @@ function send(input) {
 
 const lcdRgb=components=>"rgb("+components.join(",")+")";
 function drawChannel(frame, x0, y0, w, h,{axis="absolute"}={}) {
-  const palette=getFcvDisplayPalette(session.deviceState.settings);
-  const contrast=getFcvLcdContrastTheme(session.deviceState.settings);
+  const settings=session.deviceState.settings;
+  const palette=getFcvDisplayPalette(settings);
+  const contrast=getFcvLcdContrastTheme(settings);
+  const sonarTop=y0+62;
+  const sonarH=Math.max(1,h-74);
+  ctx.fillStyle = lcdRgb(contrast.background);
+  ctx.fillRect(x0, y0, w, h);
+  const paneCache=drawChannel._paneCache??(drawChannel._paneCache=new Map());
+  if(paneCache.size>8)paneCache.clear();
+  const paneSlot=x0+":"+y0+":"+w+":"+h;
+  let slotEntry=paneCache.get(paneSlot);
+  if(!slotEntry){
+    const usePrimary=x0===0 || typeof document==="undefined";
+    const surface=usePrimary?displayCanvas:document.createElement("canvas");
+    const surfaceCtx=usePrimary?displayCtx:surface.getContext("2d",{alpha:false});
+    slotEntry={key:null,surface,surfaceCtx};
+    paneCache.set(paneSlot,slotEntry);
+  }
+  const cacheKey=frame.projectionKey!==undefined?[
+    frame.rasterEpoch??frame.sourceTick??session.worldState?.simTick??-1,
+    frame.projectionKey,frame.frequencyKhz,frame.zoomMode??"",
+    frame.startDepthM??0,frame.rangeM,session.deviceState.mode??"",
+    settings.palette??"Blue",settings.colors??"8",
+    settings.whiteMarker??"Off",settings.clutter??"0",
+    settings.colorErase??"0",settings.zeroLineRejector??"Off",w,h,
+  ].join("|"):null;
   // View-only painter: extra subpixel texture uses ONLY synthetic frame bytes.
   // No acoustic observation/event/replay data is changed or read from hardware.
-  const settings=session.deviceState.settings;
-  const raster=rasterizeFcvEcho(frame,palette,{
-    clutterPct:Number(settings.clutter??0),
-    colorErasePct:Number(settings.colorErase??0),
-    zeroLineRejector:settings.zeroLineRejector==="On",
-  });
-  displayCanvas.width = raster.width;
-  displayCanvas.height = raster.height;
-  const pixels = displayCtx.createImageData(raster.width, raster.height);
-  pixels.data.set(raster.data);
-  displayCtx.putImageData(pixels, 0, 0);
+  if(cacheKey===null || slotEntry.key!==cacheKey){
+    const raster=rasterizeFcvEcho(frame,palette,{
+      clutterPct:Number(settings.clutter??0),
+      colorErasePct:Number(settings.colorErase??0),
+      zeroLineRejector:settings.zeroLineRejector==="On",
+    });
+    if(slotEntry.surface===displayCanvas){
+      displayCanvas.width = raster.width;
+      displayCanvas.height = raster.height;
+      const pixels = displayCtx.createImageData(raster.width, raster.height);
+      pixels.data.set(raster.data);
+      displayCtx.putImageData(pixels, 0, 0);
+    }else{
+      slotEntry.surface.width = raster.width;
+      slotEntry.surface.height = raster.height;
+      const pixels = slotEntry.surfaceCtx.createImageData(raster.width, raster.height);
+      pixels.data.set(raster.data);
+      slotEntry.surfaceCtx.putImageData(pixels, 0, 0);
+    }
+    slotEntry.key=cacheKey;
+  }
   ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(displayCanvas, x0, y0, w, h);
+  ctx.drawImage(slotEntry.surface, x0, sonarTop, w, sonarH);
   ctx.fillStyle = lcdRgb(contrast.foreground);
-  ctx.font = "12px Consolas, monospace";
+  ctx.font = "bold 12px Consolas, monospace";
   // Photo LF/HF/DUAL/BL cases identify channels in the status/mode context.
   // Do not invent a separate "50 kHz / 200 kHz" label inside every sonar
-  // pane. The axis stays below the top status strip.
+  // pane. The axis stays below the top status strip, with 4 minor sub-ticks
+  // (4px) evenly dividing each major interval as seen in dual.jpg & zoom.jpg.
   const ticks=projectFcvDepthTicks(frame,{height:h,
-    top:62,bottom:12,units:session.deviceState.settings.units,axis});
+    top:62,bottom:12,units:settings.units,axis});
+  for(let i=0;i<ticks.length-1;i++){
+    const yA=ticks[i].y,yB=ticks[i+1].y;
+    for(let s=1;s<=4;s++){
+      const subY=y0+Math.round(yA+(yB-yA)*(s/5));
+      ctx.fillStyle=lcdRgb(contrast.background);
+      ctx.fillRect(x0+w-5,subY-1,5,3);
+      ctx.fillStyle=lcdRgb(contrast.foreground);
+      ctx.fillRect(x0+w-4,subY,4,1);
+    }
+  }
   for(const tick of ticks){
+    const labelX=x0+w-48,labelY=y0+tick.y+3;
+    ctx.fillStyle=lcdRgb(contrast.background);
+    ctx.fillRect(x0+w-9,y0+tick.y-1,9,3);
+    if(typeof ctx.strokeText==="function"){
+      ctx.lineWidth=3;
+      ctx.lineJoin="round";
+      ctx.strokeStyle=lcdRgb(contrast.background);
+      ctx.strokeText(tick.label,labelX,labelY);
+    }
     ctx.fillStyle=lcdRgb(contrast.foreground);
-    ctx.fillText(tick.label,x0+w-48,y0+tick.y);
-    ctx.fillRect(x0+w-8,y0+tick.y-2,7,1);
+    ctx.fillText(tick.label,labelX,labelY);
+    ctx.fillRect(x0+w-8,y0+tick.y,8,1.5);
   }
 }
 
 function sounderFrame(observation, state, frequencyKhz, zoom = false) {
   const key = frequencyKhz + (zoom ? "-zoom" : "-regular");
+  const previous=frozenFrames.get(key);
+  if(previous && previous.sourceTick===observation.simTick &&
+     previous._stateSettingsRef===state.settings &&
+     previous._rangeMode===state.rangeMode &&
+     previous._rangeIndex===state.rangeIndex &&
+     previous._gainMode===state.gainMode &&
+     previous._manualGain===state.manualGain &&
+     previous._autoGainOffset===state.autoGainOffset &&
+     previous._vrmDepthM===state.vrmDepthM &&
+     previous._mode===state.mode){
+    return previous;
+  }
   const seabedProvenance=cachedSeabedProvenance?.simTick===observation.simTick &&
     cachedSeabedProvenance?.columns===observation.columns
     ?cachedSeabedProvenance:null;
@@ -184,8 +272,8 @@ function sounderFrame(observation, state, frequencyKhz, zoom = false) {
       {frequencyKhz,seabedProvenance,seabedSourceIdentity,
         displayContract:"P23_LOWER_BOTTOM"})
     : projectFcvEcho(observation, state, {frequencyKhz});
-  const previous=frozenFrames.get(key);
-  const candidate={...projected,bottomDepthM:observation.bottomDepthM};
+  const candidate={...projected,bottomDepthM:observation.bottomDepthM,
+    columnBottoms:seabedProvenance?.columnBottoms??null};
   const frame = advanceFcvPictureHistory(previous, candidate,
     state, observation.simTick);
   // Stop freezes the display provenance as well as its source pixels; the
@@ -195,38 +283,169 @@ function sounderFrame(observation, state, frequencyKhz, zoom = false) {
     previous.frequencyKhz===frame.frequencyKhz &&
     previous.rangeM===frame.rangeM){
     frame.bottomDepthM=previous.bottomDepthM;
+    frame.columnBottoms=previous.columnBottoms??null;
+    frame.rasterEpoch=previous.rasterEpoch??previous.sourceTick;
+  }else{
+    frame.rasterEpoch=observation.simTick;
   }
+  frame._stateSettingsRef=state.settings;
+  frame._rangeMode=state.rangeMode;
+  frame._rangeIndex=state.rangeIndex;
+  frame._gainMode=state.gainMode;
+  frame._manualGain=state.manualGain;
+  frame._autoGainOffset=state.autoGainOffset;
+  frame._vrmDepthM=state.vrmDepthM;
+  frame._mode=state.mode;
   frozenFrames.set(key, frame);
   return frame;
 }
 
+function drawWhiteLineOverlay(frame, x0, sonarTop, w, sonarH, bottomDepthM, whiteLineMode = "On") {
+  const isEdge = whiteLineMode === "Edge";
+  const clampLineY = fraction => Math.min(sonarTop + sonarH - 3,
+    Math.max(sonarTop, Math.round(sonarTop + fraction * sonarH) - 1));
+  if (frame.zoomMode === "Bottom Lock") {
+    const flatY = Math.max(sonarTop, sonarTop + sonarH - 6);
+    if (isEdge) {
+      ctx.fillStyle = "#3a0b0d";
+      ctx.fillRect(x0, flatY - 1, w, 1.5);
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x0, flatY + (isEdge ? 1 : 0), w, 2.5);
+    return;
+  }
+  const liveProvenance = cachedSeabedProvenance?.simTick === frame.sourceTick &&
+    cachedSeabedProvenance?.columns === frame.columns &&
+    frame.pictureAdvance !== "Stop"
+    ? cachedSeabedProvenance.columnBottoms
+    : null;
+  const columnBottoms = Array.isArray(frame.columnBottoms) &&
+    frame.columnBottoms.length === frame.columns
+    ? frame.columnBottoms
+    : liveProvenance;
+  if (columnBottoms) {
+    const cols = frame.columns;
+    const points = [];
+    for (let col = 0; col < cols; col++) {
+      const sample = columnBottoms[col];
+      if (sample?.present !== true || !Number.isFinite(sample.depthM)) continue;
+      const fraction = depthFractionOnFcvFrame(frame, sample.depthM);
+      if (fraction < 0 || fraction > 1) continue;
+      const cx0 = x0 + Math.floor(col * w / cols);
+      const cx1 = x0 + Math.floor((col + 1) * w / cols);
+      const yLine = clampLineY(fraction);
+      points.push({x: (cx0 + cx1) * 0.5, y: yLine});
+      if (isEdge) {
+        ctx.fillStyle = "#3a0b0d";
+        ctx.fillRect(cx0, yLine - 1, Math.max(1, cx1 - cx0), 1.5);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(cx0, yLine + 1, Math.max(1, cx1 - cx0), 2.5);
+      } else {
+        ctx.fillStyle = "#f7ffff";
+        ctx.fillRect(cx0, yLine, Math.max(1, cx1 - cx0), 3);
+      }
+    }
+    if (points.length >= 2 && typeof ctx.beginPath === "function") {
+      ctx.save?.();
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+      if (isEdge) {
+        ctx.strokeStyle = "#3a0b0d";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        points.forEach((p, idx) => idx === 0 ? ctx.moveTo(p.x, p.y - 0.5) : ctx.lineTo(p.x, p.y - 0.5));
+        ctx.stroke();
+      }
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      points.forEach((p, idx) => idx === 0
+        ? ctx.moveTo(p.x, p.y + (isEdge ? 1.5 : 0.5))
+        : ctx.lineTo(p.x, p.y + (isEdge ? 1.5 : 0.5)));
+      ctx.stroke();
+      ctx.restore?.();
+    }
+    return;
+  }
+  const fraction = depthFractionOnFcvFrame(frame, bottomDepthM);
+  if (fraction >= 0 && fraction <= 1) {
+    const yLine = clampLineY(fraction);
+    if (isEdge) {
+      ctx.fillStyle = "#3a0b0d";
+      ctx.fillRect(x0, yLine - 1, w, 1.5);
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x0, yLine + (isEdge ? 1 : 0), w, isEdge ? 2.5 : 3);
+  }
+}
+
+function drawShiftIndicator(frame, x0, sonarTop, w) {
+  const state = session.deviceState;
+  if (!state || state.rangeMode !== "manual" || frame?.zoomMode ||
+      ["NAV1", "NAV2"].includes(state.mode) ||
+      (state.mode === "DUAL" && x0 === 0)) return;
+  const rawShift = Number(state.settings?.shift ?? 0);
+  if (!Number.isFinite(rawShift) || rawShift === 0) return;
+  const converted = convertFcvDepth(rawShift, state.settings?.units ?? "Metric");
+  if (!Number.isFinite(converted.value)) return;
+  const shiftText = converted.value.toFixed(1);
+  const contrast = getFcvLcdContrastTheme(state.settings);
+  const posX = x0 + Math.round(w * (w < 300 ? 0.24 : 0.58));
+  const posY = sonarTop + 14;
+  ctx.font = "bold 13px Consolas, monospace";
+  if (typeof ctx.strokeText === "function") {
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = lcdRgb(contrast.background);
+    ctx.strokeText(shiftText, posX, posY);
+  }
+  ctx.fillStyle = lcdRgb(contrast.foreground);
+  ctx.fillText(shiftText, posX, posY);
+}
+
+function drawZoomWindowMarker(marker, paneX, width, sonarTop, sonarH, strokeColor) {
+  if(!marker)return;
+  ctx.strokeStyle=strokeColor;
+  ctx.lineWidth=2;
+  ctx.setLineDash([4,4]);
+  for(const fraction of [marker.topFraction,marker.bottomFraction]){
+    const y=Math.round(sonarTop+fraction*sonarH);
+    ctx.beginPath();ctx.moveTo(paneX+6,y);
+    ctx.lineTo(width-6,y);ctx.stroke();
+  }
+  ctx.setLineDash([]);
+}
+
 function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
+  const sonarTop=y0+62;
+  const sonarH=Math.max(1,h-74);
   const zone=projectFcvBottomZone(frame,bottomDepthM,
     frame.overlays?.bottomZone??"Standard");
   if(zone){
+    const zoneTop=sonarTop+zone.topFraction*sonarH;
+    const zoneHeight=(zone.bottomFraction-zone.topFraction)*sonarH;
     ctx.fillStyle="#7adab522";
-    ctx.fillRect(x0,y0+zone.topFraction*h,w,
-      (zone.bottomFraction-zone.topFraction)*h);
+    ctx.fillRect(x0,zoneTop,w,zoneHeight);
     ctx.strokeStyle="#8dd4ac77";
-    ctx.strokeRect(x0+0.5,y0+zone.topFraction*h,w-1,
-      Math.max(1,(zone.bottomFraction-zone.topFraction)*h));
+    ctx.strokeRect(x0+0.5,zoneTop,w-1,Math.max(1,zoneHeight));
   }
-  if (frame.overlays?.whiteLine) {
-    const fraction=depthFractionOnFcvFrame(frame,bottomDepthM);
-    if(fraction>=0 && fraction<=1){
-      ctx.fillStyle = "#f2ffff";
-      ctx.fillRect(x0,y0+fraction*h,w,3);
-    }
+  const whiteLineMode=frame.overlays?.whiteLineMode??
+    session.deviceState?.settings?.whiteLine??"Off";
+  if (frame.overlays?.whiteLine || whiteLineMode==="On" || whiteLineMode==="Edge") {
+    drawWhiteLineOverlay(frame,x0,sonarTop,w,sonarH,bottomDepthM,
+      whiteLineMode==="Edge"?"Edge":"On");
   }
+  drawShiftIndicator(frame,x0,sonarTop,w);
   if (frame.overlays?.aScope) {
     const scope=projectFcvAScope(frame);
     const band = Math.min(36, w / 5);
     ctx.fillStyle = "#061e30aa";
-    ctx.fillRect(x0 + w - band, y0, band, h);
+    ctx.fillRect(x0 + w - band, sonarTop, band, sonarH);
     for (let y = 0; y < frame.rows; y += 3) {
       const strength=scope[y]/255;
       ctx.fillStyle=frame.overlays.aScopeMode==="Peak"?"#ffe09e":"#d9f0fe";
-      ctx.fillRect(x0 + w - band, y0 + y / frame.rows * h,
+      ctx.fillRect(x0 + w - band,
+        sonarTop + y / Math.max(1, frame.rows - 1) * sonarH,
         strength * (band - 3), 2);
     }
   }
@@ -282,7 +501,7 @@ function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
       const large=frame.overlays.fishSize==="Large";
       for(const fish of frame.syntheticFish??[]){
         const xx=x0+fish.xFraction*w;
-        const yy=y0+fish.yFraction*h;
+        const yy=sonarTop+fish.yFraction*sonarH;
         const sz=large?7:5;
         ctx.fillStyle="#e7e9a4";
         ctx.beginPath();
@@ -298,7 +517,7 @@ function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
         ctx.fillText(formatFcvFishSize(fish.sizeCm,
           session.deviceState.settings.fishSizeUnit),
           Math.max(x0+8,Math.min(x0+w-88,xx+10)),
-          Math.max(y0+28,yy-8));
+          Math.max(sonarTop+12,yy-8));
       }
     }
   }
@@ -309,11 +528,10 @@ function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
   }
   return Boolean(frame.overlays?.bottomDiscrimination);
 }
-const clampUi = (v,lo,hi) => Math.max(lo,Math.min(hi,v));
 
 function drawSupplementaryDisplay(state,simTick,width,height){
   // All values are typed instructor/synthetic projections, never live feeds.
-  const {tempGraph,navData,battery}=projectFcvDisplayWidgets(state,
+  const {tempGraph,navData}=projectFcvDisplayWidgets(state,
     state.navigationObservation,simTick);
   if(navData){
     const x=width-217,y=145;
@@ -350,7 +568,6 @@ function drawSupplementaryDisplay(state,simTick,width,height){
         if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);
       });
       ctx.stroke();
-      ctx.fillStyle="#83adba";
     }
   }
   // Instructor-triggered battery fault has no verified FCV display oracle;
@@ -361,6 +578,8 @@ function renderScreen() {
   const state = session.deviceState;
   const alarmPresentation=projectFcvAlarmPresentation(state);
   const {width, height} = canvas;
+  const sonarTop=62;
+  const sonarH=Math.max(1,height-74);
   // Only a panel actually painted from a capability-eligible frame may lift
   // the depth label. A saved BDS preference alone is not an active panel.
   let bottomDiscPainted=false;
@@ -373,6 +592,7 @@ function renderScreen() {
   depthIndicator.style.removeProperty("--dual-depth-anchor");
   const sonarAvailable=shouldRenderFcvSonar(state);
   const contrast=getFcvLcdContrastTheme(state.settings);
+  const lightPalette=contrast.background[0]>200 && contrast.background[1]>200;
   // Original presentation approximation: brightness changes LCD pixels and
   // overlays only, never the synthetic sonar observation or replay inputs.
   const presentation=projectFcvLcdPresentation(state);
@@ -380,10 +600,16 @@ function renderScreen() {
   $("lcd").style.filter = "brightness("+luminance+")";
   $("lcd").style.setProperty("--fcv-lcd-foreground",lcdRgb(contrast.foreground));
   $("lcd").style.setProperty("--fcv-lcd-shadow",lcdRgb(contrast.shadow));
+  $("lcd").style.setProperty("--fcv-depth-halo",lightPalette?"#ffffff":"#040c18");
+  $("lcd").style.setProperty("--fcv-lcd-header-bg",
+    "linear-gradient(180deg, #0d36a8 0%, #164bd1 55%, #09257a 100%)");
+  $("lcd").style.setProperty("--fcv-lcd-header-border","#d8e6ff");
   ctx.fillStyle = lcdRgb(contrast.background);
   ctx.fillRect(0, 0, width, height);
   $("off-screen").hidden = state.power !== "off";
-  $("screen-top").hidden=Boolean(testPattern);
+  const screenTopEl=$("screen-top");
+  delete screenTopEl.dataset.scope;
+  screenTopEl.hidden=Boolean(testPattern);
   // Reset the independently painted DEMO element BEFORE the LCD Test early
   // return, otherwise its previous frame could cover the solid test pixels.
   $("demo-indicator").hidden=state.power!=="on" || !state.demoOn ||
@@ -403,7 +629,7 @@ function renderScreen() {
     ctx.fillStyle=lcdRgb(testPattern.rgb);
     ctx.fillRect(0,0,width,height);
     $("vrm-indicator").hidden=true;
-    $("screen-top").textContent="LCD TEST · SIMULATED · "+testPattern.name;
+    screenTopEl.textContent="LCD TEST · SIMULATED · "+testPattern.name;
     renderDialog();
     return;
   }
@@ -411,7 +637,7 @@ function renderScreen() {
     !["NAV1","NAV2"].includes(state.mode);
   let vrmFraction=null;
   if(vrmEligible){
-    const range=effectiveRangeM(observation(),state);
+    const range=effectiveRangeM(currentObservation(),state);
     const start=state.rangeMode==="manual"?Number(state.settings.shift??0):0;
     vrmFraction=depthFractionOnFcvFrame({rangeM:range,startDepthM:start},
       state.vrmDepthM);
@@ -421,32 +647,50 @@ function renderScreen() {
   if (vrmShown) {
     $("vrm-indicator").textContent = "VRM " +
       formatFcvDepth(state.vrmDepthM,state.settings.units);
-    $("vrm-indicator").style.top = Math.max(2,
-      Math.min(94,100*vrmFraction)) + "%";
+    const vrmPct=((sonarTop+vrmFraction*sonarH)/height)*100;
+    $("vrm-indicator").style.top = Math.max(8,Math.min(96,vrmPct)) + "%";
   }
+  const viScreen = isVietnameseFcv(state);
+  const noSonarText = viScreen ? "KHONG CO TIN HIEU DO SAU" : "NO SONAR DATA";
   if (state.power === "booting") {
     ctx.fillStyle = "#b8d5e8";
     ctx.textAlign = "center";
     ctx.font = "bold 32px Consolas, monospace";
     ctx.fillText("FCV-588", width / 2, height / 2 - 20);
     ctx.font = "18px Consolas, monospace";
-    ctx.fillText("INITIALIZING ... " + state.bootElapsed + "/4", width / 2, height / 2 + 25);
+    ctx.fillText((viScreen ? "DANG KHOI DONG ... " : "INITIALIZING ... ") + state.bootElapsed + "/4", width / 2, height / 2 + 25);
     ctx.textAlign = "left";
   }
   if (state.power === "on") {
-    const o = observation();
+    const o = currentObservation();
     const layout=planFcvScreenLayout(state,{width,height});
     const depthReadout=planFcvDepthReadout(state,layout,{width,height});
-    if(depthReadout.kind==="dual-divider")
+    const splitDividerX=depthReadout.kind==="dual-divider"
+      ?depthReadout.anchorX
+      :state.mode?.includes("ZOOM")
+        ?layout.panes?.normal?.x
+        :null;
+    if(Number.isFinite(splitDividerX) && splitDividerX>0 && splitDividerX<width)
       depthIndicator.style.setProperty("--dual-depth-anchor",
-        (depthReadout.anchorFraction*100)+"%");
+        (splitDividerX/width*100)+"%");
     if (["NAV1", "NAV2"].includes(state.mode)) {
-      const input = state.trainingFixture.navigation === true
+      const rawInput = state.trainingFixture.navigation === true
         ? state.navigationObservation : null;
+      const calibratedNav=projectFcvCalibratedReadings(state.settings,{
+        ...(rawInput??{}),sourceClass:"SYNTHETIC_FIXTURE",
+        bottomDepthM:sonarAvailable?o.bottomDepthM:null,
+      });
+      const input=rawInput?{
+        ...rawInput,
+        speedKn:Number.isFinite(rawInput.speedKn)&&rawInput.speedKn>=0
+          ?calibratedNav.speedKn:rawInput.speedKn,
+        temperatureC:Number.isFinite(rawInput.temperatureC)
+          ?calibratedNav.temperatureC:rawInput.temperatureC,
+      }:null;
       const nav = projectFcvManualNavBoxes({
         mode:state.mode,sample:input,navState:state.navigation,
-        settings:state.settings,
-        sonarDepthM:sonarAvailable?o.bottomDepthM:null,
+        settings:{...state.settings,draft:"0",tempAdjust:"0",speedAdjust:"0"},
+        sonarDepthM:sonarAvailable?calibratedNav.depthM:null,
         simTick:session.worldState.simTick,staleAfterTicks:10,
         units:state.settings.units,
         tempUnit:state.settings.tempUnit,speedUnit:state.settings.speedUnit,
@@ -458,7 +702,8 @@ function renderScreen() {
       // Never invent a global DEPTH fallback when DEPTH was not selected.
       depthIndicator.hidden=!shouldShowFcvGlobalDepth(state.mode,nav.boxes);
       if(sonarAvailable){
-        const normal=sounderFrame(o,state,50);
+        const navFreqKhz=state.mode==="NAV2"?200:50;
+        const normal=sounderFrame(o,state,navFreqKhz);
         drawChannel(normal,sounderPane.x,0,sounderPane.width,height);
         drawOverlays(normal,sounderPane.x,0,
           sounderPane.width,height,normal.bottomDepthM);
@@ -467,25 +712,54 @@ function renderScreen() {
         ctx.fillRect(sounderPane.x,0,sounderPane.width,height);
         ctx.fillStyle=lcdRgb(contrast.foreground);
         ctx.font="12px Consolas, monospace";
-        ctx.fillText("NO SONAR DATA",sounderPane.x+6,height/2,
+        ctx.fillText(noSonarText,sounderPane.x+6,height/2,
           sounderPane.width-12);
       }
       ctx.fillStyle=lcdRgb(contrast.navPanel);
       ctx.fillRect(navPane.x,0,navPane.width,height);
       const navRows=planFcvNavRows(nav.boxes.map(box=>({
-        ...box,value:displayOnlySyntheticValue(box.value),
-      })),navPane);
+        ...box,
+        label:canonicalNavBoxLabel(box.label),
+        value:formatFcvNavBoxForLcd(box,state.settings),
+      })),navPane).map((r,idx)=>({
+        ...r,
+        label:localizeFcvNavLabel(nav.boxes[idx]?.label??r.label,state.settings),
+      }));
       for(const row of navRows){
         ctx.fillStyle=lcdRgb(contrast.secondary);
-        ctx.font=row.labelFontPx+"px Consolas, monospace";
+        ctx.font="bold "+row.labelFontPx+"px Consolas, monospace";
         ctx.fillText(row.label,row.labelX,row.labelY,row.width-32);
         ctx.fillStyle=lcdRgb(contrast.navValue);
-        ctx.font="bold "+row.valueFontPx+"px Consolas, monospace";
-        row.valueLines.forEach((line,index)=>ctx.fillText(line,row.valueX,
-          row.valueY+index*row.valueLineHeight,row.width-32));
+        const fontPx=row.kind==="depth"
+          ?Math.min(Math.round(row.height*0.56),92)
+          :row.kind==="numeric"
+            ?Math.min(Math.round(row.height*0.44),62)
+            :Math.max(row.valueFontPx,22);
+        ctx.font="900 "+fontPx+"px \"Arial Narrow\", Consolas, monospace";
+        if(row.kind==="position"){
+          const startY=row.y+Math.max(54,Math.round(row.height*0.44));
+          const lineStep=Math.max(row.valueLineHeight,Math.round(fontPx*1.45));
+          row.valueLines.forEach((line,index)=>ctx.fillText(line,row.valueX+8,
+            startY+index*lineStep,row.width-28));
+        }else{
+          const baselineY=row.y+Math.min(row.height-14,
+            Math.max(row.valueY,Math.round(row.height*0.82)));
+          const line=row.valueLines[0]??"";
+          const unitMatch=/^(.+?)\s+(m|ft|fm|kn|kt|km\/h|mph|°C|°F|nm|km|sm|hPa)$/i.exec(line);
+          if(unitMatch && typeof ctx.measureText==="function"){
+            const numPart=unitMatch[1],unitPart=unitMatch[2];
+            const valX=row.kind==="depth"?row.valueX+24:row.valueX+34;
+            ctx.fillText(numPart,valX,baselineY,row.width-64);
+            const numW=ctx.measureText(numPart).width;
+            ctx.font="bold "+Math.max(15,Math.round(fontPx*0.32))+"px Consolas, monospace";
+            ctx.fillText(unitPart,Math.min(row.x+row.width-36,valX+numW+5),baselineY);
+          }else{
+            ctx.fillText(line,row.valueX+16,baselineY,row.width-32);
+          }
+        }
         if(row.separatorY!==null){
           ctx.fillStyle=lcdRgb(contrast.secondary);
-          ctx.fillRect(row.x+8,row.separatorY-1,row.width-16,1);
+          ctx.fillRect(row.x+4,row.separatorY-1,row.width-8,1.5);
         }
       }
       // Source freshness and synthetic provenance are described outside LCD.
@@ -497,8 +771,7 @@ function renderScreen() {
       ctx.fillStyle=lcdRgb(contrast.foreground);
       ctx.textAlign="center";
       ctx.font="bold 24px Consolas, monospace";
-      ctx.fillText("NO SONAR DATA",width/2,height/2-18);
-      ctx.font="15px Consolas, monospace";
+      ctx.fillText(noSonarText,width/2,height/2-18);
       ctx.textAlign="left";
     } else if (state.mode === "DUAL") {
       const lf = sounderFrame(o,state,50);
@@ -527,16 +800,8 @@ function renderScreen() {
         drawOverlays(normal,layout.panes.normal.x,0,
           layout.panes.normal.width,height,normal.bottomDepthM);
         const marker=projectFcvZoomWindowMarker(state,normal,zoom);
-        if(marker){
-          ctx.strokeStyle=lcdRgb(contrast.navHeading);
-          ctx.lineWidth=2;
-          ctx.setLineDash([4,4]);
-          for(const fraction of [marker.topFraction,marker.bottomFraction]){
-            ctx.beginPath();ctx.moveTo(layout.panes.normal.x+6,fraction*height);
-            ctx.lineTo(width-6,fraction*height);ctx.stroke();
-          }
-          ctx.setLineDash([]);
-        }
+        drawZoomWindowMarker(marker,layout.panes.normal.x,width,sonarTop,
+          sonarH,lcdRgb(contrast.navHeading));
         ctx.fillStyle=lcdRgb(contrast.foreground);
         ctx.fillRect(leftWidth-1,0,2,height);
       } else {
@@ -556,17 +821,15 @@ function renderScreen() {
     }
     depthIndicator.style.setProperty("--depth-bottom",bottomDiscPainted?"19%":"10px");
     if (vrmShown) {
-      if (vrmShown) {
-        const y = vrmFraction * height;
-        ctx.strokeStyle = lcdRgb(contrast.navHeading);
-        ctx.lineWidth = 2;
-        ctx.setLineDash([8, 6]);
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-        ctx.stroke();
-        ctx.setLineDash([]);
-      }
+      const y = Math.round(sonarTop + vrmFraction * sonarH);
+      ctx.strokeStyle = lcdRgb(contrast.navHeading);
+      ctx.lineWidth = 2;
+      ctx.setLineDash([8, 6]);
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
     }
     const displayCalibrated=projectFcvCalibratedReadings(state.settings,
       sonarAvailable?{sourceClass:"SYNTHETIC_FIXTURE",
@@ -586,10 +849,29 @@ function renderScreen() {
     // Faults injected by the instructor have no verified OEM alarm-pixel
     // counterpart. Keep them in the D15 panel, not the device LCD.
   }
-  $("screen-top").textContent=projectFcvPhotoStatusHeader(state).text;
-  // Manual §2.8 supports a [DEMO] indicator while Demo is on. Bottom-right
-  // is a provisional original-art placement, NOT an OEM-measured coordinate.
-  // Keep the model/menu contract and source-grade pixel placement separately.
+  const legacyHeaderText=projectFcvPhotoStatusHeader(state).text;
+  const headerWidgets=state.power==="on"
+    ?projectFcvDisplayWidgets(state,state.navigationObservation,session.worldState.simTick)
+    :null;
+  const headerBar=projectFcvAuthenticHeader(state,headerWidgets);
+  if(!headerBar.visible){
+    screenTopEl.replaceChildren();
+    screenTopEl.hidden=true;
+  }else{
+    screenTopEl.hidden=false;
+    if(headerBar.scope==="nav-sonar")screenTopEl.dataset.scope="nav-sonar";
+    const leftSpan=document.createElement("span");
+    leftSpan.className="screen-top-left";
+    leftSpan.textContent=headerBar.leftText||legacyHeaderText;
+    if(headerBar.rightText){
+      const rightSpan=document.createElement("span");
+      rightSpan.className="screen-top-right";
+      rightSpan.textContent="   "+headerBar.rightText;
+      screenTopEl.replaceChildren(leftSpan,rightSpan);
+    }else{
+      screenTopEl.replaceChildren(leftSpan);
+    }
+  }
   renderDialog();
 }
 
@@ -720,11 +1002,17 @@ function publishOperatorSelection(){
 
 function renderMainMenuChrome(projected,title,content){
   title.textContent=projected.category;
+  const menuHeader=$("lcd-menu-header");
+  if(menuHeader){
+    menuHeader.textContent=projected.menuHeader??"Menu";
+    menuHeader.hidden=false;
+  }
   const categories=$("lcd-menu-categories");
   categories.replaceChildren(...projected.categories.map(item=>{
     const label=document.createElement("div");
     label.textContent=item.label;
     label.dataset.category=item.label;
+    label.dataset.categoryKey=item.key??item.label;
     label.setAttribute("role","listitem");
     if(item.selected)label.setAttribute("aria-current","true");
     return label;
@@ -774,7 +1062,8 @@ function renderMainMenuChrome(projected,title,content){
     options.appendChild(heading);
     for(const item of projected.editor.choices){
       const choice=document.createElement("div");
-      choice.textContent=item.value;
+      choice.textContent=item.label??item.value;
+      choice.dataset.choiceValue=item.value;
       choice.setAttribute("role","listitem");
       if(item.selected)choice.setAttribute("aria-current","true");
       options.appendChild(choice);
@@ -782,7 +1071,9 @@ function renderMainMenuChrome(projected,title,content){
     keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));
   }
   const footer=$("dialog-footer");
-  footer.textContent=projected.footerKeys.join("   ");
+  footer.textContent=Array.isArray(projected.legendLines) && projected.legendLines.length
+    ?projected.legendLines.join("\n")
+    :projected.footerKeys.join("   ");
   footer.hidden=false;
   keepMenuSelectionVisible(content,rows[projected.rows.findIndex(row=>row.selected)]);
 }
@@ -858,6 +1149,11 @@ function renderControlChrome(projected,title,content){
   summary.dataset.controlKind=projected.kind;
   summary.dataset.currentValue=projected.currentValue;
   summary.dataset.draftValue=projected.draftValue;
+  const footer=$("dialog-footer");
+  footer.textContent=Array.isArray(projected.legendLines) && projected.legendLines.length
+    ?projected.legendLines.join("\n")
+    :"◀/▶  ▲/▼  [ENTER]  [MENU]";
+  footer.hidden=false;
   const countdown=Number.isFinite(projected.remainingMs)
     ?"\nCòn "+(projected.remainingMs/1000).toFixed(1)+" s (đồng hồ mô phỏng)":"";
   publishInstructorGuidance({
@@ -871,13 +1167,18 @@ function renderControlChrome(projected,title,content){
 
 function renderDialog() {
   const overlay = session.deviceState.overlay;
+  const vi = isVietnameseFcv(session.deviceState);
   const mainMenu=projectFcvMainMenu(session.deviceState);
   const funcSetting=projectFcvFuncSetting(session.deviceState);
   const configuration=projectFcvConfiguration(session.deviceState);
   const control=projectFcvControl(session.deviceState);
-  $("lcd-overlay").hidden = !overlay || session.deviceState.power !== "on" || overlay.kind==="lcd-test";
-  $("lcd-overlay").dataset.layout=mainMenu?"main-menu":funcSetting?"func-setting":
+  const overlayEl=$("lcd-overlay");
+  overlayEl.lang=vi?"vi":"en";
+  overlayEl.hidden = !overlay || session.deviceState.power !== "on" || overlay.kind==="lcd-test";
+  overlayEl.dataset.layout=mainMenu?"main-menu":funcSetting?"func-setting":
     configuration?"configuration":control?"control":"dialog";
+  const menuHeader=$("lcd-menu-header");
+  if(menuHeader)menuHeader.hidden=!mainMenu;
   $("lcd-menu-categories").hidden=!mainMenu;
   $("lcd-menu-options").hidden=!(mainMenu?.editor || configuration?.editor);
   const transaction=$("lcd-config-transaction");
@@ -910,7 +1211,7 @@ function renderDialog() {
     const rows=funcSetting.choices.map(choice=>{
       const row=document.createElement("div");
       row.className="lcd-menu-row";
-      row.textContent=(choice.selected?"▶ ":"  ")+choice.value;
+      row.textContent=(choice.selected?"▶ ":"  ")+(choice.label??choice.value);
       row.dataset.choiceValue=choice.value;
       row.setAttribute("role","listitem");
       if(choice.selected)row.setAttribute("aria-current","true");
@@ -935,32 +1236,45 @@ function renderDialog() {
     return;
   }
   if (overlay.kind === "range") {
-    title.textContent = "Range";
+    title.textContent = vi ? "Thang do" : "Range";
     content.textContent = "NO DATA";
   } else if(overlay.kind==="window-size"){
-    title.textContent="WINDOW SIZE";
-    content.textContent="Split pane: "+overlay.draftRatio+"% / "+
+    title.textContent = vi ? "CO CUA SO" : "WINDOW SIZE";
+    content.textContent=(vi?"Ti le cua so: ":"Split pane: ")+overlay.draftRatio+"% / "+
       String(100-Number(overlay.draftRatio))+"%";
   } else if(overlay.kind==="receiver-status"){
-    title.textContent="RECEIVER STATUS";
+    title.textContent = vi ? "TT DAU THU" : "RECEIVER STATUS";
     // A training observation must not be mistaken for real NMEA reception.
     // Display current typed Own fixture state, fail closed when stale/missing;
     // the source/provenance remains conspicuous in the external instructor UI.
     const projected=projectFcvTrainingReceiver(session.deviceState,
       session.worldState.simTick);
     const fresh=projected.status==="SYNTHETIC_TRAINING_OBSERVATION";
-    content.textContent="NMEA: OFF\nOWN POSITION: "+
-      (fresh?displayOnlySyntheticValue(projected.positionText):"NO DATA")+
-      "\nOWN SPEED: "+(fresh && Number.isFinite(projected.speedKn)
-        ?projected.speedKn.toFixed(1)+" kn":"NO DATA");
+    const calibratedSpeed=fresh && Number.isFinite(projected.speedKn)
+      ?projectFcvCalibratedReadings(session.deviceState.settings,{
+        sourceClass:"SYNTHETIC_FIXTURE",
+        speedKn:session.deviceState.navigationObservation?.speedKn,
+      }).speedKn:null;
+    const speedUnit=session.deviceState.settings.speedUnit??"kn";
+    const noData=vi?"KHONG DU LIEU":"NO DATA";
+    const posText=fresh?displayOnlySyntheticValue(projected.positionText):noData;
+    const spdText=Number.isFinite(calibratedSpeed)
+      ?formatFcvSpeed(calibratedSpeed,speedUnit):noData;
+    content.textContent=vi
+      ?"NMEA: TAT\nVI TRI: "+posText+"\nTOC DO: "+spdText
+      :"NMEA: OFF\nOWN POSITION: "+posText+"\nOWN SPEED: "+spdText;
   } else if(overlay.kind==="tankenmaru-details"){
-    title.textContent="TANKENMARU";
+    title.textContent=vi?"TT TANKENMARU":"TANKENMARU";
     const virtual=projectFcvTankenmaruTrainingStatus(session.deviceState);
     content.textContent=virtual.values
-      ?"Output: "+virtual.values.output+"\n"+
-        "Pic. Sync: "+virtual.values.pictureSync+"\n"+
-        "Sub Clutter: "+virtual.values.subClutter
-      :"NO DATA";
+      ?(vi
+        ?"Ngo ra: "+localizeFcvChoiceValue("tankenmaruOutput",virtual.values.output,session.deviceState.settings)+"\n"+
+          "Dong bo Hinh: "+localizeFcvChoiceValue("tankenmaruPicSync",virtual.values.pictureSync,session.deviceState.settings)+"\n"+
+          "Khu nhieu phu: "+localizeFcvChoiceValue("tankenmaruSubClutter",virtual.values.subClutter,session.deviceState.settings)
+        :"Output: "+virtual.values.output+"\n"+
+          "Pic. Sync: "+virtual.values.pictureSync+"\n"+
+          "Sub Clutter: "+virtual.values.subClutter)
+      :(vi?"KHONG DU LIEU":"NO DATA");
   } else if (["gain","brill","mode"].includes(overlay.kind)) {
     title.textContent = "CONTROL";
     content.textContent = "NO DATA";
@@ -973,59 +1287,74 @@ function renderDialog() {
     // Shutdown has not committed: the user may still release the key.
     content.textContent = "";
   } else if(overlay.kind === "diagnostics"){
-    title.textContent="DIAGNOSTICS";
+    title.textContent = vi ? "TU KIEM TRA" : "DIAGNOSTICS";
     content.textContent="NO DATA";
   } else if(overlay.kind === "lcd-test"){
     title.textContent="LCD TEST";
     content.textContent="";
   } else if(overlay.kind === "confirm-restore"){
-    title.textContent="RESTORE";
-    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+    title.textContent = vi ? "MAC DINH" : "RESTORE";
+    content.textContent = vi
+      ? (overlay.confirm?"▶ CO    KHONG":"  CO  ▶ KHONG")
+      : (overlay.confirm?"▶ YES    NO":"  YES  ▶ NO");
   } else if(overlay.kind === "trip-status"){
-    title.textContent="TRIP / ODOMETER";
+    title.textContent = vi ? "HANH TRINH" : "TRIP / ODOMETER";
     const nav=session.deviceState.navigation;
     const travel=projectFcvTravelValues(nav,session.deviceState.settings);
-    const tripText=travel.tripNm===null?"NO DATA":
+    const noData=vi?"KHONG DU LIEU":"NO DATA";
+    const tripText=travel.tripNm===null?noData:
       formatFcvDistance(travel.tripNm,
         session.deviceState.settings.distanceUnit);
-    const odometerText=travel.odometerNm===null?"NO DATA":
+    const odometerText=travel.odometerNm===null?noData:
       formatFcvDistance(travel.odometerNm,
         session.deviceState.settings.distanceUnit);
-    content.textContent="TRIP  "+tripText+"\n"+
-      "ODOMETER  "+odometerText+"\n"+
-      "TRIP SOURCE: "+session.deviceState.settings.tripSource;
+    const srcText=vi
+      ?localizeFcvChoiceValue("tripSource",session.deviceState.settings.tripSource,session.deviceState.settings)
+      :session.deviceState.settings.tripSource;
+    content.textContent=vi
+      ?"HANH TRINH  "+tripText+"\n"+
+        "TONG H.TRINH  "+odometerText+"\n"+
+        "NGUON: "+srcText
+      :"TRIP  "+tripText+"\n"+
+        "ODOMETER  "+odometerText+"\n"+
+        "TRIP SOURCE: "+session.deviceState.settings.tripSource;
   } else if(overlay.kind === "confirm-trip-reset"){
-    title.textContent="RESET TRIP";
-    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+    title.textContent = vi ? "XOA HANH TRINH" : "RESET TRIP";
+    content.textContent = vi
+      ? (overlay.confirm?"▶ CO    KHONG":"  CO  ▶ KHONG")
+      : (overlay.confirm?"▶ YES    NO":"  YES  ▶ NO");
   } else if(overlay.kind === "waypoints"){
-    title.textContent=overlay.purpose==="destination"?
-      "GO TO WPT":"WPT LIST";
+    title.textContent=overlay.purpose==="destination"
+      ?(vi?"DI TOI WPT":"GO TO WPT")
+      :(vi?"DANH SACH WPT":"WPT LIST");
     const list=session.deviceState.navigation?.waypoints??[];
     const offset=overlay.purpose==="destination"?1:0;
     content.textContent=(offset?
-      (overlay.itemIndex===0?"▶ ":"  ")+"OFF\n":"")+
+      (overlay.itemIndex===0?"▶ ":"  ")+(vi?"TAT\n":"OFF\n"):"")+
       list.map((w,i)=>
         (i+offset===overlay.itemIndex?"▶ ":"  ")+w.id+" "+w.name).join("\n")+
       (list.length?"":"\nNO DATA");
   } else if(overlay.kind==="waypoint-detail"){
     const waypoint=session.deviceState.navigation.waypoints[overlay.itemIndex];
-    title.textContent="WPT LIST";
+    title.textContent = vi ? "DANH SACH WPT" : "WPT LIST";
     content.textContent=waypoint?
       waypoint.id+" · "+waypoint.name+"\n"+
-      (overlay.fieldIndex===0?"▶ ":"  ")+"Name\n"+
-      (overlay.fieldIndex===1?"▶ ":"  ")+"Erase?":"WPT NOT FOUND";
+      (overlay.fieldIndex===0?"▶ ":"  ")+(vi?"Ten\n":"Name\n")+
+      (overlay.fieldIndex===1?"▶ ":"  ")+(vi?"Xoa?":"Erase?"):"WPT NOT FOUND";
   } else if(overlay.kind==="waypoint-name"){
-    title.textContent="WPT NAME";
+    title.textContent = vi ? "TEN WPT" : "WPT NAME";
     const draft=overlay.draftName;
     const cursor=overlay.charIndex;
     content.textContent=overlay.waypointId+"\n"+
       draft.slice(0,cursor)+"["+draft[cursor]+"]"+draft.slice(cursor+1);
   } else if(overlay.kind==="confirm-waypoint-delete" ||
       overlay.kind==="confirm-delete-all-waypoints"){
-    title.textContent="ERASE WPT?";
+    title.textContent = vi ? "XOA WPT?" : "ERASE WPT?";
     content.textContent=(overlay.kind==="confirm-waypoint-delete"?
-      overlay.waypointId:"DELETE ALL WPT")+
-      "\n"+(overlay.confirm?"▶ YES   NO":"  YES ▶ NO");
+      overlay.waypointId:(vi?"XOA TAT CA WPT":"DELETE ALL WPT"))+
+      "\n"+(vi
+        ?(overlay.confirm?"▶ CO   KHONG":"  CO ▶ KHONG")
+        :(overlay.confirm?"▶ YES   NO":"  YES ▶ NO"));
   } else {
     title.textContent = "MENU / ESC";
     content.textContent = "NO DATA";
@@ -1111,6 +1440,8 @@ function render() {
     s.notice || (s.power === "on" ? "RUN · DEMO DATA" :
       s.power === "booting" ? "BOOTING" : "POWER OFF");
   $("btn-pause").textContent = paused ? "Tiếp tục thời gian" : "Tạm dừng thời gian";
+  const quickPowerBtn = $("btn-quick-power");
+  if (quickPowerBtn) quickPowerBtn.setAttribute("aria-pressed", String(s.power === "on"));
   renderPhysicalDialState(s);
   renderScreen();
   publishSourceCue(s,session.worldState.simTick);
@@ -1229,6 +1560,138 @@ for (const control of ["power", "func"]) {
     emit: input => send(input),
   }));
 }
+document.querySelector(".mode-scale")?.addEventListener("click", ev => {
+  const mark = ev.target?.closest?.("[data-mode]");
+  if (!mark) return;
+  const targetIdx = DISPLAY_MODES.indexOf(mark.dataset.mode);
+  if (targetIdx < 0) return;
+  const currentMode = session.deviceState.overlay?.kind === "mode"
+    ? session.deviceState.overlay.candidate
+    : session.deviceState.mode;
+  const currentIdx = DISPLAY_MODES.indexOf(currentMode);
+  const delta = targetIdx - currentIdx;
+  if (delta !== 0) rotate("mode", delta);
+});
+document.querySelector(".gain-scale-minus")?.addEventListener("click", () => rotate("gain", -1));
+document.querySelector(".gain-scale-plus")?.addEventListener("click", () => rotate("gain", 1));
+
+const fullscreenBtn = $("btn-fullscreen");
+function syncFullscreenButton() {
+  if (!fullscreenBtn) return;
+  const active = Boolean(document.fullscreenElement);
+  fullscreenBtn.setAttribute("aria-pressed", String(active));
+  fullscreenBtn.textContent = active ? "Thoát toàn màn hình" : "Toàn màn hình";
+}
+fullscreenBtn?.addEventListener("click", () => {
+  const toggle = document.fullscreenElement
+    ? document.exitFullscreen?.()
+    : document.documentElement.requestFullscreen?.();
+  Promise.resolve(toggle).catch(() => {}).finally(syncFullscreenButton);
+});
+document.addEventListener("fullscreenchange", syncFullscreenButton);
+
+$("btn-quick-power")?.addEventListener("click", () => {
+  for (const binding of holdBindings) binding.cancel();
+  if (session.deviceState.power === "off") {
+    send({kind: "down", control: "power"});
+    send({kind: "up", control: "power", durationMs: 120});
+    send({kind: "tick", steps: 4});
+  } else if (session.deviceState.power === "booting") {
+    const remaining = Math.max(1, 4 - (session.deviceState.bootElapsed || 0));
+    send({kind: "tick", steps: remaining});
+  } else {
+    send({kind: "down", control: "power"});
+    send({kind: "up", control: "power", durationMs: 3200});
+  }
+});
+
+function downloadJsonFile(fileName, text) {
+  const blob = new Blob([text], {type: "application/json;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.rel = "noopener";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function setSettingsTransferStatus(state, message) {
+  const status = $("settings-transfer-status");
+  if (!status) return;
+  if (state) status.dataset.state = state;
+  else delete status.dataset.state;
+  status.textContent = message;
+}
+
+$("btn-export-settings")?.addEventListener("click", () => {
+  try {
+    const text = exportFcv588SettingsText(session.deviceState.settings);
+    downloadJsonFile(FCV588_SETTINGS_FILE_NAME, text);
+    setSettingsTransferStatus("pass", "Đã lưu cấu hình máy ra tệp " + FCV588_SETTINGS_FILE_NAME + ".");
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Không thể xuất cấu hình: " + (err?.message ?? "lỗi dữ liệu"));
+  }
+});
+
+$("import-settings-file")?.addEventListener("change", () => {
+  const file = $("import-settings-file")?.files?.[0];
+  if (file) {
+    setSettingsTransferStatus("", "Đã chọn tệp " + file.name + " — nhấn Nạp cấu hình máy để áp dụng.");
+  }
+});
+
+$("btn-import-settings")?.addEventListener("click", async () => {
+  const importBtn = $("btn-import-settings");
+  if (importBtn) importBtn.disabled = true;
+  try {
+    const file = $("import-settings-file")?.files?.[0];
+    if (!file) throw new TypeError("Cần chọn tệp JSON cấu hình trước khi nạp");
+    if (file.size === 0 || file.size > FCV588_SETTINGS_TRANSFER_MAX_BYTES) {
+      throw new RangeError("Tệp JSON rỗng hoặc vượt giới hạn 18 KB");
+    }
+    const text = await file.text();
+    const imported = importFcv588SettingsText(text);
+    for (const binding of holdBindings) binding.cancel();
+    send({kind: "restore-settings", settings: imported.settings});
+    const canonicalEncoded = encodeFcvSettings(session.deviceState.settings);
+    lastSettingsRef = session.deviceState.settings;
+    lastObservedSettings = canonicalEncoded;
+    let savedToBrowser = true;
+    try {
+      localStorage.setItem(FCV_SETTINGS_STORAGE_KEY, canonicalEncoded);
+    } catch {
+      savedToBrowser = false;
+    }
+    setSettingsTransferStatus(
+      "pass",
+      "Đã nạp cấu hình máy thành công" +
+        (imported.legacyRevision ? " (profile " + imported.legacyRevision + " → " + adapter.revision + ")" : "") +
+        (savedToBrowser ? " và lưu vào trình duyệt." : " (phiên hiện tại đã áp dụng; lưu trình duyệt bị chặn)."),
+    );
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Từ chối tệp cấu hình: " + (err?.message ?? "không hợp lệ"));
+  } finally {
+    if (importBtn) importBtn.disabled = false;
+  }
+});
+
+$("btn-export-replay-pair")?.addEventListener("click", () => {
+  try {
+    const pair = buildFcv588ReplayExportFiles(session, "P23_LOWER_BOTTOM");
+    downloadJsonFile(pair.envelopeFileName, pair.envelopeText);
+    downloadJsonFile(pair.sidecarFileName, pair.sidecarText);
+    setSettingsTransferStatus(
+      "pass",
+      "Đã xuất cặp Replay (" + pair.envelopeFileName + " + " + pair.sidecarFileName +
+        " · " + session.events.length + " sự kiện).",
+    );
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Không thể xuất cặp replay: " + (err?.message ?? "lỗi phiên"));
+  }
+});
 
 $("btn-pause").addEventListener("click", () => {
   paused = !paused;
@@ -1247,9 +1710,11 @@ $("btn-reset").addEventListener("click", () => {
     {kind: "restore-settings", settings: retainedSettings}, scenario);
   // Reset removes volatile option grants, not stored preferences. Match the
   // startup baseline so a later non-setting key cannot silently rewrite them.
-  lastObservedSettings=encodeFcvSettings(session.deviceState.settings);
+  lastSettingsRef = session.deviceState.settings;
+  lastObservedSettings=encodeFcvSettings(lastSettingsRef);
   cachedTick = -1;
   frozenFrames.clear();
+  drawChannel._paneCache?.clear();
   $("validation-status").textContent =
     "Đã đặt lại thế giới, cảm biến và phiên học; giữ cấu hình máy, ghi sự kiện khôi phục mới.";
   render();
@@ -1436,12 +1901,15 @@ archiveButton.addEventListener("click",async()=>{
     resetArchiveTimeline();
     bzViewer.hidden=true;
     // Defense in depth: an invalid redraw must not retain old raster bytes.
+    let clearWarning="";
     try{
       bzCanvas.getContext("2d",{alpha:false})
         ?.clearRect(0,0,bzCanvas.width,bzCanvas.height);
-    }catch{}
+    }catch(clearErr){
+      clearWarning=" (không thể xóa canvas BZ: "+(clearErr?.message??"lỗi đồ họa")+")";
+    }
     $("archive-bz-view-status").textContent=
-      "Không có bản dựng BZ hợp lệ cho lần nhập này.";
+      "Không có bản dựng BZ hợp lệ cho lần nhập này."+clearWarning;
     for(const name of ["projectionContract","bottomFraction","sourceClass"])
       delete bzCanvas.dataset[name];
     details.hidden=true;
@@ -1453,11 +1921,20 @@ archiveButton.addEventListener("click",async()=>{
   }finally{archiveButton.disabled=false;}
 });
 
+const shortHoldPress = control => {
+  if (Object.hasOwn(session.heldControls, control)) return;
+  send({kind: "down", control});
+  send({kind: "up", control, durationMs: 120});
+};
 const shortcuts = {
   ArrowUp: () => pad("up"), ArrowDown: () => pad("down"),
   ArrowLeft: () => pad("left"), ArrowRight: () => pad("right"),
   Escape: () => press("menu"), Enter: () => press("enter"),
-  r: () => press("range"), g: () => send({kind: "push", control: "gain"}),
+  r: () => press("range"), R: () => press("range"),
+  g: () => send({kind: "push", control: "gain"}), G: () => send({kind: "push", control: "gain"}),
+  m: () => press("mark"), M: () => press("mark"),
+  f: () => shortHoldPress("func"), F: () => shortHoldPress("func"),
+  b: () => shortHoldPress("power"), B: () => shortHoldPress("power"),
   "[": () => rotate("mode", -1), "]": () => rotate("mode", 1),
   "-": () => rotate("gain", -1), "=": () => rotate("gain", 1),
 };

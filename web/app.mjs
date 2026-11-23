@@ -42,7 +42,7 @@ import {projectFcvLcdPresentation,projectFcvMainMenu,projectFcvFuncSetting,
   projectFcvPhotoStatusHeader,projectFcvAuthenticHeader,
   projectFcvDepthTicks,formatFcvNavBoxForLcd,
   canonicalNavBoxLabel,shouldShowFcvGlobalDepth,isVietnameseFcv,
-  localizeFcvNavLabel} from "./lcd-presentation.mjs";
+  localizeFcvNavLabel,localizeFcvChoiceValue} from "./lcd-presentation.mjs";
 import {projectFcvConfiguration} from "./lcd-config-presentation.mjs";
 import {projectFcvControl} from "./lcd-control-presentation.mjs";
 import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
@@ -51,6 +51,9 @@ import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
   "./lcd-instructor-meta.mjs";
 import {projectFcvInstructorSourceMatrix,projectFcvInstructorSourceTransition} from
   "./fcv588-training-source-matrix.mjs";
+import {FCV588_SETTINGS_FILE_NAME,FCV588_SETTINGS_TRANSFER_MAX_BYTES,
+  exportFcv588SettingsText,importFcv588SettingsText,
+  buildFcv588ReplayExportFiles} from "./fcv588-settings-transfer.mjs";
 
 const {FCV_SETTINGS_STORAGE_KEY, decodeFcvSettings, decodeFcvProfile19Settings,
   decodeFcvProfile21Settings, encodeFcvSettings} = fcvSettings;
@@ -647,13 +650,15 @@ function renderScreen() {
     const vrmPct=((sonarTop+vrmFraction*sonarH)/height)*100;
     $("vrm-indicator").style.top = Math.max(8,Math.min(96,vrmPct)) + "%";
   }
+  const viScreen = isVietnameseFcv(state);
+  const noSonarText = viScreen ? "KHONG CO TIN HIEU DO SAU" : "NO SONAR DATA";
   if (state.power === "booting") {
     ctx.fillStyle = "#b8d5e8";
     ctx.textAlign = "center";
     ctx.font = "bold 32px Consolas, monospace";
     ctx.fillText("FCV-588", width / 2, height / 2 - 20);
     ctx.font = "18px Consolas, monospace";
-    ctx.fillText("INITIALIZING ... " + state.bootElapsed + "/4", width / 2, height / 2 + 25);
+    ctx.fillText((viScreen ? "DANG KHOI DONG ... " : "INITIALIZING ... ") + state.bootElapsed + "/4", width / 2, height / 2 + 25);
     ctx.textAlign = "left";
   }
   if (state.power === "on") {
@@ -707,7 +712,7 @@ function renderScreen() {
         ctx.fillRect(sounderPane.x,0,sounderPane.width,height);
         ctx.fillStyle=lcdRgb(contrast.foreground);
         ctx.font="12px Consolas, monospace";
-        ctx.fillText("NO SONAR DATA",sounderPane.x+6,height/2,
+        ctx.fillText(noSonarText,sounderPane.x+6,height/2,
           sounderPane.width-12);
       }
       ctx.fillStyle=lcdRgb(contrast.navPanel);
@@ -766,7 +771,7 @@ function renderScreen() {
       ctx.fillStyle=lcdRgb(contrast.foreground);
       ctx.textAlign="center";
       ctx.font="bold 24px Consolas, monospace";
-      ctx.fillText("NO SONAR DATA",width/2,height/2-18);
+      ctx.fillText(noSonarText,width/2,height/2-18);
       ctx.textAlign="left";
     } else if (state.mode === "DUAL") {
       const lf = sounderFrame(o,state,50);
@@ -1144,6 +1149,11 @@ function renderControlChrome(projected,title,content){
   summary.dataset.controlKind=projected.kind;
   summary.dataset.currentValue=projected.currentValue;
   summary.dataset.draftValue=projected.draftValue;
+  const footer=$("dialog-footer");
+  footer.textContent=Array.isArray(projected.legendLines) && projected.legendLines.length
+    ?projected.legendLines.join("\n")
+    :"◀/▶  ▲/▼  [ENTER]  [MENU]";
+  footer.hidden=false;
   const countdown=Number.isFinite(projected.remainingMs)
     ?"\nCòn "+(projected.remainingMs/1000).toFixed(1)+" s (đồng hồ mô phỏng)":"";
   publishInstructorGuidance({
@@ -1246,18 +1256,25 @@ function renderDialog() {
         speedKn:session.deviceState.navigationObservation?.speedKn,
       }).speedKn:null;
     const speedUnit=session.deviceState.settings.speedUnit??"kn";
-    content.textContent="NMEA: OFF\nOWN POSITION: "+
-      (fresh?displayOnlySyntheticValue(projected.positionText):"NO DATA")+
-      "\nOWN SPEED: "+(Number.isFinite(calibratedSpeed)
-        ?formatFcvSpeed(calibratedSpeed,speedUnit):"NO DATA");
+    const noData=vi?"KHONG DU LIEU":"NO DATA";
+    const posText=fresh?displayOnlySyntheticValue(projected.positionText):noData;
+    const spdText=Number.isFinite(calibratedSpeed)
+      ?formatFcvSpeed(calibratedSpeed,speedUnit):noData;
+    content.textContent=vi
+      ?"NMEA: TAT\nVI TRI: "+posText+"\nTOC DO: "+spdText
+      :"NMEA: OFF\nOWN POSITION: "+posText+"\nOWN SPEED: "+spdText;
   } else if(overlay.kind==="tankenmaru-details"){
-    title.textContent="TANKENMARU";
+    title.textContent=vi?"TT TANKENMARU":"TANKENMARU";
     const virtual=projectFcvTankenmaruTrainingStatus(session.deviceState);
     content.textContent=virtual.values
-      ?"Output: "+virtual.values.output+"\n"+
-        "Pic. Sync: "+virtual.values.pictureSync+"\n"+
-        "Sub Clutter: "+virtual.values.subClutter
-      :"NO DATA";
+      ?(vi
+        ?"Ngo ra: "+localizeFcvChoiceValue("tankenmaruOutput",virtual.values.output,session.deviceState.settings)+"\n"+
+          "Dong bo Hinh: "+localizeFcvChoiceValue("tankenmaruPicSync",virtual.values.pictureSync,session.deviceState.settings)+"\n"+
+          "Khu nhieu phu: "+localizeFcvChoiceValue("tankenmaruSubClutter",virtual.values.subClutter,session.deviceState.settings)
+        :"Output: "+virtual.values.output+"\n"+
+          "Pic. Sync: "+virtual.values.pictureSync+"\n"+
+          "Sub Clutter: "+virtual.values.subClutter)
+      :(vi?"KHONG DU LIEU":"NO DATA");
   } else if (["gain","brill","mode"].includes(overlay.kind)) {
     title.textContent = "CONTROL";
     content.textContent = "NO DATA";
@@ -1284,15 +1301,23 @@ function renderDialog() {
     title.textContent = vi ? "HANH TRINH" : "TRIP / ODOMETER";
     const nav=session.deviceState.navigation;
     const travel=projectFcvTravelValues(nav,session.deviceState.settings);
-    const tripText=travel.tripNm===null?"NO DATA":
+    const noData=vi?"KHONG DU LIEU":"NO DATA";
+    const tripText=travel.tripNm===null?noData:
       formatFcvDistance(travel.tripNm,
         session.deviceState.settings.distanceUnit);
-    const odometerText=travel.odometerNm===null?"NO DATA":
+    const odometerText=travel.odometerNm===null?noData:
       formatFcvDistance(travel.odometerNm,
         session.deviceState.settings.distanceUnit);
-    content.textContent="TRIP  "+tripText+"\n"+
-      "ODOMETER  "+odometerText+"\n"+
-      "TRIP SOURCE: "+session.deviceState.settings.tripSource;
+    const srcText=vi
+      ?localizeFcvChoiceValue("tripSource",session.deviceState.settings.tripSource,session.deviceState.settings)
+      :session.deviceState.settings.tripSource;
+    content.textContent=vi
+      ?"HANH TRINH  "+tripText+"\n"+
+        "TONG H.TRINH  "+odometerText+"\n"+
+        "NGUON: "+srcText
+      :"TRIP  "+tripText+"\n"+
+        "ODOMETER  "+odometerText+"\n"+
+        "TRIP SOURCE: "+session.deviceState.settings.tripSource;
   } else if(overlay.kind === "confirm-trip-reset"){
     title.textContent = vi ? "XOA HANH TRINH" : "RESET TRIP";
     content.textContent = vi
@@ -1415,6 +1440,8 @@ function render() {
     s.notice || (s.power === "on" ? "RUN · DEMO DATA" :
       s.power === "booting" ? "BOOTING" : "POWER OFF");
   $("btn-pause").textContent = paused ? "Tiếp tục thời gian" : "Tạm dừng thời gian";
+  const quickPowerBtn = $("btn-quick-power");
+  if (quickPowerBtn) quickPowerBtn.setAttribute("aria-pressed", String(s.power === "on"));
   renderPhysicalDialState(s);
   renderScreen();
   publishSourceCue(s,session.worldState.simTick);
@@ -1533,6 +1560,138 @@ for (const control of ["power", "func"]) {
     emit: input => send(input),
   }));
 }
+document.querySelector(".mode-scale")?.addEventListener("click", ev => {
+  const mark = ev.target?.closest?.("[data-mode]");
+  if (!mark) return;
+  const targetIdx = DISPLAY_MODES.indexOf(mark.dataset.mode);
+  if (targetIdx < 0) return;
+  const currentMode = session.deviceState.overlay?.kind === "mode"
+    ? session.deviceState.overlay.candidate
+    : session.deviceState.mode;
+  const currentIdx = DISPLAY_MODES.indexOf(currentMode);
+  const delta = targetIdx - currentIdx;
+  if (delta !== 0) rotate("mode", delta);
+});
+document.querySelector(".gain-scale-minus")?.addEventListener("click", () => rotate("gain", -1));
+document.querySelector(".gain-scale-plus")?.addEventListener("click", () => rotate("gain", 1));
+
+const fullscreenBtn = $("btn-fullscreen");
+function syncFullscreenButton() {
+  if (!fullscreenBtn) return;
+  const active = Boolean(document.fullscreenElement);
+  fullscreenBtn.setAttribute("aria-pressed", String(active));
+  fullscreenBtn.textContent = active ? "Thoát toàn màn hình" : "Toàn màn hình";
+}
+fullscreenBtn?.addEventListener("click", () => {
+  const toggle = document.fullscreenElement
+    ? document.exitFullscreen?.()
+    : document.documentElement.requestFullscreen?.();
+  Promise.resolve(toggle).catch(() => {}).finally(syncFullscreenButton);
+});
+document.addEventListener("fullscreenchange", syncFullscreenButton);
+
+$("btn-quick-power")?.addEventListener("click", () => {
+  for (const binding of holdBindings) binding.cancel();
+  if (session.deviceState.power === "off") {
+    send({kind: "down", control: "power"});
+    send({kind: "up", control: "power", durationMs: 120});
+    send({kind: "tick", steps: 4});
+  } else if (session.deviceState.power === "booting") {
+    const remaining = Math.max(1, 4 - (session.deviceState.bootElapsed || 0));
+    send({kind: "tick", steps: remaining});
+  } else {
+    send({kind: "down", control: "power"});
+    send({kind: "up", control: "power", durationMs: 3200});
+  }
+});
+
+function downloadJsonFile(fileName, text) {
+  const blob = new Blob([text], {type: "application/json;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.rel = "noopener";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function setSettingsTransferStatus(state, message) {
+  const status = $("settings-transfer-status");
+  if (!status) return;
+  if (state) status.dataset.state = state;
+  else delete status.dataset.state;
+  status.textContent = message;
+}
+
+$("btn-export-settings")?.addEventListener("click", () => {
+  try {
+    const text = exportFcv588SettingsText(session.deviceState.settings);
+    downloadJsonFile(FCV588_SETTINGS_FILE_NAME, text);
+    setSettingsTransferStatus("pass", "Đã lưu cấu hình máy ra tệp " + FCV588_SETTINGS_FILE_NAME + ".");
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Không thể xuất cấu hình: " + (err?.message ?? "lỗi dữ liệu"));
+  }
+});
+
+$("import-settings-file")?.addEventListener("change", () => {
+  const file = $("import-settings-file")?.files?.[0];
+  if (file) {
+    setSettingsTransferStatus("", "Đã chọn tệp " + file.name + " — nhấn Nạp cấu hình máy để áp dụng.");
+  }
+});
+
+$("btn-import-settings")?.addEventListener("click", async () => {
+  const importBtn = $("btn-import-settings");
+  if (importBtn) importBtn.disabled = true;
+  try {
+    const file = $("import-settings-file")?.files?.[0];
+    if (!file) throw new TypeError("Cần chọn tệp JSON cấu hình trước khi nạp");
+    if (file.size === 0 || file.size > FCV588_SETTINGS_TRANSFER_MAX_BYTES) {
+      throw new RangeError("Tệp JSON rỗng hoặc vượt giới hạn 18 KB");
+    }
+    const text = await file.text();
+    const imported = importFcv588SettingsText(text);
+    for (const binding of holdBindings) binding.cancel();
+    send({kind: "restore-settings", settings: imported.settings});
+    const canonicalEncoded = encodeFcvSettings(session.deviceState.settings);
+    lastSettingsRef = session.deviceState.settings;
+    lastObservedSettings = canonicalEncoded;
+    let savedToBrowser = true;
+    try {
+      localStorage.setItem(FCV_SETTINGS_STORAGE_KEY, canonicalEncoded);
+    } catch {
+      savedToBrowser = false;
+    }
+    setSettingsTransferStatus(
+      "pass",
+      "Đã nạp cấu hình máy thành công" +
+        (imported.legacyRevision ? " (profile " + imported.legacyRevision + " → " + adapter.revision + ")" : "") +
+        (savedToBrowser ? " và lưu vào trình duyệt." : " (phiên hiện tại đã áp dụng; lưu trình duyệt bị chặn)."),
+    );
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Từ chối tệp cấu hình: " + (err?.message ?? "không hợp lệ"));
+  } finally {
+    if (importBtn) importBtn.disabled = false;
+  }
+});
+
+$("btn-export-replay-pair")?.addEventListener("click", () => {
+  try {
+    const pair = buildFcv588ReplayExportFiles(session, "P23_LOWER_BOTTOM");
+    downloadJsonFile(pair.envelopeFileName, pair.envelopeText);
+    downloadJsonFile(pair.sidecarFileName, pair.sidecarText);
+    setSettingsTransferStatus(
+      "pass",
+      "Đã xuất cặp Replay (" + pair.envelopeFileName + " + " + pair.sidecarFileName +
+        " · " + session.events.length + " sự kiện).",
+    );
+  } catch (err) {
+    setSettingsTransferStatus("rejected", "Không thể xuất cặp replay: " + (err?.message ?? "lỗi phiên"));
+  }
+});
 
 $("btn-pause").addEventListener("click", () => {
   paused = !paused;
@@ -1762,11 +1921,20 @@ archiveButton.addEventListener("click",async()=>{
   }finally{archiveButton.disabled=false;}
 });
 
+const shortHoldPress = control => {
+  if (Object.hasOwn(session.heldControls, control)) return;
+  send({kind: "down", control});
+  send({kind: "up", control, durationMs: 120});
+};
 const shortcuts = {
   ArrowUp: () => pad("up"), ArrowDown: () => pad("down"),
   ArrowLeft: () => pad("left"), ArrowRight: () => pad("right"),
   Escape: () => press("menu"), Enter: () => press("enter"),
-  r: () => press("range"), g: () => send({kind: "push", control: "gain"}),
+  r: () => press("range"), R: () => press("range"),
+  g: () => send({kind: "push", control: "gain"}), G: () => send({kind: "push", control: "gain"}),
+  m: () => press("mark"), M: () => press("mark"),
+  f: () => shortHoldPress("func"), F: () => shortHoldPress("func"),
+  b: () => shortHoldPress("power"), B: () => shortHoldPress("power"),
   "[": () => rotate("mode", -1), "]": () => rotate("mode", 1),
   "-": () => rotate("gain", -1), "=": () => rotate("gain", 1),
 };

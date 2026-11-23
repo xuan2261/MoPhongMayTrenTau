@@ -2,13 +2,11 @@ import * as settingsCodec from "../src/devices/fcv588/settings.mjs";
 
 export const DESKTOP_SETTINGS_TRANSFER_SCHEMA="FCV588_SETTINGS_TRANSFER_V1";
 export const DESKTOP_SETTINGS_KEY=settingsCodec.FCV_SETTINGS_STORAGE_KEY;
+const PROFILE_DECODERS=Object.entries(settingsCodec)
+  .filter(([name,fn])=>/^decodeFcv(?:Profile\d+)?Settings$/.test(name) && typeof fn==="function")
+  .map(([,fn])=>fn);
 const isValidRaw=raw=>typeof raw==="string" && raw.length<=12000 &&
-  Boolean(settingsCodec.decodeFcvSettings(raw)??
-    settingsCodec.decodeFcvProfile23Settings?.(raw)??
-    settingsCodec.decodeFcvProfile22Settings?.(raw)??
-    settingsCodec.decodeFcvProfile21Settings(raw)??
-    settingsCodec.decodeFcvProfile20Settings?.(raw)??
-    settingsCodec.decodeFcvProfile19Settings(raw));
+  PROFILE_DECODERS.some(decode=>Boolean(decode(raw)));
 
 export function exportDesktopSettingsText(raw){
   if(!isValidRaw(raw))throw new TypeError("Cấu hình chưa lưu hoặc không hợp lệ");

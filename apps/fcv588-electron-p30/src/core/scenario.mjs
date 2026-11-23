@@ -66,8 +66,9 @@ export function rawEchoLevel(scenario, {time, depthM, frequencyKhz, noiseSeed}) 
   let strength = scenario.syntheticBottomReturnPresent===false
     ?0:offset >= 0 && offset < 2.3 ? 0.85 - offset * 0.17 : 0;
   const spread = frequencyKhz === 50 ? 5.2 : 2.6;
+  const fishTime = time >= 60 ? (time % 60) : time;
   for (const fish of scenario.fish) {
-    const dx = (time - fish.time) / spread;
+    const dx = (fishTime - fish.time) / spread;
     const dy = (depthM - fish.depthM) / 2.3;
     strength += fish.strength * Math.exp(-0.5 * (dx * dx + dy * dy));
   }
@@ -84,8 +85,8 @@ export const SYNTHETIC_SOUNDER_SOURCE_IDENTITY =
   "SYNTHETIC_SOUNDER_SOURCE_IDENTITY_V1";
 export const SOUNDER_COLUMN_SECONDS=0.46;
 
-const sounderColumnTime=(simTick,columns,x)=>
-  simTick-(columns-x)*SOUNDER_COLUMN_SECONDS;
+const sounderColumnTime=(simTick,columns,x,columnSeconds=SOUNDER_COLUMN_SECONDS)=>
+  simTick-(columns-x)*columnSeconds;
 
 function assertSyntheticSounderWorld(scenario,worldState,columns){
   if(!scenario?.id || !Number.isInteger(scenario.version) ||
@@ -119,11 +120,13 @@ export function projectSyntheticSounderSourceIdentity(scenario,worldState,{colum
  * schema bytes remain unchanged while Bottom Lock can distinguish an authored
  * seabed from a near-bottom fish return without scanning pixel intensity.
  */
-export function projectSyntheticSeabedProvenance(scenario,worldState,{columns=120}={}){
+export function projectSyntheticSeabedProvenance(scenario,worldState,{
+  columns=120,columnSeconds=SOUNDER_COLUMN_SECONDS,
+}={}){
   const identity=projectSyntheticSounderSourceIdentity(scenario,worldState,{columns});
   const present=scenario.syntheticBottomReturnPresent!==false;
   const columnBottoms=Array.from({length:columns},(_,x)=>{
-    const sampleTime=sounderColumnTime(worldState.simTick,columns,x);
+    const sampleTime=sounderColumnTime(worldState.simTick,columns,x,columnSeconds);
     return Object.freeze({present,depthM:bottomDepthAt(scenario,sampleTime),sampleTime});
   });
   return Object.freeze({
@@ -142,8 +145,8 @@ export function sounderSourceRowForDepth(observation,depthM){
   if(!Number.isInteger(observation?.rows) || observation.rows<2 ||
       !Number.isFinite(observation.maxDepthM) || observation.maxDepthM<=0 ||
       !Number.isFinite(depthM))throw new TypeError("invalid sounder source-row input");
-  return Math.min(observation.rows-1,
-    Math.round(depthM/observation.maxDepthM*(observation.rows-1)));
+  return Math.max(0,Math.min(observation.rows-1,
+    Math.round(depthM/observation.maxDepthM*(observation.rows-1))));
 }
 
 export function initialWorldState(scenario) {
@@ -155,6 +158,21 @@ export function advanceWorld(scenario, worldState, steps) {
   return {simTick, bottomDepthM: bottomDepthAt(scenario, simTick)};
 }
 
+function dominantBottomType(classification) {
+  const classes = classification?.classes;
+  if (!classes || typeof classes !== "object") return "Rock";
+  let bestType = null;
+  let bestWeight = -Infinity;
+  for (const type of ["Rock", "Gravel", "Sand", "Mud"]) {
+    const weight = classes[type];
+    if (Number.isFinite(weight) && weight > bestWeight) {
+      bestWeight = weight;
+      bestType = type;
+    }
+  }
+  return bestType ?? "Rock";
+}
+
 /** Cheap typed world observation for offline alarms and navigation only. */
 export function observeTrainingStatus(scenario, worldState) {
   const source = scenario.syntheticOwnship ?? null;
@@ -163,18 +181,22 @@ export function observeTrainingStatus(scenario, worldState) {
   const courseRad=(source?.courseDeg??0)*Math.PI/180;
   const distanceNm=(source?.speedKn??0)*worldState.simTick/3600;
   const currentLat=source ? source.lat+distanceNm*Math.cos(courseRad)/60:null;
-  const currentLon=source ? source.lon+
+  const rawLon=source ? source.lon+
     distanceNm*Math.sin(courseRad)/(60*Math.max(0.1,
       Math.cos(source.lat*Math.PI/180))):null;
+  const currentLon=rawLon===null?null:
+    rawLon>=-180 && rawLon<=180?rawLon:
+      ((((rawLon+180)%360)+360)%360)-180;
+  const fishTick=worldState.simTick>=60?(worldState.simTick%60):worldState.simTick;
   const visibleFish=scenario.fish.filter(f=>
-    Math.abs(worldState.simTick-f.time)<=4);
+    Math.abs(fishTick-f.time)<=4);
   const strongestFish=visibleFish.length
     ?visibleFish.reduce((strongest,f)=>f.strength>strongest.strength?f:strongest)
     :null;
   return {
     sourceClass: "SYNTHETIC_FIXTURE",
     bottomDepthM: worldState.bottomDepthM,
-    bottomType: "Rock",
+    bottomType: dominantBottomType(scenario.bottomClassification),
     bottomClassification:scenario.bottomClassification??null,
     fishPresent: visibleFish.length>0,
     fishStrength: strongestFish?.strength??null,
@@ -212,25 +234,55 @@ export function effectiveRangeM(observation, state) {
 }
 
 export function effectiveGain(state) {
-  return state.gainMode === "off"
-    ? state.manualGain
-    : state.gainMode === "fishing" ? 6.5 : 3.8;
+  if (state.gainMode === "off") return state.manualGain;
+  const base = state.gainMode === "fishing" ? 6.5 : 3.8;
+  const offset = clamp(Number(state.autoGainOffset ?? 0) || 0, -5, 5);
+  return clamp(base + offset * 0.5, 0, 10);
+}
+
+function projectPeriodicSyntheticTargets(scenario, simTick, columns, columnSeconds = SOUNDER_COLUMN_SECONDS) {
+  if (simTick < 60) {
+    return scenario.fish.map(f => ({
+      sourceClass: "SYNTHETIC_FIXTURE", time: f.time, depthM: f.depthM, sizeCm: f.sizeCm,
+    }));
+  }
+  const windowStart = simTick - columns * columnSeconds;
+  const minCycle = Math.max(0, Math.floor(windowStart / 60));
+  const maxCycle = Math.floor(simTick / 60);
+  const targets = [];
+  for (let cycle = minCycle; cycle <= maxCycle; cycle++) {
+    const baseTime = cycle * 60;
+    for (const f of scenario.fish) {
+      targets.push({
+        sourceClass: "SYNTHETIC_FIXTURE",
+        time: baseTime + f.time,
+        depthM: f.depthM,
+        sizeCm: f.sizeCm,
+      });
+    }
+  }
+  return targets;
 }
 
 /**
  * Sensor observation is independent of device power, menu, Gain and Range.
  * The static water-column extent is an F0 shortcut, not a calibrated sonar.
  */
-export function observeSounder(scenario, worldState, {columns = 120, rows = 301} = {}) {
+export function observeSounder(scenario, worldState, {
+  columns = 120, rows = 301, columnSeconds = SOUNDER_COLUMN_SECONDS,
+} = {}) {
   if (!Number.isInteger(columns) || columns < 1 || columns > 500) throw new RangeError("invalid columns");
   if (!Number.isInteger(rows) || rows < 2 || rows > 500) throw new RangeError("invalid rows");
+  if (!Number.isFinite(columnSeconds) || columnSeconds <= 0 || columnSeconds > 10) {
+    throw new RangeError("invalid columnSeconds");
+  }
   const maxDepthM = 300;
   const noiseSeed = streamSeed(scenario.seed, FISHFINDER_NOISE_STREAM);
   const channels = {};
   for (const frequencyKhz of [50, 200]) {
     const raw = new Uint8Array(columns * rows);
     for (let x = 0; x < columns; x++) {
-      const time = sounderColumnTime(worldState.simTick,columns,x);
+      const time = sounderColumnTime(worldState.simTick, columns, x, columnSeconds);
       for (let y = 0; y < rows; y++) {
         const depthM = y / (rows - 1) * maxDepthM;
         raw[y * columns + x] = Math.round(rawEchoLevel(scenario, {
@@ -247,12 +299,11 @@ export function observeSounder(scenario, worldState, {columns = 120, rows = 301}
     bottomDepthM: worldState.bottomDepthM,
     recommendedAutoRangeM: DEFAULT_RANGES_M.find(range => range >= desiredRange) ?? 300,
     maxDepthM,
-    syntheticTargets:scenario.fish.map(f=>({
-      sourceClass:"SYNTHETIC_FIXTURE",time:f.time,depthM:f.depthM,sizeCm:f.sizeCm,
-    })),
+    syntheticTargets: projectPeriodicSyntheticTargets(scenario, worldState.simTick, columns, columnSeconds),
     columns,
     rows,
     channels,
+    ...(columnSeconds !== SOUNDER_COLUMN_SECONDS ? {columnSeconds} : {}),
   };
 }
 

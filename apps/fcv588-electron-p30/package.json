@@ -1,19 +1,21 @@
 {
-  "name": "fcv588-synthetic-electron-poc",
-  "version": "0.0.1",
+  "name": "fcv588-standalone-simulator",
+  "version": "1.0.0",
   "private": true,
-  "description": "Windows-only offline synthetic classroom POC; not OEM validated",
+  "license": "MIT",
+  "author": "MoPhongMayTrenTau",
+  "description": "FURUNO FCV-588 — Mô phỏng Máy Đo Sâu Dò Cá Độc Lập (Training Only, Not OEM Validated)",
   "main": "desktop/main.cjs",
   "scripts": {
     "start": "electron .",
+    "sync": "node ../../tools/sync_fcv588_electron.mjs",
     "bundle:offline": "node desktop/build-bundle.mjs",
-    "package:win": "npm run bundle:offline && electron-builder --config desktop/p30-builder-v2.config.cjs --win nsis --x64 --publish never"
+    "package:win": "npm run bundle:offline && electron-builder --config desktop/fcv588-builder.config.cjs --win nsis portable --x64 --publish never",
+    "test": "node --test desktop/settings-transfer.test.mjs test/fcv588-p28-mode-replay-matrix.test.mjs"
   },
   "devDependencies": {
-    "@electron/fuses": "2.1.3",
-    "@electron/packager": "20.3.0",
-    "electron": "45.4.1",
-    "electron-builder": "26.18.1",
-    "playwright-core": "^1.65.1"
+    "@electron/fuses": "^1.8.0",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8"
   }
 }

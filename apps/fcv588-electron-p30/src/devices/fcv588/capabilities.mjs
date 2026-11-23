@@ -25,7 +25,7 @@ export function resolveFcvCapability(profile, feature, context = {}) {
   if (feature !== "bottomDiscrimination") {
     return {enabled: true, reason: "SYNTHETIC_NAMED_FIXTURE_ONLY"};
   }
-  const {depthM, speedKn, draftM, rangeMode, mountCompatible, mountAligned} = context;
+  const {depthM, speedKn, draftM, rangeMode} = context;
   if (!Number.isFinite(depthM) || depthM < 5 || depthM > 100) {
     return {enabled: false, reason: "BDS_DEPTH_OUTSIDE_5_100_M"};
   }

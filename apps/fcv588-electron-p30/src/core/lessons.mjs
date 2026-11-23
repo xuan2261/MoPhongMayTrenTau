@@ -2,7 +2,8 @@
  * Instructor-platform (D15) lesson checks. Deterministic semantic feedback,
  * NOT a manufacturer skill certificate, anti-cheat oracle or navigation tool.
  */
-import {replay,dispatch,createSession,createReplayEnvelope,sessionHash} from "./session.mjs";
+import {fingerprint} from "./protocol.mjs";
+import {dispatch,createSession,sessionHash} from "./session.mjs";
 import {TRAINING_SCENARIO} from "./scenario.mjs";
 import {FCV588_ADAPTER} from "../devices/fcv588/adapter.mjs";
 import {projectFcvTrainingReceiver} from "../devices/fcv588/receiver-status.mjs";
@@ -80,8 +81,8 @@ export const FCV588_TRAINING_LESSONS=Object.freeze([
     expectedProbes:{power:"on",overlayKind:"receiver-status",
       receiverStatus:"NO_TRAINING_DATA",receiverTransport:"NONE"},
     // This source-negative exercise must remain without an instructor NAV
-    // fixture for the *whole scored attempt*, not only at the final screen.
-    requiredFixtureState:{navigation:false},
+    // fixture or virtual Tankenmaru suppression for the *whole scored attempt*.
+    requiredFixtureState:{navigation:false,tankenmaruOption:false},
     negativeCaseDescription:"Bật fixture D15 vị trí tổng hợp trước bài học "+
       "phải làm trạng thái thay đổi, không thể chấm NO_TRAINING_DATA. "+
       "NMEA/IEC vật lý luôn ngắt.",
@@ -140,6 +141,14 @@ const findInOrder=(events,required)=>{
   return true;
 };
 
+const stripEnvelopeFields=event=>{
+  const copy={...event};
+  delete copy.schemaVersion;
+  delete copy.seq;
+  delete copy.tick;
+  return copy;
+};
+
 export function assessFcvLesson(session,lessonId,{
   startSeq=0,baselineWaypointCount,startSessionHash,
 }={}){
@@ -166,35 +175,63 @@ export function assessFcvLesson(session,lessonId,{
   }
   if(lesson.expectedProbes.minimumWaypoints!==undefined &&
      (startSeq>0 && (!Number.isSafeInteger(baselineWaypointCount) ||
-       baselineWaypointCount<0 ||
-       baselineWaypointCount>session.deviceState.navigation?.waypoints.length))){
+       baselineWaypointCount<0 || baselineWaypointCount>20))){
     return {passed:false,reasons:["INVALID_LESSON_BOUNDARY"],
       lessonId:lesson.id,sourceClass:"INSTRUCTOR_PLATFORM",hardwareApproved:false};
   }
-  // An instructor must start a new attempt: historical actions and clock
-  // advances from another lesson never count toward this attempt.
-  const attemptEvents=session.events.filter(event=>event.seq>startSeq);
-  let replayVerified=false;
+  // Single-pass canonical replay verification + boundary capture + attempt audit.
+  const attemptEvents=session.events.slice(startSeq);
+  const gradedEvents=[];
+  let replayVerified;
   let attemptInitial=null;
   let unexpectedOperatorAction=false;
+  let poweredOffAction=false;
   try{
-    const envelope=createReplayEnvelope(session);
-    replayVerified=sessionHash(replay(FCV588_ADAPTER,TRAINING_SCENARIO,
-      envelope))===sessionHash(session);
-    if(replayVerified){
-      // Reconstruct an independent *shortened* canonical session to obtain
-      // its own expected final state hash. Never tamper with a full envelope's
-      // event list and silently reuse its final-state acceptance signature.
-      let prefixSession=createSession(FCV588_ADAPTER,TRAINING_SCENARIO);
-      for(const event of session.events.slice(0,startSeq)){
-        const {schemaVersion,seq,tick,...input}=event;
-        prefixSession=dispatch(prefixSession,FCV588_ADAPTER,input,TRAINING_SCENARIO);
-      }
-      attemptInitial=replay(FCV588_ADAPTER,TRAINING_SCENARIO,
-        createReplayEnvelope(prefixSession));
+    if(!session.meta || session.deviceId!==FCV588_ADAPTER.id ||
+        session.profileRevision!==FCV588_ADAPTER.revision ||
+        session.scenarioId!==TRAINING_SCENARIO.id ||
+        session.scenarioVersion!==TRAINING_SCENARIO.version){
+      throw new Error("session contract mismatch");
     }
+    let cursor=createSession(FCV588_ADAPTER,TRAINING_SCENARIO);
+    if(fingerprint(session.meta)!==fingerprint(cursor.meta)){
+      throw new Error("session meta mismatch");
+    }
+    if(startSeq===0)attemptInitial=cursor;
+    for(let i=0;i<session.events.length;i++){
+      const event=session.events[i];
+      if(!event || typeof event!=="object" || Array.isArray(event) ||
+          event.seq!==i+1 || event.tick!==cursor.worldState.simTick ||
+          event.schemaVersion!==cursor.meta.schemaVersion){
+        throw new Error("event sequence/clock/schema mismatch");
+      }
+      if(i>=startSeq){
+        const studentPhysical=["press","pad","rotate","push","down","up","cancel"]
+          .includes(event.kind);
+        // Boot edges (including an accidental slip/cancel while still off) are
+        // startup prerequisites, not scored student controls.
+        const startupPower=event.control==="power" &&
+          ["down","up","cancel"].includes(event.kind) &&
+          cursor.deviceState.power==="off";
+        if(!startupPower)gradedEvents.push(event);
+        if(studentPhysical && !startupPower &&
+           !lesson.actions.some(step=>sameAction(event,step))){
+          unexpectedOperatorAction=true;
+        }
+        if(!startupPower &&
+           lesson.actions.some(step=>sameAction(event,step)) &&
+           cursor.deviceState.power!=="on"){
+          poweredOffAction=true;
+        }
+      }
+      cursor=dispatch(cursor,FCV588_ADAPTER,stripEnvelopeFields(event),TRAINING_SCENARIO);
+      if(i+1===startSeq)attemptInitial=cursor;
+    }
+    replayVerified=sessionHash(cursor)===sessionHash(session);
+    if(!replayVerified)attemptInitial=null;
   }catch{
     replayVerified=false;
+    attemptInitial=null;
   }
   if(!replayVerified)reasons.push("REPLAY_STATE_MISMATCH");
   if(attemptInitial){
@@ -220,41 +257,12 @@ export function assessFcvLesson(session,lessonId,{
         reasons.push("WRONG_TRAINING_CONTEXT");
       }
     }
-    // Repeating a complete and valid exercise is legitimate practice even
-    // if the target setting is already selected. Grade actions and their
-    // power context, never just a changed final field.
-    let atEvent=attemptInitial;
-    for(const event of attemptEvents){
-      const studentPhysical=["press","pad","rotate","push","down","up","cancel"]
-        .includes(event.kind);
-      // Boot edges are startup prerequisites, not scored student controls.
-      // They may occur inside an attempt opened before power-on. Do not exempt
-      // hold-capable FUNC or later POWER input while already operating.
-      const startupPower=event.control==="power" &&
-        ["down","up"].includes(event.kind) &&
-        atEvent.deviceState.power==="off";
-      if(studentPhysical && !startupPower &&
-         !lesson.actions.some(step=>sameAction(event,step))){
-        unexpectedOperatorAction=true;
-      }
-      if(lesson.actions.some(step=>sameAction(event,step)) &&
-         atEvent.deviceState.power!=="on" &&
-         !reasons.includes("ACTION_WHILE_POWERED_OFF")){
-        reasons.push("ACTION_WHILE_POWERED_OFF");
-      }
-      const {schemaVersion,seq,tick,...input}=event;
-      atEvent=dispatch(atEvent,FCV588_ADAPTER,input,TRAINING_SCENARIO);
-    }
+    if(poweredOffAction)reasons.push("ACTION_WHILE_POWERED_OFF");
   }
-  // Scored operator actions must belong to the lesson's prescribed sequence.
-  // Exact retries of a lesson action are allowed (a student can retry MARK
-  // after the teacher enables the location fixture), but unrelated physical
-  // controls do not silently earn credit from the final probe alone. World/UI
-  // ticks, POWER boot edges and teacher fixture changes are not graded actions.
-  if(unexpectedOperatorAction){
+  if(unexpectedOperatorAction && attemptInitial){
     reasons.push("UNEXPECTED_OPERATOR_ACTIONS");
   }
-  if(!findInOrder(attemptEvents,lesson.actions))reasons.push("MISSING_REQUIRED_ACTION_SEQUENCE");
+  if(!findInOrder(gradedEvents,lesson.actions))reasons.push("MISSING_REQUIRED_ACTION_SEQUENCE");
   const receiver=projectFcvTrainingReceiver(session.deviceState,
     session.worldState.simTick);
   const probes={
@@ -272,8 +280,6 @@ export function assessFcvLesson(session,lessonId,{
   };
   for(const [field,value]of Object.entries(lesson.expectedProbes)){
     if(field==="minimumWaypoints"){
-      // A historical waypoint may remain on the device, but it cannot satisfy
-      // a new attempt merely because the student pressed MARK without data.
       const added=probes.minimumWaypoints-(baselineWaypointCount??0);
       if(added<value)reasons.push("WRONG_PROBE_"+field);
     }else if(probes[field]!==value)reasons.push("WRONG_PROBE_"+field);

@@ -71,11 +71,22 @@ export function rasterizeFcvEcho(frame,palette,options={}){
     throw new TypeError("invalid original classroom color palette");
   const sx=2,sy=4,width=columns*sx,height=rows*sy;
   const data=new Uint8ClampedArray(width*height*4);
+  const startDepthM=frame.startDepthM??0;
   // Bottom Lock has already consumed source-authored per-column provenance in
   // the projector. Do not run a second pixel/global-depth inference here: it
   // can turn a near-bottom fish school into a decorative seabed tail.
   const bottom=frame.synthetic===true && frame.zoomMode!=="Bottom Lock"
     ?coherentBottom(frame):null;
+  let activeSamples=0;
+  if(bottom===null && frame.synthetic===true && frame.zoomMode!=="Bottom Lock" &&
+      Number.isFinite(frame.bottomDepthM) &&
+      frame.bottomDepthM>startDepthM+frame.rangeM){
+    const needed=Math.min(4,columns);
+    for(let i=0;i<pixels.length && activeSamples<needed;i++){
+      if(pixels[i]>0)activeSamples++;
+    }
+  }
+  const deepBottomActive=activeSamples>=Math.min(4,columns);
   const lf=frame.frequencyKhz===50;
   const hf=frame.frequencyKhz===200;
   const clutterPct=clamp(Number(options.clutterPct??0)||0,0,100);
@@ -83,10 +94,10 @@ export function rasterizeFcvEcho(frame,palette,options={}){
   const attenuate=(1-clutterPct/100)**1.45*(1-erasePct/50)**0.5;
   const band=lf?Math.min(11,frame.rangeM*.5):
     hf?Math.min(2.5,frame.rangeM*.18):0;
-  const drawn=bottom!==null && attenuate>0;
+  const drawn=(bottom!==null || deepBottomActive) && attenuate>0;
   for(let py=0;py<height;py++){
     const sy0=(py+.5)/sy-.5;
-    const depth=frame.startDepthM+
+    const depth=startDepthM+
       clamp(sy0/(rows-1),0,1)*frame.rangeM;
     const surface=drawn&&depth>=0&&depth<band;
     const fade=surface?1-depth/band:0;
@@ -103,7 +114,7 @@ export function rasterizeFcvEcho(frame,palette,options={}){
         if(d>.18 && d<3.1)
           intensity=Math.max(intensity,135*(1-(d-.18)/2.92));
       }
-      if(surface && !options.zeroLineRejector && anchor>=0){
+      if(surface && !options.zeroLineRejector && (anchor>=0 || deepBottomActive)){
         const patch=hash01(Math.floor(px/5),Math.floor(py/5),lf?50:200);
         const broad=hash01(Math.floor(px/17),Math.floor(py/21),lf?509:209);
         const grain=patch*.62+broad*.38;

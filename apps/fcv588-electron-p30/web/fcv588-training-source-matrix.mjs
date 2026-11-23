@@ -145,11 +145,11 @@ export function projectFcvInstructorSourceTransition(previousRows,currentRows){
       previousRows.length!==3 || currentRows.length!==3)return null;
   const previous=new Map(previousRows.map(r=>[r?.id,r?.status]));
   if(previous.size!==3)return null;
-  const changes=currentRows.filter(row=>row && previous.has(row.id) &&
-    typeof row.status==="string" && row.status!==previous.get(row.id));
+  const changes=currentRows.filter(entry=>entry && previous.has(entry.id) &&
+    typeof entry.status==="string" && entry.status!==previous.get(entry.id));
   if(!changes.length)return null;
   return Object.freeze({
-    text:changes.map(row=>row.id+": "+row.statusText).join(". ")+".",
-    statuses:Object.freeze(changes.map(row=>row.id+":"+row.status))
+    text:changes.map(entry=>entry.id+": "+entry.statusText).join(". ")+".",
+    statuses:Object.freeze(changes.map(entry=>entry.id+":"+entry.status))
   });
 }
