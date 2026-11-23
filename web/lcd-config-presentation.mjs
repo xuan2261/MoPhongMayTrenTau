@@ -8,7 +8,14 @@ import {FCV_RANGE_BANK_FIELDS,FCV_NAV_BOX_OPTIONS,FCV_NAV_BOX_DEFAULTS,
   "../src/devices/fcv588/menu-atlas.mjs";
 import {FCV_UNIT_FIELDS,formatFcvDepth} from "../src/devices/fcv588/units.mjs";
 import {FCV_CALIBRATION_FIELDS} from "../src/devices/fcv588/calibration.mjs";
-import {projectFcvChoiceWindow,projectFcvAlarmPresentation} from "./lcd-presentation.mjs";
+import {
+  projectFcvChoiceWindow,
+  projectFcvAlarmPresentation,
+  isVietnameseFcv,
+  localizeFcvCategory,
+  localizeFcvMenuLabel,
+  localizeFcvChoiceValue,
+} from "./lcd-presentation.mjs";
 
 export const FCV_CONFIGURATION_KINDS=Object.freeze([
   "range-bank","units","calibration","nav-boxes","fish-alarm",
@@ -93,34 +100,46 @@ export function projectFcvConfiguration(state){
   const spec=configurationSpec(state);
   const active=spec?.fields[o.itemIndex];
   if(!active)return null;
-  const format=spec.format??textValue;
+  const vi=isVietnameseFcv(state);
+  const baseFormat=spec.format??textValue;
+  const formatFor=(fieldKey,val)=>{
+    if(val===null)return "--";
+    if(spec.format)return spec.format(val);
+    return vi?localizeFcvChoiceValue(fieldKey,val,state.settings):baseFormat(val);
+  };
+  const labelFor=field=>vi
+    ?localizeFcvMenuLabel(field.key,field.label,state.settings)
+    :field.label;
   const editing=o.editing===true && !active.disabled;
   if(editing && (!Array.isArray(active.choices) ||
       !active.choices.includes(o.draftValue)))return null;
   const committedValue=storedValue(state.settings,active.key);
-  const editor=editing?{title:active.label,fieldKey:active.key,
+  const editor=editing?{title:labelFor(active),fieldKey:active.key,
     ...projectFcvChoiceWindow(active.choices,o.draftValue)}:null;
   if(editor)editor.choices=editor.choices.map(choice=>({
-    ...choice,text:format(choice.value),
+    ...choice,text:formatFor(active.key,choice.value),
   }));
   const transaction=spec.selectionOnly?{
     fieldKey:"keySetup",committedValue:storedValue(state.settings,"keySetup"),
     draftValue:active.label,
-    committedText:textValue(storedValue(state.settings,"keySetup")),draftText:active.label,
+    committedText:formatFor("keySetup",storedValue(state.settings,"keySetup")),
+    draftText:labelFor(active),
   }:editing?{
     fieldKey:active.key,committedValue,draftValue:o.draftValue,
-    committedText:format(committedValue),draftText:format(o.draftValue),
+    committedText:formatFor(active.key,committedValue),
+    draftText:formatFor(active.key,o.draftValue),
   }:null;
   const rows=spec.fields.map((field,index)=>{
     const selected=index===o.itemIndex;
     const value=selected && editing?o.draftValue:storedValue(state.settings,field.key);
     return {fieldKey:field.key,selected,disabled:field.disabled===true,
       sourceStatus:field.sourceStatus??"CURATED_REFERENCE_NOT_HARDWARE_VERIFIED",
-      text:(selected?"▶ ":"  ")+field.label+
-        (field.choices?" : "+format(value):"")};
+      text:(selected?"▶ ":"  ")+labelFor(field)+
+        (field.choices?" : "+formatFor(field.key,value):"")};
   });
   const reason=active.disabled?active.disabledReason??"SOURCE_GAP":null;
-  return {kind:o.kind,title:spec.title,path:spec.path,rows,editor,transaction,
+  const title=vi?localizeFcvCategory(spec.title,state.settings):spec.title;
+  return {kind:o.kind,title,path:spec.path,rows,editor,transaction,
     profileStatus:spec.profileStatus??null,
     help:spec.selectionOnly?"▲/▼ chọn · ENTER gán · MENU/ESC hủy":
       editing?"◀/▶ chọn · ENTER lưu · MENU/ESC hủy":

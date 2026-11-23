@@ -76,7 +76,7 @@ test("V43 cancelled POWER hold preserves BRILL preview and descending progressio
 });
 
 test("V43 behavior profile separates legacy replay/settings without schema trickery",()=>{
-  assert.equal(adapter.revision,"F1-public-reference-23");
+  assert.equal(adapter.revision,"F1-public-reference-24");
   assert.equal(EVENT_SCHEMA_VERSION,5);
   assert.equal(REPLAY_ENVELOPE_VERSION,7);
   const s=short(short(powerOn()));

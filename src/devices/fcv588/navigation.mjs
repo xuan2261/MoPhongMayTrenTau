@@ -3,6 +3,7 @@ import {formatFcvDepth,formatFcvTemperature,formatFcvSpeed,
   formatFcvDistance} from "./units.mjs";
 import {FCV_NAV_BOX_DEFAULTS,FCV_NAV_BOX_OPTIONS} from "./menu-atlas.mjs";
 import {projectFcvCalibratedReadings} from "./calibration.mjs";
+import {isVietnameseFcv,localizeFcvNavLabel} from "./i18n.mjs";
 export const createNavigationState=()=>({
   waypoints:[],destinationId:null,nextWaypointNumber:1,
   tripNm:0,odometerNm:0,
@@ -92,26 +93,29 @@ export function projectFcvTravelValues(navState,settings){
   };
 }
 
-const noData=status=>({status,boxes:[
-  {label:"POSITION",value:"NO DATA"},{label:"SPEED",value:"NO DATA"},
+const noData=(status,langSettings)=>({status,boxes:[
+  {label:isVietnameseFcv(langSettings)?localizeFcvNavLabel("POSITION","POSITION",langSettings):"POSITION",value:"NO DATA"},
+  {label:isVietnameseFcv(langSettings)?localizeFcvNavLabel("SPEED","SPEED",langSettings):"SPEED",value:"NO DATA"},
 ],trainingOnly:true});
 
 export function projectNavData(sample,mode,{
-  simTick=0,staleAfterTicks=10,units="Metric",speedUnit="kn",
+  simTick=0,staleAfterTicks=10,units="Metric",speedUnit="kn",language="English",
 }={}) {
+  const langSettings={language};
+  const navLabel=raw=>isVietnameseFcv(langSettings)?localizeFcvNavLabel(raw,raw,langSettings):raw;
   if(!sample || !positionValid(sample.position) ||
-      !Number.isInteger(sample.observedAtTick)) return noData("NO_DATA");
+      !Number.isInteger(sample.observedAtTick)) return noData("NO_DATA",langSettings);
   if(simTick-sample.observedAtTick>staleAfterTicks ||
-      simTick<sample.observedAtTick) return noData("STALE_DATA");
+      simTick<sample.observedAtTick) return noData("STALE_DATA",langSettings);
   const pos=formatSyntheticPosition(sample.position);
   const boxes=mode==="NAV1"
-    ? [{label:"POSITION",value:pos},
-      {label:"DEPTH",value:Number.isFinite(sample.depthM)
+    ? [{label:navLabel("POSITION"),value:pos},
+      {label:navLabel("DEPTH"),value:Number.isFinite(sample.depthM)
         ? formatFcvDepth(sample.depthM,units)+" (SIM)":"NO DATA"}]
-    : [{label:"POSITION",value:pos},
-      {label:"SPEED",value:isValidSyntheticSpeed(sample.speedKn)
+    : [{label:navLabel("POSITION"),value:pos},
+      {label:navLabel("SPEED"),value:isValidSyntheticSpeed(sample.speedKn)
         ? formatFcvSpeed(sample.speedKn,speedUnit)+" (SIM)":"NO DATA"},
-      {label:"COURSE",value:validAngle(sample.courseDeg)
+      {label:navLabel("COURSE"),value:validAngle(sample.courseDeg)
         ? sample.courseDeg.toFixed(0)+"° (SIM)":"NO DATA"}];
   return {status:"SYNTHETIC_DATA",boxes,trainingOnly:true};
 }
@@ -131,6 +135,10 @@ export function projectFcvManualNavBoxes({
   const effectiveTempUnit=tempUnit??settings?.tempUnit??"C";
   const effectiveSpeedUnit=speedUnit??settings?.speedUnit??"kn";
   const effectiveDistanceUnit=distanceUnit??settings?.distanceUnit??"NM";
+  const effectiveWindUnit=settings?.windUnit??"kn";
+  const depthSuffix=effectiveUnits==="Feet"?"ft":effectiveUnits==="Fathom"?"fm":"m";
+  const tempSuffix=effectiveTempUnit==="F"?"°F":"°C";
+  const distSuffix=effectiveDistanceUnit==="NM"?"nm":effectiveDistanceUnit;
   const observed=sample?.observedAtTick;
   const valid=positionValid(sample?.position) && Number.isInteger(observed) &&
     Number.isInteger(simTick) && simTick>=observed &&
@@ -209,18 +217,44 @@ export function projectFcvManualNavBoxes({
     POSITION:position,COURSE:course,"SPEED (SOG)":sog,
     RANGE:waypointRange,BEARING:bearing,HEADING:heading,
     "BAROM PRESS":pressure,"TIME TO GO":timeToGo,XTE:crossTrack};
+  const placeholders={
+    "SPEED (STW)":"--.- "+effectiveSpeedUnit,
+    "SPEED (SOG)":"--.- "+effectiveSpeedUnit,
+    WIND:"--.- "+effectiveWindUnit,
+    DEPTH:"--.- "+depthSuffix,
+    TEMPERATURE:"--.- "+tempSuffix,
+    TRIP:"--.- "+distSuffix,
+    ODOMETER:"--.- "+distSuffix,
+    RANGE:"--.- "+distSuffix,
+    XTE:"--.- "+distSuffix,
+    POSITION:"--°--.---'",
+    COURSE:"---°",
+    BEARING:"---°",
+    HEADING:"---°",
+    "BAROM PRESS":"----.- hPa",
+    "TIME TO GO":"--:--",
+  };
+  const vietnamese=isVietnameseFcv(settings);
   const defaults=FCV_NAV_BOX_DEFAULTS[mode];
-  const boxes=defaults.map((fallback,i)=>{
+  const boxes=defaults.flatMap((fallback,i)=>{
     const selected=settings?.[mode.toLowerCase()+"Box"+(i+1)];
     const label=FCV_NAV_BOX_OPTIONS.includes(selected) &&
       (i>=2 || selected!=="Off")?selected:fallback;
-    const labelled=label==="BEARING" && settings?.bearing==="Mag"
+    if(label==="Off")return [];
+    const englishLabel=label==="BEARING" && settings?.bearing==="Mag"
       ?"BEARING (MAG)"
       :label==="WIND" && settings?.windSpeedDirection==="Apparent"
         ?"WIND (APPARENT)"
         :label;
-    return {label:labelled,value:values[label]??"NO DATA"};
-  }).filter(item=>item.label!=="Off");
+    const outputLabel=vietnamese
+      ?localizeFcvNavLabel(englishLabel,englishLabel,settings)
+      :englishLabel;
+    return [{
+      label:outputLabel,
+      value:values[label]??"NO DATA",
+      placeholderValue:placeholders[label]??"--.-",
+    }];
+  });
   return {status:valid?"SYNTHETIC_DATA":stale?"STALE_DATA":"NO_DATA",
     boxes,trainingOnly:true,hardwareValidated:false,
     sourceClass:"SIMULATED_ONLY"};

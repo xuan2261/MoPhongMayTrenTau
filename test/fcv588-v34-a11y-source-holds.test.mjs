@@ -17,17 +17,20 @@ const state=()=>({
   navigation:{tripNm:3}
 });
 
-test("V34: D04 Language source/rights disabled reason is visible before the device",()=>{
+test("V34: D04 Language is unlocked while D09 source-hold disabled reason remains visible before the device",()=>{
   const s=state();
   const entries=getFcvMenuItems("System",s);
-  const index=entries.findIndex(item=>item.id==="system.language");
+  const lang=entries.find(item=>item.id==="system.language");
+  assert.equal(Boolean(lang?.disabled),false);
+  assert.deepEqual(lang?.choices,["English","Tieng Viet"]);
+  const index=entries.findIndex(item=>item.id==="system.tankenmaru");
   assert.ok(index>=0);
   s.overlay={kind:"menu",category:"System",itemIndex:index,editing:false};
   const cue=projectFcvSourceCue(s,8);
   assert.equal(cue.visible,true);
   assert.equal(cue.status,"SOURCE_HOLD_DISABLED_MENU_OPTION");
-  assert.match(cue.title,/Language/);
-  assert.match(cue.detail,/D04: Chưa có quyền/);
+  assert.match(cue.title,/Tankenmaru/);
+  assert.match(cue.detail,/D09: Chưa khai báo/);
   assert.doesNotMatch(cue.detail,/RIGHTS_HOLD|SOURCE_GAP/);
 });
 

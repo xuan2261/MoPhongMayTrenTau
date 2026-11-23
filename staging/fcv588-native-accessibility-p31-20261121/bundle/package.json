@@ -1,7 +1,0 @@
-{
-  "name": "fcv588-synthetic-electron-poc",
-  "version": "0.0.3",
-  "private": true,
-  "description": "SYNTHETIC TRAINING POC NOT OEM",
-  "main": "desktop/main.cjs"
-}

@@ -12,7 +12,8 @@ import {FCV588_ADAPTER} from "../src/devices/fcv588/adapter.mjs";
 import {initialFcv588State} from "../src/devices/fcv588/model.mjs";
 import {getFcvReplayAdapter, replayFcv588Envelope} from "../src/devices/fcv588/replay-compat.mjs";
 import {
-  encodeFcvSettings, decodeFcvSettings, decodeFcvProfile20Settings, decodeFcvProfile22Settings,
+  encodeFcvSettings, decodeFcvSettings, decodeFcvProfile20Settings,
+  decodeFcvProfile22Settings, decodeFcvProfile23Settings,
 } from "../src/devices/fcv588/settings.mjs";
 import {fingerprint} from "../src/core/protocol.mjs";
 import {projectFcvEcho, projectFcvZoom, advanceFcvPictureHistory} from "../src/devices/fcv588/echo-projection.mjs";
@@ -179,13 +180,14 @@ test("BUG-09 & BUG-20: LEARN-07 passes from powered-off start and settings codec
   for (const [rev, decoder] of [
     ["F1-public-reference-20", decodeFcvProfile20Settings],
     ["F1-public-reference-22", decodeFcvProfile22Settings],
+    ["F1-public-reference-23", decodeFcvProfile23Settings],
   ]) {
     const body = {schemaVersion: 18, profileClass: "PUBLIC_REFERENCE", profileRevision: rev, settings: {palette: "White"}};
     const raw = JSON.stringify({...body, contentFingerprint: fingerprint(body)});
     assert.equal(decodeFcvSettings(raw), null);
     assert.deepEqual(decoder(raw), {palette: "White"});
   }
-  assert.ok(encodeFcvSettings({palette: "White"}).includes("F1-public-reference-23"));
+  assert.ok(encodeFcvSettings({palette: "White"}).includes("F1-public-reference-24"));
 });
 
 test("P2 Perf: WeakMap memoized dispatch and single-pass assessFcvLesson scale cleanly at 3600 events", () => {
@@ -215,4 +217,5 @@ test("P2 Perf: WeakMap memoized dispatch and single-pass assessFcvLesson scale c
   assert.ok(getFcvReplayAdapter("F1-public-reference-21"));
   assert.ok(getFcvReplayAdapter("F1-public-reference-22"));
   assert.ok(getFcvReplayAdapter("F1-public-reference-23"));
+  assert.ok(getFcvReplayAdapter("F1-public-reference-24"));
 });

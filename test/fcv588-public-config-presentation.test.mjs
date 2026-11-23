@@ -150,19 +150,24 @@ test("alarm display reads per-profile cause and acknowledgement, never treats en
   assert.equal(sessionHash(replay(adapter,scenario,createReplayEnvelope(s))),sessionHash(s));
 });
 
-test("Installation preserves Language HOLD, virtual option guards and dynamic NMEA rows",()=>{
+test("Installation unlocks D04 Language while preserving virtual option guards and dynamic NMEA rows",()=>{
   const s=cases[6][1](boot());
   const state=s.deviceState;
   const baseline=projectFcvConfiguration(state);
-  assert.match(baseline.rows[0].text,/Language/);
+  assert.match(baseline.rows[0].text,/Language : English/);
   assert.doesNotMatch(baseline.rows[0].text,/\[HOLD\]|\[N\/A\]/,
     "training-only capability warnings belong outside the device LCD");
-  assert.equal(baseline.rows[0].disabled,true);
-  assert.match(baseline.note,/RIGHTS_HOLD_LANGUAGE/);
-  assert.equal(baseline.editor,null);
-  assert.equal(state.settings.language,undefined);
+  assert.equal(baseline.rows[0].disabled,false);
+  assert.equal(state.settings.language,"English");
+  const langEdit=projectFcvConfiguration({...state,overlay:{...state.overlay,
+    editing:true,draftValue:"Tieng Viet"}});
+  assert.deepEqual(langEdit.editor.choices.map(c=>c.value),["English","Tieng Viet"]);
+  const tankenSelected=projectFcvConfiguration({...state,overlay:{...state.overlay,itemIndex:4}});
+  assert.equal(tankenSelected.rows[4].disabled,true);
+  assert.doesNotMatch(tankenSelected.rows[4].text,/\[HOLD\]|\[N\/A\]/);
+  assert.match(tankenSelected.note,/SOURCE_GAP_TANKENMARU_OPTION_NOT_DECLARED/);
   assert.equal(projectFcvConfiguration({...state,overlay:{...state.overlay,
-    editing:true,draftValue:"English"}}).editor,null);
+    itemIndex:4,editing:true,draftValue:"On"}}).editor,null);
   const enabled={...state,trainingFixture:{...state.trainingFixture,tankenmaruOption:true},
     settings:{...state.settings,tankenmaru:"On"}};
   assert.equal(projectFcvConfiguration(enabled).rows.length,5);

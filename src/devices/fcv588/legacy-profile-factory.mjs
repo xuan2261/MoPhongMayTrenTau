@@ -1,14 +1,12 @@
 /**
- * Parameterized frozen historical FCV-588 profile factory (pre-P1 semantics).
+ * Parameterized frozen historical FCV-588 profile factory (profile21/22/23).
  *
- * Eliminates the 10-file `*-profile21.mjs` copy-paste duplication while keeping
- * BOTH `F1-public-reference-21` (original Sounder row order) and
- * `F1-public-reference-22` (AP-1 Sounder row order, pre-P1 initialSettings and
- * pre-P1 reducer) byte-for-byte deterministic for sealed replay fixtures.
+ * Keeps `F1-public-reference-21`, `F1-public-reference-22`, and
+ * `F1-public-reference-23` byte-for-byte deterministic for sealed replay fixtures.
  */
 import {fingerprint} from "../../core/protocol.mjs";
 import {resolveFcvCapability} from "./capabilities.mjs";
-import {FCV_CALIBRATION_FIELDS} from "./calibration.mjs";
+import {FCV_CALIBRATION_FIELDS,projectFcvCalibratedReadings} from "./calibration.mjs";
 import {FCV_UNIT_FIELDS,formatFcvDepth,formatFcvTemperature,formatFcvSpeed,
   formatFcvDistance} from "./units.mjs";
 
@@ -443,6 +441,7 @@ export function createLegacyFcv588Profile({
   revision,
   sounderOrder = "profile21",
   includeMenuEntryOrderIds = false,
+  p1Semantics = false,
 } = {}) {
   const group = {
     Sounder: sounderOrder === "ap1" ? SOUNDER_AP1 : SOUNDER_PROFILE21,
@@ -637,10 +636,15 @@ export function createLegacyFcv588Profile({
     before.units===next.units?next:{...next,...Object.fromEntries(
       FCV_RANGE_BANK_FIELDS.map(field=>[field.key,field.defaultValue]))};
 
-  // Pre-P1 historical initialSettings (12 keys intentionally absent to match sealed hashes)
+  // Pre-P1 (profile21/22) vs frozen profile23 initialSettings
   const initialSettings = () => ({
     pictureAdvance: "1x", interference: "Auto", aScope: "Off",
     shift:"0",smoothing:"On",tvg:"Medium",txPower:"Auto",txRate:"10",
+    ...(p1Semantics ? {
+      zoomMode: "Bottom Lock", colorErase: "0", whiteLine: "Off",
+      bottomZone: "Standard", depthSize: "Medium", zoomMarker: "Off",
+      fishSymbol: "Off", fishSize: "Small", colorBar: "Off",
+    } : {}),
     accuFish: "Off", bottomDiscrimination: "Off", rezBoost: "Off",
     tankenmaru: "Off", nmea: "Off", transducer: "GENERIC_600W",
     keySetup: "Pic. Advance",keyBeep:"Off",
@@ -691,6 +695,64 @@ export function createLegacyFcv588Profile({
     return profiles;
   }
 
+  function evaluateDeviceAlarms(state, observation, previousAlarms = state.alarms) {
+    if (state.power !== "on" || !observation) {
+      return evaluateLegacyAlarms([], {});
+    }
+    const virtualSonar=state.trainingFixture.virtualMounting===true &&
+      state.settings.transducer==="525STID-PWD";
+    const sonarAvailable=state.demoOn===true || virtualSonar;
+    const sonarTransmitting=sonarAvailable && state.settings.txPower!=="Off";
+    const externalSyntheticData=state.trainingFixture.navigation===true;
+    const destination=state.navigation.waypoints.find(w=>
+      w.id===state.navigation.destinationId);
+    const navSample=observation.navigation ?? state.navigationObservation;
+    const arrivalDistanceNm=externalSyntheticData && destination
+      ?legacyDistanceNmBetween(navSample?.position,destination.position)
+      :null;
+    const calibrated=projectFcvCalibratedReadings(state.settings,{
+      sourceClass:"SYNTHETIC_FIXTURE",
+      ...observation,
+    });
+    const calibratedDepthM=state.settings?.draft===null
+      ?observation.bottomDepthM:calibrated.depthM;
+    const bottomFeature=getMenuItems("Display",state)
+      .find(item=>item.id==="display.bottomDiscrimination");
+    const fishFeature=getMenuItems("Display",state)
+      .find(item=>item.id==="display.accuFish");
+    const bottomTypeAvailable=sonarTransmitting && state.rangeMode==="auto" &&
+      ["Graphic","Probability"].includes(state.settings.bottomDiscrimination) &&
+      bottomFeature?.disabled===false;
+    const alarmObservation={
+      ...observation,
+      bottomDepthM:sonarTransmitting?calibratedDepthM:null,
+      bottomType:bottomTypeAvailable?observation.bottomType:null,
+      fishPresent:sonarTransmitting?observation.fishPresent:null,
+      fishStrength:sonarTransmitting?observation.fishStrength:null,
+      fishCategory:sonarAvailable && sonarTransmitting?observation.fishCategory:null,
+      accuFishAvailable:sonarTransmitting &&
+        state.settings.accuFish==="On" && fishFeature?.disabled===false,
+      arrivalDistanceNm,
+      speedKn:(virtualSonar || externalSyntheticData) &&
+        state.settings.speedSource!=="NMEA" &&
+        isValidLegacySyntheticSpeed(calibrated.speedKn)?calibrated.speedKn:null,
+      temperatureC:(virtualSonar || externalSyntheticData) &&
+        state.settings.tempSource!=="NMEA"
+        ?calibrated.temperatureC:null,
+    };
+    return evaluateLegacyAlarms(alarmProfiles(state.settings),
+      alarmObservation,previousAlarms);
+  }
+
+  const powerOffState=state=>({
+    ...state,
+    power:"off",
+    bootElapsed:0,
+    alarms:evaluateLegacyAlarms([],{}),
+    overlay:null,
+    notice:"",
+  });
+
   const modal = (kind, details = {}) => ({kind,...details});
   const WAYPOINT_CHARSET=" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
   function menuOverlay(categoryIndex = 0, itemIndex = 0) {
@@ -699,24 +761,28 @@ export function createLegacyFcv588Profile({
   }
   function restoreSettings(state) {
     return {...state, settings:initialSettings(), demoOn:true,
+      ...(p1Semantics ? {mode:"LF",vrmVisible:false,vrmDepthM:15} : {}),
       rangeMode:"auto",rangeIndex:3,gainMode:"fishing",autoGainOffset:0,
       manualGain:5,brightness:9,
       alarms:evaluateLegacyAlarms([],{}),
       overlay:menuOverlay(4),notice:"Khôi phục thiết lập đào tạo · SIMULATED"};
   }
+  const exitWaypointOverlay=fromCategoryIndex=>
+    p1Semantics && fromCategoryIndex===null?null:menuOverlay(p1Semantics?(fromCategoryIndex??3):3);
 
   function moveWaypointWorkflow(state,event){
     const o=state.overlay;
+    const originCategory=p1Semantics?(o.fromCategoryIndex===undefined?3:o.fromCategoryIndex):3;
     if(event.kind==="press" && event.control==="menu"){
       if(["waypoint-name","confirm-waypoint-delete"].includes(o.kind)){
         return {...state,overlay:modal("waypoint-detail",
-          {itemIndex:o.itemIndex,fieldIndex:o.fieldIndex??0,fromCategoryIndex:3})};
+          {itemIndex:o.itemIndex,fieldIndex:o.fieldIndex??0,fromCategoryIndex:originCategory})};
       }
       if(o.kind==="waypoint-detail"){
         return {...state,overlay:modal("waypoints",
-          {purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:3,simulated:true})};
+          {purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:originCategory,simulated:true})};
       }
-      return {...state,overlay:menuOverlay(3),notice:""};
+      return {...state,overlay:exitWaypointOverlay(originCategory),notice:""};
     }
     if(o.kind==="waypoints"){
       if(event.kind==="pad" && event.control==="trackpad"){
@@ -730,19 +796,19 @@ export function createLegacyFcv588Profile({
           const selected=o.itemIndex===0?null:state.navigation.waypoints[o.itemIndex-1]?.id;
           if(selected===undefined)return {...state,notice:"NO SYNTHETIC WAYPOINT"};
           return {...state,navigation:setLegacyDestination(state.navigation,selected),
-            overlay:menuOverlay(3),notice:selected?"DESTINATION "+selected+" (SIM)":
+            overlay:exitWaypointOverlay(originCategory),notice:selected?"DESTINATION "+selected+" (SIM)":
               "DESTINATION OFF (SIM)"};
         }
         const chosen=state.navigation.waypoints[o.itemIndex];
         if(!chosen)return {...state,notice:"WAYPOINTS EMPTY · SIM"};
         return {...state,overlay:modal("waypoint-detail",{
-          itemIndex:o.itemIndex,fieldIndex:0,fromCategoryIndex:3})};
+          itemIndex:o.itemIndex,fieldIndex:0,fromCategoryIndex:originCategory})};
       }
       return state;
     }
     if(o.kind==="waypoint-detail"){
       const waypoint=state.navigation.waypoints[o.itemIndex];
-      if(!waypoint)return {...state,overlay:menuOverlay(3),notice:"WAYPOINT MISSING"};
+      if(!waypoint)return {...state,overlay:exitWaypointOverlay(originCategory),notice:"WAYPOINT MISSING"};
       if(event.kind==="pad" && event.control==="trackpad"){
         return {...state,overlay:{...o,fieldIndex:wrap(o.fieldIndex+
           (["down","right"].includes(event.direction)?1:-1),2)}};
@@ -750,10 +816,10 @@ export function createLegacyFcv588Profile({
       if(event.kind==="press" && event.control==="enter"){
         if(o.fieldIndex===1)return {...state,overlay:modal("confirm-waypoint-delete",{
           itemIndex:o.itemIndex,waypointId:waypoint.id,confirm:false,
-          fieldIndex:1,fromCategoryIndex:3})};
+          fieldIndex:1,fromCategoryIndex:originCategory})};
         return {...state,overlay:modal("waypoint-name",{
           itemIndex:o.itemIndex,waypointId:waypoint.id,draftName:waypoint.name,
-          charIndex:0,fieldIndex:0,fromCategoryIndex:3})};
+          charIndex:0,fieldIndex:0,fromCategoryIndex:originCategory})};
       }
       return state;
     }
@@ -780,7 +846,7 @@ export function createLegacyFcv588Profile({
           const navigation=editLegacyWaypoint(state.navigation,o.waypointId,
             {name:o.draftName.trim()});
           return {...state,navigation,overlay:modal("waypoints",{
-            purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:3,simulated:true}),
+            purpose:"edit",itemIndex:o.itemIndex,fromCategoryIndex:originCategory,simulated:true}),
             notice:"WPT NAME SAVED (SIM)"};
         }catch(error){return {...state,notice:"WAYPOINT NAME INVALID: "+error.message};}
       }
@@ -794,24 +860,24 @@ export function createLegacyFcv588Profile({
         if(!o.confirm)return {...state,overlay:
           o.kind==="confirm-waypoint-delete"
             ? modal("waypoints",{purpose:"edit",itemIndex:o.itemIndex,
-              fromCategoryIndex:3,simulated:true})
-            : menuOverlay(3),notice:"Erase cancelled"};
+              fromCategoryIndex:originCategory,simulated:true})
+            : exitWaypointOverlay(originCategory),notice:"Erase cancelled"};
         if(o.kind==="confirm-delete-all-waypoints"){
           if(state.navigation.destinationId!==null){
-            return {...state,overlay:menuOverlay(3),
+            return {...state,overlay:exitWaypointOverlay(originCategory),
               notice:"DESTINATION PROTECTED · CLEAR GO TO WPT FIRST"};
           }
           return {...state,navigation:{...state.navigation,waypoints:[]},
-            overlay:menuOverlay(3),notice:"ALL WPT ERASED · SIM"};
+            overlay:exitWaypointOverlay(originCategory),notice:"ALL WPT ERASED · SIM"};
         }
         try {
           const navigation=deleteLegacyWaypoint(state.navigation,o.waypointId);
           return {...state,navigation,overlay:modal("waypoints",{
             purpose:"edit",itemIndex:Math.max(0,Math.min(
-              o.itemIndex,navigation.waypoints.length-1)),fromCategoryIndex:3,
+              o.itemIndex,navigation.waypoints.length-1)),fromCategoryIndex:originCategory,
             simulated:true}),notice:"WPT "+o.waypointId+" ERASED · SIM"};
         }catch(error){
-          return {...state,overlay:menuOverlay(3),
+          return {...state,overlay:exitWaypointOverlay(originCategory),
             notice:"DESTINATION PROTECTED · "+error.message};
         }
       }
@@ -980,6 +1046,20 @@ export function createLegacyFcv588Profile({
         (next.trainingFixture?.tankenmaruOption!==true ||
           next.settings?.tankenmaru!=="On")){
       return replace(menuOverlay(4)," · VIRTUAL TANKENMARU DETAILS CLOSED");
+    }
+    if(p1Semantics && overlay?.kind==="receiver-status" && next.settings?.tankenmaru==="On"){
+      return replace(menuOverlay(4)," · RECEIVER STATUS CLOSED");
+    }
+    if(p1Semantics && overlay?.kind==="func-setting"){
+      const entryMeta=menuEntries.find(item=>item.settingKey===overlay.settingKey);
+      const activeEntry=entryMeta
+        ?getMenuItems(entryMeta.category,next).find(item=>item.id===entryMeta.id)
+        :null;
+      if(!activeEntry || activeEntry.disabled ||
+          !activeEntry.choices?.includes(overlay.draftValue)){
+        return replace(null," · FUNC EDIT CANCELLED");
+      }
+      return next;
     }
     const inst=overlay?.kind==="installation";
     if(!inst && overlay?.kind!=="menu")return next;
@@ -1173,6 +1253,16 @@ export function createLegacyFcv588Profile({
           o.choices.indexOf(o.draftValue)+delta,o.choices.length)]}};
       }
       if(event.kind==="press" && event.control==="enter") {
+        if(p1Semantics){
+          const entryMeta=menuEntries.find(item=>item.settingKey===o.settingKey);
+          const activeEntry=entryMeta
+            ?getMenuItems(entryMeta.category,state).find(item=>item.id===entryMeta.id)
+            :null;
+          if(!activeEntry || activeEntry.disabled || !activeEntry.choices?.includes(o.draftValue)){
+            return {...state,overlay:null,
+              notice:activeEntry?.disabledReason??"FUNC EDIT CANCELLED"};
+          }
+        }
         return {...state,settings:{...state.settings,[o.settingKey]:o.draftValue},
           overlay:null,notice:o.label+" = "+o.draftValue};
       }
@@ -1271,15 +1361,22 @@ export function createLegacyFcv588Profile({
       const typed=event.sensorObservation??{};
       const virtualSonar=trainingFixture.virtualMounting===true &&
         state.settings.transducer==="525STID-PWD";
+      const sonarAvailable=state.demoOn===true || virtualSonar;
+      const validSpeed=p1Semantics
+        ?((virtualSonar || trainingFixture.navigation) &&
+          isValidLegacySyntheticSpeed(typed.speedKn)?typed.speedKn:null)
+        :(virtualSonar || trainingFixture.navigation ? typed.speedKn??null:null);
       const syntheticConditions=event.fixture==="virtualMounting" ? {
         ...state.syntheticConditions,
-        depthM:state.demoOn || virtualSonar ? typed.bottomDepthM??null:null,
-        speedKn:virtualSonar || trainingFixture.navigation
-          ? typed.speedKn??null:null,
-        bottomClassification:state.demoOn || virtualSonar
+        depthM:sonarAvailable ? typed.bottomDepthM??null:null,
+        speedKn:validSpeed,
+        bottomClassification:sonarAvailable
           ? typed.bottomClassification??null:null,
         mountCompatible:event.enabled,
         mountAligned:event.enabled,
+      } : p1Semantics && event.fixture==="navigation" ? {
+        ...state.syntheticConditions,
+        speedKn:validSpeed,
       } : state.syntheticConditions;
       const next={...state,trainingFixture,syntheticConditions,settings,
         notice:"INSTRUCTOR ONLY · "+event.fixture+" "+
@@ -1300,6 +1397,9 @@ export function createLegacyFcv588Profile({
       const overlay = state.overlay;
       if(overlay?.kind==="power-hold"){
         const elapsedMs=overlay.elapsedMs+event.elapsedMs;
+        if(p1Semantics && elapsedMs>3000){
+          return {...powerOffState(state),uiElapsedMs};
+        }
         return {...state,uiElapsedMs,
           overlay:{...overlay,elapsedMs,remainingMs:Math.max(0,3000-elapsedMs)}};
       }
@@ -1329,7 +1429,13 @@ export function createLegacyFcv588Profile({
       if (state.power === "off") return state;
       if (state.power === "booting") {
         const bootElapsed = state.bootElapsed + steps;
-        return {...state, bootElapsed, power: bootElapsed >= 4 ? "on" : "booting"};
+        if(!p1Semantics || bootElapsed < 4){
+          return {...state, bootElapsed, power: bootElapsed >= 4 ? "on" : "booting"};
+        }
+        const booted = {...state, bootElapsed, power: "on"};
+        return {...booted, alarms: event.sensorObservation
+          ? evaluateDeviceAlarms(booted, event.sensorObservation, evaluateLegacyAlarms([], {}))
+          : evaluateLegacyAlarms([], {})};
       }
       const observation=event.sensorObservation;
       if (!observation) return state;
@@ -1338,11 +1444,6 @@ export function createLegacyFcv588Profile({
         state.settings.transducer==="525STID-PWD";
       const sonarAvailable=state.demoOn===true || virtualSonar;
       const externalSyntheticData=state.trainingFixture.navigation===true;
-      const destination=state.navigation.waypoints.find(w=>
-        w.id===state.navigation.destinationId);
-      const arrivalDistanceNm=externalSyntheticData && destination
-        ?legacyDistanceNmBetween(observation.navigation?.position,destination.position)
-        :null;
       const syntheticConditions={
         depthM:sonarAvailable?observation.bottomDepthM:null,
         speedKn:(virtualSonar || externalSyntheticData) &&
@@ -1358,6 +1459,20 @@ export function createLegacyFcv588Profile({
           "FCV588_PUBLIC_FEATURE_525STID_PWD" &&
           observation.virtualMounting?.mountAligned===true),
       };
+      if(p1Semantics){
+        const nextWithConditions={...state,navigationObservation,syntheticConditions};
+        const alarms=evaluateDeviceAlarms(nextWithConditions,observation,state.alarms);
+        const navigation=externalSyntheticData && state.settings.tripSource==="Own"
+          ?advanceLegacyTrainingTrip(state.navigation,observation.speedKn,steps)
+          :state.navigation;
+        return reconcileCapabilityMenu(state,
+          {...nextWithConditions,navigation,alarms});
+      }
+      const destination=state.navigation.waypoints.find(w=>
+        w.id===state.navigation.destinationId);
+      const arrivalDistanceNm=externalSyntheticData && destination
+        ?legacyDistanceNmBetween(observation.navigation?.position,destination.position)
+        :null;
       const bottomFeature=getMenuItems("Display",{
         ...state,syntheticConditions,
       }).find(item=>item.id==="display.bottomDiscrimination");
@@ -1394,7 +1509,9 @@ export function createLegacyFcv588Profile({
     }
 
     if (event.kind === "press" && event.control === "power") {
-      if (event.hold === "long") return {...state, power: "off", bootElapsed: 0, overlay: null, notice: ""};
+      if (event.hold === "long") return p1Semantics
+        ? powerOffState(state)
+        : {...state, power: "off", bootElapsed: 0, overlay: null, notice: ""};
       if (event.hold !== "short") throw new TypeError("power hold must be short or long");
       if (state.power === "off") return {...state, power: "booting", bootElapsed: 0, notice: ""};
       if (state.power !== "on") return state;
@@ -1408,32 +1525,151 @@ export function createLegacyFcv588Profile({
         stepDirection: state.brightness===9?-1:1, elapsedMs: 0}, notice: ""};
     }
     if (state.power !== "on") return state;
-    if(state.overlay && ["fish-alarm","fish-alarm-setting"].includes(state.overlay.kind) &&
-      (event.kind==="pad" || (event.kind==="press" &&
-      ["menu","enter"].includes(event.control)))){
-      return moveFishAlarm(state,event);
-    }
-    if(state.overlay && ["func-program","func-setting"].includes(state.overlay.kind) &&
-      (event.kind==="pad" || (event.kind==="press" &&
-      ["func","menu","enter"].includes(event.control)))) {
-      return moveFuncOverlay(state,event);
-    }
-    if (state.overlay && ["diagnostics","lcd-test","confirm-restore",
-        "range-bank","window-size","calibration","units","nav-boxes",
-        "receiver-status","tankenmaru-details",
-        "trip-status","confirm-trip-reset","waypoints",
-        "waypoint-detail","waypoint-name","confirm-waypoint-delete",
-        "confirm-delete-all-waypoints"]
-      .includes(state.overlay.kind)) return moveSpecialOverlay(state,event);
-    if (state.overlay?.kind === "installation" &&
-      (event.kind === "pad" || (event.kind === "press" &&
-      ["menu","enter"].includes(event.control)))) {
-      return moveInstallation(state,event);
-    }
-    if (state.overlay?.kind === "menu" && (
-      event.kind === "pad" || (event.kind === "press" &&
-      ["menu","enter"].includes(event.control)))) {
-      return moveMenu(state, event);
+    if (p1Semantics) {
+      if (event.kind === "rotate" && (!Number.isInteger(event.steps) || Math.abs(event.steps) > 20)) {
+        throw new RangeError("invalid rotation");
+      }
+      const activeKind = state.overlay?.kind;
+      if (activeKind === "power-hold") return state;
+      if (activeKind === "fish-alarm" || activeKind === "fish-alarm-setting") {
+        return (event.kind === "pad" || (event.kind === "press" &&
+          ["menu", "enter"].includes(event.control)))
+          ? moveFishAlarm(state, event) : state;
+      }
+      if (activeKind === "func-program" || activeKind === "func-setting") {
+        return (event.kind === "pad" || (event.kind === "press" &&
+          ["func", "menu", "enter"].includes(event.control)))
+          ? moveFuncOverlay(state, event) : state;
+      }
+      if (activeKind && ["diagnostics","lcd-test","confirm-restore",
+          "range-bank","window-size","calibration","units","nav-boxes",
+          "receiver-status","tankenmaru-details",
+          "trip-status","confirm-trip-reset","waypoints",
+          "waypoint-detail","waypoint-name","confirm-waypoint-delete",
+          "confirm-delete-all-waypoints"].includes(activeKind)) {
+        if (activeKind === "waypoints" && event.kind === "press" && event.control === "mark") {
+          // Allow MARK while viewing committed waypoint list
+        } else {
+          return moveSpecialOverlay(state, event);
+        }
+      }
+      if (activeKind === "installation") {
+        return (event.kind === "pad" || (event.kind === "press" &&
+          ["menu", "enter"].includes(event.control)))
+          ? moveInstallation(state, event) : state;
+      }
+      if (activeKind === "menu") {
+        if (event.kind === "press" && event.control === "mark" && !state.overlay.editing) {
+          // Allow MARK while browsing non-editing menu
+        } else {
+          return (event.kind === "pad" || (event.kind === "press" &&
+            ["menu", "enter"].includes(event.control)))
+            ? moveMenu(state, event) : state;
+        }
+      }
+      if (activeKind === "mode") {
+        if (event.kind === "rotate" && event.control === "mode") {
+          return {...state, overlay: {kind: "mode",
+            candidate: DISPLAY_MODES[wrap(DISPLAY_MODES.indexOf(state.overlay.candidate) + event.steps, DISPLAY_MODES.length)],
+            elapsedMs: 0}, notice: ""};
+        }
+        if (event.kind === "press" && event.control === "menu") {
+          return {...state, overlay: null, notice: ""};
+        }
+        return state;
+      }
+      if (activeKind === "brill") {
+        if (event.kind === "pad" && event.control === "trackpad") {
+          const delta = ["right", "up"].includes(event.direction) ? 1 : -1;
+          return {...state, overlay: {...state.overlay, value: clamp(state.overlay.value + delta, 0, 9), elapsedMs: 0}};
+        }
+        if (event.kind === "press" && ["menu", "enter"].includes(event.control)) {
+          return {...state, brightness: state.overlay.value, overlay: null, notice: ""};
+        }
+        return state;
+      }
+      if (activeKind === "gain") {
+        const o = state.overlay;
+        if (event.kind === "push" && event.control === "gain") {
+          return {...state, overlay: {...o, mode: cycleGainMode(o.mode)}};
+        }
+        if (event.kind === "rotate" && event.control === "gain") {
+          if (o.mode === "off") return state;
+          const offset = clamp(o.offset + event.steps, -5, 5);
+          return {...state, overlay: {...o, offset}, notice: "Auto Gain Offset: " + offset};
+        }
+        if (event.kind === "pad" && event.control === "trackpad") {
+          if (event.direction === "down") return {...state, overlay: {...o, mode: cycleGainMode(o.mode)}};
+          if (event.direction === "up") return {...state, overlay: {...o, mode: cycleGainMode(o.mode, -1)}};
+          const delta = event.direction === "right" ? 1 : -1;
+          return {...state, overlay: {...o, offset: clamp(o.offset + delta, -5, 5)}};
+        }
+        if (event.kind === "press" && event.control === "enter") {
+          return {...state, gainMode: o.mode, autoGainOffset: o.offset, overlay: null, notice: ""};
+        }
+        if (event.kind === "press" && event.control === "menu") {
+          return {...state, overlay: null, notice: ""};
+        }
+        return state;
+      }
+      if (activeKind === "range") {
+        const o = state.overlay;
+        if (event.kind === "press" && event.control === "range") {
+          const bds = getMenuItems("Display", state).find(item =>
+            item.id === "display.bottomDiscrimination");
+          if (["Graphic", "Probability"].includes(state.settings.bottomDiscrimination) &&
+              bds && !bds.disabled) {
+            return {...state, notice: "RANGE DISABLED · BOTTOM DISCRIMINATION ACTIVE"};
+          }
+          return {...state, overlay: o.mode === "manual"
+            ? {...o, index: wrap(o.index + 1, MAX_RANGE_INDEX + 1)}
+            : {...o, mode: "manual"}, notice: ""};
+        }
+        if (event.kind === "pad" && event.control === "trackpad") {
+          if (event.direction === "left") return {...state, overlay: {...o, mode: "auto"}};
+          if (event.direction === "right") return {...state, overlay: {...o, mode: "manual"}};
+          if (o.mode !== "manual") return state;
+          const delta = event.direction === "down" ? 1 : -1;
+          return {...state, overlay: {...o, index: clamp(o.index + delta, 0, MAX_RANGE_INDEX)}};
+        }
+        if (event.kind === "press" && event.control === "enter") {
+          return reconcileCapabilityMenu(state, {
+            ...state, rangeMode: o.mode, rangeIndex: o.index, overlay: null, notice: "",
+          });
+        }
+        if (event.kind === "press" && event.control === "menu") {
+          return {...state, overlay: null, notice: ""};
+        }
+        return state;
+      }
+    } else {
+      if(state.overlay && ["fish-alarm","fish-alarm-setting"].includes(state.overlay.kind) &&
+        (event.kind==="pad" || (event.kind==="press" &&
+        ["menu","enter"].includes(event.control)))){
+        return moveFishAlarm(state,event);
+      }
+      if(state.overlay && ["func-program","func-setting"].includes(state.overlay.kind) &&
+        (event.kind==="pad" || (event.kind==="press" &&
+        ["func","menu","enter"].includes(event.control)))) {
+        return moveFuncOverlay(state,event);
+      }
+      if (state.overlay && ["diagnostics","lcd-test","confirm-restore",
+          "range-bank","window-size","calibration","units","nav-boxes",
+          "receiver-status","tankenmaru-details",
+          "trip-status","confirm-trip-reset","waypoints",
+          "waypoint-detail","waypoint-name","confirm-waypoint-delete",
+          "confirm-delete-all-waypoints"]
+        .includes(state.overlay.kind)) return moveSpecialOverlay(state,event);
+      if (state.overlay?.kind === "installation" &&
+        (event.kind === "pad" || (event.kind === "press" &&
+        ["menu","enter"].includes(event.control)))) {
+        return moveInstallation(state,event);
+      }
+      if (state.overlay?.kind === "menu" && (
+        event.kind === "pad" || (event.kind === "press" &&
+        ["menu","enter"].includes(event.control)))) {
+        return moveMenu(state, event);
+      }
     }
 
     if (event.kind === "rotate" && event.control === "mode") {
@@ -1491,7 +1727,7 @@ export function createLegacyFcv588Profile({
       }
       if(entry.id==="data.waypoint"){
         return {...state,overlay:modal("waypoints",
-          {purpose:"edit",itemIndex:0,fromCategoryIndex:3,simulated:true}),notice:""};
+          {purpose:"edit",itemIndex:0,fromCategoryIndex:p1Semantics?null:3,simulated:true}),notice:""};
       }
       if(entry.kind!=="choice" || !entry.choices?.length){
         return {...state,notice:"FUNC: SOURCE_GAP"};
@@ -1564,8 +1800,12 @@ export function createLegacyFcv588Profile({
         return {...state, notice:"MARK: NO POSITION · giảng viên bật D15 synthetic NAV fixture"};
       }
       try {
+        const wpNum=state.navigation.nextWaypointNumber;
+        const wpName=p1Semantics
+          ?(wpNum<=999?"MARK "+wpNum:wpNum<=9999999?"M"+wpNum:"M"+String(wpNum).slice(-7))
+          :("MARK " + wpNum);
         const navigation=addLegacyWaypoint(state.navigation,{
-          name:"MARK " + state.navigation.nextWaypointNumber,
+          name:wpName,
           position:event.sensorObservation.navigation.position,
         });
         return {...state,navigation,notice:"MARK "+
@@ -1630,13 +1870,23 @@ export const FCV588_PROFILE21_BUNDLE = createLegacyFcv588Profile({
   revision: "F1-public-reference-21",
   sounderOrder: "profile21",
   includeMenuEntryOrderIds: false,
+  p1Semantics: false,
 });
 
 export const FCV588_PROFILE22_BUNDLE = createLegacyFcv588Profile({
   revision: "F1-public-reference-22",
   sounderOrder: "ap1",
   includeMenuEntryOrderIds: true,
+  p1Semantics: false,
+});
+
+export const FCV588_PROFILE23_BUNDLE = createLegacyFcv588Profile({
+  revision: "F1-public-reference-23",
+  sounderOrder: "ap1",
+  includeMenuEntryOrderIds: true,
+  p1Semantics: true,
 });
 
 export const FCV588_PROFILE21_ADAPTER = FCV588_PROFILE21_BUNDLE.adapter;
 export const FCV588_PROFILE22_ADAPTER = FCV588_PROFILE22_BUNDLE.adapter;
+export const FCV588_PROFILE23_ADAPTER = FCV588_PROFILE23_BUNDLE.adapter;

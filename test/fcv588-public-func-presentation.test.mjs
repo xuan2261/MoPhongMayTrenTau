@@ -68,7 +68,7 @@ test("FUNC visibility changes preserve stage, cancel, commit, raw observations, 
   const world=structuredClone(s.worldState);
   const raw=observeSounder(scenario,s.worldState);
   const settings=encodeFcvSettings(s.deviceState.settings);
-  assert.deepEqual(s.deviceState.overlay.choices,["Off","On"],"numeric/Edge remains a source gate");
+  assert.deepEqual(s.deviceState.overlay.choices,["Off","On","Edge"],"White Line exposes Off, On and Edge");
   s=pad(s,"down");
   assert.deepEqual(projectFcvFuncSetting(s.deviceState).choices.filter(c=>c.selected),[{value:"On",selected:true}]);
   assert.equal(encodeFcvSettings(s.deviceState.settings),settings);

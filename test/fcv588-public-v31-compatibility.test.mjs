@@ -15,7 +15,7 @@ const withFingerprint=body=>JSON.stringify({...body,contentFingerprint:fingerpri
 test("V31 rejects the actual captured V30 replay rather than reinterpreting its staged option history",()=>{
   assert.equal(hash(replayBytes),"adb919e666598127b2f76e284a0ba4dea4506ae15eac11535574ac562297bf4c");
   assert.throws(()=>replay(adapter,scenario,JSON.parse(replayBytes)),/contract|profile/);
-  assert.equal(adapter.revision,"F1-public-reference-23");
+  assert.equal(adapter.revision,"F1-public-reference-24");
   assert.equal(CORE_CONTRACT_VERSION,"f1-core-7");
   assert.equal(EVENT_SCHEMA_VERSION,5);assert.equal(REPLAY_ENVELOPE_VERSION,7);
 });
@@ -27,7 +27,7 @@ test("explicit profile19 migration preserves all validated committed settings bu
   assert.deepEqual(migrated,JSON.parse(legacy).settings);
   const encoded=encodeFcvSettings(migrated);
   assert.equal(JSON.parse(encoded).schemaVersion,18);
-  assert.equal(JSON.parse(encoded).profileRevision,"F1-public-reference-23");
+  assert.equal(JSON.parse(encoded).profileRevision,"F1-public-reference-24");
   assert.match(FCV_SETTINGS_STORAGE_KEY,/settings\.v18$/);
   assert.deepEqual(decodeFcvSettings(encoded),migrated);
   let s=createSession(adapter,scenario);
@@ -50,7 +50,7 @@ test("legacy migration rejects wrong shape, profile, schema, digest and unsuppor
     withFingerprint({...body,profileClass:"HARDWARE"}),
     withFingerprint({...body,overlay:{kind:"menu",editing:true,draftValue:"On"}}),
     withFingerprint({...body,settings:{...body.settings,trainingFixture:{tankenmaruOption:true}}}),
-    withFingerprint({...body,settings:{...body.settings,whiteLine:"Edge"}}),
+    withFingerprint({...body,settings:{...body.settings,whiteLine:"InvalidWhiteLine"}}),
     withFingerprint({...body,settings:JSON.parse('{"__proto__":"unsafe"}')}),
   ];
   for(const input of candidates)assert.equal(decodeFcvProfile19Settings(input),null);

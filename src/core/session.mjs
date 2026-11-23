@@ -13,11 +13,13 @@ const ADAPTER_HASH_CACHE = new WeakMap();
 const SCENARIO_HASH_CACHE = new WeakMap();
 const isFrozenAdapter = adapter => Object.isFrozen(adapter) &&
   Object.isFrozen(adapter.profile) && Object.isFrozen(adapter.controls) &&
-  Object.isFrozen(adapter.gestures) && Object.isFrozen(adapter.holdThresholdMs);
+  Object.isFrozen(adapter.gestures) && Object.isFrozen(adapter.holdThresholdMs) &&
+  (adapter.fixtures === undefined || Object.isFrozen(adapter.fixtures));
 const computeAdapterProfileHash = adapter => fingerprint({
   id: adapter.id, revision: adapter.revision, profile: adapter.profile,
   controls: adapter.controls, gestures: adapter.gestures,
   holdThresholdMs: adapter.holdThresholdMs,
+  ...(adapter.fixtures !== undefined ? {fixtures: adapter.fixtures} : {}),
 });
 const adapterProfileHash = adapter => {
   if (adapter && typeof adapter === "object" && isFrozenAdapter(adapter)) {
@@ -98,7 +100,7 @@ export function dispatch(session, adapter, input, scenario) {
       session.scenarioId !== scenario.id || session.scenarioVersion !== scenario.version) {
     throw new Error("scenario mismatch");
   }
-  validateInput(input);
+  validateInput(input, adapter);
   if (input.seq !== undefined || input.tick !== undefined || input.schemaVersion !== undefined) {
     throw new TypeError("input must not override runtime event metadata");
   }

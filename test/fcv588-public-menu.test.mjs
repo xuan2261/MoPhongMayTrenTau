@@ -86,10 +86,16 @@ test("§1.18 alarm controls expose real ALARM1-5, not independent no-op toggle d
   assert.equal(entries.filter(x=>/^alarm\.alarm[1-5]$/.test(x.id)).length,5);
 });
 
-test("D04 Language is explicitly unavailable until licensed language resources and reboot semantics",()=>{
+test("D04 Language exposes English and Tieng Viet while undeclared optional hardware stays disabled",()=>{
   const entry=getFcvMenuItems("System",{}).find(x=>x.id==="system.language");
-  assert.equal(entry.disabled,true);
-  assert.match(entry.disabledReason,/SOURCE_GAP|RIGHTS_HOLD|UNAVAILABLE/);
+  assert.ok(entry && !entry.disabled);
+  assert.deepEqual(entry.choices,["English","Tieng Viet"]);
+  const installLang=getInstallationMenu({}).find(x=>x.settingKey==="language");
+  assert.ok(installLang && !installLang.disabled);
+  assert.deepEqual(installLang.choices,["English","Tieng Viet"]);
+  const tanken=getFcvMenuItems("System",{}).find(x=>x.id==="system.tankenmaru");
+  assert.equal(tanken?.disabled,true);
+  assert.match(tanken?.disabledReason??"",/SOURCE_GAP|RIGHTS_HOLD|UNAVAILABLE/);
 });
 
 test("MENU opens a navigable category, arrows move focus and ESC closes", () => {

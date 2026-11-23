@@ -39,8 +39,10 @@ import {projectFcv588ArchiveBZViewer,renderFcv588ArchiveBZViewer} from "./fcv588
 import {createFcv588ArchiveTimeline} from "./fcv588-archive-timeline.mjs";
 import {projectFcvLcdPresentation,projectFcvMainMenu,projectFcvFuncSetting,
   projectFcvEchoLegend,projectFcvAlarmPresentation,
-  projectFcvPhotoStatusHeader,projectFcvDepthTicks,
-  shouldShowFcvGlobalDepth} from "./lcd-presentation.mjs";
+  projectFcvPhotoStatusHeader,projectFcvAuthenticHeader,
+  projectFcvDepthTicks,formatFcvNavBoxForLcd,
+  canonicalNavBoxLabel,shouldShowFcvGlobalDepth,isVietnameseFcv,
+  localizeFcvNavLabel} from "./lcd-presentation.mjs";
 import {projectFcvConfiguration} from "./lcd-config-presentation.mjs";
 import {projectFcvControl} from "./lcd-control-presentation.mjs";
 import {displayOnlySyntheticValue,projectFcvInstructorMeta,projectFcvSourceCue,
@@ -83,14 +85,16 @@ function restoreSettingsOnReload() {
   }
   if (raw === null) return "";
   const currentSettings=decodeFcvSettings(raw);
-  const oldProfile22Settings=currentSettings?null:
+  const oldProfile23Settings=currentSettings?null:
+    fcvSettings.decodeFcvProfile23Settings?.(raw)??null;
+  const oldProfile22Settings=currentSettings||oldProfile23Settings?null:
     fcvSettings.decodeFcvProfile22Settings?.(raw)??null;
-  const oldProfile21Settings=currentSettings||oldProfile22Settings?null:
+  const oldProfile21Settings=currentSettings||oldProfile23Settings||oldProfile22Settings?null:
     decodeFcvProfile21Settings(raw);
-  const oldProfile20Settings=currentSettings||oldProfile22Settings||oldProfile21Settings?null:
+  const oldProfile20Settings=currentSettings||oldProfile23Settings||oldProfile22Settings||oldProfile21Settings?null:
     fcvSettings.decodeFcvProfile20Settings?.(raw)??null;
-  const settings=currentSettings??oldProfile22Settings??oldProfile21Settings??
-    oldProfile20Settings??decodeFcvProfile19Settings(raw);
+  const settings=currentSettings??oldProfile23Settings??oldProfile22Settings??
+    oldProfile21Settings??oldProfile20Settings??decodeFcvProfile19Settings(raw);
   if (!settings) {
     return "Cấu hình lưu không hợp lệ/khác phiên bản; đã bỏ qua, không dùng cấu hình cũ.";
   }
@@ -100,8 +104,8 @@ function restoreSettingsOnReload() {
     lastObservedSettings = encodeFcvSettings(lastSettingsRef);
     // Do not rewrite the original stored bytes during startup. Only a later
     // committed setting change may persist a new profile envelope.
-    const legacyRev=oldProfile22Settings?"22":oldProfile21Settings?"21":
-      oldProfile20Settings?"20":"19";
+    const legacyRev=oldProfile23Settings?"23":oldProfile22Settings?"22":
+      oldProfile21Settings?"21":oldProfile20Settings?"20":"19";
     if(!currentSettings)return "Đã nhập cấu hình LOCAL profile"+legacyRev+
       " sang "+adapter.revision+" qua sự kiện khôi phục; giữ nguyên bản lưu cũ tới lần thay đổi cấu hình. Không chuyển replay hoặc quyền tùy chọn.";
     return "Đã khôi phục cấu hình LOCAL qua sự kiện replay; thiết bị vẫn tắt.";
@@ -207,16 +211,36 @@ function drawChannel(frame, x0, y0, w, h,{axis="absolute"}={}) {
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(slotEntry.surface, x0, sonarTop, w, sonarH);
   ctx.fillStyle = lcdRgb(contrast.foreground);
-  ctx.font = "12px Consolas, monospace";
+  ctx.font = "bold 12px Consolas, monospace";
   // Photo LF/HF/DUAL/BL cases identify channels in the status/mode context.
   // Do not invent a separate "50 kHz / 200 kHz" label inside every sonar
-  // pane. The axis stays below the top status strip.
+  // pane. The axis stays below the top status strip, with 4 minor sub-ticks
+  // (4px) evenly dividing each major interval as seen in dual.jpg & zoom.jpg.
   const ticks=projectFcvDepthTicks(frame,{height:h,
     top:62,bottom:12,units:settings.units,axis});
+  for(let i=0;i<ticks.length-1;i++){
+    const yA=ticks[i].y,yB=ticks[i+1].y;
+    for(let s=1;s<=4;s++){
+      const subY=y0+Math.round(yA+(yB-yA)*(s/5));
+      ctx.fillStyle=lcdRgb(contrast.background);
+      ctx.fillRect(x0+w-5,subY-1,5,3);
+      ctx.fillStyle=lcdRgb(contrast.foreground);
+      ctx.fillRect(x0+w-4,subY,4,1);
+    }
+  }
   for(const tick of ticks){
+    const labelX=x0+w-48,labelY=y0+tick.y+3;
+    ctx.fillStyle=lcdRgb(contrast.background);
+    ctx.fillRect(x0+w-9,y0+tick.y-1,9,3);
+    if(typeof ctx.strokeText==="function"){
+      ctx.lineWidth=3;
+      ctx.lineJoin="round";
+      ctx.strokeStyle=lcdRgb(contrast.background);
+      ctx.strokeText(tick.label,labelX,labelY);
+    }
     ctx.fillStyle=lcdRgb(contrast.foreground);
-    ctx.fillText(tick.label,x0+w-48,y0+tick.y+3);
-    ctx.fillRect(x0+w-8,y0+tick.y,7,1);
+    ctx.fillText(tick.label,labelX,labelY);
+    ctx.fillRect(x0+w-8,y0+tick.y,8,1.5);
   }
 }
 
@@ -245,7 +269,8 @@ function sounderFrame(observation, state, frequencyKhz, zoom = false) {
       {frequencyKhz,seabedProvenance,seabedSourceIdentity,
         displayContract:"P23_LOWER_BOTTOM"})
     : projectFcvEcho(observation, state, {frequencyKhz});
-  const candidate={...projected,bottomDepthM:observation.bottomDepthM};
+  const candidate={...projected,bottomDepthM:observation.bottomDepthM,
+    columnBottoms:seabedProvenance?.columnBottoms??null};
   const frame = advanceFcvPictureHistory(previous, candidate,
     state, observation.simTick);
   // Stop freezes the display provenance as well as its source pixels; the
@@ -255,6 +280,7 @@ function sounderFrame(observation, state, frequencyKhz, zoom = false) {
     previous.frequencyKhz===frame.frequencyKhz &&
     previous.rangeM===frame.rangeM){
     frame.bottomDepthM=previous.bottomDepthM;
+    frame.columnBottoms=previous.columnBottoms??null;
     frame.rasterEpoch=previous.rasterEpoch??previous.sourceTick;
   }else{
     frame.rasterEpoch=observation.simTick;
@@ -271,31 +297,107 @@ function sounderFrame(observation, state, frequencyKhz, zoom = false) {
   return frame;
 }
 
-function drawWhiteLineOverlay(frame, x0, sonarTop, w, sonarH, bottomDepthM) {
-  const provenance=cachedSeabedProvenance?.simTick===frame.sourceTick &&
-    cachedSeabedProvenance?.columns===frame.columns &&
-    frame.zoomMode!=="Bottom Lock" && frame.pictureAdvance!=="Stop"
-    ?cachedSeabedProvenance:null;
-  ctx.fillStyle = "#f2ffff";
-  const clampLineY=fraction=>Math.min(sonarTop+sonarH-3,
-    Math.max(sonarTop,Math.round(sonarTop+fraction*sonarH)-1));
-  if(provenance){
-    const cols=frame.columns;
-    for(let col=0;col<cols;col++){
-      const sample=provenance.columnBottoms[col];
-      if(sample?.present!==true || !Number.isFinite(sample.depthM))continue;
-      const fraction=depthFractionOnFcvFrame(frame,sample.depthM);
-      if(fraction<0 || fraction>1)continue;
-      const cx0=x0+Math.floor(col*w/cols);
-      const cx1=x0+Math.floor((col+1)*w/cols);
-      ctx.fillRect(cx0,clampLineY(fraction),Math.max(1,cx1-cx0),3);
+function drawWhiteLineOverlay(frame, x0, sonarTop, w, sonarH, bottomDepthM, whiteLineMode = "On") {
+  const isEdge = whiteLineMode === "Edge";
+  const clampLineY = fraction => Math.min(sonarTop + sonarH - 3,
+    Math.max(sonarTop, Math.round(sonarTop + fraction * sonarH) - 1));
+  if (frame.zoomMode === "Bottom Lock") {
+    const flatY = Math.max(sonarTop, sonarTop + sonarH - 6);
+    if (isEdge) {
+      ctx.fillStyle = "#3a0b0d";
+      ctx.fillRect(x0, flatY - 1, w, 1.5);
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x0, flatY + (isEdge ? 1 : 0), w, 2.5);
+    return;
+  }
+  const liveProvenance = cachedSeabedProvenance?.simTick === frame.sourceTick &&
+    cachedSeabedProvenance?.columns === frame.columns &&
+    frame.pictureAdvance !== "Stop"
+    ? cachedSeabedProvenance.columnBottoms
+    : null;
+  const columnBottoms = Array.isArray(frame.columnBottoms) &&
+    frame.columnBottoms.length === frame.columns
+    ? frame.columnBottoms
+    : liveProvenance;
+  if (columnBottoms) {
+    const cols = frame.columns;
+    const points = [];
+    for (let col = 0; col < cols; col++) {
+      const sample = columnBottoms[col];
+      if (sample?.present !== true || !Number.isFinite(sample.depthM)) continue;
+      const fraction = depthFractionOnFcvFrame(frame, sample.depthM);
+      if (fraction < 0 || fraction > 1) continue;
+      const cx0 = x0 + Math.floor(col * w / cols);
+      const cx1 = x0 + Math.floor((col + 1) * w / cols);
+      const yLine = clampLineY(fraction);
+      points.push({x: (cx0 + cx1) * 0.5, y: yLine});
+      if (isEdge) {
+        ctx.fillStyle = "#3a0b0d";
+        ctx.fillRect(cx0, yLine - 1, Math.max(1, cx1 - cx0), 1.5);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(cx0, yLine + 1, Math.max(1, cx1 - cx0), 2.5);
+      } else {
+        ctx.fillStyle = "#f7ffff";
+        ctx.fillRect(cx0, yLine, Math.max(1, cx1 - cx0), 3);
+      }
+    }
+    if (points.length >= 2 && typeof ctx.beginPath === "function") {
+      ctx.save?.();
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+      if (isEdge) {
+        ctx.strokeStyle = "#3a0b0d";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        points.forEach((p, idx) => idx === 0 ? ctx.moveTo(p.x, p.y - 0.5) : ctx.lineTo(p.x, p.y - 0.5));
+        ctx.stroke();
+      }
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      points.forEach((p, idx) => idx === 0
+        ? ctx.moveTo(p.x, p.y + (isEdge ? 1.5 : 0.5))
+        : ctx.lineTo(p.x, p.y + (isEdge ? 1.5 : 0.5)));
+      ctx.stroke();
+      ctx.restore?.();
     }
     return;
   }
-  const fraction=depthFractionOnFcvFrame(frame,bottomDepthM);
-  if(fraction>=0 && fraction<=1){
-    ctx.fillRect(x0,clampLineY(fraction),w,3);
+  const fraction = depthFractionOnFcvFrame(frame, bottomDepthM);
+  if (fraction >= 0 && fraction <= 1) {
+    const yLine = clampLineY(fraction);
+    if (isEdge) {
+      ctx.fillStyle = "#3a0b0d";
+      ctx.fillRect(x0, yLine - 1, w, 1.5);
+    }
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x0, yLine + (isEdge ? 1 : 0), w, isEdge ? 2.5 : 3);
   }
+}
+
+function drawShiftIndicator(frame, x0, sonarTop, w) {
+  const state = session.deviceState;
+  if (!state || state.rangeMode !== "manual" || frame?.zoomMode ||
+      ["NAV1", "NAV2"].includes(state.mode) ||
+      (state.mode === "DUAL" && x0 === 0)) return;
+  const rawShift = Number(state.settings?.shift ?? 0);
+  if (!Number.isFinite(rawShift) || rawShift === 0) return;
+  const converted = convertFcvDepth(rawShift, state.settings?.units ?? "Metric");
+  if (!Number.isFinite(converted.value)) return;
+  const shiftText = converted.value.toFixed(1);
+  const contrast = getFcvLcdContrastTheme(state.settings);
+  const posX = x0 + Math.round(w * (w < 300 ? 0.24 : 0.58));
+  const posY = sonarTop + 14;
+  ctx.font = "bold 13px Consolas, monospace";
+  if (typeof ctx.strokeText === "function") {
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = lcdRgb(contrast.background);
+    ctx.strokeText(shiftText, posX, posY);
+  }
+  ctx.fillStyle = lcdRgb(contrast.foreground);
+  ctx.fillText(shiftText, posX, posY);
 }
 
 function drawZoomWindowMarker(marker, paneX, width, sonarTop, sonarH, strokeColor) {
@@ -324,9 +426,13 @@ function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
     ctx.strokeStyle="#8dd4ac77";
     ctx.strokeRect(x0+0.5,zoneTop,w-1,Math.max(1,zoneHeight));
   }
-  if (frame.overlays?.whiteLine) {
-    drawWhiteLineOverlay(frame,x0,sonarTop,w,sonarH,bottomDepthM);
+  const whiteLineMode=frame.overlays?.whiteLineMode??
+    session.deviceState?.settings?.whiteLine??"Off";
+  if (frame.overlays?.whiteLine || whiteLineMode==="On" || whiteLineMode==="Edge") {
+    drawWhiteLineOverlay(frame,x0,sonarTop,w,sonarH,bottomDepthM,
+      whiteLineMode==="Edge"?"Edge":"On");
   }
+  drawShiftIndicator(frame,x0,sonarTop,w);
   if (frame.overlays?.aScope) {
     const scope=projectFcvAScope(frame);
     const band = Math.min(36, w / 5);
@@ -491,14 +597,16 @@ function renderScreen() {
   $("lcd").style.filter = "brightness("+luminance+")";
   $("lcd").style.setProperty("--fcv-lcd-foreground",lcdRgb(contrast.foreground));
   $("lcd").style.setProperty("--fcv-lcd-shadow",lcdRgb(contrast.shadow));
+  $("lcd").style.setProperty("--fcv-depth-halo",lightPalette?"#ffffff":"#040c18");
   $("lcd").style.setProperty("--fcv-lcd-header-bg",
-    lightPalette?"rgba(212, 229, 247, 0.95)":"rgba(11, 58, 122, 0.92)");
-  $("lcd").style.setProperty("--fcv-lcd-header-border",
-    lightPalette?"rgba(46, 98, 148, 0.35)":"rgba(130, 185, 232, 0.35)");
+    "linear-gradient(180deg, #0d36a8 0%, #164bd1 55%, #09257a 100%)");
+  $("lcd").style.setProperty("--fcv-lcd-header-border","#d8e6ff");
   ctx.fillStyle = lcdRgb(contrast.background);
   ctx.fillRect(0, 0, width, height);
   $("off-screen").hidden = state.power !== "off";
-  $("screen-top").hidden=Boolean(testPattern);
+  const screenTopEl=$("screen-top");
+  delete screenTopEl.dataset.scope;
+  screenTopEl.hidden=Boolean(testPattern);
   // Reset the independently painted DEMO element BEFORE the LCD Test early
   // return, otherwise its previous frame could cover the solid test pixels.
   $("demo-indicator").hidden=state.power!=="on" || !state.demoOn ||
@@ -518,7 +626,7 @@ function renderScreen() {
     ctx.fillStyle=lcdRgb(testPattern.rgb);
     ctx.fillRect(0,0,width,height);
     $("vrm-indicator").hidden=true;
-    $("screen-top").textContent="LCD TEST · SIMULATED · "+testPattern.name;
+    screenTopEl.textContent="LCD TEST · SIMULATED · "+testPattern.name;
     renderDialog();
     return;
   }
@@ -552,9 +660,14 @@ function renderScreen() {
     const o = currentObservation();
     const layout=planFcvScreenLayout(state,{width,height});
     const depthReadout=planFcvDepthReadout(state,layout,{width,height});
-    if(depthReadout.kind==="dual-divider")
+    const splitDividerX=depthReadout.kind==="dual-divider"
+      ?depthReadout.anchorX
+      :state.mode?.includes("ZOOM")
+        ?layout.panes?.normal?.x
+        :null;
+    if(Number.isFinite(splitDividerX) && splitDividerX>0 && splitDividerX<width)
       depthIndicator.style.setProperty("--dual-depth-anchor",
-        (depthReadout.anchorFraction*100)+"%");
+        (splitDividerX/width*100)+"%");
     if (["NAV1", "NAV2"].includes(state.mode)) {
       const rawInput = state.trainingFixture.navigation === true
         ? state.navigationObservation : null;
@@ -600,19 +713,48 @@ function renderScreen() {
       ctx.fillStyle=lcdRgb(contrast.navPanel);
       ctx.fillRect(navPane.x,0,navPane.width,height);
       const navRows=planFcvNavRows(nav.boxes.map(box=>({
-        ...box,value:displayOnlySyntheticValue(box.value),
-      })),navPane);
+        ...box,
+        label:canonicalNavBoxLabel(box.label),
+        value:formatFcvNavBoxForLcd(box,state.settings),
+      })),navPane).map((r,idx)=>({
+        ...r,
+        label:localizeFcvNavLabel(nav.boxes[idx]?.label??r.label,state.settings),
+      }));
       for(const row of navRows){
         ctx.fillStyle=lcdRgb(contrast.secondary);
-        ctx.font=row.labelFontPx+"px Consolas, monospace";
+        ctx.font="bold "+row.labelFontPx+"px Consolas, monospace";
         ctx.fillText(row.label,row.labelX,row.labelY,row.width-32);
         ctx.fillStyle=lcdRgb(contrast.navValue);
-        ctx.font="bold "+row.valueFontPx+"px Consolas, monospace";
-        row.valueLines.forEach((line,index)=>ctx.fillText(line,row.valueX,
-          row.valueY+index*row.valueLineHeight,row.width-32));
+        const fontPx=row.kind==="depth"
+          ?Math.min(Math.round(row.height*0.56),92)
+          :row.kind==="numeric"
+            ?Math.min(Math.round(row.height*0.44),62)
+            :Math.max(row.valueFontPx,22);
+        ctx.font="900 "+fontPx+"px \"Arial Narrow\", Consolas, monospace";
+        if(row.kind==="position"){
+          const startY=row.y+Math.max(54,Math.round(row.height*0.44));
+          const lineStep=Math.max(row.valueLineHeight,Math.round(fontPx*1.45));
+          row.valueLines.forEach((line,index)=>ctx.fillText(line,row.valueX+8,
+            startY+index*lineStep,row.width-28));
+        }else{
+          const baselineY=row.y+Math.min(row.height-14,
+            Math.max(row.valueY,Math.round(row.height*0.82)));
+          const line=row.valueLines[0]??"";
+          const unitMatch=/^(.+?)\s+(m|ft|fm|kn|kt|km\/h|mph|°C|°F|nm|km|sm|hPa)$/i.exec(line);
+          if(unitMatch && typeof ctx.measureText==="function"){
+            const numPart=unitMatch[1],unitPart=unitMatch[2];
+            const valX=row.kind==="depth"?row.valueX+24:row.valueX+34;
+            ctx.fillText(numPart,valX,baselineY,row.width-64);
+            const numW=ctx.measureText(numPart).width;
+            ctx.font="bold "+Math.max(15,Math.round(fontPx*0.32))+"px Consolas, monospace";
+            ctx.fillText(unitPart,Math.min(row.x+row.width-36,valX+numW+5),baselineY);
+          }else{
+            ctx.fillText(line,row.valueX+16,baselineY,row.width-32);
+          }
+        }
         if(row.separatorY!==null){
           ctx.fillStyle=lcdRgb(contrast.secondary);
-          ctx.fillRect(row.x+8,row.separatorY-1,row.width-16,1);
+          ctx.fillRect(row.x+4,row.separatorY-1,row.width-8,1.5);
         }
       }
       // Source freshness and synthetic provenance are described outside LCD.
@@ -702,10 +844,29 @@ function renderScreen() {
     // Faults injected by the instructor have no verified OEM alarm-pixel
     // counterpart. Keep them in the D15 panel, not the device LCD.
   }
-  $("screen-top").textContent=projectFcvPhotoStatusHeader(state).text;
-  // Manual §2.8 supports a [DEMO] indicator while Demo is on. Bottom-right
-  // is a provisional original-art placement, NOT an OEM-measured coordinate.
-  // Keep the model/menu contract and source-grade pixel placement separately.
+  const legacyHeaderText=projectFcvPhotoStatusHeader(state).text;
+  const headerWidgets=state.power==="on"
+    ?projectFcvDisplayWidgets(state,state.navigationObservation,session.worldState.simTick)
+    :null;
+  const headerBar=projectFcvAuthenticHeader(state,headerWidgets);
+  if(!headerBar.visible){
+    screenTopEl.replaceChildren();
+    screenTopEl.hidden=true;
+  }else{
+    screenTopEl.hidden=false;
+    if(headerBar.scope==="nav-sonar")screenTopEl.dataset.scope="nav-sonar";
+    const leftSpan=document.createElement("span");
+    leftSpan.className="screen-top-left";
+    leftSpan.textContent=headerBar.leftText||legacyHeaderText;
+    if(headerBar.rightText){
+      const rightSpan=document.createElement("span");
+      rightSpan.className="screen-top-right";
+      rightSpan.textContent="   "+headerBar.rightText;
+      screenTopEl.replaceChildren(leftSpan,rightSpan);
+    }else{
+      screenTopEl.replaceChildren(leftSpan);
+    }
+  }
   renderDialog();
 }
 
@@ -836,11 +997,17 @@ function publishOperatorSelection(){
 
 function renderMainMenuChrome(projected,title,content){
   title.textContent=projected.category;
+  const menuHeader=$("lcd-menu-header");
+  if(menuHeader){
+    menuHeader.textContent=projected.menuHeader??"Menu";
+    menuHeader.hidden=false;
+  }
   const categories=$("lcd-menu-categories");
   categories.replaceChildren(...projected.categories.map(item=>{
     const label=document.createElement("div");
     label.textContent=item.label;
     label.dataset.category=item.label;
+    label.dataset.categoryKey=item.key??item.label;
     label.setAttribute("role","listitem");
     if(item.selected)label.setAttribute("aria-current","true");
     return label;
@@ -890,7 +1057,8 @@ function renderMainMenuChrome(projected,title,content){
     options.appendChild(heading);
     for(const item of projected.editor.choices){
       const choice=document.createElement("div");
-      choice.textContent=item.value;
+      choice.textContent=item.label??item.value;
+      choice.dataset.choiceValue=item.value;
       choice.setAttribute("role","listitem");
       if(item.selected)choice.setAttribute("aria-current","true");
       options.appendChild(choice);
@@ -898,7 +1066,9 @@ function renderMainMenuChrome(projected,title,content){
     keepMenuSelectionVisible(options,options.querySelector('[aria-current="true"]'));
   }
   const footer=$("dialog-footer");
-  footer.textContent=projected.footerKeys.join("   ");
+  footer.textContent=Array.isArray(projected.legendLines) && projected.legendLines.length
+    ?projected.legendLines.join("\n")
+    :projected.footerKeys.join("   ");
   footer.hidden=false;
   keepMenuSelectionVisible(content,rows[projected.rows.findIndex(row=>row.selected)]);
 }
@@ -987,13 +1157,18 @@ function renderControlChrome(projected,title,content){
 
 function renderDialog() {
   const overlay = session.deviceState.overlay;
+  const vi = isVietnameseFcv(session.deviceState);
   const mainMenu=projectFcvMainMenu(session.deviceState);
   const funcSetting=projectFcvFuncSetting(session.deviceState);
   const configuration=projectFcvConfiguration(session.deviceState);
   const control=projectFcvControl(session.deviceState);
-  $("lcd-overlay").hidden = !overlay || session.deviceState.power !== "on" || overlay.kind==="lcd-test";
-  $("lcd-overlay").dataset.layout=mainMenu?"main-menu":funcSetting?"func-setting":
+  const overlayEl=$("lcd-overlay");
+  overlayEl.lang=vi?"vi":"en";
+  overlayEl.hidden = !overlay || session.deviceState.power !== "on" || overlay.kind==="lcd-test";
+  overlayEl.dataset.layout=mainMenu?"main-menu":funcSetting?"func-setting":
     configuration?"configuration":control?"control":"dialog";
+  const menuHeader=$("lcd-menu-header");
+  if(menuHeader)menuHeader.hidden=!mainMenu;
   $("lcd-menu-categories").hidden=!mainMenu;
   $("lcd-menu-options").hidden=!(mainMenu?.editor || configuration?.editor);
   const transaction=$("lcd-config-transaction");
@@ -1026,7 +1201,7 @@ function renderDialog() {
     const rows=funcSetting.choices.map(choice=>{
       const row=document.createElement("div");
       row.className="lcd-menu-row";
-      row.textContent=(choice.selected?"▶ ":"  ")+choice.value;
+      row.textContent=(choice.selected?"▶ ":"  ")+(choice.label??choice.value);
       row.dataset.choiceValue=choice.value;
       row.setAttribute("role","listitem");
       if(choice.selected)row.setAttribute("aria-current","true");
@@ -1051,14 +1226,14 @@ function renderDialog() {
     return;
   }
   if (overlay.kind === "range") {
-    title.textContent = "Range";
+    title.textContent = vi ? "Thang do" : "Range";
     content.textContent = "NO DATA";
   } else if(overlay.kind==="window-size"){
-    title.textContent="WINDOW SIZE";
-    content.textContent="Split pane: "+overlay.draftRatio+"% / "+
+    title.textContent = vi ? "CO CUA SO" : "WINDOW SIZE";
+    content.textContent=(vi?"Ti le cua so: ":"Split pane: ")+overlay.draftRatio+"% / "+
       String(100-Number(overlay.draftRatio))+"%";
   } else if(overlay.kind==="receiver-status"){
-    title.textContent="RECEIVER STATUS";
+    title.textContent = vi ? "TT DAU THU" : "RECEIVER STATUS";
     // A training observation must not be mistaken for real NMEA reception.
     // Display current typed Own fixture state, fail closed when stale/missing;
     // the source/provenance remains conspicuous in the external instructor UI.
@@ -1095,16 +1270,18 @@ function renderDialog() {
     // Shutdown has not committed: the user may still release the key.
     content.textContent = "";
   } else if(overlay.kind === "diagnostics"){
-    title.textContent="DIAGNOSTICS";
+    title.textContent = vi ? "TU KIEM TRA" : "DIAGNOSTICS";
     content.textContent="NO DATA";
   } else if(overlay.kind === "lcd-test"){
     title.textContent="LCD TEST";
     content.textContent="";
   } else if(overlay.kind === "confirm-restore"){
-    title.textContent="RESTORE";
-    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+    title.textContent = vi ? "MAC DINH" : "RESTORE";
+    content.textContent = vi
+      ? (overlay.confirm?"▶ CO    KHONG":"  CO  ▶ KHONG")
+      : (overlay.confirm?"▶ YES    NO":"  YES  ▶ NO");
   } else if(overlay.kind === "trip-status"){
-    title.textContent="TRIP / ODOMETER";
+    title.textContent = vi ? "HANH TRINH" : "TRIP / ODOMETER";
     const nav=session.deviceState.navigation;
     const travel=projectFcvTravelValues(nav,session.deviceState.settings);
     const tripText=travel.tripNm===null?"NO DATA":
@@ -1117,37 +1294,42 @@ function renderDialog() {
       "ODOMETER  "+odometerText+"\n"+
       "TRIP SOURCE: "+session.deviceState.settings.tripSource;
   } else if(overlay.kind === "confirm-trip-reset"){
-    title.textContent="RESET TRIP";
-    content.textContent=overlay.confirm?"▶ YES    NO":"  YES  ▶ NO";
+    title.textContent = vi ? "XOA HANH TRINH" : "RESET TRIP";
+    content.textContent = vi
+      ? (overlay.confirm?"▶ CO    KHONG":"  CO  ▶ KHONG")
+      : (overlay.confirm?"▶ YES    NO":"  YES  ▶ NO");
   } else if(overlay.kind === "waypoints"){
-    title.textContent=overlay.purpose==="destination"?
-      "GO TO WPT":"WPT LIST";
+    title.textContent=overlay.purpose==="destination"
+      ?(vi?"DI TOI WPT":"GO TO WPT")
+      :(vi?"DANH SACH WPT":"WPT LIST");
     const list=session.deviceState.navigation?.waypoints??[];
     const offset=overlay.purpose==="destination"?1:0;
     content.textContent=(offset?
-      (overlay.itemIndex===0?"▶ ":"  ")+"OFF\n":"")+
+      (overlay.itemIndex===0?"▶ ":"  ")+(vi?"TAT\n":"OFF\n"):"")+
       list.map((w,i)=>
         (i+offset===overlay.itemIndex?"▶ ":"  ")+w.id+" "+w.name).join("\n")+
       (list.length?"":"\nNO DATA");
   } else if(overlay.kind==="waypoint-detail"){
     const waypoint=session.deviceState.navigation.waypoints[overlay.itemIndex];
-    title.textContent="WPT LIST";
+    title.textContent = vi ? "DANH SACH WPT" : "WPT LIST";
     content.textContent=waypoint?
       waypoint.id+" · "+waypoint.name+"\n"+
-      (overlay.fieldIndex===0?"▶ ":"  ")+"Name\n"+
-      (overlay.fieldIndex===1?"▶ ":"  ")+"Erase?":"WPT NOT FOUND";
+      (overlay.fieldIndex===0?"▶ ":"  ")+(vi?"Ten\n":"Name\n")+
+      (overlay.fieldIndex===1?"▶ ":"  ")+(vi?"Xoa?":"Erase?"):"WPT NOT FOUND";
   } else if(overlay.kind==="waypoint-name"){
-    title.textContent="WPT NAME";
+    title.textContent = vi ? "TEN WPT" : "WPT NAME";
     const draft=overlay.draftName;
     const cursor=overlay.charIndex;
     content.textContent=overlay.waypointId+"\n"+
       draft.slice(0,cursor)+"["+draft[cursor]+"]"+draft.slice(cursor+1);
   } else if(overlay.kind==="confirm-waypoint-delete" ||
       overlay.kind==="confirm-delete-all-waypoints"){
-    title.textContent="ERASE WPT?";
+    title.textContent = vi ? "XOA WPT?" : "ERASE WPT?";
     content.textContent=(overlay.kind==="confirm-waypoint-delete"?
-      overlay.waypointId:"DELETE ALL WPT")+
-      "\n"+(overlay.confirm?"▶ YES   NO":"  YES ▶ NO");
+      overlay.waypointId:(vi?"XOA TAT CA WPT":"DELETE ALL WPT"))+
+      "\n"+(vi
+        ?(overlay.confirm?"▶ CO   KHONG":"  CO ▶ KHONG")
+        :(overlay.confirm?"▶ YES   NO":"  YES ▶ NO"));
   } else {
     title.textContent = "MENU / ESC";
     content.textContent = "NO DATA";

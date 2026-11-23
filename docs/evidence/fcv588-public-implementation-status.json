@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "profileClass": "PUBLIC_REFERENCE",
-  "profileRevision": "F1-public-reference-23",
+  "profileRevision": "F1-public-reference-24",
   "checkpointPolicy": "EXPLICIT_REVIEWED_FEATURE_ALLOWLIST",
   "hardwareValidated": false,
   "firmwareInstalled": null,
@@ -770,7 +770,7 @@
         "test/fcv588-public-display-widgets.test.mjs"
       ],
       "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
-      "note": "Training projections for Depth Size, Color Bar, Temp Graph, Nav Data, Window Size, Battery NO DATA, Header Info and Zoom Marker affect LCD; Temp Graph requires fresh typed in-range synthetic position, and supplementary NAV speed requires a nonnegative sample, honors selected §2.5 speed units and never substitutes unavailable NMEA; OEM geometry and hardware signals remain unverified",
+      "note": "Training projections for Depth Size, Color Bar, Temp Graph, Nav Data, Window Size, Battery synthetic voltageText (13.6V / 10.8V with NO_HARDWARE_DATA provenance), Header Info and Zoom Marker affect LCD; Temp Graph requires fresh typed in-range synthetic position, and supplementary NAV speed requires a nonnegative sample, honors selected §2.5 speed units and never substitutes unavailable NMEA; OEM geometry and hardware signals remain unverified",
       "claimDecision": "HOLD"
     },
     {
@@ -1161,7 +1161,7 @@
       "featureId": "D04",
       "scope": "FCV_OPERATOR",
       "domain": "system_diagnostics",
-      "checkpointStatus": "NOT_IMPLEMENTED",
+      "checkpointStatus": "OPERABLE_SYNTHETIC_SUBSET",
       "sourceStatus": "CURATED_REFERENCE_NOT_BEHAVIOR_VERIFIED",
       "manualRefs": [
         "§2.4 tr.26"
@@ -1171,9 +1171,11 @@
         "PUB-FCV-011"
       ],
       "rightsDecision": "CURATED_NOTES_ONLY",
-      "testReferences": [],
-      "testEvidenceMeaning": "DOMAIN_SMOKE_NOT_PER_ROW_CONFORMANCE",
-      "note": "Only English public-reference screen labels are available; language switching/reboot and licensed alternate text are unimplemented (RIGHTS_HOLD/SOURCE_GAP)",
+      "testReferences": [
+        "test/fcv588-d04-vietnamese-hardware-fidelity.test.mjs"
+      ],
+      "testEvidenceMeaning": "TARGETED_SCENARIO_TEST_NOT_OEM_CONFORMANCE",
+      "note": "English and Tieng Viet menu/choice/NAV labels with §2.4 System and §4.10 Installation language commit-triggered 4-tick reboot and persisted settings; non-diacritic Vietnamese hardware vocabulary follows user-authorized 2016 FCV-588 reference photographs, while full multilingual ROM set and installed firmware version remain unverified",
       "claimDecision": "HOLD"
     },
     {

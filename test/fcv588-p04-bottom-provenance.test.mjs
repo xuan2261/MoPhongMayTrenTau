@@ -209,7 +209,7 @@ test("P04 companion provenance stays outside observation, replay and profile21 c
   ]);
   assert.equal(Scenario.SENSOR_MODEL_VERSION,"fcv588-sonar-illustrative-v1");
   assert.equal(adapter.revision,FCV588_PUBLIC_PROFILE_REVISION);
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-24");
   let session=createSession(adapter,Scenario.TRAINING_SCENARIO);
   session=dispatch(session,adapter,{kind:"tick",steps:2},Scenario.TRAINING_SCENARIO);
   const envelope=createReplayEnvelope(session);
