@@ -1150,9 +1150,12 @@ function renderControlChrome(projected,title,content){
   summary.dataset.currentValue=projected.currentValue;
   summary.dataset.draftValue=projected.draftValue;
   const footer=$("dialog-footer");
-  footer.textContent=Array.isArray(projected.legendLines) && projected.legendLines.length
+  const baseFooter=Array.isArray(projected.legendLines) && projected.legendLines.length
     ?projected.legendLines.join("\n")
     :"◀/▶  ▲/▼  [ENTER]  [MENU]";
+  footer.textContent=Number.isFinite(projected.remainingMs)
+    ?baseFooter+"  ("+(projected.remainingMs/1000).toFixed(1)+"s)"
+    :baseFooter;
   footer.hidden=false;
   const countdown=Number.isFinite(projected.remainingMs)
     ?"\nCòn "+(projected.remainingMs/1000).toFixed(1)+" s (đồng hồ mô phỏng)":"";
@@ -1571,6 +1574,26 @@ document.querySelector(".mode-scale")?.addEventListener("click", ev => {
   const currentIdx = DISPLAY_MODES.indexOf(currentMode);
   const delta = targetIdx - currentIdx;
   if (delta !== 0) rotate("mode", delta);
+});
+document.querySelector(".mode-scale")?.addEventListener("dblclick", ev => {
+  const mark = ev.target?.closest?.("[data-mode]");
+  if (!mark || session.deviceState.power !== "on") return;
+  const targetIdx = DISPLAY_MODES.indexOf(mark.dataset.mode);
+  if (targetIdx < 0) return;
+  const currentMode = session.deviceState.overlay?.kind === "mode"
+    ? session.deviceState.overlay.candidate
+    : session.deviceState.mode;
+  const currentIdx = DISPLAY_MODES.indexOf(currentMode);
+  const delta = targetIdx - currentIdx;
+  if (delta !== 0) rotate("mode", delta);
+  if (session.deviceState.overlay?.kind === "mode") {
+    send({kind: "ui-tick", elapsedMs: 6000});
+  }
+});
+$("mode-knob")?.addEventListener("dblclick", () => {
+  if (session.deviceState.power === "on" && session.deviceState.overlay?.kind === "mode") {
+    send({kind: "ui-tick", elapsedMs: 6000});
+  }
 });
 document.querySelector(".gain-scale-minus")?.addEventListener("click", () => rotate("gain", -1));
 document.querySelector(".gain-scale-plus")?.addEventListener("click", () => rotate("gain", 1));

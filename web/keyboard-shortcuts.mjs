@@ -8,6 +8,9 @@ export function shouldRouteFcvShortcut(event){
   if(!event || event.repeat || !event.target?.closest)return false;
   const target=event.target;
   if(target.closest(".training-panel"))return false;
+  if(target.type==="checkbox"){
+    return !["Enter"," ","Spacebar"].includes(event.key);
+  }
   if(target.closest("input, textarea, select, [contenteditable='true']"))
     return false;
   if(target.closest("button")){
