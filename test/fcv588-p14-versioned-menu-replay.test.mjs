@@ -35,7 +35,7 @@ const selected=(session,atlas)=>atlas("Sounder",session.deviceState)
   [session.deviceState.overlay.itemIndex].id;
 
 test("P14 exposes active profile22 with manual AP-1 menu order bound into adapter profile hash",()=>{
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-24");
   assert.equal(currentAdapter.revision,FCV588_PUBLIC_PROFILE_REVISION);
   const expected=["sounder.pictureAdvance","sounder.zoomMode","sounder.shift",
     "sounder.interference","sounder.colorErase","sounder.clutter",
@@ -84,7 +84,7 @@ test("P14 historic profile21 committed White Marker editor also replays under it
 test("P14 profile22 menu navigation and selection-only replay deterministic, no reinterpretation with old profile",()=>{
   const current=simulate(currentAdapter);
   assert.equal(selected(current,currentItems),"sounder.clutter");
-  assert.equal(current.profileRevision,"F1-public-reference-23");
+  assert.equal(current.profileRevision,"F1-public-reference-24");
   const envelope=createReplayEnvelope(current);
   const back=replayFcv588Envelope(scenario,envelope);
   assert.equal(sessionHash(back),sessionHash(current));
@@ -97,7 +97,7 @@ test("P14 profile22 menu navigation and selection-only replay deterministic, no 
   assert.throws(()=>replay(historicAdapter,scenario,envelope),
     /replay contract\/profile\/scenario mismatch/);
   assert.equal(getFcvReplayAdapter(current.profileRevision),currentAdapter);
-  assert.throws(()=>getFcvReplayAdapter("F1-public-reference-24"),/unsupported|unknown/i);
+  assert.throws(()=>getFcvReplayAdapter("F1-public-reference-25"),/unsupported|unknown/i);
   assert.throws(()=>replayFcv588Envelope(scenario,{profileRevision:"F1-public-reference-999"}),
     /unsupported|unknown/i);
 });
@@ -112,7 +112,7 @@ test("P14 legacy stored profile21 settings import explicitly, current22 decode r
   assert.deepEqual(imported,{pictureAdvance:"1/2",tankenmaru:"Off",palette:"Blue"});
   assert.equal(decodeFcvProfile19Settings(legacyRaw),null);
   const revised=encodeFcvSettings(imported);
-  assert.equal(JSON.parse(revised).profileRevision,"F1-public-reference-23");
+  assert.equal(JSON.parse(revised).profileRevision,"F1-public-reference-24");
   assert.deepEqual(decodeFcvSettings(revised),imported);
   assert.equal(decodeFcvProfile21Settings(revised),null);
   const tampered=JSON.parse(legacyRaw);

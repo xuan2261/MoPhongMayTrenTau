@@ -34,14 +34,16 @@ export function projectFcvDisplayWidgets(state,navigationSample,simTick=0){
       speedKn:settings.speedSource==="NMEA"?null:calibrated.speedKn}:null,"NAV2",{
       simTick,units:settings.units??"Metric",
       speedUnit:settings.speedUnit??"kn",staleAfterTicks:10,
+      language:settings.language,
     });
     navData={status:projected.status,sourceClass:"SIMULATED_ONLY",
       boxes:settings.navData==="Basic"?projected.boxes.slice(0,2):projected.boxes};
   }
+  const lowBattery=state?.trainingFixture?.lowBattery===true;
   const battery=settings.battery==="On"
     ?{status:"NO_HARDWARE_DATA",sourceClass:"SIMULATED_ONLY",
-      label:state?.trainingFixture?.lowBattery===true
-        ?"LOW BATTERY · SIM":"BATTERY NO DATA · SIM"}:null;
+      voltageText:lowBattery?"10.8V":"13.6V",
+      label:lowBattery?"LOW BATTERY · SIM":"BATTERY NO DATA · SIM"}:null;
   return {tempGraph,navData,battery};
 }
 

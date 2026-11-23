@@ -49,7 +49,10 @@
                 <div class="depth-indicator" lang="en"><strong id="depth-display">--.-</strong><span id="depth-unit">m</span></div>
                 <div class="vrm-indicator" id="vrm-indicator" lang="en" hidden>VRM --.- m</div>
                 <div class="lcd-overlay" id="lcd-overlay" lang="en" hidden>
-                  <div class="lcd-overlay-title" id="dialog-title"></div>
+                  <div class="lcd-overlay-header">
+                    <div class="lcd-menu-header" id="lcd-menu-header" hidden>Menu</div>
+                    <div class="lcd-overlay-title" id="dialog-title"></div>
+                  </div>
                   <div class="lcd-menu-body">
                     <div id="lcd-menu-categories" class="lcd-menu-categories" role="list" aria-label="Năm nhóm menu" hidden></div>
                     <div class="lcd-menu-main">
@@ -68,8 +71,8 @@
               <button id="key-menu" class="hardware-key" type="button" lang="en">MENU/ESC</button>
               <div class="pad" role="group" aria-label="TrackPad bốn hướng">
                 <button type="button" id="pad-up" class="pad-up" aria-label="TrackPad lên">▲</button>
-                <button type="button" id="pad-left" class="pad-left" aria-label="TrackPad trái">◀</button>
-                <button type="button" id="pad-right" class="pad-right" aria-label="TrackPad phải">▶</button>
+                <button type="button" id="pad-left" class="pad-left" aria-label="TrackPad trái">‹</button>
+                <button type="button" id="pad-right" class="pad-right" aria-label="TrackPad phải">›</button>
                 <button type="button" id="pad-down" class="pad-down" aria-label="TrackPad xuống">▼</button>
               </div>
               <button type="button" id="key-enter" class="hardware-key enter-key" lang="en">ENTER</button>
@@ -79,13 +82,15 @@
                 <button id="key-func" type="button" class="hardware-key" lang="en" aria-label="FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng">FUNC</button>
               </div>
               <div class="knob-wrap gain-wrap">
-                <span class="knob-label" lang="en">GAIN <small>PUSH TO AUTO</small></span>
+                <span class="knob-label" lang="en">GAIN</span>
                 <div class="knob-group">
+                  <span class="gain-scale-mark gain-scale-minus" aria-hidden="true">-</span>
                   <button id="gain-knob" class="knob" type="button" aria-label="Nhấn núm GAIN; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
+                  <span class="gain-scale-mark gain-scale-plus" aria-hidden="true">+</span>
                 </div>
+                <small class="knob-sublabel" lang="en">PUSH TO AUTO</small>
               </div>
               <div class="knob-wrap mode-wrap">
-                <span class="knob-label" lang="en">MODE</span>
                 <div class="knob-group">
                   <div class="mode-scale" aria-hidden="true">
                     <span data-mode="NAV1">NAV1</span><span data-mode="LF-ZOOM">LF-ZOOM</span>
@@ -95,6 +100,7 @@
                   </div>
                   <button id="mode-knob" class="knob knob-mode" type="button" aria-label="Núm MODE: kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
                 </div>
+                <span class="knob-label mode-label-bottom" lang="en">MODE</span>
               </div>
               <button id="key-power" type="button" class="power-button" aria-label="POWER/BRILL: nhấn ngắn để bật máy hoặc chỉnh độ sáng; nhấn giữ hơn 3 giây để tắt"><i class="power-glyph" aria-hidden="true"></i><span lang="en">BRILL</span></button>
             </div>

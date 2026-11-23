@@ -14,7 +14,7 @@
     "manualRevision": "OME-23890-E (Aug 2025)",
     "nonInterchangeableModels": "FCV-588 only; do not import FCV-38/600/800/1900 UI or glossary"
   },
-  "profileRevision": "F1-public-reference-22",
+  "profileRevision": "F1-public-reference-24",
   "allCurrentClaims": "HOLD",
   "currentPhase2Verify": "STOP_V31_QA_01",
   "executionPolicy": "FUTURE_TEST_VECTORS_ONLY; all cases NOT_EXECUTED. Do not edit/run affected Verify while Kongming gate remains unresolved.",
@@ -240,7 +240,7 @@
     },
     {
       "featureId": "D04",
-      "expectedImplementation": "NOT_IMPLEMENTED",
+      "expectedImplementation": "OPERABLE_SYNTHETIC_SUBSET",
       "sourceIds": [
         "PUB-FCV-001",
         "PUB-FCV-011"
@@ -250,42 +250,46 @@
         "§4.10"
       ],
       "owners": [
+        "src/devices/fcv588/i18n.mjs",
         "src/devices/fcv588/menu-atlas.mjs",
+        "src/devices/fcv588/model.mjs",
         "src/devices/fcv588/settings.mjs"
       ],
-      "coveredByExisting": [],
-      "sourceLimit": "Only English labels are authorized in the current public-reference build; real language bundle/reboot/firmware-specific paths unverified and rights restricted.",
+      "coveredByExisting": [
+        "test/fcv588-d04-vietnamese-hardware-fidelity.test.mjs"
+      ],
+      "sourceLimit": "English and Tieng Viet non-diacritic hardware vocabulary from user-authorized 2016 FCV-588 reference photos with §2.4 4-tick reboot on language change; full OEM multilingual ROM table and installed firmware revision remain unverified.",
       "currentReleaseDecision": "HOLD",
       "vectors": [
         {
           "caseId": "D04-01",
           "title": "Language menu in System and Installation",
-          "expectedInvariant": "Show documented Language entry, but keep disabled with source/rights rationale externally until required evidence",
-          "qualification": "Cannot claim implement or support alternate languages",
+          "expectedInvariant": "Expose English and Tieng Viet choices in System and Installation, triggering §2.4 reboot when committing a changed language",
+          "qualification": "Full OEM language ROM beyond English/Tieng Viet remains HOLD",
           "execution": "NOT_EXECUTED",
           "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
         },
         {
           "caseId": "D04-02",
           "title": "Unsupported locale selection or direct invalid setting injection",
-          "expectedInvariant": "Reject arbitrary locale and any fake language migration; preserve known English state and storage",
-          "qualification": "Do not invent a dictionary or new version",
+          "expectedInvariant": "Reject arbitrary locale and any fake language migration; preserve known English/Tieng Viet state and storage",
+          "qualification": "Strict profile-versioned settings validation",
           "execution": "NOT_EXECUTED",
           "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
         },
         {
           "caseId": "D04-03",
-          "title": "Future rights-cleared language package",
-          "expectedInvariant": "Before coding: exact FCV-588 revision/locales, rights grant for language resources, behavior of reboot/reset and per-menu oracle",
-          "qualification": "Unavailable: SOURCE_GAP + RIGHTS_HOLD",
+          "title": "User-authorized 2016 Vietnamese FCV-588 vocabulary and reboot persistence",
+          "expectedInvariant": "Match non-diacritic hardware strings across menu/choices/NAV and persist committed language across reboot and replay",
+          "qualification": "Hardware photo-backed subset; release claim remains HOLD",
           "execution": "NOT_EXECUTED",
           "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
         },
         {
           "caseId": "D04-04",
           "title": "Public multi-language operator guide existence vs runtime strings",
-          "expectedInvariant": "Multilingual guides do not prove installed firmware language selection options nor permission to reproduce their text",
-          "qualification": "Research-only, not a usable interface fixture",
+          "expectedInvariant": "Multilingual guides do not prove additional installed firmware language options beyond authorized reference evidence",
+          "qualification": "Research-only, not a grant for unverified locales",
           "execution": "NOT_EXECUTED",
           "evidenceStatus": "PROPOSED_OR_EXISTING_RECORDED_NO_NEW_VERIFY"
         }

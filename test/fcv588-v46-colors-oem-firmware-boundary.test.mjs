@@ -69,7 +69,7 @@ test("V46 original palette remains synthetic only, firmware/profile/replay unaff
   assert.equal(b.length,16);
   assert.notDeepEqual(a,b);
   assert.equal(initialFcv588State().settings.colors,undefined);
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-24");
   assert.equal(adapter.profile.firmware,null);
   const session=createSession(adapter,scenario);
   const before=sessionHash(session);

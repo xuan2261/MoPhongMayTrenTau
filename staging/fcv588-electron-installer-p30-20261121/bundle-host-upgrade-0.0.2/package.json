@@ -1,7 +1,0 @@
-{
-  "name": "fcv588-synthetic-electron-poc",
-  "version": "0.0.2",
-  "private": true,
-  "description": "UNRELEASED HOST QA INSTALLER UPGRADE, NOT FOR DISTRIBUTION",
-  "main": "desktop/main.cjs"
-}

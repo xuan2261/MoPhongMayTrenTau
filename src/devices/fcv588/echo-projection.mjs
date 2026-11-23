@@ -184,8 +184,11 @@ function overlaysFor(state,frequencyKhz) {
     rangeMode:state.rangeMode};
   const aScopeMode=["Normal","Peak"].includes(settings.aScope)
     ? settings.aScope:"Off";
+  const whiteLineMode=["On","Edge"].includes(settings.whiteLine)
+    ? settings.whiteLine:"Off";
   return {
-    whiteLine:settings.whiteLine==="On",
+    whiteLine:whiteLineMode!=="Off",
+    whiteLineMode,
     bottomZone:settings.bottomZone??"Standard",
     // In DUAL the A-scope is shown on the HF side only (§1.14).
     aScope:aScopeMode!=="Off" && (state.mode!=="DUAL" || frequencyKhz===200),

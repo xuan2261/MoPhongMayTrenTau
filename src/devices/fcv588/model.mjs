@@ -77,6 +77,7 @@ const initialSettings = () => ({
   tempGraph:"Off",navData:"Off",battery:"Off",headerInfo:"On",
   windowRatio:"50",zoomRange:"20",blRange:"5",
   tankenmaru: "Off", nmea: "Off", transducer: "GENERIC_600W",
+  language: "English",
   keySetup: "Pic. Advance",keyBeep:"Off",
   ...Object.fromEntries(FCV_CALIBRATION_FIELDS.map(field=>
     [field.key,field.defaultValue])),
@@ -601,8 +602,20 @@ function moveMenu(state, event) {
       return {...state,overlay:{...o,editing:false,draftValue:null,
         editEntryId:null},notice:entry.disabledReason??"MENU_CHANGED_EDIT_CANCELLED"};
     }
+    const previousLanguage = state.settings.language ?? "English";
     const settings = resetRangeBankOnDepthUnitChange(state.settings,
       {...state.settings, [entry.settingKey]:o.draftValue});
+    if (entry.id === "system.language" && o.draftValue !== previousLanguage) {
+      return {
+        ...state,
+        settings,
+        power: "booting",
+        bootElapsed: 0,
+        alarms: evaluateFcvAlarms([], {}),
+        overlay: null,
+        notice: "LANGUAGE UPDATED · REBOOTING",
+      };
+    }
     const demoOn = entry.id === "system.demo" ? o.draftValue === "On" : state.demoOn;
     const enableBds=entry.id==="display.bottomDiscrimination" &&
       ["Graphic","Probability"].includes(o.draftValue);
@@ -655,9 +668,22 @@ function moveInstallation(state, event) {
         !item.choices.includes(o.draftValue))return {...state,
       overlay:{...o,editing:false,draftValue:null,editEntryId:null},
       notice:item.disabledReason??"INSTALLATION_CHANGED_EDIT_CANCELLED"};
+    const previousLanguage=state.settings.language ?? "English";
     const settings=resetRangeBankOnDepthUnitChange(state.settings,
       {...state.settings,[item.settingKey]:o.draftValue});
     if(item.settingKey==="tankenmaru" && o.draftValue==="On") settings.nmea="Off";
+    if(item.settingKey==="language" && o.draftValue!==previousLanguage) {
+      return {
+        ...state,
+        settings,
+        demoOn:settings.demo==="On",
+        power:"booting",
+        bootElapsed:0,
+        alarms:evaluateFcvAlarms([],{}),
+        overlay:null,
+        notice:"LANGUAGE UPDATED · REBOOTING",
+      };
+    }
     return syncAlarmsIfObserved({...state,settings,demoOn:settings.demo==="On",
       overlay:{...o,editing:false,draftValue:null,editEntryId:null},
       notice:"Installation: "+item.label},event);

@@ -14,7 +14,7 @@ import {projectFcvEcho} from "../src/devices/fcv588/echo-projection.mjs";
 // Manual OME23890-E: PDF p10 §1.4.1 single LF(50)/HF(200);
 // p11 §1.4.2 DUAL=LF left, HF right; p12 §1.4.3 BZ left,
 // normal right, bottom echo remains in LOWER PART, no OEM pixel ratio given.
-const revisions=["F1-public-reference-21","F1-public-reference-22","F1-public-reference-23"];
+const revisions=["F1-public-reference-21","F1-public-reference-22","F1-public-reference-23","F1-public-reference-24"];
 const contracts=["P04_HISTORIC","P23_LOWER_BOTTOM"];
 const sha=bytes=>createHash("sha256").update(bytes).digest("hex");
 const scenarioInputs=(steps,zoomMode="Bottom Zoom")=>[

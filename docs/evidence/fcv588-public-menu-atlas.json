@@ -299,7 +299,8 @@
       "kind": "choice",
       "choices": [
         "Off",
-        "On"
+        "On",
+        "Edge"
       ],
       "settingKey": "whiteLine"
     },
@@ -985,7 +986,8 @@
       "sourceStatus": "CURATED_REFERENCE_NOT_HARDWARE_VERIFIED",
       "kind": "choice",
       "choices": [
-        "English"
+        "English",
+        "Tieng Viet"
       ],
       "settingKey": "language"
     },
@@ -1228,10 +1230,9 @@
       "sourceStatus": "CURATED_REFERENCE_INSTALLATION_ONLY",
       "settingKey": "language",
       "choices": [
-        "English"
-      ],
-      "disabled": true,
-      "disabledReason": "RIGHTS_HOLD_LANGUAGE_ASSETS_AND_REBOOT_SOURCE_GAP"
+        "English",
+        "Tieng Viet"
+      ]
     },
     {
       "label": "Type",

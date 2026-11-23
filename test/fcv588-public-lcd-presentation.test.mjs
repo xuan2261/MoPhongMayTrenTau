@@ -116,11 +116,18 @@ test("source HOLD, capability N/A and optional row filtering stay distinct in vi
   let s=press(boot(),"menu");
   for(let i=0;i<4;i++)s=pad(s,"right");
   for(let i=0;i<3;i++)s=pad(s,"down");
-  const view=projectFcvMainMenu(s.deviceState);
-  assert.match(view.rows.find(r=>r.selected).text,/Language/);
+  const langView=projectFcvMainMenu(s.deviceState);
+  assert.match(langView.rows.find(r=>r.selected).text,/Language : English/);
+  assert.equal(langView.rows.find(r=>r.selected).disabled,false);
+  const tankenIndex=getFcvMenuItems("System",s.deviceState)
+    .findIndex(item=>item.id==="system.tankenmaru");
+  assert.ok(tankenIndex>=0);
+  const view=projectFcvMainMenu({...s.deviceState,
+    overlay:{...s.deviceState.overlay,itemIndex:tankenIndex}});
+  assert.match(view.rows.find(r=>r.selected).text,/Tankenmaru/);
   assert.doesNotMatch(view.rows.find(r=>r.selected).text,/\[HOLD\]|\[N\/A\]/);
   assert.equal(view.rows.find(r=>r.selected).disabled,true);
-  assert.match(view.reason,/RIGHTS_HOLD_LANGUAGE/);
+  assert.match(view.reason,/SOURCE_GAP_TANKENMARU_OPTION_NOT_DECLARED/);
   assert.equal(view.editor,null);
   const tank={...s.deviceState,trainingFixture:{...s.deviceState.trainingFixture,tankenmaruOption:true},
     settings:{...s.deviceState.settings,tankenmaru:"On"}};

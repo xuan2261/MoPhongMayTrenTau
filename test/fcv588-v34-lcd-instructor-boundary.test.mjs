@@ -73,14 +73,18 @@ test("V34 presentation: normal range shows Auto without Vietnamese text; teacher
 });
 
 test("V34 presentation: disabled menu options keep canonical guards, not painted [HOLD]",()=>{
-  const state={...fake(),overlay:{kind:"menu",category:"System",itemIndex:3,editing:false}};
+  const tankenIndex=getFcvMenuItems("System",fake()).findIndex(x=>x.id==="system.tankenmaru");
+  const state={...fake(),overlay:{kind:"menu",category:"System",itemIndex:tankenIndex,editing:false}};
   const menu=projectFcvMainMenu(state);
   assert.ok(menu);
   const language=menu.rows.find(row=>row.id==="system.language");
-  assert.ok(language.disabled);
+  assert.equal(language.disabled,false);
   assert.doesNotMatch(language.text,/\[HOLD\]|\[N\/A\]/);
-  assert.equal(getFcvMenuItems("System",state).find(x=>x.id==="system.language")
-    .disabledReason,"RIGHTS_HOLD_LANGUAGE_ASSETS_AND_REBOOT_SOURCE_GAP");
+  const tanken=menu.rows.find(row=>row.id==="system.tankenmaru");
+  assert.ok(tanken.disabled);
+  assert.doesNotMatch(tanken.text,/\[HOLD\]|\[N\/A\]/);
+  assert.equal(getFcvMenuItems("System",state).find(x=>x.id==="system.tankenmaru")
+    .disabledReason,"SOURCE_GAP_TANKENMARU_OPTION_NOT_DECLARED");
 });
 
 test("V34 presentation: all new LCD help is routed to instructor metadata",async()=>{

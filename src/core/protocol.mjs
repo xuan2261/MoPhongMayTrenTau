@@ -91,9 +91,22 @@ export function classifyHoldDurationMs(durationMs, thresholdMs) {
   return durationMs > thresholdMs ? "long" : "short";
 }
 
-export function validateInput(input) {
+const DEFAULT_TRAINING_FIXTURES = Object.freeze([
+  "navigation",
+  "virtualMounting",
+  "lowBattery",
+  "systemError",
+  "tankenmaruOption",
+]);
+const DEFAULT_HOLD_CONTROLS = Object.freeze(["power", "func"]);
+
+export function validateInput(input, adapterContract = null) {
   if (!input || typeof input !== "object" || Array.isArray(input)) throw new TypeError("invalid input object");
-  if (!["tick", "ui-tick", "restore-settings", "training-fixture", "press", "rotate", "push", "down", "up", "cancel", "pad"].includes(input.kind)) {
+  if (![
+    "tick", "ui-tick", "restore-settings", "training-fixture",
+    "press", "rotate", "push", "down", "up", "cancel", "pad",
+    "pointer", "touch", "analog", "keypad",
+  ].includes(input.kind)) {
     throw new TypeError("unrecognized input kind");
   }
   const allowed = {
@@ -108,6 +121,10 @@ export function validateInput(input) {
     up: ["kind", "control", "durationMs"],
     cancel: ["kind", "control"],
     pad: ["kind", "control", "direction"],
+    pointer: ["kind", "control", "dx", "dy"],
+    touch: ["kind", "control", "x", "y", "phase"],
+    analog: ["kind", "control", "value"],
+    keypad: ["kind", "control", "key"],
   };
   if (Object.keys(input).some(key => !allowed[input.kind].includes(key))) {
     throw new TypeError("unknown or reserved input field");
@@ -136,31 +153,62 @@ export function validateInput(input) {
     return;
   }
   if (input.kind === "training-fixture") {
-    if (!["navigation","virtualMounting","lowBattery","systemError",
-      "tankenmaruOption"].includes(input.fixture) ||
-        typeof input.enabled !== "boolean") {
+    const allowedFixtures = Array.isArray(adapterContract?.fixtures)
+      ? adapterContract.fixtures
+      : DEFAULT_TRAINING_FIXTURES;
+    if (!allowedFixtures.includes(input.fixture) || typeof input.enabled !== "boolean") {
       throw new TypeError("invalid instructor training fixture");
     }
     return;
   }
-  if (typeof input.control !== "string" || !/^[a-z]{2,12}$/.test(input.control)) {
+  if (typeof input.control !== "string" || !/^[a-z][a-z0-9_-]{1,23}$/.test(input.control)) {
     throw new TypeError("invalid control id");
   }
-  if (input.kind === "pad" && (input.control !== "trackpad" ||
+  const padControls = adapterContract?.gestures && typeof adapterContract.gestures === "object"
+    ? Object.keys(adapterContract.gestures).filter(key => adapterContract.gestures[key]?.includes("pad"))
+    : ["trackpad"];
+  if (input.kind === "pad" && (!padControls.includes(input.control) ||
       !["up", "down", "left", "right"].includes(input.direction))) {
     throw new TypeError("invalid physical trackpad gesture");
   }
   if (input.kind === "rotate" && (!Number.isInteger(input.steps) || input.steps === 0 || Math.abs(input.steps) > 20)) {
     throw new RangeError("rotation steps must be -20..-1 or 1..20");
   }
-  if (["down", "up", "cancel"].includes(input.kind) && !["power", "func"].includes(input.control)) {
+  if (input.kind === "pointer") {
+    if (!Number.isFinite(input.dx) || !Number.isFinite(input.dy) ||
+        Math.abs(input.dx) > 500 || Math.abs(input.dy) > 500 ||
+        (input.dx === 0 && input.dy === 0)) {
+      throw new RangeError("pointer dx/dy must be non-zero finite offsets within -500..500");
+    }
+  }
+  if (input.kind === "touch") {
+    if (!Number.isFinite(input.x) || !Number.isFinite(input.y) ||
+        input.x < 0 || input.x > 4096 || input.y < 0 || input.y > 4096 ||
+        !["down", "move", "up", "cancel"].includes(input.phase)) {
+      throw new TypeError("invalid touch gesture coordinates or phase");
+    }
+  }
+  if (input.kind === "analog") {
+    if (!Number.isFinite(input.value) || input.value < -1000 || input.value > 1000) {
+      throw new RangeError("analog control value must be within -1000..1000");
+    }
+  }
+  if (input.kind === "keypad") {
+    if (typeof input.key !== "string" || !/^[0-9A-Za-z.*#+-]{1,8}$/.test(input.key)) {
+      throw new TypeError("invalid keypad token");
+    }
+  }
+  const holdControls = adapterContract?.holdThresholdMs && typeof adapterContract.holdThresholdMs === "object"
+    ? Object.keys(adapterContract.holdThresholdMs)
+    : DEFAULT_HOLD_CONTROLS;
+  if (["down", "up", "cancel"].includes(input.kind) && !holdControls.includes(input.control)) {
     throw new TypeError("press/release edges reserved for physical hold-capable keys");
   }
   if (input.kind === "up" && input.durationMs !== undefined &&
       (!Number.isInteger(input.durationMs) || input.durationMs < 0 || input.durationMs > 120000)) {
     throw new RangeError("invalid captured input duration");
   }
-  if (input.kind === "press" && ["power", "func"].includes(input.control)) {
+  if (input.kind === "press" && holdControls.includes(input.control)) {
     throw new TypeError("hold-capable keys require deterministic down/up edges");
   }
 }

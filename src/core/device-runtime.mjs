@@ -4,7 +4,15 @@
  * framework. It cannot mutate the canonical FCV session or WorldState.
  */
 import {createSession,dispatch,replay,sessionHash} from "./session.mjs";
-import {fingerprint,snapshotEventData} from "./protocol.mjs";
+import {
+  CORE_CONTRACT_VERSION, EVENT_SCHEMA_VERSION, TICK_DURATION_MS,
+  fingerprint, snapshotEventData, validateInput, classifyHoldTicks, classifyHoldDurationMs,
+} from "./protocol.mjs";
+import {observeTrainingStatus} from "./scenario.mjs";
+import {
+  DEFAULT_BRIDGE_WORLD_SCENARIO, MARITIME_WORLD_VERSION, NMEA_BUS_CONTRACT_VERSION,
+  initialMaritimeWorldState, advanceMaritimeWorld, projectMaritimeSensorBus,
+} from "./maritime-world.mjs";
 
 export const INERT_SECOND_DEVICE=Object.freeze({
   id:"synthetic.second-observer.test",
@@ -179,3 +187,296 @@ export function migrateCompatibleSingleReplayToMulti(adapter,scenario,secondary,
   }
   return createMultiReplay(runtime);
 }
+
+// ============================================================================
+// Active Multi-Device Bridge Session (2D Maritime World + Shared NMEA Bus)
+// ============================================================================
+
+export const BRIDGE_RUNTIME_VERSION = 1;
+
+function bridgeAdapterHash(adapter) {
+  return fingerprint({
+    id: adapter.id,
+    revision: adapter.revision,
+    profile: adapter.profile,
+    controls: adapter.controls,
+    gestures: adapter.gestures,
+    holdThresholdMs: adapter.holdThresholdMs ?? {},
+    ...(adapter.fixtures !== undefined ? {fixtures: adapter.fixtures} : {}),
+  });
+}
+
+function validateBridgeAdapters(adapters) {
+  if (!Array.isArray(adapters) || adapters.length < 1 || adapters.length > 8) {
+    throw new TypeError("bridge requires 1..8 active device adapters");
+  }
+  const seen = new Set();
+  for (const adapter of adapters) {
+    if (!adapter?.id || !adapter.profile || !adapter.gestures ||
+        typeof adapter.initial !== "function" || typeof adapter.reduce !== "function") {
+      throw new TypeError("each bridge adapter must provide id/profile/gestures/initial/reduce");
+    }
+    if (adapter.id === "bridge" || seen.has(adapter.id)) {
+      throw new Error(`duplicate or reserved bridge adapter id: ${adapter.id}`);
+    }
+    seen.add(adapter.id);
+  }
+}
+
+function uiElapsedSinceDeviceDown(events, control) {
+  let uiMs = 0;
+  for (let i = events.length - 1; i >= 0; i--) {
+    const ev = events[i];
+    if (ev.kind === "down" && ev.control === control) return uiMs;
+    if (ev.kind === "ui-tick" && Number.isInteger(ev.elapsedMs)) uiMs += ev.elapsedMs;
+  }
+  return uiMs;
+}
+
+export function createBridgeSession(adapters, scenario = DEFAULT_BRIDGE_WORLD_SCENARIO) {
+  validateBridgeAdapters(adapters);
+  const maritimeWorld = initialMaritimeWorldState(scenario);
+  const sensorBus = projectMaritimeSensorBus(scenario, maritimeWorld);
+  const devices = {};
+  const deviceOrder = [];
+  for (const adapter of adapters) {
+    deviceOrder.push(adapter.id);
+    devices[adapter.id] = {
+      deviceId: adapter.id,
+      profileRevision: adapter.revision,
+      profileHash: bridgeAdapterHash(adapter),
+      deviceState: adapter.initial(),
+      heldControls: {},
+      events: [],
+    };
+  }
+  return {
+    bridgeVersion: BRIDGE_RUNTIME_VERSION,
+    meta: Object.freeze({
+      coreVersion: CORE_CONTRACT_VERSION,
+      eventSchemaVersion: EVENT_SCHEMA_VERSION,
+      maritimeWorldVersion: MARITIME_WORLD_VERSION,
+      nmeaBusVersion: NMEA_BUS_CONTRACT_VERSION,
+      tickDurationMs: TICK_DURATION_MS,
+      scenarioHash: fingerprint(scenario),
+      deviceProfiles: Object.freeze(adapters.map(a => Object.freeze({
+        id: a.id,
+        revision: a.revision,
+        profileHash: bridgeAdapterHash(a),
+      }))),
+    }),
+    scenarioId: scenario.id,
+    scenarioVersion: scenario.version,
+    deviceOrder: Object.freeze(deviceOrder),
+    maritimeWorld,
+    sensorBus,
+    devices,
+    history: [],
+  };
+}
+
+export function dispatchBridgeInput(bridge, adapters, targetId, input, scenario = DEFAULT_BRIDGE_WORLD_SCENARIO) {
+  validateBridgeAdapters(adapters);
+  if (!bridge || bridge.bridgeVersion !== BRIDGE_RUNTIME_VERSION ||
+      bridge.scenarioId !== scenario?.id || bridge.scenarioVersion !== scenario?.version ||
+      bridge.meta?.scenarioHash !== fingerprint(scenario)) {
+    throw new Error("bridge scenario/contract mismatch");
+  }
+  if (adapters.length !== bridge.deviceOrder.length ||
+      adapters.some((a, idx) => a.id !== bridge.deviceOrder[idx] ||
+        bridge.devices[a.id]?.profileHash !== bridgeAdapterHash(a))) {
+    throw new Error("bridge adapter set/profile mismatch");
+  }
+  if (input?.seq !== undefined || input?.tick !== undefined || input?.schemaVersion !== undefined) {
+    throw new TypeError("input must not override runtime event metadata");
+  }
+
+  if (targetId === "bridge") {
+    if (input?.kind !== "tick") {
+      throw new TypeError("bridge-wide target only accepts synchronized tick events");
+    }
+    validateInput(input);
+    const steps = input.steps ?? 1;
+    const prevTick = bridge.maritimeWorld.simTick;
+    const maritimeWorld = advanceMaritimeWorld(scenario, bridge.maritimeWorld, steps);
+    const sensorBus = projectMaritimeSensorBus(scenario, maritimeWorld);
+    const sensorObservation = observeTrainingStatus(scenario, maritimeWorld);
+    const canonicalInput = snapshotEventData(input, {freeze: true});
+    const nextDevices = {};
+    for (const adapter of adapters) {
+      const slot = bridge.devices[adapter.id];
+      const devEvent = Object.freeze({
+        schemaVersion: EVENT_SCHEMA_VERSION,
+        tick: prevTick,
+        seq: slot.events.length + 1,
+        ...canonicalInput,
+      });
+      const nextState = adapter.reduce(slot.deviceState, {
+        ...devEvent,
+        sensorObservation,
+        maritimeBus: sensorBus,
+      });
+      nextDevices[adapter.id] = {
+        ...slot,
+        deviceState: nextState,
+        events: [...slot.events, devEvent],
+      };
+    }
+    const historyRecord = Object.freeze({
+      seq: bridge.history.length + 1,
+      tick: prevTick,
+      targetId: "bridge",
+      input: canonicalInput,
+    });
+    return {
+      ...bridge,
+      maritimeWorld,
+      sensorBus,
+      devices: nextDevices,
+      history: [...bridge.history, historyRecord],
+    };
+  }
+
+  const adapter = adapters.find(a => a.id === targetId);
+  if (!adapter) {
+    throw new Error(`unknown bridge target device: ${targetId}`);
+  }
+  if (input?.kind === "tick") {
+    throw new TypeError("synchronized tick must be dispatched to targetId 'bridge'");
+  }
+  validateInput(input, adapter);
+  if (!["ui-tick", "restore-settings", "training-fixture"].includes(input.kind) &&
+      !adapter.gestures[input.control]?.includes(input.kind)) {
+    throw new TypeError("unsupported control gesture for target bridge device");
+  }
+
+  const slot = bridge.devices[targetId];
+  const canonicalInput = snapshotEventData(input, {freeze: true});
+  const devEvent = Object.freeze({
+    schemaVersion: EVENT_SCHEMA_VERSION,
+    tick: bridge.maritimeWorld.simTick,
+    seq: slot.events.length + 1,
+    ...canonicalInput,
+  });
+  const sensorObservation = observeTrainingStatus(scenario, bridge.maritimeWorld);
+  const enrich = payload => ({
+    ...payload,
+    sensorObservation,
+    maritimeBus: bridge.sensorBus,
+  });
+
+  let heldControls = slot.heldControls;
+  let deviceState = slot.deviceState;
+  if (devEvent.kind === "down") {
+    if (Object.hasOwn(heldControls, devEvent.control)) throw new Error("duplicate press edge");
+    heldControls = {...heldControls, [devEvent.control]: bridge.maritimeWorld.simTick};
+    deviceState = adapter.reduce(deviceState, enrich(devEvent));
+  } else if (devEvent.kind === "cancel") {
+    if (!Object.hasOwn(heldControls, devEvent.control)) throw new Error("cancel without press edge");
+    heldControls = {...heldControls};
+    delete heldControls[devEvent.control];
+    deviceState = adapter.reduce(deviceState, enrich(devEvent));
+  } else if (devEvent.kind === "up") {
+    if (!Object.hasOwn(heldControls, devEvent.control)) throw new Error("release without press edge");
+    const heldSinceTick = heldControls[devEvent.control];
+    heldControls = {...heldControls};
+    delete heldControls[devEvent.control];
+    const threshold = adapter.holdThresholdMs?.[devEvent.control];
+    if (!Number.isInteger(threshold)) throw new Error("missing device hold threshold");
+    const fallbackDurationMs = Math.max(
+      (bridge.maritimeWorld.simTick - heldSinceTick) * TICK_DURATION_MS,
+      Math.min(120000, uiElapsedSinceDeviceDown(slot.events, devEvent.control)),
+    );
+    const hold = devEvent.durationMs === undefined
+      ? (bridge.maritimeWorld.simTick - heldSinceTick < 0
+        ? classifyHoldTicks(bridge.maritimeWorld.simTick - heldSinceTick, threshold)
+        : classifyHoldDurationMs(Math.min(120000, fallbackDurationMs), threshold))
+      : classifyHoldDurationMs(devEvent.durationMs, threshold);
+    deviceState = adapter.reduce(deviceState, enrich({
+      kind: "press", control: devEvent.control, hold,
+    }));
+  } else {
+    deviceState = adapter.reduce(deviceState, enrich(devEvent));
+  }
+
+  const nextDevices = {
+    ...bridge.devices,
+    [targetId]: {
+      ...slot,
+      deviceState,
+      heldControls,
+      events: [...slot.events, devEvent],
+    },
+  };
+  const historyRecord = Object.freeze({
+    seq: bridge.history.length + 1,
+    tick: bridge.maritimeWorld.simTick,
+    targetId,
+    input: canonicalInput,
+  });
+  return {
+    ...bridge,
+    devices: nextDevices,
+    history: [...bridge.history, historyRecord],
+  };
+}
+
+export function bridgeSessionHash(bridge) {
+  return fingerprint({
+    bridgeVersion: bridge.bridgeVersion,
+    meta: bridge.meta,
+    maritimeWorld: bridge.maritimeWorld,
+    sensorBusFingerprint: bridge.sensorBus.busFingerprint,
+    devices: bridge.devices,
+    history: bridge.history,
+  });
+}
+
+export function createBridgeReplay(bridge) {
+  const body = {
+    bridgeVersion: BRIDGE_RUNTIME_VERSION,
+    scenarioId: bridge.scenarioId,
+    scenarioVersion: bridge.scenarioVersion,
+    deviceOrder: [...bridge.deviceOrder],
+    meta: snapshotEventData(bridge.meta),
+    history: bridge.history.map(entry => snapshotEventData(entry)),
+    finalBridgeHash: bridgeSessionHash(bridge),
+  };
+  return {...body, contentFingerprint: fingerprint(body)};
+}
+
+export function replayBridgeSession(adapters, scenario, envelope) {
+  let session = createBridgeSession(adapters, scenario);
+  const required = [
+    "bridgeVersion", "contentFingerprint", "deviceOrder",
+    "finalBridgeHash", "history", "meta", "scenarioId", "scenarioVersion",
+  ];
+  if (!envelope || typeof envelope !== "object" || Array.isArray(envelope) ||
+      Object.keys(envelope).sort().join("|") !== required.sort().join("|") ||
+      envelope.bridgeVersion !== BRIDGE_RUNTIME_VERSION ||
+      !Array.isArray(envelope.history) || !Array.isArray(envelope.deviceOrder)) {
+    throw new Error("bridge replay schema/contract mismatch");
+  }
+  const {contentFingerprint, ...body} = envelope;
+  if (contentFingerprint !== fingerprint(body)) {
+    throw new Error("bridge replay content fingerprint mismatch");
+  }
+  if (envelope.scenarioId !== session.scenarioId ||
+      envelope.scenarioVersion !== session.scenarioVersion ||
+      envelope.deviceOrder.join("|") !== session.deviceOrder.join("|") ||
+      fingerprint(envelope.meta) !== fingerprint(session.meta)) {
+    throw new Error("bridge replay device set/profile/scenario mismatch");
+  }
+  for (const entry of envelope.history) {
+    if (entry.seq !== session.history.length + 1 ||
+        entry.tick !== session.maritimeWorld.simTick) {
+      throw new Error("bridge replay clock/sequence mismatch");
+    }
+    session = dispatchBridgeInput(session, adapters, entry.targetId, entry.input, scenario);
+  }
+  if (bridgeSessionHash(session) !== envelope.finalBridgeHash) {
+    throw new Error("bridge replay final state hash mismatch / reducer drift");
+  }
+  return session;
+}
+

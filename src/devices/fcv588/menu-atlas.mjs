@@ -4,6 +4,7 @@
  * interpretation; this is NOT a licensed firmware extract or a factory menu dump.
  */
 import {resolveFcvCapability} from "./capabilities.mjs";
+import {FCV_LANGUAGES} from "./i18n.mjs";
 
 export const FCV_MENU_CATEGORIES = Object.freeze([
   "Sounder", "Display", "Alarm", "Data", "System",
@@ -76,7 +77,7 @@ const group = {
     ["interference","Interference",["Auto","High","Medium","Low","Off"],"§1.11"],
     ["colorErase","Color Erase",numeric(0,50),"§1.13"],
     ["clutter","Clutter",numeric(0,100),"§1.12"],
-    ["whiteLine","White Line",yesNo,"§1.22"],
+    ["whiteLine","White Line",Object.freeze(["Off","On","Edge"]),"§1.22"],
     ["whiteMarker","White Marker",["Off","White","Gray"],"§1.22"],
     ["tvg","TVG",["Low","Medium","High"],"§1.22"],
     ["smoothing","Smoothing",yesNo,"§1.22"],
@@ -135,7 +136,7 @@ const group = {
     ["rangePresets","Range Presets",null,"§2.2"],
     ["zoomRange","Zoom Range",["5","10","20","40"],"§2.2"],
     ["blRange","B/L Range",["5","8"],"§2.2"],
-    ["language","Language",["English"],"§2.4"],
+    ["language","Language",FCV_LANGUAGES,"§2.4"],
     ["units","Units",null,"§2.5"],
     ["calibration","Calibration",null,"§2.6"],
     ["transducer","Transducer",["GENERIC_600W","GENERIC_1KW","525STID-PWD"],"§2.7"],
@@ -177,7 +178,7 @@ export const FCV_MENU_ENTRIES = Object.freeze(FCV_MENU_CATEGORIES.flatMap(catego
 ));
 
 const installationEntries = [
-  ["Language","language",["English"]],
+  ["Language","language",FCV_LANGUAGES],
   ["Type","transducer",["GENERIC_600W","GENERIC_1KW","525STID-PWD"]],
   ["Units","units",["Metric","Feet","Fathom"]],
   ["Demonstrate","demo",yesNo],
@@ -188,7 +189,7 @@ const installation = Object.freeze(installationEntries.map(([label,settingKey,ch
   label, menuPath: "Installation > " + label,
   manualSection: "§4.10", sourceId: "PUB-FCV-001",
   sourceStatus: "CURATED_REFERENCE_INSTALLATION_ONLY",
-  settingKey, choices,
+  settingKey, choices: Object.freeze([...choices]),
 })));
 
 export function getInstallationMenu(state={}) {
@@ -198,8 +199,6 @@ export function getInstallationMenu(state={}) {
   return installation.filter(item=>
     item.settingKey!=="nmea" || state.settings?.tankenmaru!=="On")
     .map(item=>{
-    if(item.settingKey==="language")return {...item,disabled:true,
-      disabledReason:"RIGHTS_HOLD_LANGUAGE_ASSETS_AND_REBOOT_SOURCE_GAP"};
     if(item.settingKey==="tankenmaru")return (
       state.trainingFixture?.tankenmaruOption===true
         ?{...item,disabled:false}
@@ -237,8 +236,6 @@ export function getFcvMenuItems(category, state = {}) {
           disabledReason:"WINDOW_SIZE_REQUIRES_SPLIT_WITHOUT_ASCOPE"};
       }
       if(entry.id==="display.windowSize")return {...entry,disabled:false};
-      if(entry.id==="system.language")return {...entry,disabled:true,
-        disabledReason:"RIGHTS_HOLD_LANGUAGE_ASSETS_AND_REBOOT_SOURCE_GAP"};
       if(entry.id==="system.tankenmaru")return (
         state.trainingFixture?.tankenmaruOption===true
           ?{...entry,disabled:false}

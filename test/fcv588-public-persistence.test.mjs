@@ -16,8 +16,8 @@ test("local training settings roundtrip is schema-versioned, bounded and never i
     transducer:"GENERIC_1KW",units:"Feet",demo:"Off"};
   const encoded=encodeFcvSettings(settings);
   assert.match(encoded,/"schemaVersion":18/);
-  assert.equal(adapter.revision,"F1-public-reference-23",
-    "V43 OEM BRILL behavior requires a distinct replay/settings profile boundary");
+  assert.equal(adapter.revision,"F1-public-reference-24",
+    "V43/D04 profile advances replay/settings boundary");
   assert.match(FCV_SETTINGS_STORAGE_KEY,/settings\.v18$/);
   assert.equal(JSON.parse(encoded).profileRevision,adapter.revision);
   assert.match(FCV_SETTINGS_STORAGE_KEY,/fcv588.*settings/);

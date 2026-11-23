@@ -114,3 +114,8 @@ export function decodeFcvProfile21Settings(input){
 export function decodeFcvProfile22Settings(input){
   return decodeSettingsForProfile(input,"F1-public-reference-22");
 }
+
+/** Explicit settings-only import from archived profile23. */
+export function decodeFcvProfile23Settings(input){
+  return decodeSettingsForProfile(input,"F1-public-reference-23");
+}

@@ -230,7 +230,7 @@ test("C11 Data source selection cannot fabricate C01 temperature/speed alarm inp
     createReplayEnvelope(s))),sessionHash(s));
 });
 
-test("D04 installer does not allow an unverified firmware language/reboot branch",()=>{
+test("D04 installer commits Tieng Viet via §2.4 reboot and rejects unsupported locales",()=>{
   let s=boot();
   s=press(s,"menu");
   for(let i=0;s.deviceState.overlay.category!=="System"&&i<7;i++)s=pad(s,"right");
@@ -241,10 +241,17 @@ test("D04 installer does not allow an unverified firmware language/reboot branch
   s=press(s,"enter");
   assert.equal(s.deviceState.overlay.kind,"installation");
   assert.equal(s.deviceState.overlay.itemIndex,0);
-  const unchanged={...s.deviceState.settings};
   s=press(s,"enter");
-  assert.equal(s.deviceState.overlay.editing,false);
-  assert.match(s.deviceState.notice,/LANGUAGE.*(RIGHTS_HOLD|SOURCE_GAP)/i);
-  assert.deepEqual(s.deviceState.settings,unchanged,
-    "unsupported language cannot forge a persisted setting");
+  assert.equal(s.deviceState.overlay.editing,true);
+  assert.equal(s.deviceState.overlay.draftValue,"English");
+  s=pad(s,"right");
+  assert.equal(s.deviceState.overlay.draftValue,"Tieng Viet");
+  s=press(s,"enter");
+  assert.equal(s.deviceState.settings.language,"Tieng Viet");
+  assert.equal(s.deviceState.power,"booting");
+  assert.equal(s.deviceState.bootElapsed,0);
+  assert.equal(s.deviceState.overlay,null);
+  assert.match(s.deviceState.notice,/LANGUAGE UPDATED · REBOOTING/);
+  assert.throws(()=>send(createSession(adapter,TRAINING_SCENARIO),
+    {kind:"restore-settings",settings:{language:"Japanese"}}),/invalid settings value/);
 });

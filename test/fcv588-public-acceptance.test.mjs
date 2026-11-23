@@ -95,7 +95,10 @@ test("64+D15 classification fails closed instead of treating an unreviewed domai
   const audit=await read("../docs/evidence/fcv588-public-implementation-status.json");
   const byId=new Map([...audit.operatorRows,...audit.teacherRows]
     .map(row=>[row.featureId,row]));
-  assert.equal(byId.get("D04").checkpointStatus,"NOT_IMPLEMENTED");
+  assert.equal(byId.get("D04").checkpointStatus,"OPERABLE_SYNTHETIC_SUBSET");
+  assert.deepEqual(byId.get("D04").testReferences,
+    ["test/fcv588-d04-vietnamese-hardware-fidelity.test.mjs"]);
+  assert.equal([...byId.values()].filter(x=>x.checkpointStatus==="NOT_IMPLEMENTED").length,0);
   assert.equal(byId.get("D14").checkpointStatus,"MENU_ONLY_PARTIAL");
   assert.equal(byId.get("C11").checkpointStatus,"MENU_ONLY_PARTIAL");
   assert.equal(byId.get("D06").checkpointStatus,"OPERABLE_SYNTHETIC_SUBSET");
@@ -109,4 +112,6 @@ test("64+D15 classification fails closed instead of treating an unreviewed domai
     import.meta.url),"utf8");
   assert.doesNotMatch(generator,/const open=new Set\(\[\]\)/,
     "implicit empty open set would promote unreviewed features");
+  assert.match(generator,/reviewedSubsetIds\.has\(row\.featureId\)\?"OPERABLE_SYNTHETIC_SUBSET":\s*"NOT_IMPLEMENTED"/,
+    "unknown feature IDs must still fail closed to NOT_IMPLEMENTED");
 });

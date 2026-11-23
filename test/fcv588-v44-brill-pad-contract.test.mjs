@@ -127,7 +127,7 @@ test("V44 canceled POWER hold retains mixed BRILL preview, the UI clock and sens
 
 test("V44 projector remains read-only and source gap does not alter V43 profile",()=>{
   let s=arrow(short(open()),"left");
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-24");
   assert.equal(s.profileRevision,FCV588_PUBLIC_PROFILE_REVISION);
   const before=sessionHash(s);
   const view=projectFcvControl(s.deviceState);
