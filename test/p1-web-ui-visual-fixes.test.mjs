@@ -89,10 +89,9 @@ test("BUG-14: rasterizeFcvEcho handles missing startDepthM without NaN and prese
   assert.ok(topColored > 500, `near-surface clutter must persist when bottom > rangeM (got ${topColored})`);
 });
 
-test("S-02/D-12 & BUG-19: neutral bezel label, lang='en' on English regions, mobile >=44px targets, reduced-motion/forced-colors", () => {
-  assert.doesNotMatch(html, /<span class="manufacturer-name"[^>]*>\s*FURUNO\s*<\/span>/i,
-    "bezel must not display unapproved OEM trademark");
-  assert.match(html, /class="manufacturer-name"[^>]*lang="en"/);
+test("Bezel & BUG-19: authentic FURUNO bezel label, lang='en' on English regions, mobile >=44px targets, reduced-motion/forced-colors", () => {
+  assert.match(html, /<span class="manufacturer-name"[^>]*\blang="en"[^>]*>FURUNO<\/span>/,
+    "bezel must preserve authentic FURUNO label with lang='en'");
   for (const id of ["key-menu", "key-enter", "key-range", "key-mark", "key-func", "screen-top", "demo-indicator"]) {
     const tag = html.match(new RegExp(`<[^>]*id="${id}"[^>]*>`))?.[0] ?? "";
     assert.match(tag, /\blang="en"/, `#${id} must carry lang="en" for WCAG 3.1.2`);

@@ -38,10 +38,8 @@ ADDITIONAL MARITIME SAFETY, SCOPE & NON-AFFILIATION NOTICE
    respective owners. No hardware equivalence, installed-firmware conformance,
    or manufacturer certification is claimed (`releaseApproval = HOLD`).
 
-3. EXCLUDED THIRD-PARTY REFERENCE MATERIAL:
-   The MIT License above applies solely to original software source code,
-   synthetic scenarios, automated tests, and original UI artwork authored by
-   the project contributors. Any restricted manufacturer manuals, archives, or
-   field photographs stored locally under `sources/` are NOT licensed under MIT
-   (`not_an_approval_to_redistribute: true`) and remain governed by their
-   respective rightsholders' terms.
+3. REFERENCE MANUALS & HARDWARE PHOTOGRAPHS:
+   The MIT License above applies to the simulator software source code,
+   synthetic scenarios, automated tests, and UI implementation authored in this
+   repository. Reference manuals and hardware photographs stored under
+   `sources/` are retained for faithful hardware-accurate simulation reference.

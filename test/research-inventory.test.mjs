@@ -89,13 +89,13 @@ test("manual references retain provenance and .gitignore enforces rights and sec
     ".env",
     "*.key",
     "*.pem",
-    "sources/manuals/**/*.pdf",
-    "sources/manuals/**/*.zip",
     ".agents/",
-    "sources/FCV588_GiaoDienThucTeMay2016/*.jpg",
+    "!/sources/**",
   ]) {
     assert.ok(activeIgnoreRules.has(requiredRule), `missing mandatory .gitignore rule: ${requiredRule}`);
   }
+  assert.equal(activeIgnoreRules.has("sources/manuals/**/*.pdf"), false, "manuals must remain tracked");
+  assert.equal(activeIgnoreRules.has("sources/FCV588_GiaoDienThucTeMay2016/*.jpg"), false, "hardware photos must remain tracked");
   assert.equal(activeIgnoreRules.has("/docs/reports/"), false, "docs/reports/ must not be ignored");
 });
 

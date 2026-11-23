@@ -39,20 +39,9 @@
 # Temporary browser/QA runners, captured stderr, screenshots and local paths.
 /plans/**/research/qa-*/
 
-# Copyright/rights-restricted manufacturer files, field photos and private inherited chat.
-sources/FCV588_GiaoDienThucTeMay2016/*.jpg
-sources/FCV588_GiaoDienThucTeMay2016/*.JPG
-/sources/manuals/*
-!/sources/manuals/README.md
-!/sources/manuals/MANIFEST.json
-!/sources/manuals/ARCHIVE_COVERAGE.json
-!/sources/manuals/VERIFICATION_RECEIPT.json
-# Retain historical explicit rights gates (also asserted by Node regression).
-sources/manuals/**/*.pdf
-sources/manuals/**/*.PDF
-sources/manuals/**/*.zip
-sources/manuals/**/*.ZIP
-/VietMoPhongChoTatCaCacMay.md
+# Reference manuals and hardware photos under sources/ are explicitly retained in Git.
+!/sources/
+!/sources/**
 
 # Generated files, installers and platform-specific caches.
 node_modules/
@@ -67,8 +56,6 @@ build/
 *.msix
 *.asar
 *.7z
-*.zip
-*.pdf
 *.p12
 *.pfx
 *.key

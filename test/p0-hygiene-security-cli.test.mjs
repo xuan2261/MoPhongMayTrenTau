@@ -66,9 +66,7 @@ test("S-03 & CRLF .gitignore and .gitattributes protect secrets, rights-restrict
   for (const rule of [
     ".agents/",
     "!/docs/reports/",
-    "sources/FCV588_GiaoDienThucTeMay2016/*.jpg",
-    "sources/manuals/**/*.pdf",
-    "sources/manuals/**/*.zip",
+    "!/sources/**",
     "node_modules/",
     "__pycache__/",
     "*.pyc",
@@ -78,6 +76,8 @@ test("S-03 & CRLF .gitignore and .gitattributes protect secrets, rights-restrict
   ]) {
     assert.ok(rules.has(rule), `missing .gitignore rule: ${rule}`);
   }
+  assert.equal(rules.has("sources/manuals/**/*.pdf"), false);
+  assert.equal(rules.has("sources/FCV588_GiaoDienThucTeMay2016/*.jpg"), false);
 
   const gitattributes = await readFile(resolve(ROOT, ".gitattributes"), "utf8");
   assert.match(gitattributes, /^docs\/qa\/\*\.json\s+-text$/m);
