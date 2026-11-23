@@ -7,7 +7,7 @@ ERROR: test_fcv588_chrome_harness_identity (unittest.loader._FailedTest.test_fcv
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_fcv588_chrome_harness_identity
 Traceback (most recent call last):
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
     module = __import__(module_name)
              ^^^^^^^^^^^^^^^^^^^^^^^
 ModuleNotFoundError: No module named 'test.test_fcv588_chrome_harness_identity'
@@ -18,7 +18,7 @@ ERROR: test_fcv588_chrome_response_integrity (unittest.loader._FailedTest.test_f
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_fcv588_chrome_response_integrity
 Traceback (most recent call last):
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
     module = __import__(module_name)
              ^^^^^^^^^^^^^^^^^^^^^^^
 ModuleNotFoundError: No module named 'test.test_fcv588_chrome_response_integrity'
@@ -29,7 +29,7 @@ ERROR: test_fcv588_visual_atlas (unittest.loader._FailedTest.test_fcv588_visual_
 ----------------------------------------------------------------------
 ImportError: Failed to import test module: test_fcv588_visual_atlas
 Traceback (most recent call last):
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 154, in loadTestsFromName
     module = __import__(module_name)
              ^^^^^^^^^^^^^^^^^^^^^^^
 ModuleNotFoundError: No module named 'test.test_fcv588_visual_atlas'

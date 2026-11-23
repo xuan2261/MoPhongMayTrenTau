@@ -62,5 +62,5 @@ test("V49 White Marker remains a firmware-unknown classroom enum in profile21",(
   const cue=projectFcvSourceCue(s,0);
   assert.equal(cue.visible,true);
   assert.equal(cue.status,"TRAINING_WHITE_MARKER_PREVIEW_FIRMWARE_UNKNOWN");
-  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-22");
+  assert.equal(FCV588_PUBLIC_PROFILE_REVISION,"F1-public-reference-23");
 });

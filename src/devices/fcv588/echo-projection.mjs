@@ -2,7 +2,7 @@
  * Deterministic synthetic FCV-588 DISPLAY projection, not acoustic physics.
  * No world/sensor mutation, real probe access, OEM image or calibration claim.
  */
-import {makeEchoFrame,SYNTHETIC_SEABED_PROVENANCE_SOURCE,
+import {makeEchoFrame,effectiveGain,SYNTHETIC_SEABED_PROVENANCE_SOURCE,
   SYNTHETIC_SOUNDER_SOURCE_IDENTITY,SOUNDER_COLUMN_SECONDS,sounderSourceRowForDepth} from
   "../../core/scenario.mjs";
 import {resolveFcvCapability} from "./capabilities.mjs";
@@ -76,7 +76,7 @@ export function projectFcvFishAnnotations(observation,frame,enabled){
   if(!Number.isInteger(observation.simTick) ||
       !Number.isInteger(frame?.columns) || frame.columns<1 ||
       !Number.isFinite(frame.rangeM) || frame.rangeM<=0)return [];
-  const spanSeconds=observation.columns*0.46;
+  const spanSeconds=observation.columns*(observation.columnSeconds??SOUNDER_COLUMN_SECONDS);
   return observation.syntheticTargets.flatMap(target=>{
     if(target.sourceClass!=="SYNTHETIC_FIXTURE" ||
        !Number.isFinite(target.depthM) ||
@@ -203,13 +203,11 @@ function overlaysFor(state,frequencyKhz) {
   };
 }
 
-/** Return original-view pixels of synthetic 50/200 kHz data. */
-export function projectFcvEcho(observation,state,{frequencyKhz=50,rows=120}={}) {
-  const frame=makeEchoFrame(observation,state,{frequencyKhz,rows});
-  const settings=state.settings ?? {};
-  const overlays=overlaysFor(state,frequencyKhz);
-  const {columns}=frame;
-  const output=new Uint8Array(frame.pixels.length);
+function applyEchoPipeline(inputPixels,rows,columns,settings,overlays,frequencyKhz,{
+  depthFractionAt=(y)=>y/(rows-1),
+  zeroLineAt=(y)=>y<2,
+}={}){
+  const output=new Uint8Array(inputPixels.length);
   const clutter=clamp(Number(settings.clutter ?? 0),0,100);
   const erase=clamp(Number(settings.colorErase ?? 0),0,50);
   const interference=settings.interference ?? "Auto";
@@ -221,31 +219,40 @@ export function projectFcvEcho(observation,state,{frequencyKhz=50,rows=120}={}) 
       ?clamp(Number(txPower.slice(0,-1))/100,0,1):1;
   const gainAdj=Number(settings[frequencyKhz===200?"gainAdjHF":"gainAdjLF"]??"0");
   const gainScale=clamp(1+(Number.isFinite(gainAdj)?gainAdj:0)/100,0.8,1.2);
+  const rezBoostFactor=settings.rezBoost==="Enhanced"?1.26:1.14;
   for(let y=0;y<rows;y++){
-    const depthFraction=y/(rows-1);
     for(let x=0;x<columns;x++){
-      let value=frame.pixels[y*columns+x];
+      let value=inputPixels[y*columns+x];
       if(value<=clutter*1.25+erase*2+interferenceThreshold) value=0;
+      const depthFraction=depthFractionAt(y,x);
       if(tvg==="High") value=Math.round(value*(0.73+depthFraction*0.27));
       else if(tvg==="Medium") value=Math.round(value*(0.88+depthFraction*0.12));
-      if(overlays.rezBoost) value=clamp(Math.round((value-25)*1.22+25),0,255);
-      if(settings.zeroLineRejector==="On" && y<2)value=0;
+      if(overlays.rezBoost) value=clamp(Math.round((value-25)*rezBoostFactor+25),0,255);
+      if(settings.zeroLineRejector==="On" && zeroLineAt(y,x))value=0;
       output[y*columns+x]=clamp(Math.round(value*txScale*gainScale),0,255);
     }
   }
-  let pixels=output;
-  if(settings.smoothing==="On"){
-    // Per-row 1:2:1 filter is a deterministic illustrative approximation,
-    // never a modification of acoustic observations or a firmware claim.
-    pixels=new Uint8Array(output.length);
-    for(let y=0;y<rows;y++){
-      for(let x=0;x<columns;x++){
-        const i=y*columns+x;
-        pixels[i]=Math.round((output[y*columns+Math.max(0,x-1)]+
-          output[i]*2+output[y*columns+Math.min(columns-1,x+1)])/4);
-      }
+  if(settings.smoothing!=="On")return output;
+  // Per-row 1:2:1 filter is a deterministic illustrative approximation,
+  // never a modification of acoustic observations or a firmware claim.
+  const smoothed=new Uint8Array(output.length);
+  for(let y=0;y<rows;y++){
+    for(let x=0;x<columns;x++){
+      const i=y*columns+x;
+      smoothed[i]=Math.round((output[y*columns+Math.max(0,x-1)]+
+        output[i]*2+output[y*columns+Math.min(columns-1,x+1)])/4);
     }
   }
+  return smoothed;
+}
+
+/** Return original-view pixels of synthetic 50/200 kHz data. */
+export function projectFcvEcho(observation,state,{frequencyKhz=50,rows=120}={}) {
+  const frame=makeEchoFrame(observation,state,{frequencyKhz,rows});
+  const settings=state.settings ?? {};
+  const overlays=overlaysFor(state,frequencyKhz);
+  const {columns}=frame;
+  const pixels=applyEchoPipeline(frame.pixels,rows,columns,settings,overlays,frequencyKhz);
   const projectionKey=JSON.stringify([state.rangeMode,state.rangeIndex,
     state.gainMode,state.manualGain,state.autoGainOffset,settings.clutter,
     settings.colorErase,settings.interference,settings.tvg,settings.rezBoost,
@@ -264,7 +271,7 @@ export function projectFcvEcho(observation,state,{frequencyKhz=50,rows=120}={}) 
 
 /** Bottom Lock consumes only authored per-column synthetic seabed provenance.
  * Raw pixel intensity is never used to decide whether a return is seabed. */
-function bottomLockSourceAnchors(frame,observation,seabedProvenance,seabedSourceIdentity){
+function bottomLockRawAnchors(frame,observation,seabedProvenance,seabedSourceIdentity){
   if(seabedProvenance?.sourceClass!==SYNTHETIC_SEABED_PROVENANCE_SOURCE ||
       seabedSourceIdentity?.sourceClass!==SYNTHETIC_SOUNDER_SOURCE_IDENTITY ||
       seabedProvenance.scenarioId!==seabedSourceIdentity.scenarioId ||
@@ -283,30 +290,35 @@ function bottomLockSourceAnchors(frame,observation,seabedProvenance,seabedSource
       !Number.isInteger(frame?.rows) || frame.rows<2 ||
       !Number.isFinite(frame.rangeM) || frame.rangeM<=0)return null;
   const start=frame.startDepthM??0;
-  const anchors=new Int32Array(frame.columns).fill(-1);
+  const maxVisibleDepthRow=sounderSourceRowForDepth(observation,start+frame.rangeM);
+  const minVisibleDepthRow=sounderSourceRowForDepth(observation,start);
+  const rawAnchors=new Int32Array(frame.columns).fill(-1);
+  const colSec=observation.columnSeconds??SOUNDER_COLUMN_SECONDS;
   for(let x=0;x<frame.columns;x++){
     const authored=seabedProvenance.columnBottoms[x];
-    const expectedTime=observation.simTick-(frame.columns-x)*SOUNDER_COLUMN_SECONDS;
+    const expectedTime=observation.simTick-(frame.columns-x)*colSec;
     if(authored?.present!==true || !Number.isFinite(authored.depthM) ||
         !Number.isFinite(authored.sampleTime) ||
         Math.abs(authored.sampleTime-expectedTime)>1e-12)return null;
     const rawBottomRow=Math.ceil(authored.depthM/observation.maxDepthM*
       (observation.rows-1));
-    let anchor=-1;
-    for(let y=0;y<frame.rows;y++){
-      const displayDepth=start+y/(frame.rows-1)*frame.rangeM;
-      if(sounderSourceRowForDepth(observation,displayDepth)>=rawBottomRow){
-        anchor=y;
-        break;
-      }
-    }
-    if(anchor<0)return null;
-    anchors[x]=anchor;
+    if(rawBottomRow<minVisibleDepthRow || rawBottomRow>maxVisibleDepthRow ||
+        rawBottomRow<0 || rawBottomRow>=observation.rows)return null;
+    rawAnchors[x]=rawBottomRow;
   }
-  return anchors;
+  return rawAnchors;
 }
 
-/** Zoom a visual slice around the bottom or VRM using only synthetic pixels. */
+function sampleRawObservationRow(src,obsRows,columns,x,rawPos,gainMultiplier){
+  const pos=clamp(rawPos,0,obsRows-1);
+  const r0=Math.floor(pos);
+  const r1=Math.min(obsRows-1,r0+1);
+  const t=pos-r0;
+  const raw=t===0?src[r0*columns+x]:src[r0*columns+x]*(1-t)+src[r1*columns+x]*t;
+  return Math.round(clamp((raw/255)*gainMultiplier,0,1)*255);
+}
+
+/** Zoom a visual slice around the bottom or VRM directly from raw 301-row observation. */
 export function projectFcvZoom(observation,state,{
   frequencyKhz=50,rows=120,seabedProvenance=null,seabedSourceIdentity=null,
   displayContract="P04_HISTORIC"
@@ -314,47 +326,143 @@ export function projectFcvZoom(observation,state,{
   if(!["P04_HISTORIC","P23_LOWER_BOTTOM"].includes(displayContract))
     throw new TypeError("unsupported FCV-588 display projection contract");
   const base=projectFcvEcho(observation,state,{frequencyKhz,rows});
-  const zoomMode=state.settings?.zoomMode ?? "Bottom Zoom";
+  const settings=state.settings ?? {};
+  const zoomMode=settings.zoomMode ?? "Bottom Zoom";
   const bottom=observation.bottomDepthM;
   const center=zoomMode==="Marker Zoom" ? (state.vrmDepthM ?? bottom) : bottom;
   const configured=Number(zoomMode==="Bottom Lock"
-    ?state.settings?.blRange:state.settings?.zoomRange);
+    ?settings.blRange:settings.zoomRange);
   const windowDepthM=Number.isFinite(configured) && configured>=2 && configured<=40
     ?configured:zoomMode==="Bottom Lock"?5:20;
-  // §1.4.3 / supplied BL photos: Bottom Lock expresses distance above the
-  // typed bottom, so the selected B/L range terminates at the bottom edge.
-  // P04 frozen historical projection remains centered for direct legacy callers.
-  // P23 active presentation opts in explicitly: OME-23890-E §1.4.3
-  // says Bottom Zoom keeps bottom in the LOWER PART. 3/4 is classroom
-  // positioning only, not an OEM-measured pixel or required exact fraction.
   const useP23BottomZoom=zoomMode==="Bottom Zoom" &&
     displayContract==="P23_LOWER_BOTTOM";
   const startDepthM=Math.max(0,center-(zoomMode==="Bottom Lock"
     ?windowDepthM:useP23BottomZoom ? windowDepthM*3/4:windowDepthM/2));
-  const pixels=new Uint8Array(base.pixels.length);
-  const lockAnchors=zoomMode==="Bottom Lock"
-    ?bottomLockSourceAnchors(base,observation,seabedProvenance,seabedSourceIdentity):null;
-  const lockSpanRows=windowDepthM/base.rangeM*(rows-1);
-  for(let y=0;y<rows;y++){
-    const depth=startDepthM+(y/(rows-1))*windowDepthM;
-    const absoluteFrom=clamp(Math.round(
-      ((depth-(base.startDepthM??0))/base.rangeM)*(rows-1)),0,rows-1);
-    if(lockAnchors){
-      const rowsAboveBottom=(1-y/(rows-1))*lockSpanRows;
-      for(let x=0;x<base.columns;x++){
-        const anchor=lockAnchors[x];
-        const from=anchor>=0
-          ?clamp(Math.round(anchor-rowsAboveBottom),0,rows-1)
-          :absoluteFrom;
-        pixels[y*base.columns+x]=base.pixels[from*base.columns+x];
+  const {columns}=base;
+  const obsRows=observation.rows;
+  const colSec=observation.columnSeconds??SOUNDER_COLUMN_SECONDS;
+  let pixels;
+  let rawAnchors=null;
+  if(displayContract==="P04_HISTORIC"){
+    const start=base.startDepthM??0;
+    let lockAnchors=null;
+    if(zoomMode==="Bottom Lock" &&
+        seabedProvenance?.sourceClass===SYNTHETIC_SEABED_PROVENANCE_SOURCE &&
+        seabedSourceIdentity?.sourceClass===SYNTHETIC_SOUNDER_SOURCE_IDENTITY &&
+        seabedProvenance.scenarioId===seabedSourceIdentity.scenarioId &&
+        seabedProvenance.scenarioVersion===seabedSourceIdentity.scenarioVersion &&
+        seabedProvenance.scenarioFingerprint===seabedSourceIdentity.scenarioFingerprint &&
+        seabedProvenance.simTick===observation?.simTick &&
+        seabedProvenance.simTick===seabedSourceIdentity.simTick &&
+        seabedProvenance.sensorModelVersion===observation?.modelVersion &&
+        seabedProvenance.sensorModelVersion===seabedSourceIdentity.sensorModelVersion &&
+        seabedProvenance.latestWorldBottomDepthM===observation?.bottomDepthM &&
+        seabedProvenance.latestWorldBottomDepthM===seabedSourceIdentity.worldBottomDepthM &&
+        seabedProvenance.columns===columns &&
+        seabedProvenance.columns===seabedSourceIdentity.columns &&
+        Array.isArray(seabedProvenance.columnBottoms) &&
+        seabedProvenance.columnBottoms.length===columns &&
+        Number.isInteger(rows) && rows>=2 && Number.isFinite(base.rangeM) && base.rangeM>0){
+      const candidateAnchors=new Int32Array(columns).fill(-1);
+      let valid=true;
+      for(let x=0;x<columns;x++){
+        const authored=seabedProvenance.columnBottoms[x];
+        const expectedTime=observation.simTick-(columns-x)*colSec;
+        if(authored?.present!==true || !Number.isFinite(authored.depthM) ||
+            !Number.isFinite(authored.sampleTime) ||
+            Math.abs(authored.sampleTime-expectedTime)>1e-12){valid=false;break;}
+        const rawBottomRow=Math.ceil(authored.depthM/observation.maxDepthM*(obsRows-1));
+        let anchor=-1;
+        for(let y=0;y<rows;y++){
+          const displayDepth=start+y/(rows-1)*base.rangeM;
+          if(sounderSourceRowForDepth(observation,displayDepth)>=rawBottomRow){anchor=y;break;}
+        }
+        if(anchor<0){valid=false;break;}
+        candidateAnchors[x]=anchor;
       }
-    }else{
-      pixels.set(base.pixels.subarray(
-        absoluteFrom*base.columns,(absoluteFrom+1)*base.columns),
-      y*base.columns);
+      if(valid)lockAnchors=candidateAnchors;
     }
+    pixels=new Uint8Array(base.pixels.length);
+    const lockSpanRows=windowDepthM/base.rangeM*(rows-1);
+    for(let y=0;y<rows;y++){
+      const depth=startDepthM+(y/(rows-1))*windowDepthM;
+      const absoluteFrom=clamp(Math.round(((depth-start)/base.rangeM)*(rows-1)),0,rows-1);
+      if(lockAnchors){
+        const rowsAboveBottom=(1-y/(rows-1))*lockSpanRows;
+        for(let x=0;x<columns;x++){
+          const anchor=lockAnchors[x];
+          const from=anchor>=0?clamp(Math.round(anchor-rowsAboveBottom),0,rows-1):absoluteFrom;
+          pixels[y*columns+x]=base.pixels[from*columns+x];
+        }
+      }else{
+        pixels.set(base.pixels.subarray(absoluteFrom*columns,(absoluteFrom+1)*columns),y*columns);
+      }
+    }
+  }else{
+    const src=observation.channels[frequencyKhz];
+    const gainMultiplier=0.2+0.16*effectiveGain(state);
+    rawAnchors=zoomMode==="Bottom Lock"
+      ?bottomLockRawAnchors(base,observation,seabedProvenance,seabedSourceIdentity):null;
+    const rawSpanRows=windowDepthM/observation.maxDepthM*(obsRows-1);
+    const rawZoomSlice=new Uint8Array(columns*rows);
+    for(let y=0;y<rows;y++){
+      const depth=startDepthM+(y/(rows-1))*windowDepthM;
+      const absoluteRawPos=depth/observation.maxDepthM*(obsRows-1);
+      if(rawAnchors){
+        const rawAboveBottom=(1-y/(rows-1))*rawSpanRows;
+        for(let x=0;x<columns;x++){
+          const anchor=rawAnchors[x];
+          const rawPos=anchor>=0?anchor-rawAboveBottom:absoluteRawPos;
+          rawZoomSlice[y*columns+x]=sampleRawObservationRow(
+            src,obsRows,columns,x,rawPos,gainMultiplier);
+        }
+      }else{
+        for(let x=0;x<columns;x++){
+          rawZoomSlice[y*columns+x]=sampleRawObservationRow(
+            src,obsRows,columns,x,absoluteRawPos,gainMultiplier);
+        }
+      }
+    }
+    const baseRange=Math.max(1,base.rangeM);
+    const baseStart=base.startDepthM??0;
+    const zeroLineDepthThreshold=2/(rows-1)*baseRange;
+    pixels=applyEchoPipeline(rawZoomSlice,rows,columns,settings,base.overlays,
+      frequencyKhz,{
+        depthFractionAt:(y,x)=>{
+          const sampleDepth=rawAnchors
+            ?(rawAnchors[x]-(1-y/(rows-1))*rawSpanRows)/(obsRows-1)*observation.maxDepthM
+            :startDepthM+(y/(rows-1))*windowDepthM;
+          return clamp((sampleDepth-baseStart)/baseRange,0,1);
+        },
+        zeroLineAt:(y,x)=>{
+          const sampleDepth=rawAnchors
+            ?(rawAnchors[x]-(1-y/(rows-1))*rawSpanRows)/(obsRows-1)*observation.maxDepthM
+            :startDepthM+(y/(rows-1))*windowDepthM;
+          return sampleDepth-baseStart<zeroLineDepthThreshold;
+        },
+      });
   }
   const zoomFrame={...base,pixels,rangeM:windowDepthM,windowDepthM,startDepthM,zoomMode};
-  return {...zoomFrame,syntheticFish:projectFcvFishAnnotations(observation,
-    zoomFrame,base.overlays.accuFish)};
+  const fishSizeFactor=clamp(1+Number(settings.fishSizeAdjust??0)/100,0.2,2);
+  let syntheticFish=[];
+  if(base.overlays.accuFish && Array.isArray(observation?.syntheticTargets) &&
+      Number.isInteger(observation.simTick) && columns>=1){
+    const spanSeconds=observation.columns*colSec;
+    syntheticFish=observation.syntheticTargets.flatMap(target=>{
+      if(target.sourceClass!=="SYNTHETIC_FIXTURE" ||
+         !Number.isFinite(target.depthM) ||
+         !Number.isFinite(target.sizeCm) || target.sizeCm<=0 ||
+         !Number.isFinite(target.time))return [];
+      const xFraction=1-(observation.simTick-target.time)/spanSeconds;
+      if(xFraction<0 || xFraction>1)return [];
+      const col=clamp(Math.round(xFraction*(columns-1)),0,columns-1);
+      const yFraction=rawAnchors
+        ?1-(seabedProvenance.columnBottoms[col].depthM-target.depthM)/windowDepthM
+        :depthFractionOnFcvFrame(zoomFrame,target.depthM);
+      if(yFraction<0 || yFraction>1)return [];
+      return [{xFraction,yFraction,sizeCm:Math.round(target.sizeCm*fishSizeFactor),
+        sourceClass:"SYNTHETIC_FIXTURE"}];
+    });
+  }
+  return {...zoomFrame,syntheticFish};
 }

@@ -25,7 +25,7 @@
   "originalForeground": {
     "hwnd": 8653244,
     "pid": 18532,
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
     "title": "JeikCode Desktop",
     "foreground": true
   },
@@ -78,7 +78,7 @@
   "witnessWindow": {
     "hwnd": 8653244,
     "pid": 18532,
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
     "title": "JeikCode Desktop",
     "foreground": true
   },
@@ -180,7 +180,7 @@
     "foreground": {
       "hwnd": 8653244,
       "pid": 18532,
-      "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
       "title": "JeikCode Desktop",
       "foreground": true
     },
@@ -191,7 +191,7 @@
       "foreground": {
         "hwnd": 8653244,
         "pid": 18532,
-        "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+        "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
         "title": "JeikCode Desktop",
         "foreground": true
       },
@@ -237,7 +237,7 @@
       "foreground": {
         "hwnd": 8653244,
         "pid": 18532,
-        "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+        "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
         "title": "JeikCode Desktop",
         "foreground": true
       },
@@ -283,7 +283,7 @@
   "foregroundAtEnd": {
     "hwnd": 8653244,
     "pid": 18532,
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
     "title": "JeikCode Desktop",
     "foreground": true
   },

@@ -112,6 +112,21 @@ function registerSecurityPolicies(){
   });
 }
 
+function logProcessDiagnostic(kind,details){
+  const entry=JSON.stringify({
+    at:new Date().toISOString(),
+    kind,
+    reason:String(details?.reason??details?.type??"unknown"),
+    exitCode:Number.isInteger(details?.exitCode)?details.exitCode:null,
+  })+"\n";
+  try{
+    const target=path.join(app.getPath("userData"),"fcv588-crash-diagnostics.log");
+    fs.appendFile(target,entry,"utf8").catch(()=>{});
+  }catch{
+    // Local diagnostic logging is best-effort and must never crash main process.
+  }
+}
+
 function makeWindow(){
   const win=new BrowserWindow({
     width:1450,height:920,minWidth:850,minHeight:620,show:false,
@@ -131,6 +146,9 @@ function makeWindow(){
     if(navigationURL!==ORIGIN+"/" &&
        navigationURL!==ORIGIN+"/web/index.html")event.preventDefault();
   });
+  win.webContents.on("render-process-gone",(_event,details)=>{
+    logProcessDiagnostic("render-process-gone",details);
+  });
   win.once("ready-to-show",()=>win.show());
   win.loadURL(ORIGIN+"/");
   return win;
@@ -139,6 +157,16 @@ function makeWindow(){
 if(!app.requestSingleInstanceLock()){
   app.quit();
 }else{
+  app.on("second-instance",()=>{
+    const existing=BrowserWindow.getAllWindows()[0];
+    if(!existing || existing.isDestroyed())return;
+    if(existing.isMinimized())existing.restore();
+    if(!existing.isVisible())existing.show();
+    existing.focus();
+  });
+  app.on("child-process-gone",(_event,details)=>{
+    logProcessDiagnostic("child-process-gone",details);
+  });
   app.commandLine.appendSwitch("disable-background-networking");
   app.commandLine.appendSwitch("no-proxy-server");
   app.setAppUserModelId("vn.mophongmaytrentau.fcv588.synthetic.poc");

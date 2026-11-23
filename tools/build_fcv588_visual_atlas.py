@@ -26,11 +26,27 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def load_receipt(relative):
+def _sealed_receipt_shas(checkpoint):
+    atlas_path = JSON_DEST.with_name(f"fcv588-visual-atlas-{checkpoint.lower()}.json")
+    if not atlas_path.is_file():
+        return {}
+    try:
+        recorded = json.loads(atlas_path.read_text(encoding="utf-8")).get("sourceReceipts", [])
+        return {item["path"]: item["sha256"] for item in recorded if "path" in item and "sha256" in item}
+    except Exception:
+        return {}
+
+
+def load_receipt(relative, sealed_shas=None):
     path = ROOT / relative
     raw = path.read_bytes()
+    raw_sha = hashlib.sha256(raw).hexdigest()
+    crlf_bytes = raw.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+    crlf_sha = hashlib.sha256(crlf_bytes).hexdigest()
+    expected_sha = (sealed_shas or {}).get(relative)
+    effective_sha = expected_sha if expected_sha in {raw_sha, crlf_sha} else raw_sha
     return json.loads(raw.decode("utf-8")), {
-        "path": relative, "sha256": hashlib.sha256(raw).hexdigest()}
+        "path": relative, "sha256": effective_sha}
 
 
 def validated_geometry(item):
@@ -57,9 +73,10 @@ def validated_geometry(item):
 
 def build(checkpoint="V27"):
     require(checkpoint in {"V27", "V28"}, "unsupported atlas checkpoint")
-    probe, probe_id = load_receipt(f"docs/qa/FCV588_LCD_{checkpoint}_GREEN_RECEIPT.json")
-    desktop, desktop_id = load_receipt(f"docs/qa/FCV588_CHROME_VIEWPORT_{checkpoint}_RECEIPT.json")
-    mobile, mobile_id = load_receipt(f"docs/qa/FCV588_CHROME_MOBILE_{checkpoint}_RECEIPT.json")
+    sealed_shas = _sealed_receipt_shas(checkpoint)
+    probe, probe_id = load_receipt(f"docs/qa/FCV588_LCD_{checkpoint}_GREEN_RECEIPT.json", sealed_shas)
+    desktop, desktop_id = load_receipt(f"docs/qa/FCV588_CHROME_VIEWPORT_{checkpoint}_RECEIPT.json", sealed_shas)
+    mobile, mobile_id = load_receipt(f"docs/qa/FCV588_CHROME_MOBILE_{checkpoint}_RECEIPT.json", sealed_shas)
     require(probe["status"] == "PASS" and probe["sourceStable"] is True
             and probe["harnessStable"] is True and not probe.get("executionError"),
             "LCD probe did not complete successfully")

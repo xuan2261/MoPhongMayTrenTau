@@ -6,16 +6,17 @@ import {createSession,dispatch,createReplayEnvelope,sessionHash} from "../src/co
 import {fingerprint} from "../src/core/protocol.mjs";
 import {TRAINING_SCENARIO as scenario} from "../src/core/scenario.mjs";
 import {FCV588_ADAPTER as adapter} from "../src/devices/fcv588/adapter.mjs";
-import {replayFcv588Envelope} from "../src/devices/fcv588/replay-compat.mjs";
+import {getFcvReplayAdapter,replayFcv588Envelope} from "../src/devices/fcv588/replay-compat.mjs";
 import {projectFcvZoom} from "../src/devices/fcv588/echo-projection.mjs";
 import {FCV588_ARCHIVE_SIDECAR_VERSION,FCV588_PRESENTATION_CONTRACTS,
   createFcv588ArchiveSidecar,replayFcv588Archive} from "../src/devices/fcv588/archive-compat.mjs";
 import * as archiveCompatibility from "../src/devices/fcv588/archive-compat.mjs";
 const historicalRaw=readFileSync(new URL("./fixtures/P24_PINNED_PRE_P23_PROFILE22_ENVELOPE_20261117.json",import.meta.url));
 const oldEnvelope=JSON.parse(historicalRaw.toString("utf8"));
+const profile22Adapter=getFcvReplayAdapter("F1-public-reference-22");
 const liveBZ=()=>{
- let state=createSession(adapter,scenario);
- state=dispatch(state,adapter,{kind:"restore-settings",
+ let state=createSession(profile22Adapter,scenario);
+ state=dispatch(state,profile22Adapter,{kind:"restore-settings",
   settings:{zoomMode:"Bottom Zoom",zoomRange:"10"}},scenario);
  return state;
 };

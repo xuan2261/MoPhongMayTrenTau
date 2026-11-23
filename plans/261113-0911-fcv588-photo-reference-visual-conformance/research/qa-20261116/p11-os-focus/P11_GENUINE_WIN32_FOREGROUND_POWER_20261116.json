@@ -3,7 +3,7 @@
     "ChromeOwnedHwnd": 36177684,
     "activated": false,
     "beforeKeyDownForeground": {
-      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "executablePath": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
       "hwnd": 8653244,
       "pid": 18532,
       "processName": "jeikcode-desktop.exe",
@@ -25,7 +25,7 @@
   ],
   "chromeWindows": [
     {
-      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "executablePath": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
       "hwnd": 5769834,
       "pid": 25584,
       "processName": "chrome.exe",
@@ -55,7 +55,7 @@
   "cleanup": {
     "ownedPortClosed": true,
     "restoredForeground": {
-      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "executablePath": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
       "hwnd": 8653244,
       "pid": 18532,
       "processName": "jeikcode-desktop.exe",
@@ -77,7 +77,7 @@
   "parentP10Unchanged": true,
   "physicalHardwarePOWERKey": "NOT_USED_BROWSER_KEYBOARD_AUTOMATION",
   "previousForeground": {
-    "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "executablePath": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
     "hwnd": 8653244,
     "pid": 18532,
     "processName": "jeikcode-desktop.exe",

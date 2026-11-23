@@ -4,7 +4,7 @@
   "exitCode": 0,
   "total": 13,
   "result": "PASS",
-  "interpreter": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
+  "interpreter": "<USER_PROFILE>\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
   "playwrightInstalled": true,
   "priorV1Failure": "subprocess python resolved non-Playwright Python installation",
   "logSHA256": "39e173a329cbdbc5c03f2f8bbb18458fc8bd946c88d7d2f1e166a80bf7dcad18",

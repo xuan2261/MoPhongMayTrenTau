@@ -3,7 +3,7 @@ R=pathlib.Path(r'C:\Work\MoPhongMayTrenTau')
 Q=R/'docs/qa/FCV588_P26_HISTORICAL_BZ_VIEWER_20261117'
 P25=R/'docs/qa/FCV588_P25_OFFLINE_ARCHIVE_UI_20261117'
 NODE=r'C:\nvm4w\nodejs\node.exe'
-PY=r'C:\Users\Z10PAD8C_Xuan2261\AppData\Roaming\pypoetry\venv\Scripts\python.exe'
+PY=r'<USER_PROFILE>\AppData\Roaming\pypoetry\venv\Scripts\python.exe'
 APPLY=Q/'P26_CANONICAL_GUARDED_APPLY_20261117.json'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def j(p):return json.loads(p.read_text(encoding='utf8'))

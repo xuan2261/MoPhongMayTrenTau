@@ -7,8 +7,7 @@
  * classroom-only, and P04 keeps its recorded 0.5 projective behavior.
  * Originals are REFERENCE_ONLY, never embedded/served in runtime.
  */
-import {decodeFcv588ArchivePair} from "./fcv588-archive-import.mjs";
-import {replayFcv588Archive} from "../src/devices/fcv588/archive-compat.mjs";
+import {resolveValidatedArchivePair} from "./fcv588-archive-import.mjs";
 import {TRAINING_SCENARIO,observeSounder} from "../src/core/scenario.mjs";
 import {projectFcvEcho,projectFcvZoom} from "../src/devices/fcv588/echo-projection.mjs";
 import {getFcvDisplayPalette} from "../src/devices/fcv588/display-palette.mjs";
@@ -68,14 +67,13 @@ export function projectFcv588ArchiveBZSession(session,presentationContract){
  * and final hash before rendering. Do not infer historical image provenance.
  */
 export function projectFcv588ArchiveBZViewer(envelopeText,sidecarText){
-  const summary=decodeFcv588ArchivePair(envelopeText,sidecarText);
+  const replayed=resolveValidatedArchivePair(envelopeText,sidecarText);
+  const {summary}=replayed;
   if(!CONTRACTS.has(summary.presentationContract))
     throw new TypeError("P26 unrecognized display contract");
   if(!summary.zoomPreview)
     return Object.freeze({summary,renderable:false,
       reason:"ARCHIVE_NOT_BOTTOM_ZOOM"});
-  const replayed=replayFcv588Archive(TRAINING_SCENARIO,
-    JSON.parse(envelopeText),JSON.parse(sidecarText));
   if(replayed.presentationContract!==summary.presentationContract)
     throw new Error("P26 archive contract drift");
   const visual=projectFcv588ArchiveBZSession(

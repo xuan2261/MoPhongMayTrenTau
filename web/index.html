@@ -15,11 +15,11 @@
       <div class="identity"><span class="mark" aria-hidden="true">≈</span>
         <strong>MoPhongMayTrenTau</strong>
       </div>
-      <div class="public-reference-banner" role="note">PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY</div>
+      <div class="public-reference-banner" role="note" lang="en">PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY</div>
     </header>
     <main>
       <div class="heading">
-        <h1>FCV-588 <span>Training Console</span></h1>
+        <h1 lang="en">FCV-588 <span>Training Console</span></h1>
         <p class="subtitle">Mô phỏng độc lập từ manual công khai.</p>
       </div>
       <section class="workbench" aria-label="Mô phỏng FCV-588">
@@ -41,14 +41,14 @@
         <div class="device-frame" data-panel-reference="FCV588_PUBLIC_REFERENCE_ESTIMATE" aria-label="Mặt trước FCV-588 minh họa theo nguồn công khai">
           <div class="equipment">
             <div class="display-housing">
-              <div class="bezel-header"><span class="manufacturer-name">FURUNO</span></div>
+              <div class="bezel-header"><span class="manufacturer-name" lang="en">FURUNO</span></div>
               <div id="lcd" class="lcd" role="group" aria-label="Màn hình FCV-588 mô phỏng">
                 <canvas id="echo-canvas" width="480" height="640" role="img" aria-label="Ảnh hồi âm minh họa theo dữ liệu mô phỏng"></canvas>
-                <div class="screen-top" id="screen-top">POWER OFF</div>
-                <div id="demo-indicator" class="demo-indicator" hidden>[DEMO]</div>
-                <div class="depth-indicator"><strong id="depth-display">--.-</strong><span id="depth-unit">m</span></div>
-                <div class="vrm-indicator" id="vrm-indicator" hidden>VRM --.- m</div>
-                <div class="lcd-overlay" id="lcd-overlay" hidden>
+                <div class="screen-top" id="screen-top" lang="en">POWER OFF</div>
+                <div lang="en" id="demo-indicator" class="demo-indicator" hidden>[DEMO]</div>
+                <div class="depth-indicator" lang="en"><strong id="depth-display">--.-</strong><span id="depth-unit">m</span></div>
+                <div class="vrm-indicator" id="vrm-indicator" lang="en" hidden>VRM --.- m</div>
+                <div class="lcd-overlay" id="lcd-overlay" lang="en" hidden>
                   <div class="lcd-overlay-title" id="dialog-title"></div>
                   <div class="lcd-menu-body">
                     <div id="lcd-menu-categories" class="lcd-menu-categories" role="list" aria-label="Năm nhóm menu" hidden></div>
@@ -65,27 +65,27 @@
               </div>
             </div>
             <div class="controls" aria-label="Các phím và núm điều khiển">
-              <button id="key-menu" class="hardware-key" type="button">MENU/ESC</button>
+              <button id="key-menu" class="hardware-key" type="button" lang="en">MENU/ESC</button>
               <div class="pad" role="group" aria-label="TrackPad bốn hướng">
                 <button type="button" id="pad-up" class="pad-up" aria-label="TrackPad lên">▲</button>
                 <button type="button" id="pad-left" class="pad-left" aria-label="TrackPad trái">◀</button>
                 <button type="button" id="pad-right" class="pad-right" aria-label="TrackPad phải">▶</button>
                 <button type="button" id="pad-down" class="pad-down" aria-label="TrackPad xuống">▼</button>
               </div>
-              <button type="button" id="key-enter" class="hardware-key enter-key">ENTER</button>
+              <button type="button" id="key-enter" class="hardware-key enter-key" lang="en">ENTER</button>
               <div class="key-row">
-                <button id="key-range" type="button" class="hardware-key">RANGE</button>
-                <button id="key-mark" type="button" class="hardware-key">MARK</button>
-                <button id="key-func" type="button" class="hardware-key" aria-label="FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng">FUNC</button>
+                <button id="key-range" type="button" class="hardware-key" lang="en">RANGE</button>
+                <button id="key-mark" type="button" class="hardware-key" lang="en">MARK</button>
+                <button id="key-func" type="button" class="hardware-key" lang="en" aria-label="FUNC: nhấn ngắn để gọi chức năng, nhấn giữ để gán chức năng">FUNC</button>
               </div>
               <div class="knob-wrap gain-wrap">
-                <span class="knob-label">GAIN <small>PUSH TO AUTO</small></span>
+                <span class="knob-label" lang="en">GAIN <small>PUSH TO AUTO</small></span>
                 <div class="knob-group">
                   <button id="gain-knob" class="knob" type="button" aria-label="Nhấn núm GAIN; kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
                 </div>
               </div>
               <div class="knob-wrap mode-wrap">
-                <span class="knob-label">MODE</span>
+                <span class="knob-label" lang="en">MODE</span>
                 <div class="knob-group">
                   <div class="mode-scale" aria-hidden="true">
                     <span data-mode="NAV1">NAV1</span><span data-mode="LF-ZOOM">LF-ZOOM</span>
@@ -96,7 +96,7 @@
                   <button id="mode-knob" class="knob knob-mode" type="button" aria-label="Núm MODE: kéo dọc, cuộn chuột hoặc dùng phím mũi tên để xoay"></button>
                 </div>
               </div>
-              <button id="key-power" type="button" class="power-button" aria-label="POWER/BRILL: nhấn ngắn để bật máy hoặc chỉnh độ sáng; nhấn giữ hơn 3 giây để tắt"><i class="power-glyph" aria-hidden="true"></i><span>BRILL</span></button>
+              <button id="key-power" type="button" class="power-button" aria-label="POWER/BRILL: nhấn ngắn để bật máy hoặc chỉnh độ sáng; nhấn giữ hơn 3 giây để tắt"><i class="power-glyph" aria-hidden="true"></i><span lang="en">BRILL</span></button>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
           <span id="operator-quick-status-bottom"></span>
         </div>
         <aside class="training-panel">
-          <div class="panel-head"><p class="eyebrow">INSTRUCTOR CONTROL</p><h2>Phiên thực hành</h2></div>
+          <div class="panel-head"><p class="eyebrow" lang="en">INSTRUCTOR CONTROL</p><h2>Phiên thực hành</h2></div>
           <p class="device-footer" role="note">Hình vẽ độc lập theo nguồn công khai · Chưa xác nhận hình học/phần cứng OEM</p>
           <div class="d15-tablist" role="tablist" aria-label="Nhóm công cụ giảng viên D15" hidden>
             <button id="d15-tab-session" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-session" aria-selected="true" tabindex="0">Phiên</button>
@@ -162,13 +162,13 @@
               aria-live="polite" aria-atomic="true"></p>
           </section>
           <div class="stats">
-            <div><small>SIM TICK</small><strong id="tick-count">0000</strong></div>
+            <div><small lang="en">SIM TICK</small><strong id="tick-count">0000</strong></div>
             <div><small>SỰ KIỆN</small><strong id="event-count">000</strong></div>
-            <div><small>CHẾ ĐỘ</small><strong id="mode-state">LF</strong></div>
+            <div><small>CHẾ ĐỘ</small><strong id="mode-state" lang="en">LF</strong></div>
           </div>
           <div class="instructor-telemetry" role="group" aria-label="D15: Trạng thái và đồng hồ mô phỏng, không phải hiển thị thiết bị thật">
-            <span id="status-line">STANDBY — POWER OFF</span>
-            <span id="clock-line">T + 0000 s</span>
+            <span id="status-line" lang="en">STANDBY — POWER OFF</span>
+            <span id="clock-line" lang="en">T + 0000 s</span>
           </div>
           <p id="lcd-test-status" class="hint" role="status" aria-live="polite" hidden></p>
           <section class="rotary-assist" aria-labelledby="rotary-assist-title">
@@ -177,12 +177,12 @@
             <p class="hint">Nhấn POWER/BRILL để khởi động. FUNC hỗ trợ nhấn ngắn và nhấn giữ. Vạch núm và góc chia là minh họa trạng thái, chưa đo từ phần cứng.</p>
             <p id="dial-readout" class="hint" role="status" aria-live="polite"></p>
             <div class="rotary-assist-row">
-              <span>GAIN</span>
+              <span lang="en">GAIN</span>
               <button id="gain-minus" class="trainer-rotate" type="button" aria-label="Trợ xoay GAIN giảm">−</button>
               <button id="gain-plus" class="trainer-rotate" type="button" aria-label="Trợ xoay GAIN tăng">+</button>
             </div>
             <div class="rotary-assist-row">
-              <span>MODE</span>
+              <span lang="en">MODE</span>
               <button id="mode-minus" class="trainer-rotate" type="button" aria-label="Trợ xoay MODE lùi">−</button>
               <button id="mode-plus" class="trainer-rotate" type="button" aria-label="Trợ xoay MODE tiến">+</button>
             </div>
@@ -195,9 +195,9 @@
             <section id="archive-replay-panel" class="archive-replay-panel" aria-labelledby="archive-replay-title">
               <h3 id="archive-replay-title">Archive replay offline — D15</h3>
               <p class="hint">Chọn cặp JSON envelope v7 và sidecar v1 từ máy tính. Chỉ đọc trong D15, không thay đổi LCD hoặc phiên đang chạy. Không xác thực nguồn gốc, ngày ghi hay độ chính xác OEM; checksum chỉ phát hiện thay đổi không đồng bộ.</p>
-              <label for="archive-envelope-file">Replay envelope (.json)</label>
+              <label for="archive-envelope-file" lang="en">Replay envelope (.json)</label>
               <input id="archive-envelope-file" type="file" accept=".json,application/json">
-              <label for="archive-sidecar-file">Presentation sidecar (.json)</label>
+              <label for="archive-sidecar-file" lang="en">Presentation sidecar (.json)</label>
               <input id="archive-sidecar-file" type="file" accept=".json,application/json">
               <button id="archive-replay-button" type="button">Kiểm tra và phát lại archive</button>
               <p id="archive-replay-status" role="status" aria-live="polite">Chưa nhập archive.</p>

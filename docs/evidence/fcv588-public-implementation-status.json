@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "profileClass": "PUBLIC_REFERENCE",
-  "profileRevision": "F1-public-reference-22",
+  "profileRevision": "F1-public-reference-23",
   "checkpointPolicy": "EXPLICIT_REVIEWED_FEATURE_ALLOWLIST",
   "hardwareValidated": false,
   "firmwareInstalled": null,

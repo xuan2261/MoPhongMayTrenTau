@@ -20,10 +20,10 @@ Traceback (most recent call last):
   File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p23-bz-lower-20261117\tools\build_fcv588_visual_atlas.py", line 31, in load_receipt
     raw = path.read_bytes()
           ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1050, in read_bytes
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1050, in read_bytes
     with self.open(mode='rb') as f:
          ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1044, in open
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1044, in open
     return io.open(self, mode, buffering, encoding, errors, newline)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Work\\MoPhongMayTrenTau\\staging\\fcv588-p23-bz-lower-20261117\\docs\\qa\\FCV588_LCD_V27_GREEN_RECEIPT.json'

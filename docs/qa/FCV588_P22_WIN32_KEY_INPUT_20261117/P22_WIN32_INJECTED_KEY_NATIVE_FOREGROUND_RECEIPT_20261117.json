@@ -17,7 +17,7 @@
     "hwnd": 9439064,
     "pid": 23472,
     "title": "Chat On Steroids",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Chat On Steroids\\Chat On Steroids.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Chat On Steroids\\Chat On Steroids.exe",
     "foreground": true
   },
   "witnessCandidates": [],
@@ -27,7 +27,7 @@
     "hwnd": 9439064,
     "pid": 23472,
     "title": "Chat On Steroids",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Chat On Steroids\\Chat On Steroids.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\Programs\\Chat On Steroids\\Chat On Steroids.exe",
     "foreground": true
   },
   "portsClosed": {

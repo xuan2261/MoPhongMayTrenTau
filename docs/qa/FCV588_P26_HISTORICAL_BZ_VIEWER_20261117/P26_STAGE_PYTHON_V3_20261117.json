@@ -3,7 +3,7 @@
   "status": "PASS",
   "exitCode": 0,
   "command": [
-    "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
+    "<USER_PROFILE>\\AppData\\Roaming\\pypoetry\\venv\\Scripts\\python.exe",
     "-m",
     "unittest",
     "discover",

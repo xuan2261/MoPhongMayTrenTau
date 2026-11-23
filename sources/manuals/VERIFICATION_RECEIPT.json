@@ -1,9 +1,11 @@
 {
   "verified_at_utc": "2026-10-13T22:16:16.734418+00:00",
   "status": "PASS_AVAILABLE_ASSETS_WITH_GAPS",
-  "verified_pdf_files": 24,
+  "verified_pdf_files": 23,
   "verified_zip_files": 2,
-  "verified_total_bytes": 197171462,
+  "verified_total_bytes": 197145926,
+  "verified_total_mib": 188.01,
+  "deduplication_note": "7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF (25536 bytes, SHA-256 ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b) appeared in both EN and DE subfolders of R5_SOLID_Documentation_Package_J1.zip and sanitized to the same extracted filename; deduplicated from 24 raw entries (197171462 bytes) to 23 unique PDF files (197145926 bytes / 188.01 MiB across 23 PDFs + 2 ZIPs).",
   "known_acquisition_gaps": [
     {
       "id": "FCV588_OME23890B2_2018",
@@ -157,12 +159,6 @@
       "size": 5664856,
       "sha256": "d4810cb85f9659c6456728704607619668e80f7f1fcb3922f8f39717c7937821",
       "pages": 110
-    },
-    {
-      "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-205_A2_R5_SOLID_Flushmount_Cutout.PDF",
-      "size": 25536,
-      "sha256": "ea3bb7ef177a172018fd99846a8982e0eb7ab59f0451e2554fab23fd61f5ca0b",
-      "pages": 1
     },
     {
       "file": "sources/manuals/AIS-R5-SOLID/manuals_extracted/7000_118-201_E1_R5_Solid_Installation_Short_Instruction-DE.pdf",

@@ -1,7 +1,7 @@
 Traceback (most recent call last):
   File "C:\Work\MoPhongMayTrenTau\staging\fcv588-p35-power-brill-a11y-20261121\p35_stage_chrome_a11y_v2.py", line 66, in <module>
     print(json.dumps(report,ensure_ascii=False,sort_keys=True))
-  File "C:\Users\Z10PAD8C_Xuan2261\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+  File "<USER_PROFILE>\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 UnicodeEncodeError: 'charmap' codec can't encode character '\u1ea5' in position 35: character maps to <undefined>

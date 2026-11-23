@@ -15,7 +15,7 @@
     "hwnd": 5769834,
     "pid": 25584,
     "title": "Tiếp tục kiểm chứng P16 - Helium",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
     "foreground": true
   },
   "cdpEndpointLocalhostOnly": true,
@@ -26,7 +26,7 @@
     "hwnd": 5769834,
     "pid": 25584,
     "title": "Tiếp tục kiểm chứng P16 - Helium",
-    "exe": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+    "exe": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
     "foreground": true
   },
   "qaWebClosed": true,

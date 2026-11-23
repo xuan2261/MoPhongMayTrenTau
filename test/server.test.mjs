@@ -20,7 +20,7 @@ function freeLoopbackPort() {
   });
 }
 
-test("local server serves only UI and source, not transcript or private documents", {timeout: 16000}, async () => {
+test("local server serves only UI and source, blocks dot-segments, and sets hardened headers", {timeout: 16000}, async () => {
   const port = await freeLoopbackPort();
   const origin = "http://127.0.0.1:" + port;
   const child = spawn(process.execPath, ["tools/server.mjs"], {
@@ -47,9 +47,18 @@ test("local server serves only UI and source, not transcript or private document
     const index = await fetch(origin + "/");
     assert.equal(index.status, 200);
     const html = await index.text();
-    assert.match(html, /<h1>FCV-588/);
+    assert.match(html, /<h1\b[^>]*>FCV-588/);
     assert.match(html, /Training Console<\/span>/);
-    assert.match(index.headers.get("content-security-policy"), /connect-src 'none'/);
+    const csp = index.headers.get("content-security-policy") ?? "";
+    assert.match(csp, /connect-src 'none'/);
+    assert.match(csp, /form-action 'none'/);
+    assert.match(csp, /frame-src 'none'/);
+    assert.match(csp, /worker-src 'none'/);
+    assert.equal(index.headers.get("referrer-policy"), "no-referrer");
+    assert.equal(
+      index.headers.get("permissions-policy"),
+      "geolocation=(), microphone=(), camera=(), usb=(), serial=(), bluetooth=()",
+    );
     assert.equal(index.headers.get("x-content-type-options"), "nosniff");
     assert.equal((await fetch(origin + "/src/core/session.mjs")).status, 200);
     assert.equal((await fetch(origin + "/web/styles.css")).status, 200);
@@ -62,16 +71,27 @@ test("local server serves only UI and source, not transcript or private document
     ]) {
       assert.equal((await fetch(origin + path)).status, 404, path);
     }
+    for (const dotPath of [
+      "/web/.hidden.js",
+      "/web/sub/.hidden.mjs",
+      "/src/.hidden.mjs",
+      "/src/core/.env.mjs",
+    ]) {
+      assert.equal((await fetch(origin + dotPath)).status, 403, dotPath);
+    }
     assert.equal((await fetch(origin + "/", {method: "POST"})).status, 405);
   } finally {
     if (!exited) child.kill();
   }
 });
 
-test("runtime server fails closed on binary/media extensions even inside public source roots",async()=>{
-  const source=await readFile(new URL("../tools/server.mjs",import.meta.url),"utf8");
-  assert.match(source,/ALLOWED_SRC_EXTENSIONS/);
-  assert.match(source,/ALLOWED_WEB_EXTENSIONS/);
-  assert.doesNotMatch(source,/MIME\[extname\(realFile\)\]\s*\?\?\s*"application\/octet-stream"/,
+test("runtime server fails closed on binary/media/json extensions and enforces 4 MiB ceiling", async () => {
+  const source = await readFile(new URL("../tools/server.mjs", import.meta.url), "utf8");
+  assert.match(source, /ALLOWED_SRC_EXTENSIONS/);
+  assert.match(source, /ALLOWED_WEB_EXTENSIONS/);
+  assert.match(source, /MAX_SERVED_FILE_BYTES\s*=\s*4\s*\*\s*1024\s*\*\s*1024/);
+  assert.doesNotMatch(source, /"\.json"\s*:/,
+    "unused .json MIME entry must be omitted from static server");
+  assert.doesNotMatch(source, /MIME\[extname\(realFile\)\]\s*\?\?\s*"application\/octet-stream"/,
     "unrecognized extensions must never be served as generic binary downloads");
 });

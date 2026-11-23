@@ -66,7 +66,7 @@ test("research does not label provisional device behavior as validated", () => {
   assert.match(inventory, /NOT_APPLICABLE_WITH_EVIDENCE/);
 });
 
-test("manual references retain provenance in full-workspace Git mode", () => {
+test("manual references retain provenance and .gitignore enforces rights and secret gates", () => {
   const verified = manifest.entries.filter(entry => ["downloaded", "already_present"].includes(entry.status));
   assert.ok(verified.length >= 9);
   assert.ok(verified.every(entry => entry.simulator_asset === false));
@@ -78,12 +78,25 @@ test("manual references retain provenance in full-workspace Git mode", () => {
   assert.equal(fcv?.model_text_found, true);
   const j2000 = manifest.not_obtained.find(item => item.model === "KODEN J2000");
   assert.ok(j2000, "ambiguous J2000 identity must not be silently assigned");
-  assert.match(gitignore, /FULL-WORKSPACE MODE/);
-  // Full-workspace upload keeps all surviving physical paths. Former NTFS
-  // junction aliases are recoverable from the archived stage manifest.
-  const activeIgnoreRules = gitignore.split(/\r?\n/).map(line=>line.trim())
-    .filter(line=>line && !line.startsWith("#"));
-  assert.deepEqual(activeIgnoreRules, []);
+  const activeIgnoreRules = new Set(
+    gitignore.split(/\r?\n/).map(line => line.trim())
+      .filter(line => line && !line.startsWith("#")),
+  );
+  for (const requiredRule of [
+    "node_modules/",
+    "__pycache__/",
+    "*.pyc",
+    ".env",
+    "*.key",
+    "*.pem",
+    ".agents/",
+    "!/sources/**",
+  ]) {
+    assert.ok(activeIgnoreRules.has(requiredRule), `missing mandatory .gitignore rule: ${requiredRule}`);
+  }
+  assert.equal(activeIgnoreRules.has("sources/manuals/**/*.pdf"), false, "manuals must remain tracked");
+  assert.equal(activeIgnoreRules.has("sources/FCV588_GiaoDienThucTeMay2016/*.jpg"), false, "hardware photos must remain tracked");
+  assert.equal(activeIgnoreRules.has("/docs/reports/"), false, "docs/reports/ must not be ignored");
 });
 
 test("manual archive accounts for every named device without inventing missing versions", () => {

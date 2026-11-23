@@ -61,7 +61,7 @@
   ],
   "chromeWindows": [
     {
-      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
+      "executablePath": "<USER_PROFILE>\\AppData\\Local\\imput\\Helium\\Application\\chrome.exe",
       "hwnd": 5769834,
       "pid": 25584,
       "processName": "chrome.exe",
@@ -91,7 +91,7 @@
   "cleanup": {
     "ownedPortClosed": true,
     "restoredForeground": {
-      "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+      "executablePath": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
       "hwnd": 8653244,
       "pid": 18532,
       "processName": "jeikcode-desktop.exe",
@@ -131,7 +131,7 @@
     "valid": true
   },
   "previousForeground": {
-    "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
+    "executablePath": "<USER_PROFILE>\\AppData\\Local\\JeikCode Desktop\\jeikcode-desktop.exe",
     "hwnd": 8653244,
     "pid": 18532,
     "processName": "jeikcode-desktop.exe",
@@ -146,7 +146,7 @@
   "scriptSHA256": "021eafc8cb641080e086b7211960b4a4c810c0d6627932290b660316dfb28185",
   "status": "FAILED_OR_BLOCKED_NO_NATIVE_ACCEPTANCE",
   "witnessHwnd": {
-    "executablePath": "C:\\Users\\Z10PAD8C_Xuan2261\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "executablePath": "<USER_PROFILE>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "hwnd": 32115924,
     "pid": 19044,
     "processName": "python.exe",
