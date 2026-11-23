@@ -138,7 +138,8 @@ if(process.argv[1] && import.meta.url===pathToFileURL(resolve(process.argv[1])).
   const payload=await buildPublicAcceptancePayload();
   const content=JSON.stringify(payload,null,2)+"\n";
   if(process.argv.includes("--check")){
-    if(await readFile(IMPLEMENTATION_STATUS_DEST,"utf8")!==content){
+    const onDisk=(await readFile(IMPLEMENTATION_STATUS_DEST,"utf8")).replaceAll("\r\n","\n");
+    if(onDisk!==content){
       console.error("FAIL: F1 implementation coverage checkpoint drift");
       process.exitCode=1;
     }else console.log("PASS: 64 FCV + D15 implementation checkpoint, claims HOLD");

@@ -54,7 +54,7 @@ jobs:
         run: npm run check
 
       - name: Python unit test suite
-        run: PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s test -v
+        run: PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s test -v
 
       - name: Verify public runtime assets
         run: node tools/verify_public_runtime_assets.mjs
@@ -66,10 +66,10 @@ jobs:
         run: node tools/build_fcv588_public_acceptance.mjs --check
 
       - name: Check public trace matrix
-        run: PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_public_trace.py --check
+        run: PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_public_trace.py --check
 
       - name: Check feature register draft
-        run: PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_feature_register.py --check
+        run: PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_feature_register.py --check
 
       - name: Run LCD boundary audit self-test & contract check
         run: |
@@ -78,5 +78,5 @@ jobs:
 
       - name: Check V27 & V28 visual atlas derivations
         run: |
-          PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_visual_atlas.py --check --checkpoint V27
-          PYTHONDONTWRITEBYTECODE=1 python3 -B tools/build_fcv588_visual_atlas.py --check --checkpoint V28
+          PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_visual_atlas.py --check --checkpoint V27
+          PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_visual_atlas.py --check --checkpoint V28

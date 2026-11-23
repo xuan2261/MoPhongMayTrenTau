@@ -48,7 +48,8 @@ export function buildPublicMenuAtlasContent() {
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const content = buildPublicMenuAtlasContent();
   if (process.argv.includes("--check")) {
-    if (await readFile(MENU_ATLAS_DEST, "utf8") !== content) {
+    const onDisk = (await readFile(MENU_ATLAS_DEST, "utf8")).replaceAll("\r\n", "\n");
+    if (onDisk !== content) {
       console.error("FAIL: menu evidence register drift");
       process.exitCode = 1;
     } else {
