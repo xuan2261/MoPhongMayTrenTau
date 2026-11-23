@@ -27,7 +27,7 @@ module.exports = {
     createDesktopShortcut: true,
     createStartMenuShortcut: true,
     shortcutName: "FURUNO FCV-588 Simulator",
-    artifactName: "${productName} Setup ${version}.${ext}",
+    artifactName: "FCV-588-Setup-${version}-win-x64.${ext}",
   },
   portable: {
     artifactName: "FCV-588-Portable-${version}-win-x64.${ext}",

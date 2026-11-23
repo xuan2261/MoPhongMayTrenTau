@@ -31,7 +31,7 @@ import {rasterizeFcvEcho} from "./fcv588-echo-rasterizer.mjs";
 import {bindHoldControl} from "./hold-input.mjs";
 import {bindRepeatPadControl} from "./pad-repeat.mjs";
 import {bindRotaryDragControl} from "./rotary-input.mjs";
-import {shouldPlayFcvKeyTone,createFcvKeyTonePlayer} from "./key-feedback.mjs";
+import {classifyFcvHardwareSound,createFcvHardwareBuzzer} from "./key-feedback.mjs";
 import {shouldRouteFcvShortcut} from "./keyboard-shortcuts.mjs";
 import {bindInstructorTabs} from "./instructor-tabs.mjs";
 import {decodeFcv588ArchivePair,ARCHIVE_ENVELOPE_MAX_BYTES,ARCHIVE_SIDECAR_MAX_BYTES} from "./fcv588-archive-import.mjs";
@@ -58,7 +58,8 @@ import {FCV588_SETTINGS_FILE_NAME,FCV588_SETTINGS_TRANSFER_MAX_BYTES,
 const {FCV_SETTINGS_STORAGE_KEY, decodeFcvSettings, decodeFcvProfile19Settings,
   decodeFcvProfile21Settings, encodeFcvSettings} = fcvSettings;
 const adapter = FCV588_ADAPTER;
-const playKeyTone=createFcvKeyTonePlayer();
+const hardwareBuzzer = createFcvHardwareBuzzer();
+let speakerEnabled = true;
 const $ = id => document.getElementById(id);
 const scenario = TRAINING_SCENARIO;
 let session = createSession(adapter, scenario);
@@ -146,9 +147,17 @@ function currentObservation() {
 
 function send(input) {
   try {
-    const priorSonar=shouldRenderFcvSonar(session.deviceState);
+    const prevState = session.deviceState;
+    const priorSonar=shouldRenderFcvSonar(prevState);
     session = dispatch(session, adapter, input, scenario);
-    if(shouldPlayFcvKeyTone(session.deviceState,input))playKeyTone();
+    const soundKind = classifyFcvHardwareSound(
+      prevState,
+      session.deviceState,
+      input,
+      input?.kind === "tick" ? projectFcvAlarmPresentation(session.deviceState) : null,
+      {speakerEnabled},
+    );
+    if (soundKind) hardwareBuzzer.play(soundKind);
     if(priorSonar!==shouldRenderFcvSonar(session.deviceState)){
       frozenFrames.clear();
       drawChannel._paneCache?.clear();
@@ -1612,6 +1621,16 @@ fullscreenBtn?.addEventListener("click", () => {
   Promise.resolve(toggle).catch(() => {}).finally(syncFullscreenButton);
 });
 document.addEventListener("fullscreenchange", syncFullscreenButton);
+
+const audioToggleBtn = $("btn-audio-toggle");
+$("btn-audio-toggle")?.addEventListener("click", () => {
+  speakerEnabled = !speakerEnabled;
+  if (audioToggleBtn) {
+    audioToggleBtn.setAttribute("aria-pressed", String(speakerEnabled));
+    audioToggleBtn.textContent = speakerEnabled ? "Loa máy: BẬT" : "Loa máy: TẮT";
+  }
+  if (speakerEnabled) hardwareBuzzer.play("key");
+});
 
 $("btn-quick-power")?.addEventListener("click", () => {
   for (const binding of holdBindings) binding.cancel();
