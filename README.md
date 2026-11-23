@@ -2,7 +2,40 @@
 
 This workspace develops a **training-only** collection of marine-instrument UI simulators. The target is to reproduce the operation sequences of a specific hardware model/controller/firmware, **not** to provide navigation, depth measurement or real-ship decision support.
 
-## Current scoped checkpoint (2026-11-22, P36 + P0 hygiene; NOT RELEASED)
+## FURUNO FCV-588 Standalone Simulator — v1.0.0 Complete (`v1.0.0-fcv588`)
+
+Sản phẩm mô phỏng độc lập **Máy Đo Sâu Dò Cá FURUNO FCV-588** đã hoàn thiện khép kín (`65/65` tính năng theo ma trận kiểm chứng, `0 NOT_IMPLEMENTED`, profile `F1-public-reference-24`), hỗ trợ **3 định dạng chạy độc lập 100% offline** (tải trực tiếp tại [GitHub Releases `v1.0.0-fcv588`](https://github.com/xuan2261/MoPhongMayTrenTau/releases/tag/v1.0.0-fcv588) hoặc tự đóng gói cục bộ):
+
+| Định dạng phát hành | Tệp đích | Cách sử dụng |
+| --- | --- | --- |
+| **1. Windows Portable (`.exe` duy nhất)** | `FCV-588-Portable-1.0.0-win-x64.exe` | Tải về nhấp đúp chạy ngay trên Windows 10/11 (x64), không cần cài đặt hay Node.js, tích hợp biểu tượng FCV-588 riêng. |
+| **2. Bộ cài đặt Windows NSIS (`.exe`)** | `FCV-588-Setup-1.0.0-win-x64.exe` | Trình cài đặt chuẩn Windows, cho phép chọn thư mục cài và tự động tạo biểu tượng **FURUNO FCV-588 Simulator** ngoài Desktop & Start Menu. |
+| **3. Tệp đơn đa nền tảng (`.html`)** | `FCV-588-Standalone.html` | 1 tệp HTML duy nhất (~758 KB, nhúng toàn bộ ESM + CSS + SVG icon), mở trực tiếp qua `file://` trên Windows / macOS / Linux hoàn toàn offline. |
+
+### Chạy nhanh & Đóng gói trên máy cục bộ
+
+- **Windows (nhấp đúp 1 chạm):**
+  - `Chay-FCV588.bat` — Tự mở cửa sổ ứng dụng FCV-588 độc lập (tự biên dịch `dist\FCV-588-Standalone.html` nếu chưa có).
+  - `DongGoi-BoCai-FCV588.bat` — Tự đóng gói trọn bộ `FCV-588-Standalone.html` + `FCV-588-Portable-1.0.0-win-x64.exe` + `FCV-588-Setup-1.0.0-win-x64.exe`.
+- **Dòng lệnh đa nền tảng (Node.js 22+):**
+  ```bash
+  npm run build:standalone   # Xuất dist/FCV-588-Standalone.html (~758 KB)
+  npm start                  # Chạy máy chủ huấn luyện cục bộ tại http://127.0.0.1:4173
+  npm run check              # Kiểm tra cú pháp + chạy toàn bộ bộ kiểm thử Node
+  ```
+
+### Điểm nổi bật của bản hoàn thiện FCV-588 v1.0.0
+
+- **Mặt máy & LCD chuẩn thực tế:** Viền đen `FURUNO`, cụm phím đồng tâm `MENU/ESC` · `TrackPad` · `ENTER`, núm xoay `GAIN` (`PUSH TO AUTO`, nhấp dấu `−`/`+`, kéo chuột, cuộn chuột) và `MODE` (nhấp đơn xem trước, nhấp đúp chuyển tức thời), nút nguồn viên thuốc xanh dương `BRILL`, thanh trạng thái xanh dương đặc (`MAN_R G: 10 LF/HF ... 13.6V`), số độ sâu viền trắng Halo cỡ lớn, và `White Line: Edge` (`Bien`) bám sát địa hình đáy.
+- **Song ngữ Việt – Anh đầy đủ (`D04 Tieng Viet` & `English`):** Việt hóa toàn diện 5 nhóm Menu chính, `FUNC`, `GAIN`, `MODE`, `RANGE`, `NAV1`/`NAV2`, `ALARM` kèm chu trình khởi động lại 4 nhịp đúng thực tế.
+- **Âm thanh phần cứng Web Audio Buzzer (`Loa máy: BẬT / TẮT`):** Tái tạo tiếng *pip* đôi khi bật máy, *pip* hạ tần khi tắt máy, tiếng *bíp* piezo khi bấm phím / xoay nấc núm, và còi báo động ngắt quãng 2 xung (`ALARM1..5`, `ARRIVAL`) tắt còi khi nhấn phím cứng bất kỳ theo manual `OME-23890-E §1.18`.
+- **Không gian làm việc ổn định tuyệt đối (`0.00px` CLS):** Thanh trạng thái nguồn được neo cố định bên dưới chân đế máy không gây giật/lệch vùng nhìn mặt máy; hỗ trợ `Tập trung vào máy`, `Toàn màn hình (F11)`, Lưu/Nạp cấu hình `.json` tức thời và Xuất/Phát lại phiên Replay tất định.
+
+> **Lưu ý an toàn bắt buộc:** Phần mềm chỉ phục vụ huấn luyện và giảng dạy mô phỏng độc lập (`TRAINING ONLY`), không kết nối đầu dò/GPS/NMEA thực tế và tuyệt đối không dùng để dẫn tàu.
+
+---
+
+## Historical scoped checkpoint (2026-11-22, P36 + P0 hygiene; pre-v1.0.0 archive note)
 
 - The main `src/` + `web/` application is an offline, synthetic, browser-based FCV-588 training simulator (`54` verified public runtime files, active profile `F1-public-reference-22`+). P36 independently checked LIVE LF-ZOOM/HF-ZOOM Bottom Zoom in headless Chrome at 1366x768 and 1920x1080: 4/4 cases and 208/208 actual localhost source-body SHA checks passed, with 54/54 isolated-stage runtime hashes unchanged. See `docs/qa/FCV588_P36_LIVE_BOTTOM_ZOOM_20261122/` for the original local receipts.
 - Windows Electron P30 **historical source snapshot** is stored in `apps/fcv588-electron-p30/`. Historical source, package locks, installers and ZIP evidence remain under `staging/` and `docs/qa/`; regenerable `node_modules` and test-owned Chromium profiles were removed in the 2026-11-22 cleanup. Restore dependencies using `npm ci` in the corresponding staging root when necessary. The P30 `npm run bundle:offline` verifies the pinned P28 source. P31 is installed locally for testing; P32 release assessment remains **NO_GO**. Committing installer evidence does not constitute an approved release.

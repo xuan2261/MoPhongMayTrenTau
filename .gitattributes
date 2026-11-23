@@ -12,3 +12,4 @@
 docs/qa/*.json -text
 docs/qa/**/*.json -text
 test/fixtures/*.json -text
+*.ico binary
