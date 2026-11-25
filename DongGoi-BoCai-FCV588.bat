@@ -46,7 +46,7 @@ echo.
 echo ======================================================================
 echo  HOAN TAT DONG GOI FCV-588:
 echo   1. dist\FCV-588-Standalone.html
-echo   2. dist\electron\FCV-588-Portable-1.0.0-win-x64.exe
-echo   3. dist\electron\FCV-588-Setup-1.0.0-win-x64.exe
+echo   2. dist\electron\FCV-588-Portable-1.0.1-win-x64.exe
+echo   3. dist\electron\FCV-588-Setup-1.0.1-win-x64.exe
 echo ======================================================================
 exit /b 0

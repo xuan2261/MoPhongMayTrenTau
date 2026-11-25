@@ -15,7 +15,12 @@ if not exist "%STANDALONE_HTML%" (
 
 if exist "%STANDALONE_HTML%" (
   set "FILE_URI=file:///%STANDALONE_HTML:\=/%"
-  call set "FILE_URI=%%FILE_URI: =%%%%20%%"
+  setlocal EnableDelayedExpansion
+  set "FILE_URI=!FILE_URI: =%%20!"
+  for /f "delims=" %%U in ("!FILE_URI!") do (
+    endlocal
+    set "FILE_URI=%%U"
+  )
   call :find_browser
   if defined BROWSER_EXE (
     echo [FCV-588] Mo cua so ung dung doc lap FURUNO FCV-588 ...

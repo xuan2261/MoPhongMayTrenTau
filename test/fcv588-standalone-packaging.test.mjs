@@ -321,7 +321,7 @@ test("Electron sync, offline bundle security gates, Windows installer configs, l
   const electronPkg = JSON.parse(
     await readFile(path.join(ROOT, "apps/fcv588-electron-p30/package.json"), "utf8"),
   );
-  assert.equal(electronPkg.version, "1.0.0");
+  assert.equal(electronPkg.version, "1.0.1");
   assert.equal(electronPkg.devDependencies.electron, "^33.3.1");
   assert.equal(electronPkg.devDependencies["electron-builder"], "^25.1.8");
   assert.equal(electronPkg.devDependencies["@electron/fuses"], "^1.8.0");

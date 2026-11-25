@@ -540,6 +540,7 @@ function drawSourceGradedOverlays(frame, x0, y0, w, h, bottomDepthM) {
 
 function drawSupplementaryDisplay(state,simTick,width,height){
   // All values are typed instructor/synthetic projections, never live feeds.
+  const vi=isVietnameseFcv(state);
   const {tempGraph,navData}=projectFcvDisplayWidgets(state,
     state.navigationObservation,simTick);
   if(navData){
@@ -548,24 +549,28 @@ function drawSupplementaryDisplay(state,simTick,width,height){
     ctx.fillRect(x,y,208,navData.boxes.length*28+22);
     ctx.fillStyle="#fed996";
     ctx.font="bold 11px Consolas, monospace";
-    ctx.fillText("NAV DATA",x+7,y+15);
+    ctx.fillText(vi?"DU LIEU H.HAI":"NAV DATA",x+7,y+15);
     ctx.font="11px Consolas, monospace";
     for(const [i,box] of navData.boxes.entries()){
+      const label=vi?localizeFcvNavLabel(box.label,state.settings):box.label;
       ctx.fillStyle="#b2d5e4";
-      ctx.fillText(box.label+": "+displayOnlySyntheticValue(box.value),
+      ctx.fillText(label+": "+displayOnlySyntheticValue(box.value),
         x+7,y+35+i*28,194);
     }
   }
   if(tempGraph){
-    const x=12,y=height-111,w=176,h=84;
+    // Place clearly below top status/alarm band and well above bottom depth digits & BD strip.
+    const x=state.settings.colorBar==="On"?18:12;
+    const y=Math.min(Math.max(114,Math.round(height*0.18)),height-220);
+    const w=176,h=84;
     ctx.fillStyle="#06182cdc";
     ctx.fillRect(x,y,w,h);
     ctx.fillStyle="#c6ebf0";
     ctx.font="11px Consolas, monospace";
     if(tempGraph.status!=="SYNTHETIC_DATA"){
-      ctx.fillText("TEMP GRAPH · NO DATA",x+8,y+20);
+      ctx.fillText(vi?"DO THI NHIET · --":"TEMP GRAPH · NO DATA",x+8,y+20);
     }else{
-      ctx.fillText("TEMP "+formatFcvTemperature(tempGraph.currentC,
+      ctx.fillText((vi?"NHIET DO ":"TEMP ")+formatFcvTemperature(tempGraph.currentC,
         state.settings.tempUnit),x+8,y+17);
       ctx.strokeStyle="#ffda89";
       ctx.lineWidth=2;
@@ -662,12 +667,25 @@ function renderScreen() {
   const viScreen = isVietnameseFcv(state);
   const noSonarText = viScreen ? "KHONG CO TIN HIEU DO SAU" : "NO SONAR DATA";
   if (state.power === "booting") {
-    ctx.fillStyle = "#b8d5e8";
+    // Classic FURUNO dark-navy startup splash stays crisp on every palette (including White).
+    ctx.fillStyle = "#051633";
+    ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = "#ffffff";
     ctx.textAlign = "center";
-    ctx.font = "bold 32px Consolas, monospace";
-    ctx.fillText("FCV-588", width / 2, height / 2 - 20);
+    ctx.font = "bold 20px Consolas, monospace";
+    ctx.fillText("FURUNO", width / 2, height / 2 - 58);
+    ctx.font = "bold 36px Consolas, monospace";
+    ctx.fillText("FCV-588", width / 2, height / 2 - 16);
+    ctx.fillStyle = "#b8d5e8";
     ctx.font = "18px Consolas, monospace";
-    ctx.fillText((viScreen ? "DANG KHOI DONG ... " : "INITIALIZING ... ") + state.bootElapsed + "/4", width / 2, height / 2 + 25);
+    const step = Math.max(0, Math.min(4, Number(state.bootElapsed) || 0));
+    ctx.fillText((viScreen ? "DANG KHOI DONG ... " : "INITIALIZING ... ") + step + "/4", width / 2, height / 2 + 26);
+    const barW = 200, barH = 10, barX = (width - barW) / 2, barY = height / 2 + 46;
+    ctx.strokeStyle = "#4d86c6";
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(barX, barY, barW, barH);
+    ctx.fillStyle = "#3ca4f2";
+    ctx.fillRect(barX + 2, barY + 2, Math.round((barW - 4) * (step / 4)), barH - 4);
     ctx.textAlign = "left";
   }
   if (state.power === "on") {
@@ -852,8 +870,14 @@ function renderScreen() {
       ctx.fillRect(8,Math.min(height-60,80),width-16,26);
       ctx.fillStyle="#ffffff";
       ctx.font="bold 16px Consolas, monospace";
-      ctx.fillText(alarmPresentation.activeIds.join(" / ") +
-        (alarmPresentation.audible?" ACTIVE":" ACK"),15,Math.min(height-60,80)+19);
+      const alarmLabels=viScreen
+        ?alarmPresentation.activeIds.map(id=>
+          id==="ARRIVAL"?"DEN DICH":id.replace(/^ALARM(\d+)$/,"BAO DONG $1"))
+        :alarmPresentation.activeIds;
+      const alarmSuffix=viScreen
+        ?(alarmPresentation.audible?" DANG BAO":" DA TAT COI")
+        :(alarmPresentation.audible?" ACTIVE":" ACK");
+      ctx.fillText(alarmLabels.join(" / ")+alarmSuffix,15,Math.min(height-60,80)+19);
     }
     // Faults injected by the instructor have no verified OEM alarm-pixel
     // counterpart. Keep them in the D15 panel, not the device LCD.
@@ -1205,7 +1229,9 @@ function renderDialog() {
   $("dialog-footer").hidden=true;
   $("dialog-content").removeAttribute("role");
   $("dialog-content").removeAttribute("aria-label");
-  if (!overlay){
+  if (!overlay || session.deviceState.power !== "on"){
+    $("dialog-title").textContent="";
+    $("dialog-content").replaceChildren();
     publishInstructorGuidance(projectFcvInstructorMeta(session.deviceState,null,
       session.worldState.simTick));
     return;
@@ -1697,7 +1723,19 @@ $("btn-import-settings")?.addEventListener("click", async () => {
     const text = await file.text();
     const imported = importFcv588SettingsText(text);
     for (const binding of holdBindings) binding.cancel();
-    send({kind: "restore-settings", settings: imported.settings});
+    const wasPowered = session.deviceState.power !== "off";
+    let next = wasPowered ? reset(adapter, scenario) : session;
+    next = dispatch(next, adapter, {kind: "restore-settings", settings: imported.settings}, scenario);
+    if (wasPowered) {
+      next = dispatch(next, adapter, {kind: "down", control: "power"}, scenario);
+      next = dispatch(next, adapter, {kind: "up", control: "power", durationMs: 120}, scenario);
+      next = dispatch(next, adapter, {kind: "tick", steps: 4}, scenario);
+    }
+    session = next;
+    lessonAttempt = null;
+    cachedTick = -1;
+    frozenFrames.clear();
+    drawChannel._paneCache?.clear();
     const canonicalEncoded = encodeFcvSettings(session.deviceState.settings);
     lastSettingsRef = session.deviceState.settings;
     lastObservedSettings = canonicalEncoded;
@@ -1707,11 +1745,14 @@ $("btn-import-settings")?.addEventListener("click", async () => {
     } catch {
       savedToBrowser = false;
     }
+    render();
+    if (wasPowered && speakerEnabled) hardwareBuzzer.play("power-on");
     setSettingsTransferStatus(
       "pass",
       "Đã nạp cấu hình máy thành công" +
         (imported.legacyRevision ? " (profile " + imported.legacyRevision + " → " + adapter.revision + ")" : "") +
-        (savedToBrowser ? " và lưu vào trình duyệt." : " (phiên hiện tại đã áp dụng; lưu trình duyệt bị chặn)."),
+        (wasPowered ? " và khởi động lại áp dụng ngay" : "") +
+        (savedToBrowser ? " (đã lưu trình duyệt)." : " (phiên hiện tại đã áp dụng; lưu trình duyệt bị chặn)."),
     );
   } catch (err) {
     setSettingsTransferStatus("rejected", "Từ chối tệp cấu hình: " + (err?.message ?? "không hợp lệ"));
@@ -1724,7 +1765,7 @@ $("btn-export-replay-pair")?.addEventListener("click", () => {
   try {
     const pair = buildFcv588ReplayExportFiles(session, "P23_LOWER_BOTTOM");
     downloadJsonFile(pair.envelopeFileName, pair.envelopeText);
-    downloadJsonFile(pair.sidecarFileName, pair.sidecarText);
+    setTimeout(() => downloadJsonFile(pair.sidecarFileName, pair.sidecarText), 250);
     setSettingsTransferStatus(
       "pass",
       "Đã xuất cặp Replay (" + pair.envelopeFileName + " + " + pair.sidecarFileName +
