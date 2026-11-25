@@ -148,8 +148,17 @@ function makeWindow(){
   win.webContents.setWindowOpenHandler(()=>({action:"deny"}));
   win.webContents.on("before-input-event",(event,input)=>{
     if(input.type==="keyDown" && input.key==="F11"){
-      win.setFullScreen(!win.isFullScreen());
       event.preventDefault();
+      if(win.isFullScreen()){
+        win.webContents.executeJavaScript(
+          "document.fullscreenElement?document.exitFullscreen().catch(()=>{}):undefined",true
+        ).catch(()=>{});
+        win.setFullScreen(false);
+      }else{
+        win.webContents.executeJavaScript(
+          "document.documentElement.requestFullscreen?.().catch(()=>{})",true
+        ).catch(()=>{win.setFullScreen(true);});
+      }
     }
   });
   win.webContents.on("will-navigate",(event,navigationURL)=>{

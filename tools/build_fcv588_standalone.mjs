@@ -509,8 +509,16 @@ export async function buildStandaloneHtml({
     }
   }
 
-  // Transform web/index.html: inline favicon(s), stylesheet(s), importmap, and module entrypoints
+  // Transform web/index.html: inject offline CSP, inline favicon(s), stylesheet(s), importmap, and module entrypoints
   let bundledHtml = indexHtml;
+  const offlineCspMeta =
+    "  <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; script-src 'unsafe-inline' data:; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'\">";
+  if (!/http-equiv=["']Content-Security-Policy["']/i.test(bundledHtml)) {
+    bundledHtml = bundledHtml.replace(
+      /(<meta\s+charset=["']utf-8["']\s*\/?>)/i,
+      `$1\n${offlineCspMeta}`,
+    );
+  }
 
   // 1. Inline <link ...> tags (icon & stylesheet)
   const linkMatches = [...bundledHtml.matchAll(/<link\b[^>]*>/gi)];

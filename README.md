@@ -2,34 +2,34 @@
 
 This workspace develops a **training-only** collection of marine-instrument UI simulators. The target is to reproduce the operation sequences of a specific hardware model/controller/firmware, **not** to provide navigation, depth measurement or real-ship decision support.
 
-## FURUNO FCV-588 Standalone Simulator — v1.0.0 Complete (`v1.0.0-fcv588`)
+## FURUNO FCV-588 Standalone Simulator — v1.0.1 Complete (`v1.0.1-fcv588`)
 
-Sản phẩm mô phỏng độc lập **Máy Đo Sâu Dò Cá FURUNO FCV-588** đã hoàn thiện khép kín (`65/65` tính năng theo ma trận kiểm chứng, `0 NOT_IMPLEMENTED`, profile `F1-public-reference-24`), hỗ trợ **3 định dạng chạy độc lập 100% offline** (tải trực tiếp tại [GitHub Releases `v1.0.0-fcv588`](https://github.com/xuan2261/MoPhongMayTrenTau/releases/tag/v1.0.0-fcv588) hoặc tự đóng gói cục bộ):
+Sản phẩm mô phỏng độc lập **Máy Đo Sâu Dò Cá FURUNO FCV-588** đã hoàn thiện khép kín 100% (`65/65` tính năng theo ma trận kiểm chứng, `0 NOT_IMPLEMENTED`, profile `F1-public-reference-24`), hỗ trợ **3 định dạng chạy độc lập 100% offline** (tải trực tiếp tại [GitHub Releases `v1.0.1-fcv588`](https://github.com/xuan2261/MoPhongMayTrenTau/releases/tag/v1.0.1-fcv588) hoặc tự đóng gói cục bộ):
 
 | Định dạng phát hành | Tệp đích | Cách sử dụng |
 | --- | --- | --- |
-| **1. Windows Portable (`.exe` duy nhất)** | `FCV-588-Portable-1.0.0-win-x64.exe` | Tải về nhấp đúp chạy ngay trên Windows 10/11 (x64), không cần cài đặt hay Node.js, tích hợp biểu tượng FCV-588 riêng. |
-| **2. Bộ cài đặt Windows NSIS (`.exe`)** | `FCV-588-Setup-1.0.0-win-x64.exe` | Trình cài đặt chuẩn Windows, cho phép chọn thư mục cài và tự động tạo biểu tượng **FURUNO FCV-588 Simulator** ngoài Desktop & Start Menu. |
-| **3. Tệp đơn đa nền tảng (`.html`)** | `FCV-588-Standalone.html` | 1 tệp HTML duy nhất (~758 KB, nhúng toàn bộ ESM + CSS + SVG icon), mở trực tiếp qua `file://` trên Windows / macOS / Linux hoàn toàn offline. |
+| **1. Windows Portable (`.exe` duy nhất)** | `FCV-588-Portable-1.0.1-win-x64.exe` | Tải về nhấp đúp chạy ngay trên Windows 10/11 (x64), không cần cài đặt hay Node.js, tích hợp biểu tượng FCV-588 riêng (`16–256 px`). |
+| **2. Bộ cài đặt Windows NSIS (`.exe`)** | `FCV-588-Setup-1.0.1-win-x64.exe` | Trình cài đặt chuẩn Windows, cho phép chọn thư mục cài và tự động tạo biểu tượng **FURUNO FCV-588 Simulator** ngoài Desktop & Start Menu. |
+| **3. Tệp đơn đa nền tảng (`.html`)** | `FCV-588-Standalone.html` | 1 tệp HTML duy nhất (~750 KB, khóa cứng CSP offline `connect-src 'none'`, nhúng trọn bộ ESM + CSS + SVG icon), mở trực tiếp qua `file://` trên Windows / macOS / Linux. |
 
 ### Chạy nhanh & Đóng gói trên máy cục bộ
 
 - **Windows (nhấp đúp 1 chạm):**
-  - `Chay-FCV588.bat` — Tự mở cửa sổ ứng dụng FCV-588 độc lập (tự biên dịch `dist\FCV-588-Standalone.html` nếu chưa có).
-  - `DongGoi-BoCai-FCV588.bat` — Tự đóng gói trọn bộ `FCV-588-Standalone.html` + `FCV-588-Portable-1.0.0-win-x64.exe` + `FCV-588-Setup-1.0.0-win-x64.exe`.
+  - `Chay-FCV588.bat` — Tự mở cửa sổ ứng dụng FCV-588 độc lập (hỗ trợ cả đường dẫn chứa dấu cách, tự biên dịch `dist\FCV-588-Standalone.html` nếu chưa có).
+  - `DongGoi-BoCai-FCV588.bat` — Tự đóng gói trọn bộ `FCV-588-Standalone.html` + `FCV-588-Portable-1.0.1-win-x64.exe` + `FCV-588-Setup-1.0.1-win-x64.exe`.
 - **Dòng lệnh đa nền tảng (Node.js 22+):**
   ```bash
-  npm run build:standalone   # Xuất dist/FCV-588-Standalone.html (~758 KB)
+  npm run build:standalone   # Xuất dist/FCV-588-Standalone.html (~750 KB)
   npm start                  # Chạy máy chủ huấn luyện cục bộ tại http://127.0.0.1:4173
   npm run check              # Kiểm tra cú pháp + chạy toàn bộ bộ kiểm thử Node
   ```
 
-### Điểm nổi bật của bản hoàn thiện FCV-588 v1.0.0
+### Điểm nổi bật của bản hoàn thiện FCV-588 v1.0.1
 
-- **Mặt máy & LCD chuẩn thực tế:** Viền đen `FURUNO`, cụm phím đồng tâm `MENU/ESC` · `TrackPad` · `ENTER`, núm xoay `GAIN` (`PUSH TO AUTO`, nhấp dấu `−`/`+`, kéo chuột, cuộn chuột) và `MODE` (nhấp đơn xem trước, nhấp đúp chuyển tức thời), nút nguồn viên thuốc xanh dương `BRILL`, thanh trạng thái xanh dương đặc (`MAN_R G: 10 LF/HF ... 13.6V`), số độ sâu viền trắng Halo cỡ lớn, và `White Line: Edge` (`Bien`) bám sát địa hình đáy.
-- **Song ngữ Việt – Anh đầy đủ (`D04 Tieng Viet` & `English`):** Việt hóa toàn diện 5 nhóm Menu chính, `FUNC`, `GAIN`, `MODE`, `RANGE`, `NAV1`/`NAV2`, `ALARM` kèm chu trình khởi động lại 4 nhịp đúng thực tế.
-- **Âm thanh phần cứng Web Audio Buzzer (`Loa máy: BẬT / TẮT`):** Tái tạo tiếng *pip* đôi khi bật máy, *pip* hạ tần khi tắt máy, tiếng *bíp* piezo khi bấm phím / xoay nấc núm, và còi báo động ngắt quãng 2 xung (`ALARM1..5`, `ARRIVAL`) tắt còi khi nhấn phím cứng bất kỳ theo manual `OME-23890-E §1.18`.
-- **Không gian làm việc ổn định tuyệt đối (`0.00px` CLS):** Thanh trạng thái nguồn được neo cố định bên dưới chân đế máy không gây giật/lệch vùng nhìn mặt máy; hỗ trợ `Tập trung vào máy`, `Toàn màn hình (F11)`, Lưu/Nạp cấu hình `.json` tức thời và Xuất/Phát lại phiên Replay tất định.
+- **Mặt máy & LCD chuẩn thực tế:** Viền đen `FURUNO`, cụm phím đồng tâm `MENU/ESC` · `TrackPad` · `ENTER`, núm xoay `GAIN` (`PUSH TO AUTO`, nhấp dấu `−`/`+`, kéo chuột, cuộn chuột) và `MODE` (nhấp đơn xem trước, nhấp đúp chuyển tức thời), nút nguồn viên thuốc xanh dương `BRILL`, thanh trạng thái xanh dương đặc (`MAN_R G: 10 LF/HF ... 13.6V`), số độ sâu viền trắng Halo cỡ lớn, `White Line: Edge` (`Bien`) bám sát địa hình đáy và màn khởi động FURUNO tương phản cao trên mọi bảng màu.
+- **Song ngữ Việt – Anh triệt để 100% (`D04 Tieng Viet` & `English`):** Việt hóa toàn diện 5 nhóm Menu chính, mọi menu con (`THANG DO`, `DON VI`, `HIEU CHUAN`, `CAI DAT`, `O DU LIEU NAV1/NAV2`, `BAO DONG 1..5`, `PHIM FUNC`), dải báo động LCD, hộp dữ liệu phụ, `GAIN`, `MODE`, `RANGE` kèm chu trình khởi động lại 4 nhịp đúng thực tế.
+- **Âm thanh phần cứng Web Audio Buzzer (`Loa máy: BẬT / TẮT`):** Tái tạo tiếng *pip* đôi khi bật máy, *pip* hạ tần khi tắt máy, phân biệt rõ `He thong > Tieng Phim: Tat` (click cơ học nhẹ) với `Bat` (tiếng *bíp* piezo `2420 Hz`), nấc xoay núm cơ học và còi báo động ngắt quãng 2 xung (`ALARM1..5`, `ARRIVAL`) tắt còi khi nhấn phím cứng bất kỳ theo manual `OME-23890-E §1.18`.
+- **Không gian làm việc ổn định tuyệt đối (`0.00px` CLS):** Thanh trạng thái nguồn neo cố định bên dưới chân đế máy không gây giật/lệch vùng nhìn mặt máy; hỗ trợ `Tập trung vào máy`, `Toàn màn hình (F11)` đồng bộ cả trình duyệt lẫn Electron `.exe`, Lưu/Nạp cấu hình `.json` tức thời ngay cả khi máy đang bật, và Xuất/Phát lại phiên Replay tất định.
 
 > **Lưu ý an toàn bắt buộc:** Phần mềm chỉ phục vụ huấn luyện và giảng dạy mô phỏng độc lập (`TRAINING ONLY`), không kết nối đầu dò/GPS/NMEA thực tế và tuyệt đối không dùng để dẫn tàu.
 

@@ -30,7 +30,17 @@ test("classifyFcvHardwareSound distinguishes power-on, power-off, key beep, rota
   const sMenu = send(sOn, {kind: "press", control: "menu"});
   assert.equal(
     classifyFcvHardwareSound(sOn.deviceState, sMenu.deviceState, {kind: "press", control: "menu"}, null),
+    "tactile",
+    "Key Beep Off plays quiet mechanical switch click",
+  );
+  const sKeyBeepOn = {
+    ...sMenu.deviceState,
+    settings: {...sMenu.deviceState.settings, keyBeep: "On"},
+  };
+  assert.equal(
+    classifyFcvHardwareSound(sOn.deviceState, sKeyBeepOn, {kind: "press", control: "menu"}, null),
     "key",
+    "Key Beep On plays authentic 2420Hz FURUNO piezo beep",
   );
 
   const sRot = send(sOn, {kind: "rotate", control: "gain", steps: 1});

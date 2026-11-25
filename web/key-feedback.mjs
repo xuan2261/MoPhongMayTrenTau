@@ -62,9 +62,9 @@ export function classifyFcvHardwareSound(
     ["pad", "rotate", "push", "press"].includes(input.kind) ||
     (input.kind === "up" && ["power", "func"].includes(input.control));
   if (!isPhysicalAction) return null;
-  if (nextState.settings?.keyBeep === "On" || keySoundOverride) {
-    return input.kind === "rotate" ? "detent" : "key";
-  }
+  if (input.kind === "rotate") return "detent";
+  if (nextState.settings?.keyBeep === "On") return "key";
+  if (keySoundOverride) return "tactile";
   return null;
 }
 
@@ -78,7 +78,10 @@ const SOUND_PATTERNS = Object.freeze({
     Object.freeze({freq: 980, duration: 0.075, delay: 0.05, peak: 0.03, type: "triangle"}),
   ]),
   key: Object.freeze([
-    Object.freeze({freq: 2420, duration: 0.036, delay: 0, peak: 0.03, type: "sine"}),
+    Object.freeze({freq: 2420, duration: 0.036, delay: 0, peak: 0.032, type: "sine"}),
+  ]),
+  tactile: Object.freeze([
+    Object.freeze({freq: 680, duration: 0.014, delay: 0, peak: 0.012, type: "triangle"}),
   ]),
   detent: Object.freeze([
     Object.freeze({freq: 1520, duration: 0.016, delay: 0, peak: 0.018, type: "triangle"}),

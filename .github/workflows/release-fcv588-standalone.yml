@@ -56,8 +56,8 @@ jobs:
       - name: Verify generated artifacts exist
         run: |
           test -f "dist/FCV-588-Standalone.html"
-          test -f "dist/electron/FCV-588-Portable-1.0.0-win-x64.exe"
-          test -f "dist/electron/FCV-588-Setup-1.0.0-win-x64.exe"
+          test -f "dist/electron/FCV-588-Portable-1.0.1-win-x64.exe"
+          test -f "dist/electron/FCV-588-Setup-1.0.1-win-x64.exe"
           ls -lh dist/FCV-588-Standalone.html dist/electron/*.exe
 
       - name: Upload Standalone HTML & Windows Installer Artifacts
@@ -67,8 +67,8 @@ jobs:
           if-no-files-found: error
           path: |
             dist/FCV-588-Standalone.html
-            dist/electron/FCV-588-Portable-1.0.0-win-x64.exe
-            dist/electron/FCV-588-Setup-1.0.0-win-x64.exe
+            dist/electron/FCV-588-Portable-1.0.1-win-x64.exe
+            dist/electron/FCV-588-Setup-1.0.1-win-x64.exe
 
       - name: Publish Permanent GitHub Release (on v* tag)
         if: startsWith(github.ref, 'refs/tags/v')
@@ -77,32 +77,32 @@ jobs:
         run: |
           TAG="${GITHUB_REF#refs/tags/}"
           cat <<'NOTES' > dist/RELEASE_NOTES.md
-          ## FURUNO FCV-588 — Phần mềm Mô phỏng Máy Đo Sâu Dò Cá Độc Lập (v1.0.0)
+          ## FURUNO FCV-588 — Phần mềm Mô phỏng Máy Đo Sâu Dò Cá Độc Lập (v1.0.1 — Khép kín 100%)
 
           ### 3 Định dạng Tải về & Chạy ngay (100% Offline, Không cần cài Node.js)
-          1. **`FCV-588-Portable-1.0.0-win-x64.exe`** — **1 file `.exe` duy nhất cho Windows (x64)**: Tải về nhấp đúp chạy ngay lập tức, không cần cài đặt.
-          2. **`FCV-588-Setup-1.0.0-win-x64.exe`** — **Bộ cài đặt chuẩn Windows NSIS**: Cài đặt vào máy tính và tự tạo biểu tượng ngoài Desktop & Start Menu (`FURUNO FCV-588 Simulator`).
-          3. **`FCV-588-Standalone.html`** — **1 file `.html` đa nền tảng (~740 KB)**: Chạy trực tiếp trên Windows / macOS / Linux bằng trình duyệt bất kỳ hoàn toàn offline.
+          1. **`FCV-588-Portable-1.0.1-win-x64.exe`** — **1 file `.exe` duy nhất cho Windows (x64)**: Có sẵn biểu tượng FCV-588 đa độ phân giải (16–256 px), tải về nhấp đúp chạy ngay lập tức, không cần cài đặt.
+          2. **`FCV-588-Setup-1.0.1-win-x64.exe`** — **Bộ cài đặt chuẩn Windows NSIS**: Cài đặt vào máy tính và tự tạo biểu tượng ngoài Desktop & Start Menu (`FURUNO FCV-588 Simulator`).
+          3. **`FCV-588-Standalone.html`** — **1 file `.html` đa nền tảng (~750 KB, khóa cứng CSP offline `connect-src 'none'`)**: Chạy trực tiếp trên Windows / macOS / Linux bằng trình duyệt bất kỳ hoàn toàn offline.
 
-          ### Điểm nổi bật của bản hoàn thiện FCV-588 v1.0.0
-          - **Giao diện mặt máy & LCD chuẩn 100% thực tế:** Viền kính đen `FURUNO`, cụm phím đồng tâm `MENU/ESC + TrackPad + ENTER`, núm xoay `GAIN` / `MODE` (hỗ trợ kéo chuột, con lăn, nhấp đơn xem trước & nhấp đúp chuyển tức thời), nút nguồn viên thuốc xanh dương `BRILL`, thanh tiêu đề xanh dương đặc (`MAN_R G: 10 LF/HF ... 13.6V`), số độ sâu Halo cỡ lớn, `White Line: Edge` (`Bien`) bám sát địa hình đáy.
-          - **Hỗ trợ trọn vẹn Tiếng Việt (`D04 Tieng Viet`) & Tiếng Anh (`65/65` tính năng, `0 NOT_IMPLEMENTED`)** kèm chu trình khởi động lại 4 nhịp như máy thật.
-          - **Âm thanh phần cứng Web Audio Buzzer:** Tái tạo tiếng *pip* bật/tắt máy, tiếng *bíp* bấm phím / xoay núm và còi báo động ngắt quãng (`Fish` / `Bottom` / `Arrival` / `Temp`) tắt còi khi nhấn phím bất kỳ theo manual `§1.18` (có nút `Loa máy: BẬT/TẮT`).
-          - **Không gian làm việc ổn định tuyệt đối (`0.00px` layout shift):** Lưu/Nạp cấu hình `.json` tức thời, Xuất/Phát lại phiên Replay tất định, chế độ `Tập trung vào máy` và `Toàn màn hình (F11)`.
+          ### Các nâng cấp hoàn thiện khép kín trong bản v1.0.1
+          - **Nạp cấu hình `.json` tức thời ngay cả khi máy đang BẬT:** Tự khởi động lại sạch để áp dụng và lưu ngay cấu hình mới (không nuốt lỗi, bảo toàn 100% tính tất định Replay).
+          - **Hoàn thiện thị giác LCD 100% trên mọi bảng màu:** Dời hộp `TEMP GRAPH` khỏi vùng chữ số độ sâu lớn, cố định nền khởi động xanh đậm FURUNO rõ nét ngay cả trên bảng màu `White` (`Trang`), Việt hóa triệt để 100% tiêu đề menu con, dải báo động LCD (`BAO DONG 1..5`) và nhãn hộp dữ liệu khi bật `D04 Tieng Viet`.
+          - **Âm thanh phần cứng chuẩn xác theo `§2.3` & `§1.18`:** Phân tách rõ `He thong > Tieng Phim: Tat` (click cơ học nhẹ) với `Bat` (tiếng *bíp* piezo FURUNO `2420 Hz`), giữ trọn vẹn tiếng *pip* bật/tắt nguồn, nấc xoay núm và còi báo động ngắt quãng tắt khi nhấn phím bất kỳ.
+          - **Đồng bộ hoàn hảo bản Desktop & Windows `.bat`:** Đồng bộ `F11` với nút `Toàn màn hình` trong Electron `.exe`, giãn cách tải đôi cặp tệp Replay (`250 ms`), và sửa chuẩn đường dẫn có dấu cách trong `Chay-FCV588.bat`.
 
           > *Lưu ý an toàn: Phần mềm phục vụ huấn luyện và giảng dạy độc lập, không kết nối đầu dò/GPS thực tế và không dùng để dẫn tàu.*
           NOTES
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" \
               "dist/FCV-588-Standalone.html" \
-              "dist/electron/FCV-588-Portable-1.0.0-win-x64.exe" \
-              "dist/electron/FCV-588-Setup-1.0.0-win-x64.exe" \
+              "dist/electron/FCV-588-Portable-1.0.1-win-x64.exe" \
+              "dist/electron/FCV-588-Setup-1.0.1-win-x64.exe" \
               --clobber
           else
             gh release create "$TAG" \
               "dist/FCV-588-Standalone.html" \
-              "dist/electron/FCV-588-Portable-1.0.0-win-x64.exe" \
-              "dist/electron/FCV-588-Setup-1.0.0-win-x64.exe" \
+              "dist/electron/FCV-588-Portable-1.0.1-win-x64.exe" \
+              "dist/electron/FCV-588-Setup-1.0.1-win-x64.exe" \
               --title "FURUNO FCV-588 Standalone Simulator ($TAG)" \
               --notes-file dist/RELEASE_NOTES.md
           fi
