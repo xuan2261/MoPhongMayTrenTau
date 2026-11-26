@@ -634,7 +634,7 @@ export const TESTS = [
           );
 
           // Toggle focus mode semantically (no brittle hard-only #device-focus-toggle) & verify zero overflow
-          const layout = await page.evaluate(`(() => {
+          const layout = await page.evaluate(`(async () => {
             const cb = document.querySelector("#device-focus-toggle") ?? Array.from(document.querySelectorAll("input[type='checkbox']"))
               .find(el => {
                 const lbl = el.id ? document.querySelector(\`label[for="\${el.id}"]\`) : null;
@@ -643,18 +643,31 @@ export const TESTS = [
               }) ?? null;
             if (!cb) return {hasFocusToggle: false, checked: false, opacity: 1, panelCollapsed: false, overflowX: 0};
             if (!cb.checked) cb.click();
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
             const panel = document.querySelector(".training-panel, aside");
             const cs = panel ? getComputedStyle(panel) : null;
             const opacity = cs ? Number(cs.opacity) : 1;
             const panelCollapsed = Boolean(panel && (panel.hidden || cs.display === "none" || cs.visibility === "hidden"));
             const overflowX = document.documentElement.scrollWidth - window.innerWidth;
-            return {hasFocusToggle: true, checked: Boolean(cb.checked), opacity, panelCollapsed, overflowX};
+            return {
+              hasFocusToggle: true,
+              checked: Boolean(cb.checked),
+              opacity,
+              panelCollapsed,
+              overflowX,
+              innerWidth: window.innerWidth,
+              dpr: window.devicePixelRatio,
+              m1241: matchMedia("(min-width: 1241px)").matches,
+              activeId: document.activeElement?.id || document.activeElement?.tagName || "",
+              focusWithin: Boolean(panel?.matches(":focus-within")),
+              hasChecked: Boolean(document.querySelector(".workbench")?.matches(":has(#device-focus-toggle:checked)")),
+            };
           })()`);
           assert.equal(layout.hasFocusToggle, true, "Must find semantic device focus checkbox");
           assert.equal(layout.checked, true, "Focus toggle checkbox must become checked when clicked");
           assert.ok(
             layout.opacity < 1 || layout.panelCollapsed,
-            `Focus mode should dim or collapse training panel, got opacity=${layout.opacity}, collapsed=${layout.panelCollapsed}`,
+            `Focus mode should dim or collapse training panel, got opacity=${layout.opacity}, collapsed=${layout.panelCollapsed} (w=${layout.innerWidth}, dpr=${layout.dpr}, m1241=${layout.m1241}, active=${layout.activeId}, focusWithin=${layout.focusWithin}, hasChecked=${layout.hasChecked})`,
           );
           assert.ok(layout.overflowX <= 1, `Unexpected horizontal scroll overflow: ${layout.overflowX}px`);
           page.assertNoErrors("T4-015 D15 ARIA, VI/EN Toggle & Focus Mode");

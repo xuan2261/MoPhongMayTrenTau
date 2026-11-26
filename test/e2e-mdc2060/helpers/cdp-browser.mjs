@@ -164,6 +164,7 @@ export async function launchCdpSession({
     "--no-first-run",
     "--no-default-browser-check",
     "--mute-audio",
+    "--force-device-scale-factor=1",
     `--window-size=${viewport.width},${viewport.height}`,
     "--remote-debugging-port=0",
     `--user-data-dir=${userDataDir}`,
@@ -385,11 +386,17 @@ export async function launchCdpSession({
       });
     };
 
+    const deviceMetrics = {
+      ...viewport,
+      screenWidth: viewport.screenWidth ?? viewport.width,
+      screenHeight: viewport.screenHeight ?? viewport.height,
+    };
     await send("Page.enable");
     await send("Runtime.enable");
     await send("Log.enable");
     await send("Network.enable");
-    await send("Emulation.setDeviceMetricsOverride", viewport);
+    await send("Page.bringToFront").catch(() => {});
+    await send("Emulation.setDeviceMetricsOverride", deviceMetrics);
 
     const evaluate = async (expression, {awaitPromise = true, timeoutMs = commandTimeoutMs} = {}) => {
       const res = await send("Runtime.evaluate", {
@@ -445,6 +452,7 @@ export async function launchCdpSession({
       } finally {
         disarmWaiter();
       }
+      await send("Emulation.setDeviceMetricsOverride", deviceMetrics);
       await delay(120);
       return navRes;
     };
