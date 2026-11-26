@@ -310,6 +310,7 @@ test("Electron sync, offline bundle security gates, Windows installer configs, l
   assert.ok(Object.hasOwn(manifest.files, "src/core/maritime-world.mjs"));
   assert.ok(Object.hasOwn(manifest.files, "src/devices/fcv588/i18n.mjs"));
   assert.ok(Object.hasOwn(manifest.files, "web/desktop-settings.mjs"));
+  assert.equal(Object.keys(manifest.files).some(k => k.includes("/mdc2060/")), false);
 
   // Verify Electron main.cjs and builder configuration contracts
   const mainCjs = await readFile(path.join(ROOT, "apps/fcv588-electron-p30/desktop/main.cjs"), "utf8");

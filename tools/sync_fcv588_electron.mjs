@@ -18,7 +18,12 @@ const ALLOWED_EXT = Object.freeze({
 });
 const MAX_BYTES = 4_000_000;
 
-async function copyValidatedTree(sourceBase, destBase, allowedExts) {
+async function copyValidatedTree(
+  sourceBase,
+  destBase,
+  allowedExts,
+  shouldIncludeDir = () => true,
+) {
   const copied = [];
   async function walk(relDir) {
     const fromDir = relDir ? path.join(sourceBase, relDir) : sourceBase;
@@ -33,7 +38,9 @@ async function copyValidatedTree(sourceBase, destBase, allowedExts) {
         throw new Error(`Forbidden hidden or symlink asset during sync: ${relPath}`);
       }
       if (entry.isDirectory()) {
-        await walk(relPath);
+        if (shouldIncludeDir(relPath)) {
+          await walk(relPath);
+        }
         continue;
       }
       const ext = path.extname(entry.name).toLowerCase();
@@ -85,20 +92,27 @@ export async function syncFcv588Electron({
     preservedContents.set(fileName, bytes);
   }
 
-  // Replace apps/fcv588-electron-p30/src with canonical root src/
+  // Replace apps/fcv588-electron-p30/src with canonical root src/ (core + fcv588 only)
   await rm(electronSrcDir, {recursive: true, force: true});
   const srcFiles = await copyValidatedTree(
     path.join(rootDir, "src"),
     electronSrcDir,
     ALLOWED_EXT.src,
+    relPath =>
+      relPath === "core" ||
+      relPath.startsWith("core/") ||
+      relPath === "devices" ||
+      relPath === "devices/fcv588" ||
+      relPath.startsWith("devices/fcv588/"),
   );
 
-  // Replace apps/fcv588-electron-p30/web with canonical root web/ + preserved desktop files
+  // Replace apps/fcv588-electron-p30/web with canonical top-level root web/ + preserved desktop files
   await rm(electronWebDir, {recursive: true, force: true});
   const webFiles = await copyValidatedTree(
     path.join(rootDir, "web"),
     electronWebDir,
     ALLOWED_EXT.web,
+    () => false,
   );
 
   for (const [fileName, bytes] of preservedContents.entries()) {

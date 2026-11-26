@@ -80,3 +80,12 @@ jobs:
         run: |
           PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_visual_atlas.py --check --checkpoint V27
           PYTHONDONTWRITEBYTECODE=1 python -B tools/build_fcv588_visual_atlas.py --check --checkpoint V28
+
+      - name: Check & build standalone HTML packages (FCV-588 & MDC-2060)
+        run: |
+          node tools/build_fcv588_standalone.mjs --check
+          node tools/build_mdc2060_standalone.mjs --check
+          node tools/build_mdc2060_standalone.mjs
+
+      - name: MDC-2060 opaque-box E2E suite (Tiers 1–4)
+        run: npm run test:e2e:mdc2060
