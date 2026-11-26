@@ -650,42 +650,18 @@ export const TESTS = [
             const panelCollapsed = Boolean(panel && (panel.hidden || cs.display === "none" || cs.visibility === "hidden"));
             const overflowX = document.documentElement.scrollWidth - window.innerWidth;
             const wb = document.querySelector(".workbench");
-            const focusCtrl = document.querySelector(".device-focus-control");
             let diag = null;
             if (!(opacity < 1 || panelCollapsed)) {
-              const sheets = Array.from(document.styleSheets).map(s => {
-                let ruleCount = -1;
-                let has1241 = false;
-                try {
-                  ruleCount = s.cssRules.length;
-                  has1241 = Array.from(s.cssRules).some(r => (r.conditionText || "").includes("1241"));
-                } catch {}
-                return {href: s.href, ruleCount, has1241};
-              });
-              const filter = cs?.filter ?? "";
-              const focusDisp = focusCtrl ? getComputedStyle(focusCtrl).display : "missing";
-              const gridCols = wb ? getComputedStyle(wb).gridTemplateColumns : "missing";
-              const panelMatches = Boolean(panel?.matches(".workbench:has(#device-focus-toggle:checked) .training-panel"));
-              // Probe whether forcing a style recalc on .workbench resolves opacity (diagnostic only)
-              wb?.setAttribute("data-diag-probe", "1");
-              const opacityAfterAttr = panel ? Number(getComputedStyle(panel).opacity) : 1;
-              wb?.removeAttribute("data-diag-probe");
               diag = {
                 w: window.innerWidth,
                 dpr: window.devicePixelRatio,
                 m1241: matchMedia("(min-width: 1241px)").matches,
-                mMax1240: matchMedia("(max-width: 1240px)").matches,
-                forcedColors: matchMedia("(forced-colors: active)").matches,
+                reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
                 active: document.activeElement?.id || document.activeElement?.tagName || "",
                 focusWithin: Boolean(panel?.matches(":focus-within")),
                 hasChecked: Boolean(wb?.matches(":has(#device-focus-toggle:checked)")),
-                panelMatches,
-                filter,
-                focusDisp,
-                gridCols,
-                opacityAfterAttr,
-                sheets,
-                ua: navigator.userAgent,
+                filter: cs?.filter ?? "",
+                transitionDuration: cs?.transitionDuration ?? "",
               };
             }
             return {
