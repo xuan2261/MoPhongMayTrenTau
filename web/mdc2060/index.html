@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>MoPhongMayTrenTau | KODEN MDC-2060 Public Reference</title>
+  <link rel="icon" type="image/svg+xml" href="/web/favicon.svg">
+  <link rel="stylesheet" href="/web/mdc2060/styles.css">
+  <script type="module" src="/web/mdc2060/app.mjs"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="identity">
+        <span class="mark" aria-hidden="true">◎</span>
+        <strong>MoPhongMayTrenTau</strong>
+      </div>
+      <div class="public-reference-banner" role="note" lang="en">PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY</div>
+    </header>
+
+    <main>
+      <div class="heading">
+        <h1 lang="en">KODEN MDC-2060 <span>Marine Radar Training Console</span></h1>
+        <p class="subtitle">Mô phỏng huấn luyện radar hàng hải độc lập — Mặt máy dọc MRD-104 (10.4&quot; 480×640) &amp; ăng-ten RB717A 6 kW.</p>
+      </div>
+
+      <section class="workbench" aria-label="Mô phỏng radar hàng hải KODEN MDC-2060">
+        <p class="mobile-training-note">BỐ CỤC ĐIỆN THOẠI DÀNH CHO LUYỆN TẬP: phím được phóng to và chuyển xuống dưới màn hình LCD, không phải hình học mặt máy MRD-104 thực.</p>
+
+        <div class="workspace-toolbar" role="toolbar" aria-label="Tùy chọn hiển thị không gian làm việc">
+          <label class="device-focus-control" for="device-focus-toggle">
+            <input id="device-focus-toggle" type="checkbox">
+            <span>Tập trung vào máy</span>
+          </label>
+          <button id="btn-audio-toggle" class="workspace-action-btn" type="button" aria-pressed="true">Loa máy: BẬT</button>
+          <button id="btn-fullscreen" class="workspace-action-btn" type="button" aria-pressed="false">Toàn màn hình</button>
+          <button id="btn-lang-toggle" class="workspace-action-btn" type="button" aria-pressed="false" lang="en">VI / EN</button>
+        </div>
+
+        <div class="device-frame" data-panel-reference="MDC2060_MRD104_PUBLIC_REFERENCE_ESTIMATE" aria-label="Mặt trước KODEN MDC-2060 MRD-104 minh họa theo nguồn công khai">
+          <div class="equipment">
+            <div class="display-housing">
+              <div class="bezel-header">
+                <span class="manufacturer-name" lang="en">KODEN</span>
+                <span class="model-badge" lang="en">MDC-2060</span>
+                <span class="unit-code" lang="en">MRD-104</span>
+              </div>
+              <div id="lcd" class="lcd" role="group" data-menu-open="false" aria-label="Màn hình PPI radar KODEN MDC-2060 mô phỏng">
+                <canvas id="ppi-canvas" width="480" height="640" role="img" aria-label="Màn hình PPI radar mô phỏng KODEN MDC-2060 theo dữ liệu huấn luyện"></canvas>
+                <div class="off-screen" id="off-screen" aria-label="LCD đang tắt">
+                  <span lang="en">KODEN MDC-2060</span>
+                  <small>POWER OFF — Nhấn POWER / BRILL để khởi động</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="controls" aria-label="Cụm 10 điều khiển vật lý MRD-104">
+              <div class="control-group fkey-row" role="group" aria-label="Phím chức năng nhanh F1 và F2">
+                <button id="btn-f1" class="hardware-key fkey-btn" type="button" data-control="f1" aria-label="F1: phím chức năng nhanh 1">
+                  <span class="key-cap" lang="en">F1</span>
+                  <small id="f1-cue" class="key-cue" lang="en">EBL1/VRM1</small>
+                </button>
+                <button id="btn-f2" class="hardware-key fkey-btn" type="button" data-control="f2" aria-label="F2: phím chức năng nhanh 2">
+                  <span class="key-cap" lang="en">F2</span>
+                  <small id="f2-cue" class="key-cue" lang="en">ATA ACQ</small>
+                </button>
+              </div>
+
+              <div class="control-group menu-ent-row" role="group" aria-label="Phím MENU và ENT">
+                <button id="btn-menu" class="hardware-key dual-fn-key" type="button" data-control="menu" aria-label="MENU: nhấn ngắn mở Menu chính, giữ hơn 1.5 giây mở System Menu">
+                  <span class="key-cap" lang="en">MENU</span>
+                  <small class="key-sub" lang="en">HOLD SYS</small>
+                </button>
+                <button id="btn-ent" class="hardware-key dual-fn-key enter-key" type="button" data-control="ent" aria-label="ENT: nhấn ngắn xác nhận hoặc đo 2 điểm và AIS, giữ hơn 1.2 giây ẩn đường mũi HL OFF">
+                  <span class="key-cap" lang="en">ENT</span>
+                  <small class="key-sub" lang="en">HOLD HL OFF</small>
+                </button>
+              </div>
+
+              <div class="control-group pad-shell">
+                <div class="pad" role="group" aria-label="Phím con trỏ 4 hướng chữ thập">
+                  <button type="button" id="pad-up" class="pad-btn pad-up" data-control="cursorpad" data-direction="up" aria-label="Con trỏ lên">▲</button>
+                  <button type="button" id="pad-left" class="pad-btn pad-left" data-control="cursorpad" data-direction="left" aria-label="Con trỏ trái">◀</button>
+                  <span class="pad-center-cap" aria-hidden="true"></span>
+                  <button type="button" id="pad-right" class="pad-btn pad-right" data-control="cursorpad" data-direction="right" aria-label="Con trỏ phải">▶</button>
+                  <button type="button" id="pad-down" class="pad-btn pad-down" data-control="cursorpad" data-direction="down" aria-label="Con trỏ xuống">▼</button>
+                </div>
+              </div>
+
+              <div class="control-group range-ack-group">
+                <div class="range-rocker" role="group" aria-label="Phím bập bênh thang đo cự ly RANGE">
+                  <button id="btn-range-down" class="hardware-key range-btn" type="button" data-control="range_down" aria-label="Giảm thang đo RANGE">−</button>
+                  <span class="rocker-label" lang="en">RANGE</span>
+                  <button id="btn-range-up" class="hardware-key range-btn" type="button" data-control="range_up" aria-label="Tăng thang đo RANGE">+</button>
+                </div>
+                <button id="btn-alarm-ack" class="hardware-key ack-btn" type="button" data-control="alarm_ack" data-alarm="false" aria-label="ACK: tắt còi báo động CPA hoặc Guard Zone">
+                  <span class="key-cap" lang="en">ACK</span>
+                  <small class="key-sub" lang="en">SILENCE</small>
+                </button>
+              </div>
+
+              <div class="control-group knobs-stack">
+                <div class="knob-wrap gain-wrap">
+                  <div class="knob-header">
+                    <span class="knob-label" lang="en">GAIN</span>
+                    <span id="gain-badge" class="knob-val" lang="en">55</span>
+                  </div>
+                  <div class="knob-group">
+                    <button id="gain-step-down" class="knob-tick-btn" type="button" aria-label="Giảm GAIN">−</button>
+                    <div class="knob-collar">
+                      <button id="gain-knob" class="knob knob-gain" type="button" data-control="gain" role="slider" aria-label="Núm xoay GAIN: kéo dọc, cuộn chuột hoặc dùng phím mũi tên" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55" aria-valuetext="GAIN 55"></button>
+                    </div>
+                    <button id="gain-step-up" class="knob-tick-btn" type="button" aria-label="Tăng GAIN">+</button>
+                  </div>
+                </div>
+
+                <div class="knob-wrap stc-wrap">
+                  <div class="knob-header">
+                    <span class="knob-label" lang="en">STC</span>
+                    <span id="stc-badge" class="knob-val" lang="en">0</span>
+                  </div>
+                  <div class="knob-group">
+                    <button id="stc-step-down" class="knob-tick-btn" type="button" aria-label="Giảm STC">−</button>
+                    <div class="knob-collar">
+                      <button id="stc-knob" class="knob knob-stc" type="button" data-control="stc" role="slider" aria-label="Núm xoay STC khử nhiễu sóng: kéo dọc, cuộn chuột hoặc dùng phím mũi tên" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="STC 0"></button>
+                    </div>
+                    <button id="stc-step-up" class="knob-tick-btn" type="button" aria-label="Tăng STC">+</button>
+                  </div>
+                  <small class="knob-sublabel" lang="en">SEA CLUTTER</small>
+                </div>
+              </div>
+
+              <div class="control-group bottom-power-row">
+                <button id="btn-stby-tx" class="hardware-key stby-tx-btn" type="button" data-control="stby_tx" aria-label="STBY / TX: chuyển giữa chờ phát và phát sóng radar">
+                  <span id="tx-led" class="tx-led" data-state="off" aria-hidden="true"></span>
+                  <span class="stby-tx-text" lang="en">STBY / TX</span>
+                </button>
+                <button id="btn-power" class="power-button" type="button" data-control="power" aria-label="POWER / BRILL: nhấn ngắn bật máy hoặc chỉnh độ sáng, giữ hơn 3 giây để tắt máy">
+                  <i class="power-glyph" aria-hidden="true"></i>
+                  <span lang="en">POWER / BRILL</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="console-status-strip" class="console-status-strip" role="note" aria-label="Tóm tắt trạng thái ngoài mặt máy">
+          <strong id="strip-power-state" lang="en">POWER OFF</strong>
+          <span id="strip-telemetry">Nhấn POWER / BRILL trên mặt máy để bắt đầu phiên thực hành.</span>
+        </div>
+
+        <aside class="training-panel" aria-label="Bảng giảng viên D15 KODEN MDC-2060">
+          <div class="panel-head">
+            <p class="eyebrow" lang="en">D15 INSTRUCTOR CONSOLE</p>
+            <h2>Bảng giảng viên Radar</h2>
+          </div>
+          <p class="device-footer" role="note">Đồ họa nguyên bản theo nguồn công khai · Chưa kiểm định hình học/phần cứng OEM</p>
+
+          <div class="d15-tablist" role="tablist" aria-label="Nhóm công cụ giảng viên D15" hidden>
+            <button id="d15-tab-session" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-session" aria-selected="true" tabindex="0">Phiên &amp; Tàu mình</button>
+            <button id="d15-tab-weather" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-weather" aria-selected="false" tabindex="-1">Thời tiết &amp; Nguồn</button>
+            <button id="d15-tab-arpa" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-arpa" aria-selected="false" tabindex="-1">ATA / AIS &amp; NMEA</button>
+            <button id="d15-tab-lessons" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-lessons" aria-selected="false" tabindex="-1">Bài học (7)</button>
+            <button id="d15-tab-settings" class="d15-tab" role="tab" type="button" aria-controls="d15-panel-settings" aria-selected="false" tabindex="-1">Cấu hình &amp; Replay</button>
+          </div>
+
+          <div class="d15-live-rail" aria-label="Thông báo D15 ngoài LCD">
+            <p id="d15-live-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+            <p id="d15-alarm-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+          </div>
+
+          <div class="d15-tabpanels">
+            <!-- TAB 1: Phiên & Tàu mình -->
+            <section id="d15-panel-session" class="d15-tabpanel" role="tabpanel" tabindex="0" aria-labelledby="d15-tab-session">
+              <div class="stats instructor-telemetry" aria-label="Chỉ số phiên mô phỏng">
+                <div><small lang="en">SIM TICK</small><strong id="stat-tick" lang="en">0000</strong></div>
+                <div><small>TRẠNG THÁI</small><strong id="stat-power" lang="en">OFF</strong></div>
+                <div><small>THANG ĐO</small><strong id="stat-range" lang="en">6 NM</strong></div>
+                <div><small>SỰ KIỆN</small><strong id="stat-events" lang="en">0</strong></div>
+              </div>
+
+              <div class="d15-card">
+                <h3>Kịch bản &amp; Điều khiển phiên</h3>
+                <label class="d15-field-label" for="scenario-select">Kịch bản huấn luyện</label>
+                <select id="scenario-select" class="d15-select"></select>
+                <div class="d15-btn-grid">
+                  <button id="btn-pause" class="d15-btn primary" type="button">Tạm dừng</button>
+                  <button id="btn-step" class="d15-btn" type="button">+1s</button>
+                  <button id="btn-reset" class="d15-btn" type="button">Đặt lại</button>
+                  <button id="btn-verify-replay" class="d15-btn accent" type="button">Kiểm tra Replay</button>
+                </div>
+                <p id="replay-status" class="d15-status-box">Chưa kiểm tra Replay.</p>
+              </div>
+
+              <div class="d15-card">
+                <h3>Sấy đèn Magnetron (Training Fixture)</h3>
+                <label class="d15-check-row" for="chk-fast-preheat">
+                  <input id="chk-fast-preheat" type="checkbox" checked>
+                  <span>Sấy nhanh 5 giây (Fast Preheat)</span>
+                </label>
+                <p class="hint">Tắt để luyện chu kỳ sấy chuẩn 120 giây của KODEN MDC-2060.</p>
+                <button id="btn-skip-preheat" class="d15-btn full-width" type="button">Bỏ qua sấy (Skip Preheat)</button>
+              </div>
+
+              <div class="d15-card">
+                <h3>Điều khiển tàu mình (Ownship)</h3>
+                <div class="ownship-grid">
+                  <label class="d15-mini-field">
+                    <span lang="en">HDG (°)</span>
+                    <input id="input-own-hdg" class="d15-input" type="number" min="0" max="359.9" step="1" value="89">
+                  </label>
+                  <label class="d15-mini-field">
+                    <span lang="en">SOG (kn)</span>
+                    <input id="input-own-sog" class="d15-input" type="number" min="0" max="40" step="0.5" value="10.5">
+                  </label>
+                  <label class="d15-mini-field">
+                    <span lang="en">ROT (°/m)</span>
+                    <input id="input-own-rot" class="d15-input" type="number" min="-180" max="180" step="1" value="0">
+                  </label>
+                </div>
+                <button id="btn-apply-ownship" class="d15-btn full-width" type="button">Áp dụng tàu mình</button>
+              </div>
+
+              <div class="d15-card">
+                <h3>Trợ xoay PC &amp; Thang phụ (PPI/PPI)</h3>
+                <p class="hint">Công cụ hỗ trợ máy tính ngoài mặt máy, ghi trực tiếp vào luồng sự kiện chuẩn.</p>
+                <div class="slider-row">
+                  <div class="slider-head">
+                    <label for="slider-gain" lang="en">GAIN</label>
+                    <strong id="slider-gain-val" lang="en">55</strong>
+                  </div>
+                  <input id="slider-gain" class="d15-range" type="range" min="0" max="100" step="1" value="55">
+                </div>
+                <div class="slider-row">
+                  <div class="slider-head">
+                    <label for="slider-stc" lang="en">STC (Sea Clutter)</label>
+                    <strong id="slider-stc-val" lang="en">0</strong>
+                  </div>
+                  <input id="slider-stc" class="d15-range" type="range" min="0" max="100" step="1" value="0">
+                </div>
+                <div class="slider-row">
+                  <div class="slider-head">
+                    <label for="slider-ftc" lang="en">FTC (Rain Clutter)</label>
+                    <strong id="slider-ftc-val" lang="en">Menu (0)</strong>
+                  </div>
+                  <div class="slider-with-reset">
+                    <input id="slider-ftc" class="d15-range" type="range" min="0" max="8" step="1" value="0">
+                    <button id="btn-ftc-default" class="d15-btn mini-btn" type="button">Theo menu</button>
+                  </div>
+                </div>
+                <div class="sub-range-row">
+                  <span lang="en">SUB RANGE</span>
+                  <button id="btn-sub-range-down" class="d15-btn square-btn" type="button" aria-label="Giảm thang đo phụ SUB RANGE">−</button>
+                  <strong id="sub-range-readout" lang="en">2 NM</strong>
+                  <button id="btn-sub-range-up" class="d15-btn square-btn" type="button" aria-label="Tăng thang đo phụ SUB RANGE">+</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- TAB 2: Thời tiết & Nguồn -->
+            <section id="d15-panel-weather" class="d15-tabpanel" role="tabpanel" tabindex="0" aria-labelledby="d15-tab-weather">
+              <div class="d15-card">
+                <h3>Thời tiết &amp; Nhiễu môi trường</h3>
+                <div class="slider-row">
+                  <div class="slider-head">
+                    <label for="slider-sea-state">Trạng thái biển — Sea State (0–6)</label>
+                    <strong id="sea-state-val">Theo kịch bản</strong>
+                  </div>
+                  <div class="slider-with-reset">
+                    <input id="slider-sea-state" class="d15-range" type="range" min="0" max="6" step="1" value="2">
+                    <button id="btn-sea-default" class="d15-btn mini-btn" type="button">Theo kịch bản</button>
+                  </div>
+                </div>
+
+                <div class="slider-row">
+                  <div class="slider-head">
+                    <label for="slider-rain">Cường độ mưa (0–100%)</label>
+                    <strong id="rain-val">Theo kịch bản</strong>
+                  </div>
+                  <div class="slider-with-reset">
+                    <input id="slider-rain" class="d15-range" type="range" min="0" max="100" step="5" value="0">
+                    <button id="btn-rain-default" class="d15-btn mini-btn" type="button">Theo kịch bản</button>
+                  </div>
+                </div>
+
+                <label class="d15-check-row" for="chk-interference">
+                  <input id="chk-interference" type="checkbox">
+                  <span>Nhiễu radar lân cận (Interference)</span>
+                </label>
+              </div>
+
+              <div class="d15-card">
+                <h3>Giả lập cảm biến &amp; Bo tùy chọn</h3>
+                <p class="hint">Tắt cảm biến để luyện xử lý cảnh báo <span lang="en">HDG NO SIGNAL</span>, <span lang="en">L/L NO SIGNAL</span> hoặc thiếu bo tùy chọn.</p>
+                <div class="fault-toggle-list">
+                  <label class="d15-check-row" for="chk-hdg-sensor">
+                    <input id="chk-hdg-sensor" type="checkbox" checked>
+                    <span>Cảm biến la bàn (<span lang="en">HDG</span>)</span>
+                  </label>
+                  <label class="d15-check-row" for="chk-gps-sensor">
+                    <input id="chk-gps-sensor" type="checkbox" checked>
+                    <span>Cảm biến vị trí (<span lang="en">GPS / L/L</span>)</span>
+                  </label>
+                  <label class="d15-check-row" for="chk-spd-sensor">
+                    <input id="chk-spd-sensor" type="checkbox" checked>
+                    <span>Cảm biến tốc độ (<span lang="en">SPD</span>)</span>
+                  </label>
+                  <label class="d15-check-row" for="chk-ata-board">
+                    <input id="chk-ata-board" type="checkbox" checked>
+                    <span>Bo tùy chọn <span lang="en">ATA (MRE-340)</span></span>
+                  </label>
+                  <label class="d15-check-row" for="chk-ais-board">
+                    <input id="chk-ais-board" type="checkbox" checked>
+                    <span>Cổng tùy chọn <span lang="en">AIS</span></span>
+                  </label>
+                </div>
+                <p id="sensor-fault-readout" class="d15-status-box">Cảm biến ổn định.</p>
+              </div>
+            </section>
+
+            <!-- TAB 3: ATA / AIS & NMEA -->
+            <section id="d15-panel-arpa" class="d15-tabpanel" role="tabpanel" tabindex="0" aria-labelledby="d15-tab-arpa">
+              <div class="d15-card bridge-sync-card">
+                <h3>Đồng bộ Buồng lái với FCV-588</h3>
+                <label class="d15-check-row" for="chk-bridge-sync">
+                  <input id="chk-bridge-sync" type="checkbox">
+                  <span>Bật Bridge Sync (<span lang="en">FCV-588 + MDC-2060</span>)</span>
+                </label>
+                <div id="bridge-sync-readout" class="bridge-sync-readout">
+                  <p class="hint">Chế độ đơn thiết bị. Bật để chạy đồng bộ cùng FURUNO FCV-588 trên chung bus NMEA-0183.</p>
+                </div>
+                <button id="btn-fcv-power" class="d15-btn full-width" type="button" hidden>Bật / Tắt FCV-588 đồng hành</button>
+              </div>
+
+              <div class="d15-card">
+                <h3>Mục tiêu bám ATA (T01–T50)</h3>
+                <div class="d15-btn-grid three-col">
+                  <button id="btn-ata-acq" class="d15-btn primary" type="button">Bắt ATA</button>
+                  <button id="btn-ata-del" class="d15-btn" type="button">Xóa chọn</button>
+                  <button id="btn-ata-del-all" class="d15-btn" type="button">Xóa hết</button>
+                </div>
+                <div id="ata-target-list" class="target-list" aria-label="Danh sách mục tiêu ATA"></div>
+              </div>
+
+              <div class="d15-card">
+                <h3>Mục tiêu AIS (<span id="ais-count-summary">0</span>)</h3>
+                <p class="hint">Nhấn một mục tiêu để di chuyển con trỏ và mở hộp <span lang="en">AIS INFO</span> trên LCD.</p>
+                <div id="ais-target-list" class="target-list" aria-label="Danh sách mục tiêu AIS"></div>
+              </div>
+
+              <div class="d15-card">
+                <h3>Luồng NMEA-0183 sống</h3>
+                <pre id="nmea-monitor" class="nmea-monitor" lang="en" aria-label="Luồng câu NMEA-0183"></pre>
+              </div>
+            </section>
+
+            <!-- TAB 4: Bài học (7) -->
+            <section id="d15-panel-lessons" class="d15-tabpanel" role="tabpanel" tabindex="0" aria-labelledby="d15-tab-lessons">
+              <div class="d15-card lesson-panel">
+                <h3>7 Bài thực hành chấm điểm tất định</h3>
+                <label class="d15-field-label" for="lesson-select">Chọn bài học huấn luyện</label>
+                <select id="lesson-select" class="d15-select" aria-describedby="lesson-instruction"></select>
+                <p id="lesson-meta" class="lesson-meta"></p>
+                <p id="lesson-instruction" class="lesson-instruction"></p>
+                <div class="d15-btn-grid">
+                  <button id="btn-start-lesson" class="d15-btn primary" type="button">Bắt đầu bài học</button>
+                  <button id="btn-grade-lesson" class="d15-btn accent" type="button">Chấm điểm bài học</button>
+                </div>
+                <div id="lesson-result" class="lesson-result" role="status">Chưa đánh giá bài thực hành.</div>
+              </div>
+            </section>
+
+            <!-- TAB 5: Cấu hình & Replay -->
+            <section id="d15-panel-settings" class="d15-tabpanel" role="tabpanel" tabindex="0" aria-labelledby="d15-tab-settings">
+              <div class="d15-card">
+                <h3>Lưu trữ cấu hình trình duyệt</h3>
+                <p class="hint">Lưu và nạp 48 cấu hình menu MDC-2060 qua khóa cục bộ (khi nạp, máy tự về <span lang="en">POWER OFF</span> trước khi khôi phục).</p>
+                <div class="d15-btn-grid three-col">
+                  <button id="btn-save-local" class="d15-btn" type="button">Lưu cục bộ</button>
+                  <button id="btn-load-local" class="d15-btn" type="button">Nạp cục bộ</button>
+                  <button id="btn-clear-local" class="d15-btn" type="button">Xóa lưu</button>
+                </div>
+              </div>
+
+              <div class="d15-card">
+                <h3>Xuất / Nạp cấu hình JSON</h3>
+                <button id="btn-export-settings" class="d15-btn full-width" type="button">Xuất cấu hình JSON</button>
+                <label class="d15-field-label" for="settings-json-io">Nội dung cấu hình JSON (sao chép hoặc dán trực tiếp)</label>
+                <textarea id="settings-json-io" class="d15-textarea" rows="4" spellcheck="false" lang="en" placeholder="{&quot;schemaVersion&quot;:1,...}"></textarea>
+                <label class="d15-field-label" for="input-import-settings">Hoặc chọn tệp cấu hình (.json)</label>
+                <input id="input-import-settings" class="d15-file" type="file" accept=".json,application/json">
+                <button id="btn-import-settings" class="d15-btn full-width" type="button">Nạp cấu hình JSON</button>
+                <p id="settings-status" class="d15-status-box">Sẵn sàng xuất hoặc nạp cấu hình JSON.</p>
+              </div>
+
+              <div class="d15-card">
+                <h3>Xuất &amp; Kiểm chứng Replay Envelope</h3>
+                <button id="btn-export-replay" class="d15-btn full-width" type="button">Xuất tệp Replay (.json)</button>
+                <label class="d15-field-label" for="input-import-replay">Chọn tệp Replay (.json)</label>
+                <input id="input-import-replay" class="d15-file" type="file" accept=".json,application/json">
+                <button id="btn-import-replay" class="d15-btn full-width" type="button">Kiểm chứng Replay</button>
+                <p id="replay-import-status" class="d15-status-box">Chưa kiểm chứng tệp Replay.</p>
+              </div>
+
+              <div class="d15-card">
+                <h3>Phím tắt bàn phím (ngoài bảng D15)</h3>
+                <div class="shortcut-grid" role="list" aria-label="Bảng phím tắt KODEN MDC-2060">
+                  <div class="shortcut-item" role="listitem"><kbd>P</kbd><span>Bật máy / Độ sáng BRILL</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>T</kbd><span>Chuyển STBY / TX</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>M</kbd> / <kbd>Esc</kbd><span>Mở / Đóng MENU</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>Enter</kbd><span>Xác nhận / Đo 2 điểm / AIS</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>←↑↓→</kbd><span>Con trỏ / Điều hướng Menu</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>[</kbd> <kbd>]</kbd><span>Giảm / Tăng RANGE</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>-</kbd> <kbd>=</kbd><span>Xoay GAIN</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>,</kbd> <kbd>.</kbd><span>Xoay STC</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>1</kbd> <kbd>2</kbd><span>Phím nhanh F1 / F2</span></div>
+                  <div class="shortcut-item" role="listitem"><kbd>A</kbd><span>Tắt còi ACK</span></div>
+                </div>
+              </div>
+
+              <div class="d15-card legal-card">
+                <h3 lang="en">PUBLIC REFERENCE / TRAINING LIMITS</h3>
+                <p class="hint">Hồ sơ thiết bị <span lang="en">koden.mdc2060.mrd104</span> (<span lang="en">F1-mdc2060-public-ref-1</span>) đang ở trạng thái <strong>HOLD</strong>, chưa kiểm định phần cứng và không liên kết với nhà sản xuất KODEN Electronics. Toàn bộ đồ họa, tín hiệu radar, ATA, AIS và NMEA đều là dữ liệu tổng hợp phục vụ đào tạo.</p>
+              </div>
+            </section>
+          </div>
+        </aside>
+      </section>
+
+      <p class="disclaimer">Dữ liệu hồi âm radar, địa hình, phao tiêu, mục tiêu ATA/AIS và câu NMEA-0183 đều là dữ liệu tổng hợp phục vụ huấn luyện. Không kết nối máy thu phát radar, ăng-ten hay cảm biến tàu thật và không được sử dụng cho hành hải thực tế.</p>
+    </main>
+  </div>
+</body>
+</html>

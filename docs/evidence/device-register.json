@@ -23,11 +23,11 @@
       "assetLicenseClearance": false
     },
     {
-      "profileId": "koden.mdc2060.pending",
+      "profileId": "koden.mdc2060.mrd104",
       "manufacturer": "KODEN",
       "model": "MDC-2060",
       "deviceClass": "radar",
-      "controllerVariant": null,
+      "controllerVariant": "mrd-104-integrated-panel",
       "firmwareVersion": null,
       "manualRevision": null,
       "archivedReferenceRevisions": ["MDC-2000 Rev14", "MDC-2000 Rev15", "Quick Reference Rev00"],
@@ -38,10 +38,10 @@
       ],
       "manualRights": "RESTRICTED_REFERENCE_ONLY; PERMISSION_REQUIRED_FOR_AI_PROCESSING",
       "evidencePack": null,
-      "evidenceStatus": "identity-known-version-pending",
+      "evidenceStatus": "public-reference-hardware-unverified",
       "releaseApproval": "HOLD",
-      "implementationStatus": "NOT_STARTED",
-      "profileRevision": null,
+      "implementationStatus": "F1_PUBLIC_REFERENCE_PARTIAL",
+      "profileRevision": "F1-mdc2060-public-ref-1",
       "assetLicenseClearance": false
     },
     {

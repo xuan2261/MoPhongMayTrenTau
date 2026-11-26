@@ -50,6 +50,8 @@ const server = http.createServer(async (req, res) => {
     let requestPath;
     if (decoded === "/") {
       base = WEB; requestPath = "index.html";
+    } else if (decoded === "/mdc2060" || decoded === "/mdc2060/") {
+      base = WEB; requestPath = "mdc2060/index.html";
     } else if (decoded.startsWith("/web/")) {
       base = WEB; requestPath = decoded.slice(5);
     } else if (decoded.startsWith("/src/")) {
