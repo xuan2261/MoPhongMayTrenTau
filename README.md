@@ -33,6 +33,29 @@ Sản phẩm mô phỏng độc lập **Máy Đo Sâu Dò Cá FURUNO FCV-588** �
 
 > **Lưu ý an toàn bắt buộc:** Phần mềm chỉ phục vụ huấn luyện và giảng dạy mô phỏng độc lập (`TRAINING ONLY`), không kết nối đầu dò/GPS/NMEA thực tế và tuyệt đối không dùng để dẫn tàu.
 
+## KODEN MDC-2060 Marine Radar Simulator — Public Reference (MRD-104 / RB717A)
+
+Mô phỏng độc lập **Radar hàng hải KODEN MDC-2060** (màn hình dọc `MRD-104` 10.4" + anten quét hở `RB717A` 6 kW, hồ sơ `koden.mdc2060.mrd104` / `F1-mdc2060-public-ref-1`, trạng thái `F1_PUBLIC_REFERENCE_PARTIAL`, `releaseApproval: HOLD`), chạy **100% offline** với **0 phụ thuộc runtime npm** trên cùng lõi đa thiết bị `src/core/maritime-world.mjs`.
+
+### Chạy nhanh & Kiểm thử cục bộ
+
+- **Windows (nhấp đúp 1 chạm):** `Chay-MDC2060.bat` — Tự biên dịch `dist\MDC-2060-Standalone.html` nếu chưa có và mở cửa sổ ứng dụng độc lập (dự phòng máy chủ cục bộ `http://127.0.0.1:4173/mdc2060`).
+- **Dòng lệnh đa nền tảng (Node.js 22+):**
+  ```bash
+  npm run build:standalone:mdc2060   # Xuất dist/MDC-2060-Standalone.html (~970 KB, 30 mô-đun ESM, CSP connect-src 'none')
+  npm start                          # Mở giao diện huấn luyện tại http://127.0.0.1:4173/mdc2060
+  npm run test:e2e:mdc2060           # Chạy trọn bộ 278 bài kiểm thử hộp đen E2E (Tiers 1–4, gồm Headless Chrome CDP)
+  ```
+
+### Khả năng mô phỏng nổi bật
+
+- **Mặt máy `MRD-104` (`480×640`) & Anten `RB717A`:** 18 thang đo `0.0625–64 NM`, 4 chế độ hướng (`H-UP`, `N-UP`, `C-UP`, `W-UP`), chế độ chuyển động (`RM`/`TM`), bố cục `PPI` / `PPI/PPI` / `PPI/NAV`, đếm ngược nung magnetron 120 giây chuẩn kèm tùy chọn giảng viên `Fast Preheat 5s` và `Skip Preheat`.
+- **Tín hiệu radar, khử nhiễu & đo đạc:** Xử lý tín hiệu cực (`GAIN`/`STC`/`FTC`/`IR`/`EXP`), bóng khuất địa hình, 4 bảng màu gốc; đo phương vị và cự ly qua `EBL1/2`, `VRM1/2`, đường chỉ số song song `PI`, đo 2 điểm và `HL OFF`.
+- **Mục tiêu `ATA` / `AIS` & vùng cảnh giới:** Theo dõi `ATA` tối đa 50 mục tiêu (`CPA`/`TCPA`, bản tin `$RATTM`), lớp phủ `AIS` tối đa 100 mục tiêu và `Guard Zone` (`IN`/`OUT`).
+- **Liên thông cầu tàu & giảng dạy D15:** Đồng bộ thời gian thực với `FURUNO FCV-588`, chuyển đổi `EN/VI` trên màn hình LCD, bảng giảng viên D15 5 tab tiếng Việt (3 kịch bản, 7 bài học chấm điểm tất định `MDC2060-LEARN-01..07` và phát lại `Replay` tất định).
+
+> **Lưu ý an toàn & trung thực bắt buộc:** Bản mô phỏng chỉ dùng cho huấn luyện (`PUBLIC REFERENCE / NOT HARDWARE VALIDATED / TRAINING ONLY`, `releaseApproval: HOLD`, chưa xác thực phần cứng/firmware thực tế), không chứa tài liệu/nhị phân OEM và tuyệt đối không dùng cho hàng hải thực tế.
+
 ---
 
 ## Historical scoped checkpoint (2026-11-22, P36 + P0 hygiene; pre-v1.0.0 archive note)
@@ -76,9 +99,9 @@ PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s test -v
 npm start
 ```
 
-Open `http://127.0.0.1:4173`. The local server listens strictly on loopback (`127.0.0.1`), blocks dotfile segments and oversized payloads (>4 MiB), and serves only whitelisted `/web` and `/src` assets under strict offline CSP (`connect-src 'none'`). **For offline training only — NOT FOR MARINE NAVIGATION.**
+Open `http://127.0.0.1:4173` (FURUNO FCV-588) or `http://127.0.0.1:4173/mdc2060` (KODEN MDC-2060). The local server listens strictly on loopback (`127.0.0.1`), blocks dotfile segments and oversized payloads (>4 MiB), and serves only whitelisted `/web` and `/src` assets under strict offline CSP (`connect-src 'none'`). **For offline training only — NOT FOR MARINE NAVIGATION.**
 
-Current verification baseline: `npm run check` validates syntax across all `src/**/*.mjs`, `web/**/*.mjs`, and `tools/*.mjs` modules before running the full Node test suite; `node tools/verify_public_runtime_assets.mjs` checks all `54` public runtime assets; and CLI ledger checks (`build_fcv588_public_menu.mjs --check`, `build_fcv588_public_acceptance.mjs --check`, `build_fcv588_public_trace.py --check`, `build_fcv588_feature_register.py --check`, `build_fcv588_visual_atlas.py --check`, `fcv588_lcd_boundary_audit.mjs --self-test`) verify cross-ledger consistency. Settings persistence uses schema `v18` with explicit read-only importers for compatible historical profiles; archived `profile21` replays remain verifiable alongside active AP-1 Sounder menus. Plan acceptance remains conservative (`14/50` checklist items, `6/22` named Tasks, **all `65/65` public claims `HOLD`**). Do not treat this repository as a certified hardware substitute or approved release.
+Current verification baseline: `npm run check` validates syntax across all `src/**/*.mjs`, `web/**/*.mjs`, and `tools/*.mjs` modules before running the full Node test suite; `node tools/verify_public_runtime_assets.mjs` checks all `65` public runtime assets; standalone checks (`node tools/build_fcv588_standalone.mjs --check`, `node tools/build_mdc2060_standalone.mjs --check`) and `npm run test:e2e:mdc2060` verify offline packaging and the 278-test MDC-2060 E2E suite; and CLI ledger checks (`build_fcv588_public_menu.mjs --check`, `build_fcv588_public_acceptance.mjs --check`, `build_fcv588_public_trace.py --check`, `build_fcv588_feature_register.py --check`, `build_fcv588_visual_atlas.py --check`, `fcv588_lcd_boundary_audit.mjs --self-test`) verify cross-ledger consistency. Settings persistence uses schema `v18` with explicit read-only importers for compatible historical profiles; archived `profile21` replays remain verifiable alongside active AP-1 Sounder menus. Plan acceptance remains conservative (`14/50` checklist items, `6/22` named Tasks, **all `65/65` public claims `HOLD`**). Do not treat this repository as a certified hardware substitute or approved release.
 
 ## Where to find things
 
@@ -130,8 +153,12 @@ Current verification baseline: `npm run check` validates syntax across all `src/
 | `sources/manuals/VERIFICATION_RECEIPT.json` | Offline deduplicated file integrity and page-count verification |
 | `src/core/` | Deterministic events, session/replay and scenario generator |
 | `src/devices/fcv588/` | Device-specific state transitions, AP-1 menu atlas, and archived `profile21` replay compatibility |
+| `src/devices/mdc2060/` | KODEN MDC-2060 (MRD-104 / RB717A) radar signal engine, ATA/AIS/Guard Zone model, scenarios, EN/VI i18n, and 7 D15 lessons |
 | `web/` | Native-browser demonstrator, with the LCD screen, physical keys, and 5-tab D15 trainer separated from the core |
+| `web/mdc2060/` | Dedicated KODEN MDC-2060 MRD-104 portrait console, Canvas 2D PPI renderer, physical controls, and D15 instructor platform |
+| `Chay-MDC2060.bat` | One-click Windows offline launcher for `dist/MDC-2060-Standalone.html` (with auto-build and `/mdc2060` loopback fallback) |
 | `test/` | Dependency-free Node (`node:test`) and Python (`unittest`) assertions |
+| `test/e2e-mdc2060/` | 278-test opaque-box MDC-2060 E2E verification suite across Tiers 1–4 (including Headless Chrome CDP browser checks) |
 | `plans/261013-2359-fcv588-public-reference-deep-tdd-advice-v2/plan.md` | **Active execution plan**: 7 phases / 22 named Task units / 50 checklist entries. Phase 1 checked 10/10 (`14/50` total); remaining acceptance/source gates still open. |
 | `plans/261013-1428-fcv588-public-reference-complete-operator/plan.md` | Earlier PUBLIC_REFERENCE v1 plan retained for comparison and traceability; superseded for future execution |
 | `plans/261013-1319-fcv588-full-fidelity-simulator/plan.md` | **Deferred hardware-target** plan retained for provenance; needs actual unit and operator sign-off |
